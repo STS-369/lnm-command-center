@@ -74,7 +74,6 @@ export default function PasscodeGate({ children }: { children: React.ReactNode }
             linear-gradient(90deg, rgba(0,240,255,0.3) 1px, transparent 1px)
           `,
           backgroundSize: '40px 40px',
-          ariaHidden: 'true',
         }}
       />
 
