@@ -27,11 +27,14 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body className={`${inter.variable} ${jetbrainsMono.variable} antialiased`}>
+        <a href="#main-content" className="skip-link">
+          Skip to main content
+        </a>
         <div className="flex min-h-screen">
           <Sidebar />
           <div className="flex-1 ml-[240px] main-content">
             <Header />
-            <main className="p-4 lg:p-6">
+            <main id="main-content" className="p-4 lg:p-6" tabIndex={-1}>
               {children}
             </main>
           </div>
