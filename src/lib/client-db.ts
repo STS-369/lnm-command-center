@@ -507,5 +507,37 @@ export function addActivity(entityType: string, entityId: string, action: string
   setStore(STORAGE_KEYS.activities, activities);
 }
 
+// ===== TASK CRUD =====
+export function addTask(task: Omit<Task, 'id' | 'created_at'>): Task {
+  const tasks = getTasks();
+  const newTask: Task = {
+    ...task,
+    id: uuidv4(),
+    created_at: now(),
+  };
+  tasks.unshift(newTask);
+  setStore(STORAGE_KEYS.tasks, tasks);
+  addActivity('task', newTask.id, 'created', `New task: ${newTask.title}`);
+  return newTask;
+}
+
+export function updateTask(id: string, updates: Partial<Task>): Task | null {
+  const tasks = getTasks();
+  const idx = tasks.findIndex(t => t.id === id);
+  if (idx === -1) return null;
+  tasks[idx] = { ...tasks[idx], ...updates };
+  setStore(STORAGE_KEYS.tasks, tasks);
+  return tasks[idx];
+}
+
+export function deleteTask(id: string): boolean {
+  const tasks = getTasks();
+  const filtered = tasks.filter(t => t.id !== id);
+  if (filtered.length === tasks.length) return false;
+  setStore(STORAGE_KEYS.tasks, filtered);
+  addActivity('task', id, 'deleted', `Task deleted: ${id}`);
+  return true;
+}
+
 export { uuidv4 };
 export type { Lead, OutreachEmail, Deal, Task, Activity, Setting, LeadWithStats };
