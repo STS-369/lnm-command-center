@@ -44,6 +44,8 @@ export default function PipelinePage() {
   const [data, setData] = useState(initializeData);
   const [filter, setFilter] = useState('all');
   const [search, setSearch] = useState('');
+  const [pageSize, setPageSize] = useState(50);
+  const [currentPage, setCurrentPage] = useState(1);
   const [importing, setImporting] = useState(false);
   const [importResult, setImportResult] = useState<{
     leadsImported: number;
@@ -75,6 +77,29 @@ export default function PipelinePage() {
       l.category?.toLowerCase().includes(search.toLowerCase());
     return matchesFilter && matchesSearch;
   });
+
+  // Pagination calculations
+  const totalPages = Math.max(1, Math.ceil(filteredLeads.length / pageSize));
+  const safeCurrentPage = Math.min(currentPage, totalPages);
+  const startIdx = (safeCurrentPage - 1) * pageSize;
+  const endIdx = Math.min(startIdx + pageSize, filteredLeads.length);
+  const paginatedLeads = filteredLeads.slice(startIdx, endIdx);
+
+  // Reset to page 1 when filter or search changes
+  const handleFilterChange = (key: string) => {
+    setFilter(key);
+    setCurrentPage(1);
+  };
+
+  const handleSearchChange = (value: string) => {
+    setSearch(value);
+    setCurrentPage(1);
+  };
+
+  const handlePageSizeChange = (newSize: number) => {
+    setPageSize(newSize);
+    setCurrentPage(1);
+  };
 
   // Status counts for filter badges
   const statusCounts: Record<string, number> = {};
@@ -176,7 +201,7 @@ export default function PipelinePage() {
           type="text"
           placeholder="Search leads by name, company, city, or category..."
           value={search}
-          onChange={(e) => setSearch(e.target.value)}
+          onChange={(e) => handleSearchChange(e.target.value)}
           className="input pl-10"
         />
         <span className="absolute left-3 top-1/2 -translate-y-1/2 text-text-muted">🔍</span>
@@ -189,7 +214,7 @@ export default function PipelinePage() {
           return (
             <button
               key={f.key}
-              onClick={() => setFilter(f.key)}
+              onClick={() => handleFilterChange(f.key)}
               className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all flex items-center gap-1.5 ${
                 filter === f.key
                   ? 'bg-cyan/20 text-cyan border border-cyan/30'
@@ -222,7 +247,7 @@ export default function PipelinePage() {
               </tr>
             </thead>
             <tbody>
-              {filteredLeads.slice(0, 100).map((lead) => (
+              {paginatedLeads.map((lead) => (
                 <tr key={lead.id} className="border-b border-border/50 hover:bg-bg-hover transition-colors">
                   <td className="px-4 py-3">
                     <div>
@@ -277,11 +302,50 @@ export default function PipelinePage() {
             <p className="text-text-muted">No leads found for this filter.</p>
           </div>
         )}
-        {filteredLeads.length > 100 && (
-          <div className="px-4 py-3 border-t border-border text-center">
+        {filteredLeads.length > 0 && (
+          <div className="px-4 py-3 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-3">
+            {/* Showing X-Y of Z */}
             <p className="text-xs text-text-muted">
-              Showing 100 of {filteredLeads.length} leads. Use search to narrow results.
+              Showing {startIdx + 1}–{endIdx} of {filteredLeads.length} leads
             </p>
+
+            <div className="flex items-center gap-4">
+              {/* Page size selector */}
+              <div className="flex items-center gap-2">
+                <label htmlFor="page-size" className="text-xs text-text-muted">Per page:</label>
+                <select
+                  id="page-size"
+                  value={pageSize}
+                  onChange={(e) => handlePageSizeChange(Number(e.target.value))}
+                  className="text-xs bg-bg-secondary border border-border rounded px-2 py-1 text-text-primary"
+                >
+                  <option value={20}>20</option>
+                  <option value={50}>50</option>
+                  <option value={100}>100</option>
+                </select>
+              </div>
+
+              {/* Page navigation */}
+              <div className="flex items-center gap-2">
+                <button
+                  onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
+                  disabled={safeCurrentPage <= 1}
+                  className="px-3 py-1 rounded text-xs font-medium bg-bg-secondary border border-border text-text-secondary hover:text-text-primary hover:border-border-light disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
+                >
+                  ← Prev
+                </button>
+                <span className="text-xs text-text-muted font-mono">
+                  Page {safeCurrentPage} of {totalPages}
+                </span>
+                <button
+                  onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
+                  disabled={safeCurrentPage >= totalPages}
+                  className="px-3 py-1 rounded text-xs font-medium bg-bg-secondary border border-border text-text-secondary hover:text-text-primary hover:border-border-light disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
+                >
+                  Next →
+                </button>
+              </div>
+            </div>
           </div>
         )}
       </div>

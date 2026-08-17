@@ -20,15 +20,18 @@ export default function Header() {
     return () => document.removeEventListener('keydown', handleEscape);
   }, [mobileMenuOpen]);
 
-  // Sync sidebar open state with body
+  // Sync sidebar open state with body and overlay
   useEffect(() => {
     const sidebar = document.querySelector('.sidebar');
+    const overlay = document.getElementById('sidebar-overlay');
     if (sidebar) {
       if (mobileMenuOpen) {
         sidebar.classList.add('open');
+        overlay?.classList.add('active');
         document.body.style.overflow = 'hidden';
       } else {
         sidebar.classList.remove('open');
+        overlay?.classList.remove('active');
         document.body.style.overflow = '';
       }
     }
@@ -36,6 +39,22 @@ export default function Header() {
       document.body.style.overflow = '';
     };
   }, [mobileMenuOpen]);
+
+  // Close sidebar when clicking overlay
+  useEffect(() => {
+    const overlay = document.getElementById('sidebar-overlay');
+    if (!overlay) return;
+    const handleClick = () => setMobileMenuOpen(false);
+    overlay.addEventListener('click', handleClick);
+    return () => overlay.removeEventListener('click', handleClick);
+  }, []);
+
+  // Close sidebar on custom event (from Sidebar link clicks)
+  useEffect(() => {
+    const handleClose = () => setMobileMenuOpen(false);
+    window.addEventListener('close-sidebar', handleClose);
+    return () => window.removeEventListener('close-sidebar', handleClose);
+  }, []);
 
   return (
     <header className="h-14 border-b border-border bg-bg-secondary/80 backdrop-blur-sm flex items-center justify-between px-4 lg:px-6 sticky top-0 z-30">

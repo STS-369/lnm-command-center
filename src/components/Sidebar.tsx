@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useCallback } from 'react';
 
 const navItems = [
   { href: '/', label: 'Dashboard', icon: '📊' },
@@ -15,6 +16,13 @@ const navItems = [
 
 export default function Sidebar() {
   const pathname = usePathname();
+
+  // Close mobile sidebar when a link is clicked
+  const closeMobileSidebar = useCallback(() => {
+    if (window.innerWidth < 768) {
+      window.dispatchEvent(new CustomEvent('close-sidebar'));
+    }
+  }, []);
 
   return (
     <aside className="sidebar" id="sidebar-nav" aria-label="Main navigation">
@@ -33,7 +41,7 @@ export default function Sidebar() {
             const isActive = pathname === item.href || (item.href !== '/' && pathname.startsWith(item.href));
             return (
               <li key={item.href}>
-                <Link href={item.href} className={`sidebar-link ${isActive ? 'active' : ''}`} aria-current={isActive ? 'page' : undefined}>
+                <Link href={item.href} className={`sidebar-link ${isActive ? 'active' : ''}`} aria-current={isActive ? 'page' : undefined} onClick={closeMobileSidebar}>
                   <span className="text-lg" aria-hidden="true">{item.icon}</span>
                   <span>{item.label}</span>
                 </Link>
