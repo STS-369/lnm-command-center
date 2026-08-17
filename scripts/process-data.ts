@@ -134,55 +134,109 @@ interface ProcessedEmail {
   created_at: string;
 }
 
+// Map of city section headers to state codes
+const CITY_STATE_MAP: Record<string, { city: string; state: string }> = {
+  'PALM DESERT, CA': { city: 'Palm Desert', state: 'CA' },
+  'SPARKS, NV': { city: 'Sparks', state: 'NV' },
+  'SAN ANTONIO, TX': { city: 'San Antonio', state: 'TX' },
+};
+
 function processEmails(leads: ProcessedLead[]): ProcessedEmail[] {
   const md = fs.readFileSync(EMAILS_MD, 'utf-8');
-  
+
   // Build lead lookup by normalized name
   const leadByName = new Map<string, ProcessedLead>();
   for (const lead of leads) {
     leadByName.set(lead.name.toLowerCase().trim(), lead);
   }
-  
+
+  // Track which city section we're currently in
+  let currentCity = '';
+  let currentState = '';
+
   // Parse email sections
   const emailRegex = /^## Email (\d+): (.+)$/gm;
   const emails: ProcessedEmail[] = [];
   const now = new Date().toISOString();
-  
+
   let match: RegExpExecArray | null;
   while ((match = emailRegex.exec(md)) !== null) {
     const emailNum = parseInt(match[1], 10);
     const businessName = match[2].trim();
-    
+
+    // Check if we've passed a city header before this email
+    const precedingText = md.substring(0, match.index);
+    const cityHeaders = Object.keys(CITY_STATE_MAP);
+    for (const header of cityHeaders) {
+      const headerRegex = new RegExp(`^# ${header.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\s*$`, 'gm');
+      let lastCityMatch: RegExpExecArray | null;
+      while ((lastCityMatch = headerRegex.exec(precedingText)) !== null) {
+        const cs = CITY_STATE_MAP[header];
+        currentCity = cs.city;
+        currentState = cs.state;
+      }
+    }
+
     // Find the section content (from this match to the next ## or --- or end)
     const sectionStart = match.index + match[0].length;
     const nextSection = md.indexOf('\n## Email ', sectionStart);
     const nextDivider = md.indexOf('\n---\n', sectionStart);
     const nextCityHeader = md.indexOf('\n# ', sectionStart);
-    
+
     let sectionEnd = md.length;
     if (nextSection > 0) sectionEnd = Math.min(sectionEnd, nextSection);
     if (nextDivider > 0 && nextDivider < sectionEnd) sectionEnd = nextDivider;
     if (nextCityHeader > 0 && nextCityHeader < sectionEnd) sectionEnd = nextCityHeader;
-    
+
     const section = md.substring(sectionStart, sectionEnd);
-    
+
     // Extract subject
     const subjectMatch = section.match(/\*\*Subject:\*\*\s*(.+)/);
     const subject = subjectMatch ? subjectMatch[1].trim() : `Sales email for ${businessName}`;
-    
+
     // Extract body (everything between Subject line and Research Citations)
     const bodyStart = section.indexOf('\n', section.indexOf('**Subject:**'));
     const citationsIdx = section.indexOf('### Research Citations');
     const bodyEnd = citationsIdx > 0 ? citationsIdx : section.length;
     const body = section.substring(bodyStart, bodyEnd).trim();
-    
+
     // Match to lead
     const normalizedName = businessName.toLowerCase().trim();
     const lead = leadByName.get(normalizedName);
-    
+
+    let leadId = lead ? lead.id : '';
+
+    // If no match, create a new lead from email context
+    if (!lead) {
+      const newLead: ProcessedLead = {
+        id: uuidv4(),
+        name: businessName,
+        company: businessName,
+        email: '',
+        phone: '',
+        website: '',
+        city: currentCity,
+        state: currentState,
+        industry: '',
+        source: 'email_outreach',
+        status: 'new',
+        score: 50,
+        rating: 0,
+        user_ratings_total: 0,
+        address: '',
+        category: '',
+        website_status: 'UNKNOWN',
+        created_at: now,
+        updated_at: now,
+      };
+      leads.push(newLead);
+      leadByName.set(normalizedName, newLead);
+      leadId = newLead.id;
+    }
+
     emails.push({
       id: uuidv4(),
-      lead_id: lead ? lead.id : '',
+      lead_id: leadId,
       lead_name: businessName,
       subject,
       body,
@@ -190,7 +244,7 @@ function processEmails(leads: ProcessedLead[]): ProcessedEmail[] {
       created_at: now,
     });
   }
-  
+
   return emails;
 }
 
