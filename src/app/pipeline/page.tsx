@@ -3,11 +3,11 @@
 import { useState, useCallback } from 'react';
 import {
   seedDemoData,
-  getLeads,
   getLeadsWithStats,
   importRealData,
   isDataImported,
   getImportStats,
+  getCityStats,
 } from '@/lib/client-db';
 import type { LeadWithStats } from '@/lib/client-db';
 
@@ -43,6 +43,7 @@ function initializeData() {
 export default function PipelinePage() {
   const [data, setData] = useState(initializeData);
   const [filter, setFilter] = useState('all');
+  const [cityFilter, setCityFilter] = useState('all');
   const [search, setSearch] = useState('');
   const [pageSize, setPageSize] = useState(50);
   const [currentPage, setCurrentPage] = useState(1);
@@ -68,15 +69,22 @@ export default function PipelinePage() {
 
   const leads = data.leads;
 
-  const filteredLeads = leads.filter(l => {
-    const matchesFilter = filter === 'all' || l.status === filter;
-    const matchesSearch = !search ||
-      l.name.toLowerCase().includes(search.toLowerCase()) ||
-      l.company.toLowerCase().includes(search.toLowerCase()) ||
-      l.city.toLowerCase().includes(search.toLowerCase()) ||
-      l.category?.toLowerCase().includes(search.toLowerCase());
-    return matchesFilter && matchesSearch;
-  });
+  // Get city stats for filter dropdown
+  const cityStats = getCityStats();
+  const uniqueCities = Object.keys(cityStats).sort((a, b) => a.localeCompare(b));
+
+  const filteredLeads = leads
+    .filter(l => {
+      const matchesFilter = filter === 'all' || l.status === filter;
+      const matchesCity = cityFilter === 'all' || l.city === cityFilter;
+      const matchesSearch = !search ||
+        l.name.toLowerCase().includes(search.toLowerCase()) ||
+        l.company.toLowerCase().includes(search.toLowerCase()) ||
+        l.city.toLowerCase().includes(search.toLowerCase()) ||
+        l.category?.toLowerCase().includes(search.toLowerCase());
+      return matchesFilter && matchesCity && matchesSearch;
+    })
+    .sort((a, b) => a.name.localeCompare(b.name));
 
   // Pagination calculations
   const totalPages = Math.max(1, Math.ceil(filteredLeads.length / pageSize));
@@ -88,6 +96,11 @@ export default function PipelinePage() {
   // Reset to page 1 when filter or search changes
   const handleFilterChange = (key: string) => {
     setFilter(key);
+    setCurrentPage(1);
+  };
+
+  const handleCityFilterChange = (city: string) => {
+    setCityFilter(city);
     setCurrentPage(1);
   };
 
@@ -208,7 +221,7 @@ export default function PipelinePage() {
       </div>
 
       {/* Filters */}
-      <div className="flex flex-wrap gap-2">
+      <div className="flex flex-wrap gap-2 items-center">
         {statusFilters.map((f) => {
           const count = f.key === 'all' ? leads.length : (statusCounts[f.key] || 0);
           return (
@@ -228,6 +241,28 @@ export default function PipelinePage() {
             </button>
           );
         })}
+        {/* City Filter Dropdown */}
+        <div className="relative ml-2">
+          <label htmlFor="city-filter" className="sr-only">Filter by city</label>
+          <select
+            id="city-filter"
+            value={cityFilter}
+            onChange={(e) => handleCityFilterChange(e.target.value)}
+            className={`text-xs font-medium px-3 py-1.5 rounded-lg border transition-all appearance-none pr-7 cursor-pointer ${
+              cityFilter !== 'all'
+                ? 'bg-purple/20 text-purple border-purple/30'
+                : 'bg-bg-card text-text-secondary border-border hover:border-border-light'
+            }`}
+          >
+            <option value="all">All Cities ({uniqueCities.length})</option>
+            {uniqueCities.map((city) => (
+              <option key={city} value={city}>
+                {city} ({cityStats[city]})
+              </option>
+            ))}
+          </select>
+          <span className="absolute right-2 top-1/2 -translate-y-1/2 text-text-muted pointer-events-none text-[10px]">▼</span>
+        </div>
       </div>
 
       {/* Leads Table */}
@@ -285,9 +320,15 @@ export default function PipelinePage() {
                       <span className="text-xs text-text-muted">—</span>
                     )}
                   </td>
-                  <td className="px-4 py-3 text-sm text-text-secondary">
+                  <td className="px-4 py-3 text-sm">
                     {lead.email_count > 0 ? (
-                      <span className="text-cyan">{lead.email_count}</span>
+                      <a
+                        href={`/outreach?search=${encodeURIComponent(lead.name)}`}
+                        className="text-cyan hover:text-cyan/80 font-medium underline underline-offset-2 decoration-cyan/30 hover:decoration-cyan/60 transition-colors"
+                        title={`View ${lead.email_count} email(s) for ${lead.name}`}
+                      >
+                        {lead.email_count} 📧
+                      </a>
                     ) : (
                       <span className="text-text-muted">0</span>
                     )}

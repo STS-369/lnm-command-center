@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { seedDemoData, getEmails, isDataImported } from '@/lib/client-db';
-import type { OutreachEmail } from '@/lib/client-db';
+import { useSearchParams } from 'next/navigation';
 
 function initializeData() {
   seedDemoData();
@@ -13,10 +13,12 @@ function initializeData() {
 }
 
 export default function OutreachPage() {
+  const searchParams = useSearchParams();
+  const initialSearch = searchParams.get('search') || '';
   const [data] = useState(initializeData);
   const { emails, imported } = data;
   const [filter, setFilter] = useState('all');
-  const [search, setSearch] = useState('');
+  const [search, setSearch] = useState(initialSearch);
   const [expandedId, setExpandedId] = useState<string | null>(null);
 
   const filteredEmails = emails.filter(e => {
