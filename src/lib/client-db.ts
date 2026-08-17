@@ -3,6 +3,9 @@
  * Replaces server-side SQLite with localStorage for full client-side operation.
  */
 
+import { IMPORT_LEADS, IMPORT_EMAILS, IMPORT_STATS } from './import-data';
+import type { ImportLead, ImportEmail } from './import-data';
+
 // Simple UUID generator
 function uuidv4(): string {
   return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, (c) => {
@@ -25,8 +28,25 @@ interface Lead {
   source: string;
   status: string;
   score: number;
+  rating?: number;
+  user_ratings_total?: number;
+  address?: string;
+  category?: string;
+  website_status?: string;
   created_at: string;
   updated_at: string;
+}
+
+interface OutreachEmail {
+  id: string;
+  lead_id: string;
+  lead_name: string;
+  subject: string;
+  body: string;
+  status: string;
+  sent_at: string | null;
+  opened_at: string | null;
+  created_at: string;
 }
 
 interface Deal {
@@ -71,13 +91,20 @@ interface Setting {
   updated_at: string;
 }
 
+interface LeadWithStats extends Lead {
+  email_count: number;
+  last_email_at: string | null;
+}
+
 const STORAGE_KEYS = {
   leads: 'lnm_leads',
+  emails: 'lnm_emails',
   deals: 'lnm_deals',
   tasks: 'lnm_tasks',
   activities: 'lnm_activities',
   settings: 'lnm_settings',
   seeded: 'lnm_seeded',
+  imported: 'lnm_imported',
 };
 
 function getStore<T>(key: string): T[] {
@@ -157,9 +184,178 @@ export function seedDemoData(): void {
   localStorage.setItem(STORAGE_KEYS.seeded, 'true');
 }
 
+// ===== DATA IMPORT =====
+export interface ImportResult {
+  leadsImported: number;
+  leadsSkipped: number;
+  emailsImported: number;
+  emailsSkipped: number;
+  totalLeads: number;
+  totalEmails: number;
+}
+
+/**
+ * Import real lead and email data from pre-processed import-data.ts
+ * into localStorage. Deduplicates by name+city. Safe to call multiple times.
+ */
+export function importRealData(): ImportResult {
+  if (typeof window === 'undefined') {
+    return { leadsImported: 0, leadsSkipped: 0, emailsImported: 0, emailsSkipped: 0, totalLeads: 0, totalEmails: 0 };
+  }
+
+  // Check if already imported
+  if (localStorage.getItem(STORAGE_KEYS.imported)) {
+    const existingLeads = getLeads();
+    const existingEmails = getStore<OutreachEmail>(STORAGE_KEYS.emails);
+    return {
+      leadsImported: 0,
+      leadsSkipped: existingLeads.length,
+      emailsImported: 0,
+      emailsSkipped: existingEmails.length,
+      totalLeads: existingLeads.length,
+      totalEmails: existingEmails.length,
+    };
+  }
+
+  const existingLeads = getLeads();
+  const existingEmails = getStore<OutreachEmail>(STORAGE_KEYS.emails);
+  const timestamp = now();
+
+  // Build dedup set from existing leads
+  const existingKeys = new Set(
+    existingLeads.map(l => `${l.name.toLowerCase().trim()}|${l.city.toLowerCase().trim()}`)
+  );
+
+  // Import leads
+  let leadsImported = 0;
+  let leadsSkipped = 0;
+  const newLeads: Lead[] = [];
+
+  for (const il of IMPORT_LEADS) {
+    const dedupKey = `${il.name.toLowerCase().trim()}|${il.city.toLowerCase().trim()}`;
+    if (existingKeys.has(dedupKey)) {
+      leadsSkipped++;
+      continue;
+    }
+    existingKeys.add(dedupKey);
+
+    newLeads.push({
+      id: il.id,
+      name: il.name,
+      company: il.company,
+      email: il.email,
+      phone: il.phone,
+      website: il.website,
+      city: il.city,
+      state: il.state,
+      industry: il.industry,
+      source: il.source,
+      status: il.status,
+      score: il.score,
+      rating: il.rating,
+      user_ratings_total: il.user_ratings_total,
+      address: il.address,
+      category: il.category,
+      website_status: il.website_status,
+      created_at: il.created_at,
+      updated_at: il.updated_at,
+    });
+    leadsImported++;
+  }
+
+  // Merge new leads with existing
+  const allLeads = [...newLeads, ...existingLeads];
+  setStore(STORAGE_KEYS.leads, allLeads);
+
+  // Import emails (match to leads by name)
+  const leadByName = new Map<string, Lead>();
+  for (const lead of allLeads) {
+    leadByName.set(lead.name.toLowerCase().trim(), lead);
+  }
+
+  let emailsImported = 0;
+  let emailsSkipped = 0;
+  const existingEmailKeys = new Set(
+    existingEmails.map(e => `${e.lead_name.toLowerCase().trim()}|${e.subject}`)
+  );
+
+  const newEmails: OutreachEmail[] = [];
+
+  for (const ie of IMPORT_EMAILS) {
+    const emailKey = `${ie.lead_name.toLowerCase().trim()}|${ie.subject}`;
+    if (existingEmailKeys.has(emailKey)) {
+      emailsSkipped++;
+      continue;
+    }
+    existingEmailKeys.add(emailKey);
+
+    // Try to match to a lead
+    const matchedLead = leadByName.get(ie.lead_name.toLowerCase().trim());
+
+    newEmails.push({
+      id: ie.id,
+      lead_id: matchedLead ? matchedLead.id : ie.lead_id,
+      lead_name: ie.lead_name,
+      subject: ie.subject,
+      body: ie.body,
+      status: ie.status,
+      sent_at: null,
+      opened_at: null,
+      created_at: ie.created_at,
+    });
+    emailsImported++;
+  }
+
+  const allEmails = [...newEmails, ...existingEmails];
+  setStore(STORAGE_KEYS.emails, allEmails);
+
+  // Log import activity
+  addActivity(
+    'system',
+    '',
+    'import',
+    `Imported ${leadsImported} leads and ${emailsImported} email drafts from Alice workspace`
+  );
+
+  // Mark as imported
+  localStorage.setItem(STORAGE_KEYS.imported, 'true');
+
+  return {
+    leadsImported,
+    leadsSkipped,
+    emailsImported,
+    emailsSkipped,
+    totalLeads: allLeads.length,
+    totalEmails: allEmails.length,
+  };
+}
+
+/**
+ * Check if real data has been imported
+ */
+export function isDataImported(): boolean {
+  if (typeof window === 'undefined') return false;
+  return localStorage.getItem(STORAGE_KEYS.imported) === 'true';
+}
+
+/**
+ * Get import statistics (what's available to import)
+ */
+export function getImportStats() {
+  return IMPORT_STATS;
+}
+
 // ===== DB ACCESSORS =====
 export function getLeads(): Lead[] {
   return getStore<Lead>(STORAGE_KEYS.leads);
+}
+
+export function getEmails(): OutreachEmail[] {
+  return getStore<OutreachEmail>(STORAGE_KEYS.emails);
+}
+
+export function getEmailsByLead(leadId: string): OutreachEmail[] {
+  return getEmails().filter(e => e.lead_id === leadId);
 }
 
 export function getDeals(): Deal[] {
@@ -178,6 +374,71 @@ export function getSettings(): Setting[] {
   return getStore<Setting>(STORAGE_KEYS.settings);
 }
 
+/**
+ * Get leads enriched with email counts
+ */
+export function getLeadsWithStats(): LeadWithStats[] {
+  const leads = getLeads();
+  const emails = getEmails();
+
+  // Build email count map
+  const emailCountMap = new Map<string, { count: number; lastAt: string | null }>();
+  for (const email of emails) {
+    const existing = emailCountMap.get(email.lead_id) || { count: 0, lastAt: null };
+    existing.count++;
+    if (!existing.lastAt || email.created_at > existing.lastAt) {
+      existing.lastAt = email.created_at;
+    }
+    emailCountMap.set(email.lead_id, existing);
+  }
+
+  return leads.map(lead => {
+    const emailStats = emailCountMap.get(lead.id);
+    return {
+      ...lead,
+      email_count: emailStats?.count || 0,
+      last_email_at: emailStats?.lastAt || null,
+    };
+  });
+}
+
+/**
+ * Get pipeline stats by status
+ */
+export function getPipelineStats(): Record<string, number> {
+  const leads = getLeads();
+  const stats: Record<string, number> = {};
+  for (const lead of leads) {
+    stats[lead.status] = (stats[lead.status] || 0) + 1;
+  }
+  return stats;
+}
+
+/**
+ * Get category breakdown
+ */
+export function getCategoryStats(): Record<string, number> {
+  const leads = getLeads();
+  const stats: Record<string, number> = {};
+  for (const lead of leads) {
+    const cat = lead.category || lead.industry || 'Other';
+    stats[cat] = (stats[cat] || 0) + 1;
+  }
+  return stats;
+}
+
+/**
+ * Get city breakdown
+ */
+export function getCityStats(): Record<string, number> {
+  const leads = getLeads();
+  const stats: Record<string, number> = {};
+  for (const lead of leads) {
+    stats[lead.city] = (stats[lead.city] || 0) + 1;
+  }
+  return stats;
+}
+
 export function addLead(lead: Omit<Lead, 'id' | 'created_at' | 'updated_at'>): Lead {
   const leads = getLeads();
   const newLead: Lead = {
@@ -193,6 +454,28 @@ export function addLead(lead: Omit<Lead, 'id' | 'created_at' | 'updated_at'>): L
   addActivity('lead', newLead.id, 'created', `New lead added: ${newLead.name} (${newLead.company || 'Unknown'})`);
 
   return newLead;
+}
+
+export function updateLead(id: string, updates: Partial<Lead>): Lead | null {
+  const leads = getLeads();
+  const idx = leads.findIndex(l => l.id === id);
+  if (idx === -1) return null;
+
+  leads[idx] = { ...leads[idx], ...updates, updated_at: now() };
+  setStore(STORAGE_KEYS.leads, leads);
+  return leads[idx];
+}
+
+export function addEmail(email: Omit<OutreachEmail, 'id' | 'created_at'>): OutreachEmail {
+  const emails = getEmails();
+  const newEmail: OutreachEmail = {
+    ...email,
+    id: uuidv4(),
+    created_at: now(),
+  };
+  emails.unshift(newEmail);
+  setStore(STORAGE_KEYS.emails, emails);
+  return newEmail;
 }
 
 export function saveSettings(settings: Record<string, string>): void {
@@ -225,4 +508,4 @@ export function addActivity(entityType: string, entityId: string, action: string
 }
 
 export { uuidv4 };
-export type { Lead, Deal, Task, Activity, Setting };
+export type { Lead, OutreachEmail, Deal, Task, Activity, Setting, LeadWithStats };
