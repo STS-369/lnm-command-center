@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Server mode (not static export) to enable API routes + SQLite
+  output: 'export',
   images: { unoptimized: true },
 };
 

@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import { getMessage, markAsRead, trashMessage } from '@/lib/gmail';
 
-export const dynamic = 'force-dynamic';
+export const dynamic = 'force-static';
 
 /**
  * GET /api/gmail/message?id=xxx — Get a message

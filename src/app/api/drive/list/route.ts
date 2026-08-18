@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import { listFiles, listFolders, searchFiles } from '@/lib/google-drive';
 
-export const dynamic = 'force-dynamic';
+export const dynamic = 'force-static';
 
 /**
  * GET /api/drive/list

@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import { uploadFile, ensureCrmFolders, createClientFolders } from '@/lib/google-drive';
 
-export const dynamic = 'force-dynamic';
+export const dynamic = 'force-static';
 
 /**
  * POST /api/drive/upload

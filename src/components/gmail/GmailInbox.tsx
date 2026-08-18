@@ -55,6 +55,7 @@ export default function GmailInbox() {
   }, []);
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     fetchMessages();
     // Also fetch profile
     fetch('/api/gmail/list?type=profile')
