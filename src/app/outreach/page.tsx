@@ -125,6 +125,20 @@ export default function OutreachPage() {
     setCodeView(false);
   };
 
+  const handleEdit = (email: any) => {
+    setSendTarget({ to: email.email || '', subject: email.subject, body: email.body });
+    setActiveTab('compose');
+  };
+
+  const handlePreviewMode = () => {
+    setViewMode('preview');
+    setCodeView(false);
+    // Auto-select first email if none selected
+    if (!previewEmailId && filteredEmails.length > 0) {
+      setPreviewEmailId(filteredEmails[0].id);
+    }
+  };
+
   const handleBackToList = () => {
     setViewMode('list');
     setPreviewEmailId(null);
@@ -236,7 +250,7 @@ export default function OutreachPage() {
                   <span className="absolute left-3 top-1/2 -translate-y-1/2 text-text-muted">🔍</span>
                 </div>
                 <button
-                  onClick={() => setViewMode('preview')}
+                  onClick={handlePreviewMode}
                   className="btn btn-secondary text-sm whitespace-nowrap"
                 >
                   📧 Preview Mode
@@ -306,18 +320,22 @@ export default function OutreachPage() {
                           >
                             📤 Send via Gmail
                           </button>
-                          {email.html_body && (
-                            <button
-                              onClick={(e) => {
-                                e.stopPropagation();
-                                handlePreview(email.id);
-                              }}
-                              className="btn btn-secondary text-xs"
-                            >
-                              👁️ Preview HTML
-                            </button>
-                          )}
-                          <button className="btn btn-ghost text-xs">
+                          <button
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              handlePreview(email.id);
+                            }}
+                            className="btn btn-secondary text-xs"
+                          >
+                            👁️ Preview HTML
+                          </button>
+                          <button
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              handleEdit(email);
+                            }}
+                            className="btn btn-ghost text-xs"
+                          >
                             ✏️ Edit
                           </button>
                           <button
