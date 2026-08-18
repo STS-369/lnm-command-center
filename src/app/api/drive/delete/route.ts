@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import { deleteFile } from '@/lib/google-drive';
 
-export const dynamic = 'force-dynamic';
+export const dynamic = 'force-static';
 
 /**
  * DELETE /api/drive/delete?fileId=xxx

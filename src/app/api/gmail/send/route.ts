@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import { sendEmail } from '@/lib/gmail';
 
-export const dynamic = 'force-dynamic';
+export const dynamic = 'force-static';
 
 /**
  * POST /api/gmail/send
