@@ -1,97 +1,94 @@
-# LNM Command Center
+# LNM Command Center — SOETech
 
-**Unified CRM, lead generation, sales pipeline, and AI agent dashboard for SOETech.**
+Unified CRM, lead generation, sales pipeline, and AI agent dashboard for SOETech.
 
-## Overview
+**Live at:** [lnm.soetechllc.com](https://lnm.soetechllc.com/)
 
-LNM (Lead Nurturing Machine) Command Center is a full-stack web application that automates and manages the complete sales lifecycle: lead generation → research → validation → outreach → proposals → deals → fulfillment → invoicing.
+## Features
+
+### Dashboard
+- Lead overview and pipeline stats
+- Real-time metrics from SQLite database
+
+### Pipeline
+- 690+ leads imported with email tracking
+- Filter by status, city, and search
+- Pagination (20/50/100 per page)
+
+### Document Vault (`/vault`)
+- Google Drive integration via SOETech CRM folder structure
+- Auto-creates: `SOETech CRM/[Client]/01-Proposals, 02-Contracts, 03-Invoices, 04-Research`
+- File upload, download, search, delete
+- Direct link to open in Google Drive
+
+### Outreach (`/outreach`)
+- **Drafts tab:** Pre-written email drafts from lead data
+- **Gmail Inbox tab:** Live Gmail inbox (soetechllc@gmail.com)
+- **Compose tab:** Send emails directly from CRM
+- CC/BCC support, thread reply support
+
+### Gmail Integration
+- Send/receive via Google OAuth token
+- View inbox with search and pagination
+- Read, mark as read, trash messages
+- From address: `SOETech AI <noreply@soetechllc.com>`
+
+## Architecture
+
+```
+Frontend:  Next.js (static) → GitHub Pages → lnm.soetechllc.com
+Backend:   Express server (localhost:3001) → Google Drive + Gmail APIs
+Database:  SQLite (Drizzle ORM) — leads, emails, tasks
+Auth:      Google OAuth token at ~/.hermes/google_token.json
+```
+
+## Setup
+
+### Frontend (GitHub Pages)
+Already deployed at https://lnm.soetechllc.com/
+
+### Backend Server (for Drive + Gmail)
+```bash
+cd /tmp/lnm-command-center
+npm install
+node server.js
+# Runs on http://localhost:3001
+```
+
+### API Endpoints
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/api/health` | Health check |
+| POST | `/api/drive/setup` | Create CRM folder structure |
+| GET | `/api/drive/list` | List files/folders |
+| POST | `/api/drive/upload` | Upload file |
+| DELETE | `/api/drive/delete` | Delete file |
+| GET | `/api/gmail/list` | List inbox messages |
+| GET | `/api/gmail/message?id=` | Get message detail |
+| POST | `/api/gmail/send` | Send email |
+| POST | `/api/gmail/message` | Read/trash action |
 
 ## Tech Stack
+- Next.js 16 + React 19 + TypeScript
+- Tailwind CSS 4
+- SQLite + Drizzle ORM
+- Google APIs (Drive v3, Gmail v1)
+- Express.js backend server
 
-- **Frontend:** Next.js 16 (App Router), TypeScript, Tailwind CSS
-- **Database:** SQLite (better-sqlite3) for development, PostgreSQL-ready schema
-- **Theme:** Dark cyberpunk with neon cyan/purple accents
-- **Architecture:** Server-side rendering, API routes, responsive design
+## Google OAuth Token
+Located at `~/.hermes/google_token.json` with scopes:
+- `drive` — Google Drive access
+- `gmail.send`, `gmail.modify`, `gmail.readonly` — Gmail access
+- `calendar` — Calendar access
+- `forms`, `spreadsheets`, `documents` — Workspace access
 
-## Getting Started
+## DNS Configuration
+| Type | Name | Value |
+|------|------|-------|
+| CNAME | lnm | sts-369.github.io |
+| A | @ | 185.199.108.153 |
+| A | @ | 185.199.109.153 |
+| A | @ | 185.199.110.153 |
+| A | @ | 185.199.111.153 |
 
-```bash
-# Install dependencies
-npm install
-
-# Run development server
-npm run dev
-
-# Build for production
-npm run build
-
-# Start production server
-npm start
-```
-
-The app runs on [http://localhost:3000](http://localhost:3000).
-
-## Project Structure
-
-```
-src/
-├── app/
-│   ├── layout.tsx          # Root layout with sidebar
-│   ├── page.tsx            # Dashboard (home page)
-│   ├── globals.css         # Cyberpunk theme + Tailwind
-│   ├── pipeline/page.tsx   # Lead pipeline management
-│   ├── research/page.tsx   # AI research (Phase 1)
-│   ├── outreach/page.tsx   # Email outreach (Phase 1)
-│   ├── tasks/page.tsx      # Task management (Phase 1)
-│   ├── agents/page.tsx     # AI agents (Phase 2)
-│   ├── settings/page.tsx   # Configuration
-│   └── api/
-│       ├── leads/route.ts  # Lead CRUD API
-│       └── settings/route.ts # Settings API
-├── components/
-│   ├── Sidebar.tsx         # Navigation sidebar
-│   └── Header.tsx          # Top header with search
-└── lib/
-    ├── db.ts               # SQLite database + schema
-    └── seed.ts             # Demo data seeder
-```
-
-## Features (Phase 0 — Foundation)
-
-- ✅ Dark cyberpunk theme with neon accents
-- ✅ Sidebar navigation (Dashboard, Pipeline, Research, Outreach, Tasks, Agents, Settings)
-- ✅ Dashboard with stats cards, pipeline summary, activity feed
-- ✅ Pipeline page with lead table, status filters, and scoring
-- ✅ Settings page with business context and AI configuration
-- ✅ SQLite database with full schema
-- ✅ Demo data seeder for development
-- ✅ Responsive design (mobile-first)
-
-## Roadmap
-
-- **Phase 1:** Research engine, outreach management, task queue, proposals
-- **Phase 2:** AI agent orchestration, Luke integration, automated processing
-- **Phase 3:** Invoicing, deals pipeline, fulfillment tracking
-
-## Database Schema
-
-| Table | Description |
-|-------|-------------|
-| `users` | User accounts and roles |
-| `leads` | Core pipeline entity with scoring |
-| `research` | AI research data per lead |
-| `outreach_emails` | Email templates and tracking |
-| `proposals` | Sales proposals |
-| `deals` | Active and closed deals |
-| `invoices` | Invoice management |
-| `tasks` | Task queue with priorities |
-| `activity_log` | Full audit trail |
-| `settings` | Key-value configuration |
-
-## SOETech
-
-Built by [SOETech LLC](https://soetech.com) — Web & AI Development Agency.
-
----
-
-*Phase 0 — Foundation complete. Ready for Phase 1 development.*
+Custom domain: `lnm.soetechllc.com` ✓ (verified, HTTPS enforced)
