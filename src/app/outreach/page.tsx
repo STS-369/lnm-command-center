@@ -1,12 +1,13 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { getEmails, isDataImported } from '@/lib/client-db';
 import { useSearchParams } from 'next/navigation';
 import ComposeEmail from '@/components/gmail/ComposeEmail';
 import GmailInbox from '@/components/gmail/GmailInbox';
 
 type OutreachTab = 'drafts' | 'inbox' | 'compose';
+type ViewMode = 'list' | 'preview';
 
 export default function OutreachPage() {
   const searchParams = useSearchParams();
@@ -19,6 +20,11 @@ export default function OutreachPage() {
   const [search, setSearch] = useState(initialSearch);
   const [expandedId, setExpandedId] = useState<string | null>(null);
   const [sendTarget, setSendTarget] = useState<{ to: string; subject: string; body: string } | null>(null);
+  const [viewMode, setViewMode] = useState<ViewMode>('list');
+  const [previewEmailId, setPreviewEmailId] = useState<string | null>(null);
+  const [copiedId, setCopiedId] = useState<string | null>(null);
+  const [codeView, setCodeView] = useState(false);
+  const iframeRef = useRef<HTMLIFrameElement>(null);
 
   useEffect(() => {
     async function load() {
@@ -38,6 +44,27 @@ export default function OutreachPage() {
   const handleSendFromDraft = (email: any) => {
     setSendTarget({ to: email.email || '', subject: email.subject, body: email.body });
     setActiveTab('compose');
+  };
+
+  const handleCopyHtml = async (html: string, emailId: string) => {
+    try {
+      await navigator.clipboard.writeText(html);
+      setCopiedId(emailId);
+      setTimeout(() => setCopiedId(null), 2000);
+    } catch (err) {
+      console.error('Failed to copy:', err);
+    }
+  };
+
+  const handlePreview = (emailId: string) => {
+    setPreviewEmailId(emailId);
+    setViewMode('preview');
+    setCodeView(false);
+  };
+
+  const handleBackToList = () => {
+    setViewMode('list');
+    setPreviewEmailId(null);
   };
 
   const tabs = [
@@ -85,6 +112,8 @@ export default function OutreachPage() {
     replied: 'badge-active_deal',
   };
 
+  const previewEmail = previewEmailId ? emails.find(e => e.id === previewEmailId) : null;
+
   return (
     <div className="space-y-6">
       {/* Page Header */}
@@ -129,18 +158,26 @@ export default function OutreachPage() {
             </div>
           )}
 
-          {emails.length > 0 && (
+          {emails.length > 0 && viewMode === 'list' && (
             <>
-              {/* Search */}
-              <div className="relative">
-                <input
-                  type="text"
-                  placeholder="Search by business name or subject..."
-                  value={search}
-                  onChange={(e) => setSearch(e.target.value)}
-                  className="input pl-10"
-                />
-                <span className="absolute left-3 top-1/2 -translate-y-1/2 text-text-muted">🔍</span>
+              {/* Search and View Toggle */}
+              <div className="flex items-center gap-3">
+                <div className="relative flex-1">
+                  <input
+                    type="text"
+                    placeholder="Search by business name or subject..."
+                    value={search}
+                    onChange={(e) => setSearch(e.target.value)}
+                    className="input pl-10"
+                  />
+                  <span className="absolute left-3 top-1/2 -translate-y-1/2 text-text-muted">🔍</span>
+                </div>
+                <button
+                  onClick={() => setViewMode('preview')}
+                  className="btn btn-secondary text-sm whitespace-nowrap"
+                >
+                  📧 Preview Mode
+                </button>
               </div>
 
               {/* Filters */}
@@ -206,11 +243,28 @@ export default function OutreachPage() {
                           >
                             📤 Send via Gmail
                           </button>
-                          <button className="btn btn-secondary text-xs">
+                          {email.html_body && (
+                            <button
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                handlePreview(email.id);
+                              }}
+                              className="btn btn-secondary text-xs"
+                            >
+                              👁️ Preview HTML
+                            </button>
+                          )}
+                          <button className="btn btn-ghost text-xs">
                             ✏️ Edit
                           </button>
-                          <button className="btn btn-ghost text-xs">
-                            📋 Copy
+                          <button
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              handleCopyHtml(email.body, email.id);
+                            }}
+                            className="btn btn-ghost text-xs"
+                          >
+                            {copiedId === email.id ? '✓ Copied!' : '📋 Copy'}
                           </button>
                         </div>
                       </div>
@@ -227,6 +281,77 @@ export default function OutreachPage() {
                 </div>
               )}
             </>
+          )}
+
+          {emails.length > 0 && viewMode === 'preview' && previewEmail && (
+            <div className="space-y-4">
+              {/* Preview Header */}
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                  <button
+                    onClick={handleBackToList}
+                    className="btn btn-ghost text-sm"
+                  >
+                    ← Back to List
+                  </button>
+                  <div>
+                    <h2 className="text-lg font-bold text-text-primary">{previewEmail.subject}</h2>
+                    <p className="text-sm text-text-secondary">To: {previewEmail.lead_name}</p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-2">
+                  <button
+                    onClick={() => setCodeView(!codeView)}
+                    className={`btn text-sm ${codeView ? 'btn-primary' : 'btn-secondary'}`}
+                  >
+                    {'</>'} {codeView ? 'Visual' : 'Code'}
+                  </button>
+                  {previewEmail.html_body && (
+                    <button
+                      onClick={() => handleCopyHtml(previewEmail.html_body!, previewEmail.id)}
+                      className="btn btn-secondary text-sm"
+                    >
+                      {copiedId === previewEmail.id ? '✓ Copied!' : '📋 Copy HTML'}
+                    </button>
+                  )}
+                  <button
+                    onClick={() => handleSendFromDraft(previewEmail)}
+                    className="btn btn-primary text-sm"
+                  >
+                    📤 Send via Gmail
+                  </button>
+                </div>
+              </div>
+
+              {/* Preview Card */}
+              <div className="card overflow-hidden">
+                <div className="bg-bg-secondary border-b border-border px-4 py-3 flex items-center gap-2">
+                  <div className="flex gap-1.5">
+                    <div className="w-3 h-3 rounded-full bg-red-500/80"></div>
+                    <div className="w-3 h-3 rounded-full bg-yellow-500/80"></div>
+                    <div className="w-3 h-3 rounded-full bg-green-500/80"></div>
+                  </div>
+                  <span className="text-xs text-text-muted font-mono ml-2">Email Preview</span>
+                </div>
+
+                {codeView ? (
+                  <div className="p-4 bg-bg-secondary max-h-[600px] overflow-auto">
+                    <pre className="text-xs text-text-primary font-mono whitespace-pre-wrap break-words">
+                      {previewEmail.html_body || '<p>No HTML content available</p>'}
+                    </pre>
+                  </div>
+                ) : (
+                  <iframe
+                    ref={iframeRef}
+                    srcDoc={previewEmail.html_body || ''}
+                    className="w-full border-0 bg-[#0a0a0a]"
+                    style={{ minHeight: '500px', height: 'auto' }}
+                    title="Email Preview"
+                    sandbox="allow-same-origin"
+                  />
+                )}
+              </div>
+            </div>
           )}
         </>
       )}

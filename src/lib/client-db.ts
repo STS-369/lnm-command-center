@@ -35,6 +35,7 @@ export interface OutreachEmail {
   lead_name: string;
   subject: string;
   body: string;
+  html_body?: string;
   status: string;
   sent_at: string | null;
   opened_at: string | null;
@@ -219,16 +220,194 @@ const DEMO_EMAILS: OutreachEmail[] = [
   {
     id: 'email-001', lead_id: 'lead-001', lead_name: 'John Smith',
     subject: 'Partnership Opportunity', body: 'Hi John, I wanted to reach out about...',
+    html_body: `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Partnership Opportunity</title>
+</head>
+<body style="margin: 0; padding: 0; background-color: #0a0a0a; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color: #0a0a0a; padding: 40px 20px;">
+    <tr>
+      <td align="center">
+        <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="background-color: #111111; border-radius: 12px; border: 1px solid #1a1a1a; overflow: hidden;">
+          <!-- Header -->
+          <tr>
+            <td style="padding: 32px 40px; border-bottom: 1px solid #1a1a1a;">
+              <table width="100%" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td>
+                    <h1 style="margin: 0; font-size: 24px; font-weight: 700; color: #00d4ff;">SOETech</h1>
+                  </td>
+                  <td align="right">
+                    <span style="font-size: 12px; color: #a855f7; text-transform: uppercase; letter-spacing: 1px;">Partnership</span>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <!-- Body -->
+          <tr>
+            <td style="padding: 40px;">
+              <p style="margin: 0 0 20px; font-size: 16px; line-height: 1.6; color: #e0e0e0;">Hi John,</p>
+              <p style="margin: 0 0 20px; font-size: 16px; line-height: 1.6; color: #e0e0e0;">I wanted to reach out about a potential partnership opportunity. We've been following TechStart Inc's impressive growth and believe there's a great opportunity for us to collaborate.</p>
+              <p style="margin: 0 0 20px; font-size: 16px; line-height: 1.6; color: #e0e0e0;">Our team specializes in creating cutting-edge digital solutions, and we'd love to discuss how we can help accelerate your next project.</p>
+              <p style="margin: 0 0 20px; font-size: 16px; line-height: 1.6; color: #e0e0e0;">Would you be available for a quick 15-minute call this week?</p>
+              <!-- CTA Button -->
+              <table cellpadding="0" cellspacing="0" style="margin: 30px 0;">
+                <tr>
+                  <td style="border-radius: 8px; background: linear-gradient(135deg, #00d4ff, #a855f7);">
+                    <a href="#" style="display: inline-block; padding: 14px 32px; font-size: 14px; font-weight: 600; color: #ffffff; text-decoration: none;">Schedule a Call</a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <!-- Signature -->
+          <tr>
+            <td style="padding: 32px 40px; border-top: 1px solid #1a1a1a;">
+              <p style="margin: 0; font-size: 14px; color: #888888;">Best regards,</p>
+              <p style="margin: 8px 0 0; font-size: 16px; font-weight: 600; color: #00d4ff;">The SOETech Team</p>
+              <p style="margin: 4px 0 0; font-size: 12px; color: #666666;">Innovating Digital Experiences</p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>`,
     status: 'sent', sent_at: '2025-01-16T10:00:00Z', opened_at: null, created_at: '2025-01-16T09:55:00Z'
   },
   {
     id: 'email-002', lead_id: 'lead-002', lead_name: 'Sarah Johnson',
     subject: 'Your Custom Proposal', body: 'Sarah, following up on our conversation...',
+    html_body: `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Custom Proposal</title>
+</head>
+<body style="margin: 0; padding: 0; background-color: #0a0a0a; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color: #0a0a0a; padding: 40px 20px;">
+    <tr>
+      <td align="center">
+        <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="background-color: #111111; border-radius: 12px; border: 1px solid #1a1a1a; overflow: hidden;">
+          <!-- Header -->
+          <tr>
+            <td style="padding: 32px 40px; border-bottom: 1px solid #1a1a1a;">
+              <table width="100%" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td>
+                    <h1 style="margin: 0; font-size: 24px; font-weight: 700; color: #00d4ff;">SOETech</h1>
+                  </td>
+                  <td align="right">
+                    <span style="font-size: 12px; color: #a855f7; text-transform: uppercase; letter-spacing: 1px;">Proposal</span>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <!-- Body -->
+          <tr>
+            <td style="padding: 40px;">
+              <p style="margin: 0 0 20px; font-size: 16px; line-height: 1.6; color: #e0e0e0;">Hi Sarah,</p>
+              <p style="margin: 0 0 20px; font-size: 16px; line-height: 1.6; color: #e0e0e0;">Following up on our conversation about Growth Labs' website redesign. I've put together a custom proposal that addresses your specific needs.</p>
+              <p style="margin: 0 0 20px; font-size: 16px; line-height: 1.6; color: #e0e0e0;">The proposal includes:</p>
+              <ul style="margin: 0 0 20px; padding-left: 20px; font-size: 16px; line-height: 1.8; color: #e0e0e0;">
+                <li>Modern responsive design</li>
+                <li>SEO optimization</li>
+                <li>Performance improvements</li>
+                <li>Analytics integration</li>
+              </ul>
+              <!-- CTA Button -->
+              <table cellpadding="0" cellspacing="0" style="margin: 30px 0;">
+                <tr>
+                  <td style="border-radius: 8px; background: linear-gradient(135deg, #00d4ff, #a855f7);">
+                    <a href="#" style="display: inline-block; padding: 14px 32px; font-size: 14px; font-weight: 600; color: #ffffff; text-decoration: none;">View Full Proposal</a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <!-- Signature -->
+          <tr>
+            <td style="padding: 32px 40px; border-top: 1px solid #1a1a1a;">
+              <p style="margin: 0; font-size: 14px; color: #888888;">Best regards,</p>
+              <p style="margin: 8px 0 0; font-size: 16px; font-weight: 600; color: #00d4ff;">The SOETech Team</p>
+              <p style="margin: 4px 0 0; font-size: 12px; color: #666666;">Innovating Digital Experiences</p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>`,
     status: 'sent', sent_at: '2025-01-19T14:00:00Z', opened_at: null, created_at: '2025-01-19T13:55:00Z'
   },
   {
     id: 'email-003', lead_id: 'lead-003', lead_name: 'Mike Chen',
     subject: 'Introduction - SOETech Solutions', body: 'Mike, I hope this finds you well...',
+    html_body: `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Introduction - SOETech Solutions</title>
+</head>
+<body style="margin: 0; padding: 0; background-color: #0a0a0a; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color: #0a0a0a; padding: 40px 20px;">
+    <tr>
+      <td align="center">
+        <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="background-color: #111111; border-radius: 12px; border: 1px solid #1a1a1a; overflow: hidden;">
+          <!-- Header -->
+          <tr>
+            <td style="padding: 32px 40px; border-bottom: 1px solid #1a1a1a;">
+              <table width="100%" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td>
+                    <h1 style="margin: 0; font-size: 24px; font-weight: 700; color: #00d4ff;">SOETech</h1>
+                  </td>
+                  <td align="right">
+                    <span style="font-size: 12px; color: #a855f7; text-transform: uppercase; letter-spacing: 1px;">Introduction</span>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <!-- Body -->
+          <tr>
+            <td style="padding: 40px;">
+              <p style="margin: 0 0 20px; font-size: 16px; line-height: 1.6; color: #e0e0e0;">Hi Mike,</p>
+              <p style="margin: 0 0 20px; font-size: 16px; line-height: 1.6; color: #e0e0e0;">I hope this finds you well. I'm reaching out to introduce SOETech and explore how we might support DataDriven Co's data infrastructure needs.</p>
+              <p style="margin: 0 0 20px; font-size: 16px; line-height: 1.6; color: #e0e0e0;">We specialize in building scalable data solutions and would love to discuss potential opportunities.</p>
+              <!-- CTA Button -->
+              <table cellpadding="0" cellspacing="0" style="margin: 30px 0;">
+                <tr>
+                  <td style="border-radius: 8px; background: linear-gradient(135deg, #00d4ff, #a855f7);">
+                    <a href="#" style="display: inline-block; padding: 14px 32px; font-size: 14px; font-weight: 600; color: #ffffff; text-decoration: none;">Let's Connect</a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <!-- Signature -->
+          <tr>
+            <td style="padding: 32px 40px; border-top: 1px solid #1a1a1a;">
+              <p style="margin: 0; font-size: 14px; color: #888888;">Best regards,</p>
+              <p style="margin: 8px 0 0; font-size: 16px; font-weight: 600; color: #00d4ff;">The SOETech Team</p>
+              <p style="margin: 4px 0 0; font-size: 12px; color: #666666;">Innovating Digital Experiences</p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>`,
     status: 'sent', sent_at: '2025-01-21T11:00:00Z', opened_at: null, created_at: '2025-01-21T10:55:00Z'
   }
 ];
