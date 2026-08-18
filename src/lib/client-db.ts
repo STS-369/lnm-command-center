@@ -1,6 +1,6 @@
 /**
- * Client-side database layer backed by API routes + SQLite.
- * Replaces localStorage with server-side data via fetch().
+ * Hybrid client-side database layer.
+ * Tries API routes first (server mode), falls back to localStorage (GitHub Pages).
  */
 
 import { IMPORT_STATS } from './import-data';
@@ -88,6 +88,215 @@ export interface LeadWithStats extends Lead {
   last_email_at: string | null;
 }
 
+// ===== MODE DETECTION =====
+let _mode: 'api' | 'local' | null = null;
+
+async function detectMode(): Promise<'api' | 'local'> {
+  if (_mode) return _mode;
+  
+  try {
+    // Try to reach the API
+    const res = await fetch('/api/leads', { 
+      method: 'GET',
+      signal: AbortSignal.timeout(3000) // 3 second timeout
+    });
+    if (res.ok) {
+      _mode = 'api';
+      console.log('[DB] Using API mode');
+      return _mode;
+    }
+  } catch {
+    // API not available
+  }
+  
+  _mode = 'local';
+  console.log('[DB] Using localStorage fallback mode');
+  return _mode;
+}
+
+// ===== LOCAL STORAGE HELPERS =====
+function getStorageKey(table: string): string {
+  return `lnm_${table}`;
+}
+
+function loadFromStorage<T>(table: string): T[] {
+  if (typeof window === 'undefined') return [];
+  const data = localStorage.getItem(getStorageKey(table));
+  return data ? JSON.parse(data) : [];
+}
+
+function saveToStorage<T>(table: string, data: T[]): void {
+  if (typeof window === 'undefined') return;
+  localStorage.setItem(getStorageKey(table), JSON.stringify(data));
+}
+
+function generateId(): string {
+  return crypto.randomUUID ? crypto.randomUUID() : 
+    'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, (c) => {
+      const r = Math.random() * 16 | 0;
+      const v = c === 'x' ? r : (r & 0x3 | 0x8);
+      return v.toString(16);
+    });
+}
+
+// ===== SEED DATA FOR LOCAL MODE =====
+const DEMO_LEADS: Lead[] = [
+  {
+    id: 'lead-001', name: 'John Smith', company: 'TechStart Inc', email: 'john@techstart.com',
+    phone: '555-0101', website: 'https://techstart.com', city: 'Austin', state: 'TX',
+    industry: 'Technology', source: 'web', status: 'qualified', score: 85,
+    created_at: '2025-01-15T10:00:00Z', updated_at: '2025-01-20T14:30:00Z'
+  },
+  {
+    id: 'lead-002', name: 'Sarah Johnson', company: 'Growth Labs', email: 'sarah@growthlabs.io',
+    phone: '555-0102', website: 'https://growthlabs.io', city: 'San Francisco', state: 'CA',
+    industry: 'Marketing', source: 'referral', status: 'proposal', score: 92,
+    created_at: '2025-01-10T09:00:00Z', updated_at: '2025-01-18T11:00:00Z'
+  },
+  {
+    id: 'lead-003', name: 'Mike Chen', company: 'DataDriven Co', email: 'mike@datadriven.com',
+    phone: '555-0103', website: 'https://datadriven.com', city: 'Seattle', state: 'WA',
+    industry: 'Analytics', source: 'cold-outreach', status: 'contacted', score: 67,
+    created_at: '2025-01-20T08:00:00Z', updated_at: '2025-01-22T09:00:00Z'
+  },
+  {
+    id: 'lead-004', name: 'Emily Davis', company: 'CloudFirst Solutions', email: 'emily@cloudfirst.net',
+    phone: '555-0104', website: 'https://cloudfirst.net', city: 'Denver', state: 'CO',
+    industry: 'Cloud Services', source: 'linkedin', status: 'new', score: 45,
+    created_at: '2025-01-25T07:00:00Z', updated_at: '2025-01-25T07:00:00Z'
+  },
+  {
+    id: 'lead-005', name: 'Robert Wilson', company: 'SecureNet Pro', email: 'robert@securenetpro.com',
+    phone: '555-0105', website: 'https://securenetpro.com', city: 'Chicago', state: 'IL',
+    industry: 'Cybersecurity', source: 'conference', status: 'negotiation', score: 88,
+    created_at: '2025-01-12T10:00:00Z', updated_at: '2025-01-24T16:00:00Z'
+  },
+  {
+    id: 'lead-006', name: 'Lisa Anderson', company: 'EcoTech Innovations', email: 'lisa@ecotech.com',
+    phone: '555-0106', website: 'https://ecotech.com', city: 'Portland', state: 'OR',
+    industry: 'Green Tech', source: 'web', status: 'qualified', score: 78,
+    created_at: '2025-01-18T11:00:00Z', updated_at: '2025-01-23T13:00:00Z'
+  },
+  {
+    id: 'lead-007', name: 'James Brown', company: 'FinServ Capital', email: 'james@finserv.com',
+    phone: '555-0107', website: 'https://finserv.com', city: 'New York', state: 'NY',
+    industry: 'Finance', source: 'referral', status: 'closed-won', score: 95,
+    created_at: '2024-12-01T10:00:00Z', updated_at: '2025-01-15T10:00:00Z'
+  },
+  {
+    id: 'lead-008', name: 'Maria Garcia', company: 'HealthPlus Medical', email: 'maria@healthplus.org',
+    phone: '555-0108', website: 'https://healthplus.org', city: 'Miami', state: 'FL',
+    industry: 'Healthcare', source: 'partner', status: 'proposal', score: 82,
+    created_at: '2025-01-05T09:00:00Z', updated_at: '2025-01-19T15:00:00Z'
+  },
+  {
+    id: 'lead-009', name: 'David Lee', company: 'EduLearn Platform', email: 'david@edulearn.com',
+    phone: '555-0109', website: 'https://edulearn.com', city: 'Boston', state: 'MA',
+    industry: 'Education', source: 'cold-outreach', status: 'contacted', score: 55,
+    created_at: '2025-01-22T08:00:00Z', updated_at: '2025-01-24T10:00:00Z'
+  },
+  {
+    id: 'lead-010', name: 'Jennifer White', company: 'RetailMax Solutions', email: 'jennifer@retailmax.com',
+    phone: '555-0110', website: 'https://retailmax.com', city: 'Dallas', state: 'TX',
+    industry: 'Retail', source: 'linkedin', status: 'new', score: 42,
+    created_at: '2025-01-26T07:00:00Z', updated_at: '2025-01-26T07:00:00Z'
+  },
+  {
+    id: 'lead-011', name: 'Chris Martinez', company: 'LogiFlow Systems', email: 'chris@logiflow.com',
+    phone: '555-0111', website: 'https://logiflow.com', city: 'Phoenix', state: 'AZ',
+    industry: 'Logistics', source: 'web', status: 'qualified', score: 71,
+    created_at: '2025-01-14T10:00:00Z', updated_at: '2025-01-21T12:00:00Z'
+  },
+  {
+    id: 'lead-012', name: 'Amanda Taylor', company: 'SmartHome Tech', email: 'amanda@smarthome.com',
+    phone: '555-0112', website: 'https://smarthome.com', city: 'San Jose', state: 'CA',
+    industry: 'IoT', source: 'conference', status: 'negotiation', score: 89,
+    created_at: '2025-01-08T09:00:00Z', updated_at: '2025-01-25T14:00:00Z'
+  }
+];
+
+const DEMO_EMAILS: OutreachEmail[] = [
+  {
+    id: 'email-001', lead_id: 'lead-001', lead_name: 'John Smith',
+    subject: 'Partnership Opportunity', body: 'Hi John, I wanted to reach out about...',
+    status: 'sent', sent_at: '2025-01-16T10:00:00Z', opened_at: null, created_at: '2025-01-16T09:55:00Z'
+  },
+  {
+    id: 'email-002', lead_id: 'lead-002', lead_name: 'Sarah Johnson',
+    subject: 'Your Custom Proposal', body: 'Sarah, following up on our conversation...',
+    status: 'sent', sent_at: '2025-01-19T14:00:00Z', opened_at: null, created_at: '2025-01-19T13:55:00Z'
+  },
+  {
+    id: 'email-003', lead_id: 'lead-003', lead_name: 'Mike Chen',
+    subject: 'Introduction - SOETech Solutions', body: 'Mike, I hope this finds you well...',
+    status: 'sent', sent_at: '2025-01-21T11:00:00Z', opened_at: null, created_at: '2025-01-21T10:55:00Z'
+  }
+];
+
+const DEMO_DEALS: Deal[] = [
+  {
+    id: 'deal-001', lead_id: 'lead-002', title: 'Growth Labs - Website Redesign',
+    value: 25000, progress: 60, status: 'active',
+    kickoff_date: '2025-01-25', target_date: '2025-03-01', created_at: '2025-01-19T15:00:00Z'
+  },
+  {
+    id: 'deal-002', lead_id: 'lead-007', title: 'FinServ - Security Audit',
+    value: 15000, progress: 100, status: 'completed',
+    kickoff_date: '2025-01-10', target_date: '2025-01-31', created_at: '2025-01-10T10:00:00Z'
+  },
+  {
+    id: 'deal-003', lead_id: 'lead-012', title: 'SmartHome - IoT Dashboard',
+    value: 40000, progress: 25, status: 'active',
+    kickoff_date: '2025-02-01', target_date: '2025-04-15', created_at: '2025-01-25T14:30:00Z'
+  }
+];
+
+const DEMO_TASKS: Task[] = [
+  {
+    id: 'task-001', title: 'Follow up with John Smith', description: 'Send proposal for TechStart project',
+    status: 'pending', priority: 'high', owner_type: 'user', owner_id: 'user-1',
+    lead_id: 'lead-001', deadline: '2025-01-28', created_at: '2025-01-25T10:00:00Z'
+  },
+  {
+    id: 'task-002', title: 'Prepare Q1 report', description: 'Compile sales metrics for Q1',
+    status: 'in-progress', priority: 'medium', owner_type: 'user', owner_id: 'user-1',
+    lead_id: '', deadline: '2025-01-30', created_at: '2025-01-20T09:00:00Z'
+  },
+  {
+    id: 'task-003', title: 'Schedule demo for CloudFirst', description: 'Set up product demo meeting',
+    status: 'pending', priority: 'low', owner_type: 'user', owner_id: 'user-1',
+    lead_id: 'lead-004', deadline: '2025-02-05', created_at: '2025-01-26T08:00:00Z'
+  }
+];
+
+const DEMO_ACTIVITIES: Activity[] = [
+  {
+    id: 'act-001', entity_type: 'lead', entity_id: 'lead-001', action: 'status_changed',
+    details: 'Status changed from new to qualified', user_id: 'user-1', created_at: '2025-01-20T14:30:00Z'
+  },
+  {
+    id: 'act-002', entity_type: 'email', entity_id: 'email-001', action: 'sent',
+    details: 'Email sent to John Smith', user_id: 'user-1', created_at: '2025-01-16T10:00:00Z'
+  },
+  {
+    id: 'act-003', entity_type: 'deal', entity_id: 'deal-001', action: 'created',
+    details: 'Deal created for Growth Labs', user_id: 'user-1', created_at: '2025-01-19T15:00:00Z'
+  }
+];
+
+function seedLocalStorage(): void {
+  if (loadFromStorage('leads').length > 0) return; // Already seeded
+  saveToStorage('leads', DEMO_LEADS);
+  saveToStorage('emails', DEMO_EMAILS);
+  saveToStorage('deals', DEMO_DEALS);
+  saveToStorage('tasks', DEMO_TASKS);
+  saveToStorage('activities', DEMO_ACTIVITIES);
+  saveToStorage('settings', [
+    { id: 'set-1', key: 'company_name', value: 'SOETech', updated_at: new Date().toISOString() },
+    { id: 'set-2', key: 'primary_color', value: '#6366f1', updated_at: new Date().toISOString() }
+  ]);
+}
+
 // ===== API HELPERS =====
 const API_BASE = '';
 
@@ -124,31 +333,66 @@ async function apiDelete(path: string): Promise<void> {
 
 // ===== DATA ACCESSORS =====
 export async function getLeads(): Promise<Lead[]> {
-  return apiGet<Lead[]>('/api/leads');
+  const mode = await detectMode();
+  if (mode === 'api') {
+    return apiGet<Lead[]>('/api/leads');
+  }
+  seedLocalStorage();
+  return loadFromStorage<Lead>('leads');
 }
 
 export async function getEmails(): Promise<OutreachEmail[]> {
-  return apiGet<OutreachEmail[]>('/api/emails');
+  const mode = await detectMode();
+  if (mode === 'api') {
+    return apiGet<OutreachEmail[]>('/api/emails');
+  }
+  seedLocalStorage();
+  return loadFromStorage<OutreachEmail>('emails');
 }
 
 export async function getEmailsByLead(leadId: string): Promise<OutreachEmail[]> {
-  return apiGet<OutreachEmail[]>(`/api/emails?lead_id=${leadId}`);
+  const mode = await detectMode();
+  if (mode === 'api') {
+    return apiGet<OutreachEmail[]>(`/api/emails?lead_id=${leadId}`);
+  }
+  const emails = await getEmails();
+  return emails.filter(e => e.lead_id === leadId);
 }
 
 export async function getDeals(): Promise<Deal[]> {
-  return apiGet<Deal[]>('/api/deals');
+  const mode = await detectMode();
+  if (mode === 'api') {
+    return apiGet<Deal[]>('/api/deals');
+  }
+  seedLocalStorage();
+  return loadFromStorage<Deal>('deals');
 }
 
 export async function getTasks(): Promise<Task[]> {
-  return apiGet<Task[]>('/api/tasks');
+  const mode = await detectMode();
+  if (mode === 'api') {
+    return apiGet<Task[]>('/api/tasks');
+  }
+  seedLocalStorage();
+  return loadFromStorage<Task>('tasks');
 }
 
 export async function getActivities(): Promise<Activity[]> {
-  return apiGet<Activity[]>('/api/activities');
+  const mode = await detectMode();
+  if (mode === 'api') {
+    return apiGet<Activity[]>('/api/activities');
+  }
+  seedLocalStorage();
+  return loadFromStorage<Activity>('activities');
 }
 
 export async function getSettings(): Promise<Setting[]> {
-  return apiGet<Setting[]>('/api/settings');
+  const mode = await detectMode();
+  if (mode === 'api') {
+    return apiGet<Setting[]>('/api/settings');
+  }
+  seedLocalStorage();
+  return loadFromStorage<Setting>('settings');
 }
 
 // ===== ENRICHED QUERIES =====
@@ -206,50 +450,156 @@ export async function getCityStats(): Promise<Record<string, number>> {
 
 // ===== CRUD =====
 export async function addLead(lead: Omit<Lead, 'id' | 'created_at' | 'updated_at'>): Promise<Lead> {
-  return apiPost<Lead>('/api/leads', lead);
+  const mode = await detectMode();
+  if (mode === 'api') {
+    return apiPost<Lead>('/api/leads', lead);
+  }
+  
+  const newLead: Lead = {
+    ...lead,
+    id: generateId(),
+    created_at: new Date().toISOString(),
+    updated_at: new Date().toISOString(),
+  };
+  const leads = loadFromStorage<Lead>('leads');
+  leads.push(newLead);
+  saveToStorage('leads', leads);
+  return newLead;
 }
 
 export async function updateLead(id: string, updates: Partial<Lead>): Promise<Lead | null> {
-  return apiPut<Lead | null>(`/api/leads/${id}`, updates);
+  const mode = await detectMode();
+  if (mode === 'api') {
+    return apiPut<Lead | null>(`/api/leads/${id}`, updates);
+  }
+  
+  const leads = loadFromStorage<Lead>('leads');
+  const idx = leads.findIndex(l => l.id === id);
+  if (idx === -1) return null;
+  leads[idx] = { ...leads[idx], ...updates, updated_at: new Date().toISOString() };
+  saveToStorage('leads', leads);
+  return leads[idx];
 }
 
 export async function addEmail(email: Omit<OutreachEmail, 'id' | 'created_at'>): Promise<OutreachEmail> {
-  return apiPost<OutreachEmail>('/api/emails', email);
+  const mode = await detectMode();
+  if (mode === 'api') {
+    return apiPost<OutreachEmail>('/api/emails', email);
+  }
+  
+  const newEmail: OutreachEmail = {
+    ...email,
+    id: generateId(),
+    created_at: new Date().toISOString(),
+  };
+  const emails = loadFromStorage<OutreachEmail>('emails');
+  emails.push(newEmail);
+  saveToStorage('emails', emails);
+  return newEmail;
 }
 
 export async function saveSettings(settings: Record<string, string>): Promise<void> {
-  await apiPut('/api/settings', settings);
+  const mode = await detectMode();
+  if (mode === 'api') {
+    await apiPut('/api/settings', settings);
+    return;
+  }
+  
+  const existing = loadFromStorage<Setting>('settings');
+  for (const [key, value] of Object.entries(settings)) {
+    const idx = existing.findIndex(s => s.key === key);
+    if (idx >= 0) {
+      existing[idx].value = value;
+      existing[idx].updated_at = new Date().toISOString();
+    } else {
+      existing.push({
+        id: generateId(),
+        key,
+        value,
+        updated_at: new Date().toISOString(),
+      });
+    }
+  }
+  saveToStorage('settings', existing);
 }
 
 export async function addActivity(entityType: string, entityId: string, action: string, details: string): Promise<void> {
-  await apiPost('/api/activities', { entity_type: entityType, entity_id: entityId, action, details });
+  const mode = await detectMode();
+  if (mode === 'api') {
+    await apiPost('/api/activities', { entity_type: entityType, entity_id: entityId, action, details });
+    return;
+  }
+  
+  const activities = loadFromStorage<Activity>('activities');
+  activities.push({
+    id: generateId(),
+    entity_type: entityType,
+    entity_id: entityId,
+    action,
+    details,
+    user_id: 'local-user',
+    created_at: new Date().toISOString(),
+  });
+  saveToStorage('activities', activities);
 }
 
 // ===== TASK CRUD =====
 export async function addTask(task: Omit<Task, 'id' | 'created_at'>): Promise<Task> {
-  return apiPost<Task>('/api/tasks', task);
+  const mode = await detectMode();
+  if (mode === 'api') {
+    return apiPost<Task>('/api/tasks', task);
+  }
+  
+  const newTask: Task = {
+    ...task,
+    id: generateId(),
+    created_at: new Date().toISOString(),
+  };
+  const tasks = loadFromStorage<Task>('tasks');
+  tasks.push(newTask);
+  saveToStorage('tasks', tasks);
+  return newTask;
 }
 
 export async function updateTask(id: string, updates: Partial<Task>): Promise<Task | null> {
-  const res = await fetch(`${API_BASE}/api/tasks`, {
-    method: 'PUT',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ id, ...updates }),
-  });
-  if (!res.ok) return null;
-  return res.json();
+  const mode = await detectMode();
+  if (mode === 'api') {
+    const res = await fetch(`${API_BASE}/api/tasks`, {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ id, ...updates }),
+    });
+    if (!res.ok) return null;
+    return res.json();
+  }
+  
+  const tasks = loadFromStorage<Task>('tasks');
+  const idx = tasks.findIndex(t => t.id === id);
+  if (idx === -1) return null;
+  tasks[idx] = { ...tasks[idx], ...updates };
+  saveToStorage('tasks', tasks);
+  return tasks[idx];
 }
 
 export async function deleteTask(id: string): Promise<boolean> {
-  try {
-    await apiDelete(`/api/tasks?id=${id}`);
-    return true;
-  } catch {
-    return false;
+  const mode = await detectMode();
+  if (mode === 'api') {
+    try {
+      await apiDelete(`/api/tasks?id=${id}`);
+      return true;
+    } catch {
+      return false;
+    }
   }
+  
+  const tasks = loadFromStorage<Task>('tasks');
+  const filtered = tasks.filter(t => t.id !== id);
+  if (filtered.length === tasks.length) return false;
+  saveToStorage('tasks', filtered);
+  return true;
 }
 
-// ===== IMPORT (no-op now, data pre-seeded in SQLite) =====
+// ===== IMPORT =====
 export interface ImportResult {
   leadsImported: number;
   leadsSkipped: number;
@@ -260,9 +610,23 @@ export interface ImportResult {
 }
 
 export async function importRealData(): Promise<ImportResult> {
-  // Data is pre-seeded in SQLite via scripts/seed-db.ts
-  const leads = await getLeads();
-  const emails = await getEmails();
+  const mode = await detectMode();
+  if (mode === 'api') {
+    const leads = await getLeads();
+    const emails = await getEmails();
+    return {
+      leadsImported: 0,
+      leadsSkipped: leads.length,
+      emailsImported: 0,
+      emailsSkipped: emails.length,
+      totalLeads: leads.length,
+      totalEmails: emails.length,
+    };
+  }
+  
+  // Local mode - check if data exists
+  const leads = loadFromStorage<Lead>('leads');
+  const emails = loadFromStorage<OutreachEmail>('emails');
   return {
     leadsImported: 0,
     leadsSkipped: leads.length,
@@ -282,9 +646,59 @@ export function getImportStats() {
   return IMPORT_STATS;
 }
 
-// ===== SEED (no-op now, data pre-seeded in SQLite) =====
+// ===== SEED =====
 export function seedDemoData(): void {
-  // No-op: data is pre-seeded in SQLite via scripts/seed-db.ts
+  seedLocalStorage();
+}
+
+// ===== GOOGLE DRIVE =====
+export interface DriveFile {
+  id: string;
+  name: string;
+  mimeType: string;
+  size?: string;
+  createdTime?: string;
+  modifiedTime?: string;
+  webViewLink?: string;
+}
+
+export async function getDriveFiles(folderId?: string): Promise<DriveFile[]> {
+  const params = new URLSearchParams();
+  if (folderId) params.set('folderId', folderId);
+  const res = await fetch(`/api/drive/list?${params.toString()}`);
+  if (!res.ok) throw new Error(`Drive API error: ${res.status}`);
+  const data = await res.json();
+  return data.files;
+}
+
+export async function searchDriveFiles(query: string): Promise<DriveFile[]> {
+  const res = await fetch(`/api/drive/list?type=search&query=${encodeURIComponent(query)}`);
+  if (!res.ok) throw new Error(`Drive API error: ${res.status}`);
+  const data = await res.json();
+  return data.files;
+}
+
+export async function uploadToDrive(file: File, folderId?: string, clientName?: string, category?: string): Promise<DriveFile> {
+  const formData = new FormData();
+  formData.append('file', file);
+  if (folderId) formData.append('folderId', folderId);
+  if (clientName) formData.append('clientName', clientName);
+  if (category) formData.append('category', category);
+  const res = await fetch('/api/drive/upload', { method: 'POST', body: formData });
+  if (!res.ok) throw new Error(`Drive upload error: ${res.status}`);
+  const data = await res.json();
+  return data.file;
+}
+
+export async function setupDriveFolders(clientName?: string): Promise<{ rootFolderId: string; folders: Record<string, string> }> {
+  const res = await fetch('/api/drive/setup', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ clientName }),
+  });
+  if (!res.ok) throw new Error(`Drive setup error: ${res.status}`);
+  const data = await res.json();
+  return data.structure;
 }
 
 // Re-export types

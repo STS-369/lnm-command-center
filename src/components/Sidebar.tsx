@@ -9,6 +9,7 @@ const navItems = [
   { href: '/pipeline', label: 'Pipeline', icon: '🎯' },
   { href: '/research', label: 'Research', icon: '🔬' },
   { href: '/outreach', label: 'Outreach', icon: '📧' },
+  { href: '/vault', label: 'Document Vault', icon: '📁' },
   { href: '/tasks', label: 'Tasks', icon: '✅' },
   { href: '/agents', label: 'Agents', icon: '🤖' },
   { href: '/settings', label: 'Settings', icon: '⚙️' },

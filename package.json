@@ -10,7 +10,11 @@
   },
   "dependencies": {
     "better-sqlite3": "^12.11.1",
+    "cors": "^2.8.6",
     "drizzle-orm": "^0.45.2",
+    "express": "^5.2.1",
+    "google-auth-library": "^10.9.1",
+    "googleapis": "^175.0.0",
     "next": "16.3.1",
     "react": "19.2.8",
     "react-dom": "19.2.8",
@@ -26,6 +30,7 @@
     "drizzle-kit": "^0.31.10",
     "eslint": "^9",
     "eslint-config-next": "16.3.1",
+    "gh-pages": "^6.3.0",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
