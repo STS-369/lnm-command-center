@@ -10,6 +10,7 @@ interface GmailMessage {
   to: string;
   date: string;
   snippet: string;
+  body?: string;
   labelIds: string[];
   hasAttachment?: boolean;
 }
@@ -27,6 +28,7 @@ export default function GmailInbox() {
     from: string;
     to: string;
     date: string;
+    snippet?: string;
   } | null>(null);
   const [loadingMessage, setLoadingMessage] = useState(false);
   const [pageToken, setPageToken] = useState<string | undefined>(undefined);
