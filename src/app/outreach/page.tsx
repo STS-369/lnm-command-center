@@ -1,6 +1,69 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
+
+  // Generate SOETech-styled HTML from plain text body
+  const generateHtmlEmail = (email: any): string => {
+    if (email.html_body) return email.html_body;
+    
+    const bodyParagraphs = (email.body || 'No content')
+      .split('\n')
+      .filter((line: string) => line.trim())
+      .map((line: string) => `<p style="margin: 0 0 16px; font-size: 16px; line-height: 1.6; color: #e0e0e0;">${line}</p>`)
+      .join('\n');
+    
+    return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>${email.subject || "SOETech Email"}</title>
+</head>
+<body style="margin: 0; padding: 0; background-color: #0a0a0a; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color: #0a0a0a; padding: 40px 20px;">
+    <tr>
+      <td align="center">
+        <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="background-color: #111111; border-radius: 12px; border: 1px solid #1a1a1a; overflow: hidden;">
+          <tr>
+            <td style="padding: 32px 40px; border-bottom: 1px solid #1a1a1a;">
+              <table width="100%" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td><h1 style="margin: 0; font-size: 24px; font-weight: 700; color: #00d4ff;">SOETech</h1></td>
+                  <td align="right"><span style="font-size: 12px; color: #a855f7; text-transform: uppercase; letter-spacing: 1px;">${email.subject || "Outreach"}</span></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding: 40px;">
+              <p style="margin: 0 0 20px; font-size: 16px; line-height: 1.6; color: #e0e0e0;">Hi there,</p>
+              ${bodyParagraphs}
+              <table cellpadding="0" cellspacing="0" style="margin: 30px 0;">
+                <tr>
+                  <td style="border-radius: 8px; background: linear-gradient(135deg, #00d4ff, #a855f7);">
+                    <a href="#" style="display: inline-block; padding: 14px 32px; font-size: 14px; font-weight: 600; color: #ffffff; text-decoration: none;">Schedule a 15-Minute Call</a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding: 32px 40px; border-top: 1px solid #1a1a1a;">
+              <p style="margin: 0; font-size: 14px; color: #888888;">Best regards,</p>
+              <p style="margin: 8px 0 0; font-size: 16px; font-weight: 600; color: #00d4ff;">Sophia Saitta & The SOETech Team</p>
+              <p style="margin: 4px 0 0; font-size: 12px; color: #666666;">— Empowering Humanity Through Technology</p>
+              <p style="margin: 4px 0 0; font-size: 12px; color: #666666;">https://soetechllc.com</p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>`;
+  };
+
+
 import { getEmails, isDataImported } from '@/lib/client-db';
 import { useSearchParams } from 'next/navigation';
 import ComposeEmail from '@/components/gmail/ComposeEmail';
@@ -306,9 +369,9 @@ export default function OutreachPage() {
                   >
                     {'</>'} {codeView ? 'Visual' : 'Code'}
                   </button>
-                  {previewEmail.html_body && (
+                  {previewEmail && (
                     <button
-                      onClick={() => handleCopyHtml(previewEmail.html_body!, previewEmail.id)}
+                      onClick={() => handleCopyHtml(generateHtmlEmail(previewEmail), previewEmail.id)}
                       className="btn btn-secondary text-sm"
                     >
                       {copiedId === previewEmail.id ? '✓ Copied!' : '📋 Copy HTML'}
@@ -337,13 +400,13 @@ export default function OutreachPage() {
                 {codeView ? (
                   <div className="p-4 bg-bg-secondary max-h-[600px] overflow-auto">
                     <pre className="text-xs text-text-primary font-mono whitespace-pre-wrap break-words">
-                      {previewEmail.html_body || '<p>No HTML content available</p>'}
+                      {generateHtmlEmail(previewEmail)}
                     </pre>
                   </div>
                 ) : (
                   <iframe
                     ref={iframeRef}
-                    srcDoc={previewEmail.html_body || ''}
+                    srcDoc={generateHtmlEmail(previewEmail)}
                     className="w-full border-0 bg-[#0a0a0a]"
                     style={{ minHeight: '500px', height: 'auto' }}
                     title="Email Preview"
