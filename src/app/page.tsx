@@ -1,8 +1,7 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import {
-  seedDemoData,
   getLeads,
   getDeals,
   getTasks,
@@ -11,8 +10,6 @@ import {
   getPipelineStats,
   getCategoryStats,
   getCityStats,
-  importRealData,
-  isDataImported,
 } from '@/lib/client-db';
 import type { Lead, Deal, Task, Activity, OutreachEmail } from '@/lib/client-db';
 
@@ -64,23 +61,52 @@ function getRelativeTime(dateStr: string): string {
   return `${diffDays}d ago`;
 }
 
-function initializeData() {
-  seedDemoData();
-  return {
-    leads: getLeads(),
-    deals: getDeals(),
-    tasks: getTasks(),
-    activities: getActivities(),
-    emails: getEmails(),
-    imported: isDataImported(),
-  };
-}
-
 export default function DashboardPage() {
-  const [data] = useState(initializeData);
-  const { leads, deals, tasks, activities, emails, imported } = data;
+  const [leads, setLeads] = useState<Lead[]>([]);
+  const [deals, setDeals] = useState<Deal[]>([]);
+  const [tasks, setTasks] = useState<Task[]>([]);
+  const [activities, setActivities] = useState<Activity[]>([]);
+  const [emails, setEmails] = useState<OutreachEmail[]>([]);
+  const [pipelineStats, setPipelineStats] = useState<Record<string, number>>({});
+  const [categoryStats, setCategoryStats] = useState<Record<string, number>>({});
+  const [cityStats, setCityStats] = useState<Record<string, number>>({});
+  const [loading, setLoading] = useState(true);
 
-  // Compute stats from client-side data
+  useEffect(() => {
+    async function load() {
+      try {
+        const [l, d, t, a, e, ps, cs, ci] = await Promise.all([
+          getLeads(), getDeals(), getTasks(), getActivities(), getEmails(),
+          getPipelineStats(), getCategoryStats(), getCityStats(),
+        ]);
+        setLeads(l);
+        setDeals(d);
+        setTasks(t);
+        setActivities(a);
+        setEmails(e);
+        setPipelineStats(ps);
+        setCategoryStats(cs);
+        setCityStats(ci);
+      } catch (err) {
+        console.error('Failed to load dashboard data:', err);
+      } finally {
+        setLoading(false);
+      }
+    }
+    load();
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center h-64">
+        <div className="text-center">
+          <span className="animate-spin text-2xl">⏳</span>
+          <p className="text-sm text-text-muted mt-2">Loading dashboard...</p>
+        </div>
+      </div>
+    );
+  }
+
   const totalLeads = leads.length;
   const activeDeals = deals.filter(d => d.status === 'active').length;
   const totalRevenue = deals.filter(d => d.status === 'completed').reduce((sum, d) => sum + d.value, 0);
@@ -88,8 +114,6 @@ export default function DashboardPage() {
   const totalEmails = emails.length;
   const sentEmails = emails.filter(e => e.status === 'sent').length;
 
-  // Pipeline breakdown
-  const pipelineStats = getPipelineStats();
   const statusOrder = ['new', 'researched', 'outreach', 'proposal', 'active_deal', 'closed_won', 'closed_lost'];
   const pipelineStages = statusOrder
     .map(status => ({
@@ -118,23 +142,17 @@ export default function DashboardPage() {
     closed_lost: 'Lost',
   };
 
-  // Category breakdown (top 8)
-  const categoryStats = getCategoryStats();
   const topCategories = Object.entries(categoryStats)
     .sort((a, b) => b[1] - a[1])
     .slice(0, 8);
 
-  // City breakdown
-  const cityStats = getCityStats();
   const topCities = Object.entries(cityStats)
     .sort((a, b) => b[1] - a[1]);
 
-  // Average score
   const avgScore = totalLeads > 0
     ? Math.round(leads.reduce((sum, l) => sum + l.score, 0) / totalLeads)
     : 0;
 
-  // High-priority leads (score >= 80)
   const highPriorityLeads = leads.filter(l => l.score >= 80).length;
 
   return (
@@ -144,9 +162,7 @@ export default function DashboardPage() {
         <h1 className="text-2xl font-bold text-text-primary glow-text-cyan">Dashboard</h1>
         <p className="text-sm text-text-secondary mt-1">
           Welcome back, Admin
-          {imported && (
-            <span className="ml-2 text-neon-green text-xs">● Live Data</span>
-          )}
+          <span className="ml-2 text-neon-green text-xs">● Live Data</span>
         </p>
       </div>
 
@@ -208,7 +224,7 @@ export default function DashboardPage() {
               </div>
             ))}
             {activities.length === 0 && (
-              <p className="text-sm text-text-muted text-center py-4">No activity yet. Import data to get started.</p>
+              <p className="text-sm text-text-muted text-center py-4">No activity yet.</p>
             )}
           </div>
         </div>

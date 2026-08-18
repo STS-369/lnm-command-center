@@ -1,25 +1,44 @@
 'use client';
 
-import { useState } from 'react';
-import { seedDemoData, getEmails, isDataImported } from '@/lib/client-db';
+import { useState, useEffect } from 'react';
+import { getEmails, isDataImported } from '@/lib/client-db';
 import { useSearchParams } from 'next/navigation';
-
-function initializeData() {
-  seedDemoData();
-  return {
-    emails: getEmails(),
-    imported: isDataImported(),
-  };
-}
 
 export default function OutreachPage() {
   const searchParams = useSearchParams();
   const initialSearch = searchParams.get('search') || '';
-  const [data] = useState(initializeData);
-  const { emails, imported } = data;
+  const [emails, setEmails] = useState<any[]>([]);
+  const [imported, setImported] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [filter, setFilter] = useState('all');
   const [search, setSearch] = useState(initialSearch);
   const [expandedId, setExpandedId] = useState<string | null>(null);
+
+  useEffect(() => {
+    async function load() {
+      try {
+        const [e, imp] = await Promise.all([getEmails(), isDataImported()]);
+        setEmails(e);
+        setImported(imp);
+      } catch (err) {
+        console.error('Failed to load emails:', err);
+      } finally {
+        setLoading(false);
+      }
+    }
+    load();
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center h-64">
+        <div className="text-center">
+          <span className="animate-spin text-2xl">⏳</span>
+          <p className="text-sm text-text-muted mt-2">Loading emails...</p>
+        </div>
+      </div>
+    );
+  }
 
   const filteredEmails = emails.filter(e => {
     const matchesFilter = filter === 'all' || e.status === filter;
@@ -67,7 +86,7 @@ export default function OutreachPage() {
           <div className="text-5xl mb-4">📧</div>
           <h2 className="text-lg font-bold text-text-primary font-mono mb-2">No Email Drafts</h2>
           <p className="text-sm text-text-secondary max-w-md mx-auto mb-4">
-            Import your lead data from the Pipeline page to load 99 pre-written sales email drafts.
+            Import your lead data from the Pipeline page to load pre-written sales email drafts.
           </p>
           <a href="/pipeline" className="btn btn-primary text-sm">
             📥 Go to Pipeline to Import

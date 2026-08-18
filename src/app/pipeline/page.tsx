@@ -1,13 +1,10 @@
 'use client';
 
-import { useState, useCallback } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import {
-  seedDemoData,
   getLeadsWithStats,
-  importRealData,
-  isDataImported,
-  getImportStats,
   getCityStats,
+  getImportStats,
 } from '@/lib/client-db';
 import type { LeadWithStats } from '@/lib/client-db';
 
@@ -32,45 +29,31 @@ const statusLabels: Record<string, string> = {
   closed_lost: 'Lost',
 };
 
-function initializeData() {
-  seedDemoData();
-  return {
-    leads: getLeadsWithStats(),
-    imported: isDataImported(),
-  };
-}
-
 export default function PipelinePage() {
-  const [data, setData] = useState(initializeData);
+  const [leads, setLeads] = useState<LeadWithStats[]>([]);
+  const [cityStats, setCityStats] = useState<Record<string, number>>({});
+  const [loading, setLoading] = useState(true);
   const [filter, setFilter] = useState('all');
   const [cityFilter, setCityFilter] = useState('all');
   const [search, setSearch] = useState('');
   const [pageSize, setPageSize] = useState(50);
   const [currentPage, setCurrentPage] = useState(1);
-  const [importing, setImporting] = useState(false);
-  const [importResult, setImportResult] = useState<{
-    leadsImported: number;
-    emailsImported: number;
-    totalLeads: number;
-    totalEmails: number;
-  } | null>(null);
 
-  const handleImport = useCallback(() => {
-    setImporting(true);
-    // Small delay to show loading state
-    setTimeout(() => {
-      const result = importRealData();
-      const updatedLeads = getLeadsWithStats();
-      setData({ leads: updatedLeads, imported: true });
-      setImportResult(result);
-      setImporting(false);
-    }, 100);
+  useEffect(() => {
+    async function load() {
+      try {
+        const [l, cs] = await Promise.all([getLeadsWithStats(), getCityStats()]);
+        setLeads(l);
+        setCityStats(cs);
+      } catch (err) {
+        console.error('Failed to load pipeline data:', err);
+      } finally {
+        setLoading(false);
+      }
+    }
+    load();
   }, []);
 
-  const leads = data.leads;
-
-  // Get city stats for filter dropdown
-  const cityStats = getCityStats();
   const uniqueCities = Object.keys(cityStats).sort((a, b) => a.localeCompare(b));
 
   const filteredLeads = leads
@@ -86,14 +69,12 @@ export default function PipelinePage() {
     })
     .sort((a, b) => a.name.localeCompare(b.name));
 
-  // Pagination calculations
   const totalPages = Math.max(1, Math.ceil(filteredLeads.length / pageSize));
   const safeCurrentPage = Math.min(currentPage, totalPages);
   const startIdx = (safeCurrentPage - 1) * pageSize;
   const endIdx = Math.min(startIdx + pageSize, filteredLeads.length);
   const paginatedLeads = filteredLeads.slice(startIdx, endIdx);
 
-  // Reset to page 1 when filter or search changes
   const handleFilterChange = (key: string) => {
     setFilter(key);
     setCurrentPage(1);
@@ -114,7 +95,6 @@ export default function PipelinePage() {
     setCurrentPage(1);
   };
 
-  // Status counts for filter badges
   const statusCounts: Record<string, number> = {};
   for (const lead of leads) {
     statusCounts[lead.status] = (statusCounts[lead.status] || 0) + 1;
@@ -152,6 +132,17 @@ export default function PipelinePage() {
 
   const importStats = getImportStats();
 
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center h-64">
+        <div className="text-center">
+          <span className="animate-spin text-2xl">⏳</span>
+          <p className="text-sm text-text-muted mt-2">Loading pipeline...</p>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="space-y-6">
       {/* Page Header */}
@@ -160,53 +151,15 @@ export default function PipelinePage() {
           <h1 className="text-2xl font-bold text-text-primary glow-text-cyan">Pipeline</h1>
           <p className="text-sm text-text-secondary mt-1">
             {filteredLeads.length} of {leads.length} leads
-            {data.imported && (
-              <span className="ml-2 text-neon-green text-xs">● Live Data</span>
-            )}
+            <span className="ml-2 text-neon-green text-xs">● Live Data</span>
           </p>
         </div>
         <div className="flex items-center gap-3">
-          {!data.imported ? (
-            <button
-              onClick={handleImport}
-              disabled={importing}
-              className="btn btn-primary text-sm"
-            >
-              {importing ? (
-                <>
-                  <span className="animate-spin">⏳</span> Importing...
-                </>
-              ) : (
-                <>
-                  📥 Import Data ({importStats.totalLeads} leads, {importStats.totalEmails} emails)
-                </>
-              )}
-            </button>
-          ) : (
-            <span className="text-xs text-text-muted">
-              ✅ {leads.length} leads loaded
-            </span>
-          )}
+          <span className="text-xs text-text-muted">
+            ✅ {leads.length} leads loaded
+          </span>
         </div>
       </div>
-
-      {/* Import Result Banner */}
-      {importResult && (
-        <div className="card border-neon-green/30 bg-neon-green/5">
-          <div className="flex items-center gap-3">
-            <span className="text-xl">✅</span>
-            <div>
-              <p className="text-sm font-medium text-neon-green">
-                Import Complete
-              </p>
-              <p className="text-xs text-text-secondary">
-                {importResult.leadsImported} leads imported • {importResult.emailsImported} emails imported •
-                Total: {importResult.totalLeads} leads, {importResult.totalEmails} emails
-              </p>
-            </div>
-          </div>
-        </div>
-      )}
 
       {/* Search */}
       <div className="relative">
@@ -345,13 +298,11 @@ export default function PipelinePage() {
         )}
         {filteredLeads.length > 0 && (
           <div className="px-4 py-3 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-3">
-            {/* Showing X-Y of Z */}
             <p className="text-xs text-text-muted">
               Showing {startIdx + 1}–{endIdx} of {filteredLeads.length} leads
             </p>
 
             <div className="flex items-center gap-4">
-              {/* Page size selector */}
               <div className="flex items-center gap-2">
                 <label htmlFor="page-size" className="text-xs text-text-muted">Per page:</label>
                 <select
@@ -366,7 +317,6 @@ export default function PipelinePage() {
                 </select>
               </div>
 
-              {/* Page navigation */}
               <div className="flex items-center gap-2">
                 <button
                   onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
