@@ -1,12 +1,13 @@
 'use client';
 
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect } from 'react';
 import {
   getLeadsWithStats,
   getCityStats,
   getImportStats,
 } from '@/lib/client-db';
-import type { LeadWithStats } from '@/lib/client-db';
+import type { LeadWithStats, Dossier } from '@/lib/client-db';
+import LeadDetailModal from '@/components/LeadDetailModal';
 
 const statusFilters = [
   { key: 'all', label: 'All', color: 'text-text-primary' },
@@ -38,6 +39,9 @@ export default function PipelinePage() {
   const [search, setSearch] = useState('');
   const [pageSize, setPageSize] = useState(50);
   const [currentPage, setCurrentPage] = useState(1);
+
+  // Detail modal state
+  const [selectedLead, setSelectedLead] = useState<LeadWithStats | null>(null);
 
   useEffect(() => {
     async function load() {
@@ -128,6 +132,11 @@ export default function PipelinePage() {
       'home services': 'bg-teal-500/10 text-teal-400 border-teal-500/20',
     };
     return colors[category?.toLowerCase()] || 'bg-bg-hover text-text-secondary border-border';
+  };
+
+  // Handle dossier saved — refresh if needed
+  const handleDossierSaved = (dossier: Dossier) => {
+    // Dossier saved in modal's own state; no extra action needed
   };
 
   const importStats = getImportStats();
@@ -236,10 +245,17 @@ export default function PipelinePage() {
             </thead>
             <tbody>
               {paginatedLeads.map((lead) => (
-                <tr key={lead.id} className="border-b border-border/50 hover:bg-bg-hover transition-colors">
+                <tr
+                  key={lead.id}
+                  onClick={() => setSelectedLead(lead)}
+                  className="border-b border-border/50 hover:bg-bg-hover transition-colors cursor-pointer group"
+                >
                   <td className="px-4 py-3">
                     <div>
-                      <p className="text-sm font-medium text-text-primary">{lead.name}</p>
+                      <p className="text-sm font-medium text-text-primary group-hover:text-cyan transition-colors">
+                        {lead.name}
+                        <span className="ml-1.5 text-[10px] text-text-muted opacity-0 group-hover:opacity-100 transition-opacity">→</span>
+                      </p>
                       <p className="text-xs text-text-muted">{lead.phone}</p>
                     </div>
                   </td>
@@ -278,6 +294,7 @@ export default function PipelinePage() {
                       <a
                         href={`/outreach?search=${encodeURIComponent(lead.name)}`}
                         className="text-cyan hover:text-cyan/80 font-medium underline underline-offset-2 decoration-cyan/30 hover:decoration-cyan/60 transition-colors"
+                        onClick={(e) => e.stopPropagation()}
                         title={`View ${lead.email_count} email(s) for ${lead.name}`}
                       >
                         {lead.email_count} 📧
@@ -340,6 +357,15 @@ export default function PipelinePage() {
           </div>
         )}
       </div>
+
+      {/* Lead Detail Modal */}
+      {selectedLead && (
+        <LeadDetailModal
+          lead={selectedLead}
+          onClose={() => setSelectedLead(null)}
+          onDossierSaved={handleDossierSaved}
+        />
+      )}
     </div>
   );
 }

@@ -89,6 +89,33 @@ export interface LeadWithStats extends Lead {
   last_email_at: string | null;
 }
 
+// ===== DOSSIER (OSINT) =====
+export interface Dossier {
+  id: string;
+  lead_id: string;
+  // Business info
+  business_name: string;
+  industry: string;
+  location: string;
+  website: string;
+  phone: string;
+  // Contacts
+  owner_name: string;
+  owner_title: string;
+  contact_email: string;
+  // Tech & ops
+  technology_stack: string[];
+  pain_points: string[];
+  opportunities: string[];
+  // Score & research
+  confidence_score: number;
+  research_sources: { label: string; url: string }[];
+  notes: string;
+  // Meta
+  created_at: string;
+  updated_at: string;
+}
+
 // ===== MODE DETECTION =====
 let _mode: 'api' | 'local' | null = null;
 
@@ -776,6 +803,46 @@ export async function deleteTask(id: string): Promise<boolean> {
   if (filtered.length === tasks.length) return false;
   saveToStorage('tasks', filtered);
   return true;
+}
+
+// ===== DOSSIER CRUD =====
+export async function getDossier(leadId: string): Promise<Dossier | null> {
+  const mode = await detectMode();
+  if (mode === 'api') {
+    try {
+      const res = await fetch(`/api/dossiers?lead_id=${leadId}`);
+      if (!res.ok) return null;
+      return res.json();
+    } catch { return null; }
+  }
+  const dossiers = loadFromStorage<Dossier>('dossiers');
+  return dossiers.find(d => d.lead_id === leadId) || null;
+}
+
+export async function saveDossier(dossier: Omit<Dossier, 'id' | 'created_at' | 'updated_at'>): Promise<Dossier> {
+  const mode = await detectMode();
+  if (mode === 'api') {
+    const res = await fetch('/api/dossiers', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(dossier),
+    });
+    if (!res.ok) throw new Error('Failed to save dossier');
+    return res.json();
+  }
+  const dossiers = loadFromStorage<Dossier>('dossiers');
+  const existing = dossiers.findIndex(d => d.lead_id === dossier.lead_id);
+  const now = new Date().toISOString();
+  const saved: Dossier = existing >= 0
+    ? { ...dossiers[existing], ...dossier, updated_at: now }
+    : { ...dossier, id: generateId(), created_at: now, updated_at: now };
+  if (existing >= 0) {
+    dossiers[existing] = saved;
+  } else {
+    dossiers.push(saved);
+  }
+  saveToStorage('dossiers', dossiers);
+  return saved;
 }
 
 // ===== IMPORT =====
