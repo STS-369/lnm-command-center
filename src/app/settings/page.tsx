@@ -1,33 +1,39 @@
 'use client';
 
-import { useState } from 'react';
-import { seedDemoData, getSettings, saveSettings } from '@/lib/client-db';
-
-function initializeSettings() {
-  seedDemoData();
-  const data = getSettings();
-  const settingsMap = new Map(data.map(s => [s.key, s.value]));
-  return {
-    companyName: settingsMap.get('company_name') || '',
-    companyTagline: settingsMap.get('company_tagline') || '',
-    defaultPricing: settingsMap.get('default_pricing_tier') || '',
-    aiApiKey: settingsMap.get('ai_api_key') || '',
-    aiModel: settingsMap.get('ai_model') || 'gpt-4',
-    theme: settingsMap.get('theme') || 'cyberpunk',
-  };
-}
+import { useState, useEffect } from 'react';
+import { getSettings, saveSettings } from '@/lib/client-db';
 
 export default function SettingsPage() {
-  const [init] = useState(initializeSettings);
-  const [companyName, setCompanyName] = useState(init.companyName);
-  const [companyTagline, setCompanyTagline] = useState(init.companyTagline);
-  const [defaultPricing, setDefaultPricing] = useState(init.defaultPricing);
-  const [aiApiKey, setAiApiKey] = useState(init.aiApiKey);
-  const [aiModel, setAiModel] = useState(init.aiModel);
-  const [theme, setTheme] = useState(init.theme);
+  const [loading, setLoading] = useState(true);
+  const [companyName, setCompanyName] = useState('');
+  const [companyTagline, setCompanyTagline] = useState('');
+  const [defaultPricing, setDefaultPricing] = useState('');
+  const [aiApiKey, setAiApiKey] = useState('');
+  const [aiModel, setAiModel] = useState('gpt-4');
+  const [theme, setTheme] = useState('cyberpunk');
   const [saving, setSaving] = useState(false);
   const [message, setMessage] = useState('');
   const [errors, setErrors] = useState<Record<string, string>>({});
+
+  useEffect(() => {
+    async function load() {
+      try {
+        const data = await getSettings();
+        const settingsMap = new Map(data.map(s => [s.key, s.value]));
+        setCompanyName(settingsMap.get('company_name') || '');
+        setCompanyTagline(settingsMap.get('company_tagline') || '');
+        setDefaultPricing(settingsMap.get('default_pricing_tier') || '');
+        setAiApiKey(settingsMap.get('ai_api_key') || '');
+        setAiModel(settingsMap.get('ai_model') || 'gpt-4');
+        setTheme(settingsMap.get('theme') || 'cyberpunk');
+      } catch (err) {
+        console.error('Failed to load settings:', err);
+      } finally {
+        setLoading(false);
+      }
+    }
+    load();
+  }, []);
 
   const validate = (): boolean => {
     const newErrors: Record<string, string> = {};
@@ -41,13 +47,13 @@ export default function SettingsPage() {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSave = () => {
+  const handleSave = async () => {
     if (!validate()) return;
 
     setSaving(true);
     setMessage('');
     try {
-      saveSettings({
+      await saveSettings({
         company_name: companyName.trim(),
         company_tagline: companyTagline.trim(),
         default_pricing_tier: defaultPricing,
@@ -63,6 +69,17 @@ export default function SettingsPage() {
       setSaving(false);
     }
   };
+
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center h-64">
+        <div className="text-center">
+          <span className="animate-spin text-2xl">⏳</span>
+          <p className="text-sm text-text-muted mt-2">Loading settings...</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="max-w-2xl space-y-6">
@@ -143,7 +160,7 @@ export default function SettingsPage() {
               placeholder="sk-..."
               aria-describedby="api-key-help"
             />
-            <p id="api-key-help" className="text-[10px] text-text-muted mt-1">Your AI service API key (stored locally)</p>
+            <p id="api-key-help" className="text-[10px] text-text-muted mt-1">Your AI service API key (stored in database)</p>
             {errors.aiApiKey && (
               <p className="text-xs text-neon-red mt-1" role="alert">{errors.aiApiKey}</p>
             )}
