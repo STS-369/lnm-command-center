@@ -64,7 +64,7 @@ import { useState, useEffect, useRef } from 'react';
   };
 
 
-import { getEmails, isDataImported } from '@/lib/client-db';
+import { getEmails, isDataImported, loadRealDataFromJSON } from '@/lib/client-db';
 import { useSearchParams } from 'next/navigation';
 import ComposeEmail from '@/components/gmail/ComposeEmail';
 import GmailInbox from '@/components/gmail/GmailInbox';
@@ -92,6 +92,7 @@ export default function OutreachPage() {
   useEffect(() => {
     async function load() {
       try {
+        await loadRealDataFromJSON();
         const [e, imp] = await Promise.all([getEmails(), isDataImported()]);
         setEmails(e);
         setImported(imp);

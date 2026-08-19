@@ -7,6 +7,7 @@ import {
   addTask,
   updateTask,
   deleteTask,
+  loadRealDataFromJSON,
 } from '@/lib/client-db';
 import type { Task, Lead } from '@/lib/client-db';
 
@@ -66,6 +67,7 @@ export default function TasksPage() {
   useEffect(() => {
     async function load() {
       try {
+        await loadRealDataFromJSON();
         const [t, l] = await Promise.all([getTasks(), getLeads()]);
         setTasks(t);
         setLeads(l);

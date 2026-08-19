@@ -3,6 +3,7 @@
 import { useState, useMemo, useEffect } from 'react';
 import {
   getLeadsWithStats,
+  loadRealDataFromJSON,
 } from '@/lib/client-db';
 import type { LeadWithStats } from '@/lib/client-db';
 
@@ -26,6 +27,7 @@ export default function ResearchPage() {
   useEffect(() => {
     async function load() {
       try {
+        await loadRealDataFromJSON();
         const l = await getLeadsWithStats();
         setLeads(l);
       } catch (err) {

@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { getLeads, getTasks, getActivities } from '@/lib/client-db';
+import { getLeads, getTasks, getActivities, loadRealDataFromJSON } from '@/lib/client-db';
 
 interface Agent {
   id: string;
@@ -109,6 +109,7 @@ export default function AgentsPage() {
   useEffect(() => {
     async function load() {
       try {
+        await loadRealDataFromJSON();
         const [l, t, a] = await Promise.all([getLeads(), getTasks(), getActivities()]);
         setLeads(l);
         setTasks(t);

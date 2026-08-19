@@ -635,6 +635,46 @@ export function seedDemoData(): void {
   seedLocalStorage();
 }
 
+// ===== REAL DATA LOADER =====
+export async function loadRealDataFromJSON(): Promise<boolean> {
+  try {
+    const [leadsRes, emailsRes, dossiersRes] = await Promise.all([
+      fetch('/data/leads.json'),
+      fetch('/data/emails.json'),
+      fetch('/data/dossiers.json'),
+    ]);
+
+    if (leadsRes.ok) {
+      const leads = await leadsRes.json();
+      if (leads.length > 0) {
+        saveToStorage('leads', leads);
+        console.log(`[LNM] Loaded ${leads.length} real leads`);
+      }
+    }
+
+    if (emailsRes.ok) {
+      const emails = await emailsRes.json();
+      if (emails.length > 0) {
+        saveToStorage('emails', emails);
+        console.log(`[LNM] Loaded ${emails.length} real emails`);
+      }
+    }
+
+    if (dossiersRes.ok) {
+      const dossiers = await dossiersRes.json();
+      if (dossiers.length > 0) {
+        saveToStorage('dossiers', dossiers);
+        console.log(`[LNM] Loaded ${dossiers.length} real dossiers`);
+      }
+    }
+
+    return true;
+  } catch (e) {
+    console.warn('[LNM] Failed to load real data:', e);
+    return false;
+  }
+}
+
 // ===== GOOGLE DRIVE =====
 export interface DriveFile {
   id: string;

@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { getSettings, saveSettings } from '@/lib/client-db';
+import { getSettings, saveSettings, loadRealDataFromJSON } from '@/lib/client-db';
 
 export default function SettingsPage() {
   const [loading, setLoading] = useState(true);
@@ -18,6 +18,7 @@ export default function SettingsPage() {
   useEffect(() => {
     async function load() {
       try {
+        await loadRealDataFromJSON();
         const data = await getSettings();
         const settingsMap = new Map(data.map(s => [s.key, s.value]));
         setCompanyName(settingsMap.get('company_name') || '');
