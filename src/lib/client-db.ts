@@ -24979,3 +24979,176 @@ export async function setupDriveFolders(clientName?: string): Promise<{ rootFold
 // Re-export types
 export { IMPORT_STATS };
 export type { ImportLead, ImportEmail };
+
+// ===== SYNC =====
+export interface SyncResult {
+  totalLeads: number;
+  totalEmails: number;
+  totalDossiers: number;
+  newLeads: number;
+  newEmails: number;
+  newDossiers: number;
+  updatedLeads: number;
+  updatedEmails: number;
+  conflictsResolved: number;
+  syncDurationMs: number;
+  timestamp: string;
+}
+
+export interface SyncMetadata {
+  last_sync: string | null;
+  sync_count: number;
+  source: 'gdrive' | 'local';
+}
+
+const SYNC_METADATA_KEY = 'lnm_sync_metadata';
+
+function getSyncMetadata(): SyncMetadata {
+  if (typeof window === 'undefined') return { last_sync: null, sync_count: 0, source: 'local' };
+  const raw = localStorage.getItem(SYNC_METADATA_KEY);
+  if (!raw) return { last_sync: null, sync_count: 0, source: 'local' };
+  try {
+    return JSON.parse(raw) as SyncMetadata;
+  } catch {
+    return { last_sync: null, sync_count: 0, source: 'local' };
+  }
+}
+
+function setSyncMetadata(meta: SyncMetadata): void {
+  if (typeof window === 'undefined') return;
+  localStorage.setItem(SYNC_METADATA_KEY, JSON.stringify(meta));
+}
+
+/**
+ * Merge a batch of remote items with existing localStorage items.
+ * Deduplicates by `id`. If an item with the same id exists and the
+ * remote version has a newer `updated_at`, the remote wins (last-write-wins).
+ * Returns { merged, added, updated, conflicts } counts.
+ */
+function mergeById<T extends { id: string; updated_at?: string }>(
+  existing: T[],
+  remote: T[]
+): { merged: T[]; added: number; updated: number; conflicts: number } {
+  const existingMap = new Map<string, T>();
+  for (const item of existing) {
+    existingMap.set(item.id, item);
+  }
+
+  let added = 0;
+  let updated = 0;
+  let conflicts = 0;
+
+  for (const remoteItem of remote) {
+    const existingItem = existingMap.get(remoteItem.id);
+    if (!existingItem) {
+      existingMap.set(remoteItem.id, remoteItem);
+      added++;
+    } else {
+      // Compare updated_at timestamps — remote wins if newer
+      const remoteTime = remoteItem.updated_at ? new Date(remoteItem.updated_at).getTime() : 0;
+      const existingTime = existingItem.updated_at ? new Date(existingItem.updated_at).getTime() : 0;
+      if (remoteTime > existingTime) {
+        existingMap.set(remoteItem.id, remoteItem);
+        updated++;
+        if (existingTime > 0) conflicts++;
+      }
+    }
+  }
+
+  return {
+    merged: Array.from(existingMap.values()),
+    added,
+    updated,
+    conflicts,
+  };
+}
+
+/**
+ * Fetch fresh data from /data/*.json (served alongside the static export)
+ * and merge with existing localStorage data, deduplicating by id.
+ * Designed for GitHub Pages (static export) where there is no server API.
+ */
+export async function syncData(): Promise<SyncResult> {
+  const startTime = Date.now();
+
+  // Fetch remote data files
+  const [leadsRes, emailsRes, dossiersRes] = await Promise.all([
+    fetch('/data/leads.json', { cache: 'no-cache' }),
+    fetch('/data/emails.json', { cache: 'no-cache' }),
+    fetch('/data/dossiers.json', { cache: 'no-cache' }),
+  ]);
+
+  if (!leadsRes.ok) throw new Error(`Failed to fetch leads: ${leadsRes.status}`);
+  if (!emailsRes.ok) throw new Error(`Failed to fetch emails: ${emailsRes.status}`);
+  if (!dossiersRes.ok) throw new Error(`Failed to fetch dossiers: ${dossiersRes.status}`);
+
+  const remoteLeads = await leadsRes.json() as Lead[];
+  const remoteEmails = await emailsRes.json() as OutreachEmail[];
+  const remoteDossiers = await dossiersRes.json() as Dossier[];
+
+  // Load existing data from localStorage
+  const existingLeads = loadFromStorage<Lead>('leads');
+  const existingEmails = loadFromStorage<OutreachEmail>('emails');
+  const existingDossiers = loadFromStorage<Dossier>('dossiers');
+
+  // Merge with deduplication
+  const leadMerge = mergeById(existingLeads, remoteLeads);
+  const emailMerge = mergeById(existingEmails, remoteEmails);
+  const dossierMerge = mergeById(existingDossiers, remoteDossiers);
+
+  // Save merged data back to localStorage
+  saveToStorage('leads', leadMerge.merged);
+  saveToStorage('emails', emailMerge.merged);
+  saveToStorage('dossiers', dossierMerge.merged);
+
+  // Update sync metadata
+  const prevMeta = getSyncMetadata();
+  const newMeta: SyncMetadata = {
+    last_sync: new Date().toISOString(),
+    sync_count: prevMeta.sync_count + 1,
+    source: 'gdrive',
+  };
+  setSyncMetadata(newMeta);
+
+  // Log to activity stream
+  const activity: Activity = {
+    id: generateId(),
+    entity_type: 'system',
+    entity_id: 'sync',
+    action: 'sync',
+    details: `Data synced from GDrive. ${leadMerge.added} new leads, ${emailMerge.added} new emails, ${dossierMerge.added} new dossiers. ${leadMerge.conflicts + emailMerge.conflicts + dossierMerge.conflicts} conflicts resolved.`,
+    user_id: 'system',
+    created_at: new Date().toISOString(),
+  };
+  const existingActivities = loadFromStorage<Activity>('activities');
+  existingActivities.unshift(activity);
+  saveToStorage('activities', existingActivities);
+
+  const syncDurationMs = Date.now() - startTime;
+
+  return {
+    totalLeads: leadMerge.merged.length,
+    totalEmails: emailMerge.merged.length,
+    totalDossiers: dossierMerge.merged.length,
+    newLeads: leadMerge.added,
+    newEmails: emailMerge.added,
+    newDossiers: dossierMerge.added,
+    updatedLeads: leadMerge.updated,
+    updatedEmails: emailMerge.updated,
+    conflictsResolved: leadMerge.conflicts + emailMerge.conflicts + dossierMerge.conflicts,
+    syncDurationMs,
+    timestamp: new Date().toISOString(),
+  };
+}
+
+/** Get the current sync metadata from localStorage. */
+export function getSyncState(): SyncMetadata {
+  return getSyncMetadata();
+}
+
+/** Reset sync metadata (for debugging). */
+export function resetSyncMetadata(): void {
+  if (typeof window !== 'undefined') {
+    localStorage.removeItem(SYNC_METADATA_KEY);
+  }
+}
