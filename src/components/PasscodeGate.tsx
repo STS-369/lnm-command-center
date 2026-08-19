@@ -5,6 +5,7 @@ import { useState, useEffect, useRef } from 'react';
 const PASSCODE = 'somoteitbe';
 
 export default function PasscodeGate({ children }: { children: React.ReactNode }) {
+  const [mounted, setMounted] = useState(false);
   const [authenticated, setAuthenticated] = useState<boolean | null>(null);
   const [input, setInput] = useState('');
   const [error, setError] = useState('');
@@ -12,6 +13,7 @@ export default function PasscodeGate({ children }: { children: React.ReactNode }
   const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
+    setMounted(true);
     const stored = sessionStorage.getItem('lnm_passcode');
     if (stored === PASSCODE) {
       setAuthenticated(true);
@@ -26,6 +28,8 @@ export default function PasscodeGate({ children }: { children: React.ReactNode }
       inputRef.current.focus();
     }
   }, [authenticated]);
+
+  if (!mounted) return null;
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
