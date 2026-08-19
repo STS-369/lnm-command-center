@@ -496,38 +496,10 @@ function seedLocalStorage(): void {
   if (loadFromStorage('leads').length > 0) return; // Already seeded
   
   // Load real imported leads (690) instead of demo leads (12)
-  const leadsToSeed = IMPORT_LEADS.length > 0 ? IMPORT_LEADS.map((l: ImportLead) => ({
-    id: l.id,
-    name: l.name,
-    company: l.company,
-    email: l.email,
-    phone: l.phone,
-    website: l.website,
-    city: l.city,
-    state: l.state,
-    industry: l.industry,
-    source: l.source,
-    status: l.status,
-    score: l.score,
-    rating: l.rating,
-    user_ratings_total: l.user_ratings_total,
-    address: l.address,
-    category: l.category,
-    website_status: l.website_status,
-    created_at: l.created_at,
-    updated_at: l.updated_at,
-  })) : DEMO_LEADS;
+  const leadsToSeed = IMPORT_LEADS.length > 0 ? IMPORT_LEADS as unknown as Lead[] : DEMO_LEADS;
   
   // Load real imported emails (99) instead of demo emails (3)
-  const emailsToSeed = IMPORT_EMAILS.length > 0 ? IMPORT_EMAILS.map((e: ImportEmail) => ({
-    id: e.id,
-    lead_id: e.lead_id,
-    lead_name: e.lead_name,
-    subject: e.subject,
-    body: e.body,
-    status: e.status,
-    created_at: e.created_at,
-  })) : DEMO_EMAILS;
+  const emailsToSeed = IMPORT_EMAILS.length > 0 ? IMPORT_EMAILS as unknown as OutreachEmail[] : DEMO_EMAILS;
   
   saveToStorage('leads', leadsToSeed);
   saveToStorage('emails', emailsToSeed);
