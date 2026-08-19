@@ -171,7 +171,8 @@ function generateId(): string {
 const DEMO_LEADS: Lead[] = [
   {
     id: '',
-    name: 'Cam Stone\'s Automotive',    company: '',
+    name: 'Cam Stone's Automotive',
+    company: '',
     email: '',
     phone: '(760) 568-2999',
     website: 'http://www.camstonesautomotive.com/',
@@ -181,8 +182,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147393',
-    updated_at: '2026-08-19T16:27:21.147405'
+    created_at: '2026-08-19T22:28:59.750073',
+    updated_at: '2026-08-19T22:28:59.750083'
   },
   {
     id: '',
@@ -197,8 +198,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147412',
-    updated_at: '2026-08-19T16:27:21.147413'
+    created_at: '2026-08-19T22:28:59.750090',
+    updated_at: '2026-08-19T22:28:59.750092'
   },
   {
     id: '',
@@ -213,8 +214,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147417',
-    updated_at: '2026-08-19T16:27:21.147418'
+    created_at: '2026-08-19T22:28:59.750095',
+    updated_at: '2026-08-19T22:28:59.750096'
   },
   {
     id: '',
@@ -229,12 +230,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147421',
-    updated_at: '2026-08-19T16:27:21.147422'
+    created_at: '2026-08-19T22:28:59.750100',
+    updated_at: '2026-08-19T22:28:59.750101'
   },
   {
     id: '',
-    name: 'Ozzie\'s Automotive Inc.',    company: '',
+    name: 'Ozzie's Automotive Inc.',
+    company: '',
     email: '',
     phone: '(760) 773-5939',
     website: 'https://ozziesautomotive.com/',
@@ -244,8 +246,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147425',
-    updated_at: '2026-08-19T16:27:21.147425'
+    created_at: '2026-08-19T22:28:59.750105',
+    updated_at: '2026-08-19T22:28:59.750106'
   },
   {
     id: '',
@@ -260,8 +262,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147428',
-    updated_at: '2026-08-19T16:27:21.147429'
+    created_at: '2026-08-19T22:28:59.750109',
+    updated_at: '2026-08-19T22:28:59.750110'
   },
   {
     id: '',
@@ -276,8 +278,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147432',
-    updated_at: '2026-08-19T16:27:21.147433'
+    created_at: '2026-08-19T22:28:59.750113',
+    updated_at: '2026-08-19T22:28:59.750114'
   },
   {
     id: '',
@@ -292,8 +294,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147436',
-    updated_at: '2026-08-19T16:27:21.147437'
+    created_at: '2026-08-19T22:28:59.750118',
+    updated_at: '2026-08-19T22:28:59.750119'
   },
   {
     id: '',
@@ -308,12 +310,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147440',
-    updated_at: '2026-08-19T16:27:21.147441'
+    created_at: '2026-08-19T22:28:59.750122',
+    updated_at: '2026-08-19T22:28:59.750123'
   },
   {
     id: '',
-    name: 'Lino\'s Auto Repair',    company: '',
+    name: 'Lino's Auto Repair',
+    company: '',
     email: '',
     phone: '(760) 773-4707',
     website: 'https://www.linosautorepair.com/',
@@ -323,8 +326,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147443',
-    updated_at: '2026-08-19T16:27:21.147444'
+    created_at: '2026-08-19T22:28:59.750126',
+    updated_at: '2026-08-19T22:28:59.750127'
   },
   {
     id: '',
@@ -339,12 +342,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147447',
-    updated_at: '2026-08-19T16:27:21.147448'
+    created_at: '2026-08-19T22:28:59.750130',
+    updated_at: '2026-08-19T22:28:59.750132'
   },
   {
     id: '',
-    name: 'Kim\'s Automotive',    company: '',
+    name: 'Kim's Automotive',
+    company: '',
     email: '',
     phone: '(760) 346-2443',
     website: 'http://www.kimsautomotive.com/',
@@ -354,8 +358,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147450',
-    updated_at: '2026-08-19T16:27:21.147451'
+    created_at: '2026-08-19T22:28:59.750134',
+    updated_at: '2026-08-19T22:28:59.750135'
   },
   {
     id: '',
@@ -370,8 +374,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147454',
-    updated_at: '2026-08-19T16:27:21.147455'
+    created_at: '2026-08-19T22:28:59.750172',
+    updated_at: '2026-08-19T22:28:59.750173'
   },
   {
     id: '',
@@ -386,8 +390,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147458',
-    updated_at: '2026-08-19T16:27:21.147459'
+    created_at: '2026-08-19T22:28:59.750176',
+    updated_at: '2026-08-19T22:28:59.750177'
   },
   {
     id: '',
@@ -402,8 +406,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147463',
-    updated_at: '2026-08-19T16:27:21.147463'
+    created_at: '2026-08-19T22:28:59.750180',
+    updated_at: '2026-08-19T22:28:59.750181'
   },
   {
     id: '',
@@ -418,8 +422,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147467',
-    updated_at: '2026-08-19T16:27:21.147468'
+    created_at: '2026-08-19T22:28:59.750183',
+    updated_at: '2026-08-19T22:28:59.750184'
   },
   {
     id: '',
@@ -434,8 +438,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147471',
-    updated_at: '2026-08-19T16:27:21.147472'
+    created_at: '2026-08-19T22:28:59.750187',
+    updated_at: '2026-08-19T22:28:59.750188'
   },
   {
     id: '',
@@ -450,8 +454,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147475',
-    updated_at: '2026-08-19T16:27:21.147475'
+    created_at: '2026-08-19T22:28:59.750192',
+    updated_at: '2026-08-19T22:28:59.750192'
   },
   {
     id: '',
@@ -466,8 +470,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147478',
-    updated_at: '2026-08-19T16:27:21.147479'
+    created_at: '2026-08-19T22:28:59.750195',
+    updated_at: '2026-08-19T22:28:59.750196'
   },
   {
     id: '',
@@ -482,8 +486,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147483',
-    updated_at: '2026-08-19T16:27:21.147484'
+    created_at: '2026-08-19T22:28:59.750199',
+    updated_at: '2026-08-19T22:28:59.750199'
   },
   {
     id: '',
@@ -498,8 +502,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147486',
-    updated_at: '2026-08-19T16:27:21.147487'
+    created_at: '2026-08-19T22:28:59.750202',
+    updated_at: '2026-08-19T22:28:59.750203'
   },
   {
     id: '',
@@ -514,8 +518,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147490',
-    updated_at: '2026-08-19T16:27:21.147491'
+    created_at: '2026-08-19T22:28:59.750206',
+    updated_at: '2026-08-19T22:28:59.750207'
   },
   {
     id: '',
@@ -530,8 +534,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147495',
-    updated_at: '2026-08-19T16:27:21.147495'
+    created_at: '2026-08-19T22:28:59.750210',
+    updated_at: '2026-08-19T22:28:59.750211'
   },
   {
     id: '',
@@ -546,8 +550,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147498',
-    updated_at: '2026-08-19T16:27:21.147499'
+    created_at: '2026-08-19T22:28:59.750214',
+    updated_at: '2026-08-19T22:28:59.750215'
   },
   {
     id: '',
@@ -562,8 +566,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147502',
-    updated_at: '2026-08-19T16:27:21.147503'
+    created_at: '2026-08-19T22:28:59.750217',
+    updated_at: '2026-08-19T22:28:59.750218'
   },
   {
     id: '',
@@ -578,8 +582,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147505',
-    updated_at: '2026-08-19T16:27:21.147506'
+    created_at: '2026-08-19T22:28:59.750221',
+    updated_at: '2026-08-19T22:28:59.750222'
   },
   {
     id: '',
@@ -594,8 +598,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147508',
-    updated_at: '2026-08-19T16:27:21.147509'
+    created_at: '2026-08-19T22:28:59.750224',
+    updated_at: '2026-08-19T22:28:59.750225'
   },
   {
     id: '',
@@ -610,8 +614,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147512',
-    updated_at: '2026-08-19T16:27:21.147513'
+    created_at: '2026-08-19T22:28:59.750228',
+    updated_at: '2026-08-19T22:28:59.750229'
   },
   {
     id: '',
@@ -626,8 +630,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147516',
-    updated_at: '2026-08-19T16:27:21.147517'
+    created_at: '2026-08-19T22:28:59.750231',
+    updated_at: '2026-08-19T22:28:59.750232'
   },
   {
     id: '',
@@ -642,8 +646,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147519',
-    updated_at: '2026-08-19T16:27:21.147520'
+    created_at: '2026-08-19T22:28:59.750235',
+    updated_at: '2026-08-19T22:28:59.750235'
   },
   {
     id: '',
@@ -658,8 +662,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147524',
-    updated_at: '2026-08-19T16:27:21.147525'
+    created_at: '2026-08-19T22:28:59.750238',
+    updated_at: '2026-08-19T22:28:59.750239'
   },
   {
     id: '',
@@ -674,8 +678,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147527',
-    updated_at: '2026-08-19T16:27:21.147528'
+    created_at: '2026-08-19T22:28:59.750241',
+    updated_at: '2026-08-19T22:28:59.750242'
   },
   {
     id: '',
@@ -690,8 +694,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147530',
-    updated_at: '2026-08-19T16:27:21.147531'
+    created_at: '2026-08-19T22:28:59.750244',
+    updated_at: '2026-08-19T22:28:59.750245'
   },
   {
     id: '',
@@ -706,8 +710,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147534',
-    updated_at: '2026-08-19T16:27:21.147535'
+    created_at: '2026-08-19T22:28:59.750248',
+    updated_at: '2026-08-19T22:28:59.750248'
   },
   {
     id: '',
@@ -722,8 +726,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147537',
-    updated_at: '2026-08-19T16:27:21.147538'
+    created_at: '2026-08-19T22:28:59.750251',
+    updated_at: '2026-08-19T22:28:59.750252'
   },
   {
     id: '',
@@ -738,8 +742,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147540',
-    updated_at: '2026-08-19T16:27:21.147541'
+    created_at: '2026-08-19T22:28:59.750254',
+    updated_at: '2026-08-19T22:28:59.750255'
   },
   {
     id: '',
@@ -754,8 +758,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147543',
-    updated_at: '2026-08-19T16:27:21.147544'
+    created_at: '2026-08-19T22:28:59.750257',
+    updated_at: '2026-08-19T22:28:59.750258'
   },
   {
     id: '',
@@ -770,8 +774,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147546',
-    updated_at: '2026-08-19T16:27:21.147547'
+    created_at: '2026-08-19T22:28:59.750260',
+    updated_at: '2026-08-19T22:28:59.750261'
   },
   {
     id: '',
@@ -786,8 +790,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147549',
-    updated_at: '2026-08-19T16:27:21.147550'
+    created_at: '2026-08-19T22:28:59.750264',
+    updated_at: '2026-08-19T22:28:59.750264'
   },
   {
     id: '',
@@ -802,8 +806,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147552',
-    updated_at: '2026-08-19T16:27:21.147553'
+    created_at: '2026-08-19T22:28:59.750267',
+    updated_at: '2026-08-19T22:28:59.750268'
   },
   {
     id: '',
@@ -818,8 +822,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147555',
-    updated_at: '2026-08-19T16:27:21.147556'
+    created_at: '2026-08-19T22:28:59.750270',
+    updated_at: '2026-08-19T22:28:59.750271'
   },
   {
     id: '',
@@ -834,8 +838,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147559',
-    updated_at: '2026-08-19T16:27:21.147560'
+    created_at: '2026-08-19T22:28:59.750273',
+    updated_at: '2026-08-19T22:28:59.750274'
   },
   {
     id: '',
@@ -850,8 +854,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147562',
-    updated_at: '2026-08-19T16:27:21.147563'
+    created_at: '2026-08-19T22:28:59.750276',
+    updated_at: '2026-08-19T22:28:59.750277'
   },
   {
     id: '',
@@ -866,8 +870,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147565',
-    updated_at: '2026-08-19T16:27:21.147566'
+    created_at: '2026-08-19T22:28:59.750279',
+    updated_at: '2026-08-19T22:28:59.750280'
   },
   {
     id: '',
@@ -882,8 +886,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147568',
-    updated_at: '2026-08-19T16:27:21.147569'
+    created_at: '2026-08-19T22:28:59.750282',
+    updated_at: '2026-08-19T22:28:59.750283'
   },
   {
     id: '',
@@ -898,8 +902,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147571',
-    updated_at: '2026-08-19T16:27:21.147572'
+    created_at: '2026-08-19T22:28:59.750285',
+    updated_at: '2026-08-19T22:28:59.750286'
   },
   {
     id: '',
@@ -914,8 +918,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147574',
-    updated_at: '2026-08-19T16:27:21.147575'
+    created_at: '2026-08-19T22:28:59.750288',
+    updated_at: '2026-08-19T22:28:59.750289'
   },
   {
     id: '',
@@ -930,12 +934,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147578',
-    updated_at: '2026-08-19T16:27:21.147579'
+    created_at: '2026-08-19T22:28:59.750292',
+    updated_at: '2026-08-19T22:28:59.750292'
   },
   {
     id: '',
-    name: 'Cam Stone\'s Automotive',    company: '',
+    name: 'Cam Stone's Automotive',
+    company: '',
     email: '',
     phone: '(760) 568-2999',
     website: 'http://www.camstonesautomotive.com/',
@@ -945,8 +950,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147581',
-    updated_at: '2026-08-19T16:27:21.147582'
+    created_at: '2026-08-19T22:28:59.750295',
+    updated_at: '2026-08-19T22:28:59.750296'
   },
   {
     id: '',
@@ -961,8 +966,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147585',
-    updated_at: '2026-08-19T16:27:21.147586'
+    created_at: '2026-08-19T22:28:59.750299',
+    updated_at: '2026-08-19T22:28:59.750300'
   },
   {
     id: '',
@@ -977,8 +982,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147590',
-    updated_at: '2026-08-19T16:27:21.147591'
+    created_at: '2026-08-19T22:28:59.750302',
+    updated_at: '2026-08-19T22:28:59.750303'
   },
   {
     id: '',
@@ -993,12 +998,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147593',
-    updated_at: '2026-08-19T16:27:21.147594'
+    created_at: '2026-08-19T22:28:59.750305',
+    updated_at: '2026-08-19T22:28:59.750306'
   },
   {
     id: '',
-    name: 'Ozzie\'s Automotive Inc.',    company: '',
+    name: 'Ozzie's Automotive Inc.',
+    company: '',
     email: '',
     phone: '(760) 773-5939',
     website: 'https://ozziesautomotive.com/',
@@ -1008,8 +1014,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147597',
-    updated_at: '2026-08-19T16:27:21.147597'
+    created_at: '2026-08-19T22:28:59.750309',
+    updated_at: '2026-08-19T22:28:59.750310'
   },
   {
     id: '',
@@ -1024,8 +1030,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147600',
-    updated_at: '2026-08-19T16:27:21.147601'
+    created_at: '2026-08-19T22:28:59.750313',
+    updated_at: '2026-08-19T22:28:59.750313'
   },
   {
     id: '',
@@ -1040,8 +1046,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147603',
-    updated_at: '2026-08-19T16:27:21.147604'
+    created_at: '2026-08-19T22:28:59.750316',
+    updated_at: '2026-08-19T22:28:59.750317'
   },
   {
     id: '',
@@ -1056,8 +1062,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147607',
-    updated_at: '2026-08-19T16:27:21.147608'
+    created_at: '2026-08-19T22:28:59.750319',
+    updated_at: '2026-08-19T22:28:59.750320'
   },
   {
     id: '',
@@ -1072,12 +1078,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147610',
-    updated_at: '2026-08-19T16:27:21.147611'
+    created_at: '2026-08-19T22:28:59.750323',
+    updated_at: '2026-08-19T22:28:59.750323'
   },
   {
     id: '',
-    name: 'Lino\'s Auto Repair',    company: '',
+    name: 'Lino's Auto Repair',
+    company: '',
     email: '',
     phone: '(760) 773-4707',
     website: 'https://www.linosautorepair.com/',
@@ -1087,8 +1094,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147613',
-    updated_at: '2026-08-19T16:27:21.147614'
+    created_at: '2026-08-19T22:28:59.750326',
+    updated_at: '2026-08-19T22:28:59.750327'
   },
   {
     id: '',
@@ -1103,12 +1110,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147616',
-    updated_at: '2026-08-19T16:27:21.147617'
+    created_at: '2026-08-19T22:28:59.750329',
+    updated_at: '2026-08-19T22:28:59.750330'
   },
   {
     id: '',
-    name: 'Kim\'s Automotive',    company: '',
+    name: 'Kim's Automotive',
+    company: '',
     email: '',
     phone: '(760) 346-2443',
     website: 'http://www.kimsautomotive.com/',
@@ -1118,8 +1126,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147620',
-    updated_at: '2026-08-19T16:27:21.147621'
+    created_at: '2026-08-19T22:28:59.750332',
+    updated_at: '2026-08-19T22:28:59.750333'
   },
   {
     id: '',
@@ -1134,8 +1142,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147623',
-    updated_at: '2026-08-19T16:27:21.147624'
+    created_at: '2026-08-19T22:28:59.750335',
+    updated_at: '2026-08-19T22:28:59.750336'
   },
   {
     id: '',
@@ -1150,8 +1158,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147626',
-    updated_at: '2026-08-19T16:27:21.147627'
+    created_at: '2026-08-19T22:28:59.750339',
+    updated_at: '2026-08-19T22:28:59.750339'
   },
   {
     id: '',
@@ -1166,8 +1174,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147630',
-    updated_at: '2026-08-19T16:27:21.147631'
+    created_at: '2026-08-19T22:28:59.750342',
+    updated_at: '2026-08-19T22:28:59.750343'
   },
   {
     id: '',
@@ -1182,8 +1190,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147633',
-    updated_at: '2026-08-19T16:27:21.147634'
+    created_at: '2026-08-19T22:28:59.750345',
+    updated_at: '2026-08-19T22:28:59.750346'
   },
   {
     id: '',
@@ -1198,8 +1206,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147636',
-    updated_at: '2026-08-19T16:27:21.147637'
+    created_at: '2026-08-19T22:28:59.750348',
+    updated_at: '2026-08-19T22:28:59.750349'
   },
   {
     id: '',
@@ -1214,8 +1222,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147639',
-    updated_at: '2026-08-19T16:27:21.147640'
+    created_at: '2026-08-19T22:28:59.750352',
+    updated_at: '2026-08-19T22:28:59.750353'
   },
   {
     id: '',
@@ -1230,8 +1238,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147643',
-    updated_at: '2026-08-19T16:27:21.147643'
+    created_at: '2026-08-19T22:28:59.750355',
+    updated_at: '2026-08-19T22:28:59.750356'
   },
   {
     id: '',
@@ -1246,8 +1254,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147646',
-    updated_at: '2026-08-19T16:27:21.147647'
+    created_at: '2026-08-19T22:28:59.750358',
+    updated_at: '2026-08-19T22:28:59.750359'
   },
   {
     id: '',
@@ -1262,8 +1270,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147649',
-    updated_at: '2026-08-19T16:27:21.147650'
+    created_at: '2026-08-19T22:28:59.750361',
+    updated_at: '2026-08-19T22:28:59.750362'
   },
   {
     id: '',
@@ -1278,8 +1286,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147653',
-    updated_at: '2026-08-19T16:27:21.147653'
+    created_at: '2026-08-19T22:28:59.750364',
+    updated_at: '2026-08-19T22:28:59.750365'
   },
   {
     id: '',
@@ -1294,8 +1302,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147656',
-    updated_at: '2026-08-19T16:27:21.147657'
+    created_at: '2026-08-19T22:28:59.750368',
+    updated_at: '2026-08-19T22:28:59.750368'
   },
   {
     id: '',
@@ -1310,8 +1318,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147659',
-    updated_at: '2026-08-19T16:27:21.147660'
+    created_at: '2026-08-19T22:28:59.750371',
+    updated_at: '2026-08-19T22:28:59.750371'
   },
   {
     id: '',
@@ -1326,8 +1334,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147662',
-    updated_at: '2026-08-19T16:27:21.147663'
+    created_at: '2026-08-19T22:28:59.750374',
+    updated_at: '2026-08-19T22:28:59.750375'
   },
   {
     id: '',
@@ -1342,8 +1350,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147666',
-    updated_at: '2026-08-19T16:27:21.147666'
+    created_at: '2026-08-19T22:28:59.750377',
+    updated_at: '2026-08-19T22:28:59.750378'
   },
   {
     id: '',
@@ -1358,8 +1366,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147669',
-    updated_at: '2026-08-19T16:27:21.147670'
+    created_at: '2026-08-19T22:28:59.750380',
+    updated_at: '2026-08-19T22:28:59.750381'
   },
   {
     id: '',
@@ -1374,8 +1382,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147672',
-    updated_at: '2026-08-19T16:27:21.147673'
+    created_at: '2026-08-19T22:28:59.750383',
+    updated_at: '2026-08-19T22:28:59.750384'
   },
   {
     id: '',
@@ -1390,8 +1398,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147675',
-    updated_at: '2026-08-19T16:27:21.147676'
+    created_at: '2026-08-19T22:28:59.750386',
+    updated_at: '2026-08-19T22:28:59.750387'
   },
   {
     id: '',
@@ -1406,8 +1414,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147678',
-    updated_at: '2026-08-19T16:27:21.147679'
+    created_at: '2026-08-19T22:28:59.750390',
+    updated_at: '2026-08-19T22:28:59.750390'
   },
   {
     id: '',
@@ -1422,8 +1430,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147681',
-    updated_at: '2026-08-19T16:27:21.147682'
+    created_at: '2026-08-19T22:28:59.750393',
+    updated_at: '2026-08-19T22:28:59.750394'
   },
   {
     id: '',
@@ -1438,8 +1446,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147684',
-    updated_at: '2026-08-19T16:27:21.147684'
+    created_at: '2026-08-19T22:28:59.750398',
+    updated_at: '2026-08-19T22:28:59.750399'
   },
   {
     id: '',
@@ -1454,8 +1462,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147687',
-    updated_at: '2026-08-19T16:27:21.147687'
+    created_at: '2026-08-19T22:28:59.750401',
+    updated_at: '2026-08-19T22:28:59.750402'
   },
   {
     id: '',
@@ -1470,8 +1478,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147690',
-    updated_at: '2026-08-19T16:27:21.147691'
+    created_at: '2026-08-19T22:28:59.750404',
+    updated_at: '2026-08-19T22:28:59.750405'
   },
   {
     id: '',
@@ -1486,8 +1494,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147693',
-    updated_at: '2026-08-19T16:27:21.147694'
+    created_at: '2026-08-19T22:28:59.750407',
+    updated_at: '2026-08-19T22:28:59.750408'
   },
   {
     id: '',
@@ -1502,8 +1510,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147697',
-    updated_at: '2026-08-19T16:27:21.147697'
+    created_at: '2026-08-19T22:28:59.750410',
+    updated_at: '2026-08-19T22:28:59.750411'
   },
   {
     id: '',
@@ -1518,8 +1526,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147700',
-    updated_at: '2026-08-19T16:27:21.147701'
+    created_at: '2026-08-19T22:28:59.750413',
+    updated_at: '2026-08-19T22:28:59.750414'
   },
   {
     id: '',
@@ -1534,8 +1542,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147703',
-    updated_at: '2026-08-19T16:27:21.147704'
+    created_at: '2026-08-19T22:28:59.750417',
+    updated_at: '2026-08-19T22:28:59.750417'
   },
   {
     id: '',
@@ -1550,8 +1558,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147706',
-    updated_at: '2026-08-19T16:27:21.147706'
+    created_at: '2026-08-19T22:28:59.750420',
+    updated_at: '2026-08-19T22:28:59.750420'
   },
   {
     id: '',
@@ -1566,8 +1574,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147709',
-    updated_at: '2026-08-19T16:27:21.147709'
+    created_at: '2026-08-19T22:28:59.750423',
+    updated_at: '2026-08-19T22:28:59.750424'
   },
   {
     id: '',
@@ -1582,8 +1590,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147712',
-    updated_at: '2026-08-19T16:27:21.147713'
+    created_at: '2026-08-19T22:28:59.750426',
+    updated_at: '2026-08-19T22:28:59.750427'
   },
   {
     id: '',
@@ -1598,8 +1606,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147715',
-    updated_at: '2026-08-19T16:27:21.147716'
+    created_at: '2026-08-19T22:28:59.750429',
+    updated_at: '2026-08-19T22:28:59.750430'
   },
   {
     id: '',
@@ -1614,8 +1622,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147718',
-    updated_at: '2026-08-19T16:27:21.147719'
+    created_at: '2026-08-19T22:28:59.750433',
+    updated_at: '2026-08-19T22:28:59.750433'
   },
   {
     id: '',
@@ -1630,8 +1638,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147721',
-    updated_at: '2026-08-19T16:27:21.147722'
+    created_at: '2026-08-19T22:28:59.750436',
+    updated_at: '2026-08-19T22:28:59.750436'
   },
   {
     id: '',
@@ -1646,8 +1654,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147724',
-    updated_at: '2026-08-19T16:27:21.147725'
+    created_at: '2026-08-19T22:28:59.750439',
+    updated_at: '2026-08-19T22:28:59.750439'
   },
   {
     id: '',
@@ -1662,8 +1670,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147727',
-    updated_at: '2026-08-19T16:27:21.147728'
+    created_at: '2026-08-19T22:28:59.750442',
+    updated_at: '2026-08-19T22:28:59.750443'
   },
   {
     id: '',
@@ -1678,8 +1686,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147730',
-    updated_at: '2026-08-19T16:27:21.147731'
+    created_at: '2026-08-19T22:28:59.750445',
+    updated_at: '2026-08-19T22:28:59.750446'
   },
   {
     id: '',
@@ -1694,12 +1702,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147736',
-    updated_at: '2026-08-19T16:27:21.147737'
+    created_at: '2026-08-19T22:28:59.750450',
+    updated_at: '2026-08-19T22:28:59.750451'
   },
   {
     id: '',
-    name: 'Cam Stone\'s Automotive',    company: '',
+    name: 'Cam Stone's Automotive',
+    company: '',
     email: '',
     phone: '(760) 568-2999',
     website: 'http://www.camstonesautomotive.com/',
@@ -1709,8 +1718,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147740',
-    updated_at: '2026-08-19T16:27:21.147741'
+    created_at: '2026-08-19T22:28:59.750454',
+    updated_at: '2026-08-19T22:28:59.750455'
   },
   {
     id: '',
@@ -1725,8 +1734,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147743',
-    updated_at: '2026-08-19T16:27:21.147744'
+    created_at: '2026-08-19T22:28:59.750458',
+    updated_at: '2026-08-19T22:28:59.750459'
   },
   {
     id: '',
@@ -1741,8 +1750,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147747',
-    updated_at: '2026-08-19T16:27:21.147747'
+    created_at: '2026-08-19T22:28:59.750461',
+    updated_at: '2026-08-19T22:28:59.750462'
   },
   {
     id: '',
@@ -1757,12 +1766,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147750',
-    updated_at: '2026-08-19T16:27:21.147750'
+    created_at: '2026-08-19T22:28:59.750464',
+    updated_at: '2026-08-19T22:28:59.750465'
   },
   {
     id: '',
-    name: 'Ozzie\'s Automotive Inc.',    company: '',
+    name: 'Ozzie's Automotive Inc.',
+    company: '',
     email: '',
     phone: '(760) 773-5939',
     website: 'https://ozziesautomotive.com/',
@@ -1772,8 +1782,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147753',
-    updated_at: '2026-08-19T16:27:21.147754'
+    created_at: '2026-08-19T22:28:59.750467',
+    updated_at: '2026-08-19T22:28:59.750468'
   },
   {
     id: '',
@@ -1788,8 +1798,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147756',
-    updated_at: '2026-08-19T16:27:21.147757'
+    created_at: '2026-08-19T22:28:59.750471',
+    updated_at: '2026-08-19T22:28:59.750471'
   },
   {
     id: '',
@@ -1804,8 +1814,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147759',
-    updated_at: '2026-08-19T16:27:21.147760'
+    created_at: '2026-08-19T22:28:59.750474',
+    updated_at: '2026-08-19T22:28:59.750475'
   },
   {
     id: '',
@@ -1820,8 +1830,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147763',
-    updated_at: '2026-08-19T16:27:21.147763'
+    created_at: '2026-08-19T22:28:59.750477',
+    updated_at: '2026-08-19T22:28:59.750478'
   },
   {
     id: '',
@@ -1836,12 +1846,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147766',
-    updated_at: '2026-08-19T16:27:21.147767'
+    created_at: '2026-08-19T22:28:59.750480',
+    updated_at: '2026-08-19T22:28:59.750481'
   },
   {
     id: '',
-    name: 'Lino\'s Auto Repair',    company: '',
+    name: 'Lino's Auto Repair',
+    company: '',
     email: '',
     phone: '(760) 773-4707',
     website: 'https://www.linosautorepair.com/',
@@ -1851,8 +1862,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147769',
-    updated_at: '2026-08-19T16:27:21.147770'
+    created_at: '2026-08-19T22:28:59.750483',
+    updated_at: '2026-08-19T22:28:59.750484'
   },
   {
     id: '',
@@ -1867,12 +1878,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147772',
-    updated_at: '2026-08-19T16:27:21.147773'
+    created_at: '2026-08-19T22:28:59.750486',
+    updated_at: '2026-08-19T22:28:59.750487'
   },
   {
     id: '',
-    name: 'Kim\'s Automotive',    company: '',
+    name: 'Kim's Automotive',
+    company: '',
     email: '',
     phone: '(760) 346-2443',
     website: 'http://www.kimsautomotive.com/',
@@ -1882,8 +1894,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147775',
-    updated_at: '2026-08-19T16:27:21.147776'
+    created_at: '2026-08-19T22:28:59.750489',
+    updated_at: '2026-08-19T22:28:59.750490'
   },
   {
     id: '',
@@ -1898,8 +1910,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147778',
-    updated_at: '2026-08-19T16:27:21.147779'
+    created_at: '2026-08-19T22:28:59.750492',
+    updated_at: '2026-08-19T22:28:59.750495'
   },
   {
     id: '',
@@ -1914,8 +1926,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147781',
-    updated_at: '2026-08-19T16:27:21.147782'
+    created_at: '2026-08-19T22:28:59.750498',
+    updated_at: '2026-08-19T22:28:59.750499'
   },
   {
     id: '',
@@ -1930,8 +1942,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147784',
-    updated_at: '2026-08-19T16:27:21.147785'
+    created_at: '2026-08-19T22:28:59.750501',
+    updated_at: '2026-08-19T22:28:59.750502'
   },
   {
     id: '',
@@ -1946,8 +1958,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147787',
-    updated_at: '2026-08-19T16:27:21.147788'
+    created_at: '2026-08-19T22:28:59.750504',
+    updated_at: '2026-08-19T22:28:59.750505'
   },
   {
     id: '',
@@ -1962,8 +1974,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147790',
-    updated_at: '2026-08-19T16:27:21.147791'
+    created_at: '2026-08-19T22:28:59.750508',
+    updated_at: '2026-08-19T22:28:59.750509'
   },
   {
     id: '',
@@ -1978,8 +1990,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147793',
-    updated_at: '2026-08-19T16:27:21.147794'
+    created_at: '2026-08-19T22:28:59.750511',
+    updated_at: '2026-08-19T22:28:59.750512'
   },
   {
     id: '',
@@ -1994,8 +2006,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147796',
-    updated_at: '2026-08-19T16:27:21.147797'
+    created_at: '2026-08-19T22:28:59.750514',
+    updated_at: '2026-08-19T22:28:59.750515'
   },
   {
     id: '',
@@ -2010,8 +2022,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147800',
-    updated_at: '2026-08-19T16:27:21.147800'
+    created_at: '2026-08-19T22:28:59.750517',
+    updated_at: '2026-08-19T22:28:59.750518'
   },
   {
     id: '',
@@ -2026,8 +2038,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147807',
-    updated_at: '2026-08-19T16:27:21.147808'
+    created_at: '2026-08-19T22:28:59.750521',
+    updated_at: '2026-08-19T22:28:59.750521'
   },
   {
     id: '',
@@ -2042,8 +2054,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147811',
-    updated_at: '2026-08-19T16:27:21.147811'
+    created_at: '2026-08-19T22:28:59.750524',
+    updated_at: '2026-08-19T22:28:59.750524'
   },
   {
     id: '',
@@ -2058,8 +2070,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147814',
-    updated_at: '2026-08-19T16:27:21.147815'
+    created_at: '2026-08-19T22:28:59.750527',
+    updated_at: '2026-08-19T22:28:59.750527'
   },
   {
     id: '',
@@ -2074,8 +2086,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147817',
-    updated_at: '2026-08-19T16:27:21.147818'
+    created_at: '2026-08-19T22:28:59.750529',
+    updated_at: '2026-08-19T22:28:59.750530'
   },
   {
     id: '',
@@ -2090,8 +2102,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147820',
-    updated_at: '2026-08-19T16:27:21.147821'
+    created_at: '2026-08-19T22:28:59.750533',
+    updated_at: '2026-08-19T22:28:59.750533'
   },
   {
     id: '',
@@ -2106,8 +2118,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147823',
-    updated_at: '2026-08-19T16:27:21.147824'
+    created_at: '2026-08-19T22:28:59.750536',
+    updated_at: '2026-08-19T22:28:59.750536'
   },
   {
     id: '',
@@ -2122,8 +2134,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147826',
-    updated_at: '2026-08-19T16:27:21.147827'
+    created_at: '2026-08-19T22:28:59.750539',
+    updated_at: '2026-08-19T22:28:59.750540'
   },
   {
     id: '',
@@ -2138,8 +2150,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147830',
-    updated_at: '2026-08-19T16:27:21.147830'
+    created_at: '2026-08-19T22:28:59.750542',
+    updated_at: '2026-08-19T22:28:59.750543'
   },
   {
     id: '',
@@ -2154,8 +2166,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147833',
-    updated_at: '2026-08-19T16:27:21.147834'
+    created_at: '2026-08-19T22:28:59.750545',
+    updated_at: '2026-08-19T22:28:59.750546'
   },
   {
     id: '',
@@ -2170,8 +2182,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147836',
-    updated_at: '2026-08-19T16:27:21.147837'
+    created_at: '2026-08-19T22:28:59.750548',
+    updated_at: '2026-08-19T22:28:59.750548'
   },
   {
     id: '',
@@ -2186,8 +2198,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147839',
-    updated_at: '2026-08-19T16:27:21.147840'
+    created_at: '2026-08-19T22:28:59.750551',
+    updated_at: '2026-08-19T22:28:59.750551'
   },
   {
     id: '',
@@ -2202,8 +2214,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147842',
-    updated_at: '2026-08-19T16:27:21.147876'
+    created_at: '2026-08-19T22:28:59.750554',
+    updated_at: '2026-08-19T22:28:59.750554'
   },
   {
     id: '',
@@ -2218,8 +2230,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147879',
-    updated_at: '2026-08-19T16:27:21.147880'
+    created_at: '2026-08-19T22:28:59.750557',
+    updated_at: '2026-08-19T22:28:59.750557'
   },
   {
     id: '',
@@ -2234,8 +2246,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147882',
-    updated_at: '2026-08-19T16:27:21.147883'
+    created_at: '2026-08-19T22:28:59.750559',
+    updated_at: '2026-08-19T22:28:59.750560'
   },
   {
     id: '',
@@ -2250,8 +2262,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147886',
-    updated_at: '2026-08-19T16:27:21.147886'
+    created_at: '2026-08-19T22:28:59.750562',
+    updated_at: '2026-08-19T22:28:59.750563'
   },
   {
     id: '',
@@ -2266,8 +2278,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147889',
-    updated_at: '2026-08-19T16:27:21.147890'
+    created_at: '2026-08-19T22:28:59.750566',
+    updated_at: '2026-08-19T22:28:59.750567'
   },
   {
     id: '',
@@ -2282,8 +2294,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147892',
-    updated_at: '2026-08-19T16:27:21.147893'
+    created_at: '2026-08-19T22:28:59.750569',
+    updated_at: '2026-08-19T22:28:59.750570'
   },
   {
     id: '',
@@ -2298,8 +2310,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147895',
-    updated_at: '2026-08-19T16:27:21.147896'
+    created_at: '2026-08-19T22:28:59.750572',
+    updated_at: '2026-08-19T22:28:59.750573'
   },
   {
     id: '',
@@ -2314,8 +2326,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147898',
-    updated_at: '2026-08-19T16:27:21.147899'
+    created_at: '2026-08-19T22:28:59.750575',
+    updated_at: '2026-08-19T22:28:59.750576'
   },
   {
     id: '',
@@ -2330,8 +2342,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147901',
-    updated_at: '2026-08-19T16:27:21.147902'
+    created_at: '2026-08-19T22:28:59.750578',
+    updated_at: '2026-08-19T22:28:59.750579'
   },
   {
     id: '',
@@ -2346,8 +2358,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147904',
-    updated_at: '2026-08-19T16:27:21.147905'
+    created_at: '2026-08-19T22:28:59.750581',
+    updated_at: '2026-08-19T22:28:59.750582'
   },
   {
     id: '',
@@ -2362,8 +2374,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147907',
-    updated_at: '2026-08-19T16:27:21.147908'
+    created_at: '2026-08-19T22:28:59.750584',
+    updated_at: '2026-08-19T22:28:59.750585'
   },
   {
     id: '',
@@ -2378,8 +2390,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147911',
-    updated_at: '2026-08-19T16:27:21.147912'
+    created_at: '2026-08-19T22:28:59.750588',
+    updated_at: '2026-08-19T22:28:59.750588'
   },
   {
     id: '',
@@ -2394,8 +2406,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147914',
-    updated_at: '2026-08-19T16:27:21.147915'
+    created_at: '2026-08-19T22:28:59.750591',
+    updated_at: '2026-08-19T22:28:59.750592'
   },
   {
     id: '',
@@ -2410,8 +2422,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147918',
-    updated_at: '2026-08-19T16:27:21.147918'
+    created_at: '2026-08-19T22:28:59.750594',
+    updated_at: '2026-08-19T22:28:59.750595'
   },
   {
     id: '',
@@ -2426,8 +2438,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147921',
-    updated_at: '2026-08-19T16:27:21.147922'
+    created_at: '2026-08-19T22:28:59.750598',
+    updated_at: '2026-08-19T22:28:59.750598'
   },
   {
     id: '',
@@ -2442,8 +2454,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147924',
-    updated_at: '2026-08-19T16:27:21.147925'
+    created_at: '2026-08-19T22:28:59.750601',
+    updated_at: '2026-08-19T22:28:59.750602'
   },
   {
     id: '',
@@ -2458,12 +2470,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147928',
-    updated_at: '2026-08-19T16:27:21.147929'
+    created_at: '2026-08-19T22:28:59.750604',
+    updated_at: '2026-08-19T22:28:59.750605'
   },
   {
     id: '',
-    name: 'Cam Stone\'s Automotive',    company: '',
+    name: 'Cam Stone's Automotive',
+    company: '',
     email: '',
     phone: '(760) 568-2999',
     website: 'http://www.camstonesautomotive.com/',
@@ -2473,8 +2486,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147932',
-    updated_at: '2026-08-19T16:27:21.147932'
+    created_at: '2026-08-19T22:28:59.750607',
+    updated_at: '2026-08-19T22:28:59.750608'
   },
   {
     id: '',
@@ -2489,8 +2502,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147935',
-    updated_at: '2026-08-19T16:27:21.147936'
+    created_at: '2026-08-19T22:28:59.750611',
+    updated_at: '2026-08-19T22:28:59.750612'
   },
   {
     id: '',
@@ -2505,8 +2518,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147939',
-    updated_at: '2026-08-19T16:27:21.147939'
+    created_at: '2026-08-19T22:28:59.750614',
+    updated_at: '2026-08-19T22:28:59.750615'
   },
   {
     id: '',
@@ -2521,12 +2534,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147942',
-    updated_at: '2026-08-19T16:27:21.147943'
+    created_at: '2026-08-19T22:28:59.750618',
+    updated_at: '2026-08-19T22:28:59.750619'
   },
   {
     id: '',
-    name: 'Ozzie\'s Automotive Inc.',    company: '',
+    name: 'Ozzie's Automotive Inc.',
+    company: '',
     email: '',
     phone: '(760) 773-5939',
     website: 'https://ozziesautomotive.com/',
@@ -2536,8 +2550,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147945',
-    updated_at: '2026-08-19T16:27:21.147946'
+    created_at: '2026-08-19T22:28:59.750621',
+    updated_at: '2026-08-19T22:28:59.750622'
   },
   {
     id: '',
@@ -2552,8 +2566,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147948',
-    updated_at: '2026-08-19T16:27:21.147949'
+    created_at: '2026-08-19T22:28:59.750624',
+    updated_at: '2026-08-19T22:28:59.750625'
   },
   {
     id: '',
@@ -2568,8 +2582,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147951',
-    updated_at: '2026-08-19T16:27:21.147952'
+    created_at: '2026-08-19T22:28:59.750627',
+    updated_at: '2026-08-19T22:28:59.750628'
   },
   {
     id: '',
@@ -2584,8 +2598,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147955',
-    updated_at: '2026-08-19T16:27:21.147955'
+    created_at: '2026-08-19T22:28:59.750630',
+    updated_at: '2026-08-19T22:28:59.750631'
   },
   {
     id: '',
@@ -2600,12 +2614,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147958',
-    updated_at: '2026-08-19T16:27:21.147959'
+    created_at: '2026-08-19T22:28:59.750634',
+    updated_at: '2026-08-19T22:28:59.750634'
   },
   {
     id: '',
-    name: 'Lino\'s Auto Repair',    company: '',
+    name: 'Lino's Auto Repair',
+    company: '',
     email: '',
     phone: '(760) 773-4707',
     website: 'https://www.linosautorepair.com/',
@@ -2615,8 +2630,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147961',
-    updated_at: '2026-08-19T16:27:21.147962'
+    created_at: '2026-08-19T22:28:59.750637',
+    updated_at: '2026-08-19T22:28:59.750638'
   },
   {
     id: '',
@@ -2631,12 +2646,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147964',
-    updated_at: '2026-08-19T16:27:21.147965'
+    created_at: '2026-08-19T22:28:59.750644',
+    updated_at: '2026-08-19T22:28:59.750645'
   },
   {
     id: '',
-    name: 'Kim\'s Automotive',    company: '',
+    name: 'Kim's Automotive',
+    company: '',
     email: '',
     phone: '(760) 346-2443',
     website: 'http://www.kimsautomotive.com/',
@@ -2646,8 +2662,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147967',
-    updated_at: '2026-08-19T16:27:21.147968'
+    created_at: '2026-08-19T22:28:59.750647',
+    updated_at: '2026-08-19T22:28:59.750648'
   },
   {
     id: '',
@@ -2662,8 +2678,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147970',
-    updated_at: '2026-08-19T16:27:21.147971'
+    created_at: '2026-08-19T22:28:59.750650',
+    updated_at: '2026-08-19T22:28:59.750651'
   },
   {
     id: '',
@@ -2678,8 +2694,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147973',
-    updated_at: '2026-08-19T16:27:21.147974'
+    created_at: '2026-08-19T22:28:59.750654',
+    updated_at: '2026-08-19T22:28:59.750655'
   },
   {
     id: '',
@@ -2694,8 +2710,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147977',
-    updated_at: '2026-08-19T16:27:21.147977'
+    created_at: '2026-08-19T22:28:59.750657',
+    updated_at: '2026-08-19T22:28:59.750658'
   },
   {
     id: '',
@@ -2710,8 +2726,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147980',
-    updated_at: '2026-08-19T16:27:21.147981'
+    created_at: '2026-08-19T22:28:59.750660',
+    updated_at: '2026-08-19T22:28:59.750661'
   },
   {
     id: '',
@@ -2726,8 +2742,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147983',
-    updated_at: '2026-08-19T16:27:21.147984'
+    created_at: '2026-08-19T22:28:59.750663',
+    updated_at: '2026-08-19T22:28:59.750664'
   },
   {
     id: '',
@@ -2742,8 +2758,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147986',
-    updated_at: '2026-08-19T16:27:21.147987'
+    created_at: '2026-08-19T22:28:59.750666',
+    updated_at: '2026-08-19T22:28:59.750667'
   },
   {
     id: '',
@@ -2758,8 +2774,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147989',
-    updated_at: '2026-08-19T16:27:21.147990'
+    created_at: '2026-08-19T22:28:59.750669',
+    updated_at: '2026-08-19T22:28:59.750670'
   },
   {
     id: '',
@@ -2774,8 +2790,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147992',
-    updated_at: '2026-08-19T16:27:21.147992'
+    created_at: '2026-08-19T22:28:59.750672',
+    updated_at: '2026-08-19T22:28:59.750673'
   },
   {
     id: '',
@@ -2790,8 +2806,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147995',
-    updated_at: '2026-08-19T16:27:21.147996'
+    created_at: '2026-08-19T22:28:59.750675',
+    updated_at: '2026-08-19T22:28:59.750676'
   },
   {
     id: '',
@@ -2806,8 +2822,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.147999',
-    updated_at: '2026-08-19T16:27:21.147999'
+    created_at: '2026-08-19T22:28:59.750678',
+    updated_at: '2026-08-19T22:28:59.750679'
   },
   {
     id: '',
@@ -2822,8 +2838,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148002',
-    updated_at: '2026-08-19T16:27:21.148002'
+    created_at: '2026-08-19T22:28:59.750681',
+    updated_at: '2026-08-19T22:28:59.750682'
   },
   {
     id: '',
@@ -2838,8 +2854,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148005',
-    updated_at: '2026-08-19T16:27:21.148005'
+    created_at: '2026-08-19T22:28:59.750684',
+    updated_at: '2026-08-19T22:28:59.750685'
   },
   {
     id: '',
@@ -2854,8 +2870,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148008',
-    updated_at: '2026-08-19T16:27:21.148008'
+    created_at: '2026-08-19T22:28:59.750687',
+    updated_at: '2026-08-19T22:28:59.750688'
   },
   {
     id: '',
@@ -2870,8 +2886,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148010',
-    updated_at: '2026-08-19T16:27:21.148011'
+    created_at: '2026-08-19T22:28:59.750690',
+    updated_at: '2026-08-19T22:28:59.750691'
   },
   {
     id: '',
@@ -2886,8 +2902,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148014',
-    updated_at: '2026-08-19T16:27:21.148015'
+    created_at: '2026-08-19T22:28:59.750693',
+    updated_at: '2026-08-19T22:28:59.750694'
   },
   {
     id: '',
@@ -2902,8 +2918,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148017',
-    updated_at: '2026-08-19T16:27:21.148018'
+    created_at: '2026-08-19T22:28:59.750696',
+    updated_at: '2026-08-19T22:28:59.750697'
   },
   {
     id: '',
@@ -2918,8 +2934,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148020',
-    updated_at: '2026-08-19T16:27:21.148021'
+    created_at: '2026-08-19T22:28:59.750699',
+    updated_at: '2026-08-19T22:28:59.750700'
   },
   {
     id: '',
@@ -2934,8 +2950,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148023',
-    updated_at: '2026-08-19T16:27:21.148024'
+    created_at: '2026-08-19T22:28:59.750702',
+    updated_at: '2026-08-19T22:28:59.750703'
   },
   {
     id: '',
@@ -2950,8 +2966,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148030',
-    updated_at: '2026-08-19T16:27:21.148031'
+    created_at: '2026-08-19T22:28:59.750705',
+    updated_at: '2026-08-19T22:28:59.750706'
   },
   {
     id: '',
@@ -2966,8 +2982,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148034',
-    updated_at: '2026-08-19T16:27:21.148035'
+    created_at: '2026-08-19T22:28:59.750708',
+    updated_at: '2026-08-19T22:28:59.750709'
   },
   {
     id: '',
@@ -2982,8 +2998,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148037',
-    updated_at: '2026-08-19T16:27:21.148038'
+    created_at: '2026-08-19T22:28:59.750711',
+    updated_at: '2026-08-19T22:28:59.750712'
   },
   {
     id: '',
@@ -2998,8 +3014,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148040',
-    updated_at: '2026-08-19T16:27:21.148041'
+    created_at: '2026-08-19T22:28:59.750714',
+    updated_at: '2026-08-19T22:28:59.750715'
   },
   {
     id: '',
@@ -3014,8 +3030,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148043',
-    updated_at: '2026-08-19T16:27:21.148044'
+    created_at: '2026-08-19T22:28:59.750717',
+    updated_at: '2026-08-19T22:28:59.750718'
   },
   {
     id: '',
@@ -3030,8 +3046,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148046',
-    updated_at: '2026-08-19T16:27:21.148047'
+    created_at: '2026-08-19T22:28:59.750720',
+    updated_at: '2026-08-19T22:28:59.750721'
   },
   {
     id: '',
@@ -3046,8 +3062,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148049',
-    updated_at: '2026-08-19T16:27:21.148050'
+    created_at: '2026-08-19T22:28:59.750723',
+    updated_at: '2026-08-19T22:28:59.750724'
   },
   {
     id: '',
@@ -3062,8 +3078,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148052',
-    updated_at: '2026-08-19T16:27:21.148053'
+    created_at: '2026-08-19T22:28:59.750727',
+    updated_at: '2026-08-19T22:28:59.750727'
   },
   {
     id: '',
@@ -3078,8 +3094,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148055',
-    updated_at: '2026-08-19T16:27:21.148056'
+    created_at: '2026-08-19T22:28:59.750730',
+    updated_at: '2026-08-19T22:28:59.750730'
   },
   {
     id: '',
@@ -3094,8 +3110,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148058',
-    updated_at: '2026-08-19T16:27:21.148059'
+    created_at: '2026-08-19T22:28:59.750732',
+    updated_at: '2026-08-19T22:28:59.750733'
   },
   {
     id: '',
@@ -3110,8 +3126,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148061',
-    updated_at: '2026-08-19T16:27:21.148062'
+    created_at: '2026-08-19T22:28:59.750735',
+    updated_at: '2026-08-19T22:28:59.750736'
   },
   {
     id: '',
@@ -3126,8 +3142,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148064',
-    updated_at: '2026-08-19T16:27:21.148065'
+    created_at: '2026-08-19T22:28:59.750738',
+    updated_at: '2026-08-19T22:28:59.750739'
   },
   {
     id: '',
@@ -3142,8 +3158,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148067',
-    updated_at: '2026-08-19T16:27:21.148068'
+    created_at: '2026-08-19T22:28:59.750741',
+    updated_at: '2026-08-19T22:28:59.750742'
   },
   {
     id: '',
@@ -3158,8 +3174,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148070',
-    updated_at: '2026-08-19T16:27:21.148071'
+    created_at: '2026-08-19T22:28:59.750748',
+    updated_at: '2026-08-19T22:28:59.750749'
   },
   {
     id: '',
@@ -3174,8 +3190,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148073',
-    updated_at: '2026-08-19T16:27:21.148074'
+    created_at: '2026-08-19T22:28:59.750752',
+    updated_at: '2026-08-19T22:28:59.750771'
   },
   {
     id: '',
@@ -3190,8 +3206,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148082',
-    updated_at: '2026-08-19T16:27:21.148082'
+    created_at: '2026-08-19T22:28:59.750785',
+    updated_at: '2026-08-19T22:28:59.750787'
   },
   {
     id: '',
@@ -3206,8 +3222,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148090',
-    updated_at: '2026-08-19T16:27:21.148091'
+    created_at: '2026-08-19T22:28:59.750790',
+    updated_at: '2026-08-19T22:28:59.750791'
   },
   {
     id: '',
@@ -3222,8 +3238,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148094',
-    updated_at: '2026-08-19T16:27:21.148095'
+    created_at: '2026-08-19T22:28:59.750795',
+    updated_at: '2026-08-19T22:28:59.750796'
   },
   {
     id: '',
@@ -3238,8 +3254,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148098',
-    updated_at: '2026-08-19T16:27:21.148099'
+    created_at: '2026-08-19T22:28:59.750800',
+    updated_at: '2026-08-19T22:28:59.750801'
   },
   {
     id: '',
@@ -3254,13 +3270,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148102',
-    updated_at: '2026-08-19T16:27:21.148103'
+    created_at: '2026-08-19T22:28:59.750804',
+    updated_at: '2026-08-19T22:28:59.750805'
   },
   {
     id: '',
     name: '',
-    company: 'The Artisan\'s Nook',
+    company: 'The Artisan's Nook',
     email: 'theartisansnook@gmail.com',
     phone: '989-284-9444',
     website: 'https://theartisansnook.com/',
@@ -3270,8 +3286,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148105',
-    updated_at: '2026-08-19T16:27:21.148106'
+    created_at: '2026-08-19T22:28:59.750808',
+    updated_at: '2026-08-19T22:28:59.750809'
   },
   {
     id: '',
@@ -3286,8 +3302,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148109',
-    updated_at: '2026-08-19T16:27:21.148110'
+    created_at: '2026-08-19T22:28:59.750812',
+    updated_at: '2026-08-19T22:28:59.750813'
   },
   {
     id: '',
@@ -3302,8 +3318,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148112',
-    updated_at: '2026-08-19T16:27:21.148113'
+    created_at: '2026-08-19T22:28:59.750816',
+    updated_at: '2026-08-19T22:28:59.750817'
   },
   {
     id: '',
@@ -3318,8 +3334,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148116',
-    updated_at: '2026-08-19T16:27:21.148116'
+    created_at: '2026-08-19T22:28:59.750820',
+    updated_at: '2026-08-19T22:28:59.750821'
   },
   {
     id: '',
@@ -3334,8 +3350,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148119',
-    updated_at: '2026-08-19T16:27:21.148119'
+    created_at: '2026-08-19T22:28:59.750824',
+    updated_at: '2026-08-19T22:28:59.750825'
   },
   {
     id: '',
@@ -3350,8 +3366,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148122',
-    updated_at: '2026-08-19T16:27:21.148123'
+    created_at: '2026-08-19T22:28:59.750828',
+    updated_at: '2026-08-19T22:28:59.750829'
   },
   {
     id: '',
@@ -3366,8 +3382,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148125',
-    updated_at: '2026-08-19T16:27:21.148126'
+    created_at: '2026-08-19T22:28:59.750832',
+    updated_at: '2026-08-19T22:28:59.750833'
   },
   {
     id: '',
@@ -3382,13 +3398,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148129',
-    updated_at: '2026-08-19T16:27:21.148129'
+    created_at: '2026-08-19T22:28:59.750836',
+    updated_at: '2026-08-19T22:28:59.750837'
   },
   {
     id: '',
     name: '',
-    company: 'Java Joe\'s Cafe',
+    company: 'Java Joe's Cafe',
     email: 'javajoescafe@gmail.com',
     phone: '906-643-9211',
     website: 'https://www.javajoescafemi.com/',
@@ -3398,8 +3414,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148132',
-    updated_at: '2026-08-19T16:27:21.148133'
+    created_at: '2026-08-19T22:28:59.750840',
+    updated_at: '2026-08-19T22:28:59.750841'
   },
   {
     id: '',
@@ -3414,8 +3430,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148135',
-    updated_at: '2026-08-19T16:27:21.148136'
+    created_at: '2026-08-19T22:28:59.750844',
+    updated_at: '2026-08-19T22:28:59.750845'
   },
   {
     id: '',
@@ -3430,8 +3446,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148138',
-    updated_at: '2026-08-19T16:27:21.148139'
+    created_at: '2026-08-19T22:28:59.750848',
+    updated_at: '2026-08-19T22:28:59.750849'
   },
   {
     id: '',
@@ -3446,8 +3462,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148141',
-    updated_at: '2026-08-19T16:27:21.148142'
+    created_at: '2026-08-19T22:28:59.750851',
+    updated_at: '2026-08-19T22:28:59.750852'
   },
   {
     id: '',
@@ -3462,8 +3478,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148144',
-    updated_at: '2026-08-19T16:27:21.148145'
+    created_at: '2026-08-19T22:28:59.750855',
+    updated_at: '2026-08-19T22:28:59.750856'
   },
   {
     id: '',
@@ -3478,8 +3494,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148148',
-    updated_at: '2026-08-19T16:27:21.148149'
+    created_at: '2026-08-19T22:28:59.750859',
+    updated_at: '2026-08-19T22:28:59.750860'
   },
   {
     id: '',
@@ -3494,8 +3510,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148151',
-    updated_at: '2026-08-19T16:27:21.148152'
+    created_at: '2026-08-19T22:28:59.750863',
+    updated_at: '2026-08-19T22:28:59.750864'
   },
   {
     id: '',
@@ -3510,8 +3526,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148154',
-    updated_at: '2026-08-19T16:27:21.148155'
+    created_at: '2026-08-19T22:28:59.750866',
+    updated_at: '2026-08-19T22:28:59.750867'
   },
   {
     id: '',
@@ -3526,8 +3542,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148157',
-    updated_at: '2026-08-19T16:27:21.148158'
+    created_at: '2026-08-19T22:28:59.750870',
+    updated_at: '2026-08-19T22:28:59.750871'
   },
   {
     id: '',
@@ -3542,8 +3558,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148161',
-    updated_at: '2026-08-19T16:27:21.148161'
+    created_at: '2026-08-19T22:28:59.750874',
+    updated_at: '2026-08-19T22:28:59.750875'
   },
   {
     id: '',
@@ -3558,8 +3574,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148164',
-    updated_at: '2026-08-19T16:27:21.148165'
+    created_at: '2026-08-19T22:28:59.750878',
+    updated_at: '2026-08-19T22:28:59.750879'
   },
   {
     id: '',
@@ -3574,8 +3590,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148167',
-    updated_at: '2026-08-19T16:27:21.148168'
+    created_at: '2026-08-19T22:28:59.750882',
+    updated_at: '2026-08-19T22:28:59.750883'
   },
   {
     id: '',
@@ -3590,8 +3606,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148170',
-    updated_at: '2026-08-19T16:27:21.148171'
+    created_at: '2026-08-19T22:28:59.750886',
+    updated_at: '2026-08-19T22:28:59.750887'
   },
   {
     id: '',
@@ -3606,8 +3622,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148173',
-    updated_at: '2026-08-19T16:27:21.148174'
+    created_at: '2026-08-19T22:28:59.750889',
+    updated_at: '2026-08-19T22:28:59.750890'
   },
   {
     id: '',
@@ -3622,8 +3638,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148177',
-    updated_at: '2026-08-19T16:27:21.148177'
+    created_at: '2026-08-19T22:28:59.750893',
+    updated_at: '2026-08-19T22:28:59.750894'
   },
   {
     id: '',
@@ -3638,8 +3654,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148180',
-    updated_at: '2026-08-19T16:27:21.148181'
+    created_at: '2026-08-19T22:28:59.750897',
+    updated_at: '2026-08-19T22:28:59.750898'
   },
   {
     id: '',
@@ -3654,8 +3670,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148183',
-    updated_at: '2026-08-19T16:27:21.148184'
+    created_at: '2026-08-19T22:28:59.750901',
+    updated_at: '2026-08-19T22:28:59.750902'
   },
   {
     id: '',
@@ -3670,8 +3686,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148186',
-    updated_at: '2026-08-19T16:27:21.148187'
+    created_at: '2026-08-19T22:28:59.750905',
+    updated_at: '2026-08-19T22:28:59.750905'
   },
   {
     id: '',
@@ -3686,8 +3702,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148189',
-    updated_at: '2026-08-19T16:27:21.148190'
+    created_at: '2026-08-19T22:28:59.750908',
+    updated_at: '2026-08-19T22:28:59.750909'
   },
   {
     id: '',
@@ -3702,8 +3718,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148192',
-    updated_at: '2026-08-19T16:27:21.148193'
+    created_at: '2026-08-19T22:28:59.750912',
+    updated_at: '2026-08-19T22:28:59.750913'
   },
   {
     id: '',
@@ -3718,8 +3734,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148195',
-    updated_at: '2026-08-19T16:27:21.148196'
+    created_at: '2026-08-19T22:28:59.750916',
+    updated_at: '2026-08-19T22:28:59.750917'
   },
   {
     id: '',
@@ -3734,8 +3750,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148198',
-    updated_at: '2026-08-19T16:27:21.148199'
+    created_at: '2026-08-19T22:28:59.750920',
+    updated_at: '2026-08-19T22:28:59.750921'
   },
   {
     id: '',
@@ -3750,8 +3766,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148201',
-    updated_at: '2026-08-19T16:27:21.148202'
+    created_at: '2026-08-19T22:28:59.750924',
+    updated_at: '2026-08-19T22:28:59.750925'
   },
   {
     id: '',
@@ -3766,8 +3782,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148204',
-    updated_at: '2026-08-19T16:27:21.148205'
+    created_at: '2026-08-19T22:28:59.750928',
+    updated_at: '2026-08-19T22:28:59.750929'
   },
   {
     id: '',
@@ -3782,8 +3798,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148208',
-    updated_at: '2026-08-19T16:27:21.148208'
+    created_at: '2026-08-19T22:28:59.750932',
+    updated_at: '2026-08-19T22:28:59.750933'
   },
   {
     id: '',
@@ -3798,8 +3814,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148211',
-    updated_at: '2026-08-19T16:27:21.148212'
+    created_at: '2026-08-19T22:28:59.750936',
+    updated_at: '2026-08-19T22:28:59.750937'
   },
   {
     id: '',
@@ -3814,8 +3830,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148214',
-    updated_at: '2026-08-19T16:27:21.148215'
+    created_at: '2026-08-19T22:28:59.750940',
+    updated_at: '2026-08-19T22:28:59.750941'
   },
   {
     id: '',
@@ -3830,8 +3846,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148217',
-    updated_at: '2026-08-19T16:27:21.148218'
+    created_at: '2026-08-19T22:28:59.750943',
+    updated_at: '2026-08-19T22:28:59.750944'
   },
   {
     id: '',
@@ -3846,8 +3862,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148221',
-    updated_at: '2026-08-19T16:27:21.148221'
+    created_at: '2026-08-19T22:28:59.750947',
+    updated_at: '2026-08-19T22:28:59.750948'
   },
   {
     id: '',
@@ -3862,8 +3878,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148224',
-    updated_at: '2026-08-19T16:27:21.148225'
+    created_at: '2026-08-19T22:28:59.750951',
+    updated_at: '2026-08-19T22:28:59.750952'
   },
   {
     id: '',
@@ -3878,8 +3894,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148227',
-    updated_at: '2026-08-19T16:27:21.148228'
+    created_at: '2026-08-19T22:28:59.750955',
+    updated_at: '2026-08-19T22:28:59.750956'
   },
   {
     id: '',
@@ -3894,8 +3910,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148230',
-    updated_at: '2026-08-19T16:27:21.148231'
+    created_at: '2026-08-19T22:28:59.750958',
+    updated_at: '2026-08-19T22:28:59.750959'
   },
   {
     id: '',
@@ -3910,8 +3926,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148244',
-    updated_at: '2026-08-19T16:27:21.148245'
+    created_at: '2026-08-19T22:28:59.750973',
+    updated_at: '2026-08-19T22:28:59.750975'
   },
   {
     id: '',
@@ -3926,8 +3942,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148248',
-    updated_at: '2026-08-19T16:27:21.148249'
+    created_at: '2026-08-19T22:28:59.750978',
+    updated_at: '2026-08-19T22:28:59.750979'
   },
   {
     id: '',
@@ -3942,8 +3958,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148252',
-    updated_at: '2026-08-19T16:27:21.148253'
+    created_at: '2026-08-19T22:28:59.750983',
+    updated_at: '2026-08-19T22:28:59.750984'
   },
   {
     id: '',
@@ -3958,8 +3974,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148256',
-    updated_at: '2026-08-19T16:27:21.148257'
+    created_at: '2026-08-19T22:28:59.750987',
+    updated_at: '2026-08-19T22:28:59.750988'
   },
   {
     id: '',
@@ -3974,8 +3990,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148259',
-    updated_at: '2026-08-19T16:27:21.148260'
+    created_at: '2026-08-19T22:28:59.750991',
+    updated_at: '2026-08-19T22:28:59.750992'
   },
   {
     id: '',
@@ -3990,8 +4006,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148263',
-    updated_at: '2026-08-19T16:27:21.148263'
+    created_at: '2026-08-19T22:28:59.750995',
+    updated_at: '2026-08-19T22:28:59.750996'
   },
   {
     id: '',
@@ -4006,8 +4022,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148266',
-    updated_at: '2026-08-19T16:27:21.148278'
+    created_at: '2026-08-19T22:28:59.750999',
+    updated_at: '2026-08-19T22:28:59.751000'
   },
   {
     id: '',
@@ -4022,8 +4038,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148281',
-    updated_at: '2026-08-19T16:27:21.148282'
+    created_at: '2026-08-19T22:28:59.751003',
+    updated_at: '2026-08-19T22:28:59.751004'
   },
   {
     id: '',
@@ -4038,8 +4054,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148285',
-    updated_at: '2026-08-19T16:27:21.148286'
+    created_at: '2026-08-19T22:28:59.751007',
+    updated_at: '2026-08-19T22:28:59.751008'
   },
   {
     id: '',
@@ -4054,8 +4070,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148288',
-    updated_at: '2026-08-19T16:27:21.148289'
+    created_at: '2026-08-19T22:28:59.751011',
+    updated_at: '2026-08-19T22:28:59.751012'
   },
   {
     id: '',
@@ -4070,8 +4086,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148292',
-    updated_at: '2026-08-19T16:27:21.148293'
+    created_at: '2026-08-19T22:28:59.751015',
+    updated_at: '2026-08-19T22:28:59.751016'
   },
   {
     id: '',
@@ -4086,8 +4102,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148295',
-    updated_at: '2026-08-19T16:27:21.148296'
+    created_at: '2026-08-19T22:28:59.751020',
+    updated_at: '2026-08-19T22:28:59.751021'
   },
   {
     id: '',
@@ -4102,8 +4118,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148299',
-    updated_at: '2026-08-19T16:27:21.148299'
+    created_at: '2026-08-19T22:28:59.751024',
+    updated_at: '2026-08-19T22:28:59.751025'
   },
   {
     id: '',
@@ -4118,8 +4134,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148303',
-    updated_at: '2026-08-19T16:27:21.148304'
+    created_at: '2026-08-19T22:28:59.751028',
+    updated_at: '2026-08-19T22:28:59.751029'
   },
   {
     id: '',
@@ -4134,8 +4150,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148306',
-    updated_at: '2026-08-19T16:27:21.148307'
+    created_at: '2026-08-19T22:28:59.751032',
+    updated_at: '2026-08-19T22:28:59.751033'
   },
   {
     id: '',
@@ -4150,8 +4166,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148309',
-    updated_at: '2026-08-19T16:27:21.148310'
+    created_at: '2026-08-19T22:28:59.751036',
+    updated_at: '2026-08-19T22:28:59.751037'
   },
   {
     id: '',
@@ -4166,8 +4182,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148313',
-    updated_at: '2026-08-19T16:27:21.148314'
+    created_at: '2026-08-19T22:28:59.751040',
+    updated_at: '2026-08-19T22:28:59.751041'
   },
   {
     id: '',
@@ -4182,8 +4198,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148316',
-    updated_at: '2026-08-19T16:27:21.148317'
+    created_at: '2026-08-19T22:28:59.751044',
+    updated_at: '2026-08-19T22:28:59.751045'
   },
   {
     id: '',
@@ -4198,8 +4214,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148320',
-    updated_at: '2026-08-19T16:27:21.148320'
+    created_at: '2026-08-19T22:28:59.751061',
+    updated_at: '2026-08-19T22:28:59.751062'
   },
   {
     id: '',
@@ -4214,8 +4230,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148323',
-    updated_at: '2026-08-19T16:27:21.148324'
+    created_at: '2026-08-19T22:28:59.751066',
+    updated_at: '2026-08-19T22:28:59.751067'
   },
   {
     id: '',
@@ -4230,8 +4246,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148327',
-    updated_at: '2026-08-19T16:27:21.148328'
+    created_at: '2026-08-19T22:28:59.751071',
+    updated_at: '2026-08-19T22:28:59.751072'
   },
   {
     id: '',
@@ -4246,8 +4262,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148331',
-    updated_at: '2026-08-19T16:27:21.148332'
+    created_at: '2026-08-19T22:28:59.751075',
+    updated_at: '2026-08-19T22:28:59.751076'
   },
   {
     id: '',
@@ -4262,8 +4278,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148336',
-    updated_at: '2026-08-19T16:27:21.148336'
+    created_at: '2026-08-19T22:28:59.751080',
+    updated_at: '2026-08-19T22:28:59.751081'
   },
   {
     id: '',
@@ -4278,8 +4294,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148339',
-    updated_at: '2026-08-19T16:27:21.148340'
+    created_at: '2026-08-19T22:28:59.751085',
+    updated_at: '2026-08-19T22:28:59.751086'
   },
   {
     id: '',
@@ -4294,8 +4310,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148343',
-    updated_at: '2026-08-19T16:27:21.148344'
+    created_at: '2026-08-19T22:28:59.751097',
+    updated_at: '2026-08-19T22:28:59.751098'
   },
   {
     id: '',
@@ -4310,8 +4326,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148347',
-    updated_at: '2026-08-19T16:27:21.148348'
+    created_at: '2026-08-19T22:28:59.751102',
+    updated_at: '2026-08-19T22:28:59.751103'
   },
   {
     id: '',
@@ -4326,8 +4342,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148350',
-    updated_at: '2026-08-19T16:27:21.148351'
+    created_at: '2026-08-19T22:28:59.751106',
+    updated_at: '2026-08-19T22:28:59.751107'
   },
   {
     id: '',
@@ -4342,8 +4358,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148354',
-    updated_at: '2026-08-19T16:27:21.148355'
+    created_at: '2026-08-19T22:28:59.751110',
+    updated_at: '2026-08-19T22:28:59.751111'
   },
   {
     id: '',
@@ -4358,8 +4374,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148358',
-    updated_at: '2026-08-19T16:27:21.148358'
+    created_at: '2026-08-19T22:28:59.751115',
+    updated_at: '2026-08-19T22:28:59.751116'
   },
   {
     id: '',
@@ -4374,8 +4390,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148361',
-    updated_at: '2026-08-19T16:27:21.148362'
+    created_at: '2026-08-19T22:28:59.751119',
+    updated_at: '2026-08-19T22:28:59.751120'
   },
   {
     id: '',
@@ -4390,8 +4406,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148365',
-    updated_at: '2026-08-19T16:27:21.148366'
+    created_at: '2026-08-19T22:28:59.751123',
+    updated_at: '2026-08-19T22:28:59.751124'
   },
   {
     id: '',
@@ -4406,8 +4422,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148368',
-    updated_at: '2026-08-19T16:27:21.148369'
+    created_at: '2026-08-19T22:28:59.751127',
+    updated_at: '2026-08-19T22:28:59.751128'
   },
   {
     id: '',
@@ -4422,8 +4438,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148372',
-    updated_at: '2026-08-19T16:27:21.148373'
+    created_at: '2026-08-19T22:28:59.751132',
+    updated_at: '2026-08-19T22:28:59.751133'
   },
   {
     id: '',
@@ -4438,8 +4454,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148376',
-    updated_at: '2026-08-19T16:27:21.148376'
+    created_at: '2026-08-19T22:28:59.751136',
+    updated_at: '2026-08-19T22:28:59.751137'
   },
   {
     id: '',
@@ -4454,8 +4470,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148379',
-    updated_at: '2026-08-19T16:27:21.148380'
+    created_at: '2026-08-19T22:28:59.751140',
+    updated_at: '2026-08-19T22:28:59.751141'
   },
   {
     id: '',
@@ -4470,8 +4486,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148383',
-    updated_at: '2026-08-19T16:27:21.148383'
+    created_at: '2026-08-19T22:28:59.751145',
+    updated_at: '2026-08-19T22:28:59.751146'
   },
   {
     id: '',
@@ -4486,8 +4502,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148386',
-    updated_at: '2026-08-19T16:27:21.148387'
+    created_at: '2026-08-19T22:28:59.751149',
+    updated_at: '2026-08-19T22:28:59.751150'
   },
   {
     id: '',
@@ -4502,8 +4518,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148390',
-    updated_at: '2026-08-19T16:27:21.148391'
+    created_at: '2026-08-19T22:28:59.751153',
+    updated_at: '2026-08-19T22:28:59.751154'
   },
   {
     id: '',
@@ -4518,8 +4534,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148393',
-    updated_at: '2026-08-19T16:27:21.148394'
+    created_at: '2026-08-19T22:28:59.751158',
+    updated_at: '2026-08-19T22:28:59.751159'
   },
   {
     id: '',
@@ -4534,8 +4550,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148397',
-    updated_at: '2026-08-19T16:27:21.148398'
+    created_at: '2026-08-19T22:28:59.751162',
+    updated_at: '2026-08-19T22:28:59.751163'
   },
   {
     id: '',
@@ -4550,8 +4566,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148401',
-    updated_at: '2026-08-19T16:27:21.148402'
+    created_at: '2026-08-19T22:28:59.751166',
+    updated_at: '2026-08-19T22:28:59.751167'
   },
   {
     id: '',
@@ -4566,8 +4582,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148404',
-    updated_at: '2026-08-19T16:27:21.148405'
+    created_at: '2026-08-19T22:28:59.751170',
+    updated_at: '2026-08-19T22:28:59.751171'
   },
   {
     id: '',
@@ -4582,8 +4598,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148408',
-    updated_at: '2026-08-19T16:27:21.148409'
+    created_at: '2026-08-19T22:28:59.751174',
+    updated_at: '2026-08-19T22:28:59.751175'
   },
   {
     id: '',
@@ -4598,8 +4614,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148411',
-    updated_at: '2026-08-19T16:27:21.148412'
+    created_at: '2026-08-19T22:28:59.751178',
+    updated_at: '2026-08-19T22:28:59.751179'
   },
   {
     id: '',
@@ -4614,8 +4630,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148415',
-    updated_at: '2026-08-19T16:27:21.148415'
+    created_at: '2026-08-19T22:28:59.751183',
+    updated_at: '2026-08-19T22:28:59.751184'
   },
   {
     id: '',
@@ -4630,8 +4646,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148418',
-    updated_at: '2026-08-19T16:27:21.148419'
+    created_at: '2026-08-19T22:28:59.751187',
+    updated_at: '2026-08-19T22:28:59.751188'
   },
   {
     id: '',
@@ -4646,8 +4662,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148422',
-    updated_at: '2026-08-19T16:27:21.148423'
+    created_at: '2026-08-19T22:28:59.751191',
+    updated_at: '2026-08-19T22:28:59.751192'
   },
   {
     id: '',
@@ -4662,12 +4678,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148426',
-    updated_at: '2026-08-19T16:27:21.148426'
+    created_at: '2026-08-19T22:28:59.751196',
+    updated_at: '2026-08-19T22:28:59.751197'
   },
   {
     id: '',
-    name: 'Cesar\'s Tires',    company: '',
+    name: 'Cesar's Tires',
+    company: '',
     email: '',
     phone: '(248) 453-6847',
     website: 'https://cesartires.com/',
@@ -4677,12 +4694,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148429',
-    updated_at: '2026-08-19T16:27:21.148430'
+    created_at: '2026-08-19T22:28:59.751200',
+    updated_at: '2026-08-19T22:28:59.751201'
   },
   {
     id: '',
-    name: 'C J\'s Auto Services Center',    company: '',
+    name: 'C J's Auto Services Center',
+    company: '',
     email: '',
     phone: '(989) 799-0910',
     website: 'http://www.cjsautorepair.net/',
@@ -4692,8 +4710,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148433',
-    updated_at: '2026-08-19T16:27:21.148434'
+    created_at: '2026-08-19T22:28:59.751204',
+    updated_at: '2026-08-19T22:28:59.751205'
   },
   {
     id: '',
@@ -4708,8 +4726,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148436',
-    updated_at: '2026-08-19T16:27:21.148437'
+    created_at: '2026-08-19T22:28:59.751208',
+    updated_at: '2026-08-19T22:28:59.751209'
   },
   {
     id: '',
@@ -4724,12 +4742,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148440',
-    updated_at: '2026-08-19T16:27:21.148440'
+    created_at: '2026-08-19T22:28:59.751212',
+    updated_at: '2026-08-19T22:28:59.751213'
   },
   {
     id: '',
-    name: 'Beyer\'s Service Center',    company: '',
+    name: 'Beyer's Service Center',
+    company: '',
     email: '',
     phone: '(989) 792-8071',
     website: 'https://www.beyersservicecenter.com/',
@@ -4739,8 +4758,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148443',
-    updated_at: '2026-08-19T16:27:21.148444'
+    created_at: '2026-08-19T22:28:59.751216',
+    updated_at: '2026-08-19T22:28:59.751217'
   },
   {
     id: '',
@@ -4755,8 +4774,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148447',
-    updated_at: '2026-08-19T16:27:21.148448'
+    created_at: '2026-08-19T22:28:59.751221',
+    updated_at: '2026-08-19T22:28:59.751222'
   },
   {
     id: '',
@@ -4771,8 +4790,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148451',
-    updated_at: '2026-08-19T16:27:21.148452'
+    created_at: '2026-08-19T22:28:59.751225',
+    updated_at: '2026-08-19T22:28:59.751226'
   },
   {
     id: '',
@@ -4787,8 +4806,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148455',
-    updated_at: '2026-08-19T16:27:21.148455'
+    created_at: '2026-08-19T22:28:59.751229',
+    updated_at: '2026-08-19T22:28:59.751230'
   },
   {
     id: '',
@@ -4803,8 +4822,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148458',
-    updated_at: '2026-08-19T16:27:21.148459'
+    created_at: '2026-08-19T22:28:59.751233',
+    updated_at: '2026-08-19T22:28:59.751234'
   },
   {
     id: '',
@@ -4819,8 +4838,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148462',
-    updated_at: '2026-08-19T16:27:21.148463'
+    created_at: '2026-08-19T22:28:59.751237',
+    updated_at: '2026-08-19T22:28:59.751238'
   },
   {
     id: '',
@@ -4835,8 +4854,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148468',
-    updated_at: '2026-08-19T16:27:21.148470'
+    created_at: '2026-08-19T22:28:59.751241',
+    updated_at: '2026-08-19T22:28:59.751242'
   },
   {
     id: '',
@@ -4851,8 +4870,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148475',
-    updated_at: '2026-08-19T16:27:21.148476'
+    created_at: '2026-08-19T22:28:59.751246',
+    updated_at: '2026-08-19T22:28:59.751247'
   },
   {
     id: '',
@@ -4867,12 +4886,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148481',
-    updated_at: '2026-08-19T16:27:21.148483'
+    created_at: '2026-08-19T22:28:59.751250',
+    updated_at: '2026-08-19T22:28:59.751251'
   },
   {
     id: '',
-    name: 'Fuzzy\'s Restaurant',    company: '',
+    name: 'Fuzzy's Restaurant',
+    company: '',
     email: '',
     phone: '(989) 790-1719',
     website: 'http://fuzzysfood.com/',
@@ -4882,8 +4902,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148486',
-    updated_at: '2026-08-19T16:27:21.148487'
+    created_at: '2026-08-19T22:28:59.751255',
+    updated_at: '2026-08-19T22:28:59.751256'
   },
   {
     id: '',
@@ -4898,8 +4918,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148490',
-    updated_at: '2026-08-19T16:27:21.148490'
+    created_at: '2026-08-19T22:28:59.751259',
+    updated_at: '2026-08-19T22:28:59.751260'
   },
   {
     id: '',
@@ -4914,8 +4934,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148493',
-    updated_at: '2026-08-19T16:27:21.148494'
+    created_at: '2026-08-19T22:28:59.751263',
+    updated_at: '2026-08-19T22:28:59.751264'
   },
   {
     id: '',
@@ -4930,12 +4950,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148497',
-    updated_at: '2026-08-19T16:27:21.148498'
+    created_at: '2026-08-19T22:28:59.751267',
+    updated_at: '2026-08-19T22:28:59.751268'
   },
   {
     id: '',
-    name: 'N\'Orlins Cafe',
+    name: 'N'Orlins Cafe',
     company: '',
     email: '',
     phone: '(602) 796-5500',
@@ -4946,8 +4966,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148500',
-    updated_at: '2026-08-19T16:27:21.148501'
+    created_at: '2026-08-19T22:28:59.751272',
+    updated_at: '2026-08-19T22:28:59.751273'
   },
   {
     id: '',
@@ -4962,8 +4982,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148504',
-    updated_at: '2026-08-19T16:27:21.148505'
+    created_at: '2026-08-19T22:28:59.751276',
+    updated_at: '2026-08-19T22:28:59.751277'
   },
   {
     id: '',
@@ -4978,12 +4998,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148507',
-    updated_at: '2026-08-19T16:27:21.148508'
+    created_at: '2026-08-19T22:28:59.751280',
+    updated_at: '2026-08-19T22:28:59.751281'
   },
   {
     id: '',
-    name: 'Grohman\'s Flowers',    company: '',
+    name: 'Grohman's Flowers',
+    company: '',
     email: '',
     phone: '(989) 754-7457',
     website: 'https://www.grohmansflowers.com/',
@@ -4993,8 +5014,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148510',
-    updated_at: '2026-08-19T16:27:21.148511'
+    created_at: '2026-08-19T22:28:59.751284',
+    updated_at: '2026-08-19T22:28:59.751285'
   },
   {
     id: '',
@@ -5009,12 +5030,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148514',
-    updated_at: '2026-08-19T16:27:21.148515'
+    created_at: '2026-08-19T22:28:59.751288',
+    updated_at: '2026-08-19T22:28:59.751289'
   },
   {
     id: '',
-    name: 'Erika\'s Flowers',    company: '',
+    name: 'Erika's Flowers',
+    company: '',
     email: '',
     phone: '(989) 755-9330',
     website: 'https://www.erikas-flowers.com/',
@@ -5024,8 +5046,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148517',
-    updated_at: '2026-08-19T16:27:21.148518'
+    created_at: '2026-08-19T22:28:59.751292',
+    updated_at: '2026-08-19T22:28:59.751293'
   },
   {
     id: '',
@@ -5040,12 +5062,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148521',
-    updated_at: '2026-08-19T16:27:21.148522'
+    created_at: '2026-08-19T22:28:59.751296',
+    updated_at: '2026-08-19T22:28:59.751297'
   },
   {
     id: '',
-    name: 'Hank\'s Flowerland',    company: '',
+    name: 'Hank's Flowerland',
+    company: '',
     email: '',
     phone: '(989) 754-7481',
     website: 'http://www.hanksflowerland.com/',
@@ -5055,8 +5078,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148524',
-    updated_at: '2026-08-19T16:27:21.148525'
+    created_at: '2026-08-19T22:28:59.751301',
+    updated_at: '2026-08-19T22:28:59.751302'
   },
   {
     id: '',
@@ -5071,8 +5094,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148528',
-    updated_at: '2026-08-19T16:27:21.148529'
+    created_at: '2026-08-19T22:28:59.751305',
+    updated_at: '2026-08-19T22:28:59.751306'
   },
   {
     id: '',
@@ -5087,12 +5110,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148531',
-    updated_at: '2026-08-19T16:27:21.148532'
+    created_at: '2026-08-19T22:28:59.751309',
+    updated_at: '2026-08-19T22:28:59.751310'
   },
   {
     id: '',
-    name: 'Austin\'s Flowers & Gifts',    company: '',
+    name: 'Austin's Flowers & Gifts',
+    company: '',
     email: '',
     phone: '(989) 695-9100',
     website: 'http://www.austinsflorist.com/',
@@ -5102,8 +5126,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148535',
-    updated_at: '2026-08-19T16:27:21.148535'
+    created_at: '2026-08-19T22:28:59.751313',
+    updated_at: '2026-08-19T22:28:59.751314'
   },
   {
     id: '',
@@ -5118,8 +5142,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148538',
-    updated_at: '2026-08-19T16:27:21.148539'
+    created_at: '2026-08-19T22:28:59.751317',
+    updated_at: '2026-08-19T22:28:59.751318'
   },
   {
     id: '',
@@ -5134,8 +5158,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148542',
-    updated_at: '2026-08-19T16:27:21.148542'
+    created_at: '2026-08-19T22:28:59.751321',
+    updated_at: '2026-08-19T22:28:59.751322'
   },
   {
     id: '',
@@ -5150,8 +5174,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148545',
-    updated_at: '2026-08-19T16:27:21.148546'
+    created_at: '2026-08-19T22:28:59.751325',
+    updated_at: '2026-08-19T22:28:59.751326'
   },
   {
     id: '',
@@ -5166,8 +5190,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148549',
-    updated_at: '2026-08-19T16:27:21.148549'
+    created_at: '2026-08-19T22:28:59.751329',
+    updated_at: '2026-08-19T22:28:59.751330'
   },
   {
     id: '',
@@ -5182,12 +5206,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148552',
-    updated_at: '2026-08-19T16:27:21.148553'
+    created_at: '2026-08-19T22:28:59.751334',
+    updated_at: '2026-08-19T22:28:59.751335'
   },
   {
     id: '',
-    name: 'Boehler\'s Greenhouse',    company: '',
+    name: 'Boehler's Greenhouse',
+    company: '',
     email: '',
     phone: '(989) 792-2039',
     website: 'https://www.boehlersgreenhouse.com/',
@@ -5197,8 +5222,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148556',
-    updated_at: '2026-08-19T16:27:21.148556'
+    created_at: '2026-08-19T22:28:59.751338',
+    updated_at: '2026-08-19T22:28:59.751339'
   },
   {
     id: '',
@@ -5213,8 +5238,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148559',
-    updated_at: '2026-08-19T16:27:21.148560'
+    created_at: '2026-08-19T22:28:59.751342',
+    updated_at: '2026-08-19T22:28:59.751343'
   },
   {
     id: '',
@@ -5229,8 +5254,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148562',
-    updated_at: '2026-08-19T16:27:21.148563'
+    created_at: '2026-08-19T22:28:59.751346',
+    updated_at: '2026-08-19T22:28:59.751347'
   },
   {
     id: '',
@@ -5245,8 +5270,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148566',
-    updated_at: '2026-08-19T16:27:21.148567'
+    created_at: '2026-08-19T22:28:59.751350',
+    updated_at: '2026-08-19T22:28:59.751351'
   },
   {
     id: '',
@@ -5261,8 +5286,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148570',
-    updated_at: '2026-08-19T16:27:21.148570'
+    created_at: '2026-08-19T22:28:59.751354',
+    updated_at: '2026-08-19T22:28:59.751355'
   },
   {
     id: '',
@@ -5277,8 +5302,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148573',
-    updated_at: '2026-08-19T16:27:21.148574'
+    created_at: '2026-08-19T22:28:59.751358',
+    updated_at: '2026-08-19T22:28:59.751359'
   },
   {
     id: '',
@@ -5293,8 +5318,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148577',
-    updated_at: '2026-08-19T16:27:21.148577'
+    created_at: '2026-08-19T22:28:59.751363',
+    updated_at: '2026-08-19T22:28:59.751364'
   },
   {
     id: '',
@@ -5309,8 +5334,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148580',
-    updated_at: '2026-08-19T16:27:21.148581'
+    created_at: '2026-08-19T22:28:59.751367',
+    updated_at: '2026-08-19T22:28:59.751368'
   },
   {
     id: '',
@@ -5325,8 +5350,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148584',
-    updated_at: '2026-08-19T16:27:21.148584'
+    created_at: '2026-08-19T22:28:59.751371',
+    updated_at: '2026-08-19T22:28:59.751372'
   },
   {
     id: '',
@@ -5341,8 +5366,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148587',
-    updated_at: '2026-08-19T16:27:21.148588'
+    created_at: '2026-08-19T22:28:59.751376',
+    updated_at: '2026-08-19T22:28:59.751377'
   },
   {
     id: '',
@@ -5357,8 +5382,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148590',
-    updated_at: '2026-08-19T16:27:21.148591'
+    created_at: '2026-08-19T22:28:59.751380',
+    updated_at: '2026-08-19T22:28:59.751381'
   },
   {
     id: '',
@@ -5373,8 +5398,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148594',
-    updated_at: '2026-08-19T16:27:21.148594'
+    created_at: '2026-08-19T22:28:59.751385',
+    updated_at: '2026-08-19T22:28:59.751386'
   },
   {
     id: '',
@@ -5389,8 +5414,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148597',
-    updated_at: '2026-08-19T16:27:21.148598'
+    created_at: '2026-08-19T22:28:59.751389',
+    updated_at: '2026-08-19T22:28:59.751390'
   },
   {
     id: '',
@@ -5405,8 +5430,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148600',
-    updated_at: '2026-08-19T16:27:21.148601'
+    created_at: '2026-08-19T22:28:59.751393',
+    updated_at: '2026-08-19T22:28:59.751394'
   },
   {
     id: '',
@@ -5421,8 +5446,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148604',
-    updated_at: '2026-08-19T16:27:21.148605'
+    created_at: '2026-08-19T22:28:59.751397',
+    updated_at: '2026-08-19T22:28:59.751398'
   },
   {
     id: '',
@@ -5437,8 +5462,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148607',
-    updated_at: '2026-08-19T16:27:21.148608'
+    created_at: '2026-08-19T22:28:59.751402',
+    updated_at: '2026-08-19T22:28:59.751403'
   },
   {
     id: '',
@@ -5453,8 +5478,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148611',
-    updated_at: '2026-08-19T16:27:21.148612'
+    created_at: '2026-08-19T22:28:59.751406',
+    updated_at: '2026-08-19T22:28:59.751407'
   },
   {
     id: '',
@@ -5469,8 +5494,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148614',
-    updated_at: '2026-08-19T16:27:21.148615'
+    created_at: '2026-08-19T22:28:59.751411',
+    updated_at: '2026-08-19T22:28:59.751412'
   },
   {
     id: '',
@@ -5485,8 +5510,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148618',
-    updated_at: '2026-08-19T16:27:21.148619'
+    created_at: '2026-08-19T22:28:59.751415',
+    updated_at: '2026-08-19T22:28:59.751416'
   },
   {
     id: '',
@@ -5501,8 +5526,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148621',
-    updated_at: '2026-08-19T16:27:21.148622'
+    created_at: '2026-08-19T22:28:59.751419',
+    updated_at: '2026-08-19T22:28:59.751420'
   },
   {
     id: '',
@@ -5517,8 +5542,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148624',
-    updated_at: '2026-08-19T16:27:21.148625'
+    created_at: '2026-08-19T22:28:59.751423',
+    updated_at: '2026-08-19T22:28:59.751424'
   },
   {
     id: '',
@@ -5533,8 +5558,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148628',
-    updated_at: '2026-08-19T16:27:21.148629'
+    created_at: '2026-08-19T22:28:59.751427',
+    updated_at: '2026-08-19T22:28:59.751428'
   },
   {
     id: '',
@@ -5549,8 +5574,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148631',
-    updated_at: '2026-08-19T16:27:21.148632'
+    created_at: '2026-08-19T22:28:59.751431',
+    updated_at: '2026-08-19T22:28:59.751432'
   },
   {
     id: '',
@@ -5565,8 +5590,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148635',
-    updated_at: '2026-08-19T16:27:21.148636'
+    created_at: '2026-08-19T22:28:59.751436',
+    updated_at: '2026-08-19T22:28:59.751437'
   },
   {
     id: '',
@@ -5581,8 +5606,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148638',
-    updated_at: '2026-08-19T16:27:21.148639'
+    created_at: '2026-08-19T22:28:59.751440',
+    updated_at: '2026-08-19T22:28:59.751441'
   },
   {
     id: '',
@@ -5597,8 +5622,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148641',
-    updated_at: '2026-08-19T16:27:21.148642'
+    created_at: '2026-08-19T22:28:59.751445',
+    updated_at: '2026-08-19T22:28:59.751446'
   },
   {
     id: '',
@@ -5613,8 +5638,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148645',
-    updated_at: '2026-08-19T16:27:21.148646'
+    created_at: '2026-08-19T22:28:59.751449',
+    updated_at: '2026-08-19T22:28:59.751450'
   },
   {
     id: '',
@@ -5629,8 +5654,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148648',
-    updated_at: '2026-08-19T16:27:21.148649'
+    created_at: '2026-08-19T22:28:59.751453',
+    updated_at: '2026-08-19T22:28:59.751454'
   },
   {
     id: '',
@@ -5645,8 +5670,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148652',
-    updated_at: '2026-08-19T16:27:21.148653'
+    created_at: '2026-08-19T22:28:59.751457',
+    updated_at: '2026-08-19T22:28:59.751458'
   },
   {
     id: '',
@@ -5661,8 +5686,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148656',
-    updated_at: '2026-08-19T16:27:21.148656'
+    created_at: '2026-08-19T22:28:59.751461',
+    updated_at: '2026-08-19T22:28:59.751462'
   },
   {
     id: '',
@@ -5677,8 +5702,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148659',
-    updated_at: '2026-08-19T16:27:21.148660'
+    created_at: '2026-08-19T22:28:59.751465',
+    updated_at: '2026-08-19T22:28:59.751466'
   },
   {
     id: '',
@@ -5693,8 +5718,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148663',
-    updated_at: '2026-08-19T16:27:21.148664'
+    created_at: '2026-08-19T22:28:59.751470',
+    updated_at: '2026-08-19T22:28:59.751471'
   },
   {
     id: '',
@@ -5709,8 +5734,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148666',
-    updated_at: '2026-08-19T16:27:21.148667'
+    created_at: '2026-08-19T22:28:59.751474',
+    updated_at: '2026-08-19T22:28:59.751475'
   },
   {
     id: '',
@@ -5725,8 +5750,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148669',
-    updated_at: '2026-08-19T16:27:21.148670'
+    created_at: '2026-08-19T22:28:59.751478',
+    updated_at: '2026-08-19T22:28:59.751479'
   },
   {
     id: '',
@@ -5741,8 +5766,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148673',
-    updated_at: '2026-08-19T16:27:21.148674'
+    created_at: '2026-08-19T22:28:59.751482',
+    updated_at: '2026-08-19T22:28:59.751483'
   },
   {
     id: '',
@@ -5757,8 +5782,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148676',
-    updated_at: '2026-08-19T16:27:21.148677'
+    created_at: '2026-08-19T22:28:59.751486',
+    updated_at: '2026-08-19T22:28:59.751487'
   },
   {
     id: '',
@@ -5773,8 +5798,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148680',
-    updated_at: '2026-08-19T16:27:21.148680'
+    created_at: '2026-08-19T22:28:59.751490',
+    updated_at: '2026-08-19T22:28:59.751491'
   },
   {
     id: '',
@@ -5789,8 +5814,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148683',
-    updated_at: '2026-08-19T16:27:21.148684'
+    created_at: '2026-08-19T22:28:59.751495',
+    updated_at: '2026-08-19T22:28:59.751496'
   },
   {
     id: '',
@@ -5805,8 +5830,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148686',
-    updated_at: '2026-08-19T16:27:21.148687'
+    created_at: '2026-08-19T22:28:59.751499',
+    updated_at: '2026-08-19T22:28:59.751500'
   },
   {
     id: '',
@@ -5821,8 +5846,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148690',
-    updated_at: '2026-08-19T16:27:21.148690'
+    created_at: '2026-08-19T22:28:59.751503',
+    updated_at: '2026-08-19T22:28:59.751504'
   },
   {
     id: '',
@@ -5837,8 +5862,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148693',
-    updated_at: '2026-08-19T16:27:21.148694'
+    created_at: '2026-08-19T22:28:59.751507',
+    updated_at: '2026-08-19T22:28:59.751508'
   },
   {
     id: '',
@@ -5853,8 +5878,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148706',
-    updated_at: '2026-08-19T16:27:21.148708'
+    created_at: '2026-08-19T22:28:59.751511',
+    updated_at: '2026-08-19T22:28:59.751512'
   },
   {
     id: '',
@@ -5869,8 +5894,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148710',
-    updated_at: '2026-08-19T16:27:21.148711'
+    created_at: '2026-08-19T22:28:59.751515',
+    updated_at: '2026-08-19T22:28:59.751516'
   },
   {
     id: '',
@@ -5885,8 +5910,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148714',
-    updated_at: '2026-08-19T16:27:21.148715'
+    created_at: '2026-08-19T22:28:59.751519',
+    updated_at: '2026-08-19T22:28:59.751521'
   },
   {
     id: '',
@@ -5901,8 +5926,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148717',
-    updated_at: '2026-08-19T16:27:21.148718'
+    created_at: '2026-08-19T22:28:59.751524',
+    updated_at: '2026-08-19T22:28:59.751525'
   },
   {
     id: '',
@@ -5917,8 +5942,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148721',
-    updated_at: '2026-08-19T16:27:21.148722'
+    created_at: '2026-08-19T22:28:59.751528',
+    updated_at: '2026-08-19T22:28:59.751529'
   },
   {
     id: '',
@@ -5933,8 +5958,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148724',
-    updated_at: '2026-08-19T16:27:21.148725'
+    created_at: '2026-08-19T22:28:59.751532',
+    updated_at: '2026-08-19T22:28:59.751533'
   },
   {
     id: '',
@@ -5949,8 +5974,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148728',
-    updated_at: '2026-08-19T16:27:21.148729'
+    created_at: '2026-08-19T22:28:59.751536',
+    updated_at: '2026-08-19T22:28:59.751537'
   },
   {
     id: '',
@@ -5965,8 +5990,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148732',
-    updated_at: '2026-08-19T16:27:21.148732'
+    created_at: '2026-08-19T22:28:59.751540',
+    updated_at: '2026-08-19T22:28:59.751541'
   },
   {
     id: '',
@@ -5981,8 +6006,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148735',
-    updated_at: '2026-08-19T16:27:21.148736'
+    created_at: '2026-08-19T22:28:59.751544',
+    updated_at: '2026-08-19T22:28:59.751545'
   },
   {
     id: '',
@@ -5997,8 +6022,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148738',
-    updated_at: '2026-08-19T16:27:21.148739'
+    created_at: '2026-08-19T22:28:59.751548',
+    updated_at: '2026-08-19T22:28:59.751549'
   },
   {
     id: '',
@@ -6013,8 +6038,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148742',
-    updated_at: '2026-08-19T16:27:21.148743'
+    created_at: '2026-08-19T22:28:59.751553',
+    updated_at: '2026-08-19T22:28:59.751554'
   },
   {
     id: '',
@@ -6029,8 +6054,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148746',
-    updated_at: '2026-08-19T16:27:21.148746'
+    created_at: '2026-08-19T22:28:59.751557',
+    updated_at: '2026-08-19T22:28:59.751558'
   },
   {
     id: '',
@@ -6045,8 +6070,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148749',
-    updated_at: '2026-08-19T16:27:21.148750'
+    created_at: '2026-08-19T22:28:59.751562',
+    updated_at: '2026-08-19T22:28:59.751563'
   },
   {
     id: '',
@@ -6061,8 +6086,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148753',
-    updated_at: '2026-08-19T16:27:21.148754'
+    created_at: '2026-08-19T22:28:59.751566',
+    updated_at: '2026-08-19T22:28:59.751567'
   },
   {
     id: '',
@@ -6077,8 +6102,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148756',
-    updated_at: '2026-08-19T16:27:21.148757'
+    created_at: '2026-08-19T22:28:59.751570',
+    updated_at: '2026-08-19T22:28:59.751571'
   },
   {
     id: '',
@@ -6093,8 +6118,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148760',
-    updated_at: '2026-08-19T16:27:21.148761'
+    created_at: '2026-08-19T22:28:59.751574',
+    updated_at: '2026-08-19T22:28:59.751575'
   },
   {
     id: '',
@@ -6109,8 +6134,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148764',
-    updated_at: '2026-08-19T16:27:21.148765'
+    created_at: '2026-08-19T22:28:59.751579',
+    updated_at: '2026-08-19T22:28:59.751580'
   },
   {
     id: '',
@@ -6125,8 +6150,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148767',
-    updated_at: '2026-08-19T16:27:21.148768'
+    created_at: '2026-08-19T22:28:59.751583',
+    updated_at: '2026-08-19T22:28:59.751584'
   },
   {
     id: '',
@@ -6141,8 +6166,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148770',
-    updated_at: '2026-08-19T16:27:21.148771'
+    created_at: '2026-08-19T22:28:59.751587',
+    updated_at: '2026-08-19T22:28:59.751588'
   },
   {
     id: '',
@@ -6157,8 +6182,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148774',
-    updated_at: '2026-08-19T16:27:21.148775'
+    created_at: '2026-08-19T22:28:59.751591',
+    updated_at: '2026-08-19T22:28:59.751592'
   },
   {
     id: '',
@@ -6173,8 +6198,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148786',
-    updated_at: '2026-08-19T16:27:21.148787'
+    created_at: '2026-08-19T22:28:59.751595',
+    updated_at: '2026-08-19T22:28:59.751596'
   },
   {
     id: '',
@@ -6189,8 +6214,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148790',
-    updated_at: '2026-08-19T16:27:21.148791'
+    created_at: '2026-08-19T22:28:59.751599',
+    updated_at: '2026-08-19T22:28:59.751600'
   },
   {
     id: '',
@@ -6205,8 +6230,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148794',
-    updated_at: '2026-08-19T16:27:21.148794'
+    created_at: '2026-08-19T22:28:59.751603',
+    updated_at: '2026-08-19T22:28:59.751604'
   },
   {
     id: '',
@@ -6221,8 +6246,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148797',
-    updated_at: '2026-08-19T16:27:21.148798'
+    created_at: '2026-08-19T22:28:59.751608',
+    updated_at: '2026-08-19T22:28:59.751609'
   },
   {
     id: '',
@@ -6237,8 +6262,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148800',
-    updated_at: '2026-08-19T16:27:21.148801'
+    created_at: '2026-08-19T22:28:59.751612',
+    updated_at: '2026-08-19T22:28:59.751613'
   },
   {
     id: '',
@@ -6253,8 +6278,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148804',
-    updated_at: '2026-08-19T16:27:21.148805'
+    created_at: '2026-08-19T22:28:59.751616',
+    updated_at: '2026-08-19T22:28:59.751617'
   },
   {
     id: '',
@@ -6269,8 +6294,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148807',
-    updated_at: '2026-08-19T16:27:21.148808'
+    created_at: '2026-08-19T22:28:59.751620',
+    updated_at: '2026-08-19T22:28:59.751621'
   },
   {
     id: '',
@@ -6285,8 +6310,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148811',
-    updated_at: '2026-08-19T16:27:21.148812'
+    created_at: '2026-08-19T22:28:59.751624',
+    updated_at: '2026-08-19T22:28:59.751625'
   },
   {
     id: '',
@@ -6301,8 +6326,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148814',
-    updated_at: '2026-08-19T16:27:21.148815'
+    created_at: '2026-08-19T22:28:59.751628',
+    updated_at: '2026-08-19T22:28:59.751629'
   },
   {
     id: '',
@@ -6317,8 +6342,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148818',
-    updated_at: '2026-08-19T16:27:21.148818'
+    created_at: '2026-08-19T22:28:59.751632',
+    updated_at: '2026-08-19T22:28:59.751633'
   },
   {
     id: '',
@@ -6333,8 +6358,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148821',
-    updated_at: '2026-08-19T16:27:21.148822'
+    created_at: '2026-08-19T22:28:59.751637',
+    updated_at: '2026-08-19T22:28:59.751638'
   },
   {
     id: '',
@@ -6349,8 +6374,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148824',
-    updated_at: '2026-08-19T16:27:21.148825'
+    created_at: '2026-08-19T22:28:59.751641',
+    updated_at: '2026-08-19T22:28:59.751642'
   },
   {
     id: '',
@@ -6365,8 +6390,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148829',
-    updated_at: '2026-08-19T16:27:21.148829'
+    created_at: '2026-08-19T22:28:59.751645',
+    updated_at: '2026-08-19T22:28:59.751646'
   },
   {
     id: '',
@@ -6381,8 +6406,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148832',
-    updated_at: '2026-08-19T16:27:21.148833'
+    created_at: '2026-08-19T22:28:59.751650',
+    updated_at: '2026-08-19T22:28:59.751651'
   },
   {
     id: '',
@@ -6397,12 +6422,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148836',
-    updated_at: '2026-08-19T16:27:21.148836'
+    created_at: '2026-08-19T22:28:59.751654',
+    updated_at: '2026-08-19T22:28:59.751655'
   },
   {
     id: '',
-    name: 'O\'Guinn Family Funeral Homes',
+    name: 'O'Guinn Family Funeral Homes',
     company: '',
     email: '',
     phone: '(810) 686-5070',
@@ -6413,8 +6438,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148839',
-    updated_at: '2026-08-19T16:27:21.148840'
+    created_at: '2026-08-19T22:28:59.751664',
+    updated_at: '2026-08-19T22:28:59.751665'
   },
   {
     id: '',
@@ -6429,8 +6454,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148842',
-    updated_at: '2026-08-19T16:27:21.148843'
+    created_at: '2026-08-19T22:28:59.751668',
+    updated_at: '2026-08-19T22:28:59.751669'
   },
   {
     id: '',
@@ -6445,8 +6470,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148846',
-    updated_at: '2026-08-19T16:27:21.148846'
+    created_at: '2026-08-19T22:28:59.751672',
+    updated_at: '2026-08-19T22:28:59.751673'
   },
   {
     id: '',
@@ -6461,8 +6486,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148849',
-    updated_at: '2026-08-19T16:27:21.148850'
+    created_at: '2026-08-19T22:28:59.751677',
+    updated_at: '2026-08-19T22:28:59.751678'
   },
   {
     id: '',
@@ -6477,8 +6502,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148853',
-    updated_at: '2026-08-19T16:27:21.148854'
+    created_at: '2026-08-19T22:28:59.751681',
+    updated_at: '2026-08-19T22:28:59.751682'
   },
   {
     id: '',
@@ -6493,8 +6518,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148857',
-    updated_at: '2026-08-19T16:27:21.148857'
+    created_at: '2026-08-19T22:28:59.751685',
+    updated_at: '2026-08-19T22:28:59.751687'
   },
   {
     id: '',
@@ -6509,8 +6534,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148860',
-    updated_at: '2026-08-19T16:27:21.148861'
+    created_at: '2026-08-19T22:28:59.751690',
+    updated_at: '2026-08-19T22:28:59.751691'
   },
   {
     id: '',
@@ -6525,8 +6550,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148864',
-    updated_at: '2026-08-19T16:27:21.148865'
+    created_at: '2026-08-19T22:28:59.751694',
+    updated_at: '2026-08-19T22:28:59.751695'
   },
   {
     id: '',
@@ -6541,8 +6566,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148868',
-    updated_at: '2026-08-19T16:27:21.148868'
+    created_at: '2026-08-19T22:28:59.751698',
+    updated_at: '2026-08-19T22:28:59.751699'
   },
   {
     id: '',
@@ -6557,8 +6582,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148871',
-    updated_at: '2026-08-19T16:27:21.148872'
+    created_at: '2026-08-19T22:28:59.751703',
+    updated_at: '2026-08-19T22:28:59.751704'
   },
   {
     id: '',
@@ -6573,8 +6598,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148875',
-    updated_at: '2026-08-19T16:27:21.148876'
+    created_at: '2026-08-19T22:28:59.751707',
+    updated_at: '2026-08-19T22:28:59.751708'
   },
   {
     id: '',
@@ -6589,8 +6614,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148878',
-    updated_at: '2026-08-19T16:27:21.148879'
+    created_at: '2026-08-19T22:28:59.751712',
+    updated_at: '2026-08-19T22:28:59.751713'
   },
   {
     id: '',
@@ -6605,8 +6630,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148882',
-    updated_at: '2026-08-19T16:27:21.148883'
+    created_at: '2026-08-19T22:28:59.751716',
+    updated_at: '2026-08-19T22:28:59.751717'
   },
   {
     id: '',
@@ -6621,8 +6646,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148886',
-    updated_at: '2026-08-19T16:27:21.148887'
+    created_at: '2026-08-19T22:28:59.751720',
+    updated_at: '2026-08-19T22:28:59.751721'
   },
   {
     id: '',
@@ -6637,8 +6662,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148889',
-    updated_at: '2026-08-19T16:27:21.148890'
+    created_at: '2026-08-19T22:28:59.751725',
+    updated_at: '2026-08-19T22:28:59.751726'
   },
   {
     id: '',
@@ -6653,8 +6678,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148893',
-    updated_at: '2026-08-19T16:27:21.148894'
+    created_at: '2026-08-19T22:28:59.751729',
+    updated_at: '2026-08-19T22:28:59.751730'
   },
   {
     id: '',
@@ -6669,8 +6694,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148897',
-    updated_at: '2026-08-19T16:27:21.148897'
+    created_at: '2026-08-19T22:28:59.751734',
+    updated_at: '2026-08-19T22:28:59.751735'
   },
   {
     id: '',
@@ -6685,8 +6710,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148900',
-    updated_at: '2026-08-19T16:27:21.148901'
+    created_at: '2026-08-19T22:28:59.751757',
+    updated_at: '2026-08-19T22:28:59.751759'
   },
   {
     id: '',
@@ -6701,8 +6726,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148903',
-    updated_at: '2026-08-19T16:27:21.148904'
+    created_at: '2026-08-19T22:28:59.751762',
+    updated_at: '2026-08-19T22:28:59.751763'
   },
   {
     id: '',
@@ -6717,8 +6742,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148907',
-    updated_at: '2026-08-19T16:27:21.148908'
+    created_at: '2026-08-19T22:28:59.751766',
+    updated_at: '2026-08-19T22:28:59.751767'
   },
   {
     id: '',
@@ -6733,8 +6758,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148910',
-    updated_at: '2026-08-19T16:27:21.148911'
+    created_at: '2026-08-19T22:28:59.751771',
+    updated_at: '2026-08-19T22:28:59.751772'
   },
   {
     id: '',
@@ -6749,8 +6774,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148914',
-    updated_at: '2026-08-19T16:27:21.148915'
+    created_at: '2026-08-19T22:28:59.751775',
+    updated_at: '2026-08-19T22:28:59.751776'
   },
   {
     id: '',
@@ -6765,12 +6790,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148918',
-    updated_at: '2026-08-19T16:27:21.148918'
+    created_at: '2026-08-19T22:28:59.751779',
+    updated_at: '2026-08-19T22:28:59.751780'
   },
   {
     id: '',
-    name: 'CHET\'S AUTO SERVICE',
+    name: 'CHET'S AUTO SERVICE',
     company: '',
     email: '',
     phone: '(810) 767-9201',
@@ -6781,8 +6806,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148921',
-    updated_at: '2026-08-19T16:27:21.148922'
+    created_at: '2026-08-19T22:28:59.751784',
+    updated_at: '2026-08-19T22:28:59.751785'
   },
   {
     id: '',
@@ -6797,8 +6822,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148925',
-    updated_at: '2026-08-19T16:27:21.148926'
+    created_at: '2026-08-19T22:28:59.751788',
+    updated_at: '2026-08-19T22:28:59.751789'
   },
   {
     id: '',
@@ -6813,8 +6838,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148929',
-    updated_at: '2026-08-19T16:27:21.148929'
+    created_at: '2026-08-19T22:28:59.751792',
+    updated_at: '2026-08-19T22:28:59.751793'
   },
   {
     id: '',
@@ -6829,8 +6854,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148932',
-    updated_at: '2026-08-19T16:27:21.148933'
+    created_at: '2026-08-19T22:28:59.751796',
+    updated_at: '2026-08-19T22:28:59.751797'
   },
   {
     id: '',
@@ -6845,8 +6870,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148936',
-    updated_at: '2026-08-19T16:27:21.148936'
+    created_at: '2026-08-19T22:28:59.751800',
+    updated_at: '2026-08-19T22:28:59.751801'
   },
   {
     id: '',
@@ -6861,8 +6886,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148939',
-    updated_at: '2026-08-19T16:27:21.148940'
+    created_at: '2026-08-19T22:28:59.751805',
+    updated_at: '2026-08-19T22:28:59.751806'
   },
   {
     id: '',
@@ -6877,8 +6902,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148943',
-    updated_at: '2026-08-19T16:27:21.148943'
+    created_at: '2026-08-19T22:28:59.751809',
+    updated_at: '2026-08-19T22:28:59.751810'
   },
   {
     id: '',
@@ -6893,8 +6918,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148946',
-    updated_at: '2026-08-19T16:27:21.148947'
+    created_at: '2026-08-19T22:28:59.751813',
+    updated_at: '2026-08-19T22:28:59.751814'
   },
   {
     id: '',
@@ -6909,8 +6934,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148949',
-    updated_at: '2026-08-19T16:27:21.148950'
+    created_at: '2026-08-19T22:28:59.751817',
+    updated_at: '2026-08-19T22:28:59.751818'
   },
   {
     id: '',
@@ -6925,8 +6950,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148953',
-    updated_at: '2026-08-19T16:27:21.148954'
+    created_at: '2026-08-19T22:28:59.751821',
+    updated_at: '2026-08-19T22:28:59.751822'
   },
   {
     id: '',
@@ -6941,8 +6966,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148957',
-    updated_at: '2026-08-19T16:27:21.148958'
+    created_at: '2026-08-19T22:28:59.751826',
+    updated_at: '2026-08-19T22:28:59.751827'
   },
   {
     id: '',
@@ -6957,8 +6982,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148961',
-    updated_at: '2026-08-19T16:27:21.148961'
+    created_at: '2026-08-19T22:28:59.751830',
+    updated_at: '2026-08-19T22:28:59.751831'
   },
   {
     id: '',
@@ -6973,8 +6998,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148964',
-    updated_at: '2026-08-19T16:27:21.148965'
+    created_at: '2026-08-19T22:28:59.751834',
+    updated_at: '2026-08-19T22:28:59.751835'
   },
   {
     id: '',
@@ -6989,8 +7014,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148967',
-    updated_at: '2026-08-19T16:27:21.148968'
+    created_at: '2026-08-19T22:28:59.751838',
+    updated_at: '2026-08-19T22:28:59.751839'
   },
   {
     id: '',
@@ -7005,8 +7030,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148970',
-    updated_at: '2026-08-19T16:27:21.148971'
+    created_at: '2026-08-19T22:28:59.751842',
+    updated_at: '2026-08-19T22:28:59.751843'
   },
   {
     id: '',
@@ -7021,8 +7046,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148974',
-    updated_at: '2026-08-19T16:27:21.148975'
+    created_at: '2026-08-19T22:28:59.751847',
+    updated_at: '2026-08-19T22:28:59.751848'
   },
   {
     id: '',
@@ -7037,12 +7062,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148978',
-    updated_at: '2026-08-19T16:27:21.148979'
+    created_at: '2026-08-19T22:28:59.751851',
+    updated_at: '2026-08-19T22:28:59.751852'
   },
   {
     id: '',
-    name: 'Beny\'s Coffee',    company: '',
+    name: 'Beny's Coffee',
+    company: '',
     email: '',
     phone: '(810) 214-1016',
     website: 'https://benyscoffee.com/',
@@ -7052,8 +7078,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148982',
-    updated_at: '2026-08-19T16:27:21.148982'
+    created_at: '2026-08-19T22:28:59.751855',
+    updated_at: '2026-08-19T22:28:59.751856'
   },
   {
     id: '',
@@ -7068,8 +7094,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148985',
-    updated_at: '2026-08-19T16:27:21.148986'
+    created_at: '2026-08-19T22:28:59.751859',
+    updated_at: '2026-08-19T22:28:59.751860'
   },
   {
     id: '',
@@ -7084,8 +7110,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148988',
-    updated_at: '2026-08-19T16:27:21.148989'
+    created_at: '2026-08-19T22:28:59.751863',
+    updated_at: '2026-08-19T22:28:59.751865'
   },
   {
     id: '',
@@ -7100,12 +7126,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148992',
-    updated_at: '2026-08-19T16:27:21.148993'
+    created_at: '2026-08-19T22:28:59.751868',
+    updated_at: '2026-08-19T22:28:59.751869'
   },
   {
     id: '',
-    name: 'Scooter\'s Coffee',    company: '',
+    name: 'Scooter's Coffee',
+    company: '',
     email: '',
     phone: '(877) 719-1288',
     website: 'https://scooterscoffee.com/',
@@ -7115,12 +7142,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148995',
-    updated_at: '2026-08-19T16:27:21.148996'
+    created_at: '2026-08-19T22:28:59.751872',
+    updated_at: '2026-08-19T22:28:59.751873'
   },
   {
     id: '',
-    name: 'ZD\'s Corner',    company: '',
+    name: 'ZD's Corner',
+    company: '',
     email: '',
     phone: '(810) 487-9065',
     website: 'https://zdscorner.com/',
@@ -7130,8 +7158,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.148999',
-    updated_at: '2026-08-19T16:27:21.148999'
+    created_at: '2026-08-19T22:28:59.751876',
+    updated_at: '2026-08-19T22:28:59.751877'
   },
   {
     id: '',
@@ -7146,8 +7174,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149002',
-    updated_at: '2026-08-19T16:27:21.149003'
+    created_at: '2026-08-19T22:28:59.751881',
+    updated_at: '2026-08-19T22:28:59.751882'
   },
   {
     id: '',
@@ -7162,8 +7190,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149006',
-    updated_at: '2026-08-19T16:27:21.149006'
+    created_at: '2026-08-19T22:28:59.751885',
+    updated_at: '2026-08-19T22:28:59.751886'
   },
   {
     id: '',
@@ -7178,12 +7206,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149009',
-    updated_at: '2026-08-19T16:27:21.149010'
+    created_at: '2026-08-19T22:28:59.751889',
+    updated_at: '2026-08-19T22:28:59.751890'
   },
   {
     id: '',
-    name: 'Vogt\'s Flowers and Gifts',    company: '',
+    name: 'Vogt's Flowers and Gifts',
+    company: '',
     email: '',
     phone: '(810) 238-6487',
     website: 'http://www.vogtsflowers.com/',
@@ -7193,8 +7222,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149013',
-    updated_at: '2026-08-19T16:27:21.149013'
+    created_at: '2026-08-19T22:28:59.751893',
+    updated_at: '2026-08-19T22:28:59.751894'
   },
   {
     id: '',
@@ -7209,12 +7238,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149016',
-    updated_at: '2026-08-19T16:27:21.149017'
+    created_at: '2026-08-19T22:28:59.751898',
+    updated_at: '2026-08-19T22:28:59.751899'
   },
   {
     id: '',
-    name: 'Anthea\'s Gardens of Flint - Formerly Carousel Family Florist',    company: '',
+    name: 'Anthea's Gardens of Flint - Formerly Carousel Family Florist',
+    company: '',
     email: '',
     phone: '(810) 732-6871',
     website: 'https://www.antheasgardens.com/',
@@ -7224,8 +7254,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149019',
-    updated_at: '2026-08-19T16:27:21.149020'
+    created_at: '2026-08-19T22:28:59.751902',
+    updated_at: '2026-08-19T22:28:59.751903'
   },
   {
     id: '',
@@ -7240,8 +7270,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149023',
-    updated_at: '2026-08-19T16:27:21.149024'
+    created_at: '2026-08-19T22:28:59.751907',
+    updated_at: '2026-08-19T22:28:59.751908'
   },
   {
     id: '',
@@ -7256,12 +7286,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149026',
-    updated_at: '2026-08-19T16:27:21.149027'
+    created_at: '2026-08-19T22:28:59.751911',
+    updated_at: '2026-08-19T22:28:59.751912'
   },
   {
     id: '',
-    name: 'Mary\'s Bouquet & Gifts',    company: '',
+    name: 'Mary's Bouquet & Gifts',
+    company: '',
     email: '',
     phone: '(810) 235-3822',
     website: 'https://marys-bouquet-gifts.edan.io/',
@@ -7271,12 +7302,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149030',
-    updated_at: '2026-08-19T16:27:21.149031'
+    created_at: '2026-08-19T22:28:59.751915',
+    updated_at: '2026-08-19T22:28:59.751916'
   },
   {
     id: '',
-    name: 'Fenner\'s Floral and Design Company',    company: '',
+    name: 'Fenner's Floral and Design Company',
+    company: '',
     email: '',
     phone: '(810) 820-2312',
     website: 'http://fennersfloral.com/',
@@ -7286,8 +7318,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149033',
-    updated_at: '2026-08-19T16:27:21.149034'
+    created_at: '2026-08-19T22:28:59.751919',
+    updated_at: '2026-08-19T22:28:59.751920'
   },
   {
     id: '',
@@ -7302,8 +7334,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149037',
-    updated_at: '2026-08-19T16:27:21.149038'
+    created_at: '2026-08-19T22:28:59.751923',
+    updated_at: '2026-08-19T22:28:59.751924'
   },
   {
     id: '',
@@ -7318,12 +7350,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149040',
-    updated_at: '2026-08-19T16:27:21.149041'
+    created_at: '2026-08-19T22:28:59.751927',
+    updated_at: '2026-08-19T22:28:59.751928'
   },
   {
     id: '',
-    name: 'Pink Lady\'s Slipper',    company: '',
+    name: 'Pink Lady's Slipper',
+    company: '',
     email: '',
     phone: '(810) 635-8164',
     website: 'https://www.plsfloral.com/',
@@ -7333,12 +7366,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149044',
-    updated_at: '2026-08-19T16:27:21.149044'
+    created_at: '2026-08-19T22:28:59.751931',
+    updated_at: '2026-08-19T22:28:59.751932'
   },
   {
     id: '',
-    name: 'Vogt\'s Flowers of Davison',    company: '',
+    name: 'Vogt's Flowers of Davison',
+    company: '',
     email: '',
     phone: '(810) 653-3700',
     website: 'http://www.vogtsflowersdavison.com/',
@@ -7348,8 +7382,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149047',
-    updated_at: '2026-08-19T16:27:21.149048'
+    created_at: '2026-08-19T22:28:59.751935',
+    updated_at: '2026-08-19T22:28:59.751936'
   },
   {
     id: '',
@@ -7364,12 +7398,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149050',
-    updated_at: '2026-08-19T16:27:21.149051'
+    created_at: '2026-08-19T22:28:59.751939',
+    updated_at: '2026-08-19T22:28:59.751940'
   },
   {
     id: '',
-    name: 'MarySam\'s Florist and Plant Shop',    company: '',
+    name: 'MarySam's Florist and Plant Shop',
+    company: '',
     email: '',
     phone: '(810) 309-9694',
     website: 'http://marysamsgardens.square.site/',
@@ -7379,8 +7414,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149053',
-    updated_at: '2026-08-19T16:27:21.149054'
+    created_at: '2026-08-19T22:28:59.751944',
+    updated_at: '2026-08-19T22:28:59.751945'
   },
   {
     id: '',
@@ -7395,8 +7430,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149057',
-    updated_at: '2026-08-19T16:27:21.149057'
+    created_at: '2026-08-19T22:28:59.751948',
+    updated_at: '2026-08-19T22:28:59.751949'
   },
   {
     id: '',
@@ -7411,8 +7446,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149060',
-    updated_at: '2026-08-19T16:27:21.149061'
+    created_at: '2026-08-19T22:28:59.751952',
+    updated_at: '2026-08-19T22:28:59.751957'
   },
   {
     id: '',
@@ -7427,12 +7462,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149064',
-    updated_at: '2026-08-19T16:27:21.149064'
+    created_at: '2026-08-19T22:28:59.751960',
+    updated_at: '2026-08-19T22:28:59.751961'
   },
   {
     id: '',
-    name: 'Ken\'s Greenhouse',    company: '',
+    name: 'Ken's Greenhouse',
+    company: '',
     email: '',
     phone: '(810) 732-8522',
     website: 'http://www.kensgreenhouse.com/',
@@ -7442,8 +7478,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149067',
-    updated_at: '2026-08-19T16:27:21.149068'
+    created_at: '2026-08-19T22:28:59.751965',
+    updated_at: '2026-08-19T22:28:59.751966'
   },
   {
     id: '',
@@ -7458,8 +7494,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149070',
-    updated_at: '2026-08-19T16:27:21.149071'
+    created_at: '2026-08-19T22:28:59.751969',
+    updated_at: '2026-08-19T22:28:59.751970'
   },
   {
     id: '',
@@ -7474,8 +7510,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149074',
-    updated_at: '2026-08-19T16:27:21.149075'
+    created_at: '2026-08-19T22:28:59.751973',
+    updated_at: '2026-08-19T22:28:59.751974'
   },
   {
     id: '',
@@ -7490,8 +7526,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149077',
-    updated_at: '2026-08-19T16:27:21.149078'
+    created_at: '2026-08-19T22:28:59.751987',
+    updated_at: '2026-08-19T22:28:59.751988'
   },
   {
     id: '',
@@ -7506,8 +7542,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149080',
-    updated_at: '2026-08-19T16:27:21.149081'
+    created_at: '2026-08-19T22:28:59.751991',
+    updated_at: '2026-08-19T22:28:59.751992'
   },
   {
     id: '',
@@ -7522,8 +7558,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149084',
-    updated_at: '2026-08-19T16:27:21.149085'
+    created_at: '2026-08-19T22:28:59.751996',
+    updated_at: '2026-08-19T22:28:59.751997'
   },
   {
     id: '',
@@ -7538,8 +7574,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149088',
-    updated_at: '2026-08-19T16:27:21.149089'
+    created_at: '2026-08-19T22:28:59.752000',
+    updated_at: '2026-08-19T22:28:59.752001'
   },
   {
     id: '',
@@ -7554,8 +7590,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149091',
-    updated_at: '2026-08-19T16:27:21.149092'
+    created_at: '2026-08-19T22:28:59.752004',
+    updated_at: '2026-08-19T22:28:59.752005'
   },
   {
     id: '',
@@ -7570,8 +7606,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149095',
-    updated_at: '2026-08-19T16:27:21.149096'
+    created_at: '2026-08-19T22:28:59.752008',
+    updated_at: '2026-08-19T22:28:59.752009'
   },
   {
     id: '',
@@ -7586,8 +7622,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149098',
-    updated_at: '2026-08-19T16:27:21.149099'
+    created_at: '2026-08-19T22:28:59.752013',
+    updated_at: '2026-08-19T22:28:59.752014'
   },
   {
     id: '',
@@ -7602,8 +7638,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149102',
-    updated_at: '2026-08-19T16:27:21.149103'
+    created_at: '2026-08-19T22:28:59.752016',
+    updated_at: '2026-08-19T22:28:59.752017'
   },
   {
     id: '',
@@ -7618,8 +7654,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149105',
-    updated_at: '2026-08-19T16:27:21.149106'
+    created_at: '2026-08-19T22:28:59.752020',
+    updated_at: '2026-08-19T22:28:59.752020'
   },
   {
     id: '',
@@ -7634,8 +7670,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149109',
-    updated_at: '2026-08-19T16:27:21.149109'
+    created_at: '2026-08-19T22:28:59.752023',
+    updated_at: '2026-08-19T22:28:59.752024'
   },
   {
     id: '',
@@ -7650,8 +7686,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149112',
-    updated_at: '2026-08-19T16:27:21.149113'
+    created_at: '2026-08-19T22:28:59.752026',
+    updated_at: '2026-08-19T22:28:59.752027'
   },
   {
     id: '',
@@ -7666,12 +7702,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149116',
-    updated_at: '2026-08-19T16:27:21.149116'
+    created_at: '2026-08-19T22:28:59.752030',
+    updated_at: '2026-08-19T22:28:59.752031'
   },
   {
     id: '',
-    name: 'Victoria\'s House',    company: '',
+    name: 'Victoria's House',
+    company: '',
     email: '',
     phone: '(810) 732-1946',
     website: 'http://www.westernhillsliving.com/',
@@ -7681,8 +7718,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149119',
-    updated_at: '2026-08-19T16:27:21.149120'
+    created_at: '2026-08-19T22:28:59.752034',
+    updated_at: '2026-08-19T22:28:59.752034'
   },
   {
     id: '',
@@ -7697,8 +7734,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149122',
-    updated_at: '2026-08-19T16:27:21.149123'
+    created_at: '2026-08-19T22:28:59.752037',
+    updated_at: '2026-08-19T22:28:59.752038'
   },
   {
     id: '',
@@ -7713,8 +7750,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149126',
-    updated_at: '2026-08-19T16:27:21.149126'
+    created_at: '2026-08-19T22:28:59.752041',
+    updated_at: '2026-08-19T22:28:59.752041'
   },
   {
     id: '',
@@ -7729,8 +7766,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149129',
-    updated_at: '2026-08-19T16:27:21.149130'
+    created_at: '2026-08-19T22:28:59.752044',
+    updated_at: '2026-08-19T22:28:59.752045'
   },
   {
     id: '',
@@ -7745,8 +7782,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149133',
-    updated_at: '2026-08-19T16:27:21.149133'
+    created_at: '2026-08-19T22:28:59.752048',
+    updated_at: '2026-08-19T22:28:59.752048'
   },
   {
     id: '',
@@ -7761,8 +7798,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149136',
-    updated_at: '2026-08-19T16:27:21.149137'
+    created_at: '2026-08-19T22:28:59.752051',
+    updated_at: '2026-08-19T22:28:59.752052'
   },
   {
     id: '',
@@ -7777,8 +7814,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149139',
-    updated_at: '2026-08-19T16:27:21.149140'
+    created_at: '2026-08-19T22:28:59.752055',
+    updated_at: '2026-08-19T22:28:59.752056'
   },
   {
     id: '',
@@ -7793,8 +7830,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149143',
-    updated_at: '2026-08-19T16:27:21.149143'
+    created_at: '2026-08-19T22:28:59.752059',
+    updated_at: '2026-08-19T22:28:59.752059'
   },
   {
     id: '',
@@ -7809,8 +7846,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149146',
-    updated_at: '2026-08-19T16:27:21.149147'
+    created_at: '2026-08-19T22:28:59.752062',
+    updated_at: '2026-08-19T22:28:59.752063'
   },
   {
     id: '',
@@ -7825,8 +7862,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149150',
-    updated_at: '2026-08-19T16:27:21.149151'
+    created_at: '2026-08-19T22:28:59.752066',
+    updated_at: '2026-08-19T22:28:59.752067'
   },
   {
     id: '',
@@ -7841,8 +7878,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149153',
-    updated_at: '2026-08-19T16:27:21.149154'
+    created_at: '2026-08-19T22:28:59.752069',
+    updated_at: '2026-08-19T22:28:59.752070'
   },
   {
     id: '',
@@ -7857,8 +7894,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149157',
-    updated_at: '2026-08-19T16:27:21.149157'
+    created_at: '2026-08-19T22:28:59.752073',
+    updated_at: '2026-08-19T22:28:59.752073'
   },
   {
     id: '',
@@ -7873,8 +7910,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149160',
-    updated_at: '2026-08-19T16:27:21.149161'
+    created_at: '2026-08-19T22:28:59.752076',
+    updated_at: '2026-08-19T22:28:59.752077'
   },
   {
     id: '',
@@ -7889,8 +7926,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149163',
-    updated_at: '2026-08-19T16:27:21.149164'
+    created_at: '2026-08-19T22:28:59.752080',
+    updated_at: '2026-08-19T22:28:59.752080'
   },
   {
     id: '',
@@ -7905,8 +7942,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149167',
-    updated_at: '2026-08-19T16:27:21.149167'
+    created_at: '2026-08-19T22:28:59.752083',
+    updated_at: '2026-08-19T22:28:59.752084'
   },
   {
     id: '',
@@ -7921,8 +7958,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149170',
-    updated_at: '2026-08-19T16:27:21.149171'
+    created_at: '2026-08-19T22:28:59.752087',
+    updated_at: '2026-08-19T22:28:59.752087'
   },
   {
     id: '',
@@ -7937,8 +7974,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149173',
-    updated_at: '2026-08-19T16:27:21.149174'
+    created_at: '2026-08-19T22:28:59.752090',
+    updated_at: '2026-08-19T22:28:59.752091'
   },
   {
     id: '',
@@ -7953,12 +7990,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149177',
-    updated_at: '2026-08-19T16:27:21.149178'
+    created_at: '2026-08-19T22:28:59.752093',
+    updated_at: '2026-08-19T22:28:59.752094'
   },
   {
     id: '',
-    name: 'Walker June Calhoun CPA\'s, PC',    company: '',
+    name: 'Walker June Calhoun CPA's, PC',
+    company: '',
     email: '',
     phone: '(810) 743-5000',
     website: 'http://walkerjunecalhoun.com/',
@@ -7968,8 +8006,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149180',
-    updated_at: '2026-08-19T16:27:21.149181'
+    created_at: '2026-08-19T22:28:59.752097',
+    updated_at: '2026-08-19T22:28:59.752098'
   },
   {
     id: '',
@@ -7984,8 +8022,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149183',
-    updated_at: '2026-08-19T16:27:21.149184'
+    created_at: '2026-08-19T22:28:59.752100',
+    updated_at: '2026-08-19T22:28:59.752101'
   },
   {
     id: '',
@@ -8000,8 +8038,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149187',
-    updated_at: '2026-08-19T16:27:21.149187'
+    created_at: '2026-08-19T22:28:59.752104',
+    updated_at: '2026-08-19T22:28:59.752104'
   },
   {
     id: '',
@@ -8016,8 +8054,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149190',
-    updated_at: '2026-08-19T16:27:21.149191'
+    created_at: '2026-08-19T22:28:59.752107',
+    updated_at: '2026-08-19T22:28:59.752108'
   },
   {
     id: '',
@@ -8032,8 +8070,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149193',
-    updated_at: '2026-08-19T16:27:21.149194'
+    created_at: '2026-08-19T22:28:59.752110',
+    updated_at: '2026-08-19T22:28:59.752111'
   },
   {
     id: '',
@@ -8048,8 +8086,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149197',
-    updated_at: '2026-08-19T16:27:21.149197'
+    created_at: '2026-08-19T22:28:59.752114',
+    updated_at: '2026-08-19T22:28:59.752115'
   },
   {
     id: '',
@@ -8064,8 +8102,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149200',
-    updated_at: '2026-08-19T16:27:21.149201'
+    created_at: '2026-08-19T22:28:59.752117',
+    updated_at: '2026-08-19T22:28:59.752118'
   },
   {
     id: '',
@@ -8080,8 +8118,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149204',
-    updated_at: '2026-08-19T16:27:21.149205'
+    created_at: '2026-08-19T22:28:59.752121',
+    updated_at: '2026-08-19T22:28:59.752122'
   },
   {
     id: '',
@@ -8096,8 +8134,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149207',
-    updated_at: '2026-08-19T16:27:21.149208'
+    created_at: '2026-08-19T22:28:59.752124',
+    updated_at: '2026-08-19T22:28:59.752125'
   },
   {
     id: '',
@@ -8112,8 +8150,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149211',
-    updated_at: '2026-08-19T16:27:21.149211'
+    created_at: '2026-08-19T22:28:59.752128',
+    updated_at: '2026-08-19T22:28:59.752129'
   },
   {
     id: '',
@@ -8128,8 +8166,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149214',
-    updated_at: '2026-08-19T16:27:21.149215'
+    created_at: '2026-08-19T22:28:59.752131',
+    updated_at: '2026-08-19T22:28:59.752132'
   },
   {
     id: '',
@@ -8144,8 +8182,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149218',
-    updated_at: '2026-08-19T16:27:21.149218'
+    created_at: '2026-08-19T22:28:59.752135',
+    updated_at: '2026-08-19T22:28:59.752135'
   },
   {
     id: '',
@@ -8160,8 +8198,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149221',
-    updated_at: '2026-08-19T16:27:21.149222'
+    created_at: '2026-08-19T22:28:59.752138',
+    updated_at: '2026-08-19T22:28:59.752139'
   },
   {
     id: '',
@@ -8176,8 +8214,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149224',
-    updated_at: '2026-08-19T16:27:21.149225'
+    created_at: '2026-08-19T22:28:59.752141',
+    updated_at: '2026-08-19T22:28:59.752142'
   },
   {
     id: '',
@@ -8192,8 +8230,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149228',
-    updated_at: '2026-08-19T16:27:21.149229'
+    created_at: '2026-08-19T22:28:59.752145',
+    updated_at: '2026-08-19T22:28:59.752146'
   },
   {
     id: '',
@@ -8208,8 +8246,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149232',
-    updated_at: '2026-08-19T16:27:21.149232'
+    created_at: '2026-08-19T22:28:59.752148',
+    updated_at: '2026-08-19T22:28:59.752149'
   },
   {
     id: '',
@@ -8224,8 +8262,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149235',
-    updated_at: '2026-08-19T16:27:21.149236'
+    created_at: '2026-08-19T22:28:59.752151',
+    updated_at: '2026-08-19T22:28:59.752152'
   },
   {
     id: '',
@@ -8240,8 +8278,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149238',
-    updated_at: '2026-08-19T16:27:21.149239'
+    created_at: '2026-08-19T22:28:59.752155',
+    updated_at: '2026-08-19T22:28:59.752156'
   },
   {
     id: '',
@@ -8256,8 +8294,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149242',
-    updated_at: '2026-08-19T16:27:21.149242'
+    created_at: '2026-08-19T22:28:59.752158',
+    updated_at: '2026-08-19T22:28:59.752159'
   },
   {
     id: '',
@@ -8272,8 +8310,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149245',
-    updated_at: '2026-08-19T16:27:21.149246'
+    created_at: '2026-08-19T22:28:59.752161',
+    updated_at: '2026-08-19T22:28:59.752162'
   },
   {
     id: '',
@@ -8288,8 +8326,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149248',
-    updated_at: '2026-08-19T16:27:21.149249'
+    created_at: '2026-08-19T22:28:59.752165',
+    updated_at: '2026-08-19T22:28:59.752166'
   },
   {
     id: '',
@@ -8304,8 +8342,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149252',
-    updated_at: '2026-08-19T16:27:21.149253'
+    created_at: '2026-08-19T22:28:59.752168',
+    updated_at: '2026-08-19T22:28:59.752169'
   },
   {
     id: '',
@@ -8320,8 +8358,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149255',
-    updated_at: '2026-08-19T16:27:21.149256'
+    created_at: '2026-08-19T22:28:59.752172',
+    updated_at: '2026-08-19T22:28:59.752172'
   },
   {
     id: '',
@@ -8336,8 +8374,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149259',
-    updated_at: '2026-08-19T16:27:21.149260'
+    created_at: '2026-08-19T22:28:59.752175',
+    updated_at: '2026-08-19T22:28:59.752176'
   },
   {
     id: '',
@@ -8352,8 +8390,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149262',
-    updated_at: '2026-08-19T16:27:21.149263'
+    created_at: '2026-08-19T22:28:59.752179',
+    updated_at: '2026-08-19T22:28:59.752180'
   },
   {
     id: '',
@@ -8368,8 +8406,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149266',
-    updated_at: '2026-08-19T16:27:21.149267'
+    created_at: '2026-08-19T22:28:59.752183',
+    updated_at: '2026-08-19T22:28:59.752183'
   },
   {
     id: '',
@@ -8384,8 +8422,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149269',
-    updated_at: '2026-08-19T16:27:21.149270'
+    created_at: '2026-08-19T22:28:59.752186',
+    updated_at: '2026-08-19T22:28:59.752187'
   },
   {
     id: '',
@@ -8400,8 +8438,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149273',
-    updated_at: '2026-08-19T16:27:21.149274'
+    created_at: '2026-08-19T22:28:59.752190',
+    updated_at: '2026-08-19T22:28:59.752190'
   },
   {
     id: '',
@@ -8416,8 +8454,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149276',
-    updated_at: '2026-08-19T16:27:21.149277'
+    created_at: '2026-08-19T22:28:59.752193',
+    updated_at: '2026-08-19T22:28:59.752194'
   },
   {
     id: '',
@@ -8432,8 +8470,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149279',
-    updated_at: '2026-08-19T16:27:21.149280'
+    created_at: '2026-08-19T22:28:59.752197',
+    updated_at: '2026-08-19T22:28:59.752197'
   },
   {
     id: '',
@@ -8448,8 +8486,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149283',
-    updated_at: '2026-08-19T16:27:21.149284'
+    created_at: '2026-08-19T22:28:59.752200',
+    updated_at: '2026-08-19T22:28:59.752201'
   },
   {
     id: '',
@@ -8464,8 +8502,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149286',
-    updated_at: '2026-08-19T16:27:21.149287'
+    created_at: '2026-08-19T22:28:59.752203',
+    updated_at: '2026-08-19T22:28:59.752204'
   },
   {
     id: '',
@@ -8480,8 +8518,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149289',
-    updated_at: '2026-08-19T16:27:21.149290'
+    created_at: '2026-08-19T22:28:59.752206',
+    updated_at: '2026-08-19T22:28:59.752207'
   },
   {
     id: '',
@@ -8496,8 +8534,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149293',
-    updated_at: '2026-08-19T16:27:21.149293'
+    created_at: '2026-08-19T22:28:59.752210',
+    updated_at: '2026-08-19T22:28:59.752210'
   },
   {
     id: '',
@@ -8512,8 +8550,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149296',
-    updated_at: '2026-08-19T16:27:21.149297'
+    created_at: '2026-08-19T22:28:59.752213',
+    updated_at: '2026-08-19T22:28:59.752214'
   },
   {
     id: '',
@@ -8528,8 +8566,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149299',
-    updated_at: '2026-08-19T16:27:21.149300'
+    created_at: '2026-08-19T22:28:59.752216',
+    updated_at: '2026-08-19T22:28:59.752217'
   },
   {
     id: '',
@@ -8544,8 +8582,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149302',
-    updated_at: '2026-08-19T16:27:21.149303'
+    created_at: '2026-08-19T22:28:59.752220',
+    updated_at: '2026-08-19T22:28:59.752221'
   },
   {
     id: '',
@@ -8560,8 +8598,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149306',
-    updated_at: '2026-08-19T16:27:21.149307'
+    created_at: '2026-08-19T22:28:59.752223',
+    updated_at: '2026-08-19T22:28:59.752224'
   },
   {
     id: '',
@@ -8576,8 +8614,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149309',
-    updated_at: '2026-08-19T16:27:21.149310'
+    created_at: '2026-08-19T22:28:59.752227',
+    updated_at: '2026-08-19T22:28:59.752228'
   },
   {
     id: '',
@@ -8592,8 +8630,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149313',
-    updated_at: '2026-08-19T16:27:21.149314'
+    created_at: '2026-08-19T22:28:59.752230',
+    updated_at: '2026-08-19T22:28:59.752231'
   },
   {
     id: '',
@@ -8608,8 +8646,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149317',
-    updated_at: '2026-08-19T16:27:21.149317'
+    created_at: '2026-08-19T22:28:59.752234',
+    updated_at: '2026-08-19T22:28:59.752235'
   },
   {
     id: '',
@@ -8624,8 +8662,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149320',
-    updated_at: '2026-08-19T16:27:21.149321'
+    created_at: '2026-08-19T22:28:59.752237',
+    updated_at: '2026-08-19T22:28:59.752238'
   },
   {
     id: '',
@@ -8640,8 +8678,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149324',
-    updated_at: '2026-08-19T16:27:21.149325'
+    created_at: '2026-08-19T22:28:59.752241',
+    updated_at: '2026-08-19T22:28:59.752241'
   },
   {
     id: '',
@@ -8656,8 +8694,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149327',
-    updated_at: '2026-08-19T16:27:21.149328'
+    created_at: '2026-08-19T22:28:59.752244',
+    updated_at: '2026-08-19T22:28:59.752245'
   },
   {
     id: '',
@@ -8672,8 +8710,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149331',
-    updated_at: '2026-08-19T16:27:21.149332'
+    created_at: '2026-08-19T22:28:59.752247',
+    updated_at: '2026-08-19T22:28:59.752248'
   },
   {
     id: '',
@@ -8688,8 +8726,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149334',
-    updated_at: '2026-08-19T16:27:21.149335'
+    created_at: '2026-08-19T22:28:59.752251',
+    updated_at: '2026-08-19T22:28:59.752251'
   },
   {
     id: '',
@@ -8704,8 +8742,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149338',
-    updated_at: '2026-08-19T16:27:21.149339'
+    created_at: '2026-08-19T22:28:59.752254',
+    updated_at: '2026-08-19T22:28:59.752255'
   },
   {
     id: '',
@@ -8720,8 +8758,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149341',
-    updated_at: '2026-08-19T16:27:21.149342'
+    created_at: '2026-08-19T22:28:59.752257',
+    updated_at: '2026-08-19T22:28:59.752258'
   },
   {
     id: '',
@@ -8736,8 +8774,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149345',
-    updated_at: '2026-08-19T16:27:21.149345'
+    created_at: '2026-08-19T22:28:59.752261',
+    updated_at: '2026-08-19T22:28:59.752262'
   },
   {
     id: '',
@@ -8752,8 +8790,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149348',
-    updated_at: '2026-08-19T16:27:21.149349'
+    created_at: '2026-08-19T22:28:59.752264',
+    updated_at: '2026-08-19T22:28:59.752265'
   },
   {
     id: '',
@@ -8768,8 +8806,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149351',
-    updated_at: '2026-08-19T16:27:21.149352'
+    created_at: '2026-08-19T22:28:59.752268',
+    updated_at: '2026-08-19T22:28:59.752268'
   },
   {
     id: '',
@@ -8784,12 +8822,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149355',
-    updated_at: '2026-08-19T16:27:21.149356'
+    created_at: '2026-08-19T22:28:59.752271',
+    updated_at: '2026-08-19T22:28:59.752272'
   },
   {
     id: '',
-    name: 'Zari\'s Loving Touch',    company: '',
+    name: 'Zari's Loving Touch',
+    company: '',
     email: '',
     phone: '',
     website: 'http://www.zarislovingtouch.com/',
@@ -8799,8 +8838,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149358',
-    updated_at: '2026-08-19T16:27:21.149359'
+    created_at: '2026-08-19T22:28:59.752274',
+    updated_at: '2026-08-19T22:28:59.752275'
   },
   {
     id: '',
@@ -8815,8 +8854,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149362',
-    updated_at: '2026-08-19T16:27:21.149362'
+    created_at: '2026-08-19T22:28:59.752278',
+    updated_at: '2026-08-19T22:28:59.752279'
   },
   {
     id: '',
@@ -8831,8 +8870,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149365',
-    updated_at: '2026-08-19T16:27:21.149366'
+    created_at: '2026-08-19T22:28:59.752282',
+    updated_at: '2026-08-19T22:28:59.752282'
   },
   {
     id: '',
@@ -8847,8 +8886,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149369',
-    updated_at: '2026-08-19T16:27:21.149369'
+    created_at: '2026-08-19T22:28:59.752285',
+    updated_at: '2026-08-19T22:28:59.752286'
   },
   {
     id: '',
@@ -8863,8 +8902,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149372',
-    updated_at: '2026-08-19T16:27:21.149373'
+    created_at: '2026-08-19T22:28:59.752289',
+    updated_at: '2026-08-19T22:28:59.752290'
   },
   {
     id: '',
@@ -8879,8 +8918,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149376',
-    updated_at: '2026-08-19T16:27:21.149376'
+    created_at: '2026-08-19T22:28:59.752293',
+    updated_at: '2026-08-19T22:28:59.752293'
   },
   {
     id: '',
@@ -8895,8 +8934,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149379',
-    updated_at: '2026-08-19T16:27:21.149380'
+    created_at: '2026-08-19T22:28:59.752296',
+    updated_at: '2026-08-19T22:28:59.752297'
   },
   {
     id: '',
@@ -8911,8 +8950,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149382',
-    updated_at: '2026-08-19T16:27:21.149383'
+    created_at: '2026-08-19T22:28:59.752300',
+    updated_at: '2026-08-19T22:28:59.752300'
   },
   {
     id: '',
@@ -8927,8 +8966,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149386',
-    updated_at: '2026-08-19T16:27:21.149387'
+    created_at: '2026-08-19T22:28:59.752303',
+    updated_at: '2026-08-19T22:28:59.752304'
   },
   {
     id: '',
@@ -8943,8 +8982,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149389',
-    updated_at: '2026-08-19T16:27:21.149390'
+    created_at: '2026-08-19T22:28:59.752307',
+    updated_at: '2026-08-19T22:28:59.752307'
   },
   {
     id: '',
@@ -8959,8 +8998,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149393',
-    updated_at: '2026-08-19T16:27:21.149393'
+    created_at: '2026-08-19T22:28:59.752310',
+    updated_at: '2026-08-19T22:28:59.752311'
   },
   {
     id: '',
@@ -8975,8 +9014,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149396',
-    updated_at: '2026-08-19T16:27:21.149397'
+    created_at: '2026-08-19T22:28:59.752313',
+    updated_at: '2026-08-19T22:28:59.752314'
   },
   {
     id: '',
@@ -8991,8 +9030,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149399',
-    updated_at: '2026-08-19T16:27:21.149400'
+    created_at: '2026-08-19T22:28:59.752317',
+    updated_at: '2026-08-19T22:28:59.752318'
   },
   {
     id: '',
@@ -9007,8 +9046,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149403',
-    updated_at: '2026-08-19T16:27:21.149403'
+    created_at: '2026-08-19T22:28:59.752321',
+    updated_at: '2026-08-19T22:28:59.752322'
   },
   {
     id: '',
@@ -9023,8 +9062,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149406',
-    updated_at: '2026-08-19T16:27:21.149407'
+    created_at: '2026-08-19T22:28:59.752324',
+    updated_at: '2026-08-19T22:28:59.752325'
   },
   {
     id: '',
@@ -9039,8 +9078,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149409',
-    updated_at: '2026-08-19T16:27:21.149410'
+    created_at: '2026-08-19T22:28:59.752328',
+    updated_at: '2026-08-19T22:28:59.752329'
   },
   {
     id: '',
@@ -9055,8 +9094,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149413',
-    updated_at: '2026-08-19T16:27:21.149414'
+    created_at: '2026-08-19T22:28:59.752331',
+    updated_at: '2026-08-19T22:28:59.752332'
   },
   {
     id: '',
@@ -9071,8 +9110,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149416',
-    updated_at: '2026-08-19T16:27:21.149417'
+    created_at: '2026-08-19T22:28:59.752335',
+    updated_at: '2026-08-19T22:28:59.752336'
   },
   {
     id: '',
@@ -9087,8 +9126,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149420',
-    updated_at: '2026-08-19T16:27:21.149421'
+    created_at: '2026-08-19T22:28:59.752339',
+    updated_at: '2026-08-19T22:28:59.752339'
   },
   {
     id: '',
@@ -9103,8 +9142,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149423',
-    updated_at: '2026-08-19T16:27:21.149424'
+    created_at: '2026-08-19T22:28:59.752342',
+    updated_at: '2026-08-19T22:28:59.752343'
   },
   {
     id: '',
@@ -9119,8 +9158,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149427',
-    updated_at: '2026-08-19T16:27:21.149427'
+    created_at: '2026-08-19T22:28:59.752346',
+    updated_at: '2026-08-19T22:28:59.752346'
   },
   {
     id: '',
@@ -9135,8 +9174,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149430',
-    updated_at: '2026-08-19T16:27:21.149431'
+    created_at: '2026-08-19T22:28:59.752349',
+    updated_at: '2026-08-19T22:28:59.752350'
   },
   {
     id: '',
@@ -9151,8 +9190,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149434',
-    updated_at: '2026-08-19T16:27:21.149434'
+    created_at: '2026-08-19T22:28:59.752353',
+    updated_at: '2026-08-19T22:28:59.752354'
   },
   {
     id: '',
@@ -9167,8 +9206,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149438',
-    updated_at: '2026-08-19T16:27:21.149438'
+    created_at: '2026-08-19T22:28:59.752394',
+    updated_at: '2026-08-19T22:28:59.752395'
   },
   {
     id: '',
@@ -9183,8 +9222,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149441',
-    updated_at: '2026-08-19T16:27:21.149442'
+    created_at: '2026-08-19T22:28:59.752398',
+    updated_at: '2026-08-19T22:28:59.752399'
   },
   {
     id: '',
@@ -9199,8 +9238,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149444',
-    updated_at: '2026-08-19T16:27:21.149445'
+    created_at: '2026-08-19T22:28:59.752402',
+    updated_at: '2026-08-19T22:28:59.752402'
   },
   {
     id: '',
@@ -9215,8 +9254,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149448',
-    updated_at: '2026-08-19T16:27:21.149448'
+    created_at: '2026-08-19T22:28:59.752405',
+    updated_at: '2026-08-19T22:28:59.752406'
   },
   {
     id: '',
@@ -9231,8 +9270,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149451',
-    updated_at: '2026-08-19T16:27:21.149452'
+    created_at: '2026-08-19T22:28:59.752409',
+    updated_at: '2026-08-19T22:28:59.752410'
   },
   {
     id: '',
@@ -9247,8 +9286,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149454',
-    updated_at: '2026-08-19T16:27:21.149455'
+    created_at: '2026-08-19T22:28:59.752412',
+    updated_at: '2026-08-19T22:28:59.752413'
   },
   {
     id: '',
@@ -9263,8 +9302,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149458',
-    updated_at: '2026-08-19T16:27:21.149459'
+    created_at: '2026-08-19T22:28:59.752416',
+    updated_at: '2026-08-19T22:28:59.752416'
   },
   {
     id: '',
@@ -9279,8 +9318,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149461',
-    updated_at: '2026-08-19T16:27:21.149462'
+    created_at: '2026-08-19T22:28:59.752419',
+    updated_at: '2026-08-19T22:28:59.752420'
   },
   {
     id: '',
@@ -9295,12 +9334,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149465',
-    updated_at: '2026-08-19T16:27:21.149466'
+    created_at: '2026-08-19T22:28:59.752422',
+    updated_at: '2026-08-19T22:28:59.752423'
   },
   {
     id: '',
-    name: 'Morgan\'s Auto Repair',    company: '',
+    name: 'Morgan's Auto Repair',
+    company: '',
     email: '',
     phone: '(989) 892-0567',
     website: 'http://www.morgansautobaycity.com/',
@@ -9310,8 +9350,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149468',
-    updated_at: '2026-08-19T16:27:21.149469'
+    created_at: '2026-08-19T22:28:59.752426',
+    updated_at: '2026-08-19T22:28:59.752426'
   },
   {
     id: '',
@@ -9326,12 +9366,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149472',
-    updated_at: '2026-08-19T16:27:21.149473'
+    created_at: '2026-08-19T22:28:59.752429',
+    updated_at: '2026-08-19T22:28:59.752430'
   },
   {
     id: '',
-    name: 'Ty\'s Auto Service LLC',    company: '',
+    name: 'Ty's Auto Service LLC',
+    company: '',
     email: '',
     phone: '(989) 397-6550',
     website: 'https://www.facebook.com/Tysautoservicesbc',
@@ -9341,8 +9382,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149475',
-    updated_at: '2026-08-19T16:27:21.149476'
+    created_at: '2026-08-19T22:28:59.752432',
+    updated_at: '2026-08-19T22:28:59.752433'
   },
   {
     id: '',
@@ -9357,8 +9398,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149478',
-    updated_at: '2026-08-19T16:27:21.149479'
+    created_at: '2026-08-19T22:28:59.752436',
+    updated_at: '2026-08-19T22:28:59.752436'
   },
   {
     id: '',
@@ -9373,8 +9414,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149482',
-    updated_at: '2026-08-19T16:27:21.149483'
+    created_at: '2026-08-19T22:28:59.752439',
+    updated_at: '2026-08-19T22:28:59.752440'
   },
   {
     id: '',
@@ -9389,8 +9430,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149485',
-    updated_at: '2026-08-19T16:27:21.149486'
+    created_at: '2026-08-19T22:28:59.752442',
+    updated_at: '2026-08-19T22:28:59.752443'
   },
   {
     id: '',
@@ -9405,8 +9446,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149488',
-    updated_at: '2026-08-19T16:27:21.149489'
+    created_at: '2026-08-19T22:28:59.752446',
+    updated_at: '2026-08-19T22:28:59.752446'
   },
   {
     id: '',
@@ -9421,8 +9462,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149492',
-    updated_at: '2026-08-19T16:27:21.149492'
+    created_at: '2026-08-19T22:28:59.752449',
+    updated_at: '2026-08-19T22:28:59.752450'
   },
   {
     id: '',
@@ -9437,8 +9478,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149495',
-    updated_at: '2026-08-19T16:27:21.149496'
+    created_at: '2026-08-19T22:28:59.752452',
+    updated_at: '2026-08-19T22:28:59.752453'
   },
   {
     id: '',
@@ -9453,8 +9494,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149498',
-    updated_at: '2026-08-19T16:27:21.149499'
+    created_at: '2026-08-19T22:28:59.752456',
+    updated_at: '2026-08-19T22:28:59.752457'
   },
   {
     id: '',
@@ -9469,8 +9510,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149502',
-    updated_at: '2026-08-19T16:27:21.149502'
+    created_at: '2026-08-19T22:28:59.752459',
+    updated_at: '2026-08-19T22:28:59.752460'
   },
   {
     id: '',
@@ -9485,8 +9526,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149505',
-    updated_at: '2026-08-19T16:27:21.149506'
+    created_at: '2026-08-19T22:28:59.752463',
+    updated_at: '2026-08-19T22:28:59.752463'
   },
   {
     id: '',
@@ -9501,8 +9542,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149508',
-    updated_at: '2026-08-19T16:27:21.149509'
+    created_at: '2026-08-19T22:28:59.752466',
+    updated_at: '2026-08-19T22:28:59.752467'
   },
   {
     id: '',
@@ -9517,8 +9558,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149512',
-    updated_at: '2026-08-19T16:27:21.149512'
+    created_at: '2026-08-19T22:28:59.752469',
+    updated_at: '2026-08-19T22:28:59.752470'
   },
   {
     id: '',
@@ -9533,8 +9574,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149515',
-    updated_at: '2026-08-19T16:27:21.149516'
+    created_at: '2026-08-19T22:28:59.752473',
+    updated_at: '2026-08-19T22:28:59.752474'
   },
   {
     id: '',
@@ -9549,8 +9590,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149518',
-    updated_at: '2026-08-19T16:27:21.149519'
+    created_at: '2026-08-19T22:28:59.752476',
+    updated_at: '2026-08-19T22:28:59.752477'
   },
   {
     id: '',
@@ -9565,12 +9606,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149522',
-    updated_at: '2026-08-19T16:27:21.149523'
+    created_at: '2026-08-19T22:28:59.752480',
+    updated_at: '2026-08-19T22:28:59.752481'
   },
   {
     id: '',
-    name: 'Suzie Q\'s Breakfast Nook',    company: '',
+    name: 'Suzie Q's Breakfast Nook',
+    company: '',
     email: '',
     phone: '(989) 402-1792',
     website: 'https://www.facebook.com/p/Suzie-Qs-Breakfast-Nook-100063622329808/',
@@ -9580,8 +9622,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149526',
-    updated_at: '2026-08-19T16:27:21.149527'
+    created_at: '2026-08-19T22:28:59.752483',
+    updated_at: '2026-08-19T22:28:59.752484'
   },
   {
     id: '',
@@ -9596,8 +9638,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149529',
-    updated_at: '2026-08-19T16:27:21.149530'
+    created_at: '2026-08-19T22:28:59.752487',
+    updated_at: '2026-08-19T22:28:59.752488'
   },
   {
     id: '',
@@ -9612,12 +9654,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149533',
-    updated_at: '2026-08-19T16:27:21.149534'
+    created_at: '2026-08-19T22:28:59.752490',
+    updated_at: '2026-08-19T22:28:59.752491'
   },
   {
     id: '',
-    name: 'Paul\'s Flowers',    company: '',
+    name: 'Paul's Flowers',
+    company: '',
     email: '',
     phone: '(989) 894-1199',
     website: 'https://www.paulsofbaycityflowers.com/?utm_source=google&utm_medium=gbp&y_source=1_MjA4OTQ3NzktNzE1LWxvY2F0aW9uLndlYnNpdGU%3D',
@@ -9627,8 +9670,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149536',
-    updated_at: '2026-08-19T16:27:21.149537'
+    created_at: '2026-08-19T22:28:59.752493',
+    updated_at: '2026-08-19T22:28:59.752494'
   },
   {
     id: '',
@@ -9643,8 +9686,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149539',
-    updated_at: '2026-08-19T16:27:21.149540'
+    created_at: '2026-08-19T22:28:59.752497',
+    updated_at: '2026-08-19T22:28:59.752498'
   },
   {
     id: '',
@@ -9659,8 +9702,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149543',
-    updated_at: '2026-08-19T16:27:21.149543'
+    created_at: '2026-08-19T22:28:59.752500',
+    updated_at: '2026-08-19T22:28:59.752501'
   },
   {
     id: '',
@@ -9675,8 +9718,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149546',
-    updated_at: '2026-08-19T16:27:21.149547'
+    created_at: '2026-08-19T22:28:59.752504',
+    updated_at: '2026-08-19T22:28:59.752504'
   },
   {
     id: '',
@@ -9691,8 +9734,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149549',
-    updated_at: '2026-08-19T16:27:21.149550'
+    created_at: '2026-08-19T22:28:59.752507',
+    updated_at: '2026-08-19T22:28:59.752508'
   },
   {
     id: '',
@@ -9707,8 +9750,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149553',
-    updated_at: '2026-08-19T16:27:21.149553'
+    created_at: '2026-08-19T22:28:59.752510',
+    updated_at: '2026-08-19T22:28:59.752511'
   },
   {
     id: '',
@@ -9723,12 +9766,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149556',
-    updated_at: '2026-08-19T16:27:21.149557'
+    created_at: '2026-08-19T22:28:59.752514',
+    updated_at: '2026-08-19T22:28:59.752515'
   },
   {
     id: '',
-    name: 'Hank\'s Flowerland',    company: '',
+    name: 'Hank's Flowerland',
+    company: '',
     email: '',
     phone: '(989) 754-7481',
     website: 'http://www.hanksflowerland.com/',
@@ -9738,8 +9782,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149560',
-    updated_at: '2026-08-19T16:27:21.149560'
+    created_at: '2026-08-19T22:28:59.752517',
+    updated_at: '2026-08-19T22:28:59.752518'
   },
   {
     id: '',
@@ -9754,8 +9798,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149563',
-    updated_at: '2026-08-19T16:27:21.149564'
+    created_at: '2026-08-19T22:28:59.752521',
+    updated_at: '2026-08-19T22:28:59.752522'
   },
   {
     id: '',
@@ -9770,12 +9814,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149567',
-    updated_at: '2026-08-19T16:27:21.149567'
+    created_at: '2026-08-19T22:28:59.752524',
+    updated_at: '2026-08-19T22:28:59.752525'
   },
   {
     id: '',
-    name: 'Erika\'s Flowers',    company: '',
+    name: 'Erika's Flowers',
+    company: '',
     email: '',
     phone: '(989) 755-9330',
     website: 'https://www.erikas-flowers.com/',
@@ -9785,12 +9830,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149583',
-    updated_at: '2026-08-19T16:27:21.149584'
+    created_at: '2026-08-19T22:28:59.752528',
+    updated_at: '2026-08-19T22:28:59.752529'
   },
   {
     id: '',
-    name: 'Auburn\'s Flowers From the Heart',    company: '',
+    name: 'Auburn's Flowers From the Heart',
+    company: '',
     email: '',
     phone: '(989) 662-7818',
     website: 'http://www.flowershopauburn.com/',
@@ -9800,8 +9846,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149587',
-    updated_at: '2026-08-19T16:27:21.149588'
+    created_at: '2026-08-19T22:28:59.752531',
+    updated_at: '2026-08-19T22:28:59.752532'
   },
   {
     id: '',
@@ -9816,8 +9862,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149591',
-    updated_at: '2026-08-19T16:27:21.149591'
+    created_at: '2026-08-19T22:28:59.752535',
+    updated_at: '2026-08-19T22:28:59.752536'
   },
   {
     id: '',
@@ -9832,8 +9878,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149594',
-    updated_at: '2026-08-19T16:27:21.149595'
+    created_at: '2026-08-19T22:28:59.752555',
+    updated_at: '2026-08-19T22:28:59.752557'
   },
   {
     id: '',
@@ -9848,8 +9894,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149597',
-    updated_at: '2026-08-19T16:27:21.149598'
+    created_at: '2026-08-19T22:28:59.752562',
+    updated_at: '2026-08-19T22:28:59.752563'
   },
   {
     id: '',
@@ -9864,8 +9910,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149601',
-    updated_at: '2026-08-19T16:27:21.149602'
+    created_at: '2026-08-19T22:28:59.752566',
+    updated_at: '2026-08-19T22:28:59.752567'
   },
   {
     id: '',
@@ -9880,8 +9926,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149604',
-    updated_at: '2026-08-19T16:27:21.149605'
+    created_at: '2026-08-19T22:28:59.752569',
+    updated_at: '2026-08-19T22:28:59.752570'
   },
   {
     id: '',
@@ -9896,8 +9942,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149608',
-    updated_at: '2026-08-19T16:27:21.149608'
+    created_at: '2026-08-19T22:28:59.752572',
+    updated_at: '2026-08-19T22:28:59.752573'
   },
   {
     id: '',
@@ -9912,8 +9958,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149611',
-    updated_at: '2026-08-19T16:27:21.149612'
+    created_at: '2026-08-19T22:28:59.752575',
+    updated_at: '2026-08-19T22:28:59.752576'
   },
   {
     id: '',
@@ -9928,8 +9974,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149614',
-    updated_at: '2026-08-19T16:27:21.149615'
+    created_at: '2026-08-19T22:28:59.752578',
+    updated_at: '2026-08-19T22:28:59.752579'
   },
   {
     id: '',
@@ -9944,8 +9990,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149618',
-    updated_at: '2026-08-19T16:27:21.149619'
+    created_at: '2026-08-19T22:28:59.752581',
+    updated_at: '2026-08-19T22:28:59.752582'
   },
   {
     id: '',
@@ -9960,8 +10006,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149622',
-    updated_at: '2026-08-19T16:27:21.149622'
+    created_at: '2026-08-19T22:28:59.752584',
+    updated_at: '2026-08-19T22:28:59.752585'
   },
   {
     id: '',
@@ -9976,8 +10022,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149625',
-    updated_at: '2026-08-19T16:27:21.149626'
+    created_at: '2026-08-19T22:28:59.752587',
+    updated_at: '2026-08-19T22:28:59.752588'
   },
   {
     id: '',
@@ -9992,8 +10038,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149629',
-    updated_at: '2026-08-19T16:27:21.149630'
+    created_at: '2026-08-19T22:28:59.752590',
+    updated_at: '2026-08-19T22:28:59.752591'
   },
   {
     id: '',
@@ -10008,8 +10054,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149632',
-    updated_at: '2026-08-19T16:27:21.149633'
+    created_at: '2026-08-19T22:28:59.752593',
+    updated_at: '2026-08-19T22:28:59.752594'
   },
   {
     id: '',
@@ -10024,8 +10070,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149636',
-    updated_at: '2026-08-19T16:27:21.149637'
+    created_at: '2026-08-19T22:28:59.752596',
+    updated_at: '2026-08-19T22:28:59.752597'
   },
   {
     id: '',
@@ -10040,8 +10086,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149639',
-    updated_at: '2026-08-19T16:27:21.149640'
+    created_at: '2026-08-19T22:28:59.752600',
+    updated_at: '2026-08-19T22:28:59.752601'
   },
   {
     id: '',
@@ -10056,8 +10102,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149642',
-    updated_at: '2026-08-19T16:27:21.149643'
+    created_at: '2026-08-19T22:28:59.752603',
+    updated_at: '2026-08-19T22:28:59.752604'
   },
   {
     id: '',
@@ -10072,12 +10118,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149646',
-    updated_at: '2026-08-19T16:27:21.149647'
+    created_at: '2026-08-19T22:28:59.752606',
+    updated_at: '2026-08-19T22:28:59.752607'
   },
   {
     id: '',
-    name: 'Quast Janke & Co CPA\'s',
+    name: 'Quast Janke & Co CPA's',
     company: '',
     email: '',
     phone: '(989) 892-4549',
@@ -10088,8 +10134,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149649',
-    updated_at: '2026-08-19T16:27:21.149650'
+    created_at: '2026-08-19T22:28:59.752609',
+    updated_at: '2026-08-19T22:28:59.752610'
   },
   {
     id: '',
@@ -10104,8 +10150,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149652',
-    updated_at: '2026-08-19T16:27:21.149653'
+    created_at: '2026-08-19T22:28:59.752613',
+    updated_at: '2026-08-19T22:28:59.752613'
   },
   {
     id: '',
@@ -10120,8 +10166,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149656',
-    updated_at: '2026-08-19T16:27:21.149657'
+    created_at: '2026-08-19T22:28:59.752616',
+    updated_at: '2026-08-19T22:28:59.752616'
   },
   {
     id: '',
@@ -10136,8 +10182,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149659',
-    updated_at: '2026-08-19T16:27:21.149660'
+    created_at: '2026-08-19T22:28:59.752619',
+    updated_at: '2026-08-19T22:28:59.752619'
   },
   {
     id: '',
@@ -10152,8 +10198,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149662',
-    updated_at: '2026-08-19T16:27:21.149663'
+    created_at: '2026-08-19T22:28:59.752622',
+    updated_at: '2026-08-19T22:28:59.752623'
   },
   {
     id: '',
@@ -10168,8 +10214,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149666',
-    updated_at: '2026-08-19T16:27:21.149666'
+    created_at: '2026-08-19T22:28:59.752625',
+    updated_at: '2026-08-19T22:28:59.752626'
   },
   {
     id: '',
@@ -10184,8 +10230,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149669',
-    updated_at: '2026-08-19T16:27:21.149670'
+    created_at: '2026-08-19T22:28:59.752628',
+    updated_at: '2026-08-19T22:28:59.752629'
   },
   {
     id: '',
@@ -10200,8 +10246,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149672',
-    updated_at: '2026-08-19T16:27:21.149673'
+    created_at: '2026-08-19T22:28:59.752631',
+    updated_at: '2026-08-19T22:28:59.752632'
   },
   {
     id: '',
@@ -10216,8 +10262,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149676',
-    updated_at: '2026-08-19T16:27:21.149676'
+    created_at: '2026-08-19T22:28:59.752634',
+    updated_at: '2026-08-19T22:28:59.752635'
   },
   {
     id: '',
@@ -10232,8 +10278,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149679',
-    updated_at: '2026-08-19T16:27:21.149680'
+    created_at: '2026-08-19T22:28:59.752638',
+    updated_at: '2026-08-19T22:28:59.752638'
   },
   {
     id: '',
@@ -10248,8 +10294,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149682',
-    updated_at: '2026-08-19T16:27:21.149683'
+    created_at: '2026-08-19T22:28:59.752641',
+    updated_at: '2026-08-19T22:28:59.752641'
   },
   {
     id: '',
@@ -10264,8 +10310,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149686',
-    updated_at: '2026-08-19T16:27:21.149687'
+    created_at: '2026-08-19T22:28:59.752644',
+    updated_at: '2026-08-19T22:28:59.752644'
   },
   {
     id: '',
@@ -10280,8 +10326,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149689',
-    updated_at: '2026-08-19T16:27:21.149690'
+    created_at: '2026-08-19T22:28:59.752647',
+    updated_at: '2026-08-19T22:28:59.752648'
   },
   {
     id: '',
@@ -10296,8 +10342,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149693',
-    updated_at: '2026-08-19T16:27:21.149694'
+    created_at: '2026-08-19T22:28:59.752650',
+    updated_at: '2026-08-19T22:28:59.752651'
   },
   {
     id: '',
@@ -10312,8 +10358,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149696',
-    updated_at: '2026-08-19T16:27:21.149697'
+    created_at: '2026-08-19T22:28:59.752653',
+    updated_at: '2026-08-19T22:28:59.752654'
   },
   {
     id: '',
@@ -10328,8 +10374,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149700',
-    updated_at: '2026-08-19T16:27:21.149701'
+    created_at: '2026-08-19T22:28:59.752657',
+    updated_at: '2026-08-19T22:28:59.752657'
   },
   {
     id: '',
@@ -10344,8 +10390,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149703',
-    updated_at: '2026-08-19T16:27:21.149704'
+    created_at: '2026-08-19T22:28:59.752660',
+    updated_at: '2026-08-19T22:28:59.752660'
   },
   {
     id: '',
@@ -10360,8 +10406,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149706',
-    updated_at: '2026-08-19T16:27:21.149707'
+    created_at: '2026-08-19T22:28:59.752663',
+    updated_at: '2026-08-19T22:28:59.752663'
   },
   {
     id: '',
@@ -10376,8 +10422,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149710',
-    updated_at: '2026-08-19T16:27:21.149711'
+    created_at: '2026-08-19T22:28:59.752666',
+    updated_at: '2026-08-19T22:28:59.752666'
   },
   {
     id: '',
@@ -10392,8 +10438,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149713',
-    updated_at: '2026-08-19T16:27:21.149714'
+    created_at: '2026-08-19T22:28:59.752669',
+    updated_at: '2026-08-19T22:28:59.752669'
   },
   {
     id: '',
@@ -10408,8 +10454,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149717',
-    updated_at: '2026-08-19T16:27:21.149718'
+    created_at: '2026-08-19T22:28:59.752672',
+    updated_at: '2026-08-19T22:28:59.752673'
   },
   {
     id: '',
@@ -10424,8 +10470,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149721',
-    updated_at: '2026-08-19T16:27:21.149721'
+    created_at: '2026-08-19T22:28:59.752675',
+    updated_at: '2026-08-19T22:28:59.752676'
   },
   {
     id: '',
@@ -10440,8 +10486,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149724',
-    updated_at: '2026-08-19T16:27:21.149725'
+    created_at: '2026-08-19T22:28:59.752678',
+    updated_at: '2026-08-19T22:28:59.752679'
   },
   {
     id: '',
@@ -10456,8 +10502,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149727',
-    updated_at: '2026-08-19T16:27:21.149728'
+    created_at: '2026-08-19T22:28:59.752681',
+    updated_at: '2026-08-19T22:28:59.752682'
   },
   {
     id: '',
@@ -10472,8 +10518,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149731',
-    updated_at: '2026-08-19T16:27:21.149731'
+    created_at: '2026-08-19T22:28:59.752684',
+    updated_at: '2026-08-19T22:28:59.752685'
   },
   {
     id: '',
@@ -10488,8 +10534,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149734',
-    updated_at: '2026-08-19T16:27:21.149735'
+    created_at: '2026-08-19T22:28:59.752687',
+    updated_at: '2026-08-19T22:28:59.752688'
   },
   {
     id: '',
@@ -10504,8 +10550,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149737',
-    updated_at: '2026-08-19T16:27:21.149738'
+    created_at: '2026-08-19T22:28:59.752690',
+    updated_at: '2026-08-19T22:28:59.752691'
   },
   {
     id: '',
@@ -10520,8 +10566,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149741',
-    updated_at: '2026-08-19T16:27:21.149742'
+    created_at: '2026-08-19T22:28:59.752693',
+    updated_at: '2026-08-19T22:28:59.752694'
   },
   {
     id: '',
@@ -10536,8 +10582,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149744',
-    updated_at: '2026-08-19T16:27:21.149745'
+    created_at: '2026-08-19T22:28:59.752696',
+    updated_at: '2026-08-19T22:28:59.752697'
   },
   {
     id: '',
@@ -10552,8 +10598,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149747',
-    updated_at: '2026-08-19T16:27:21.149748'
+    created_at: '2026-08-19T22:28:59.752699',
+    updated_at: '2026-08-19T22:28:59.752700'
   },
   {
     id: '',
@@ -10568,8 +10614,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149751',
-    updated_at: '2026-08-19T16:27:21.149752'
+    created_at: '2026-08-19T22:28:59.752702',
+    updated_at: '2026-08-19T22:28:59.752703'
   },
   {
     id: '',
@@ -10584,8 +10630,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149754',
-    updated_at: '2026-08-19T16:27:21.149755'
+    created_at: '2026-08-19T22:28:59.752705',
+    updated_at: '2026-08-19T22:28:59.752706'
   },
   {
     id: '',
@@ -10600,8 +10646,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149757',
-    updated_at: '2026-08-19T16:27:21.149758'
+    created_at: '2026-08-19T22:28:59.752708',
+    updated_at: '2026-08-19T22:28:59.752709'
   },
   {
     id: '',
@@ -10616,8 +10662,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149761',
-    updated_at: '2026-08-19T16:27:21.149762'
+    created_at: '2026-08-19T22:28:59.752712',
+    updated_at: '2026-08-19T22:28:59.752712'
   },
   {
     id: '',
@@ -10632,8 +10678,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149765',
-    updated_at: '2026-08-19T16:27:21.149765'
+    created_at: '2026-08-19T22:28:59.752715',
+    updated_at: '2026-08-19T22:28:59.752716'
   },
   {
     id: '',
@@ -10648,8 +10694,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149768',
-    updated_at: '2026-08-19T16:27:21.149769'
+    created_at: '2026-08-19T22:28:59.752718',
+    updated_at: '2026-08-19T22:28:59.752719'
   },
   {
     id: '',
@@ -10664,8 +10710,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149772',
-    updated_at: '2026-08-19T16:27:21.149773'
+    created_at: '2026-08-19T22:28:59.752721',
+    updated_at: '2026-08-19T22:28:59.752722'
   },
   {
     id: '',
@@ -10680,8 +10726,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149776',
-    updated_at: '2026-08-19T16:27:21.149776'
+    created_at: '2026-08-19T22:28:59.752724',
+    updated_at: '2026-08-19T22:28:59.752725'
   },
   {
     id: '',
@@ -10696,8 +10742,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149779',
-    updated_at: '2026-08-19T16:27:21.149780'
+    created_at: '2026-08-19T22:28:59.752728',
+    updated_at: '2026-08-19T22:28:59.752728'
   },
   {
     id: '',
@@ -10712,12 +10758,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149783',
-    updated_at: '2026-08-19T16:27:21.149784'
+    created_at: '2026-08-19T22:28:59.752731',
+    updated_at: '2026-08-19T22:28:59.752731'
   },
   {
     id: '',
-    name: 'Kj\'s Home Improvement Specialist',    company: '',
+    name: 'Kj's Home Improvement Specialist',
+    company: '',
     email: '',
     phone: '(989) 657-6981',
     website: 'http://www.kjshomeimprovementmi.com/',
@@ -10727,8 +10774,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149787',
-    updated_at: '2026-08-19T16:27:21.149788'
+    created_at: '2026-08-19T22:28:59.752734',
+    updated_at: '2026-08-19T22:28:59.752734'
   },
   {
     id: '',
@@ -10743,8 +10790,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149790',
-    updated_at: '2026-08-19T16:27:21.149791'
+    created_at: '2026-08-19T22:28:59.752737',
+    updated_at: '2026-08-19T22:28:59.752738'
   },
   {
     id: '',
@@ -10759,8 +10806,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149794',
-    updated_at: '2026-08-19T16:27:21.149795'
+    created_at: '2026-08-19T22:28:59.752740',
+    updated_at: '2026-08-19T22:28:59.752741'
   },
   {
     id: '',
@@ -10775,8 +10822,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149798',
-    updated_at: '2026-08-19T16:27:21.149798'
+    created_at: '2026-08-19T22:28:59.752743',
+    updated_at: '2026-08-19T22:28:59.752744'
   },
   {
     id: '',
@@ -10791,8 +10838,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149801',
-    updated_at: '2026-08-19T16:27:21.149802'
+    created_at: '2026-08-19T22:28:59.752746',
+    updated_at: '2026-08-19T22:28:59.752747'
   },
   {
     id: '',
@@ -10807,8 +10854,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149804',
-    updated_at: '2026-08-19T16:27:21.149805'
+    created_at: '2026-08-19T22:28:59.752749',
+    updated_at: '2026-08-19T22:28:59.752750'
   },
   {
     id: '',
@@ -10823,8 +10870,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149808',
-    updated_at: '2026-08-19T16:27:21.149809'
+    created_at: '2026-08-19T22:28:59.752752',
+    updated_at: '2026-08-19T22:28:59.752753'
   },
   {
     id: '',
@@ -10839,8 +10886,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149812',
-    updated_at: '2026-08-19T16:27:21.149812'
+    created_at: '2026-08-19T22:28:59.752756',
+    updated_at: '2026-08-19T22:28:59.752756'
   },
   {
     id: '',
@@ -10855,8 +10902,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149815',
-    updated_at: '2026-08-19T16:27:21.149816'
+    created_at: '2026-08-19T22:28:59.752758',
+    updated_at: '2026-08-19T22:28:59.752759'
   },
   {
     id: '',
@@ -10871,12 +10918,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149819',
-    updated_at: '2026-08-19T16:27:21.149820'
+    created_at: '2026-08-19T22:28:59.752762',
+    updated_at: '2026-08-19T22:28:59.752762'
   },
   {
     id: '',
-    name: 'Auburn Chapel-Cunningham-Taylor F.H.\'s Inc.',    company: '',
+    name: 'Auburn Chapel-Cunningham-Taylor F.H.'s Inc.',
+    company: '',
     email: '',
     phone: '(989) 662-4711',
     website: 'http://cunninghamtaylorfh.com/',
@@ -10886,8 +10934,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149823',
-    updated_at: '2026-08-19T16:27:21.149823'
+    created_at: '2026-08-19T22:28:59.752765',
+    updated_at: '2026-08-19T22:28:59.752765'
   },
   {
     id: '',
@@ -10902,8 +10950,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149826',
-    updated_at: '2026-08-19T16:27:21.149827'
+    created_at: '2026-08-19T22:28:59.752768',
+    updated_at: '2026-08-19T22:28:59.752769'
   },
   {
     id: '',
@@ -10918,8 +10966,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149830',
-    updated_at: '2026-08-19T16:27:21.149830'
+    created_at: '2026-08-19T22:28:59.752771',
+    updated_at: '2026-08-19T22:28:59.752772'
   },
   {
     id: '',
@@ -10934,8 +10982,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149833',
-    updated_at: '2026-08-19T16:27:21.149834'
+    created_at: '2026-08-19T22:28:59.752774',
+    updated_at: '2026-08-19T22:28:59.752775'
   },
   {
     id: '',
@@ -10950,8 +10998,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149837',
-    updated_at: '2026-08-19T16:27:21.149838'
+    created_at: '2026-08-19T22:28:59.752778',
+    updated_at: '2026-08-19T22:28:59.752778'
   },
   {
     id: '',
@@ -10966,8 +11014,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149841',
-    updated_at: '2026-08-19T16:27:21.149842'
+    created_at: '2026-08-19T22:28:59.752781',
+    updated_at: '2026-08-19T22:28:59.752782'
   },
   {
     id: '',
@@ -10982,8 +11030,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149844',
-    updated_at: '2026-08-19T16:27:21.149845'
+    created_at: '2026-08-19T22:28:59.752784',
+    updated_at: '2026-08-19T22:28:59.752785'
   },
   {
     id: '',
@@ -10998,8 +11046,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149847',
-    updated_at: '2026-08-19T16:27:21.149848'
+    created_at: '2026-08-19T22:28:59.752787',
+    updated_at: '2026-08-19T22:28:59.752788'
   },
   {
     id: '',
@@ -11014,8 +11062,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149851',
-    updated_at: '2026-08-19T16:27:21.149851'
+    created_at: '2026-08-19T22:28:59.752790',
+    updated_at: '2026-08-19T22:28:59.752791'
   },
   {
     id: '',
@@ -11030,8 +11078,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149854',
-    updated_at: '2026-08-19T16:27:21.149855'
+    created_at: '2026-08-19T22:28:59.752793',
+    updated_at: '2026-08-19T22:28:59.752794'
   },
   {
     id: '',
@@ -11046,8 +11094,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149857',
-    updated_at: '2026-08-19T16:27:21.149858'
+    created_at: '2026-08-19T22:28:59.752796',
+    updated_at: '2026-08-19T22:28:59.752797'
   },
   {
     id: '',
@@ -11062,8 +11110,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149860',
-    updated_at: '2026-08-19T16:27:21.149861'
+    created_at: '2026-08-19T22:28:59.752799',
+    updated_at: '2026-08-19T22:28:59.752800'
   },
   {
     id: '',
@@ -11078,8 +11126,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149864',
-    updated_at: '2026-08-19T16:27:21.149864'
+    created_at: '2026-08-19T22:28:59.752802',
+    updated_at: '2026-08-19T22:28:59.752803'
   },
   {
     id: '',
@@ -11094,8 +11142,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149867',
-    updated_at: '2026-08-19T16:27:21.149868'
+    created_at: '2026-08-19T22:28:59.752805',
+    updated_at: '2026-08-19T22:28:59.752806'
   },
   {
     id: '',
@@ -11110,8 +11158,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149870',
-    updated_at: '2026-08-19T16:27:21.149871'
+    created_at: '2026-08-19T22:28:59.752808',
+    updated_at: '2026-08-19T22:28:59.752809'
   },
   {
     id: '',
@@ -11126,8 +11174,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149874',
-    updated_at: '2026-08-19T16:27:21.149875'
+    created_at: '2026-08-19T22:28:59.752811',
+    updated_at: '2026-08-19T22:28:59.752812'
   },
   {
     id: '',
@@ -11142,8 +11190,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149877',
-    updated_at: '2026-08-19T16:27:21.149878'
+    created_at: '2026-08-19T22:28:59.752814',
+    updated_at: '2026-08-19T22:28:59.752815'
   },
   {
     id: '',
@@ -11158,8 +11206,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149880',
-    updated_at: '2026-08-19T16:27:21.149881'
+    created_at: '2026-08-19T22:28:59.752817',
+    updated_at: '2026-08-19T22:28:59.752818'
   },
   {
     id: '',
@@ -11174,8 +11222,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149884',
-    updated_at: '2026-08-19T16:27:21.149885'
+    created_at: '2026-08-19T22:28:59.752820',
+    updated_at: '2026-08-19T22:28:59.752821'
   },
   {
     id: '',
@@ -11190,8 +11238,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149887',
-    updated_at: '2026-08-19T16:27:21.149888'
+    created_at: '2026-08-19T22:28:59.752823',
+    updated_at: '2026-08-19T22:28:59.752824'
   },
   {
     id: '',
@@ -11206,8 +11254,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149890',
-    updated_at: '2026-08-19T16:27:21.149891'
+    created_at: '2026-08-19T22:28:59.752826',
+    updated_at: '2026-08-19T22:28:59.752827'
   },
   {
     id: '',
@@ -11222,12 +11270,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149894',
-    updated_at: '2026-08-19T16:27:21.149894'
+    created_at: '2026-08-19T22:28:59.752829',
+    updated_at: '2026-08-19T22:28:59.752830'
   },
   {
     id: '',
-    name: 'All A\'s Automotive & Transmission Repair',    company: '',
+    name: 'All A's Automotive & Transmission Repair',
+    company: '',
     email: '',
     phone: '(989) 631-4672',
     website: 'http://www.allasautorepair.net/',
@@ -11237,8 +11286,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149897',
-    updated_at: '2026-08-19T16:27:21.149898'
+    created_at: '2026-08-19T22:28:59.752832',
+    updated_at: '2026-08-19T22:28:59.752833'
   },
   {
     id: '',
@@ -11253,8 +11302,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149900',
-    updated_at: '2026-08-19T16:27:21.149901'
+    created_at: '2026-08-19T22:28:59.752835',
+    updated_at: '2026-08-19T22:28:59.752836'
   },
   {
     id: '',
@@ -11269,12 +11318,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149903',
-    updated_at: '2026-08-19T16:27:21.149904'
+    created_at: '2026-08-19T22:28:59.752838',
+    updated_at: '2026-08-19T22:28:59.752839'
   },
   {
     id: '',
-    name: 'Terry\'s Auto Sevice Center',    company: '',
+    name: 'Terry's Auto Sevice Center',
+    company: '',
     email: '',
     phone: '(989) 486-3800',
     website: 'https://www.autorepairmidlandmi.com/',
@@ -11284,8 +11334,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149906',
-    updated_at: '2026-08-19T16:27:21.149907'
+    created_at: '2026-08-19T22:28:59.752841',
+    updated_at: '2026-08-19T22:28:59.752842'
   },
   {
     id: '',
@@ -11300,8 +11350,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149910',
-    updated_at: '2026-08-19T16:27:21.149910'
+    created_at: '2026-08-19T22:28:59.752844',
+    updated_at: '2026-08-19T22:28:59.752845'
   },
   {
     id: '',
@@ -11316,8 +11366,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149913',
-    updated_at: '2026-08-19T16:27:21.149914'
+    created_at: '2026-08-19T22:28:59.752847',
+    updated_at: '2026-08-19T22:28:59.752848'
   },
   {
     id: '',
@@ -11332,8 +11382,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149916',
-    updated_at: '2026-08-19T16:27:21.149917'
+    created_at: '2026-08-19T22:28:59.752850',
+    updated_at: '2026-08-19T22:28:59.752850'
   },
   {
     id: '',
@@ -11348,8 +11398,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149919',
-    updated_at: '2026-08-19T16:27:21.149920'
+    created_at: '2026-08-19T22:28:59.752852',
+    updated_at: '2026-08-19T22:28:59.752853'
   },
   {
     id: '',
@@ -11364,8 +11414,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149922',
-    updated_at: '2026-08-19T16:27:21.149923'
+    created_at: '2026-08-19T22:28:59.752855',
+    updated_at: '2026-08-19T22:28:59.752856'
   },
   {
     id: '',
@@ -11380,8 +11430,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149926',
-    updated_at: '2026-08-19T16:27:21.149926'
+    created_at: '2026-08-19T22:28:59.752858',
+    updated_at: '2026-08-19T22:28:59.752859'
   },
   {
     id: '',
@@ -11396,8 +11446,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149929',
-    updated_at: '2026-08-19T16:27:21.149930'
+    created_at: '2026-08-19T22:28:59.752861',
+    updated_at: '2026-08-19T22:28:59.752862'
   },
   {
     id: '',
@@ -11412,12 +11462,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149932',
-    updated_at: '2026-08-19T16:27:21.149933'
+    created_at: '2026-08-19T22:28:59.752864',
+    updated_at: '2026-08-19T22:28:59.752865'
   },
   {
     id: '',
-    name: 'Suderman\'s Car Care',    company: '',
+    name: 'Suderman's Car Care',
+    company: '',
     email: '',
     phone: '(989) 631-6910',
     website: 'http://www.sudermans.com/',
@@ -11427,8 +11478,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149936',
-    updated_at: '2026-08-19T16:27:21.149936'
+    created_at: '2026-08-19T22:28:59.752867',
+    updated_at: '2026-08-19T22:28:59.752868'
   },
   {
     id: '',
@@ -11443,8 +11494,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149939',
-    updated_at: '2026-08-19T16:27:21.149939'
+    created_at: '2026-08-19T22:28:59.752870',
+    updated_at: '2026-08-19T22:28:59.752871'
   },
   {
     id: '',
@@ -11459,8 +11510,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149942',
-    updated_at: '2026-08-19T16:27:21.149943'
+    created_at: '2026-08-19T22:28:59.752873',
+    updated_at: '2026-08-19T22:28:59.752874'
   },
   {
     id: '',
@@ -11475,8 +11526,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149945',
-    updated_at: '2026-08-19T16:27:21.149946'
+    created_at: '2026-08-19T22:28:59.752876',
+    updated_at: '2026-08-19T22:28:59.752877'
   },
   {
     id: '',
@@ -11491,8 +11542,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149949',
-    updated_at: '2026-08-19T16:27:21.149950'
+    created_at: '2026-08-19T22:28:59.752879',
+    updated_at: '2026-08-19T22:28:59.752880'
   },
   {
     id: '',
@@ -11507,12 +11558,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149952',
-    updated_at: '2026-08-19T16:27:21.149953'
+    created_at: '2026-08-19T22:28:59.752882',
+    updated_at: '2026-08-19T22:28:59.752883'
   },
   {
     id: '',
-    name: 'Chef Sergey\'s Bakery',    company: '',
+    name: 'Chef Sergey's Bakery',
+    company: '',
     email: '',
     phone: '(989) 313-9743',
     website: 'https://www.sergeysbakery.com/',
@@ -11522,8 +11574,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149955',
-    updated_at: '2026-08-19T16:27:21.149956'
+    created_at: '2026-08-19T22:28:59.752885',
+    updated_at: '2026-08-19T22:28:59.752886'
   },
   {
     id: '',
@@ -11538,8 +11590,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149959',
-    updated_at: '2026-08-19T16:27:21.149959'
+    created_at: '2026-08-19T22:28:59.752888',
+    updated_at: '2026-08-19T22:28:59.752889'
   },
   {
     id: '',
@@ -11554,8 +11606,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149962',
-    updated_at: '2026-08-19T16:27:21.149963'
+    created_at: '2026-08-19T22:28:59.752891',
+    updated_at: '2026-08-19T22:28:59.752892'
   },
   {
     id: '',
@@ -11570,8 +11622,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149965',
-    updated_at: '2026-08-19T16:27:21.149966'
+    created_at: '2026-08-19T22:28:59.752894',
+    updated_at: '2026-08-19T22:28:59.752895'
   },
   {
     id: '',
@@ -11586,8 +11638,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149969',
-    updated_at: '2026-08-19T16:27:21.149969'
+    created_at: '2026-08-19T22:28:59.752897',
+    updated_at: '2026-08-19T22:28:59.752898'
   },
   {
     id: '',
@@ -11602,8 +11654,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149972',
-    updated_at: '2026-08-19T16:27:21.149973'
+    created_at: '2026-08-19T22:28:59.752900',
+    updated_at: '2026-08-19T22:28:59.752901'
   },
   {
     id: '',
@@ -11618,8 +11670,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149976',
-    updated_at: '2026-08-19T16:27:21.149977'
+    created_at: '2026-08-19T22:28:59.752903',
+    updated_at: '2026-08-19T22:28:59.752904'
   },
   {
     id: '',
@@ -11634,8 +11686,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149979',
-    updated_at: '2026-08-19T16:27:21.149980'
+    created_at: '2026-08-19T22:28:59.752906',
+    updated_at: '2026-08-19T22:28:59.752907'
   },
   {
     id: '',
@@ -11650,12 +11702,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149983',
-    updated_at: '2026-08-19T16:27:21.149983'
+    created_at: '2026-08-19T22:28:59.752909',
+    updated_at: '2026-08-19T22:28:59.752910'
   },
   {
     id: '',
-    name: 'Smith\'s Flowers and Gifts',    company: '',
+    name: 'Smith's Flowers and Gifts',
+    company: '',
     email: '',
     phone: '(989) 631-0470',
     website: 'http://www.smithsflowers.com/',
@@ -11665,12 +11718,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149986',
-    updated_at: '2026-08-19T16:27:21.149987'
+    created_at: '2026-08-19T22:28:59.752912',
+    updated_at: '2026-08-19T22:28:59.752913'
   },
   {
     id: '',
-    name: 'Hannah\'s Flowers & Floral Preservation',    company: '',
+    name: 'Hannah's Flowers & Floral Preservation',
+    company: '',
     email: '',
     phone: '(989) 750-7200',
     website: 'https://hannahsflowers.shop/',
@@ -11680,12 +11734,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149989',
-    updated_at: '2026-08-19T16:27:21.149990'
+    created_at: '2026-08-19T22:28:59.752915',
+    updated_at: '2026-08-19T22:28:59.752915'
   },
   {
     id: '',
-    name: 'Randi\'s Green Thumb',    company: '',
+    name: 'Randi's Green Thumb',
+    company: '',
     email: '',
     phone: '(989) 835-3963',
     website: 'https://www.randis.com/',
@@ -11695,8 +11750,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149992',
-    updated_at: '2026-08-19T16:27:21.149993'
+    created_at: '2026-08-19T22:28:59.752918',
+    updated_at: '2026-08-19T22:28:59.752918'
   },
   {
     id: '',
@@ -11711,12 +11766,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149996',
-    updated_at: '2026-08-19T16:27:21.149996'
+    created_at: '2026-08-19T22:28:59.752921',
+    updated_at: '2026-08-19T22:28:59.752921'
   },
   {
     id: '',
-    name: 'Lapelle\'s Flowers & Gifts',    company: '',
+    name: 'Lapelle's Flowers & Gifts',
+    company: '',
     email: '',
     phone: '(989) 631-0450',
     website: 'https://www.lapellesflowers.com/',
@@ -11726,8 +11782,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.149999',
-    updated_at: '2026-08-19T16:27:21.150000'
+    created_at: '2026-08-19T22:28:59.752923',
+    updated_at: '2026-08-19T22:28:59.752924'
   },
   {
     id: '',
@@ -11742,12 +11798,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150002',
-    updated_at: '2026-08-19T16:27:21.150003'
+    created_at: '2026-08-19T22:28:59.752926',
+    updated_at: '2026-08-19T22:28:59.752927'
   },
   {
     id: '',
-    name: 'Austin\'s Flowers & Gifts',    company: '',
+    name: 'Austin's Flowers & Gifts',
+    company: '',
     email: '',
     phone: '(989) 695-9100',
     website: 'http://www.austinsflorist.com/',
@@ -11757,12 +11814,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150005',
-    updated_at: '2026-08-19T16:27:21.150006'
+    created_at: '2026-08-19T22:28:59.752929',
+    updated_at: '2026-08-19T22:28:59.752930'
   },
   {
     id: '',
-    name: 'Auburn\'s Flowers From the Heart',    company: '',
+    name: 'Auburn's Flowers From the Heart',
+    company: '',
     email: '',
     phone: '(989) 662-7818',
     website: 'http://www.flowershopauburn.com/',
@@ -11772,8 +11830,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150008',
-    updated_at: '2026-08-19T16:27:21.150009'
+    created_at: '2026-08-19T22:28:59.752932',
+    updated_at: '2026-08-19T22:28:59.752933'
   },
   {
     id: '',
@@ -11788,8 +11846,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150012',
-    updated_at: '2026-08-19T16:27:21.150013'
+    created_at: '2026-08-19T22:28:59.752935',
+    updated_at: '2026-08-19T22:28:59.752936'
   },
   {
     id: '',
@@ -11804,8 +11862,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150021',
-    updated_at: '2026-08-19T16:27:21.150022'
+    created_at: '2026-08-19T22:28:59.752938',
+    updated_at: '2026-08-19T22:28:59.752939'
   },
   {
     id: '',
@@ -11820,8 +11878,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150025',
-    updated_at: '2026-08-19T16:27:21.150025'
+    created_at: '2026-08-19T22:28:59.752941',
+    updated_at: '2026-08-19T22:28:59.752942'
   },
   {
     id: '',
@@ -11836,8 +11894,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150028',
-    updated_at: '2026-08-19T16:27:21.150029'
+    created_at: '2026-08-19T22:28:59.752944',
+    updated_at: '2026-08-19T22:28:59.752944'
   },
   {
     id: '',
@@ -11852,8 +11910,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150031',
-    updated_at: '2026-08-19T16:27:21.150032'
+    created_at: '2026-08-19T22:28:59.752947',
+    updated_at: '2026-08-19T22:28:59.752947'
   },
   {
     id: '',
@@ -11868,8 +11926,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150034',
-    updated_at: '2026-08-19T16:27:21.150035'
+    created_at: '2026-08-19T22:28:59.752950',
+    updated_at: '2026-08-19T22:28:59.752950'
   },
   {
     id: '',
@@ -11884,8 +11942,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150038',
-    updated_at: '2026-08-19T16:27:21.150039'
+    created_at: '2026-08-19T22:28:59.752953',
+    updated_at: '2026-08-19T22:28:59.752953'
   },
   {
     id: '',
@@ -11900,8 +11958,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150041',
-    updated_at: '2026-08-19T16:27:21.150042'
+    created_at: '2026-08-19T22:28:59.752955',
+    updated_at: '2026-08-19T22:28:59.752956'
   },
   {
     id: '',
@@ -11916,8 +11974,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150045',
-    updated_at: '2026-08-19T16:27:21.150046'
+    created_at: '2026-08-19T22:28:59.752958',
+    updated_at: '2026-08-19T22:28:59.752959'
   },
   {
     id: '',
@@ -11932,8 +11990,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150048',
-    updated_at: '2026-08-19T16:27:21.150049'
+    created_at: '2026-08-19T22:28:59.752961',
+    updated_at: '2026-08-19T22:28:59.752962'
   },
   {
     id: '',
@@ -11948,8 +12006,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150051',
-    updated_at: '2026-08-19T16:27:21.150052'
+    created_at: '2026-08-19T22:28:59.752964',
+    updated_at: '2026-08-19T22:28:59.752965'
   },
   {
     id: '',
@@ -11964,8 +12022,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150055',
-    updated_at: '2026-08-19T16:27:21.150055'
+    created_at: '2026-08-19T22:28:59.752967',
+    updated_at: '2026-08-19T22:28:59.752968'
   },
   {
     id: '',
@@ -11980,8 +12038,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150058',
-    updated_at: '2026-08-19T16:27:21.150059'
+    created_at: '2026-08-19T22:28:59.752970',
+    updated_at: '2026-08-19T22:28:59.752971'
   },
   {
     id: '',
@@ -11996,8 +12054,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150061',
-    updated_at: '2026-08-19T16:27:21.150062'
+    created_at: '2026-08-19T22:28:59.752973',
+    updated_at: '2026-08-19T22:28:59.752974'
   },
   {
     id: '',
@@ -12012,8 +12070,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150064',
-    updated_at: '2026-08-19T16:27:21.150065'
+    created_at: '2026-08-19T22:28:59.752976',
+    updated_at: '2026-08-19T22:28:59.752977'
   },
   {
     id: '',
@@ -12028,8 +12086,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150067',
-    updated_at: '2026-08-19T16:27:21.150068'
+    created_at: '2026-08-19T22:28:59.752979',
+    updated_at: '2026-08-19T22:28:59.752980'
   },
   {
     id: '',
@@ -12044,8 +12102,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150071',
-    updated_at: '2026-08-19T16:27:21.150071'
+    created_at: '2026-08-19T22:28:59.752982',
+    updated_at: '2026-08-19T22:28:59.752983'
   },
   {
     id: '',
@@ -12060,8 +12118,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150074',
-    updated_at: '2026-08-19T16:27:21.150075'
+    created_at: '2026-08-19T22:28:59.752985',
+    updated_at: '2026-08-19T22:28:59.752986'
   },
   {
     id: '',
@@ -12076,8 +12134,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150077',
-    updated_at: '2026-08-19T16:27:21.150078'
+    created_at: '2026-08-19T22:28:59.752988',
+    updated_at: '2026-08-19T22:28:59.752989'
   },
   {
     id: '',
@@ -12092,8 +12150,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150081',
-    updated_at: '2026-08-19T16:27:21.150081'
+    created_at: '2026-08-19T22:28:59.752991',
+    updated_at: '2026-08-19T22:28:59.752991'
   },
   {
     id: '',
@@ -12108,8 +12166,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150084',
-    updated_at: '2026-08-19T16:27:21.150085'
+    created_at: '2026-08-19T22:28:59.752993',
+    updated_at: '2026-08-19T22:28:59.752994'
   },
   {
     id: '',
@@ -12124,8 +12182,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150088',
-    updated_at: '2026-08-19T16:27:21.150089'
+    created_at: '2026-08-19T22:28:59.752996',
+    updated_at: '2026-08-19T22:28:59.752997'
   },
   {
     id: '',
@@ -12140,8 +12198,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150091',
-    updated_at: '2026-08-19T16:27:21.150092'
+    created_at: '2026-08-19T22:28:59.752999',
+    updated_at: '2026-08-19T22:28:59.753000'
   },
   {
     id: '',
@@ -12156,8 +12214,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150094',
-    updated_at: '2026-08-19T16:27:21.150095'
+    created_at: '2026-08-19T22:28:59.753002',
+    updated_at: '2026-08-19T22:28:59.753003'
   },
   {
     id: '',
@@ -12172,8 +12230,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150098',
-    updated_at: '2026-08-19T16:27:21.150098'
+    created_at: '2026-08-19T22:28:59.753005',
+    updated_at: '2026-08-19T22:28:59.753006'
   },
   {
     id: '',
@@ -12188,8 +12246,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150101',
-    updated_at: '2026-08-19T16:27:21.150102'
+    created_at: '2026-08-19T22:28:59.753008',
+    updated_at: '2026-08-19T22:28:59.753009'
   },
   {
     id: '',
@@ -12204,8 +12262,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150104',
-    updated_at: '2026-08-19T16:27:21.150105'
+    created_at: '2026-08-19T22:28:59.753011',
+    updated_at: '2026-08-19T22:28:59.753012'
   },
   {
     id: '',
@@ -12220,8 +12278,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150108',
-    updated_at: '2026-08-19T16:27:21.150108'
+    created_at: '2026-08-19T22:28:59.753014',
+    updated_at: '2026-08-19T22:28:59.753015'
   },
   {
     id: '',
@@ -12236,8 +12294,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150111',
-    updated_at: '2026-08-19T16:27:21.150112'
+    created_at: '2026-08-19T22:28:59.753017',
+    updated_at: '2026-08-19T22:28:59.753018'
   },
   {
     id: '',
@@ -12252,8 +12310,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150114',
-    updated_at: '2026-08-19T16:27:21.150115'
+    created_at: '2026-08-19T22:28:59.753020',
+    updated_at: '2026-08-19T22:28:59.753021'
   },
   {
     id: '',
@@ -12268,8 +12326,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150118',
-    updated_at: '2026-08-19T16:27:21.150118'
+    created_at: '2026-08-19T22:28:59.753023',
+    updated_at: '2026-08-19T22:28:59.753023'
   },
   {
     id: '',
@@ -12284,8 +12342,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150121',
-    updated_at: '2026-08-19T16:27:21.150122'
+    created_at: '2026-08-19T22:28:59.753026',
+    updated_at: '2026-08-19T22:28:59.753026'
   },
   {
     id: '',
@@ -12300,8 +12358,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150124',
-    updated_at: '2026-08-19T16:27:21.150125'
+    created_at: '2026-08-19T22:28:59.753028',
+    updated_at: '2026-08-19T22:28:59.753029'
   },
   {
     id: '',
@@ -12316,8 +12374,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150127',
-    updated_at: '2026-08-19T16:27:21.150128'
+    created_at: '2026-08-19T22:28:59.753031',
+    updated_at: '2026-08-19T22:28:59.753032'
   },
   {
     id: '',
@@ -12332,8 +12390,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150131',
-    updated_at: '2026-08-19T16:27:21.150132'
+    created_at: '2026-08-19T22:28:59.753034',
+    updated_at: '2026-08-19T22:28:59.753035'
   },
   {
     id: '',
@@ -12348,8 +12406,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150134',
-    updated_at: '2026-08-19T16:27:21.150135'
+    created_at: '2026-08-19T22:28:59.753037',
+    updated_at: '2026-08-19T22:28:59.753038'
   },
   {
     id: '',
@@ -12364,8 +12422,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150137',
-    updated_at: '2026-08-19T16:27:21.150138'
+    created_at: '2026-08-19T22:28:59.753040',
+    updated_at: '2026-08-19T22:28:59.753041'
   },
   {
     id: '',
@@ -12380,8 +12438,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150140',
-    updated_at: '2026-08-19T16:27:21.150141'
+    created_at: '2026-08-19T22:28:59.753043',
+    updated_at: '2026-08-19T22:28:59.753044'
   },
   {
     id: '',
@@ -12396,8 +12454,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150143',
-    updated_at: '2026-08-19T16:27:21.150144'
+    created_at: '2026-08-19T22:28:59.753046',
+    updated_at: '2026-08-19T22:28:59.753047'
   },
   {
     id: '',
@@ -12412,8 +12470,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150146',
-    updated_at: '2026-08-19T16:27:21.150147'
+    created_at: '2026-08-19T22:28:59.753049',
+    updated_at: '2026-08-19T22:28:59.753050'
   },
   {
     id: '',
@@ -12428,8 +12486,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150149',
-    updated_at: '2026-08-19T16:27:21.150150'
+    created_at: '2026-08-19T22:28:59.753052',
+    updated_at: '2026-08-19T22:28:59.753053'
   },
   {
     id: '',
@@ -12444,8 +12502,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150153',
-    updated_at: '2026-08-19T16:27:21.150153'
+    created_at: '2026-08-19T22:28:59.753055',
+    updated_at: '2026-08-19T22:28:59.753056'
   },
   {
     id: '',
@@ -12460,8 +12518,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150156',
-    updated_at: '2026-08-19T16:27:21.150157'
+    created_at: '2026-08-19T22:28:59.753058',
+    updated_at: '2026-08-19T22:28:59.753058'
   },
   {
     id: '',
@@ -12476,8 +12534,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150159',
-    updated_at: '2026-08-19T16:27:21.150160'
+    created_at: '2026-08-19T22:28:59.753060',
+    updated_at: '2026-08-19T22:28:59.753061'
   },
   {
     id: '',
@@ -12492,8 +12550,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150162',
-    updated_at: '2026-08-19T16:27:21.150163'
+    created_at: '2026-08-19T22:28:59.753063',
+    updated_at: '2026-08-19T22:28:59.753064'
   },
   {
     id: '',
@@ -12508,8 +12566,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150165',
-    updated_at: '2026-08-19T16:27:21.150166'
+    created_at: '2026-08-19T22:28:59.753066',
+    updated_at: '2026-08-19T22:28:59.753067'
   },
   {
     id: '',
@@ -12524,8 +12582,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150169',
-    updated_at: '2026-08-19T16:27:21.150170'
+    created_at: '2026-08-19T22:28:59.753069',
+    updated_at: '2026-08-19T22:28:59.753070'
   },
   {
     id: '',
@@ -12540,8 +12598,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150172',
-    updated_at: '2026-08-19T16:27:21.150173'
+    created_at: '2026-08-19T22:28:59.753072',
+    updated_at: '2026-08-19T22:28:59.753072'
   },
   {
     id: '',
@@ -12556,8 +12614,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150175',
-    updated_at: '2026-08-19T16:27:21.150176'
+    created_at: '2026-08-19T22:28:59.753074',
+    updated_at: '2026-08-19T22:28:59.753075'
   },
   {
     id: '',
@@ -12572,8 +12630,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150178',
-    updated_at: '2026-08-19T16:27:21.150179'
+    created_at: '2026-08-19T22:28:59.753077',
+    updated_at: '2026-08-19T22:28:59.753078'
   },
   {
     id: '',
@@ -12588,8 +12646,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150182',
-    updated_at: '2026-08-19T16:27:21.150182'
+    created_at: '2026-08-19T22:28:59.753080',
+    updated_at: '2026-08-19T22:28:59.753081'
   },
   {
     id: '',
@@ -12604,8 +12662,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150185',
-    updated_at: '2026-08-19T16:27:21.150186'
+    created_at: '2026-08-19T22:28:59.753083',
+    updated_at: '2026-08-19T22:28:59.753084'
   },
   {
     id: '',
@@ -12620,8 +12678,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150188',
-    updated_at: '2026-08-19T16:27:21.150189'
+    created_at: '2026-08-19T22:28:59.753086',
+    updated_at: '2026-08-19T22:28:59.753087'
   },
   {
     id: '',
@@ -12636,8 +12694,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150191',
-    updated_at: '2026-08-19T16:27:21.150192'
+    created_at: '2026-08-19T22:28:59.753089',
+    updated_at: '2026-08-19T22:28:59.753089'
   },
   {
     id: '',
@@ -12652,8 +12710,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150194',
-    updated_at: '2026-08-19T16:27:21.150195'
+    created_at: '2026-08-19T22:28:59.753092',
+    updated_at: '2026-08-19T22:28:59.753092'
   },
   {
     id: '',
@@ -12668,8 +12726,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150198',
-    updated_at: '2026-08-19T16:27:21.150198'
+    created_at: '2026-08-19T22:28:59.753094',
+    updated_at: '2026-08-19T22:28:59.753095'
   },
   {
     id: '',
@@ -12684,8 +12742,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150201',
-    updated_at: '2026-08-19T16:27:21.150202'
+    created_at: '2026-08-19T22:28:59.753097',
+    updated_at: '2026-08-19T22:28:59.753098'
   },
   {
     id: '',
@@ -12700,8 +12758,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150204',
-    updated_at: '2026-08-19T16:27:21.150205'
+    created_at: '2026-08-19T22:28:59.753100',
+    updated_at: '2026-08-19T22:28:59.753101'
   },
   {
     id: '',
@@ -12716,8 +12774,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150207',
-    updated_at: '2026-08-19T16:27:21.150208'
+    created_at: '2026-08-19T22:28:59.753103',
+    updated_at: '2026-08-19T22:28:59.753104'
   },
   {
     id: '',
@@ -12732,8 +12790,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150211',
-    updated_at: '2026-08-19T16:27:21.150211'
+    created_at: '2026-08-19T22:28:59.753106',
+    updated_at: '2026-08-19T22:28:59.753107'
   },
   {
     id: '',
@@ -12748,8 +12806,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150214',
-    updated_at: '2026-08-19T16:27:21.150215'
+    created_at: '2026-08-19T22:28:59.753109',
+    updated_at: '2026-08-19T22:28:59.753110'
   },
   {
     id: '',
@@ -12764,8 +12822,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150217',
-    updated_at: '2026-08-19T16:27:21.150218'
+    created_at: '2026-08-19T22:28:59.753112',
+    updated_at: '2026-08-19T22:28:59.753112'
   },
   {
     id: '',
@@ -12780,8 +12838,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150220',
-    updated_at: '2026-08-19T16:27:21.150221'
+    created_at: '2026-08-19T22:28:59.753115',
+    updated_at: '2026-08-19T22:28:59.753115'
   },
   {
     id: '',
@@ -12796,8 +12854,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150223',
-    updated_at: '2026-08-19T16:27:21.150224'
+    created_at: '2026-08-19T22:28:59.753117',
+    updated_at: '2026-08-19T22:28:59.753118'
   },
   {
     id: '',
@@ -12812,8 +12870,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150227',
-    updated_at: '2026-08-19T16:27:21.150227'
+    created_at: '2026-08-19T22:28:59.753120',
+    updated_at: '2026-08-19T22:28:59.753121'
   },
   {
     id: '',
@@ -12828,8 +12886,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150230',
-    updated_at: '2026-08-19T16:27:21.150231'
+    created_at: '2026-08-19T22:28:59.753123',
+    updated_at: '2026-08-19T22:28:59.753124'
   },
   {
     id: '',
@@ -12844,8 +12902,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150233',
-    updated_at: '2026-08-19T16:27:21.150234'
+    created_at: '2026-08-19T22:28:59.753126',
+    updated_at: '2026-08-19T22:28:59.753127'
   },
   {
     id: '',
@@ -12860,8 +12918,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150236',
-    updated_at: '2026-08-19T16:27:21.150237'
+    created_at: '2026-08-19T22:28:59.753129',
+    updated_at: '2026-08-19T22:28:59.753130'
   },
   {
     id: '',
@@ -12876,8 +12934,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150239',
-    updated_at: '2026-08-19T16:27:21.150240'
+    created_at: '2026-08-19T22:28:59.753132',
+    updated_at: '2026-08-19T22:28:59.753133'
   },
   {
     id: '',
@@ -12892,8 +12950,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150243',
-    updated_at: '2026-08-19T16:27:21.150244'
+    created_at: '2026-08-19T22:28:59.753135',
+    updated_at: '2026-08-19T22:28:59.753136'
   },
   {
     id: '',
@@ -12908,8 +12966,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150246',
-    updated_at: '2026-08-19T16:27:21.150247'
+    created_at: '2026-08-19T22:28:59.753138',
+    updated_at: '2026-08-19T22:28:59.753139'
   },
   {
     id: '',
@@ -12924,8 +12982,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150249',
-    updated_at: '2026-08-19T16:27:21.150250'
+    created_at: '2026-08-19T22:28:59.753141',
+    updated_at: '2026-08-19T22:28:59.753141'
   },
   {
     id: '',
@@ -12940,8 +12998,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150252',
-    updated_at: '2026-08-19T16:27:21.150253'
+    created_at: '2026-08-19T22:28:59.753144',
+    updated_at: '2026-08-19T22:28:59.753144'
   },
   {
     id: '',
@@ -12956,12 +13014,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150256',
-    updated_at: '2026-08-19T16:27:21.150257'
+    created_at: '2026-08-19T22:28:59.753146',
+    updated_at: '2026-08-19T22:28:59.753147'
   },
   {
     id: '',
-    name: 'Joannie\'s Floral of Birch Run',    company: '',
+    name: 'Joannie's Floral of Birch Run',
+    company: '',
     email: '',
     phone: '(989) 624-5684',
     website: 'http://joanniesfloralofbirchrun.com/',
@@ -12971,12 +13030,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150259',
-    updated_at: '2026-08-19T16:27:21.150260'
+    created_at: '2026-08-19T22:28:59.753149',
+    updated_at: '2026-08-19T22:28:59.753150'
   },
   {
     id: '',
-    name: 'Paul\'s Flowers',    company: '',
+    name: 'Paul's Flowers',
+    company: '',
     email: '',
     phone: '(989) 894-1199',
     website: 'https://www.paulsofbaycityflowers.com/?utm_source=google&utm_medium=gbp&y_source=1_MjA4OTQ3NzktNzE1LWxvY2F0aW9uLndlYnNpdGU%3D',
@@ -12986,8 +13046,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150262',
-    updated_at: '2026-08-19T16:27:21.150263'
+    created_at: '2026-08-19T22:28:59.753152',
+    updated_at: '2026-08-19T22:28:59.753153'
   },
   {
     id: '',
@@ -13002,8 +13062,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150266',
-    updated_at: '2026-08-19T16:27:21.150266'
+    created_at: '2026-08-19T22:28:59.753155',
+    updated_at: '2026-08-19T22:28:59.753156'
   },
   {
     id: '',
@@ -13018,8 +13078,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150269',
-    updated_at: '2026-08-19T16:27:21.150270'
+    created_at: '2026-08-19T22:28:59.753158',
+    updated_at: '2026-08-19T22:28:59.753159'
   },
   {
     id: '',
@@ -13034,8 +13094,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150272',
-    updated_at: '2026-08-19T16:27:21.150273'
+    created_at: '2026-08-19T22:28:59.753161',
+    updated_at: '2026-08-19T22:28:59.753161'
   },
   {
     id: '',
@@ -13050,8 +13110,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150275',
-    updated_at: '2026-08-19T16:27:21.150276'
+    created_at: '2026-08-19T22:28:59.753163',
+    updated_at: '2026-08-19T22:28:59.753164'
   },
   {
     id: '',
@@ -13066,8 +13126,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150278',
-    updated_at: '2026-08-19T16:27:21.150279'
+    created_at: '2026-08-19T22:28:59.753166',
+    updated_at: '2026-08-19T22:28:59.753167'
   },
   {
     id: '',
@@ -13082,8 +13142,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150281',
-    updated_at: '2026-08-19T16:27:21.150282'
+    created_at: '2026-08-19T22:28:59.753169',
+    updated_at: '2026-08-19T22:28:59.753170'
   },
   {
     id: '',
@@ -13098,8 +13158,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150285',
-    updated_at: '2026-08-19T16:27:21.150286'
+    created_at: '2026-08-19T22:28:59.753172',
+    updated_at: '2026-08-19T22:28:59.753173'
   },
   {
     id: '',
@@ -13114,8 +13174,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150288',
-    updated_at: '2026-08-19T16:27:21.150289'
+    created_at: '2026-08-19T22:28:59.753175',
+    updated_at: '2026-08-19T22:28:59.753176'
   },
   {
     id: '',
@@ -13130,8 +13190,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150291',
-    updated_at: '2026-08-19T16:27:21.150292'
+    created_at: '2026-08-19T22:28:59.753178',
+    updated_at: '2026-08-19T22:28:59.753179'
   },
   {
     id: '',
@@ -13146,8 +13206,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150294',
-    updated_at: '2026-08-19T16:27:21.150295'
+    created_at: '2026-08-19T22:28:59.753181',
+    updated_at: '2026-08-19T22:28:59.753181'
   },
   {
     id: '',
@@ -13162,8 +13222,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150298',
-    updated_at: '2026-08-19T16:27:21.150299'
+    created_at: '2026-08-19T22:28:59.753184',
+    updated_at: '2026-08-19T22:28:59.753185'
   },
   {
     id: '',
@@ -13178,8 +13238,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150302',
-    updated_at: '2026-08-19T16:27:21.150302'
+    created_at: '2026-08-19T22:28:59.753187',
+    updated_at: '2026-08-19T22:28:59.753188'
   },
   {
     id: '',
@@ -13194,8 +13254,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150305',
-    updated_at: '2026-08-19T16:27:21.150306'
+    created_at: '2026-08-19T22:28:59.753190',
+    updated_at: '2026-08-19T22:28:59.753191'
   },
   {
     id: '',
@@ -13210,8 +13270,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150308',
-    updated_at: '2026-08-19T16:27:21.150309'
+    created_at: '2026-08-19T22:28:59.753193',
+    updated_at: '2026-08-19T22:28:59.753194'
   },
   {
     id: '',
@@ -13226,8 +13286,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150311',
-    updated_at: '2026-08-19T16:27:21.150312'
+    created_at: '2026-08-19T22:28:59.753196',
+    updated_at: '2026-08-19T22:28:59.753197'
   },
   {
     id: '',
@@ -13242,8 +13302,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150315',
-    updated_at: '2026-08-19T16:27:21.150316'
+    created_at: '2026-08-19T22:28:59.753199',
+    updated_at: '2026-08-19T22:28:59.753200'
   },
   {
     id: '',
@@ -13258,8 +13318,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150318',
-    updated_at: '2026-08-19T16:27:21.150319'
+    created_at: '2026-08-19T22:28:59.753202',
+    updated_at: '2026-08-19T22:28:59.753203'
   },
   {
     id: '',
@@ -13274,8 +13334,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150321',
-    updated_at: '2026-08-19T16:27:21.150322'
+    created_at: '2026-08-19T22:28:59.753205',
+    updated_at: '2026-08-19T22:28:59.753206'
   },
   {
     id: '',
@@ -13290,8 +13350,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150325',
-    updated_at: '2026-08-19T16:27:21.150326'
+    created_at: '2026-08-19T22:28:59.753208',
+    updated_at: '2026-08-19T22:28:59.753209'
   },
   {
     id: '',
@@ -13306,8 +13366,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150328',
-    updated_at: '2026-08-19T16:27:21.150329'
+    created_at: '2026-08-19T22:28:59.753211',
+    updated_at: '2026-08-19T22:28:59.753212'
   },
   {
     id: '',
@@ -13322,8 +13382,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150332',
-    updated_at: '2026-08-19T16:27:21.150332'
+    created_at: '2026-08-19T22:28:59.753214',
+    updated_at: '2026-08-19T22:28:59.753215'
   },
   {
     id: '',
@@ -13338,8 +13398,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150335',
-    updated_at: '2026-08-19T16:27:21.150336'
+    created_at: '2026-08-19T22:28:59.753217',
+    updated_at: '2026-08-19T22:28:59.753218'
   },
   {
     id: '',
@@ -13354,8 +13414,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150338',
-    updated_at: '2026-08-19T16:27:21.150339'
+    created_at: '2026-08-19T22:28:59.753220',
+    updated_at: '2026-08-19T22:28:59.753221'
   },
   {
     id: '',
@@ -13370,8 +13430,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150342',
-    updated_at: '2026-08-19T16:27:21.150343'
+    created_at: '2026-08-19T22:28:59.753223',
+    updated_at: '2026-08-19T22:28:59.753224'
   },
   {
     id: '',
@@ -13386,8 +13446,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150345',
-    updated_at: '2026-08-19T16:27:21.150346'
+    created_at: '2026-08-19T22:28:59.753226',
+    updated_at: '2026-08-19T22:28:59.753227'
   },
   {
     id: '',
@@ -13402,8 +13462,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150349',
-    updated_at: '2026-08-19T16:27:21.150350'
+    created_at: '2026-08-19T22:28:59.753229',
+    updated_at: '2026-08-19T22:28:59.753230'
   },
   {
     id: '',
@@ -13418,12 +13478,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150352',
-    updated_at: '2026-08-19T16:27:21.150353'
+    created_at: '2026-08-19T22:28:59.753232',
+    updated_at: '2026-08-19T22:28:59.753233'
   },
   {
     id: '',
-    name: 'Randi\'s Green Thumb',    company: '',
+    name: 'Randi's Green Thumb',
+    company: '',
     email: '',
     phone: '(989) 835-3963',
     website: 'https://www.randis.com/',
@@ -13433,8 +13494,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150355',
-    updated_at: '2026-08-19T16:27:21.150356'
+    created_at: '2026-08-19T22:28:59.753235',
+    updated_at: '2026-08-19T22:28:59.753236'
   },
   {
     id: '',
@@ -13449,8 +13510,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150359',
-    updated_at: '2026-08-19T16:27:21.150359'
+    created_at: '2026-08-19T22:28:59.753238',
+    updated_at: '2026-08-19T22:28:59.753239'
   },
   {
     id: '',
@@ -13465,8 +13526,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150362',
-    updated_at: '2026-08-19T16:27:21.150362'
+    created_at: '2026-08-19T22:28:59.753241',
+    updated_at: '2026-08-19T22:28:59.753241'
   },
   {
     id: '',
@@ -13481,8 +13542,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150365',
-    updated_at: '2026-08-19T16:27:21.150366'
+    created_at: '2026-08-19T22:28:59.753244',
+    updated_at: '2026-08-19T22:28:59.753244'
   },
   {
     id: '',
@@ -13497,8 +13558,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150368',
-    updated_at: '2026-08-19T16:27:21.150369'
+    created_at: '2026-08-19T22:28:59.753247',
+    updated_at: '2026-08-19T22:28:59.753247'
   },
   {
     id: '',
@@ -13513,12 +13574,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150371',
-    updated_at: '2026-08-19T16:27:21.150372'
+    created_at: '2026-08-19T22:28:59.753250',
+    updated_at: '2026-08-19T22:28:59.753250'
   },
   {
     id: '',
-    name: 'Cohoon\'s Elevator',    company: '',
+    name: 'Cohoon's Elevator',
+    company: '',
     email: '',
     phone: '(989) 835-7724',
     website: 'http://cohoonselevator.com/',
@@ -13528,8 +13590,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150375',
-    updated_at: '2026-08-19T16:27:21.150375'
+    created_at: '2026-08-19T22:28:59.753252',
+    updated_at: '2026-08-19T22:28:59.753253'
   },
   {
     id: '',
@@ -13544,8 +13606,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150378',
-    updated_at: '2026-08-19T16:27:21.150378'
+    created_at: '2026-08-19T22:28:59.753255',
+    updated_at: '2026-08-19T22:28:59.753256'
   },
   {
     id: '',
@@ -13560,8 +13622,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150381',
-    updated_at: '2026-08-19T16:27:21.150382'
+    created_at: '2026-08-19T22:28:59.753258',
+    updated_at: '2026-08-19T22:28:59.753259'
   },
   {
     id: '',
@@ -13576,8 +13638,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150384',
-    updated_at: '2026-08-19T16:27:21.150385'
+    created_at: '2026-08-19T22:28:59.753261',
+    updated_at: '2026-08-19T22:28:59.753262'
   },
   {
     id: '',
@@ -13592,8 +13654,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150387',
-    updated_at: '2026-08-19T16:27:21.150388'
+    created_at: '2026-08-19T22:28:59.753264',
+    updated_at: '2026-08-19T22:28:59.753265'
   },
   {
     id: '',
@@ -13608,8 +13670,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150391',
-    updated_at: '2026-08-19T16:27:21.150391'
+    created_at: '2026-08-19T22:28:59.753267',
+    updated_at: '2026-08-19T22:28:59.753268'
   },
   {
     id: '',
@@ -13624,8 +13686,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150394',
-    updated_at: '2026-08-19T16:27:21.150395'
+    created_at: '2026-08-19T22:28:59.753270',
+    updated_at: '2026-08-19T22:28:59.753271'
   },
   {
     id: '',
@@ -13640,8 +13702,8 @@ const DEMO_LEADS: Lead[] = [
     source: 'Google Places API - SOETech Non-Michigan Lead Expansion',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150398',
-    updated_at: '2026-08-19T16:27:21.150398'
+    created_at: '2026-08-19T22:28:59.753273',
+    updated_at: '2026-08-19T22:28:59.753274'
   },
   {
     id: '',
@@ -13656,8 +13718,8 @@ const DEMO_LEADS: Lead[] = [
     source: 'Google Places API - SOETech Non-Michigan Lead Expansion',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150401',
-    updated_at: '2026-08-19T16:27:21.150402'
+    created_at: '2026-08-19T22:28:59.753277',
+    updated_at: '2026-08-19T22:28:59.753278'
   },
   {
     id: '',
@@ -13672,8 +13734,8 @@ const DEMO_LEADS: Lead[] = [
     source: 'Google Places API - SOETech Non-Michigan Lead Expansion',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150405',
-    updated_at: '2026-08-19T16:27:21.150406'
+    created_at: '2026-08-19T22:28:59.753280',
+    updated_at: '2026-08-19T22:28:59.753281'
   },
   {
     id: '',
@@ -13688,8 +13750,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150409',
-    updated_at: '2026-08-19T16:27:21.150409'
+    created_at: '2026-08-19T22:28:59.753283',
+    updated_at: '2026-08-19T22:28:59.753284'
   },
   {
     id: '',
@@ -13704,8 +13766,8 @@ const DEMO_LEADS: Lead[] = [
     source: 'Google Places API - SOETech Non-Michigan Lead Expansion',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150412',
-    updated_at: '2026-08-19T16:27:21.150413'
+    created_at: '2026-08-19T22:28:59.753286',
+    updated_at: '2026-08-19T22:28:59.753287'
   },
   {
     id: '',
@@ -13720,8 +13782,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150417',
-    updated_at: '2026-08-19T16:27:21.150417'
+    created_at: '2026-08-19T22:28:59.753290',
+    updated_at: '2026-08-19T22:28:59.753291'
   },
   {
     id: '',
@@ -13736,13 +13798,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150420',
-    updated_at: '2026-08-19T16:27:21.150421'
+    created_at: '2026-08-19T22:28:59.753293',
+    updated_at: '2026-08-19T22:28:59.753294'
   },
   {
     id: '',
     name: '',
-    company: 'The Artisan\'s Nook',
+    company: 'The Artisan's Nook',
     email: 'theartisansnook@gmail.com',
     phone: '989-284-9444',
     website: 'https://theartisansnook.com/',
@@ -13752,8 +13814,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150424',
-    updated_at: '2026-08-19T16:27:21.150425'
+    created_at: '2026-08-19T22:28:59.753297',
+    updated_at: '2026-08-19T22:28:59.753298'
   },
   {
     id: '',
@@ -13768,8 +13830,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150428',
-    updated_at: '2026-08-19T16:27:21.150429'
+    created_at: '2026-08-19T22:28:59.753300',
+    updated_at: '2026-08-19T22:28:59.753301'
   },
   {
     id: '',
@@ -13784,8 +13846,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150431',
-    updated_at: '2026-08-19T16:27:21.150432'
+    created_at: '2026-08-19T22:28:59.753303',
+    updated_at: '2026-08-19T22:28:59.753304'
   },
   {
     id: '',
@@ -13800,8 +13862,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150435',
-    updated_at: '2026-08-19T16:27:21.150436'
+    created_at: '2026-08-19T22:28:59.753306',
+    updated_at: '2026-08-19T22:28:59.753307'
   },
   {
     id: '',
@@ -13816,8 +13878,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150439',
-    updated_at: '2026-08-19T16:27:21.150440'
+    created_at: '2026-08-19T22:28:59.753309',
+    updated_at: '2026-08-19T22:28:59.753310'
   },
   {
     id: '',
@@ -13832,8 +13894,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150443',
-    updated_at: '2026-08-19T16:27:21.150443'
+    created_at: '2026-08-19T22:28:59.753312',
+    updated_at: '2026-08-19T22:28:59.753313'
   },
   {
     id: '',
@@ -13848,8 +13910,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150446',
-    updated_at: '2026-08-19T16:27:21.150447'
+    created_at: '2026-08-19T22:28:59.753315',
+    updated_at: '2026-08-19T22:28:59.753316'
   },
   {
     id: '',
@@ -13864,13 +13926,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150449',
-    updated_at: '2026-08-19T16:27:21.150450'
+    created_at: '2026-08-19T22:28:59.753318',
+    updated_at: '2026-08-19T22:28:59.753319'
   },
   {
     id: '',
     name: '',
-    company: 'Java Joe\'s Cafe',
+    company: 'Java Joe's Cafe',
     email: 'javajoescafe@gmail.com',
     phone: '906-643-9211',
     website: 'https://www.javajoescafemi.com/',
@@ -13880,8 +13942,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150452',
-    updated_at: '2026-08-19T16:27:21.150453'
+    created_at: '2026-08-19T22:28:59.753321',
+    updated_at: '2026-08-19T22:28:59.753322'
   },
   {
     id: '',
@@ -13896,8 +13958,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150455',
-    updated_at: '2026-08-19T16:27:21.150456'
+    created_at: '2026-08-19T22:28:59.753324',
+    updated_at: '2026-08-19T22:28:59.753325'
   },
   {
     id: '',
@@ -13912,8 +13974,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150459',
-    updated_at: '2026-08-19T16:27:21.150460'
+    created_at: '2026-08-19T22:28:59.753327',
+    updated_at: '2026-08-19T22:28:59.753328'
   },
   {
     id: '',
@@ -13928,8 +13990,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150462',
-    updated_at: '2026-08-19T16:27:21.150463'
+    created_at: '2026-08-19T22:28:59.753330',
+    updated_at: '2026-08-19T22:28:59.753331'
   },
   {
     id: '',
@@ -13944,8 +14006,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150465',
-    updated_at: '2026-08-19T16:27:21.150466'
+    created_at: '2026-08-19T22:28:59.753333',
+    updated_at: '2026-08-19T22:28:59.753334'
   },
   {
     id: '',
@@ -13960,8 +14022,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150469',
-    updated_at: '2026-08-19T16:27:21.150470'
+    created_at: '2026-08-19T22:28:59.753336',
+    updated_at: '2026-08-19T22:28:59.753337'
   },
   {
     id: '',
@@ -13976,8 +14038,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150472',
-    updated_at: '2026-08-19T16:27:21.150473'
+    created_at: '2026-08-19T22:28:59.753339',
+    updated_at: '2026-08-19T22:28:59.753340'
   },
   {
     id: '',
@@ -13992,8 +14054,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150475',
-    updated_at: '2026-08-19T16:27:21.150476'
+    created_at: '2026-08-19T22:28:59.753342',
+    updated_at: '2026-08-19T22:28:59.753343'
   },
   {
     id: '',
@@ -14008,8 +14070,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150478',
-    updated_at: '2026-08-19T16:27:21.150479'
+    created_at: '2026-08-19T22:28:59.753345',
+    updated_at: '2026-08-19T22:28:59.753346'
   },
   {
     id: '',
@@ -14024,8 +14086,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150481',
-    updated_at: '2026-08-19T16:27:21.150482'
+    created_at: '2026-08-19T22:28:59.753348',
+    updated_at: '2026-08-19T22:28:59.753349'
   },
   {
     id: '',
@@ -14040,8 +14102,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150485',
-    updated_at: '2026-08-19T16:27:21.150486'
+    created_at: '2026-08-19T22:28:59.753351',
+    updated_at: '2026-08-19T22:28:59.753352'
   },
   {
     id: '',
@@ -14056,8 +14118,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150518',
-    updated_at: '2026-08-19T16:27:21.150519'
+    created_at: '2026-08-19T22:28:59.753354',
+    updated_at: '2026-08-19T22:28:59.753354'
   },
   {
     id: '',
@@ -14072,8 +14134,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150522',
-    updated_at: '2026-08-19T16:27:21.150522'
+    created_at: '2026-08-19T22:28:59.753356',
+    updated_at: '2026-08-19T22:28:59.753357'
   },
   {
     id: '',
@@ -14088,8 +14150,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150525',
-    updated_at: '2026-08-19T16:27:21.150525'
+    created_at: '2026-08-19T22:28:59.753359',
+    updated_at: '2026-08-19T22:28:59.753360'
   },
   {
     id: '',
@@ -14104,8 +14166,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150528',
-    updated_at: '2026-08-19T16:27:21.150528'
+    created_at: '2026-08-19T22:28:59.753362',
+    updated_at: '2026-08-19T22:28:59.753363'
   },
   {
     id: '',
@@ -14120,8 +14182,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150530',
-    updated_at: '2026-08-19T16:27:21.150531'
+    created_at: '2026-08-19T22:28:59.753365',
+    updated_at: '2026-08-19T22:28:59.753366'
   },
   {
     id: '',
@@ -14136,8 +14198,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150533',
-    updated_at: '2026-08-19T16:27:21.150534'
+    created_at: '2026-08-19T22:28:59.753368',
+    updated_at: '2026-08-19T22:28:59.753368'
   },
   {
     id: '',
@@ -14152,8 +14214,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150536',
-    updated_at: '2026-08-19T16:27:21.150537'
+    created_at: '2026-08-19T22:28:59.753371',
+    updated_at: '2026-08-19T22:28:59.753371'
   },
   {
     id: '',
@@ -14168,8 +14230,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150539',
-    updated_at: '2026-08-19T16:27:21.150540'
+    created_at: '2026-08-19T22:28:59.753374',
+    updated_at: '2026-08-19T22:28:59.753374'
   },
   {
     id: '',
@@ -14184,8 +14246,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150542',
-    updated_at: '2026-08-19T16:27:21.150543'
+    created_at: '2026-08-19T22:28:59.753377',
+    updated_at: '2026-08-19T22:28:59.753378'
   },
   {
     id: '',
@@ -14200,8 +14262,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150545',
-    updated_at: '2026-08-19T16:27:21.150546'
+    created_at: '2026-08-19T22:28:59.753380',
+    updated_at: '2026-08-19T22:28:59.753380'
   },
   {
     id: '',
@@ -14216,8 +14278,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150548',
-    updated_at: '2026-08-19T16:27:21.150549'
+    created_at: '2026-08-19T22:28:59.753383',
+    updated_at: '2026-08-19T22:28:59.753384'
   },
   {
     id: '',
@@ -14232,8 +14294,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150551',
-    updated_at: '2026-08-19T16:27:21.150552'
+    created_at: '2026-08-19T22:28:59.753386',
+    updated_at: '2026-08-19T22:28:59.753387'
   },
   {
     id: '',
@@ -14248,8 +14310,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150554',
-    updated_at: '2026-08-19T16:27:21.150555'
+    created_at: '2026-08-19T22:28:59.753389',
+    updated_at: '2026-08-19T22:28:59.753390'
   },
   {
     id: '',
@@ -14264,8 +14326,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150557',
-    updated_at: '2026-08-19T16:27:21.150557'
+    created_at: '2026-08-19T22:28:59.753392',
+    updated_at: '2026-08-19T22:28:59.753393'
   },
   {
     id: '',
@@ -14280,8 +14342,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150559',
-    updated_at: '2026-08-19T16:27:21.150560'
+    created_at: '2026-08-19T22:28:59.753395',
+    updated_at: '2026-08-19T22:28:59.753396'
   },
   {
     id: '',
@@ -14296,8 +14358,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150562',
-    updated_at: '2026-08-19T16:27:21.150563'
+    created_at: '2026-08-19T22:28:59.753398',
+    updated_at: '2026-08-19T22:28:59.753399'
   },
   {
     id: '',
@@ -14312,8 +14374,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150565',
-    updated_at: '2026-08-19T16:27:21.150566'
+    created_at: '2026-08-19T22:28:59.753401',
+    updated_at: '2026-08-19T22:28:59.753402'
   },
   {
     id: '',
@@ -14328,8 +14390,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150568',
-    updated_at: '2026-08-19T16:27:21.150569'
+    created_at: '2026-08-19T22:28:59.753404',
+    updated_at: '2026-08-19T22:28:59.753405'
   },
   {
     id: '',
@@ -14344,8 +14406,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150571',
-    updated_at: '2026-08-19T16:27:21.150572'
+    created_at: '2026-08-19T22:28:59.753407',
+    updated_at: '2026-08-19T22:28:59.753408'
   },
   {
     id: '',
@@ -14360,8 +14422,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150574',
-    updated_at: '2026-08-19T16:27:21.150575'
+    created_at: '2026-08-19T22:28:59.753410',
+    updated_at: '2026-08-19T22:28:59.753411'
   },
   {
     id: '',
@@ -14376,8 +14438,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150577',
-    updated_at: '2026-08-19T16:27:21.150578'
+    created_at: '2026-08-19T22:28:59.753413',
+    updated_at: '2026-08-19T22:28:59.753414'
   },
   {
     id: '',
@@ -14392,8 +14454,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150580',
-    updated_at: '2026-08-19T16:27:21.150581'
+    created_at: '2026-08-19T22:28:59.753416',
+    updated_at: '2026-08-19T22:28:59.753417'
   },
   {
     id: '',
@@ -14408,8 +14470,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150583',
-    updated_at: '2026-08-19T16:27:21.150584'
+    created_at: '2026-08-19T22:28:59.753419',
+    updated_at: '2026-08-19T22:28:59.753420'
   },
   {
     id: '',
@@ -14424,8 +14486,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150586',
-    updated_at: '2026-08-19T16:27:21.150587'
+    created_at: '2026-08-19T22:28:59.753422',
+    updated_at: '2026-08-19T22:28:59.753423'
   },
   {
     id: '',
@@ -14440,8 +14502,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150589',
-    updated_at: '2026-08-19T16:27:21.150590'
+    created_at: '2026-08-19T22:28:59.753425',
+    updated_at: '2026-08-19T22:28:59.753426'
   },
   {
     id: '',
@@ -14456,8 +14518,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150592',
-    updated_at: '2026-08-19T16:27:21.150592'
+    created_at: '2026-08-19T22:28:59.753428',
+    updated_at: '2026-08-19T22:28:59.753429'
   },
   {
     id: '',
@@ -14472,8 +14534,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150594',
-    updated_at: '2026-08-19T16:27:21.150595'
+    created_at: '2026-08-19T22:28:59.753431',
+    updated_at: '2026-08-19T22:28:59.753432'
   },
   {
     id: '',
@@ -14488,8 +14550,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150597',
-    updated_at: '2026-08-19T16:27:21.150598'
+    created_at: '2026-08-19T22:28:59.753434',
+    updated_at: '2026-08-19T22:28:59.753435'
   },
   {
     id: '',
@@ -14504,8 +14566,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150600',
-    updated_at: '2026-08-19T16:27:21.150601'
+    created_at: '2026-08-19T22:28:59.753437',
+    updated_at: '2026-08-19T22:28:59.753438'
   },
   {
     id: '',
@@ -14520,8 +14582,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150603',
-    updated_at: '2026-08-19T16:27:21.150604'
+    created_at: '2026-08-19T22:28:59.753440',
+    updated_at: '2026-08-19T22:28:59.753441'
   },
   {
     id: '',
@@ -14536,8 +14598,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150606',
-    updated_at: '2026-08-19T16:27:21.150607'
+    created_at: '2026-08-19T22:28:59.753443',
+    updated_at: '2026-08-19T22:28:59.753443'
   },
   {
     id: '',
@@ -14552,8 +14614,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150609',
-    updated_at: '2026-08-19T16:27:21.150609'
+    created_at: '2026-08-19T22:28:59.753445',
+    updated_at: '2026-08-19T22:28:59.753446'
   },
   {
     id: '',
@@ -14568,8 +14630,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150612',
-    updated_at: '2026-08-19T16:27:21.150613'
+    created_at: '2026-08-19T22:28:59.753449',
+    updated_at: '2026-08-19T22:28:59.753449'
   },
   {
     id: '',
@@ -14584,8 +14646,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150615',
-    updated_at: '2026-08-19T16:27:21.150616'
+    created_at: '2026-08-19T22:28:59.753452',
+    updated_at: '2026-08-19T22:28:59.753452'
   },
   {
     id: '',
@@ -14600,8 +14662,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150618',
-    updated_at: '2026-08-19T16:27:21.150619'
+    created_at: '2026-08-19T22:28:59.753455',
+    updated_at: '2026-08-19T22:28:59.753456'
   },
   {
     id: '',
@@ -14616,8 +14678,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150621',
-    updated_at: '2026-08-19T16:27:21.150622'
+    created_at: '2026-08-19T22:28:59.753458',
+    updated_at: '2026-08-19T22:28:59.753459'
   },
   {
     id: '',
@@ -14632,8 +14694,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150624',
-    updated_at: '2026-08-19T16:27:21.150625'
+    created_at: '2026-08-19T22:28:59.753461',
+    updated_at: '2026-08-19T22:28:59.753462'
   },
   {
     id: '',
@@ -14648,8 +14710,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150628',
-    updated_at: '2026-08-19T16:27:21.150629'
+    created_at: '2026-08-19T22:28:59.753464',
+    updated_at: '2026-08-19T22:28:59.753465'
   },
   {
     id: '',
@@ -14664,8 +14726,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150631',
-    updated_at: '2026-08-19T16:27:21.150632'
+    created_at: '2026-08-19T22:28:59.753467',
+    updated_at: '2026-08-19T22:28:59.753468'
   },
   {
     id: '',
@@ -14680,8 +14742,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150634',
-    updated_at: '2026-08-19T16:27:21.150635'
+    created_at: '2026-08-19T22:28:59.753470',
+    updated_at: '2026-08-19T22:28:59.753471'
   },
   {
     id: '',
@@ -14696,8 +14758,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150637',
-    updated_at: '2026-08-19T16:27:21.150638'
+    created_at: '2026-08-19T22:28:59.753473',
+    updated_at: '2026-08-19T22:28:59.753474'
   },
   {
     id: '',
@@ -14712,8 +14774,8 @@ const DEMO_LEADS: Lead[] = [
     source: 'Google Places API - SOETech Non-Michigan Lead Expansion',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150640',
-    updated_at: '2026-08-19T16:27:21.150641'
+    created_at: '2026-08-19T22:28:59.753477',
+    updated_at: '2026-08-19T22:28:59.753477'
   },
   {
     id: '',
@@ -14728,8 +14790,8 @@ const DEMO_LEADS: Lead[] = [
     source: 'Google Places API - SOETech Non-Michigan Lead Expansion',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150644',
-    updated_at: '2026-08-19T16:27:21.150644'
+    created_at: '2026-08-19T22:28:59.753480',
+    updated_at: '2026-08-19T22:28:59.753481'
   },
   {
     id: '',
@@ -14744,8 +14806,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150647',
-    updated_at: '2026-08-19T16:27:21.150648'
+    created_at: '2026-08-19T22:28:59.753483',
+    updated_at: '2026-08-19T22:28:59.753484'
   },
   {
     id: '',
@@ -14760,8 +14822,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150651',
-    updated_at: '2026-08-19T16:27:21.150652'
+    created_at: '2026-08-19T22:28:59.753486',
+    updated_at: '2026-08-19T22:28:59.753487'
   },
   {
     id: '',
@@ -14776,8 +14838,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150654',
-    updated_at: '2026-08-19T16:27:21.150655'
+    created_at: '2026-08-19T22:28:59.753490',
+    updated_at: '2026-08-19T22:28:59.753491'
   },
   {
     id: '',
@@ -14792,8 +14854,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150658',
-    updated_at: '2026-08-19T16:27:21.150659'
+    created_at: '2026-08-19T22:28:59.753493',
+    updated_at: '2026-08-19T22:28:59.753494'
   },
   {
     id: '',
@@ -14808,8 +14870,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150661',
-    updated_at: '2026-08-19T16:27:21.150662'
+    created_at: '2026-08-19T22:28:59.753496',
+    updated_at: '2026-08-19T22:28:59.753497'
   },
   {
     id: '',
@@ -14824,8 +14886,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150664',
-    updated_at: '2026-08-19T16:27:21.150665'
+    created_at: '2026-08-19T22:28:59.753500',
+    updated_at: '2026-08-19T22:28:59.753500'
   },
   {
     id: '',
@@ -14840,8 +14902,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150668',
-    updated_at: '2026-08-19T16:27:21.150668'
+    created_at: '2026-08-19T22:28:59.753503',
+    updated_at: '2026-08-19T22:28:59.753503'
   },
   {
     id: '',
@@ -14856,8 +14918,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150671',
-    updated_at: '2026-08-19T16:27:21.150671'
+    created_at: '2026-08-19T22:28:59.753506',
+    updated_at: '2026-08-19T22:28:59.753506'
   },
   {
     id: '',
@@ -14872,8 +14934,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150674',
-    updated_at: '2026-08-19T16:27:21.150674'
+    created_at: '2026-08-19T22:28:59.753509',
+    updated_at: '2026-08-19T22:28:59.753509'
   },
   {
     id: '',
@@ -14888,8 +14950,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150677',
-    updated_at: '2026-08-19T16:27:21.150677'
+    created_at: '2026-08-19T22:28:59.753512',
+    updated_at: '2026-08-19T22:28:59.753512'
   },
   {
     id: '',
@@ -14904,8 +14966,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150688',
-    updated_at: '2026-08-19T16:27:21.150689'
+    created_at: '2026-08-19T22:28:59.753515',
+    updated_at: '2026-08-19T22:28:59.753515'
   },
   {
     id: '',
@@ -14920,8 +14982,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150691',
-    updated_at: '2026-08-19T16:27:21.150692'
+    created_at: '2026-08-19T22:28:59.753518',
+    updated_at: '2026-08-19T22:28:59.753518'
   },
   {
     id: '',
@@ -14936,8 +14998,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150694',
-    updated_at: '2026-08-19T16:27:21.150695'
+    created_at: '2026-08-19T22:28:59.753521',
+    updated_at: '2026-08-19T22:28:59.753521'
   },
   {
     id: '',
@@ -14952,8 +15014,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150698',
-    updated_at: '2026-08-19T16:27:21.150698'
+    created_at: '2026-08-19T22:28:59.753524',
+    updated_at: '2026-08-19T22:28:59.753524'
   },
   {
     id: '',
@@ -14968,8 +15030,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150700',
-    updated_at: '2026-08-19T16:27:21.150701'
+    created_at: '2026-08-19T22:28:59.753527',
+    updated_at: '2026-08-19T22:28:59.753528'
   },
   {
     id: '',
@@ -14984,8 +15046,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150703',
-    updated_at: '2026-08-19T16:27:21.150704'
+    created_at: '2026-08-19T22:28:59.753530',
+    updated_at: '2026-08-19T22:28:59.753530'
   },
   {
     id: '',
@@ -15000,8 +15062,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150706',
-    updated_at: '2026-08-19T16:27:21.150707'
+    created_at: '2026-08-19T22:28:59.753533',
+    updated_at: '2026-08-19T22:28:59.753533'
   },
   {
     id: '',
@@ -15016,8 +15078,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150710',
-    updated_at: '2026-08-19T16:27:21.150710'
+    created_at: '2026-08-19T22:28:59.753536',
+    updated_at: '2026-08-19T22:28:59.753537'
   },
   {
     id: '',
@@ -15032,8 +15094,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150713',
-    updated_at: '2026-08-19T16:27:21.150714'
+    created_at: '2026-08-19T22:28:59.753539',
+    updated_at: '2026-08-19T22:28:59.753540'
   },
   {
     id: '',
@@ -15048,8 +15110,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150716',
-    updated_at: '2026-08-19T16:27:21.150717'
+    created_at: '2026-08-19T22:28:59.753542',
+    updated_at: '2026-08-19T22:28:59.753543'
   },
   {
     id: '',
@@ -15064,8 +15126,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150719',
-    updated_at: '2026-08-19T16:27:21.150720'
+    created_at: '2026-08-19T22:28:59.753545',
+    updated_at: '2026-08-19T22:28:59.753546'
   },
   {
     id: '',
@@ -15080,8 +15142,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150722',
-    updated_at: '2026-08-19T16:27:21.150723'
+    created_at: '2026-08-19T22:28:59.753548',
+    updated_at: '2026-08-19T22:28:59.753548'
   },
   {
     id: '',
@@ -15096,8 +15158,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150725',
-    updated_at: '2026-08-19T16:27:21.150725'
+    created_at: '2026-08-19T22:28:59.753550',
+    updated_at: '2026-08-19T22:28:59.753551'
   },
   {
     id: '',
@@ -15112,8 +15174,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150728',
-    updated_at: '2026-08-19T16:27:21.150729'
+    created_at: '2026-08-19T22:28:59.753554',
+    updated_at: '2026-08-19T22:28:59.753554'
   },
   {
     id: '',
@@ -15128,8 +15190,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150731',
-    updated_at: '2026-08-19T16:27:21.150732'
+    created_at: '2026-08-19T22:28:59.753556',
+    updated_at: '2026-08-19T22:28:59.753557'
   },
   {
     id: '',
@@ -15144,8 +15206,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150734',
-    updated_at: '2026-08-19T16:27:21.150734'
+    created_at: '2026-08-19T22:28:59.753559',
+    updated_at: '2026-08-19T22:28:59.753560'
   },
   {
     id: '',
@@ -15160,8 +15222,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150736',
-    updated_at: '2026-08-19T16:27:21.150737'
+    created_at: '2026-08-19T22:28:59.753562',
+    updated_at: '2026-08-19T22:28:59.753563'
   },
   {
     id: '',
@@ -15176,8 +15238,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150739',
-    updated_at: '2026-08-19T16:27:21.150740'
+    created_at: '2026-08-19T22:28:59.753565',
+    updated_at: '2026-08-19T22:28:59.753566'
   },
   {
     id: '',
@@ -15192,12 +15254,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150742',
-    updated_at: '2026-08-19T16:27:21.150743'
+    created_at: '2026-08-19T22:28:59.753568',
+    updated_at: '2026-08-19T22:28:59.753569'
   },
   {
     id: '',
-    name: 'Cesar\'s Tires',    company: '',
+    name: 'Cesar's Tires',
+    company: '',
     email: '',
     phone: '(248) 453-6847',
     website: 'https://cesartires.com/',
@@ -15207,12 +15270,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150745',
-    updated_at: '2026-08-19T16:27:21.150746'
+    created_at: '2026-08-19T22:28:59.753571',
+    updated_at: '2026-08-19T22:28:59.753571'
   },
   {
     id: '',
-    name: 'C J\'s Auto Services Center',    company: '',
+    name: 'C J's Auto Services Center',
+    company: '',
     email: '',
     phone: '(989) 799-0910',
     website: 'http://www.cjsautorepair.net/',
@@ -15222,8 +15286,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150748',
-    updated_at: '2026-08-19T16:27:21.150749'
+    created_at: '2026-08-19T22:28:59.753573',
+    updated_at: '2026-08-19T22:28:59.753574'
   },
   {
     id: '',
@@ -15238,8 +15302,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150751',
-    updated_at: '2026-08-19T16:27:21.150751'
+    created_at: '2026-08-19T22:28:59.753576',
+    updated_at: '2026-08-19T22:28:59.753577'
   },
   {
     id: '',
@@ -15254,12 +15318,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150754',
-    updated_at: '2026-08-19T16:27:21.150754'
+    created_at: '2026-08-19T22:28:59.753579',
+    updated_at: '2026-08-19T22:28:59.753580'
   },
   {
     id: '',
-    name: 'Beyer\'s Service Center',    company: '',
+    name: 'Beyer's Service Center',
+    company: '',
     email: '',
     phone: '(989) 792-8071',
     website: 'https://www.beyersservicecenter.com/',
@@ -15269,8 +15334,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150757',
-    updated_at: '2026-08-19T16:27:21.150757'
+    created_at: '2026-08-19T22:28:59.753582',
+    updated_at: '2026-08-19T22:28:59.753583'
   },
   {
     id: '',
@@ -15285,8 +15350,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150759',
-    updated_at: '2026-08-19T16:27:21.150760'
+    created_at: '2026-08-19T22:28:59.753585',
+    updated_at: '2026-08-19T22:28:59.753586'
   },
   {
     id: '',
@@ -15301,8 +15366,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150762',
-    updated_at: '2026-08-19T16:27:21.150763'
+    created_at: '2026-08-19T22:28:59.753588',
+    updated_at: '2026-08-19T22:28:59.753589'
   },
   {
     id: '',
@@ -15317,8 +15382,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150765',
-    updated_at: '2026-08-19T16:27:21.150766'
+    created_at: '2026-08-19T22:28:59.753591',
+    updated_at: '2026-08-19T22:28:59.753592'
   },
   {
     id: '',
@@ -15333,8 +15398,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150768',
-    updated_at: '2026-08-19T16:27:21.150769'
+    created_at: '2026-08-19T22:28:59.753594',
+    updated_at: '2026-08-19T22:28:59.753595'
   },
   {
     id: '',
@@ -15349,8 +15414,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150771',
-    updated_at: '2026-08-19T16:27:21.150772'
+    created_at: '2026-08-19T22:28:59.753597',
+    updated_at: '2026-08-19T22:28:59.753598'
   },
   {
     id: '',
@@ -15365,8 +15430,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150774',
-    updated_at: '2026-08-19T16:27:21.150775'
+    created_at: '2026-08-19T22:28:59.753600',
+    updated_at: '2026-08-19T22:28:59.753600'
   },
   {
     id: '',
@@ -15381,8 +15446,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150777',
-    updated_at: '2026-08-19T16:27:21.150778'
+    created_at: '2026-08-19T22:28:59.753603',
+    updated_at: '2026-08-19T22:28:59.753604'
   },
   {
     id: '',
@@ -15397,12 +15462,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150780',
-    updated_at: '2026-08-19T16:27:21.150781'
+    created_at: '2026-08-19T22:28:59.753606',
+    updated_at: '2026-08-19T22:28:59.753606'
   },
   {
     id: '',
-    name: 'Fuzzy\'s Restaurant',    company: '',
+    name: 'Fuzzy's Restaurant',
+    company: '',
     email: '',
     phone: '(989) 790-1719',
     website: 'http://fuzzysfood.com/',
@@ -15412,8 +15478,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150783',
-    updated_at: '2026-08-19T16:27:21.150783'
+    created_at: '2026-08-19T22:28:59.753609',
+    updated_at: '2026-08-19T22:28:59.753609'
   },
   {
     id: '',
@@ -15428,8 +15494,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150786',
-    updated_at: '2026-08-19T16:27:21.150787'
+    created_at: '2026-08-19T22:28:59.753612',
+    updated_at: '2026-08-19T22:28:59.753612'
   },
   {
     id: '',
@@ -15444,8 +15510,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150789',
-    updated_at: '2026-08-19T16:27:21.150790'
+    created_at: '2026-08-19T22:28:59.753614',
+    updated_at: '2026-08-19T22:28:59.753615'
   },
   {
     id: '',
@@ -15460,12 +15526,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150792',
-    updated_at: '2026-08-19T16:27:21.150792'
+    created_at: '2026-08-19T22:28:59.753617',
+    updated_at: '2026-08-19T22:28:59.753618'
   },
   {
     id: '',
-    name: 'N\'Orlins Cafe',
+    name: 'N'Orlins Cafe',
     company: '',
     email: '',
     phone: '(602) 796-5500',
@@ -15476,8 +15542,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150795',
-    updated_at: '2026-08-19T16:27:21.150795'
+    created_at: '2026-08-19T22:28:59.753620',
+    updated_at: '2026-08-19T22:28:59.753621'
   },
   {
     id: '',
@@ -15492,8 +15558,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150798',
-    updated_at: '2026-08-19T16:27:21.150798'
+    created_at: '2026-08-19T22:28:59.753623',
+    updated_at: '2026-08-19T22:28:59.753624'
   },
   {
     id: '',
@@ -15508,12 +15574,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150800',
-    updated_at: '2026-08-19T16:27:21.150801'
+    created_at: '2026-08-19T22:28:59.753626',
+    updated_at: '2026-08-19T22:28:59.753627'
   },
   {
     id: '',
-    name: 'Grohman\'s Flowers',    company: '',
+    name: 'Grohman's Flowers',
+    company: '',
     email: '',
     phone: '(989) 754-7457',
     website: 'https://www.grohmansflowers.com/',
@@ -15523,8 +15590,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150804',
-    updated_at: '2026-08-19T16:27:21.150804'
+    created_at: '2026-08-19T22:28:59.753629',
+    updated_at: '2026-08-19T22:28:59.753629'
   },
   {
     id: '',
@@ -15539,12 +15606,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150806',
-    updated_at: '2026-08-19T16:27:21.150807'
+    created_at: '2026-08-19T22:28:59.753632',
+    updated_at: '2026-08-19T22:28:59.753632'
   },
   {
     id: '',
-    name: 'Erika\'s Flowers',    company: '',
+    name: 'Erika's Flowers',
+    company: '',
     email: '',
     phone: '(989) 755-9330',
     website: 'https://www.erikas-flowers.com/',
@@ -15554,8 +15622,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150809',
-    updated_at: '2026-08-19T16:27:21.150810'
+    created_at: '2026-08-19T22:28:59.753634',
+    updated_at: '2026-08-19T22:28:59.753635'
   },
   {
     id: '',
@@ -15570,12 +15638,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150812',
-    updated_at: '2026-08-19T16:27:21.150813'
+    created_at: '2026-08-19T22:28:59.753637',
+    updated_at: '2026-08-19T22:28:59.753638'
   },
   {
     id: '',
-    name: 'Hank\'s Flowerland',    company: '',
+    name: 'Hank's Flowerland',
+    company: '',
     email: '',
     phone: '(989) 754-7481',
     website: 'http://www.hanksflowerland.com/',
@@ -15585,8 +15654,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150815',
-    updated_at: '2026-08-19T16:27:21.150816'
+    created_at: '2026-08-19T22:28:59.753640',
+    updated_at: '2026-08-19T22:28:59.753641'
   },
   {
     id: '',
@@ -15601,8 +15670,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150818',
-    updated_at: '2026-08-19T16:27:21.150819'
+    created_at: '2026-08-19T22:28:59.753643',
+    updated_at: '2026-08-19T22:28:59.753644'
   },
   {
     id: '',
@@ -15617,12 +15686,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150821',
-    updated_at: '2026-08-19T16:27:21.150822'
+    created_at: '2026-08-19T22:28:59.753646',
+    updated_at: '2026-08-19T22:28:59.753647'
   },
   {
     id: '',
-    name: 'Austin\'s Flowers & Gifts',    company: '',
+    name: 'Austin's Flowers & Gifts',
+    company: '',
     email: '',
     phone: '(989) 695-9100',
     website: 'http://www.austinsflorist.com/',
@@ -15632,8 +15702,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150824',
-    updated_at: '2026-08-19T16:27:21.150825'
+    created_at: '2026-08-19T22:28:59.753649',
+    updated_at: '2026-08-19T22:28:59.753650'
   },
   {
     id: '',
@@ -15648,8 +15718,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150827',
-    updated_at: '2026-08-19T16:27:21.150828'
+    created_at: '2026-08-19T22:28:59.753652',
+    updated_at: '2026-08-19T22:28:59.753653'
   },
   {
     id: '',
@@ -15664,8 +15734,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150830',
-    updated_at: '2026-08-19T16:27:21.150831'
+    created_at: '2026-08-19T22:28:59.753655',
+    updated_at: '2026-08-19T22:28:59.753655'
   },
   {
     id: '',
@@ -15680,8 +15750,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150833',
-    updated_at: '2026-08-19T16:27:21.150833'
+    created_at: '2026-08-19T22:28:59.753658',
+    updated_at: '2026-08-19T22:28:59.753658'
   },
   {
     id: '',
@@ -15696,8 +15766,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150835',
-    updated_at: '2026-08-19T16:27:21.150836'
+    created_at: '2026-08-19T22:28:59.753660',
+    updated_at: '2026-08-19T22:28:59.753661'
   },
   {
     id: '',
@@ -15712,12 +15782,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150838',
-    updated_at: '2026-08-19T16:27:21.150839'
+    created_at: '2026-08-19T22:28:59.753663',
+    updated_at: '2026-08-19T22:28:59.753664'
   },
   {
     id: '',
-    name: 'Boehler\'s Greenhouse',    company: '',
+    name: 'Boehler's Greenhouse',
+    company: '',
     email: '',
     phone: '(989) 792-2039',
     website: 'https://www.boehlersgreenhouse.com/',
@@ -15727,8 +15798,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150841',
-    updated_at: '2026-08-19T16:27:21.150842'
+    created_at: '2026-08-19T22:28:59.753666',
+    updated_at: '2026-08-19T22:28:59.753667'
   },
   {
     id: '',
@@ -15743,8 +15814,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150845',
-    updated_at: '2026-08-19T16:27:21.150845'
+    created_at: '2026-08-19T22:28:59.753669',
+    updated_at: '2026-08-19T22:28:59.753670'
   },
   {
     id: '',
@@ -15759,8 +15830,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150848',
-    updated_at: '2026-08-19T16:27:21.150848'
+    created_at: '2026-08-19T22:28:59.753672',
+    updated_at: '2026-08-19T22:28:59.753673'
   },
   {
     id: '',
@@ -15775,8 +15846,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150850',
-    updated_at: '2026-08-19T16:27:21.150851'
+    created_at: '2026-08-19T22:28:59.753675',
+    updated_at: '2026-08-19T22:28:59.753676'
   },
   {
     id: '',
@@ -15791,8 +15862,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150854',
-    updated_at: '2026-08-19T16:27:21.150854'
+    created_at: '2026-08-19T22:28:59.753678',
+    updated_at: '2026-08-19T22:28:59.753679'
   },
   {
     id: '',
@@ -15807,8 +15878,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150856',
-    updated_at: '2026-08-19T16:27:21.150857'
+    created_at: '2026-08-19T22:28:59.753681',
+    updated_at: '2026-08-19T22:28:59.753682'
   },
   {
     id: '',
@@ -15823,8 +15894,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150859',
-    updated_at: '2026-08-19T16:27:21.150860'
+    created_at: '2026-08-19T22:28:59.753684',
+    updated_at: '2026-08-19T22:28:59.753685'
   },
   {
     id: '',
@@ -15839,8 +15910,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150862',
-    updated_at: '2026-08-19T16:27:21.150863'
+    created_at: '2026-08-19T22:28:59.753687',
+    updated_at: '2026-08-19T22:28:59.753687'
   },
   {
     id: '',
@@ -15855,8 +15926,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150865',
-    updated_at: '2026-08-19T16:27:21.150866'
+    created_at: '2026-08-19T22:28:59.753690',
+    updated_at: '2026-08-19T22:28:59.753690'
   },
   {
     id: '',
@@ -15871,8 +15942,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150868',
-    updated_at: '2026-08-19T16:27:21.150869'
+    created_at: '2026-08-19T22:28:59.753693',
+    updated_at: '2026-08-19T22:28:59.753693'
   },
   {
     id: '',
@@ -15887,8 +15958,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150871',
-    updated_at: '2026-08-19T16:27:21.150872'
+    created_at: '2026-08-19T22:28:59.753696',
+    updated_at: '2026-08-19T22:28:59.753696'
   },
   {
     id: '',
@@ -15903,8 +15974,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150874',
-    updated_at: '2026-08-19T16:27:21.150875'
+    created_at: '2026-08-19T22:28:59.753699',
+    updated_at: '2026-08-19T22:28:59.753699'
   },
   {
     id: '',
@@ -15919,8 +15990,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150877',
-    updated_at: '2026-08-19T16:27:21.150878'
+    created_at: '2026-08-19T22:28:59.753701',
+    updated_at: '2026-08-19T22:28:59.753702'
   },
   {
     id: '',
@@ -15935,8 +16006,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150880',
-    updated_at: '2026-08-19T16:27:21.150881'
+    created_at: '2026-08-19T22:28:59.753704',
+    updated_at: '2026-08-19T22:28:59.753705'
   },
   {
     id: '',
@@ -15951,8 +16022,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150883',
-    updated_at: '2026-08-19T16:27:21.150884'
+    created_at: '2026-08-19T22:28:59.753707',
+    updated_at: '2026-08-19T22:28:59.753708'
   },
   {
     id: '',
@@ -15967,8 +16038,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150886',
-    updated_at: '2026-08-19T16:27:21.150887'
+    created_at: '2026-08-19T22:28:59.753710',
+    updated_at: '2026-08-19T22:28:59.753711'
   },
   {
     id: '',
@@ -15983,8 +16054,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150889',
-    updated_at: '2026-08-19T16:27:21.150890'
+    created_at: '2026-08-19T22:28:59.753713',
+    updated_at: '2026-08-19T22:28:59.753714'
   },
   {
     id: '',
@@ -15999,8 +16070,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150892',
-    updated_at: '2026-08-19T16:27:21.150893'
+    created_at: '2026-08-19T22:28:59.753716',
+    updated_at: '2026-08-19T22:28:59.753717'
   },
   {
     id: '',
@@ -16015,8 +16086,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150895',
-    updated_at: '2026-08-19T16:27:21.150895'
+    created_at: '2026-08-19T22:28:59.753719',
+    updated_at: '2026-08-19T22:28:59.753720'
   },
   {
     id: '',
@@ -16031,8 +16102,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150897',
-    updated_at: '2026-08-19T16:27:21.150898'
+    created_at: '2026-08-19T22:28:59.753722',
+    updated_at: '2026-08-19T22:28:59.753722'
   },
   {
     id: '',
@@ -16047,8 +16118,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150901',
-    updated_at: '2026-08-19T16:27:21.150901'
+    created_at: '2026-08-19T22:28:59.753725',
+    updated_at: '2026-08-19T22:28:59.753725'
   },
   {
     id: '',
@@ -16063,8 +16134,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150904',
-    updated_at: '2026-08-19T16:27:21.150905'
+    created_at: '2026-08-19T22:28:59.753727',
+    updated_at: '2026-08-19T22:28:59.753728'
   },
   {
     id: '',
@@ -16079,8 +16150,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150907',
-    updated_at: '2026-08-19T16:27:21.150908'
+    created_at: '2026-08-19T22:28:59.753730',
+    updated_at: '2026-08-19T22:28:59.753731'
   },
   {
     id: '',
@@ -16095,8 +16166,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150910',
-    updated_at: '2026-08-19T16:27:21.150911'
+    created_at: '2026-08-19T22:28:59.753733',
+    updated_at: '2026-08-19T22:28:59.753734'
   },
   {
     id: '',
@@ -16111,8 +16182,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150913',
-    updated_at: '2026-08-19T16:27:21.150914'
+    created_at: '2026-08-19T22:28:59.753736',
+    updated_at: '2026-08-19T22:28:59.753737'
   },
   {
     id: '',
@@ -16127,8 +16198,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150916',
-    updated_at: '2026-08-19T16:27:21.150916'
+    created_at: '2026-08-19T22:28:59.753739',
+    updated_at: '2026-08-19T22:28:59.753740'
   },
   {
     id: '',
@@ -16143,8 +16214,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150919',
-    updated_at: '2026-08-19T16:27:21.150919'
+    created_at: '2026-08-19T22:28:59.753742',
+    updated_at: '2026-08-19T22:28:59.753743'
   },
   {
     id: '',
@@ -16159,8 +16230,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150922',
-    updated_at: '2026-08-19T16:27:21.150923'
+    created_at: '2026-08-19T22:28:59.753745',
+    updated_at: '2026-08-19T22:28:59.753746'
   },
   {
     id: '',
@@ -16175,8 +16246,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150925',
-    updated_at: '2026-08-19T16:27:21.150926'
+    created_at: '2026-08-19T22:28:59.753748',
+    updated_at: '2026-08-19T22:28:59.753749'
   },
   {
     id: '',
@@ -16191,8 +16262,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150928',
-    updated_at: '2026-08-19T16:27:21.150928'
+    created_at: '2026-08-19T22:28:59.753751',
+    updated_at: '2026-08-19T22:28:59.753752'
   },
   {
     id: '',
@@ -16207,8 +16278,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150931',
-    updated_at: '2026-08-19T16:27:21.150931'
+    created_at: '2026-08-19T22:28:59.753754',
+    updated_at: '2026-08-19T22:28:59.753754'
   },
   {
     id: '',
@@ -16223,8 +16294,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150934',
-    updated_at: '2026-08-19T16:27:21.150935'
+    created_at: '2026-08-19T22:28:59.753756',
+    updated_at: '2026-08-19T22:28:59.753757'
   },
   {
     id: '',
@@ -16239,8 +16310,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150937',
-    updated_at: '2026-08-19T16:27:21.150937'
+    created_at: '2026-08-19T22:28:59.753759',
+    updated_at: '2026-08-19T22:28:59.753760'
   },
   {
     id: '',
@@ -16255,8 +16326,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150939',
-    updated_at: '2026-08-19T16:27:21.150940'
+    created_at: '2026-08-19T22:28:59.753762',
+    updated_at: '2026-08-19T22:28:59.753763'
   },
   {
     id: '',
@@ -16271,8 +16342,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150942',
-    updated_at: '2026-08-19T16:27:21.150943'
+    created_at: '2026-08-19T22:28:59.753765',
+    updated_at: '2026-08-19T22:28:59.753766'
   },
   {
     id: '',
@@ -16287,8 +16358,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150945',
-    updated_at: '2026-08-19T16:27:21.150946'
+    created_at: '2026-08-19T22:28:59.753768',
+    updated_at: '2026-08-19T22:28:59.753769'
   },
   {
     id: '',
@@ -16303,8 +16374,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150948',
-    updated_at: '2026-08-19T16:27:21.150949'
+    created_at: '2026-08-19T22:28:59.753771',
+    updated_at: '2026-08-19T22:28:59.753772'
   },
   {
     id: '',
@@ -16319,8 +16390,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150951',
-    updated_at: '2026-08-19T16:27:21.150951'
+    created_at: '2026-08-19T22:28:59.753774',
+    updated_at: '2026-08-19T22:28:59.753775'
   },
   {
     id: '',
@@ -16335,8 +16406,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150954',
-    updated_at: '2026-08-19T16:27:21.150954'
+    created_at: '2026-08-19T22:28:59.753777',
+    updated_at: '2026-08-19T22:28:59.753778'
   },
   {
     id: '',
@@ -16351,8 +16422,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150957',
-    updated_at: '2026-08-19T16:27:21.150957'
+    created_at: '2026-08-19T22:28:59.753780',
+    updated_at: '2026-08-19T22:28:59.753781'
   },
   {
     id: '',
@@ -16367,8 +16438,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150959',
-    updated_at: '2026-08-19T16:27:21.150960'
+    created_at: '2026-08-19T22:28:59.753783',
+    updated_at: '2026-08-19T22:28:59.753784'
   },
   {
     id: '',
@@ -16383,8 +16454,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150962',
-    updated_at: '2026-08-19T16:27:21.150963'
+    created_at: '2026-08-19T22:28:59.753786',
+    updated_at: '2026-08-19T22:28:59.753787'
   },
   {
     id: '',
@@ -16399,8 +16470,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150965',
-    updated_at: '2026-08-19T16:27:21.150966'
+    created_at: '2026-08-19T22:28:59.753789',
+    updated_at: '2026-08-19T22:28:59.753789'
   },
   {
     id: '',
@@ -16415,8 +16486,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150968',
-    updated_at: '2026-08-19T16:27:21.150969'
+    created_at: '2026-08-19T22:28:59.753792',
+    updated_at: '2026-08-19T22:28:59.753792'
   },
   {
     id: '',
@@ -16431,8 +16502,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150971',
-    updated_at: '2026-08-19T16:27:21.150972'
+    created_at: '2026-08-19T22:28:59.753794',
+    updated_at: '2026-08-19T22:28:59.753795'
   },
   {
     id: '',
@@ -16447,8 +16518,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150974',
-    updated_at: '2026-08-19T16:27:21.150975'
+    created_at: '2026-08-19T22:28:59.753797',
+    updated_at: '2026-08-19T22:28:59.753798'
   },
   {
     id: '',
@@ -16463,8 +16534,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150977',
-    updated_at: '2026-08-19T16:27:21.150978'
+    created_at: '2026-08-19T22:28:59.753800',
+    updated_at: '2026-08-19T22:28:59.753801'
   },
   {
     id: '',
@@ -16479,8 +16550,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150980',
-    updated_at: '2026-08-19T16:27:21.150981'
+    created_at: '2026-08-19T22:28:59.753803',
+    updated_at: '2026-08-19T22:28:59.753804'
   },
   {
     id: '',
@@ -16495,8 +16566,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150983',
-    updated_at: '2026-08-19T16:27:21.150984'
+    created_at: '2026-08-19T22:28:59.753806',
+    updated_at: '2026-08-19T22:28:59.753807'
   },
   {
     id: '',
@@ -16511,8 +16582,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150986',
-    updated_at: '2026-08-19T16:27:21.150987'
+    created_at: '2026-08-19T22:28:59.753809',
+    updated_at: '2026-08-19T22:28:59.753810'
   },
   {
     id: '',
@@ -16527,8 +16598,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150989',
-    updated_at: '2026-08-19T16:27:21.150990'
+    created_at: '2026-08-19T22:28:59.753812',
+    updated_at: '2026-08-19T22:28:59.753813'
   },
   {
     id: '',
@@ -16543,8 +16614,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150992',
-    updated_at: '2026-08-19T16:27:21.150993'
+    created_at: '2026-08-19T22:28:59.753815',
+    updated_at: '2026-08-19T22:28:59.753815'
   },
   {
     id: '',
@@ -16559,8 +16630,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150995',
-    updated_at: '2026-08-19T16:27:21.150996'
+    created_at: '2026-08-19T22:28:59.753818',
+    updated_at: '2026-08-19T22:28:59.753818'
   },
   {
     id: '',
@@ -16575,8 +16646,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.150998',
-    updated_at: '2026-08-19T16:27:21.150999'
+    created_at: '2026-08-19T22:28:59.753820',
+    updated_at: '2026-08-19T22:28:59.753821'
   },
   {
     id: '',
@@ -16591,8 +16662,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151001',
-    updated_at: '2026-08-19T16:27:21.151002'
+    created_at: '2026-08-19T22:28:59.753824',
+    updated_at: '2026-08-19T22:28:59.753824'
   },
   {
     id: '',
@@ -16607,8 +16678,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151004',
-    updated_at: '2026-08-19T16:27:21.151005'
+    created_at: '2026-08-19T22:28:59.753826',
+    updated_at: '2026-08-19T22:28:59.753827'
   },
   {
     id: '',
@@ -16623,8 +16694,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151007',
-    updated_at: '2026-08-19T16:27:21.151008'
+    created_at: '2026-08-19T22:28:59.753829',
+    updated_at: '2026-08-19T22:28:59.753830'
   },
   {
     id: '',
@@ -16639,8 +16710,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151010',
-    updated_at: '2026-08-19T16:27:21.151011'
+    created_at: '2026-08-19T22:28:59.753832',
+    updated_at: '2026-08-19T22:28:59.753833'
   },
   {
     id: '',
@@ -16655,8 +16726,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151013',
-    updated_at: '2026-08-19T16:27:21.151014'
+    created_at: '2026-08-19T22:28:59.753835',
+    updated_at: '2026-08-19T22:28:59.753836'
   },
   {
     id: '',
@@ -16671,8 +16742,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151016',
-    updated_at: '2026-08-19T16:27:21.151017'
+    created_at: '2026-08-19T22:28:59.753838',
+    updated_at: '2026-08-19T22:28:59.753839'
   },
   {
     id: '',
@@ -16687,8 +16758,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151019',
-    updated_at: '2026-08-19T16:27:21.151019'
+    created_at: '2026-08-19T22:28:59.753841',
+    updated_at: '2026-08-19T22:28:59.753841'
   },
   {
     id: '',
@@ -16703,8 +16774,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151022',
-    updated_at: '2026-08-19T16:27:21.151022'
+    created_at: '2026-08-19T22:28:59.753843',
+    updated_at: '2026-08-19T22:28:59.753844'
   },
   {
     id: '',
@@ -16719,8 +16790,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151025',
-    updated_at: '2026-08-19T16:27:21.151025'
+    created_at: '2026-08-19T22:28:59.753846',
+    updated_at: '2026-08-19T22:28:59.753847'
   },
   {
     id: '',
@@ -16735,8 +16806,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151028',
-    updated_at: '2026-08-19T16:27:21.151029'
+    created_at: '2026-08-19T22:28:59.753850',
+    updated_at: '2026-08-19T22:28:59.753850'
   },
   {
     id: '',
@@ -16751,8 +16822,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151031',
-    updated_at: '2026-08-19T16:27:21.151032'
+    created_at: '2026-08-19T22:28:59.753852',
+    updated_at: '2026-08-19T22:28:59.753853'
   },
   {
     id: '',
@@ -16767,8 +16838,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151034',
-    updated_at: '2026-08-19T16:27:21.151035'
+    created_at: '2026-08-19T22:28:59.753855',
+    updated_at: '2026-08-19T22:28:59.753856'
   },
   {
     id: '',
@@ -16783,8 +16854,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151037',
-    updated_at: '2026-08-19T16:27:21.151037'
+    created_at: '2026-08-19T22:28:59.753858',
+    updated_at: '2026-08-19T22:28:59.753859'
   },
   {
     id: '',
@@ -16799,8 +16870,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151039',
-    updated_at: '2026-08-19T16:27:21.151040'
+    created_at: '2026-08-19T22:28:59.753861',
+    updated_at: '2026-08-19T22:28:59.753862'
   },
   {
     id: '',
@@ -16815,8 +16886,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151042',
-    updated_at: '2026-08-19T16:27:21.151043'
+    created_at: '2026-08-19T22:28:59.753864',
+    updated_at: '2026-08-19T22:28:59.753865'
   },
   {
     id: '',
@@ -16831,8 +16902,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151045',
-    updated_at: '2026-08-19T16:27:21.151046'
+    created_at: '2026-08-19T22:28:59.753867',
+    updated_at: '2026-08-19T22:28:59.753868'
   },
   {
     id: '',
@@ -16847,8 +16918,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151048',
-    updated_at: '2026-08-19T16:27:21.151049'
+    created_at: '2026-08-19T22:28:59.753870',
+    updated_at: '2026-08-19T22:28:59.753871'
   },
   {
     id: '',
@@ -16863,8 +16934,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151051',
-    updated_at: '2026-08-19T16:27:21.151052'
+    created_at: '2026-08-19T22:28:59.753873',
+    updated_at: '2026-08-19T22:28:59.753874'
   },
   {
     id: '',
@@ -16879,8 +16950,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151054',
-    updated_at: '2026-08-19T16:27:21.151055'
+    created_at: '2026-08-19T22:28:59.753876',
+    updated_at: '2026-08-19T22:28:59.753877'
   },
   {
     id: '',
@@ -16895,8 +16966,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151057',
-    updated_at: '2026-08-19T16:27:21.151058'
+    created_at: '2026-08-19T22:28:59.753879',
+    updated_at: '2026-08-19T22:28:59.753880'
   },
   {
     id: '',
@@ -16911,8 +16982,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151060',
-    updated_at: '2026-08-19T16:27:21.151061'
+    created_at: '2026-08-19T22:28:59.753882',
+    updated_at: '2026-08-19T22:28:59.753883'
   },
   {
     id: '',
@@ -16927,12 +16998,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151063',
-    updated_at: '2026-08-19T16:27:21.151064'
+    created_at: '2026-08-19T22:28:59.753885',
+    updated_at: '2026-08-19T22:28:59.753886'
   },
   {
     id: '',
-    name: 'O\'Guinn Family Funeral Homes',
+    name: 'O'Guinn Family Funeral Homes',
     company: '',
     email: '',
     phone: '(810) 686-5070',
@@ -16943,8 +17014,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151066',
-    updated_at: '2026-08-19T16:27:21.151067'
+    created_at: '2026-08-19T22:28:59.753888',
+    updated_at: '2026-08-19T22:28:59.753889'
   },
   {
     id: '',
@@ -16959,8 +17030,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151069',
-    updated_at: '2026-08-19T16:27:21.151070'
+    created_at: '2026-08-19T22:28:59.753891',
+    updated_at: '2026-08-19T22:28:59.753892'
   },
   {
     id: '',
@@ -16975,8 +17046,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151072',
-    updated_at: '2026-08-19T16:27:21.151073'
+    created_at: '2026-08-19T22:28:59.753894',
+    updated_at: '2026-08-19T22:28:59.753895'
   },
   {
     id: '',
@@ -16991,8 +17062,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151075',
-    updated_at: '2026-08-19T16:27:21.151076'
+    created_at: '2026-08-19T22:28:59.753897',
+    updated_at: '2026-08-19T22:28:59.753898'
   },
   {
     id: '',
@@ -17007,8 +17078,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151078',
-    updated_at: '2026-08-19T16:27:21.151079'
+    created_at: '2026-08-19T22:28:59.753900',
+    updated_at: '2026-08-19T22:28:59.753901'
   },
   {
     id: '',
@@ -17023,8 +17094,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151081',
-    updated_at: '2026-08-19T16:27:21.151082'
+    created_at: '2026-08-19T22:28:59.753903',
+    updated_at: '2026-08-19T22:28:59.753904'
   },
   {
     id: '',
@@ -17039,8 +17110,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151084',
-    updated_at: '2026-08-19T16:27:21.151084'
+    created_at: '2026-08-19T22:28:59.753906',
+    updated_at: '2026-08-19T22:28:59.753906'
   },
   {
     id: '',
@@ -17055,8 +17126,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151087',
-    updated_at: '2026-08-19T16:27:21.151087'
+    created_at: '2026-08-19T22:28:59.753909',
+    updated_at: '2026-08-19T22:28:59.753909'
   },
   {
     id: '',
@@ -17071,8 +17142,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151090',
-    updated_at: '2026-08-19T16:27:21.151090'
+    created_at: '2026-08-19T22:28:59.753912',
+    updated_at: '2026-08-19T22:28:59.753912'
   },
   {
     id: '',
@@ -17087,8 +17158,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151093',
-    updated_at: '2026-08-19T16:27:21.151093'
+    created_at: '2026-08-19T22:28:59.753914',
+    updated_at: '2026-08-19T22:28:59.753915'
   },
   {
     id: '',
@@ -17103,8 +17174,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151096',
-    updated_at: '2026-08-19T16:27:21.151096'
+    created_at: '2026-08-19T22:28:59.753917',
+    updated_at: '2026-08-19T22:28:59.753918'
   },
   {
     id: '',
@@ -17119,8 +17190,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151099',
-    updated_at: '2026-08-19T16:27:21.151099'
+    created_at: '2026-08-19T22:28:59.753920',
+    updated_at: '2026-08-19T22:28:59.753921'
   },
   {
     id: '',
@@ -17135,8 +17206,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151102',
-    updated_at: '2026-08-19T16:27:21.151103'
+    created_at: '2026-08-19T22:28:59.753923',
+    updated_at: '2026-08-19T22:28:59.753924'
   },
   {
     id: '',
@@ -17151,8 +17222,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151105',
-    updated_at: '2026-08-19T16:27:21.151106'
+    created_at: '2026-08-19T22:28:59.753926',
+    updated_at: '2026-08-19T22:28:59.753927'
   },
   {
     id: '',
@@ -17167,8 +17238,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151108',
-    updated_at: '2026-08-19T16:27:21.151109'
+    created_at: '2026-08-19T22:28:59.753930',
+    updated_at: '2026-08-19T22:28:59.753930'
   },
   {
     id: '',
@@ -17183,8 +17254,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151111',
-    updated_at: '2026-08-19T16:27:21.151112'
+    created_at: '2026-08-19T22:28:59.753933',
+    updated_at: '2026-08-19T22:28:59.753933'
   },
   {
     id: '',
@@ -17199,8 +17270,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151114',
-    updated_at: '2026-08-19T16:27:21.151115'
+    created_at: '2026-08-19T22:28:59.753936',
+    updated_at: '2026-08-19T22:28:59.753937'
   },
   {
     id: '',
@@ -17215,8 +17286,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151117',
-    updated_at: '2026-08-19T16:27:21.151118'
+    created_at: '2026-08-19T22:28:59.753939',
+    updated_at: '2026-08-19T22:28:59.753939'
   },
   {
     id: '',
@@ -17231,8 +17302,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151120',
-    updated_at: '2026-08-19T16:27:21.151121'
+    created_at: '2026-08-19T22:28:59.753942',
+    updated_at: '2026-08-19T22:28:59.753942'
   },
   {
     id: '',
@@ -17247,8 +17318,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151123',
-    updated_at: '2026-08-19T16:27:21.151124'
+    created_at: '2026-08-19T22:28:59.753944',
+    updated_at: '2026-08-19T22:28:59.753945'
   },
   {
     id: '',
@@ -17263,8 +17334,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151126',
-    updated_at: '2026-08-19T16:27:21.151127'
+    created_at: '2026-08-19T22:28:59.753947',
+    updated_at: '2026-08-19T22:28:59.753948'
   },
   {
     id: '',
@@ -17279,8 +17350,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151129',
-    updated_at: '2026-08-19T16:27:21.151130'
+    created_at: '2026-08-19T22:28:59.753950',
+    updated_at: '2026-08-19T22:28:59.753951'
   },
   {
     id: '',
@@ -17295,12 +17366,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151132',
-    updated_at: '2026-08-19T16:27:21.151133'
+    created_at: '2026-08-19T22:28:59.753953',
+    updated_at: '2026-08-19T22:28:59.753954'
   },
   {
     id: '',
-    name: 'CHET\'S AUTO SERVICE',
+    name: 'CHET'S AUTO SERVICE',
     company: '',
     email: '',
     phone: '(810) 767-9201',
@@ -17311,8 +17382,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151135',
-    updated_at: '2026-08-19T16:27:21.151136'
+    created_at: '2026-08-19T22:28:59.753956',
+    updated_at: '2026-08-19T22:28:59.753957'
   },
   {
     id: '',
@@ -17327,8 +17398,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151138',
-    updated_at: '2026-08-19T16:27:21.151139'
+    created_at: '2026-08-19T22:28:59.753959',
+    updated_at: '2026-08-19T22:28:59.753960'
   },
   {
     id: '',
@@ -17343,8 +17414,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151141',
-    updated_at: '2026-08-19T16:27:21.151142'
+    created_at: '2026-08-19T22:28:59.753962',
+    updated_at: '2026-08-19T22:28:59.753962'
   },
   {
     id: '',
@@ -17359,8 +17430,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151144',
-    updated_at: '2026-08-19T16:27:21.151145'
+    created_at: '2026-08-19T22:28:59.753965',
+    updated_at: '2026-08-19T22:28:59.753965'
   },
   {
     id: '',
@@ -17375,8 +17446,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151147',
-    updated_at: '2026-08-19T16:27:21.151148'
+    created_at: '2026-08-19T22:28:59.753968',
+    updated_at: '2026-08-19T22:28:59.753968'
   },
   {
     id: '',
@@ -17391,8 +17462,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151150',
-    updated_at: '2026-08-19T16:27:21.151150'
+    created_at: '2026-08-19T22:28:59.753970',
+    updated_at: '2026-08-19T22:28:59.753971'
   },
   {
     id: '',
@@ -17407,8 +17478,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151153',
-    updated_at: '2026-08-19T16:27:21.151153'
+    created_at: '2026-08-19T22:28:59.753973',
+    updated_at: '2026-08-19T22:28:59.753974'
   },
   {
     id: '',
@@ -17423,8 +17494,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151155',
-    updated_at: '2026-08-19T16:27:21.151156'
+    created_at: '2026-08-19T22:28:59.753976',
+    updated_at: '2026-08-19T22:28:59.753977'
   },
   {
     id: '',
@@ -17439,8 +17510,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151158',
-    updated_at: '2026-08-19T16:27:21.151159'
+    created_at: '2026-08-19T22:28:59.753979',
+    updated_at: '2026-08-19T22:28:59.753980'
   },
   {
     id: '',
@@ -17455,8 +17526,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151161',
-    updated_at: '2026-08-19T16:27:21.151162'
+    created_at: '2026-08-19T22:28:59.753982',
+    updated_at: '2026-08-19T22:28:59.753983'
   },
   {
     id: '',
@@ -17471,8 +17542,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151164',
-    updated_at: '2026-08-19T16:27:21.151165'
+    created_at: '2026-08-19T22:28:59.753985',
+    updated_at: '2026-08-19T22:28:59.753986'
   },
   {
     id: '',
@@ -17487,8 +17558,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151167',
-    updated_at: '2026-08-19T16:27:21.151168'
+    created_at: '2026-08-19T22:28:59.753988',
+    updated_at: '2026-08-19T22:28:59.753988'
   },
   {
     id: '',
@@ -17503,8 +17574,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151170',
-    updated_at: '2026-08-19T16:27:21.151171'
+    created_at: '2026-08-19T22:28:59.753990',
+    updated_at: '2026-08-19T22:28:59.753991'
   },
   {
     id: '',
@@ -17519,8 +17590,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151173',
-    updated_at: '2026-08-19T16:27:21.151174'
+    created_at: '2026-08-19T22:28:59.753993',
+    updated_at: '2026-08-19T22:28:59.753994'
   },
   {
     id: '',
@@ -17535,8 +17606,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151176',
-    updated_at: '2026-08-19T16:27:21.151176'
+    created_at: '2026-08-19T22:28:59.753996',
+    updated_at: '2026-08-19T22:28:59.753997'
   },
   {
     id: '',
@@ -17551,8 +17622,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151179',
-    updated_at: '2026-08-19T16:27:21.151179'
+    created_at: '2026-08-19T22:28:59.753999',
+    updated_at: '2026-08-19T22:28:59.754000'
   },
   {
     id: '',
@@ -17567,12 +17638,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151182',
-    updated_at: '2026-08-19T16:27:21.151182'
+    created_at: '2026-08-19T22:28:59.754002',
+    updated_at: '2026-08-19T22:28:59.754003'
   },
   {
     id: '',
-    name: 'Beny\'s Coffee',    company: '',
+    name: 'Beny's Coffee',
+    company: '',
     email: '',
     phone: '(810) 214-1016',
     website: 'https://benyscoffee.com/',
@@ -17582,8 +17654,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151184',
-    updated_at: '2026-08-19T16:27:21.151185'
+    created_at: '2026-08-19T22:28:59.754005',
+    updated_at: '2026-08-19T22:28:59.754006'
   },
   {
     id: '',
@@ -17598,8 +17670,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151187',
-    updated_at: '2026-08-19T16:27:21.151188'
+    created_at: '2026-08-19T22:28:59.754008',
+    updated_at: '2026-08-19T22:28:59.754009'
   },
   {
     id: '',
@@ -17614,8 +17686,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151190',
-    updated_at: '2026-08-19T16:27:21.151191'
+    created_at: '2026-08-19T22:28:59.754011',
+    updated_at: '2026-08-19T22:28:59.754012'
   },
   {
     id: '',
@@ -17630,12 +17702,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151193',
-    updated_at: '2026-08-19T16:27:21.151194'
+    created_at: '2026-08-19T22:28:59.754014',
+    updated_at: '2026-08-19T22:28:59.754015'
   },
   {
     id: '',
-    name: 'Scooter\'s Coffee',    company: '',
+    name: 'Scooter's Coffee',
+    company: '',
     email: '',
     phone: '(877) 719-1288',
     website: 'https://scooterscoffee.com/',
@@ -17645,12 +17718,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151196',
-    updated_at: '2026-08-19T16:27:21.151196'
+    created_at: '2026-08-19T22:28:59.754017',
+    updated_at: '2026-08-19T22:28:59.754018'
   },
   {
     id: '',
-    name: 'ZD\'s Corner',    company: '',
+    name: 'ZD's Corner',
+    company: '',
     email: '',
     phone: '(810) 487-9065',
     website: 'https://zdscorner.com/',
@@ -17660,8 +17734,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151199',
-    updated_at: '2026-08-19T16:27:21.151199'
+    created_at: '2026-08-19T22:28:59.754020',
+    updated_at: '2026-08-19T22:28:59.754021'
   },
   {
     id: '',
@@ -17676,8 +17750,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151202',
-    updated_at: '2026-08-19T16:27:21.151203'
+    created_at: '2026-08-19T22:28:59.754023',
+    updated_at: '2026-08-19T22:28:59.754024'
   },
   {
     id: '',
@@ -17692,8 +17766,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151205',
-    updated_at: '2026-08-19T16:27:21.151206'
+    created_at: '2026-08-19T22:28:59.754026',
+    updated_at: '2026-08-19T22:28:59.754027'
   },
   {
     id: '',
@@ -17708,12 +17782,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151208',
-    updated_at: '2026-08-19T16:27:21.151208'
+    created_at: '2026-08-19T22:28:59.754029',
+    updated_at: '2026-08-19T22:28:59.754030'
   },
   {
     id: '',
-    name: 'Vogt\'s Flowers and Gifts',    company: '',
+    name: 'Vogt's Flowers and Gifts',
+    company: '',
     email: '',
     phone: '(810) 238-6487',
     website: 'http://www.vogtsflowers.com/',
@@ -17723,8 +17798,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151210',
-    updated_at: '2026-08-19T16:27:21.151211'
+    created_at: '2026-08-19T22:28:59.754032',
+    updated_at: '2026-08-19T22:28:59.754032'
   },
   {
     id: '',
@@ -17739,12 +17814,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151213',
-    updated_at: '2026-08-19T16:27:21.151214'
+    created_at: '2026-08-19T22:28:59.754035',
+    updated_at: '2026-08-19T22:28:59.754035'
   },
   {
     id: '',
-    name: 'Anthea\'s Gardens of Flint - Formerly Carousel Family Florist',    company: '',
+    name: 'Anthea's Gardens of Flint - Formerly Carousel Family Florist',
+    company: '',
     email: '',
     phone: '(810) 732-6871',
     website: 'https://www.antheasgardens.com/',
@@ -17754,8 +17830,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151216',
-    updated_at: '2026-08-19T16:27:21.151217'
+    created_at: '2026-08-19T22:28:59.754037',
+    updated_at: '2026-08-19T22:28:59.754038'
   },
   {
     id: '',
@@ -17770,8 +17846,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151219',
-    updated_at: '2026-08-19T16:27:21.151220'
+    created_at: '2026-08-19T22:28:59.754040',
+    updated_at: '2026-08-19T22:28:59.754041'
   },
   {
     id: '',
@@ -17786,12 +17862,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151222',
-    updated_at: '2026-08-19T16:27:21.151223'
+    created_at: '2026-08-19T22:28:59.754043',
+    updated_at: '2026-08-19T22:28:59.754044'
   },
   {
     id: '',
-    name: 'Mary\'s Bouquet & Gifts',    company: '',
+    name: 'Mary's Bouquet & Gifts',
+    company: '',
     email: '',
     phone: '(810) 235-3822',
     website: 'https://marys-bouquet-gifts.edan.io/',
@@ -17801,12 +17878,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151225',
-    updated_at: '2026-08-19T16:27:21.151226'
+    created_at: '2026-08-19T22:28:59.754046',
+    updated_at: '2026-08-19T22:28:59.754047'
   },
   {
     id: '',
-    name: 'Fenner\'s Floral and Design Company',    company: '',
+    name: 'Fenner's Floral and Design Company',
+    company: '',
     email: '',
     phone: '(810) 820-2312',
     website: 'http://fennersfloral.com/',
@@ -17816,8 +17894,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151228',
-    updated_at: '2026-08-19T16:27:21.151229'
+    created_at: '2026-08-19T22:28:59.754049',
+    updated_at: '2026-08-19T22:28:59.754050'
   },
   {
     id: '',
@@ -17832,8 +17910,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151231',
-    updated_at: '2026-08-19T16:27:21.151232'
+    created_at: '2026-08-19T22:28:59.754052',
+    updated_at: '2026-08-19T22:28:59.754053'
   },
   {
     id: '',
@@ -17848,12 +17926,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151234',
-    updated_at: '2026-08-19T16:27:21.151235'
+    created_at: '2026-08-19T22:28:59.754055',
+    updated_at: '2026-08-19T22:28:59.754056'
   },
   {
     id: '',
-    name: 'Pink Lady\'s Slipper',    company: '',
+    name: 'Pink Lady's Slipper',
+    company: '',
     email: '',
     phone: '(810) 635-8164',
     website: 'https://www.plsfloral.com/',
@@ -17863,12 +17942,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151236',
-    updated_at: '2026-08-19T16:27:21.151237'
+    created_at: '2026-08-19T22:28:59.754058',
+    updated_at: '2026-08-19T22:28:59.754059'
   },
   {
     id: '',
-    name: 'Vogt\'s Flowers of Davison',    company: '',
+    name: 'Vogt's Flowers of Davison',
+    company: '',
     email: '',
     phone: '(810) 653-3700',
     website: 'http://www.vogtsflowersdavison.com/',
@@ -17878,8 +17958,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151239',
-    updated_at: '2026-08-19T16:27:21.151240'
+    created_at: '2026-08-19T22:28:59.754061',
+    updated_at: '2026-08-19T22:28:59.754062'
   },
   {
     id: '',
@@ -17894,12 +17974,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151243',
-    updated_at: '2026-08-19T16:27:21.151243'
+    created_at: '2026-08-19T22:28:59.754064',
+    updated_at: '2026-08-19T22:28:59.754065'
   },
   {
     id: '',
-    name: 'MarySam\'s Florist and Plant Shop',    company: '',
+    name: 'MarySam's Florist and Plant Shop',
+    company: '',
     email: '',
     phone: '(810) 309-9694',
     website: 'http://marysamsgardens.square.site/',
@@ -17909,8 +17990,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151245',
-    updated_at: '2026-08-19T16:27:21.151246'
+    created_at: '2026-08-19T22:28:59.754067',
+    updated_at: '2026-08-19T22:28:59.754068'
   },
   {
     id: '',
@@ -17925,8 +18006,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151248',
-    updated_at: '2026-08-19T16:27:21.151249'
+    created_at: '2026-08-19T22:28:59.754070',
+    updated_at: '2026-08-19T22:28:59.754070'
   },
   {
     id: '',
@@ -17941,8 +18022,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151251',
-    updated_at: '2026-08-19T16:27:21.151252'
+    created_at: '2026-08-19T22:28:59.754073',
+    updated_at: '2026-08-19T22:28:59.754073'
   },
   {
     id: '',
@@ -17957,12 +18038,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151254',
-    updated_at: '2026-08-19T16:27:21.151255'
+    created_at: '2026-08-19T22:28:59.754075',
+    updated_at: '2026-08-19T22:28:59.754076'
   },
   {
     id: '',
-    name: 'Ken\'s Greenhouse',    company: '',
+    name: 'Ken's Greenhouse',
+    company: '',
     email: '',
     phone: '(810) 732-8522',
     website: 'http://www.kensgreenhouse.com/',
@@ -17972,8 +18054,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151257',
-    updated_at: '2026-08-19T16:27:21.151257'
+    created_at: '2026-08-19T22:28:59.754078',
+    updated_at: '2026-08-19T22:28:59.754079'
   },
   {
     id: '',
@@ -17988,8 +18070,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151260',
-    updated_at: '2026-08-19T16:27:21.151260'
+    created_at: '2026-08-19T22:28:59.754081',
+    updated_at: '2026-08-19T22:28:59.754082'
   },
   {
     id: '',
@@ -18004,8 +18086,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151263',
-    updated_at: '2026-08-19T16:27:21.151263'
+    created_at: '2026-08-19T22:28:59.754084',
+    updated_at: '2026-08-19T22:28:59.754085'
   },
   {
     id: '',
@@ -18020,8 +18102,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151266',
-    updated_at: '2026-08-19T16:27:21.151266'
+    created_at: '2026-08-19T22:28:59.754087',
+    updated_at: '2026-08-19T22:28:59.754088'
   },
   {
     id: '',
@@ -18036,8 +18118,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151268',
-    updated_at: '2026-08-19T16:27:21.151269'
+    created_at: '2026-08-19T22:28:59.754090',
+    updated_at: '2026-08-19T22:28:59.754091'
   },
   {
     id: '',
@@ -18052,8 +18134,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151271',
-    updated_at: '2026-08-19T16:27:21.151272'
+    created_at: '2026-08-19T22:28:59.754093',
+    updated_at: '2026-08-19T22:28:59.754094'
   },
   {
     id: '',
@@ -18068,8 +18150,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151275',
-    updated_at: '2026-08-19T16:27:21.151275'
+    created_at: '2026-08-19T22:28:59.754096',
+    updated_at: '2026-08-19T22:28:59.754097'
   },
   {
     id: '',
@@ -18084,8 +18166,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151278',
-    updated_at: '2026-08-19T16:27:21.151278'
+    created_at: '2026-08-19T22:28:59.754099',
+    updated_at: '2026-08-19T22:28:59.754100'
   },
   {
     id: '',
@@ -18100,8 +18182,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151280',
-    updated_at: '2026-08-19T16:27:21.151281'
+    created_at: '2026-08-19T22:28:59.754102',
+    updated_at: '2026-08-19T22:28:59.754103'
   },
   {
     id: '',
@@ -18116,8 +18198,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151283',
-    updated_at: '2026-08-19T16:27:21.151284'
+    created_at: '2026-08-19T22:28:59.754105',
+    updated_at: '2026-08-19T22:28:59.754105'
   },
   {
     id: '',
@@ -18132,8 +18214,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151286',
-    updated_at: '2026-08-19T16:27:21.151287'
+    created_at: '2026-08-19T22:28:59.754108',
+    updated_at: '2026-08-19T22:28:59.754108'
   },
   {
     id: '',
@@ -18148,8 +18230,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151289',
-    updated_at: '2026-08-19T16:27:21.151290'
+    created_at: '2026-08-19T22:28:59.754111',
+    updated_at: '2026-08-19T22:28:59.754112'
   },
   {
     id: '',
@@ -18164,8 +18246,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151292',
-    updated_at: '2026-08-19T16:27:21.151293'
+    created_at: '2026-08-19T22:28:59.754114',
+    updated_at: '2026-08-19T22:28:59.754114'
   },
   {
     id: '',
@@ -18180,8 +18262,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151295',
-    updated_at: '2026-08-19T16:27:21.151296'
+    created_at: '2026-08-19T22:28:59.754117',
+    updated_at: '2026-08-19T22:28:59.754117'
   },
   {
     id: '',
@@ -18196,12 +18278,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151299',
-    updated_at: '2026-08-19T16:27:21.151299'
+    created_at: '2026-08-19T22:28:59.754120',
+    updated_at: '2026-08-19T22:28:59.754120'
   },
   {
     id: '',
-    name: 'Victoria\'s House',    company: '',
+    name: 'Victoria's House',
+    company: '',
     email: '',
     phone: '(810) 732-1946',
     website: 'http://www.westernhillsliving.com/',
@@ -18211,8 +18294,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151302',
-    updated_at: '2026-08-19T16:27:21.151302'
+    created_at: '2026-08-19T22:28:59.754123',
+    updated_at: '2026-08-19T22:28:59.754124'
   },
   {
     id: '',
@@ -18227,8 +18310,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151305',
-    updated_at: '2026-08-19T16:27:21.151305'
+    created_at: '2026-08-19T22:28:59.754126',
+    updated_at: '2026-08-19T22:28:59.754127'
   },
   {
     id: '',
@@ -18243,8 +18326,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151308',
-    updated_at: '2026-08-19T16:27:21.151309'
+    created_at: '2026-08-19T22:28:59.754129',
+    updated_at: '2026-08-19T22:28:59.754130'
   },
   {
     id: '',
@@ -18259,8 +18342,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151311',
-    updated_at: '2026-08-19T16:27:21.151312'
+    created_at: '2026-08-19T22:28:59.754132',
+    updated_at: '2026-08-19T22:28:59.754132'
   },
   {
     id: '',
@@ -18275,8 +18358,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151314',
-    updated_at: '2026-08-19T16:27:21.151315'
+    created_at: '2026-08-19T22:28:59.754135',
+    updated_at: '2026-08-19T22:28:59.754135'
   },
   {
     id: '',
@@ -18291,8 +18374,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151317',
-    updated_at: '2026-08-19T16:27:21.151318'
+    created_at: '2026-08-19T22:28:59.754138',
+    updated_at: '2026-08-19T22:28:59.754138'
   },
   {
     id: '',
@@ -18307,8 +18390,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151320',
-    updated_at: '2026-08-19T16:27:21.151321'
+    created_at: '2026-08-19T22:28:59.754141',
+    updated_at: '2026-08-19T22:28:59.754141'
   },
   {
     id: '',
@@ -18323,8 +18406,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151323',
-    updated_at: '2026-08-19T16:27:21.151324'
+    created_at: '2026-08-19T22:28:59.754144',
+    updated_at: '2026-08-19T22:28:59.754144'
   },
   {
     id: '',
@@ -18339,8 +18422,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151326',
-    updated_at: '2026-08-19T16:27:21.151327'
+    created_at: '2026-08-19T22:28:59.754147',
+    updated_at: '2026-08-19T22:28:59.754147'
   },
   {
     id: '',
@@ -18355,8 +18438,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151329',
-    updated_at: '2026-08-19T16:27:21.151330'
+    created_at: '2026-08-19T22:28:59.754150',
+    updated_at: '2026-08-19T22:28:59.754150'
   },
   {
     id: '',
@@ -18371,8 +18454,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151332',
-    updated_at: '2026-08-19T16:27:21.151333'
+    created_at: '2026-08-19T22:28:59.754152',
+    updated_at: '2026-08-19T22:28:59.754153'
   },
   {
     id: '',
@@ -18387,8 +18470,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151335',
-    updated_at: '2026-08-19T16:27:21.151336'
+    created_at: '2026-08-19T22:28:59.754155',
+    updated_at: '2026-08-19T22:28:59.754156'
   },
   {
     id: '',
@@ -18403,8 +18486,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151338',
-    updated_at: '2026-08-19T16:27:21.151339'
+    created_at: '2026-08-19T22:28:59.754158',
+    updated_at: '2026-08-19T22:28:59.754159'
   },
   {
     id: '',
@@ -18419,8 +18502,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151341',
-    updated_at: '2026-08-19T16:27:21.151341'
+    created_at: '2026-08-19T22:28:59.754161',
+    updated_at: '2026-08-19T22:28:59.754162'
   },
   {
     id: '',
@@ -18435,8 +18518,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151344',
-    updated_at: '2026-08-19T16:27:21.151344'
+    created_at: '2026-08-19T22:28:59.754164',
+    updated_at: '2026-08-19T22:28:59.754165'
   },
   {
     id: '',
@@ -18451,8 +18534,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151347',
-    updated_at: '2026-08-19T16:27:21.151348'
+    created_at: '2026-08-19T22:28:59.754167',
+    updated_at: '2026-08-19T22:28:59.754168'
   },
   {
     id: '',
@@ -18467,8 +18550,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151350',
-    updated_at: '2026-08-19T16:27:21.151350'
+    created_at: '2026-08-19T22:28:59.754170',
+    updated_at: '2026-08-19T22:28:59.754171'
   },
   {
     id: '',
@@ -18483,12 +18566,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151352',
-    updated_at: '2026-08-19T16:27:21.151353'
+    created_at: '2026-08-19T22:28:59.754173',
+    updated_at: '2026-08-19T22:28:59.754174'
   },
   {
     id: '',
-    name: 'Walker June Calhoun CPA\'s, PC',    company: '',
+    name: 'Walker June Calhoun CPA's, PC',
+    company: '',
     email: '',
     phone: '(810) 743-5000',
     website: 'http://walkerjunecalhoun.com/',
@@ -18498,8 +18582,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151355',
-    updated_at: '2026-08-19T16:27:21.151356'
+    created_at: '2026-08-19T22:28:59.754176',
+    updated_at: '2026-08-19T22:28:59.754177'
   },
   {
     id: '',
@@ -18514,8 +18598,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151358',
-    updated_at: '2026-08-19T16:27:21.151359'
+    created_at: '2026-08-19T22:28:59.754179',
+    updated_at: '2026-08-19T22:28:59.754179'
   },
   {
     id: '',
@@ -18530,8 +18614,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151362',
-    updated_at: '2026-08-19T16:27:21.151363'
+    created_at: '2026-08-19T22:28:59.754182',
+    updated_at: '2026-08-19T22:28:59.754182'
   },
   {
     id: '',
@@ -18546,8 +18630,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151365',
-    updated_at: '2026-08-19T16:27:21.151366'
+    created_at: '2026-08-19T22:28:59.754185',
+    updated_at: '2026-08-19T22:28:59.754185'
   },
   {
     id: '',
@@ -18562,8 +18646,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151368',
-    updated_at: '2026-08-19T16:27:21.151369'
+    created_at: '2026-08-19T22:28:59.754187',
+    updated_at: '2026-08-19T22:28:59.754188'
   },
   {
     id: '',
@@ -18578,8 +18662,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151371',
-    updated_at: '2026-08-19T16:27:21.151371'
+    created_at: '2026-08-19T22:28:59.754190',
+    updated_at: '2026-08-19T22:28:59.754191'
   },
   {
     id: '',
@@ -18594,8 +18678,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151374',
-    updated_at: '2026-08-19T16:27:21.151374'
+    created_at: '2026-08-19T22:28:59.754193',
+    updated_at: '2026-08-19T22:28:59.754194'
   },
   {
     id: '',
@@ -18610,8 +18694,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151376',
-    updated_at: '2026-08-19T16:27:21.151377'
+    created_at: '2026-08-19T22:28:59.754196',
+    updated_at: '2026-08-19T22:28:59.754197'
   },
   {
     id: '',
@@ -18626,8 +18710,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151379',
-    updated_at: '2026-08-19T16:27:21.151380'
+    created_at: '2026-08-19T22:28:59.754199',
+    updated_at: '2026-08-19T22:28:59.754200'
   },
   {
     id: '',
@@ -18642,8 +18726,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151382',
-    updated_at: '2026-08-19T16:27:21.151383'
+    created_at: '2026-08-19T22:28:59.754202',
+    updated_at: '2026-08-19T22:28:59.754203'
   },
   {
     id: '',
@@ -18658,8 +18742,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151385',
-    updated_at: '2026-08-19T16:27:21.151386'
+    created_at: '2026-08-19T22:28:59.754205',
+    updated_at: '2026-08-19T22:28:59.754206'
   },
   {
     id: '',
@@ -18674,8 +18758,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151388',
-    updated_at: '2026-08-19T16:27:21.151389'
+    created_at: '2026-08-19T22:28:59.754208',
+    updated_at: '2026-08-19T22:28:59.754209'
   },
   {
     id: '',
@@ -18690,8 +18774,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151391',
-    updated_at: '2026-08-19T16:27:21.151392'
+    created_at: '2026-08-19T22:28:59.754220',
+    updated_at: '2026-08-19T22:28:59.754221'
   },
   {
     id: '',
@@ -18706,8 +18790,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151394',
-    updated_at: '2026-08-19T16:27:21.151395'
+    created_at: '2026-08-19T22:28:59.754223',
+    updated_at: '2026-08-19T22:28:59.754224'
   },
   {
     id: '',
@@ -18722,8 +18806,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151397',
-    updated_at: '2026-08-19T16:27:21.151398'
+    created_at: '2026-08-19T22:28:59.754226',
+    updated_at: '2026-08-19T22:28:59.754227'
   },
   {
     id: '',
@@ -18738,8 +18822,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151400',
-    updated_at: '2026-08-19T16:27:21.151400'
+    created_at: '2026-08-19T22:28:59.754229',
+    updated_at: '2026-08-19T22:28:59.754230'
   },
   {
     id: '',
@@ -18754,8 +18838,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151402',
-    updated_at: '2026-08-19T16:27:21.151403'
+    created_at: '2026-08-19T22:28:59.754232',
+    updated_at: '2026-08-19T22:28:59.754233'
   },
   {
     id: '',
@@ -18770,8 +18854,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151405',
-    updated_at: '2026-08-19T16:27:21.151406'
+    created_at: '2026-08-19T22:28:59.754235',
+    updated_at: '2026-08-19T22:28:59.754236'
   },
   {
     id: '',
@@ -18786,8 +18870,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151408',
-    updated_at: '2026-08-19T16:27:21.151409'
+    created_at: '2026-08-19T22:28:59.754238',
+    updated_at: '2026-08-19T22:28:59.754239'
   },
   {
     id: '',
@@ -18802,8 +18886,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151411',
-    updated_at: '2026-08-19T16:27:21.151412'
+    created_at: '2026-08-19T22:28:59.754241',
+    updated_at: '2026-08-19T22:28:59.754242'
   },
   {
     id: '',
@@ -18818,8 +18902,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151415',
-    updated_at: '2026-08-19T16:27:21.151415'
+    created_at: '2026-08-19T22:28:59.754244',
+    updated_at: '2026-08-19T22:28:59.754245'
   },
   {
     id: '',
@@ -18834,8 +18918,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151418',
-    updated_at: '2026-08-19T16:27:21.151418'
+    created_at: '2026-08-19T22:28:59.754247',
+    updated_at: '2026-08-19T22:28:59.754248'
   },
   {
     id: '',
@@ -18850,8 +18934,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151420',
-    updated_at: '2026-08-19T16:27:21.151421'
+    created_at: '2026-08-19T22:28:59.754250',
+    updated_at: '2026-08-19T22:28:59.754251'
   },
   {
     id: '',
@@ -18866,8 +18950,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151423',
-    updated_at: '2026-08-19T16:27:21.151424'
+    created_at: '2026-08-19T22:28:59.754253',
+    updated_at: '2026-08-19T22:28:59.754254'
   },
   {
     id: '',
@@ -18882,8 +18966,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151426',
-    updated_at: '2026-08-19T16:27:21.151427'
+    created_at: '2026-08-19T22:28:59.754256',
+    updated_at: '2026-08-19T22:28:59.754257'
   },
   {
     id: '',
@@ -18898,8 +18982,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151429',
-    updated_at: '2026-08-19T16:27:21.151430'
+    created_at: '2026-08-19T22:28:59.754259',
+    updated_at: '2026-08-19T22:28:59.754260'
   },
   {
     id: '',
@@ -18914,8 +18998,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151433',
-    updated_at: '2026-08-19T16:27:21.151433'
+    created_at: '2026-08-19T22:28:59.754262',
+    updated_at: '2026-08-19T22:28:59.754263'
   },
   {
     id: '',
@@ -18930,8 +19014,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151436',
-    updated_at: '2026-08-19T16:27:21.151436'
+    created_at: '2026-08-19T22:28:59.754265',
+    updated_at: '2026-08-19T22:28:59.754266'
   },
   {
     id: '',
@@ -18946,8 +19030,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151439',
-    updated_at: '2026-08-19T16:27:21.151439'
+    created_at: '2026-08-19T22:28:59.754268',
+    updated_at: '2026-08-19T22:28:59.754269'
   },
   {
     id: '',
@@ -18962,8 +19046,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151441',
-    updated_at: '2026-08-19T16:27:21.151442'
+    created_at: '2026-08-19T22:28:59.754271',
+    updated_at: '2026-08-19T22:28:59.754271'
   },
   {
     id: '',
@@ -18978,8 +19062,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151445',
-    updated_at: '2026-08-19T16:27:21.151445'
+    created_at: '2026-08-19T22:28:59.754274',
+    updated_at: '2026-08-19T22:28:59.754275'
   },
   {
     id: '',
@@ -18994,8 +19078,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151448',
-    updated_at: '2026-08-19T16:27:21.151449'
+    created_at: '2026-08-19T22:28:59.754277',
+    updated_at: '2026-08-19T22:28:59.754278'
   },
   {
     id: '',
@@ -19010,8 +19094,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151451',
-    updated_at: '2026-08-19T16:27:21.151452'
+    created_at: '2026-08-19T22:28:59.754280',
+    updated_at: '2026-08-19T22:28:59.754281'
   },
   {
     id: '',
@@ -19026,8 +19110,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151454',
-    updated_at: '2026-08-19T16:27:21.151455'
+    created_at: '2026-08-19T22:28:59.754283',
+    updated_at: '2026-08-19T22:28:59.754284'
   },
   {
     id: '',
@@ -19042,8 +19126,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151457',
-    updated_at: '2026-08-19T16:27:21.151458'
+    created_at: '2026-08-19T22:28:59.754286',
+    updated_at: '2026-08-19T22:28:59.754287'
   },
   {
     id: '',
@@ -19058,8 +19142,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151460',
-    updated_at: '2026-08-19T16:27:21.151461'
+    created_at: '2026-08-19T22:28:59.754289',
+    updated_at: '2026-08-19T22:28:59.754290'
   },
   {
     id: '',
@@ -19074,8 +19158,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151463',
-    updated_at: '2026-08-19T16:27:21.151463'
+    created_at: '2026-08-19T22:28:59.754292',
+    updated_at: '2026-08-19T22:28:59.754293'
   },
   {
     id: '',
@@ -19090,8 +19174,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151466',
-    updated_at: '2026-08-19T16:27:21.151466'
+    created_at: '2026-08-19T22:28:59.754295',
+    updated_at: '2026-08-19T22:28:59.754295'
   },
   {
     id: '',
@@ -19106,8 +19190,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151469',
-    updated_at: '2026-08-19T16:27:21.151469'
+    created_at: '2026-08-19T22:28:59.754298',
+    updated_at: '2026-08-19T22:28:59.754298'
   },
   {
     id: '',
@@ -19122,8 +19206,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151472',
-    updated_at: '2026-08-19T16:27:21.151473'
+    created_at: '2026-08-19T22:28:59.754301',
+    updated_at: '2026-08-19T22:28:59.754302'
   },
   {
     id: '',
@@ -19138,8 +19222,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151475',
-    updated_at: '2026-08-19T16:27:21.151476'
+    created_at: '2026-08-19T22:28:59.754304',
+    updated_at: '2026-08-19T22:28:59.754305'
   },
   {
     id: '',
@@ -19154,8 +19238,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151478',
-    updated_at: '2026-08-19T16:27:21.151479'
+    created_at: '2026-08-19T22:28:59.754307',
+    updated_at: '2026-08-19T22:28:59.754308'
   },
   {
     id: '',
@@ -19170,8 +19254,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151481',
-    updated_at: '2026-08-19T16:27:21.151482'
+    created_at: '2026-08-19T22:28:59.754310',
+    updated_at: '2026-08-19T22:28:59.754310'
   },
   {
     id: '',
@@ -19186,8 +19270,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151484',
-    updated_at: '2026-08-19T16:27:21.151484'
+    created_at: '2026-08-19T22:28:59.754313',
+    updated_at: '2026-08-19T22:28:59.754313'
   },
   {
     id: '',
@@ -19202,8 +19286,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151487',
-    updated_at: '2026-08-19T16:27:21.151487'
+    created_at: '2026-08-19T22:28:59.754316',
+    updated_at: '2026-08-19T22:28:59.754316'
   },
   {
     id: '',
@@ -19218,8 +19302,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151489',
-    updated_at: '2026-08-19T16:27:21.151490'
+    created_at: '2026-08-19T22:28:59.754318',
+    updated_at: '2026-08-19T22:28:59.754319'
   },
   {
     id: '',
@@ -19234,8 +19318,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151492',
-    updated_at: '2026-08-19T16:27:21.151493'
+    created_at: '2026-08-19T22:28:59.754321',
+    updated_at: '2026-08-19T22:28:59.754322'
   },
   {
     id: '',
@@ -19250,8 +19334,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151495',
-    updated_at: '2026-08-19T16:27:21.151496'
+    created_at: '2026-08-19T22:28:59.754324',
+    updated_at: '2026-08-19T22:28:59.754325'
   },
   {
     id: '',
@@ -19266,8 +19350,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151498',
-    updated_at: '2026-08-19T16:27:21.151499'
+    created_at: '2026-08-19T22:28:59.754327',
+    updated_at: '2026-08-19T22:28:59.754328'
   },
   {
     id: '',
@@ -19282,8 +19366,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151501',
-    updated_at: '2026-08-19T16:27:21.151502'
+    created_at: '2026-08-19T22:28:59.754330',
+    updated_at: '2026-08-19T22:28:59.754331'
   },
   {
     id: '',
@@ -19298,8 +19382,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151504',
-    updated_at: '2026-08-19T16:27:21.151505'
+    created_at: '2026-08-19T22:28:59.754333',
+    updated_at: '2026-08-19T22:28:59.754334'
   },
   {
     id: '',
@@ -19314,12 +19398,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151507',
-    updated_at: '2026-08-19T16:27:21.151508'
+    created_at: '2026-08-19T22:28:59.754336',
+    updated_at: '2026-08-19T22:28:59.754337'
   },
   {
     id: '',
-    name: 'Zari\'s Loving Touch',    company: '',
+    name: 'Zari's Loving Touch',
+    company: '',
     email: '',
     phone: '',
     website: 'http://www.zarislovingtouch.com/',
@@ -19329,8 +19414,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151510',
-    updated_at: '2026-08-19T16:27:21.151511'
+    created_at: '2026-08-19T22:28:59.754339',
+    updated_at: '2026-08-19T22:28:59.754340'
   },
   {
     id: '',
@@ -19345,8 +19430,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151513',
-    updated_at: '2026-08-19T16:27:21.151513'
+    created_at: '2026-08-19T22:28:59.754342',
+    updated_at: '2026-08-19T22:28:59.754343'
   },
   {
     id: '',
@@ -19361,8 +19446,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151516',
-    updated_at: '2026-08-19T16:27:21.151517'
+    created_at: '2026-08-19T22:28:59.754345',
+    updated_at: '2026-08-19T22:28:59.754346'
   },
   {
     id: '',
@@ -19377,8 +19462,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151519',
-    updated_at: '2026-08-19T16:27:21.151520'
+    created_at: '2026-08-19T22:28:59.754348',
+    updated_at: '2026-08-19T22:28:59.754349'
   },
   {
     id: '',
@@ -19393,8 +19478,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151522',
-    updated_at: '2026-08-19T16:27:21.151523'
+    created_at: '2026-08-19T22:28:59.754351',
+    updated_at: '2026-08-19T22:28:59.754352'
   },
   {
     id: '',
@@ -19409,8 +19494,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151525',
-    updated_at: '2026-08-19T16:27:21.151526'
+    created_at: '2026-08-19T22:28:59.754354',
+    updated_at: '2026-08-19T22:28:59.754355'
   },
   {
     id: '',
@@ -19425,8 +19510,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151528',
-    updated_at: '2026-08-19T16:27:21.151529'
+    created_at: '2026-08-19T22:28:59.754357',
+    updated_at: '2026-08-19T22:28:59.754358'
   },
   {
     id: '',
@@ -19441,8 +19526,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151531',
-    updated_at: '2026-08-19T16:27:21.151531'
+    created_at: '2026-08-19T22:28:59.754360',
+    updated_at: '2026-08-19T22:28:59.754361'
   },
   {
     id: '',
@@ -19457,8 +19542,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151533',
-    updated_at: '2026-08-19T16:27:21.151534'
+    created_at: '2026-08-19T22:28:59.754363',
+    updated_at: '2026-08-19T22:28:59.754364'
   },
   {
     id: '',
@@ -19473,8 +19558,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151536',
-    updated_at: '2026-08-19T16:27:21.151537'
+    created_at: '2026-08-19T22:28:59.754366',
+    updated_at: '2026-08-19T22:28:59.754366'
   },
   {
     id: '',
@@ -19489,8 +19574,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151539',
-    updated_at: '2026-08-19T16:27:21.151540'
+    created_at: '2026-08-19T22:28:59.754369',
+    updated_at: '2026-08-19T22:28:59.754369'
   },
   {
     id: '',
@@ -19505,8 +19590,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151542',
-    updated_at: '2026-08-19T16:27:21.151543'
+    created_at: '2026-08-19T22:28:59.754372',
+    updated_at: '2026-08-19T22:28:59.754372'
   },
   {
     id: '',
@@ -19521,8 +19606,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151545',
-    updated_at: '2026-08-19T16:27:21.151546'
+    created_at: '2026-08-19T22:28:59.754375',
+    updated_at: '2026-08-19T22:28:59.754375'
   },
   {
     id: '',
@@ -19537,8 +19622,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151548',
-    updated_at: '2026-08-19T16:27:21.151549'
+    created_at: '2026-08-19T22:28:59.754377',
+    updated_at: '2026-08-19T22:28:59.754378'
   },
   {
     id: '',
@@ -19553,8 +19638,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151551',
-    updated_at: '2026-08-19T16:27:21.151552'
+    created_at: '2026-08-19T22:28:59.754380',
+    updated_at: '2026-08-19T22:28:59.754381'
   },
   {
     id: '',
@@ -19569,8 +19654,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151554',
-    updated_at: '2026-08-19T16:27:21.151555'
+    created_at: '2026-08-19T22:28:59.754383',
+    updated_at: '2026-08-19T22:28:59.754384'
   },
   {
     id: '',
@@ -19585,8 +19670,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151557',
-    updated_at: '2026-08-19T16:27:21.151558'
+    created_at: '2026-08-19T22:28:59.754386',
+    updated_at: '2026-08-19T22:28:59.754387'
   },
   {
     id: '',
@@ -19601,8 +19686,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151560',
-    updated_at: '2026-08-19T16:27:21.151561'
+    created_at: '2026-08-19T22:28:59.754389',
+    updated_at: '2026-08-19T22:28:59.754390'
   },
   {
     id: '',
@@ -19617,8 +19702,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151563',
-    updated_at: '2026-08-19T16:27:21.151564'
+    created_at: '2026-08-19T22:28:59.754392',
+    updated_at: '2026-08-19T22:28:59.754393'
   },
   {
     id: '',
@@ -19633,8 +19718,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151566',
-    updated_at: '2026-08-19T16:27:21.151566'
+    created_at: '2026-08-19T22:28:59.754395',
+    updated_at: '2026-08-19T22:28:59.754396'
   },
   {
     id: '',
@@ -19649,8 +19734,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151569',
-    updated_at: '2026-08-19T16:27:21.151569'
+    created_at: '2026-08-19T22:28:59.754398',
+    updated_at: '2026-08-19T22:28:59.754399'
   },
   {
     id: '',
@@ -19665,8 +19750,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151571',
-    updated_at: '2026-08-19T16:27:21.151572'
+    created_at: '2026-08-19T22:28:59.754401',
+    updated_at: '2026-08-19T22:28:59.754402'
   },
   {
     id: '',
@@ -19681,8 +19766,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151574',
-    updated_at: '2026-08-19T16:27:21.151575'
+    created_at: '2026-08-19T22:28:59.754404',
+    updated_at: '2026-08-19T22:28:59.754405'
   },
   {
     id: '',
@@ -19697,8 +19782,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151577',
-    updated_at: '2026-08-19T16:27:21.151578'
+    created_at: '2026-08-19T22:28:59.754407',
+    updated_at: '2026-08-19T22:28:59.754408'
   },
   {
     id: '',
@@ -19713,8 +19798,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151581',
-    updated_at: '2026-08-19T16:27:21.151581'
+    created_at: '2026-08-19T22:28:59.754410',
+    updated_at: '2026-08-19T22:28:59.754411'
   },
   {
     id: '',
@@ -19729,8 +19814,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151583',
-    updated_at: '2026-08-19T16:27:21.151584'
+    created_at: '2026-08-19T22:28:59.754413',
+    updated_at: '2026-08-19T22:28:59.754414'
   },
   {
     id: '',
@@ -19745,8 +19830,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151587',
-    updated_at: '2026-08-19T16:27:21.151587'
+    created_at: '2026-08-19T22:28:59.754416',
+    updated_at: '2026-08-19T22:28:59.754417'
   },
   {
     id: '',
@@ -19761,8 +19846,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151589',
-    updated_at: '2026-08-19T16:27:21.151590'
+    created_at: '2026-08-19T22:28:59.754419',
+    updated_at: '2026-08-19T22:28:59.754420'
   },
   {
     id: '',
@@ -19777,8 +19862,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151592',
-    updated_at: '2026-08-19T16:27:21.151593'
+    created_at: '2026-08-19T22:28:59.754422',
+    updated_at: '2026-08-19T22:28:59.754423'
   },
   {
     id: '',
@@ -19793,8 +19878,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151595',
-    updated_at: '2026-08-19T16:27:21.151596'
+    created_at: '2026-08-19T22:28:59.754425',
+    updated_at: '2026-08-19T22:28:59.754426'
   },
   {
     id: '',
@@ -19809,8 +19894,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151598',
-    updated_at: '2026-08-19T16:27:21.151599'
+    created_at: '2026-08-19T22:28:59.754428',
+    updated_at: '2026-08-19T22:28:59.754429'
   },
   {
     id: '',
@@ -19825,12 +19910,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151601',
-    updated_at: '2026-08-19T16:27:21.151602'
+    created_at: '2026-08-19T22:28:59.754431',
+    updated_at: '2026-08-19T22:28:59.754432'
   },
   {
     id: '',
-    name: 'Morgan\'s Auto Repair',    company: '',
+    name: 'Morgan's Auto Repair',
+    company: '',
     email: '',
     phone: '(989) 892-0567',
     website: 'http://www.morgansautobaycity.com/',
@@ -19840,8 +19926,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151604',
-    updated_at: '2026-08-19T16:27:21.151605'
+    created_at: '2026-08-19T22:28:59.754434',
+    updated_at: '2026-08-19T22:28:59.754434'
   },
   {
     id: '',
@@ -19856,12 +19942,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151607',
-    updated_at: '2026-08-19T16:27:21.151607'
+    created_at: '2026-08-19T22:28:59.754436',
+    updated_at: '2026-08-19T22:28:59.754437'
   },
   {
     id: '',
-    name: 'Ty\'s Auto Service LLC',    company: '',
+    name: 'Ty's Auto Service LLC',
+    company: '',
     email: '',
     phone: '(989) 397-6550',
     website: 'https://www.facebook.com/Tysautoservicesbc',
@@ -19871,8 +19958,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151609',
-    updated_at: '2026-08-19T16:27:21.151610'
+    created_at: '2026-08-19T22:28:59.754439',
+    updated_at: '2026-08-19T22:28:59.754440'
   },
   {
     id: '',
@@ -19887,8 +19974,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151612',
-    updated_at: '2026-08-19T16:27:21.151613'
+    created_at: '2026-08-19T22:28:59.754442',
+    updated_at: '2026-08-19T22:28:59.754443'
   },
   {
     id: '',
@@ -19903,8 +19990,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151615',
-    updated_at: '2026-08-19T16:27:21.151616'
+    created_at: '2026-08-19T22:28:59.754445',
+    updated_at: '2026-08-19T22:28:59.754446'
   },
   {
     id: '',
@@ -19919,8 +20006,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151618',
-    updated_at: '2026-08-19T16:27:21.151619'
+    created_at: '2026-08-19T22:28:59.754448',
+    updated_at: '2026-08-19T22:28:59.754449'
   },
   {
     id: '',
@@ -19935,8 +20022,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151621',
-    updated_at: '2026-08-19T16:27:21.151622'
+    created_at: '2026-08-19T22:28:59.754451',
+    updated_at: '2026-08-19T22:28:59.754452'
   },
   {
     id: '',
@@ -19951,8 +20038,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151624',
-    updated_at: '2026-08-19T16:27:21.151625'
+    created_at: '2026-08-19T22:28:59.754454',
+    updated_at: '2026-08-19T22:28:59.754455'
   },
   {
     id: '',
@@ -19967,8 +20054,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151627',
-    updated_at: '2026-08-19T16:27:21.151628'
+    created_at: '2026-08-19T22:28:59.754457',
+    updated_at: '2026-08-19T22:28:59.754458'
   },
   {
     id: '',
@@ -19983,8 +20070,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151630',
-    updated_at: '2026-08-19T16:27:21.151631'
+    created_at: '2026-08-19T22:28:59.754460',
+    updated_at: '2026-08-19T22:28:59.754461'
   },
   {
     id: '',
@@ -19999,8 +20086,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151633',
-    updated_at: '2026-08-19T16:27:21.151634'
+    created_at: '2026-08-19T22:28:59.754463',
+    updated_at: '2026-08-19T22:28:59.754464'
   },
   {
     id: '',
@@ -20015,8 +20102,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151636',
-    updated_at: '2026-08-19T16:27:21.151637'
+    created_at: '2026-08-19T22:28:59.754466',
+    updated_at: '2026-08-19T22:28:59.754467'
   },
   {
     id: '',
@@ -20031,8 +20118,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151639',
-    updated_at: '2026-08-19T16:27:21.151640'
+    created_at: '2026-08-19T22:28:59.754469',
+    updated_at: '2026-08-19T22:28:59.754470'
   },
   {
     id: '',
@@ -20047,8 +20134,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151642',
-    updated_at: '2026-08-19T16:27:21.151643'
+    created_at: '2026-08-19T22:28:59.754472',
+    updated_at: '2026-08-19T22:28:59.754473'
   },
   {
     id: '',
@@ -20063,8 +20150,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151645',
-    updated_at: '2026-08-19T16:27:21.151646'
+    created_at: '2026-08-19T22:28:59.754475',
+    updated_at: '2026-08-19T22:28:59.754476'
   },
   {
     id: '',
@@ -20079,8 +20166,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151648',
-    updated_at: '2026-08-19T16:27:21.151649'
+    created_at: '2026-08-19T22:28:59.754478',
+    updated_at: '2026-08-19T22:28:59.754479'
   },
   {
     id: '',
@@ -20095,12 +20182,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151651',
-    updated_at: '2026-08-19T16:27:21.151652'
+    created_at: '2026-08-19T22:28:59.754481',
+    updated_at: '2026-08-19T22:28:59.754482'
   },
   {
     id: '',
-    name: 'Suzie Q\'s Breakfast Nook',    company: '',
+    name: 'Suzie Q's Breakfast Nook',
+    company: '',
     email: '',
     phone: '(989) 402-1792',
     website: 'https://www.facebook.com/p/Suzie-Qs-Breakfast-Nook-100063622329808/',
@@ -20110,8 +20198,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151654',
-    updated_at: '2026-08-19T16:27:21.151655'
+    created_at: '2026-08-19T22:28:59.754484',
+    updated_at: '2026-08-19T22:28:59.754485'
   },
   {
     id: '',
@@ -20126,8 +20214,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151657',
-    updated_at: '2026-08-19T16:27:21.151658'
+    created_at: '2026-08-19T22:28:59.754487',
+    updated_at: '2026-08-19T22:28:59.754488'
   },
   {
     id: '',
@@ -20142,12 +20230,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151660',
-    updated_at: '2026-08-19T16:27:21.151661'
+    created_at: '2026-08-19T22:28:59.754490',
+    updated_at: '2026-08-19T22:28:59.754491'
   },
   {
     id: '',
-    name: 'Paul\'s Flowers',    company: '',
+    name: 'Paul's Flowers',
+    company: '',
     email: '',
     phone: '(989) 894-1199',
     website: 'https://www.paulsofbaycityflowers.com/?utm_source=google&utm_medium=gbp&y_source=1_MjA4OTQ3NzktNzE1LWxvY2F0aW9uLndlYnNpdGU%3D',
@@ -20157,8 +20246,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151663',
-    updated_at: '2026-08-19T16:27:21.151664'
+    created_at: '2026-08-19T22:28:59.754493',
+    updated_at: '2026-08-19T22:28:59.754494'
   },
   {
     id: '',
@@ -20173,8 +20262,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151666',
-    updated_at: '2026-08-19T16:27:21.151667'
+    created_at: '2026-08-19T22:28:59.754496',
+    updated_at: '2026-08-19T22:28:59.754497'
   },
   {
     id: '',
@@ -20189,8 +20278,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151669',
-    updated_at: '2026-08-19T16:27:21.151670'
+    created_at: '2026-08-19T22:28:59.754500',
+    updated_at: '2026-08-19T22:28:59.754500'
   },
   {
     id: '',
@@ -20205,8 +20294,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151672',
-    updated_at: '2026-08-19T16:27:21.151673'
+    created_at: '2026-08-19T22:28:59.754503',
+    updated_at: '2026-08-19T22:28:59.754503'
   },
   {
     id: '',
@@ -20221,8 +20310,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151675',
-    updated_at: '2026-08-19T16:27:21.151676'
+    created_at: '2026-08-19T22:28:59.754506',
+    updated_at: '2026-08-19T22:28:59.754506'
   },
   {
     id: '',
@@ -20237,8 +20326,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151678',
-    updated_at: '2026-08-19T16:27:21.151679'
+    created_at: '2026-08-19T22:28:59.754508',
+    updated_at: '2026-08-19T22:28:59.754509'
   },
   {
     id: '',
@@ -20253,12 +20342,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151681',
-    updated_at: '2026-08-19T16:27:21.151682'
+    created_at: '2026-08-19T22:28:59.754511',
+    updated_at: '2026-08-19T22:28:59.754512'
   },
   {
     id: '',
-    name: 'Hank\'s Flowerland',    company: '',
+    name: 'Hank's Flowerland',
+    company: '',
     email: '',
     phone: '(989) 754-7481',
     website: 'http://www.hanksflowerland.com/',
@@ -20268,8 +20358,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151684',
-    updated_at: '2026-08-19T16:27:21.151685'
+    created_at: '2026-08-19T22:28:59.754514',
+    updated_at: '2026-08-19T22:28:59.754515'
   },
   {
     id: '',
@@ -20284,8 +20374,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151687',
-    updated_at: '2026-08-19T16:27:21.151688'
+    created_at: '2026-08-19T22:28:59.754517',
+    updated_at: '2026-08-19T22:28:59.754518'
   },
   {
     id: '',
@@ -20300,12 +20390,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151690',
-    updated_at: '2026-08-19T16:27:21.151691'
+    created_at: '2026-08-19T22:28:59.754520',
+    updated_at: '2026-08-19T22:28:59.754521'
   },
   {
     id: '',
-    name: 'Erika\'s Flowers',    company: '',
+    name: 'Erika's Flowers',
+    company: '',
     email: '',
     phone: '(989) 755-9330',
     website: 'https://www.erikas-flowers.com/',
@@ -20315,12 +20406,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151693',
-    updated_at: '2026-08-19T16:27:21.151693'
+    created_at: '2026-08-19T22:28:59.754523',
+    updated_at: '2026-08-19T22:28:59.754524'
   },
   {
     id: '',
-    name: 'Auburn\'s Flowers From the Heart',    company: '',
+    name: 'Auburn's Flowers From the Heart',
+    company: '',
     email: '',
     phone: '(989) 662-7818',
     website: 'http://www.flowershopauburn.com/',
@@ -20330,8 +20422,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151695',
-    updated_at: '2026-08-19T16:27:21.151696'
+    created_at: '2026-08-19T22:28:59.754526',
+    updated_at: '2026-08-19T22:28:59.754526'
   },
   {
     id: '',
@@ -20346,8 +20438,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151698',
-    updated_at: '2026-08-19T16:27:21.151699'
+    created_at: '2026-08-19T22:28:59.754529',
+    updated_at: '2026-08-19T22:28:59.754529'
   },
   {
     id: '',
@@ -20362,8 +20454,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151701',
-    updated_at: '2026-08-19T16:27:21.151702'
+    created_at: '2026-08-19T22:28:59.754531',
+    updated_at: '2026-08-19T22:28:59.754532'
   },
   {
     id: '',
@@ -20378,8 +20470,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151704',
-    updated_at: '2026-08-19T16:27:21.151705'
+    created_at: '2026-08-19T22:28:59.754534',
+    updated_at: '2026-08-19T22:28:59.754535'
   },
   {
     id: '',
@@ -20394,8 +20486,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151707',
-    updated_at: '2026-08-19T16:27:21.151708'
+    created_at: '2026-08-19T22:28:59.754537',
+    updated_at: '2026-08-19T22:28:59.754538'
   },
   {
     id: '',
@@ -20410,8 +20502,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151710',
-    updated_at: '2026-08-19T16:27:21.151710'
+    created_at: '2026-08-19T22:28:59.754540',
+    updated_at: '2026-08-19T22:28:59.754541'
   },
   {
     id: '',
@@ -20426,8 +20518,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151713',
-    updated_at: '2026-08-19T16:27:21.151713'
+    created_at: '2026-08-19T22:28:59.754543',
+    updated_at: '2026-08-19T22:28:59.754544'
   },
   {
     id: '',
@@ -20442,8 +20534,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151716',
-    updated_at: '2026-08-19T16:27:21.151717'
+    created_at: '2026-08-19T22:28:59.754546',
+    updated_at: '2026-08-19T22:28:59.754547'
   },
   {
     id: '',
@@ -20458,8 +20550,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151719',
-    updated_at: '2026-08-19T16:27:21.151720'
+    created_at: '2026-08-19T22:28:59.754549',
+    updated_at: '2026-08-19T22:28:59.754550'
   },
   {
     id: '',
@@ -20474,8 +20566,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151722',
-    updated_at: '2026-08-19T16:27:21.151722'
+    created_at: '2026-08-19T22:28:59.754552',
+    updated_at: '2026-08-19T22:28:59.754553'
   },
   {
     id: '',
@@ -20490,8 +20582,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151730',
-    updated_at: '2026-08-19T16:27:21.151734'
+    created_at: '2026-08-19T22:28:59.754555',
+    updated_at: '2026-08-19T22:28:59.754555'
   },
   {
     id: '',
@@ -20506,8 +20598,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151736',
-    updated_at: '2026-08-19T16:27:21.151737'
+    created_at: '2026-08-19T22:28:59.754558',
+    updated_at: '2026-08-19T22:28:59.754558'
   },
   {
     id: '',
@@ -20522,8 +20614,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151739',
-    updated_at: '2026-08-19T16:27:21.151740'
+    created_at: '2026-08-19T22:28:59.754560',
+    updated_at: '2026-08-19T22:28:59.754561'
   },
   {
     id: '',
@@ -20538,8 +20630,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151742',
-    updated_at: '2026-08-19T16:27:21.151744'
+    created_at: '2026-08-19T22:28:59.754563',
+    updated_at: '2026-08-19T22:28:59.754564'
   },
   {
     id: '',
@@ -20554,8 +20646,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151747',
-    updated_at: '2026-08-19T16:27:21.151747'
+    created_at: '2026-08-19T22:28:59.754566',
+    updated_at: '2026-08-19T22:28:59.754567'
   },
   {
     id: '',
@@ -20570,8 +20662,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151750',
-    updated_at: '2026-08-19T16:27:21.151750'
+    created_at: '2026-08-19T22:28:59.754569',
+    updated_at: '2026-08-19T22:28:59.754570'
   },
   {
     id: '',
@@ -20586,8 +20678,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151753',
-    updated_at: '2026-08-19T16:27:21.151754'
+    created_at: '2026-08-19T22:28:59.754572',
+    updated_at: '2026-08-19T22:28:59.754573'
   },
   {
     id: '',
@@ -20602,12 +20694,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151756',
-    updated_at: '2026-08-19T16:27:21.151757'
+    created_at: '2026-08-19T22:28:59.754576',
+    updated_at: '2026-08-19T22:28:59.754577'
   },
   {
     id: '',
-    name: 'Quast Janke & Co CPA\'s',
+    name: 'Quast Janke & Co CPA's',
     company: '',
     email: '',
     phone: '(989) 892-4549',
@@ -20618,8 +20710,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151759',
-    updated_at: '2026-08-19T16:27:21.151760'
+    created_at: '2026-08-19T22:28:59.754579',
+    updated_at: '2026-08-19T22:28:59.754580'
   },
   {
     id: '',
@@ -20634,8 +20726,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151762',
-    updated_at: '2026-08-19T16:27:21.151762'
+    created_at: '2026-08-19T22:28:59.754582',
+    updated_at: '2026-08-19T22:28:59.754583'
   },
   {
     id: '',
@@ -20650,8 +20742,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151765',
-    updated_at: '2026-08-19T16:27:21.151765'
+    created_at: '2026-08-19T22:28:59.754585',
+    updated_at: '2026-08-19T22:28:59.754586'
   },
   {
     id: '',
@@ -20666,8 +20758,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151767',
-    updated_at: '2026-08-19T16:27:21.151769'
+    created_at: '2026-08-19T22:28:59.754588',
+    updated_at: '2026-08-19T22:28:59.754589'
   },
   {
     id: '',
@@ -20682,8 +20774,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151771',
-    updated_at: '2026-08-19T16:27:21.151772'
+    created_at: '2026-08-19T22:28:59.754591',
+    updated_at: '2026-08-19T22:28:59.754591'
   },
   {
     id: '',
@@ -20698,8 +20790,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151776',
-    updated_at: '2026-08-19T16:27:21.151777'
+    created_at: '2026-08-19T22:28:59.754593',
+    updated_at: '2026-08-19T22:28:59.754594'
   },
   {
     id: '',
@@ -20714,8 +20806,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151780',
-    updated_at: '2026-08-19T16:27:21.151781'
+    created_at: '2026-08-19T22:28:59.754596',
+    updated_at: '2026-08-19T22:28:59.754597'
   },
   {
     id: '',
@@ -20730,8 +20822,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151783',
-    updated_at: '2026-08-19T16:27:21.151784'
+    created_at: '2026-08-19T22:28:59.754599',
+    updated_at: '2026-08-19T22:28:59.754600'
   },
   {
     id: '',
@@ -20746,8 +20838,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151788',
-    updated_at: '2026-08-19T16:27:21.151789'
+    created_at: '2026-08-19T22:28:59.754602',
+    updated_at: '2026-08-19T22:28:59.754603'
   },
   {
     id: '',
@@ -20762,8 +20854,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151791',
-    updated_at: '2026-08-19T16:27:21.151791'
+    created_at: '2026-08-19T22:28:59.754605',
+    updated_at: '2026-08-19T22:28:59.754606'
   },
   {
     id: '',
@@ -20778,8 +20870,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151795',
-    updated_at: '2026-08-19T16:27:21.151800'
+    created_at: '2026-08-19T22:28:59.754608',
+    updated_at: '2026-08-19T22:28:59.754609'
   },
   {
     id: '',
@@ -20794,8 +20886,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151802',
-    updated_at: '2026-08-19T16:27:21.151803'
+    created_at: '2026-08-19T22:28:59.754611',
+    updated_at: '2026-08-19T22:28:59.754612'
   },
   {
     id: '',
@@ -20810,8 +20902,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151807',
-    updated_at: '2026-08-19T16:27:21.151807'
+    created_at: '2026-08-19T22:28:59.754614',
+    updated_at: '2026-08-19T22:28:59.754614'
   },
   {
     id: '',
@@ -20826,8 +20918,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151811',
-    updated_at: '2026-08-19T16:27:21.151812'
+    created_at: '2026-08-19T22:28:59.754617',
+    updated_at: '2026-08-19T22:28:59.754617'
   },
   {
     id: '',
@@ -20842,8 +20934,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151815',
-    updated_at: '2026-08-19T16:27:21.151815'
+    created_at: '2026-08-19T22:28:59.754620',
+    updated_at: '2026-08-19T22:28:59.754621'
   },
   {
     id: '',
@@ -20858,8 +20950,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151819',
-    updated_at: '2026-08-19T16:27:21.151819'
+    created_at: '2026-08-19T22:28:59.754623',
+    updated_at: '2026-08-19T22:28:59.754624'
   },
   {
     id: '',
@@ -20874,8 +20966,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151822',
-    updated_at: '2026-08-19T16:27:21.151823'
+    created_at: '2026-08-19T22:28:59.754626',
+    updated_at: '2026-08-19T22:28:59.754626'
   },
   {
     id: '',
@@ -20890,8 +20982,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151825',
-    updated_at: '2026-08-19T16:27:21.151827'
+    created_at: '2026-08-19T22:28:59.754628',
+    updated_at: '2026-08-19T22:28:59.754629'
   },
   {
     id: '',
@@ -20906,8 +20998,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151829',
-    updated_at: '2026-08-19T16:27:21.151830'
+    created_at: '2026-08-19T22:28:59.754631',
+    updated_at: '2026-08-19T22:28:59.754632'
   },
   {
     id: '',
@@ -20922,8 +21014,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151832',
-    updated_at: '2026-08-19T16:27:21.151833'
+    created_at: '2026-08-19T22:28:59.754634',
+    updated_at: '2026-08-19T22:28:59.754635'
   },
   {
     id: '',
@@ -20938,8 +21030,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151835',
-    updated_at: '2026-08-19T16:27:21.151836'
+    created_at: '2026-08-19T22:28:59.754637',
+    updated_at: '2026-08-19T22:28:59.754638'
   },
   {
     id: '',
@@ -20954,8 +21046,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151838',
-    updated_at: '2026-08-19T16:27:21.151839'
+    created_at: '2026-08-19T22:28:59.754640',
+    updated_at: '2026-08-19T22:28:59.754641'
   },
   {
     id: '',
@@ -20970,8 +21062,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151841',
-    updated_at: '2026-08-19T16:27:21.151842'
+    created_at: '2026-08-19T22:28:59.754643',
+    updated_at: '2026-08-19T22:28:59.754644'
   },
   {
     id: '',
@@ -20986,8 +21078,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151851',
-    updated_at: '2026-08-19T16:27:21.151852'
+    created_at: '2026-08-19T22:28:59.754646',
+    updated_at: '2026-08-19T22:28:59.754647'
   },
   {
     id: '',
@@ -21002,8 +21094,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151854',
-    updated_at: '2026-08-19T16:27:21.151855'
+    created_at: '2026-08-19T22:28:59.754649',
+    updated_at: '2026-08-19T22:28:59.754649'
   },
   {
     id: '',
@@ -21018,8 +21110,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151857',
-    updated_at: '2026-08-19T16:27:21.151858'
+    created_at: '2026-08-19T22:28:59.754652',
+    updated_at: '2026-08-19T22:28:59.754652'
   },
   {
     id: '',
@@ -21034,8 +21126,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151862',
-    updated_at: '2026-08-19T16:27:21.151864'
+    created_at: '2026-08-19T22:28:59.754655',
+    updated_at: '2026-08-19T22:28:59.754655'
   },
   {
     id: '',
@@ -21050,8 +21142,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151868',
-    updated_at: '2026-08-19T16:27:21.151870'
+    created_at: '2026-08-19T22:28:59.754657',
+    updated_at: '2026-08-19T22:28:59.754658'
   },
   {
     id: '',
@@ -21066,8 +21158,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151874',
-    updated_at: '2026-08-19T16:27:21.151876'
+    created_at: '2026-08-19T22:28:59.754660',
+    updated_at: '2026-08-19T22:28:59.754661'
   },
   {
     id: '',
@@ -21082,8 +21174,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151880',
-    updated_at: '2026-08-19T16:27:21.151881'
+    created_at: '2026-08-19T22:28:59.754663',
+    updated_at: '2026-08-19T22:28:59.754664'
   },
   {
     id: '',
@@ -21098,8 +21190,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151885',
-    updated_at: '2026-08-19T16:27:21.151887'
+    created_at: '2026-08-19T22:28:59.754666',
+    updated_at: '2026-08-19T22:28:59.754667'
   },
   {
     id: '',
@@ -21114,8 +21206,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151891',
-    updated_at: '2026-08-19T16:27:21.151894'
+    created_at: '2026-08-19T22:28:59.754669',
+    updated_at: '2026-08-19T22:28:59.754670'
   },
   {
     id: '',
@@ -21130,8 +21222,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151898',
-    updated_at: '2026-08-19T16:27:21.151900'
+    created_at: '2026-08-19T22:28:59.754672',
+    updated_at: '2026-08-19T22:28:59.754673'
   },
   {
     id: '',
@@ -21146,8 +21238,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151904',
-    updated_at: '2026-08-19T16:27:21.151905'
+    created_at: '2026-08-19T22:28:59.754675',
+    updated_at: '2026-08-19T22:28:59.754676'
   },
   {
     id: '',
@@ -21162,8 +21254,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151907',
-    updated_at: '2026-08-19T16:27:21.151908'
+    created_at: '2026-08-19T22:28:59.754678',
+    updated_at: '2026-08-19T22:28:59.754679'
   },
   {
     id: '',
@@ -21178,8 +21270,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151910',
-    updated_at: '2026-08-19T16:27:21.151911'
+    created_at: '2026-08-19T22:28:59.754681',
+    updated_at: '2026-08-19T22:28:59.754682'
   },
   {
     id: '',
@@ -21194,8 +21286,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151913',
-    updated_at: '2026-08-19T16:27:21.151914'
+    created_at: '2026-08-19T22:28:59.754684',
+    updated_at: '2026-08-19T22:28:59.754685'
   },
   {
     id: '',
@@ -21210,8 +21302,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151916',
-    updated_at: '2026-08-19T16:27:21.151917'
+    created_at: '2026-08-19T22:28:59.754687',
+    updated_at: '2026-08-19T22:28:59.754688'
   },
   {
     id: '',
@@ -21226,8 +21318,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151919',
-    updated_at: '2026-08-19T16:27:21.151920'
+    created_at: '2026-08-19T22:28:59.754690',
+    updated_at: '2026-08-19T22:28:59.754691'
   },
   {
     id: '',
@@ -21242,12 +21334,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151922',
-    updated_at: '2026-08-19T16:27:21.151923'
+    created_at: '2026-08-19T22:28:59.754693',
+    updated_at: '2026-08-19T22:28:59.754694'
   },
   {
     id: '',
-    name: 'Kj\'s Home Improvement Specialist',    company: '',
+    name: 'Kj's Home Improvement Specialist',
+    company: '',
     email: '',
     phone: '(989) 657-6981',
     website: 'http://www.kjshomeimprovementmi.com/',
@@ -21257,8 +21350,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151925',
-    updated_at: '2026-08-19T16:27:21.151926'
+    created_at: '2026-08-19T22:28:59.754696',
+    updated_at: '2026-08-19T22:28:59.754697'
   },
   {
     id: '',
@@ -21273,8 +21366,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151928',
-    updated_at: '2026-08-19T16:27:21.151929'
+    created_at: '2026-08-19T22:28:59.754699',
+    updated_at: '2026-08-19T22:28:59.754700'
   },
   {
     id: '',
@@ -21289,8 +21382,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151932',
-    updated_at: '2026-08-19T16:27:21.151932'
+    created_at: '2026-08-19T22:28:59.754702',
+    updated_at: '2026-08-19T22:28:59.754703'
   },
   {
     id: '',
@@ -21305,8 +21398,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151935',
-    updated_at: '2026-08-19T16:27:21.151935'
+    created_at: '2026-08-19T22:28:59.754705',
+    updated_at: '2026-08-19T22:28:59.754706'
   },
   {
     id: '',
@@ -21321,8 +21414,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151937',
-    updated_at: '2026-08-19T16:27:21.151938'
+    created_at: '2026-08-19T22:28:59.754708',
+    updated_at: '2026-08-19T22:28:59.754709'
   },
   {
     id: '',
@@ -21337,8 +21430,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151941',
-    updated_at: '2026-08-19T16:27:21.151941'
+    created_at: '2026-08-19T22:28:59.754711',
+    updated_at: '2026-08-19T22:28:59.754712'
   },
   {
     id: '',
@@ -21353,8 +21446,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151944',
-    updated_at: '2026-08-19T16:27:21.151944'
+    created_at: '2026-08-19T22:28:59.754714',
+    updated_at: '2026-08-19T22:28:59.754715'
   },
   {
     id: '',
@@ -21369,8 +21462,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151947',
-    updated_at: '2026-08-19T16:27:21.151947'
+    created_at: '2026-08-19T22:28:59.754717',
+    updated_at: '2026-08-19T22:28:59.754717'
   },
   {
     id: '',
@@ -21385,8 +21478,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151949',
-    updated_at: '2026-08-19T16:27:21.151950'
+    created_at: '2026-08-19T22:28:59.754720',
+    updated_at: '2026-08-19T22:28:59.754721'
   },
   {
     id: '',
@@ -21401,12 +21494,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151953',
-    updated_at: '2026-08-19T16:27:21.151954'
+    created_at: '2026-08-19T22:28:59.754723',
+    updated_at: '2026-08-19T22:28:59.754724'
   },
   {
     id: '',
-    name: 'Auburn Chapel-Cunningham-Taylor F.H.\'s Inc.',    company: '',
+    name: 'Auburn Chapel-Cunningham-Taylor F.H.'s Inc.',
+    company: '',
     email: '',
     phone: '(989) 662-4711',
     website: 'http://cunninghamtaylorfh.com/',
@@ -21416,8 +21510,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151956',
-    updated_at: '2026-08-19T16:27:21.151957'
+    created_at: '2026-08-19T22:28:59.754726',
+    updated_at: '2026-08-19T22:28:59.754727'
   },
   {
     id: '',
@@ -21432,8 +21526,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151959',
-    updated_at: '2026-08-19T16:27:21.151960'
+    created_at: '2026-08-19T22:28:59.754729',
+    updated_at: '2026-08-19T22:28:59.754730'
   },
   {
     id: '',
@@ -21448,8 +21542,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151962',
-    updated_at: '2026-08-19T16:27:21.151962'
+    created_at: '2026-08-19T22:28:59.754732',
+    updated_at: '2026-08-19T22:28:59.754732'
   },
   {
     id: '',
@@ -21464,8 +21558,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151965',
-    updated_at: '2026-08-19T16:27:21.151966'
+    created_at: '2026-08-19T22:28:59.754735',
+    updated_at: '2026-08-19T22:28:59.754735'
   },
   {
     id: '',
@@ -21480,8 +21574,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151968',
-    updated_at: '2026-08-19T16:27:21.151969'
+    created_at: '2026-08-19T22:28:59.754737',
+    updated_at: '2026-08-19T22:28:59.754738'
   },
   {
     id: '',
@@ -21496,8 +21590,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151971',
-    updated_at: '2026-08-19T16:27:21.151971'
+    created_at: '2026-08-19T22:28:59.754740',
+    updated_at: '2026-08-19T22:28:59.754741'
   },
   {
     id: '',
@@ -21512,8 +21606,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151974',
-    updated_at: '2026-08-19T16:27:21.151974'
+    created_at: '2026-08-19T22:28:59.754743',
+    updated_at: '2026-08-19T22:28:59.754744'
   },
   {
     id: '',
@@ -21528,8 +21622,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151977',
-    updated_at: '2026-08-19T16:27:21.151977'
+    created_at: '2026-08-19T22:28:59.754746',
+    updated_at: '2026-08-19T22:28:59.754747'
   },
   {
     id: '',
@@ -21544,8 +21638,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151980',
-    updated_at: '2026-08-19T16:27:21.151981'
+    created_at: '2026-08-19T22:28:59.754749',
+    updated_at: '2026-08-19T22:28:59.754750'
   },
   {
     id: '',
@@ -21560,8 +21654,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151983',
-    updated_at: '2026-08-19T16:27:21.151983'
+    created_at: '2026-08-19T22:28:59.754752',
+    updated_at: '2026-08-19T22:28:59.754753'
   },
   {
     id: '',
@@ -21576,8 +21670,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151986',
-    updated_at: '2026-08-19T16:27:21.151987'
+    created_at: '2026-08-19T22:28:59.754755',
+    updated_at: '2026-08-19T22:28:59.754756'
   },
   {
     id: '',
@@ -21592,8 +21686,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151989',
-    updated_at: '2026-08-19T16:27:21.151989'
+    created_at: '2026-08-19T22:28:59.754758',
+    updated_at: '2026-08-19T22:28:59.754759'
   },
   {
     id: '',
@@ -21608,8 +21702,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151991',
-    updated_at: '2026-08-19T16:27:21.151992'
+    created_at: '2026-08-19T22:28:59.754761',
+    updated_at: '2026-08-19T22:28:59.754762'
   },
   {
     id: '',
@@ -21624,8 +21718,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151994',
-    updated_at: '2026-08-19T16:27:21.151995'
+    created_at: '2026-08-19T22:28:59.754765',
+    updated_at: '2026-08-19T22:28:59.754765'
   },
   {
     id: '',
@@ -21640,8 +21734,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.151997',
-    updated_at: '2026-08-19T16:27:21.151998'
+    created_at: '2026-08-19T22:28:59.754768',
+    updated_at: '2026-08-19T22:28:59.754768'
   },
   {
     id: '',
@@ -21656,8 +21750,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152000',
-    updated_at: '2026-08-19T16:27:21.152001'
+    created_at: '2026-08-19T22:28:59.754771',
+    updated_at: '2026-08-19T22:28:59.754771'
   },
   {
     id: '',
@@ -21672,8 +21766,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152003',
-    updated_at: '2026-08-19T16:27:21.152004'
+    created_at: '2026-08-19T22:28:59.754774',
+    updated_at: '2026-08-19T22:28:59.754774'
   },
   {
     id: '',
@@ -21688,8 +21782,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152006',
-    updated_at: '2026-08-19T16:27:21.152007'
+    created_at: '2026-08-19T22:28:59.754777',
+    updated_at: '2026-08-19T22:28:59.754778'
   },
   {
     id: '',
@@ -21704,8 +21798,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152010',
-    updated_at: '2026-08-19T16:27:21.152010'
+    created_at: '2026-08-19T22:28:59.754780',
+    updated_at: '2026-08-19T22:28:59.754781'
   },
   {
     id: '',
@@ -21720,8 +21814,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152013',
-    updated_at: '2026-08-19T16:27:21.152013'
+    created_at: '2026-08-19T22:28:59.754783',
+    updated_at: '2026-08-19T22:28:59.754784'
   },
   {
     id: '',
@@ -21736,8 +21830,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152015',
-    updated_at: '2026-08-19T16:27:21.152016'
+    created_at: '2026-08-19T22:28:59.754786',
+    updated_at: '2026-08-19T22:28:59.754787'
   },
   {
     id: '',
@@ -21752,12 +21846,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152019',
-    updated_at: '2026-08-19T16:27:21.152019'
+    created_at: '2026-08-19T22:28:59.754789',
+    updated_at: '2026-08-19T22:28:59.754790'
   },
   {
     id: '',
-    name: 'All A\'s Automotive & Transmission Repair',    company: '',
+    name: 'All A's Automotive & Transmission Repair',
+    company: '',
     email: '',
     phone: '(989) 631-4672',
     website: 'http://www.allasautorepair.net/',
@@ -21767,8 +21862,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152021',
-    updated_at: '2026-08-19T16:27:21.152022'
+    created_at: '2026-08-19T22:28:59.754792',
+    updated_at: '2026-08-19T22:28:59.754793'
   },
   {
     id: '',
@@ -21783,8 +21878,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152024',
-    updated_at: '2026-08-19T16:27:21.152025'
+    created_at: '2026-08-19T22:28:59.754795',
+    updated_at: '2026-08-19T22:28:59.754796'
   },
   {
     id: '',
@@ -21799,12 +21894,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152027',
-    updated_at: '2026-08-19T16:27:21.152028'
+    created_at: '2026-08-19T22:28:59.754798',
+    updated_at: '2026-08-19T22:28:59.754799'
   },
   {
     id: '',
-    name: 'Terry\'s Auto Sevice Center',    company: '',
+    name: 'Terry's Auto Sevice Center',
+    company: '',
     email: '',
     phone: '(989) 486-3800',
     website: 'https://www.autorepairmidlandmi.com/',
@@ -21814,8 +21910,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152030',
-    updated_at: '2026-08-19T16:27:21.152031'
+    created_at: '2026-08-19T22:28:59.754801',
+    updated_at: '2026-08-19T22:28:59.754802'
   },
   {
     id: '',
@@ -21830,8 +21926,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152033',
-    updated_at: '2026-08-19T16:27:21.152033'
+    created_at: '2026-08-19T22:28:59.754804',
+    updated_at: '2026-08-19T22:28:59.754804'
   },
   {
     id: '',
@@ -21846,8 +21942,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152035',
-    updated_at: '2026-08-19T16:27:21.152036'
+    created_at: '2026-08-19T22:28:59.754807',
+    updated_at: '2026-08-19T22:28:59.754807'
   },
   {
     id: '',
@@ -21862,8 +21958,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152038',
-    updated_at: '2026-08-19T16:27:21.152039'
+    created_at: '2026-08-19T22:28:59.754809',
+    updated_at: '2026-08-19T22:28:59.754810'
   },
   {
     id: '',
@@ -21878,8 +21974,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152041',
-    updated_at: '2026-08-19T16:27:21.152042'
+    created_at: '2026-08-19T22:28:59.754812',
+    updated_at: '2026-08-19T22:28:59.754813'
   },
   {
     id: '',
@@ -21894,8 +21990,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152044',
-    updated_at: '2026-08-19T16:27:21.152045'
+    created_at: '2026-08-19T22:28:59.754815',
+    updated_at: '2026-08-19T22:28:59.754816'
   },
   {
     id: '',
@@ -21910,8 +22006,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152047',
-    updated_at: '2026-08-19T16:27:21.152048'
+    created_at: '2026-08-19T22:28:59.754818',
+    updated_at: '2026-08-19T22:28:59.754819'
   },
   {
     id: '',
@@ -21926,8 +22022,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152050',
-    updated_at: '2026-08-19T16:27:21.152050'
+    created_at: '2026-08-19T22:28:59.754821',
+    updated_at: '2026-08-19T22:28:59.754822'
   },
   {
     id: '',
@@ -21942,12 +22038,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152053',
-    updated_at: '2026-08-19T16:27:21.152053'
+    created_at: '2026-08-19T22:28:59.754824',
+    updated_at: '2026-08-19T22:28:59.754825'
   },
   {
     id: '',
-    name: 'Suderman\'s Car Care',    company: '',
+    name: 'Suderman's Car Care',
+    company: '',
     email: '',
     phone: '(989) 631-6910',
     website: 'http://www.sudermans.com/',
@@ -21957,8 +22054,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152055',
-    updated_at: '2026-08-19T16:27:21.152056'
+    created_at: '2026-08-19T22:28:59.754827',
+    updated_at: '2026-08-19T22:28:59.754828'
   },
   {
     id: '',
@@ -21973,8 +22070,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152058',
-    updated_at: '2026-08-19T16:27:21.152059'
+    created_at: '2026-08-19T22:28:59.754830',
+    updated_at: '2026-08-19T22:28:59.754830'
   },
   {
     id: '',
@@ -21989,8 +22086,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152061',
-    updated_at: '2026-08-19T16:27:21.152062'
+    created_at: '2026-08-19T22:28:59.754833',
+    updated_at: '2026-08-19T22:28:59.754833'
   },
   {
     id: '',
@@ -22005,8 +22102,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152064',
-    updated_at: '2026-08-19T16:27:21.152065'
+    created_at: '2026-08-19T22:28:59.754836',
+    updated_at: '2026-08-19T22:28:59.754836'
   },
   {
     id: '',
@@ -22021,8 +22118,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152067',
-    updated_at: '2026-08-19T16:27:21.152068'
+    created_at: '2026-08-19T22:28:59.754838',
+    updated_at: '2026-08-19T22:28:59.754839'
   },
   {
     id: '',
@@ -22037,12 +22134,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152070',
-    updated_at: '2026-08-19T16:27:21.152071'
+    created_at: '2026-08-19T22:28:59.754841',
+    updated_at: '2026-08-19T22:28:59.754842'
   },
   {
     id: '',
-    name: 'Chef Sergey\'s Bakery',    company: '',
+    name: 'Chef Sergey's Bakery',
+    company: '',
     email: '',
     phone: '(989) 313-9743',
     website: 'https://www.sergeysbakery.com/',
@@ -22052,8 +22150,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152073',
-    updated_at: '2026-08-19T16:27:21.152074'
+    created_at: '2026-08-19T22:28:59.754844',
+    updated_at: '2026-08-19T22:28:59.754845'
   },
   {
     id: '',
@@ -22068,8 +22166,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152076',
-    updated_at: '2026-08-19T16:27:21.152077'
+    created_at: '2026-08-19T22:28:59.754847',
+    updated_at: '2026-08-19T22:28:59.754848'
   },
   {
     id: '',
@@ -22084,8 +22182,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152079',
-    updated_at: '2026-08-19T16:27:21.152080'
+    created_at: '2026-08-19T22:28:59.754850',
+    updated_at: '2026-08-19T22:28:59.754851'
   },
   {
     id: '',
@@ -22100,8 +22198,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152082',
-    updated_at: '2026-08-19T16:27:21.152083'
+    created_at: '2026-08-19T22:28:59.754853',
+    updated_at: '2026-08-19T22:28:59.754854'
   },
   {
     id: '',
@@ -22116,8 +22214,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152085',
-    updated_at: '2026-08-19T16:27:21.152086'
+    created_at: '2026-08-19T22:28:59.754856',
+    updated_at: '2026-08-19T22:28:59.754857'
   },
   {
     id: '',
@@ -22132,8 +22230,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152088',
-    updated_at: '2026-08-19T16:27:21.152089'
+    created_at: '2026-08-19T22:28:59.754859',
+    updated_at: '2026-08-19T22:28:59.754860'
   },
   {
     id: '',
@@ -22148,8 +22246,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152091',
-    updated_at: '2026-08-19T16:27:21.152092'
+    created_at: '2026-08-19T22:28:59.754862',
+    updated_at: '2026-08-19T22:28:59.754863'
   },
   {
     id: '',
@@ -22164,8 +22262,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152094',
-    updated_at: '2026-08-19T16:27:21.152094'
+    created_at: '2026-08-19T22:28:59.754865',
+    updated_at: '2026-08-19T22:28:59.754866'
   },
   {
     id: '',
@@ -22180,12 +22278,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152097',
-    updated_at: '2026-08-19T16:27:21.152097'
+    created_at: '2026-08-19T22:28:59.754868',
+    updated_at: '2026-08-19T22:28:59.754869'
   },
   {
     id: '',
-    name: 'Smith\'s Flowers and Gifts',    company: '',
+    name: 'Smith's Flowers and Gifts',
+    company: '',
     email: '',
     phone: '(989) 631-0470',
     website: 'http://www.smithsflowers.com/',
@@ -22195,12 +22294,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152099',
-    updated_at: '2026-08-19T16:27:21.152100'
+    created_at: '2026-08-19T22:28:59.754871',
+    updated_at: '2026-08-19T22:28:59.754872'
   },
   {
     id: '',
-    name: 'Hannah\'s Flowers & Floral Preservation',    company: '',
+    name: 'Hannah's Flowers & Floral Preservation',
+    company: '',
     email: '',
     phone: '(989) 750-7200',
     website: 'https://hannahsflowers.shop/',
@@ -22210,12 +22310,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152102',
-    updated_at: '2026-08-19T16:27:21.152103'
+    created_at: '2026-08-19T22:28:59.754874',
+    updated_at: '2026-08-19T22:28:59.754875'
   },
   {
     id: '',
-    name: 'Randi\'s Green Thumb',    company: '',
+    name: 'Randi's Green Thumb',
+    company: '',
     email: '',
     phone: '(989) 835-3963',
     website: 'https://www.randis.com/',
@@ -22225,8 +22326,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152106',
-    updated_at: '2026-08-19T16:27:21.152106'
+    created_at: '2026-08-19T22:28:59.754877',
+    updated_at: '2026-08-19T22:28:59.754878'
   },
   {
     id: '',
@@ -22241,12 +22342,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152108',
-    updated_at: '2026-08-19T16:27:21.152109'
+    created_at: '2026-08-19T22:28:59.754880',
+    updated_at: '2026-08-19T22:28:59.754880'
   },
   {
     id: '',
-    name: 'Lapelle\'s Flowers & Gifts',    company: '',
+    name: 'Lapelle's Flowers & Gifts',
+    company: '',
     email: '',
     phone: '(989) 631-0450',
     website: 'https://www.lapellesflowers.com/',
@@ -22256,8 +22358,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152111',
-    updated_at: '2026-08-19T16:27:21.152112'
+    created_at: '2026-08-19T22:28:59.754883',
+    updated_at: '2026-08-19T22:28:59.754884'
   },
   {
     id: '',
@@ -22272,12 +22374,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152114',
-    updated_at: '2026-08-19T16:27:21.152115'
+    created_at: '2026-08-19T22:28:59.754886',
+    updated_at: '2026-08-19T22:28:59.754887'
   },
   {
     id: '',
-    name: 'Austin\'s Flowers & Gifts',    company: '',
+    name: 'Austin's Flowers & Gifts',
+    company: '',
     email: '',
     phone: '(989) 695-9100',
     website: 'http://www.austinsflorist.com/',
@@ -22287,12 +22390,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152117',
-    updated_at: '2026-08-19T16:27:21.152118'
+    created_at: '2026-08-19T22:28:59.754889',
+    updated_at: '2026-08-19T22:28:59.754890'
   },
   {
     id: '',
-    name: 'Auburn\'s Flowers From the Heart',    company: '',
+    name: 'Auburn's Flowers From the Heart',
+    company: '',
     email: '',
     phone: '(989) 662-7818',
     website: 'http://www.flowershopauburn.com/',
@@ -22302,8 +22406,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152120',
-    updated_at: '2026-08-19T16:27:21.152121'
+    created_at: '2026-08-19T22:28:59.754892',
+    updated_at: '2026-08-19T22:28:59.754893'
   },
   {
     id: '',
@@ -22318,8 +22422,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152123',
-    updated_at: '2026-08-19T16:27:21.152124'
+    created_at: '2026-08-19T22:28:59.754895',
+    updated_at: '2026-08-19T22:28:59.754896'
   },
   {
     id: '',
@@ -22334,8 +22438,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152126',
-    updated_at: '2026-08-19T16:27:21.152126'
+    created_at: '2026-08-19T22:28:59.754898',
+    updated_at: '2026-08-19T22:28:59.754898'
   },
   {
     id: '',
@@ -22350,8 +22454,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152129',
-    updated_at: '2026-08-19T16:27:21.152129'
+    created_at: '2026-08-19T22:28:59.754901',
+    updated_at: '2026-08-19T22:28:59.754901'
   },
   {
     id: '',
@@ -22366,8 +22470,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152131',
-    updated_at: '2026-08-19T16:27:21.152132'
+    created_at: '2026-08-19T22:28:59.754903',
+    updated_at: '2026-08-19T22:28:59.754904'
   },
   {
     id: '',
@@ -22382,8 +22486,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152134',
-    updated_at: '2026-08-19T16:27:21.152135'
+    created_at: '2026-08-19T22:28:59.754906',
+    updated_at: '2026-08-19T22:28:59.754907'
   },
   {
     id: '',
@@ -22398,8 +22502,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152137',
-    updated_at: '2026-08-19T16:27:21.152138'
+    created_at: '2026-08-19T22:28:59.754910',
+    updated_at: '2026-08-19T22:28:59.754910'
   },
   {
     id: '',
@@ -22414,8 +22518,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152140',
-    updated_at: '2026-08-19T16:27:21.152141'
+    created_at: '2026-08-19T22:28:59.754913',
+    updated_at: '2026-08-19T22:28:59.754913'
   },
   {
     id: '',
@@ -22430,8 +22534,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152143',
-    updated_at: '2026-08-19T16:27:21.152144'
+    created_at: '2026-08-19T22:28:59.754916',
+    updated_at: '2026-08-19T22:28:59.754917'
   },
   {
     id: '',
@@ -22446,8 +22550,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152147',
-    updated_at: '2026-08-19T16:27:21.152147'
+    created_at: '2026-08-19T22:28:59.754919',
+    updated_at: '2026-08-19T22:28:59.754920'
   },
   {
     id: '',
@@ -22462,8 +22566,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152150',
-    updated_at: '2026-08-19T16:27:21.152150'
+    created_at: '2026-08-19T22:28:59.754922',
+    updated_at: '2026-08-19T22:28:59.754922'
   },
   {
     id: '',
@@ -22478,8 +22582,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152152',
-    updated_at: '2026-08-19T16:27:21.152153'
+    created_at: '2026-08-19T22:28:59.754925',
+    updated_at: '2026-08-19T22:28:59.754926'
   },
   {
     id: '',
@@ -22494,8 +22598,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152155',
-    updated_at: '2026-08-19T16:27:21.152156'
+    created_at: '2026-08-19T22:28:59.754928',
+    updated_at: '2026-08-19T22:28:59.754928'
   },
   {
     id: '',
@@ -22510,8 +22614,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152158',
-    updated_at: '2026-08-19T16:27:21.152159'
+    created_at: '2026-08-19T22:28:59.754931',
+    updated_at: '2026-08-19T22:28:59.754931'
   },
   {
     id: '',
@@ -22526,8 +22630,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152161',
-    updated_at: '2026-08-19T16:27:21.152162'
+    created_at: '2026-08-19T22:28:59.754934',
+    updated_at: '2026-08-19T22:28:59.754934'
   },
   {
     id: '',
@@ -22542,8 +22646,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152164',
-    updated_at: '2026-08-19T16:27:21.152165'
+    created_at: '2026-08-19T22:28:59.754936',
+    updated_at: '2026-08-19T22:28:59.754937'
   },
   {
     id: '',
@@ -22558,8 +22662,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152167',
-    updated_at: '2026-08-19T16:27:21.152168'
+    created_at: '2026-08-19T22:28:59.754939',
+    updated_at: '2026-08-19T22:28:59.754940'
   },
   {
     id: '',
@@ -22574,8 +22678,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152170',
-    updated_at: '2026-08-19T16:27:21.152171'
+    created_at: '2026-08-19T22:28:59.754942',
+    updated_at: '2026-08-19T22:28:59.754943'
   },
   {
     id: '',
@@ -22590,8 +22694,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152173',
-    updated_at: '2026-08-19T16:27:21.152174'
+    created_at: '2026-08-19T22:28:59.754946',
+    updated_at: '2026-08-19T22:28:59.754946'
   },
   {
     id: '',
@@ -22606,8 +22710,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152176',
-    updated_at: '2026-08-19T16:27:21.152177'
+    created_at: '2026-08-19T22:28:59.754948',
+    updated_at: '2026-08-19T22:28:59.754949'
   },
   {
     id: '',
@@ -22622,8 +22726,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152178',
-    updated_at: '2026-08-19T16:27:21.152179'
+    created_at: '2026-08-19T22:28:59.754951',
+    updated_at: '2026-08-19T22:28:59.754952'
   },
   {
     id: '',
@@ -22638,8 +22742,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152181',
-    updated_at: '2026-08-19T16:27:21.152182'
+    created_at: '2026-08-19T22:28:59.754954',
+    updated_at: '2026-08-19T22:28:59.754955'
   },
   {
     id: '',
@@ -22654,8 +22758,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152184',
-    updated_at: '2026-08-19T16:27:21.152185'
+    created_at: '2026-08-19T22:28:59.754957',
+    updated_at: '2026-08-19T22:28:59.754958'
   },
   {
     id: '',
@@ -22670,8 +22774,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152188',
-    updated_at: '2026-08-19T16:27:21.152188'
+    created_at: '2026-08-19T22:28:59.754960',
+    updated_at: '2026-08-19T22:28:59.754961'
   },
   {
     id: '',
@@ -22686,8 +22790,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152191',
-    updated_at: '2026-08-19T16:27:21.152191'
+    created_at: '2026-08-19T22:28:59.754963',
+    updated_at: '2026-08-19T22:28:59.754964'
   },
   {
     id: '',
@@ -22702,8 +22806,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152194',
-    updated_at: '2026-08-19T16:27:21.152194'
+    created_at: '2026-08-19T22:28:59.754966',
+    updated_at: '2026-08-19T22:28:59.754967'
   },
   {
     id: '',
@@ -22718,8 +22822,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152196',
-    updated_at: '2026-08-19T16:27:21.152197'
+    created_at: '2026-08-19T22:28:59.754969',
+    updated_at: '2026-08-19T22:28:59.754970'
   },
   {
     id: '',
@@ -22734,8 +22838,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152199',
-    updated_at: '2026-08-19T16:27:21.152200'
+    created_at: '2026-08-19T22:28:59.754972',
+    updated_at: '2026-08-19T22:28:59.754973'
   },
   {
     id: '',
@@ -22750,8 +22854,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152202',
-    updated_at: '2026-08-19T16:27:21.152203'
+    created_at: '2026-08-19T22:28:59.754975',
+    updated_at: '2026-08-19T22:28:59.754976'
   },
   {
     id: '',
@@ -22766,8 +22870,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152205',
-    updated_at: '2026-08-19T16:27:21.152206'
+    created_at: '2026-08-19T22:28:59.754978',
+    updated_at: '2026-08-19T22:28:59.754979'
   },
   {
     id: '',
@@ -22782,8 +22886,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152208',
-    updated_at: '2026-08-19T16:27:21.152209'
+    created_at: '2026-08-19T22:28:59.754981',
+    updated_at: '2026-08-19T22:28:59.754982'
   },
   {
     id: '',
@@ -22798,8 +22902,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152211',
-    updated_at: '2026-08-19T16:27:21.152212'
+    created_at: '2026-08-19T22:28:59.754984',
+    updated_at: '2026-08-19T22:28:59.754985'
   },
   {
     id: '',
@@ -22814,8 +22918,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152214',
-    updated_at: '2026-08-19T16:27:21.152215'
+    created_at: '2026-08-19T22:28:59.754987',
+    updated_at: '2026-08-19T22:28:59.754988'
   },
   {
     id: '',
@@ -22830,8 +22934,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152217',
-    updated_at: '2026-08-19T16:27:21.152218'
+    created_at: '2026-08-19T22:28:59.754990',
+    updated_at: '2026-08-19T22:28:59.754991'
   },
   {
     id: '',
@@ -22846,8 +22950,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152220',
-    updated_at: '2026-08-19T16:27:21.152221'
+    created_at: '2026-08-19T22:28:59.754993',
+    updated_at: '2026-08-19T22:28:59.754994'
   },
   {
     id: '',
@@ -22862,8 +22966,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152223',
-    updated_at: '2026-08-19T16:27:21.152223'
+    created_at: '2026-08-19T22:28:59.754996',
+    updated_at: '2026-08-19T22:28:59.754997'
   },
   {
     id: '',
@@ -22878,8 +22982,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152226',
-    updated_at: '2026-08-19T16:27:21.152227'
+    created_at: '2026-08-19T22:28:59.754999',
+    updated_at: '2026-08-19T22:28:59.755000'
   },
   {
     id: '',
@@ -22894,8 +22998,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152229',
-    updated_at: '2026-08-19T16:27:21.152229'
+    created_at: '2026-08-19T22:28:59.755002',
+    updated_at: '2026-08-19T22:28:59.755003'
   },
   {
     id: '',
@@ -22910,8 +23014,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152232',
-    updated_at: '2026-08-19T16:27:21.152232'
+    created_at: '2026-08-19T22:28:59.755005',
+    updated_at: '2026-08-19T22:28:59.755006'
   },
   {
     id: '',
@@ -22926,8 +23030,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152235',
-    updated_at: '2026-08-19T16:27:21.152235'
+    created_at: '2026-08-19T22:28:59.755008',
+    updated_at: '2026-08-19T22:28:59.755009'
   },
   {
     id: '',
@@ -22942,8 +23046,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152237',
-    updated_at: '2026-08-19T16:27:21.152238'
+    created_at: '2026-08-19T22:28:59.755011',
+    updated_at: '2026-08-19T22:28:59.755012'
   },
   {
     id: '',
@@ -22958,8 +23062,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152240',
-    updated_at: '2026-08-19T16:27:21.152241'
+    created_at: '2026-08-19T22:28:59.755014',
+    updated_at: '2026-08-19T22:28:59.755014'
   },
   {
     id: '',
@@ -22974,8 +23078,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152243',
-    updated_at: '2026-08-19T16:27:21.152244'
+    created_at: '2026-08-19T22:28:59.755017',
+    updated_at: '2026-08-19T22:28:59.755017'
   },
   {
     id: '',
@@ -22990,8 +23094,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152246',
-    updated_at: '2026-08-19T16:27:21.152247'
+    created_at: '2026-08-19T22:28:59.755019',
+    updated_at: '2026-08-19T22:28:59.755020'
   },
   {
     id: '',
@@ -23006,8 +23110,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152249',
-    updated_at: '2026-08-19T16:27:21.152249'
+    created_at: '2026-08-19T22:28:59.755022',
+    updated_at: '2026-08-19T22:28:59.755023'
   },
   {
     id: '',
@@ -23022,8 +23126,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152251',
-    updated_at: '2026-08-19T16:27:21.152252'
+    created_at: '2026-08-19T22:28:59.755025',
+    updated_at: '2026-08-19T22:28:59.755026'
   },
   {
     id: '',
@@ -23038,8 +23142,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152254',
-    updated_at: '2026-08-19T16:27:21.152255'
+    created_at: '2026-08-19T22:28:59.755028',
+    updated_at: '2026-08-19T22:28:59.755029'
   },
   {
     id: '',
@@ -23054,8 +23158,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152257',
-    updated_at: '2026-08-19T16:27:21.152258'
+    created_at: '2026-08-19T22:28:59.755031',
+    updated_at: '2026-08-19T22:28:59.755032'
   },
   {
     id: '',
@@ -23070,8 +23174,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152260',
-    updated_at: '2026-08-19T16:27:21.152261'
+    created_at: '2026-08-19T22:28:59.755034',
+    updated_at: '2026-08-19T22:28:59.755035'
   },
   {
     id: '',
@@ -23086,8 +23190,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152264',
-    updated_at: '2026-08-19T16:27:21.152264'
+    created_at: '2026-08-19T22:28:59.755038',
+    updated_at: '2026-08-19T22:28:59.755039'
   },
   {
     id: '',
@@ -23102,8 +23206,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152266',
-    updated_at: '2026-08-19T16:27:21.152267'
+    created_at: '2026-08-19T22:28:59.755041',
+    updated_at: '2026-08-19T22:28:59.755041'
   },
   {
     id: '',
@@ -23118,8 +23222,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152269',
-    updated_at: '2026-08-19T16:27:21.152270'
+    created_at: '2026-08-19T22:28:59.755044',
+    updated_at: '2026-08-19T22:28:59.755044'
   },
   {
     id: '',
@@ -23134,8 +23238,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152272',
-    updated_at: '2026-08-19T16:27:21.152273'
+    created_at: '2026-08-19T22:28:59.755046',
+    updated_at: '2026-08-19T22:28:59.755047'
   },
   {
     id: '',
@@ -23150,8 +23254,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152275',
-    updated_at: '2026-08-19T16:27:21.152276'
+    created_at: '2026-08-19T22:28:59.755049',
+    updated_at: '2026-08-19T22:28:59.755050'
   },
   {
     id: '',
@@ -23166,8 +23270,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152278',
-    updated_at: '2026-08-19T16:27:21.152279'
+    created_at: '2026-08-19T22:28:59.755052',
+    updated_at: '2026-08-19T22:28:59.755053'
   },
   {
     id: '',
@@ -23182,8 +23286,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152281',
-    updated_at: '2026-08-19T16:27:21.152282'
+    created_at: '2026-08-19T22:28:59.755055',
+    updated_at: '2026-08-19T22:28:59.755056'
   },
   {
     id: '',
@@ -23198,8 +23302,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152284',
-    updated_at: '2026-08-19T16:27:21.152285'
+    created_at: '2026-08-19T22:28:59.755058',
+    updated_at: '2026-08-19T22:28:59.755059'
   },
   {
     id: '',
@@ -23214,8 +23318,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152287',
-    updated_at: '2026-08-19T16:27:21.152288'
+    created_at: '2026-08-19T22:28:59.755061',
+    updated_at: '2026-08-19T22:28:59.755062'
   },
   {
     id: '',
@@ -23230,8 +23334,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152290',
-    updated_at: '2026-08-19T16:27:21.152291'
+    created_at: '2026-08-19T22:28:59.755064',
+    updated_at: '2026-08-19T22:28:59.755065'
   },
   {
     id: '',
@@ -23246,8 +23350,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152293',
-    updated_at: '2026-08-19T16:27:21.152294'
+    created_at: '2026-08-19T22:28:59.755067',
+    updated_at: '2026-08-19T22:28:59.755068'
   },
   {
     id: '',
@@ -23262,8 +23366,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152296',
-    updated_at: '2026-08-19T16:27:21.152297'
+    created_at: '2026-08-19T22:28:59.755070',
+    updated_at: '2026-08-19T22:28:59.755071'
   },
   {
     id: '',
@@ -23278,8 +23382,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152299',
-    updated_at: '2026-08-19T16:27:21.152300'
+    created_at: '2026-08-19T22:28:59.755073',
+    updated_at: '2026-08-19T22:28:59.755074'
   },
   {
     id: '',
@@ -23294,8 +23398,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152302',
-    updated_at: '2026-08-19T16:27:21.152302'
+    created_at: '2026-08-19T22:28:59.755076',
+    updated_at: '2026-08-19T22:28:59.755076'
   },
   {
     id: '',
@@ -23310,8 +23414,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152305',
-    updated_at: '2026-08-19T16:27:21.152305'
+    created_at: '2026-08-19T22:28:59.755079',
+    updated_at: '2026-08-19T22:28:59.755079'
   },
   {
     id: '',
@@ -23326,8 +23430,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152307',
-    updated_at: '2026-08-19T16:27:21.152308'
+    created_at: '2026-08-19T22:28:59.755081',
+    updated_at: '2026-08-19T22:28:59.755082'
   },
   {
     id: '',
@@ -23342,8 +23446,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152310',
-    updated_at: '2026-08-19T16:27:21.152311'
+    created_at: '2026-08-19T22:28:59.755084',
+    updated_at: '2026-08-19T22:28:59.755085'
   },
   {
     id: '',
@@ -23358,8 +23462,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152313',
-    updated_at: '2026-08-19T16:27:21.152314'
+    created_at: '2026-08-19T22:28:59.755087',
+    updated_at: '2026-08-19T22:28:59.755088'
   },
   {
     id: '',
@@ -23374,8 +23478,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152316',
-    updated_at: '2026-08-19T16:27:21.152317'
+    created_at: '2026-08-19T22:28:59.755090',
+    updated_at: '2026-08-19T22:28:59.755091'
   },
   {
     id: '',
@@ -23390,8 +23494,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152319',
-    updated_at: '2026-08-19T16:27:21.152320'
+    created_at: '2026-08-19T22:28:59.755093',
+    updated_at: '2026-08-19T22:28:59.755094'
   },
   {
     id: '',
@@ -23406,8 +23510,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152322',
-    updated_at: '2026-08-19T16:27:21.152322'
+    created_at: '2026-08-19T22:28:59.755096',
+    updated_at: '2026-08-19T22:28:59.755097'
   },
   {
     id: '',
@@ -23422,8 +23526,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152325',
-    updated_at: '2026-08-19T16:27:21.152326'
+    created_at: '2026-08-19T22:28:59.755100',
+    updated_at: '2026-08-19T22:28:59.755100'
   },
   {
     id: '',
@@ -23438,13 +23542,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152329',
-    updated_at: '2026-08-19T16:27:21.152329'
+    created_at: '2026-08-19T22:28:59.755103',
+    updated_at: '2026-08-19T22:28:59.755104'
   },
   {
     id: '',
     name: '',
-    company: 'The Artisan\'s Nook',
+    company: 'The Artisan's Nook',
     email: 'theartisansnook@gmail.com',
     phone: '989-284-9444',
     website: 'https://theartisansnook.com/',
@@ -23454,8 +23558,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152332',
-    updated_at: '2026-08-19T16:27:21.152333'
+    created_at: '2026-08-19T22:28:59.755106',
+    updated_at: '2026-08-19T22:28:59.755107'
   },
   {
     id: '',
@@ -23470,8 +23574,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152335',
-    updated_at: '2026-08-19T16:27:21.152336'
+    created_at: '2026-08-19T22:28:59.755109',
+    updated_at: '2026-08-19T22:28:59.755110'
   },
   {
     id: '',
@@ -23486,8 +23590,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152338',
-    updated_at: '2026-08-19T16:27:21.152339'
+    created_at: '2026-08-19T22:28:59.755112',
+    updated_at: '2026-08-19T22:28:59.755113'
   },
   {
     id: '',
@@ -23502,8 +23606,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152342',
-    updated_at: '2026-08-19T16:27:21.152342'
+    created_at: '2026-08-19T22:28:59.755115',
+    updated_at: '2026-08-19T22:28:59.755116'
   },
   {
     id: '',
@@ -23518,8 +23622,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152345',
-    updated_at: '2026-08-19T16:27:21.152346'
+    created_at: '2026-08-19T22:28:59.755118',
+    updated_at: '2026-08-19T22:28:59.755119'
   },
   {
     id: '',
@@ -23534,8 +23638,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152348',
-    updated_at: '2026-08-19T16:27:21.152349'
+    created_at: '2026-08-19T22:28:59.755122',
+    updated_at: '2026-08-19T22:28:59.755122'
   },
   {
     id: '',
@@ -23550,8 +23654,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152351',
-    updated_at: '2026-08-19T16:27:21.152352'
+    created_at: '2026-08-19T22:28:59.755124',
+    updated_at: '2026-08-19T22:28:59.755125'
   },
   {
     id: '',
@@ -23566,13 +23670,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152354',
-    updated_at: '2026-08-19T16:27:21.152355'
+    created_at: '2026-08-19T22:28:59.755128',
+    updated_at: '2026-08-19T22:28:59.755128'
   },
   {
     id: '',
     name: '',
-    company: 'Java Joe\'s Cafe',
+    company: 'Java Joe's Cafe',
     email: 'javajoescafe@gmail.com',
     phone: '906-643-9211',
     website: 'https://www.javajoescafemi.com/',
@@ -23582,8 +23686,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152357',
-    updated_at: '2026-08-19T16:27:21.152358'
+    created_at: '2026-08-19T22:28:59.755131',
+    updated_at: '2026-08-19T22:28:59.755132'
   },
   {
     id: '',
@@ -23598,8 +23702,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152360',
-    updated_at: '2026-08-19T16:27:21.152361'
+    created_at: '2026-08-19T22:28:59.755134',
+    updated_at: '2026-08-19T22:28:59.755135'
   },
   {
     id: '',
@@ -23614,8 +23718,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152363',
-    updated_at: '2026-08-19T16:27:21.152364'
+    created_at: '2026-08-19T22:28:59.755137',
+    updated_at: '2026-08-19T22:28:59.755137'
   },
   {
     id: '',
@@ -23630,8 +23734,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152366',
-    updated_at: '2026-08-19T16:27:21.152367'
+    created_at: '2026-08-19T22:28:59.755139',
+    updated_at: '2026-08-19T22:28:59.755140'
   },
   {
     id: '',
@@ -23646,8 +23750,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152369',
-    updated_at: '2026-08-19T16:27:21.152370'
+    created_at: '2026-08-19T22:28:59.755142',
+    updated_at: '2026-08-19T22:28:59.755143'
   },
   {
     id: '',
@@ -23662,8 +23766,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152372',
-    updated_at: '2026-08-19T16:27:21.152373'
+    created_at: '2026-08-19T22:28:59.755145',
+    updated_at: '2026-08-19T22:28:59.755146'
   },
   {
     id: '',
@@ -23678,8 +23782,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152375',
-    updated_at: '2026-08-19T16:27:21.152375'
+    created_at: '2026-08-19T22:28:59.755148',
+    updated_at: '2026-08-19T22:28:59.755149'
   },
   {
     id: '',
@@ -23694,8 +23798,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152378',
-    updated_at: '2026-08-19T16:27:21.152378'
+    created_at: '2026-08-19T22:28:59.755151',
+    updated_at: '2026-08-19T22:28:59.755152'
   },
   {
     id: '',
@@ -23710,8 +23814,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152380',
-    updated_at: '2026-08-19T16:27:21.152381'
+    created_at: '2026-08-19T22:28:59.755154',
+    updated_at: '2026-08-19T22:28:59.755155'
   },
   {
     id: '',
@@ -23726,8 +23830,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152385',
-    updated_at: '2026-08-19T16:27:21.152387'
+    created_at: '2026-08-19T22:28:59.755157',
+    updated_at: '2026-08-19T22:28:59.755158'
   },
   {
     id: '',
@@ -23742,8 +23846,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152390',
-    updated_at: '2026-08-19T16:27:21.152391'
+    created_at: '2026-08-19T22:28:59.755160',
+    updated_at: '2026-08-19T22:28:59.755161'
   },
   {
     id: '',
@@ -23758,8 +23862,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152395',
-    updated_at: '2026-08-19T16:27:21.152397'
+    created_at: '2026-08-19T22:28:59.755163',
+    updated_at: '2026-08-19T22:28:59.755164'
   },
   {
     id: '',
@@ -23774,8 +23878,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152401',
-    updated_at: '2026-08-19T16:27:21.152402'
+    created_at: '2026-08-19T22:28:59.755166',
+    updated_at: '2026-08-19T22:28:59.755166'
   },
   {
     id: '',
@@ -23790,8 +23894,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152407',
-    updated_at: '2026-08-19T16:27:21.152408'
+    created_at: '2026-08-19T22:28:59.755169',
+    updated_at: '2026-08-19T22:28:59.755169'
   },
   {
     id: '',
@@ -23806,8 +23910,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152412',
-    updated_at: '2026-08-19T16:27:21.152413'
+    created_at: '2026-08-19T22:28:59.755171',
+    updated_at: '2026-08-19T22:28:59.755172'
   },
   {
     id: '',
@@ -23822,8 +23926,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152417',
-    updated_at: '2026-08-19T16:27:21.152418'
+    created_at: '2026-08-19T22:28:59.755174',
+    updated_at: '2026-08-19T22:28:59.755175'
   },
   {
     id: '',
@@ -23838,8 +23942,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152422',
-    updated_at: '2026-08-19T16:27:21.152424'
+    created_at: '2026-08-19T22:28:59.755177',
+    updated_at: '2026-08-19T22:28:59.755178'
   },
   {
     id: '',
@@ -23854,8 +23958,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152427',
-    updated_at: '2026-08-19T16:27:21.152429'
+    created_at: '2026-08-19T22:28:59.755180',
+    updated_at: '2026-08-19T22:28:59.755181'
   },
   {
     id: '',
@@ -23870,8 +23974,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152432',
-    updated_at: '2026-08-19T16:27:21.152434'
+    created_at: '2026-08-19T22:28:59.755183',
+    updated_at: '2026-08-19T22:28:59.755184'
   },
   {
     id: '',
@@ -23886,8 +23990,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152438',
-    updated_at: '2026-08-19T16:27:21.152439'
+    created_at: '2026-08-19T22:28:59.755186',
+    updated_at: '2026-08-19T22:28:59.755187'
   },
   {
     id: '',
@@ -23902,8 +24006,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152443',
-    updated_at: '2026-08-19T16:27:21.152444'
+    created_at: '2026-08-19T22:28:59.755189',
+    updated_at: '2026-08-19T22:28:59.755189'
   },
   {
     id: '',
@@ -23918,8 +24022,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152448',
-    updated_at: '2026-08-19T16:27:21.152449'
+    created_at: '2026-08-19T22:28:59.755192',
+    updated_at: '2026-08-19T22:28:59.755192'
   },
   {
     id: '',
@@ -23934,8 +24038,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152453',
-    updated_at: '2026-08-19T16:27:21.152455'
+    created_at: '2026-08-19T22:28:59.755194',
+    updated_at: '2026-08-19T22:28:59.755195'
   },
   {
     id: '',
@@ -23950,8 +24054,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152459',
-    updated_at: '2026-08-19T16:27:21.152460'
+    created_at: '2026-08-19T22:28:59.755197',
+    updated_at: '2026-08-19T22:28:59.755198'
   },
   {
     id: '',
@@ -23966,8 +24070,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152464',
-    updated_at: '2026-08-19T16:27:21.152465'
+    created_at: '2026-08-19T22:28:59.755200',
+    updated_at: '2026-08-19T22:28:59.755201'
   },
   {
     id: '',
@@ -23982,8 +24086,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152469',
-    updated_at: '2026-08-19T16:27:21.152471'
+    created_at: '2026-08-19T22:28:59.755203',
+    updated_at: '2026-08-19T22:28:59.755204'
   },
   {
     id: '',
@@ -23998,8 +24102,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152475',
-    updated_at: '2026-08-19T16:27:21.152476'
+    created_at: '2026-08-19T22:28:59.755206',
+    updated_at: '2026-08-19T22:28:59.755207'
   },
   {
     id: '',
@@ -24014,8 +24118,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152480',
-    updated_at: '2026-08-19T16:27:21.152481'
+    created_at: '2026-08-19T22:28:59.755209',
+    updated_at: '2026-08-19T22:28:59.755210'
   },
   {
     id: '',
@@ -24030,8 +24134,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152485',
-    updated_at: '2026-08-19T16:27:21.152486'
+    created_at: '2026-08-19T22:28:59.755212',
+    updated_at: '2026-08-19T22:28:59.755213'
   },
   {
     id: '',
@@ -24046,8 +24150,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152490',
-    updated_at: '2026-08-19T16:27:21.152492'
+    created_at: '2026-08-19T22:28:59.755215',
+    updated_at: '2026-08-19T22:28:59.755215'
   },
   {
     id: '',
@@ -24062,8 +24166,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152495',
-    updated_at: '2026-08-19T16:27:21.152497'
+    created_at: '2026-08-19T22:28:59.755217',
+    updated_at: '2026-08-19T22:28:59.755218'
   },
   {
     id: '',
@@ -24078,8 +24182,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152501',
-    updated_at: '2026-08-19T16:27:21.152502'
+    created_at: '2026-08-19T22:28:59.755221',
+    updated_at: '2026-08-19T22:28:59.755221'
   },
   {
     id: '',
@@ -24094,8 +24198,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152506',
-    updated_at: '2026-08-19T16:27:21.152508'
+    created_at: '2026-08-19T22:28:59.755223',
+    updated_at: '2026-08-19T22:28:59.755230'
   },
   {
     id: '',
@@ -24110,8 +24214,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152512',
-    updated_at: '2026-08-19T16:27:21.152513'
+    created_at: '2026-08-19T22:28:59.755232',
+    updated_at: '2026-08-19T22:28:59.755233'
   },
   {
     id: '',
@@ -24126,8 +24230,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152517',
-    updated_at: '2026-08-19T16:27:21.152518'
+    created_at: '2026-08-19T22:28:59.755235',
+    updated_at: '2026-08-19T22:28:59.755236'
   },
   {
     id: '',
@@ -24142,8 +24246,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152522',
-    updated_at: '2026-08-19T16:27:21.152523'
+    created_at: '2026-08-19T22:28:59.755238',
+    updated_at: '2026-08-19T22:28:59.755238'
   },
   {
     id: '',
@@ -24158,8 +24262,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152528',
-    updated_at: '2026-08-19T16:27:21.152529'
+    created_at: '2026-08-19T22:28:59.755241',
+    updated_at: '2026-08-19T22:28:59.755242'
   },
   {
     id: '',
@@ -24174,8 +24278,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152533',
-    updated_at: '2026-08-19T16:27:21.152535'
+    created_at: '2026-08-19T22:28:59.755244',
+    updated_at: '2026-08-19T22:28:59.755245'
   },
   {
     id: '',
@@ -24190,8 +24294,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152538',
-    updated_at: '2026-08-19T16:27:21.152540'
+    created_at: '2026-08-19T22:28:59.755249',
+    updated_at: '2026-08-19T22:28:59.755250'
   },
   {
     id: '',
@@ -24206,8 +24310,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152544',
-    updated_at: '2026-08-19T16:27:21.152545'
+    created_at: '2026-08-19T22:28:59.755252',
+    updated_at: '2026-08-19T22:28:59.755253'
   },
   {
     id: '',
@@ -24222,8 +24326,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152548',
-    updated_at: '2026-08-19T16:27:21.152550'
+    created_at: '2026-08-19T22:28:59.755255',
+    updated_at: '2026-08-19T22:28:59.755256'
   },
   {
     id: '',
@@ -24238,8 +24342,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152554',
-    updated_at: '2026-08-19T16:27:21.152555'
+    created_at: '2026-08-19T22:28:59.755258',
+    updated_at: '2026-08-19T22:28:59.755259'
   },
   {
     id: '',
@@ -24254,8 +24358,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152559',
-    updated_at: '2026-08-19T16:27:21.152560'
+    created_at: '2026-08-19T22:28:59.755261',
+    updated_at: '2026-08-19T22:28:59.755262'
   },
   {
     id: '',
@@ -24270,8 +24374,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152564',
-    updated_at: '2026-08-19T16:27:21.152565'
+    created_at: '2026-08-19T22:28:59.755264',
+    updated_at: '2026-08-19T22:28:59.755265'
   },
   {
     id: '',
@@ -24286,8 +24390,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152569',
-    updated_at: '2026-08-19T16:27:21.152571'
+    created_at: '2026-08-19T22:28:59.755269',
+    updated_at: '2026-08-19T22:28:59.755270'
   },
   {
     id: '',
@@ -24302,8 +24406,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152575',
-    updated_at: '2026-08-19T16:27:21.152576'
+    created_at: '2026-08-19T22:28:59.755272',
+    updated_at: '2026-08-19T22:28:59.755272'
   },
   {
     id: '',
@@ -24318,8 +24422,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152580',
-    updated_at: '2026-08-19T16:27:21.152581'
+    created_at: '2026-08-19T22:28:59.755275',
+    updated_at: '2026-08-19T22:28:59.755276'
   },
   {
     id: '',
@@ -24334,8 +24438,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152585',
-    updated_at: '2026-08-19T16:27:21.152586'
+    created_at: '2026-08-19T22:28:59.755278',
+    updated_at: '2026-08-19T22:28:59.755278'
   },
   {
     id: '',
@@ -24350,8 +24454,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152590',
-    updated_at: '2026-08-19T16:27:21.152592'
+    created_at: '2026-08-19T22:28:59.755281',
+    updated_at: '2026-08-19T22:28:59.755281'
   },
   {
     id: '',
@@ -24366,8 +24470,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152595',
-    updated_at: '2026-08-19T16:27:21.152597'
+    created_at: '2026-08-19T22:28:59.755289',
+    updated_at: '2026-08-19T22:28:59.755290'
   },
   {
     id: '',
@@ -24382,8 +24486,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152601',
-    updated_at: '2026-08-19T16:27:21.152602'
+    created_at: '2026-08-19T22:28:59.755292',
+    updated_at: '2026-08-19T22:28:59.755293'
   },
   {
     id: '',
@@ -24398,8 +24502,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152606',
-    updated_at: '2026-08-19T16:27:21.152607'
+    created_at: '2026-08-19T22:28:59.755295',
+    updated_at: '2026-08-19T22:28:59.755295'
   },
   {
     id: '',
@@ -24414,16 +24518,18 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-19T16:27:21.152611',
-    updated_at: '2026-08-19T16:27:21.152613'
+    created_at: '2026-08-19T22:28:59.755298',
+    updated_at: '2026-08-19T22:28:59.755299'
   },
 ];
 
 
 
 
+
 const DEMO_EMAILS: OutreachEmail[] = [
 ];
+
 
 
 
