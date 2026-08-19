@@ -3,10 +3,8 @@
  * Tries API routes first (server mode), falls back to localStorage (GitHub Pages).
  */
 
-import { IMPORT_STATS, IMPORT_LEADS, IMPORT_EMAILS } from './import-data';
+import { IMPORT_STATS } from './import-data';
 import type { ImportLead, ImportEmail } from './import-data';
-import { PARSED_DOSSIERS } from './dossier-data';
-import type { ParsedDossier } from './dossier-data';
 
 // ===== TYPES =====
 export interface Lead {
@@ -494,15 +492,8 @@ const DEMO_ACTIVITIES: Activity[] = [
 
 function seedLocalStorage(): void {
   if (loadFromStorage('leads').length > 0) return; // Already seeded
-  
-  // Load real imported leads (690) instead of demo leads (12)
-  const leadsToSeed = IMPORT_LEADS.length > 0 ? IMPORT_LEADS as unknown as Lead[] : DEMO_LEADS;
-  
-  // Load real imported emails (99) instead of demo emails (3)
-  const emailsToSeed = IMPORT_EMAILS.length > 0 ? IMPORT_EMAILS as unknown as OutreachEmail[] : DEMO_EMAILS;
-  
-  saveToStorage('leads', leadsToSeed);
-  saveToStorage('emails', emailsToSeed);
+  saveToStorage('leads', DEMO_LEADS);
+  saveToStorage('emails', DEMO_EMAILS);
   saveToStorage('deals', DEMO_DEALS);
   saveToStorage('tasks', DEMO_TASKS);
   saveToStorage('activities', DEMO_ACTIVITIES);
