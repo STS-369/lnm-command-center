@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import {
   getLeads,
   getDeals,
@@ -11,8 +11,11 @@ import {
   getCategoryStats,
   getCityStats,
   loadRealDataFromJSON,
+  getSyncState,
+  type SyncResult,
 } from '@/lib/client-db';
 import type { Lead, Deal, Task, Activity, OutreachEmail } from '@/lib/client-db';
+import SyncButton from '@/components/SyncButton';
 
 interface StatCardProps {
   label: string;
@@ -72,6 +75,7 @@ export default function DashboardPage() {
   const [categoryStats, setCategoryStats] = useState<Record<string, number>>({});
   const [cityStats, setCityStats] = useState<Record<string, number>>({});
   const [loading, setLoading] = useState(true);
+  const [syncMeta, setSyncMeta] = useState(getSyncState());
 
   useEffect(() => {
     async function load() {
@@ -97,6 +101,31 @@ export default function DashboardPage() {
     }
     load();
   }, []);
+
+  // Refresh all dashboard data from localStorage after a sync
+  const refreshData = useCallback(async () => {
+    const [l, d, t, a, e, ps, cs, ci] = await Promise.all([
+      getLeads(), getDeals(), getTasks(), getActivities(), getEmails(),
+      getPipelineStats(), getCategoryStats(), getCityStats(),
+    ]);
+    setLeads(l);
+    setDeals(d);
+    setTasks(t);
+    setActivities(a);
+    setEmails(e);
+    setPipelineStats(ps);
+    setCategoryStats(cs);
+    setCityStats(ci);
+  }, []);
+
+  // Called after sync completes — refresh data and update sync metadata
+  const handleSyncComplete = useCallback(
+    (result: SyncResult) => {
+      refreshData();
+      setSyncMeta(getSyncState());
+    },
+    [refreshData]
+  );
 
   if (loading) {
     return (
@@ -160,12 +189,15 @@ export default function DashboardPage() {
   return (
     <div className="space-y-6">
       {/* Page Header */}
-      <div>
-        <h1 className="text-2xl font-bold text-text-primary glow-text-cyan">Dashboard</h1>
-        <p className="text-sm text-text-secondary mt-1">
-          Welcome back, Admin
-          <span className="ml-2 text-neon-green text-xs">● Live Data</span>
-        </p>
+      <div className="flex items-center justify-between">
+        <div>
+          <h1 className="text-2xl font-bold text-text-primary glow-text-cyan">Dashboard</h1>
+          <p className="text-sm text-text-secondary mt-1">
+            Welcome back, Admin
+            <span className="ml-2 text-neon-green text-xs">● Live Data</span>
+          </p>
+        </div>
+        <SyncButton onSyncComplete={handleSyncComplete} />
       </div>
 
       {/* Stat Cards */}
