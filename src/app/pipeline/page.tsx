@@ -5,6 +5,7 @@ import {
   getLeadsWithStats,
   getCityStats,
   getImportStats,
+  loadRealDataFromJSON,
 } from '@/lib/client-db';
 import type { LeadWithStats, Dossier } from '@/lib/client-db';
 import LeadDetailModal from '@/components/LeadDetailModal';
@@ -46,6 +47,7 @@ export default function PipelinePage() {
   useEffect(() => {
     async function load() {
       try {
+        await loadRealDataFromJSON();
         const [l, cs] = await Promise.all([getLeadsWithStats(), getCityStats()]);
         setLeads(l);
         setCityStats(cs);

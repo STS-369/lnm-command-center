@@ -10,6 +10,7 @@ import {
   getPipelineStats,
   getCategoryStats,
   getCityStats,
+  loadRealDataFromJSON,
 } from '@/lib/client-db';
 import type { Lead, Deal, Task, Activity, OutreachEmail } from '@/lib/client-db';
 
@@ -75,6 +76,7 @@ export default function DashboardPage() {
   useEffect(() => {
     async function load() {
       try {
+        await loadRealDataFromJSON();
         const [l, d, t, a, e, ps, cs, ci] = await Promise.all([
           getLeads(), getDeals(), getTasks(), getActivities(), getEmails(),
           getPipelineStats(), getCategoryStats(), getCityStats(),
