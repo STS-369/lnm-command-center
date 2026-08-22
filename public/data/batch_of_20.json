@@ -1,6 +1,6 @@
 {
-  "batch_id": "batch_20260821_110032",
-  "created_at": "2026-08-21T11:00:32.631207+00:00",
+  "batch_id": "batch_20260822_110029",
+  "created_at": "2026-08-22T11:00:29.695175+00:00",
   "total_leads_in_batch": 20,
   "leads": [
     {
@@ -21,7 +21,7 @@
       "existing_confidence_score": 1,
       "has_email_draft": true,
       "priority_score": 110,
-      "selected_at": "2026-08-21T11:00:32.630498+00:00"
+      "selected_at": "2026-08-22T11:00:29.694632+00:00"
     },
     {
       "lead_id": "80178fb1-8112-4670-8a1f-e31a9ba889a1",
@@ -41,7 +41,7 @@
       "existing_confidence_score": 1,
       "has_email_draft": true,
       "priority_score": 110,
-      "selected_at": "2026-08-21T11:00:32.630501+00:00"
+      "selected_at": "2026-08-22T11:00:29.694634+00:00"
     },
     {
       "lead_id": "766130bc-9ab3-4dfc-a893-45efdc2c2ee8",
@@ -61,7 +61,7 @@
       "existing_confidence_score": 1,
       "has_email_draft": true,
       "priority_score": 110,
-      "selected_at": "2026-08-21T11:00:32.630507+00:00"
+      "selected_at": "2026-08-22T11:00:29.694639+00:00"
     },
     {
       "lead_id": "b59db0d1-fa3d-48bd-9de1-945e974afb1a",
@@ -81,7 +81,7 @@
       "existing_confidence_score": 1,
       "has_email_draft": true,
       "priority_score": 110,
-      "selected_at": "2026-08-21T11:00:32.630510+00:00"
+      "selected_at": "2026-08-22T11:00:29.694642+00:00"
     },
     {
       "lead_id": "850fda64-7f13-4bef-ae2a-e1948afc0077",
@@ -101,7 +101,7 @@
       "existing_confidence_score": 1,
       "has_email_draft": true,
       "priority_score": 110,
-      "selected_at": "2026-08-21T11:00:32.630513+00:00"
+      "selected_at": "2026-08-22T11:00:29.694644+00:00"
     },
     {
       "lead_id": "23a23f62-e2e6-4eb2-b8cd-47f680fc2e6a",
@@ -121,7 +121,7 @@
       "existing_confidence_score": 1,
       "has_email_draft": true,
       "priority_score": 110,
-      "selected_at": "2026-08-21T11:00:32.630517+00:00"
+      "selected_at": "2026-08-22T11:00:29.694647+00:00"
     },
     {
       "lead_id": "08e61f1c-8e6a-4f1e-8ae9-60cd0d1bca24",
@@ -141,7 +141,7 @@
       "existing_confidence_score": 1,
       "has_email_draft": true,
       "priority_score": 110,
-      "selected_at": "2026-08-21T11:00:32.630520+00:00"
+      "selected_at": "2026-08-22T11:00:29.694650+00:00"
     },
     {
       "lead_id": "d2d580fd-2260-4488-820b-f632a2f2a2ba",
@@ -161,7 +161,7 @@
       "existing_confidence_score": 1,
       "has_email_draft": true,
       "priority_score": 110,
-      "selected_at": "2026-08-21T11:00:32.630522+00:00"
+      "selected_at": "2026-08-22T11:00:29.694652+00:00"
     },
     {
       "lead_id": "a981a3f2-882e-42d3-a2a3-383e2038c6ca",
@@ -181,7 +181,7 @@
       "existing_confidence_score": 1,
       "has_email_draft": true,
       "priority_score": 110,
-      "selected_at": "2026-08-21T11:00:32.630526+00:00"
+      "selected_at": "2026-08-22T11:00:29.694655+00:00"
     },
     {
       "lead_id": "f4df25e4-b0bc-494a-b2c9-b7dc1b984825",
@@ -201,7 +201,7 @@
       "existing_confidence_score": 1,
       "has_email_draft": true,
       "priority_score": 110,
-      "selected_at": "2026-08-21T11:00:32.630529+00:00"
+      "selected_at": "2026-08-22T11:00:29.694658+00:00"
     },
     {
       "lead_id": "625860eb-652b-43fe-8c87-906fb807028b",
@@ -221,7 +221,7 @@
       "existing_confidence_score": 1,
       "has_email_draft": true,
       "priority_score": 110,
-      "selected_at": "2026-08-21T11:00:32.630546+00:00"
+      "selected_at": "2026-08-22T11:00:29.694668+00:00"
     },
     {
       "lead_id": "3eaaf5da-6690-4e03-8073-34fa80194b3e",
@@ -241,7 +241,7 @@
       "existing_confidence_score": 1,
       "has_email_draft": true,
       "priority_score": 110,
-      "selected_at": "2026-08-21T11:00:32.630550+00:00"
+      "selected_at": "2026-08-22T11:00:29.694672+00:00"
     },
     {
       "lead_id": "d155d12d-6c0d-4b58-87e1-e2fe5d1bec6b",
@@ -261,7 +261,7 @@
       "existing_confidence_score": 1,
       "has_email_draft": true,
       "priority_score": 110,
-      "selected_at": "2026-08-21T11:00:32.630554+00:00"
+      "selected_at": "2026-08-22T11:00:29.694675+00:00"
     },
     {
       "lead_id": "0f3844dd-d19e-4a9d-8888-6972fb1ac759",
@@ -281,7 +281,7 @@
       "existing_confidence_score": 1,
       "has_email_draft": true,
       "priority_score": 110,
-      "selected_at": "2026-08-21T11:00:32.630559+00:00"
+      "selected_at": "2026-08-22T11:00:29.694678+00:00"
     },
     {
       "lead_id": "15c5be89-2a5c-40eb-a9a3-3bcb5d911ceb",
@@ -301,7 +301,7 @@
       "existing_confidence_score": 1,
       "has_email_draft": true,
       "priority_score": 110,
-      "selected_at": "2026-08-21T11:00:32.630563+00:00"
+      "selected_at": "2026-08-22T11:00:29.694680+00:00"
     },
     {
       "lead_id": "894a1d4e-1bfd-4d3a-a8df-a12592d2c318",
@@ -321,7 +321,7 @@
       "existing_confidence_score": 1,
       "has_email_draft": true,
       "priority_score": 110,
-      "selected_at": "2026-08-21T11:00:32.630566+00:00"
+      "selected_at": "2026-08-22T11:00:29.694685+00:00"
     },
     {
       "lead_id": "9ea3a108-44a7-459a-a08d-ec1ad71bf7b4",
@@ -341,7 +341,7 @@
       "existing_confidence_score": 1,
       "has_email_draft": true,
       "priority_score": 110,
-      "selected_at": "2026-08-21T11:00:32.630569+00:00"
+      "selected_at": "2026-08-22T11:00:29.694687+00:00"
     },
     {
       "lead_id": "3f8d98c1-c863-471c-b83b-7aed84408d2c",
@@ -361,7 +361,7 @@
       "existing_confidence_score": 1,
       "has_email_draft": true,
       "priority_score": 110,
-      "selected_at": "2026-08-21T11:00:32.630573+00:00"
+      "selected_at": "2026-08-22T11:00:29.694692+00:00"
     },
     {
       "lead_id": "dc981dd5-eba3-40ed-a8ef-bf45e5e46548",
@@ -381,7 +381,7 @@
       "existing_confidence_score": 1,
       "has_email_draft": true,
       "priority_score": 110,
-      "selected_at": "2026-08-21T11:00:32.630576+00:00"
+      "selected_at": "2026-08-22T11:00:29.694694+00:00"
     },
     {
       "lead_id": "b688dda5-26de-4b90-a5cd-446884ee4b95",
@@ -401,7 +401,7 @@
       "existing_confidence_score": 1,
       "has_email_draft": true,
       "priority_score": 110,
-      "selected_at": "2026-08-21T11:00:32.630580+00:00"
+      "selected_at": "2026-08-22T11:00:29.694699+00:00"
     }
   ]
 }
