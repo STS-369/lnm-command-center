@@ -1,0 +1,20 @@
+{
+  "lead_id": "test_lead_0",
+  "name": "Apple Inc.",
+  "company": "Apple Inc.",
+  "website": "https://www.apple.com",
+  "email": "",
+  "phone": "",
+  "city": "Cupertino",
+  "state": "CA",
+  "industry": "technology",
+  "score": 100,
+  "rating": 0,
+  "user_ratings_total": 0,
+  "website_status": "reachable",
+  "has_existing_dossier": false,
+  "existing_confidence_score": 0,
+  "has_email_draft": false,
+  "priority_score": 0,
+  "selected_at": "2026-08-19T22:00:00Z"
+}
