@@ -1,7 +1,7 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import { getDossier, saveDossier } from '@/lib/client-db';
+import { useState, useEffect, useRef } from 'react';
+import { getDossier, saveDossier, updateLeadStatus } from '@/lib/client-db';
 import type { Lead, Dossier } from '@/lib/client-db';
 
 interface LeadDetailModalProps {
@@ -37,6 +37,56 @@ const statusLabels: Record<string, string> = {
   closed_won: 'Won',
   closed_lost: 'Lost',
 };
+
+const statusColors: Record<string, string> = {
+  new: 'bg-cyan/20 text-cyan border-cyan/30',
+  researched: 'bg-purple/20 text-purple border-purple/30',
+  outreach: 'bg-neon-amber/20 text-neon-amber border-neon-amber/30',
+  proposal: 'bg-orange-400/20 text-orange-400 border-orange-400/30',
+  active_deal: 'bg-neon-green/20 text-neon-green border-neon-green/30',
+  closed_won: 'bg-green-400/20 text-green-400 border-green-400/30',
+  closed_lost: 'bg-neon-red/20 text-neon-red border-neon-red/30',
+};
+
+function StatusDropdown({ lead, onStatusChange }: { lead: Lead; onStatusChange: (status: string) => void }) {
+  const [open, setOpen] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    function handleClick(e: MouseEvent) {
+      if (ref.current && !ref.current.contains(e.target as Node)) setOpen(false);
+    }
+    document.addEventListener('mousedown', handleClick);
+    return () => document.removeEventListener('mousedown', handleClick);
+  }, []);
+
+  return (
+    <div ref={ref} className="relative inline-block">
+      <button
+        onClick={() => setOpen(!open)}
+        className={`px-2 py-1 rounded-full text-xs font-medium border cursor-pointer transition-all hover:opacity-80 ${statusColors[lead.status] || 'bg-bg-card text-text-secondary border-border'}`}
+      >
+        {statusLabels[lead.status] || lead.status} ▾
+      </button>
+      {open && (
+        <div className="absolute right-0 top-full mt-1 z-50 bg-bg-elevated border border-border rounded-lg shadow-lg py-1 min-w-[140px]">
+          {Object.entries(statusLabels).map(([key, label]) => (
+            <button
+              key={key}
+              onClick={() => { onStatusChange(key as any); setOpen(false); }}
+              className={`w-full text-left px-3 py-1.5 text-xs hover:bg-bg-card transition-colors flex items-center gap-2 ${
+                lead.status === key ? 'text-cyan font-medium' : 'text-text-secondary'
+              }`}
+            >
+              <span className={`w-2 h-2 rounded-full ${statusColors[key]?.split(' ')[0] || 'bg-gray-500'}`} />
+              {label}
+            </button>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
 
 export default function LeadDetailModal({ lead, onClose, onDossierSaved }: LeadDetailModalProps) {
   const [dossier, setDossier] = useState<Omit<Dossier, 'id' | 'created_at' | 'updated_at'> | null>(null);
@@ -231,9 +281,10 @@ export default function LeadDetailModal({ lead, onClose, onDossierSaved }: LeadD
               </div>
               <div className="text-right">
                 <p className="text-xs text-text-muted">Status</p>
-                <span className={`px-2 py-1 rounded-full text-xs font-medium badge-${lead.status}`}>
-                  {statusLabels[lead.status] || lead.status}
-                </span>
+                <StatusDropdown lead={lead} onStatusChange={(newStatus) => {
+                  updateLeadStatus(lead.id, newStatus as any);
+                  lead.status = newStatus;
+                }} />
               </div>
             </div>
 

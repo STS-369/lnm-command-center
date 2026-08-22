@@ -6,6 +6,7 @@ import {
   getCityStats,
   getImportStats,
   loadRealDataFromJSON,
+  updateLeadStatus,
 } from '@/lib/client-db';
 import type { LeadWithStats, Dossier } from '@/lib/client-db';
 import LeadDetailModal from '@/components/LeadDetailModal';
@@ -29,6 +30,19 @@ const statusLabels: Record<string, string> = {
   active_deal: 'Active Deal',
   closed_won: 'Won',
   closed_lost: 'Lost',
+};
+
+const statusBadgeClass = (status: string): string => {
+  const map: Record<string, string> = {
+    new: 'bg-cyan/20 text-cyan border-cyan/30',
+    researched: 'bg-purple/20 text-purple border-purple/30',
+    outreach: 'bg-neon-amber/20 text-neon-amber border-neon-amber/30',
+    proposal: 'bg-orange-400/20 text-orange-400 border-orange-400/30',
+    active_deal: 'bg-neon-green/20 text-neon-green border-neon-green/30',
+    closed_won: 'bg-green-400/20 text-green-400 border-green-400/30',
+    closed_lost: 'bg-neon-red/20 text-neon-red border-neon-red/30',
+  };
+  return map[status] || 'bg-bg-card text-text-secondary border-border';
 };
 
 export default function PipelinePage() {
@@ -99,6 +113,11 @@ export default function PipelinePage() {
   const handlePageSizeChange = (newSize: number) => {
     setPageSize(newSize);
     setCurrentPage(1);
+  };
+
+  const handleStatusChange = (leadId: string, newStatus: string) => {
+    updateLeadStatus(leadId, newStatus as any);
+    setLeads(prev => prev.map(l => l.id === leadId ? { ...l, status: newStatus } : l));
   };
 
   const statusCounts: Record<string, number> = {};
@@ -268,9 +287,16 @@ export default function PipelinePage() {
                   </td>
                   <td className="px-4 py-3 text-sm text-text-secondary">{lead.city}</td>
                   <td className="px-4 py-3">
-                    <span className={`px-2 py-1 rounded-full text-xs font-medium badge-${lead.status}`}>
-                      {statusLabels[lead.status] || lead.status}
-                    </span>
+                    <select
+                      value={lead.status}
+                      onChange={(e) => { e.stopPropagation(); handleStatusChange(lead.id, e.target.value); }}
+                      onClick={(e) => e.stopPropagation()}
+                      className={`px-2 py-1 rounded-full text-xs font-medium border cursor-pointer bg-transparent ${statusBadgeClass(lead.status)}`}
+                    >
+                      {Object.entries(statusLabels).map(([key, label]) => (
+                        <option key={key} value={key} className="bg-bg-elevated text-text-primary">{label}</option>
+                      ))}
+                    </select>
                   </td>
                   <td className="px-4 py-3">
                     <span className={`inline-flex items-center justify-center min-w-[2rem] px-2 py-0.5 rounded text-sm font-bold border ${getScoreBg(lead.score)} ${getScoreColor(lead.score)}`}>
