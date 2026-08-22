@@ -6,6 +6,14 @@
 import { IMPORT_STATS } from './import-data';
 import type { ImportLead, ImportEmail } from './import-data';
 
+const statusLabels: Record<string, string> = {
+  new: 'New',
+  contacted: 'Contacted',
+  qualified: 'Qualified',
+  proposal: 'Proposal Sent',
+  closed: 'Closed'
+};
+
 // ===== TYPES =====
 export interface Lead {
   id: string;
@@ -173,6 +181,7 @@ const DEMO_LEADS: Lead[] = [];
 
 const DEMO_EMAILS: OutreachEmail[] = [
 ];
+
 
 
 
@@ -905,4 +914,38 @@ export function resetSyncMetadata(): void {
   if (typeof window !== 'undefined') {
     localStorage.removeItem(SYNC_METADATA_KEY);
   }
+}
+
+// ===== STATUS MANAGEMENT =====
+
+const STATUS_OPTIONS = ['new', 'researched', 'outreach', 'proposal', 'active_deal', 'closed_won', 'closed_lost'] as const;
+export type LeadStatus = typeof STATUS_OPTIONS[number];
+
+export function updateLeadStatus(leadId: string, newStatus: LeadStatus): Lead | null {
+  const leads: any[] = loadFromStorage('leads');
+  const idx = leads.findIndex((l: Lead) => l.id === leadId);
+  if (idx === -1) return null;
+
+  const oldStatus = leads[idx].status;
+  leads[idx].status = newStatus;
+  leads[idx].updated_at = new Date().toISOString();
+  saveToStorage('leads', leads);
+
+  // Log the status change as an activity
+  const activities = loadFromStorage('activities');
+  activities.unshift({
+    id: crypto.randomUUID(),
+    type: 'status_change',
+    lead_id: leadId,
+    lead_name: leads[idx].name || leads[idx].company,
+    description: `Status changed from "${statusLabels[oldStatus] || oldStatus}" to "${statusLabels[newStatus] || newStatus}"`,
+    created_at: new Date().toISOString(),
+  });
+  saveToStorage('activities', activities);
+
+  return leads[idx];
+}
+
+export function getStatusOptions(): readonly string[] {
+  return STATUS_OPTIONS;
 }
