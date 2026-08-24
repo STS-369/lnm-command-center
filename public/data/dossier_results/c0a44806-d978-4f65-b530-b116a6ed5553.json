@@ -1,0 +1,54 @@
+{
+  "business_name": "Flower Gallery",
+  "industry": "florists",
+  "location": "Flint MI MI",
+  "website": "https://www.flowergallery.net/",
+  "phone": "(810) 221-7871",
+  "owner_name": "",
+  "owner_title": "",
+  "contact_email": "",
+  "technology_stack": [
+    "Unknown (no HTML content)"
+  ],
+  "pain_points": [],
+  "opportunities": [
+    "Order Management: Automated order confirmation and delivery tracking"
+  ],
+  "confidence_score": 2,
+  "research_sources": [
+    {
+      "type": "tech_stack_detection",
+      "detected": [
+        "Unknown (no HTML content)"
+      ],
+      "timestamp": "2026-08-24T11:30:11.565220+00:00"
+    }
+  ],
+  "notes": "Tech stack: Unknown (no HTML content). Generated 1 opportunities.",
+  "filename": "flower_gallery.md",
+  "osint_research": {
+    "scraped_pages": [],
+    "contact_info": {},
+    "data_completeness": {
+      "website_scraped": 0,
+      "contact_info_found": 0,
+      "tech_stack_detected": 10,
+      "pain_points_identified": 0,
+      "opportunities_generated": 5,
+      "business_info_extracted": 0
+    },
+    "legal_compliance": {
+      "accessed_data": "Publicly available website content and business directory data",
+      "compliance": [
+        "CFAA",
+        "GDPR",
+        "CCPA",
+        "CAN-SPAM"
+      ],
+      "data_use": "B2B sales prospecting - no personal data collected beyond public business contact info",
+      "opt_out": "privacy@soetechllc.com"
+    },
+    "researched_at": "2026-08-24T11:30:11.565387+00:00",
+    "researcher": "deep_osint.py v1.0"
+  }
+}

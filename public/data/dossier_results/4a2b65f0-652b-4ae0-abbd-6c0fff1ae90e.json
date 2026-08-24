@@ -1,0 +1,88 @@
+{
+  "business_name": "Bernelis Garage",
+  "industry": "auto repair",
+  "location": "Bay City MI MI",
+  "website": "https://bernelisgarage.com/?utm_source=gbp_listing&utm_medium=organic&utm_campaign=main_button",
+  "phone": "(989) 225-2436",
+  "owner_name": "",
+  "owner_title": "",
+  "contact_email": "",
+  "technology_stack": [
+    "SSL/HTTPS"
+  ],
+  "pain_points": [
+    "Limited Social Media Presence: No social media links detected on website",
+    "No Automated Service Reminders: No automated appointment reminders or follow-ups",
+    "Potential Mobile Issues: No explicit mobile optimization claims found",
+    "Limited Online Payment Options: No clear online payment or invoicing system"
+  ],
+  "opportunities": [
+    "Social Media Strategy: Build engaged online community with automated posting",
+    "Automated Communication System: AI-powered reminders and follow-ups",
+    "Mobile Optimization: Modern responsive website design",
+    "Online Payment Integration: Secure payment processing and invoicing"
+  ],
+  "confidence_score": 8,
+  "research_sources": [
+    {
+      "url": "https://bernelisgarage.com/?utm_source=gbp_listing&utm_medium=organic&utm_campaign=main_button",
+      "type": "website_scrape",
+      "timestamp": "2026-08-24T11:25:00.346243+00:00"
+    },
+    {
+      "url": "https://bernelisgarage.com/about",
+      "type": "website_scrape",
+      "timestamp": "2026-08-24T11:28:06.671682+00:00"
+    },
+    {
+      "type": "tech_stack_detection",
+      "detected": [
+        "SSL/HTTPS"
+      ],
+      "timestamp": "2026-08-24T11:28:06.673855+00:00"
+    }
+  ],
+  "notes": "Scraped 2 pages from website. Tech stack: SSL/HTTPS. Identified 4 pain points. Generated 4 opportunities.",
+  "filename": "bernelis_garage.md",
+  "osint_research": {
+    "scraped_pages": [
+      {
+        "url": "https://bernelisgarage.com/?utm_source=gbp_listing&utm_medium=organic&utm_campaign=main_button",
+        "status": 200,
+        "content_length": 21386,
+        "content_type": "text/html; charset=UTF-8"
+      },
+      {
+        "url": "https://bernelisgarage.com/about",
+        "status": 200,
+        "content_length": 15624,
+        "content_type": "text/html; charset=UTF-8"
+      }
+    ],
+    "contact_info": {
+      "emails_found": [],
+      "phones_found": []
+    },
+    "data_completeness": {
+      "website_scraped": 10,
+      "contact_info_found": 0,
+      "tech_stack_detected": 10,
+      "pain_points_identified": 10,
+      "opportunities_generated": 5,
+      "business_info_extracted": 0
+    },
+    "legal_compliance": {
+      "accessed_data": "Publicly available website content and business directory data",
+      "compliance": [
+        "CFAA",
+        "GDPR",
+        "CCPA",
+        "CAN-SPAM"
+      ],
+      "data_use": "B2B sales prospecting - no personal data collected beyond public business contact info",
+      "opt_out": "privacy@soetechllc.com"
+    },
+    "researched_at": "2026-08-24T11:28:06.675742+00:00",
+    "researcher": "deep_osint.py v1.0"
+  }
+}

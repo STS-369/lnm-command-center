@@ -1,0 +1,86 @@
+{
+  "business_name": "Michigan Home Care LLC",
+  "industry": "home services",
+  "location": "Saginaw MI MI",
+  "website": "http://www.michiganhomecarellc.com/",
+  "phone": "(989) 245-7488",
+  "owner_name": "",
+  "owner_title": "",
+  "contact_email": "",
+  "technology_stack": [
+    "Unknown (no CMS detected)"
+  ],
+  "pain_points": [
+    "Limited Social Media Presence: No social media links detected on website",
+    "Potential Mobile Issues: No explicit mobile optimization claims found",
+    "Limited Online Payment Options: No clear online payment or invoicing system"
+  ],
+  "opportunities": [
+    "Social Media Strategy: Build engaged online community with automated posting",
+    "Mobile Optimization: Modern responsive website design",
+    "Online Payment Integration: Secure payment processing and invoicing"
+  ],
+  "confidence_score": 7,
+  "research_sources": [
+    {
+      "url": "http://www.michiganhomecarellc.com/",
+      "type": "website_scrape",
+      "timestamp": "2026-08-24T11:11:38.139853+00:00"
+    },
+    {
+      "url": "http://www.michiganhomecarellc.com/contact-us",
+      "type": "website_scrape",
+      "timestamp": "2026-08-24T11:12:02.902304+00:00"
+    },
+    {
+      "type": "tech_stack_detection",
+      "detected": [
+        "Unknown (no CMS detected)"
+      ],
+      "timestamp": "2026-08-24T11:14:46.721815+00:00"
+    }
+  ],
+  "notes": "Scraped 2 pages from website. Tech stack: Unknown (no CMS detected). Identified 3 pain points. Generated 3 opportunities.",
+  "filename": "michigan_home_care_llc.md",
+  "osint_research": {
+    "scraped_pages": [
+      {
+        "url": "http://www.michiganhomecarellc.com/",
+        "status": 200,
+        "content_length": 12859,
+        "content_type": "text/html; charset=utf-8"
+      },
+      {
+        "url": "http://www.michiganhomecarellc.com/contact-us",
+        "status": 200,
+        "content_length": 10590,
+        "content_type": "text/html; charset=utf-8"
+      }
+    ],
+    "contact_info": {
+      "emails_found": [],
+      "phones_found": []
+    },
+    "data_completeness": {
+      "website_scraped": 10,
+      "contact_info_found": 0,
+      "tech_stack_detected": 10,
+      "pain_points_identified": 10,
+      "opportunities_generated": 5,
+      "business_info_extracted": 0
+    },
+    "legal_compliance": {
+      "accessed_data": "Publicly available website content and business directory data",
+      "compliance": [
+        "CFAA",
+        "GDPR",
+        "CCPA",
+        "CAN-SPAM"
+      ],
+      "data_use": "B2B sales prospecting - no personal data collected beyond public business contact info",
+      "opt_out": "privacy@soetechllc.com"
+    },
+    "researched_at": "2026-08-24T11:14:46.723269+00:00",
+    "researcher": "deep_osint.py v1.0"
+  }
+}

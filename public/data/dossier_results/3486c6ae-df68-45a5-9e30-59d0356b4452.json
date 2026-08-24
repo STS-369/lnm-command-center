@@ -1,0 +1,86 @@
+{
+  "business_name": "Anderson Dental",
+  "industry": "dental practices",
+  "location": "Midland MI MI",
+  "website": "http://andersondentalmidland.com/",
+  "phone": "(989) 835-5261",
+  "owner_name": "",
+  "owner_title": "",
+  "contact_email": "",
+  "technology_stack": [
+    "Unknown (no CMS detected)"
+  ],
+  "pain_points": [
+    "Limited Social Media Presence: No social media links detected on website",
+    "Potential Mobile Issues: No explicit mobile optimization claims found",
+    "Limited Online Payment Options: No clear online payment or invoicing system"
+  ],
+  "opportunities": [
+    "Social Media Strategy: Build engaged online community with automated posting",
+    "Mobile Optimization: Modern responsive website design",
+    "Online Payment Integration: Secure payment processing and invoicing"
+  ],
+  "confidence_score": 7,
+  "research_sources": [
+    {
+      "url": "http://andersondentalmidland.com/",
+      "type": "website_scrape",
+      "timestamp": "2026-08-24T11:17:52.833847+00:00"
+    },
+    {
+      "url": "http://andersondentalmidland.com/contact",
+      "type": "website_scrape",
+      "timestamp": "2026-08-24T11:17:57.953675+00:00"
+    },
+    {
+      "type": "tech_stack_detection",
+      "detected": [
+        "Unknown (no CMS detected)"
+      ],
+      "timestamp": "2026-08-24T11:21:06.964939+00:00"
+    }
+  ],
+  "notes": "Scraped 2 pages from website. Tech stack: Unknown (no CMS detected). Identified 3 pain points. Generated 3 opportunities.",
+  "filename": "anderson_dental.md",
+  "osint_research": {
+    "scraped_pages": [
+      {
+        "url": "http://andersondentalmidland.com/",
+        "status": 200,
+        "content_length": 41039,
+        "content_type": "text/html;charset=utf-8"
+      },
+      {
+        "url": "http://andersondentalmidland.com/contact",
+        "status": 200,
+        "content_length": 28997,
+        "content_type": "text/html;charset=utf-8"
+      }
+    ],
+    "contact_info": {
+      "emails_found": [],
+      "phones_found": []
+    },
+    "data_completeness": {
+      "website_scraped": 10,
+      "contact_info_found": 0,
+      "tech_stack_detected": 10,
+      "pain_points_identified": 10,
+      "opportunities_generated": 5,
+      "business_info_extracted": 0
+    },
+    "legal_compliance": {
+      "accessed_data": "Publicly available website content and business directory data",
+      "compliance": [
+        "CFAA",
+        "GDPR",
+        "CCPA",
+        "CAN-SPAM"
+      ],
+      "data_use": "B2B sales prospecting - no personal data collected beyond public business contact info",
+      "opt_out": "privacy@soetechllc.com"
+    },
+    "researched_at": "2026-08-24T11:21:06.968790+00:00",
+    "researcher": "deep_osint.py v1.0"
+  }
+}

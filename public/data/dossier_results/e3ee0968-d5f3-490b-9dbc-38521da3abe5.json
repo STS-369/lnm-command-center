@@ -1,0 +1,54 @@
+{
+  "business_name": "Flint Dental Associates",
+  "industry": "dental practices",
+  "location": "Flint MI MI",
+  "website": "http://www.flintdentalassociates.com/",
+  "phone": "(810) 720-1399",
+  "owner_name": "",
+  "owner_title": "",
+  "contact_email": "",
+  "technology_stack": [
+    "Unknown (no HTML content)"
+  ],
+  "pain_points": [],
+  "opportunities": [
+    "Patient Relationship Management: Automated follow-ups and treatment reminders"
+  ],
+  "confidence_score": 2,
+  "research_sources": [
+    {
+      "type": "tech_stack_detection",
+      "detected": [
+        "Unknown (no HTML content)"
+      ],
+      "timestamp": "2026-08-24T11:12:02.727077+00:00"
+    }
+  ],
+  "notes": "Tech stack: Unknown (no HTML content). Generated 1 opportunities.",
+  "filename": "flint_dental_associates.md",
+  "osint_research": {
+    "scraped_pages": [],
+    "contact_info": {},
+    "data_completeness": {
+      "website_scraped": 0,
+      "contact_info_found": 0,
+      "tech_stack_detected": 10,
+      "pain_points_identified": 0,
+      "opportunities_generated": 5,
+      "business_info_extracted": 0
+    },
+    "legal_compliance": {
+      "accessed_data": "Publicly available website content and business directory data",
+      "compliance": [
+        "CFAA",
+        "GDPR",
+        "CCPA",
+        "CAN-SPAM"
+      ],
+      "data_use": "B2B sales prospecting - no personal data collected beyond public business contact info",
+      "opt_out": "privacy@soetechllc.com"
+    },
+    "researched_at": "2026-08-24T11:12:02.727137+00:00",
+    "researcher": "deep_osint.py v1.0"
+  }
+}

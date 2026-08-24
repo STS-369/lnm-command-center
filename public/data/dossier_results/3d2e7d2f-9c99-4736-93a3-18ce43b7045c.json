@@ -1,0 +1,97 @@
+{
+  "business_name": "Skorupski Family Funeral Home & Cremation Services",
+  "industry": "funeral homes",
+  "location": "Midland MI MI",
+  "website": "https://www.skorupskifamilyfunerals.com/",
+  "phone": "(989) 790-7334",
+  "owner_name": "",
+  "owner_title": "",
+  "contact_email": "",
+  "technology_stack": [
+    "SSL/HTTPS"
+  ],
+  "pain_points": [
+    "Limited Social Media Presence: No social media links detected on website",
+    "Potential Mobile Issues: No explicit mobile optimization claims found",
+    "Limited Online Payment Options: No clear online payment or invoicing system"
+  ],
+  "opportunities": [
+    "Social Media Strategy: Build engaged online community with automated posting",
+    "Mobile Optimization: Modern responsive website design",
+    "Online Payment Integration: Secure payment processing and invoicing"
+  ],
+  "confidence_score": 8,
+  "research_sources": [
+    {
+      "url": "https://www.skorupskifamilyfunerals.com/",
+      "type": "website_scrape",
+      "timestamp": "2026-08-24T11:14:51.373044+00:00"
+    },
+    {
+      "url": "https://www.skorupskifamilyfunerals.com/contact",
+      "type": "website_scrape",
+      "timestamp": "2026-08-24T11:14:59.973317+00:00"
+    },
+    {
+      "url": "https://www.skorupskifamilyfunerals.com/contact-us",
+      "type": "website_scrape",
+      "timestamp": "2026-08-24T11:15:05.323378+00:00"
+    },
+    {
+      "type": "tech_stack_detection",
+      "detected": [
+        "SSL/HTTPS"
+      ],
+      "timestamp": "2026-08-24T11:17:43.135882+00:00"
+    }
+  ],
+  "notes": "Scraped 3 pages from website. Tech stack: SSL/HTTPS. Identified 3 pain points. Generated 3 opportunities.",
+  "filename": "skorupski_family_funeral_home_cremation_services.md",
+  "osint_research": {
+    "scraped_pages": [
+      {
+        "url": "https://www.skorupskifamilyfunerals.com/",
+        "status": 200,
+        "content_length": 64452,
+        "content_type": "text/html; charset=utf-8"
+      },
+      {
+        "url": "https://www.skorupskifamilyfunerals.com/contact",
+        "status": 200,
+        "content_length": 64452,
+        "content_type": "text/html; charset=utf-8"
+      },
+      {
+        "url": "https://www.skorupskifamilyfunerals.com/contact-us",
+        "status": 200,
+        "content_length": 41073,
+        "content_type": "text/html; charset=utf-8"
+      }
+    ],
+    "contact_info": {
+      "emails_found": [],
+      "phones_found": []
+    },
+    "data_completeness": {
+      "website_scraped": 10,
+      "contact_info_found": 0,
+      "tech_stack_detected": 10,
+      "pain_points_identified": 10,
+      "opportunities_generated": 5,
+      "business_info_extracted": 0
+    },
+    "legal_compliance": {
+      "accessed_data": "Publicly available website content and business directory data",
+      "compliance": [
+        "CFAA",
+        "GDPR",
+        "CCPA",
+        "CAN-SPAM"
+      ],
+      "data_use": "B2B sales prospecting - no personal data collected beyond public business contact info",
+      "opt_out": "privacy@soetechllc.com"
+    },
+    "researched_at": "2026-08-24T11:17:43.146707+00:00",
+    "researcher": "deep_osint.py v1.0"
+  }
+}

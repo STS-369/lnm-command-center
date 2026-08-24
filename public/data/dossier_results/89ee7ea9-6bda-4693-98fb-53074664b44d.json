@@ -1,0 +1,108 @@
+{
+  "business_name": "Kimberly Kramer Attorney",
+  "industry": "law offices",
+  "location": "Bay City MI MI",
+  "website": "http://www.kimberlykramerlaw.com/",
+  "phone": "(989) 671-4333",
+  "owner_name": "",
+  "owner_title": "",
+  "contact_email": "",
+  "technology_stack": [
+    "Unknown (no CMS detected)"
+  ],
+  "pain_points": [
+    "Limited Social Media Presence: No social media links detected on website",
+    "Potential Mobile Issues: No explicit mobile optimization claims found",
+    "Limited Online Payment Options: No clear online payment or invoicing system"
+  ],
+  "opportunities": [
+    "Social Media Strategy: Build engaged online community with automated posting",
+    "Mobile Optimization: Modern responsive website design",
+    "Online Payment Integration: Secure payment processing and invoicing"
+  ],
+  "confidence_score": 7,
+  "research_sources": [
+    {
+      "url": "http://www.kimberlykramerlaw.com/",
+      "type": "website_scrape",
+      "timestamp": "2026-08-24T11:19:06.757683+00:00"
+    },
+    {
+      "url": "http://www.kimberlykramerlaw.com/contact",
+      "type": "website_scrape",
+      "timestamp": "2026-08-24T11:19:10.722261+00:00"
+    },
+    {
+      "url": "http://www.kimberlykramerlaw.com/about/contact",
+      "type": "website_scrape",
+      "timestamp": "2026-08-24T11:20:26.485990+00:00"
+    },
+    {
+      "url": "http://www.kimberlykramerlaw.com/about",
+      "type": "website_scrape",
+      "timestamp": "2026-08-24T11:21:44.346441+00:00"
+    },
+    {
+      "type": "tech_stack_detection",
+      "detected": [
+        "Unknown (no CMS detected)"
+      ],
+      "timestamp": "2026-08-24T11:21:44.350973+00:00"
+    }
+  ],
+  "notes": "Scraped 4 pages from website. Tech stack: Unknown (no CMS detected). Identified 3 pain points. Generated 3 opportunities.",
+  "filename": "kimberly_kramer_attorney.md",
+  "osint_research": {
+    "scraped_pages": [
+      {
+        "url": "http://www.kimberlykramerlaw.com/",
+        "status": 200,
+        "content_length": 25210,
+        "content_type": "text/html; charset=UTF-8"
+      },
+      {
+        "url": "http://www.kimberlykramerlaw.com/contact",
+        "status": 200,
+        "content_length": 21889,
+        "content_type": "text/html; charset=UTF-8"
+      },
+      {
+        "url": "http://www.kimberlykramerlaw.com/about/contact",
+        "status": 200,
+        "content_length": 21760,
+        "content_type": "text/html; charset=UTF-8"
+      },
+      {
+        "url": "http://www.kimberlykramerlaw.com/about",
+        "status": 200,
+        "content_length": 27050,
+        "content_type": "text/html; charset=UTF-8"
+      }
+    ],
+    "contact_info": {
+      "emails_found": [],
+      "phones_found": []
+    },
+    "data_completeness": {
+      "website_scraped": 10,
+      "contact_info_found": 0,
+      "tech_stack_detected": 10,
+      "pain_points_identified": 10,
+      "opportunities_generated": 5,
+      "business_info_extracted": 0
+    },
+    "legal_compliance": {
+      "accessed_data": "Publicly available website content and business directory data",
+      "compliance": [
+        "CFAA",
+        "GDPR",
+        "CCPA",
+        "CAN-SPAM"
+      ],
+      "data_use": "B2B sales prospecting - no personal data collected beyond public business contact info",
+      "opt_out": "privacy@soetechllc.com"
+    },
+    "researched_at": "2026-08-24T11:21:44.355896+00:00",
+    "researcher": "deep_osint.py v1.0"
+  }
+}

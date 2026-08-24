@@ -1,0 +1,75 @@
+{
+  "business_name": "Quick Reliable Printing (QRP)",
+  "industry": "marketing agencies",
+  "location": "Midland MI MI",
+  "website": "https://qrp.ink/",
+  "phone": "(989) 496-2955",
+  "owner_name": "",
+  "owner_title": "",
+  "contact_email": "",
+  "technology_stack": [
+    "SSL/HTTPS"
+  ],
+  "pain_points": [
+    "Limited Social Media Presence: No social media links detected on website",
+    "Potential Mobile Issues: No explicit mobile optimization claims found",
+    "Limited Online Payment Options: No clear online payment or invoicing system"
+  ],
+  "opportunities": [
+    "Social Media Strategy: Build engaged online community with automated posting",
+    "Mobile Optimization: Modern responsive website design",
+    "Online Payment Integration: Secure payment processing and invoicing"
+  ],
+  "confidence_score": 7,
+  "research_sources": [
+    {
+      "url": "https://qrp.ink/",
+      "type": "website_scrape",
+      "timestamp": "2026-08-24T11:21:12.029697+00:00"
+    },
+    {
+      "type": "tech_stack_detection",
+      "detected": [
+        "SSL/HTTPS"
+      ],
+      "timestamp": "2026-08-24T11:24:59.228209+00:00"
+    }
+  ],
+  "notes": "Scraped 1 pages from website. Tech stack: SSL/HTTPS. Identified 3 pain points. Generated 3 opportunities.",
+  "filename": "quick_reliable_printing_qrp.md",
+  "osint_research": {
+    "scraped_pages": [
+      {
+        "url": "https://qrp.ink/",
+        "status": 200,
+        "content_length": 27338,
+        "content_type": "text/html; charset=UTF-8"
+      }
+    ],
+    "contact_info": {
+      "emails_found": [],
+      "phones_found": []
+    },
+    "data_completeness": {
+      "website_scraped": 10,
+      "contact_info_found": 0,
+      "tech_stack_detected": 10,
+      "pain_points_identified": 10,
+      "opportunities_generated": 5,
+      "business_info_extracted": 0
+    },
+    "legal_compliance": {
+      "accessed_data": "Publicly available website content and business directory data",
+      "compliance": [
+        "CFAA",
+        "GDPR",
+        "CCPA",
+        "CAN-SPAM"
+      ],
+      "data_use": "B2B sales prospecting - no personal data collected beyond public business contact info",
+      "opt_out": "privacy@soetechllc.com"
+    },
+    "researched_at": "2026-08-24T11:24:59.230073+00:00",
+    "researcher": "deep_osint.py v1.0"
+  }
+}

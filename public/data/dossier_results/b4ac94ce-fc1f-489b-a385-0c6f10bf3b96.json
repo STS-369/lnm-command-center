@@ -1,0 +1,97 @@
+{
+  "business_name": "Josephs Family Dentistry",
+  "industry": "dental practices",
+  "location": "Flint MI MI",
+  "website": "https://www.josephsfamilydentistry.com/",
+  "phone": "(810) 631-3630",
+  "owner_name": "",
+  "owner_title": "",
+  "contact_email": "",
+  "technology_stack": [
+    "SSL/HTTPS"
+  ],
+  "pain_points": [
+    "Limited Social Media Presence: No social media links detected on website",
+    "Potential Mobile Issues: No explicit mobile optimization claims found",
+    "Limited Online Payment Options: No clear online payment or invoicing system"
+  ],
+  "opportunities": [
+    "Social Media Strategy: Build engaged online community with automated posting",
+    "Mobile Optimization: Modern responsive website design",
+    "Online Payment Integration: Secure payment processing and invoicing"
+  ],
+  "confidence_score": 8,
+  "research_sources": [
+    {
+      "url": "https://www.josephsfamilydentistry.com/",
+      "type": "website_scrape",
+      "timestamp": "2026-08-24T11:25:03.919611+00:00"
+    },
+    {
+      "url": "https://www.josephsfamilydentistry.com/contact",
+      "type": "website_scrape",
+      "timestamp": "2026-08-24T11:25:09.622663+00:00"
+    },
+    {
+      "url": "https://www.josephsfamilydentistry.com/about",
+      "type": "website_scrape",
+      "timestamp": "2026-08-24T11:27:28.277052+00:00"
+    },
+    {
+      "type": "tech_stack_detection",
+      "detected": [
+        "SSL/HTTPS"
+      ],
+      "timestamp": "2026-08-24T11:27:28.280992+00:00"
+    }
+  ],
+  "notes": "Scraped 3 pages from website. Tech stack: SSL/HTTPS. Identified 3 pain points. Generated 3 opportunities.",
+  "filename": "josephs_family_dentistry.md",
+  "osint_research": {
+    "scraped_pages": [
+      {
+        "url": "https://www.josephsfamilydentistry.com/",
+        "status": 200,
+        "content_length": 31026,
+        "content_type": "text/html; charset=utf-8"
+      },
+      {
+        "url": "https://www.josephsfamilydentistry.com/contact",
+        "status": 200,
+        "content_length": 21145,
+        "content_type": "text/html; charset=utf-8"
+      },
+      {
+        "url": "https://www.josephsfamilydentistry.com/about",
+        "status": 200,
+        "content_length": 25378,
+        "content_type": "text/html; charset=utf-8"
+      }
+    ],
+    "contact_info": {
+      "emails_found": [],
+      "phones_found": []
+    },
+    "data_completeness": {
+      "website_scraped": 10,
+      "contact_info_found": 0,
+      "tech_stack_detected": 10,
+      "pain_points_identified": 10,
+      "opportunities_generated": 5,
+      "business_info_extracted": 0
+    },
+    "legal_compliance": {
+      "accessed_data": "Publicly available website content and business directory data",
+      "compliance": [
+        "CFAA",
+        "GDPR",
+        "CCPA",
+        "CAN-SPAM"
+      ],
+      "data_use": "B2B sales prospecting - no personal data collected beyond public business contact info",
+      "opt_out": "privacy@soetechllc.com"
+    },
+    "researched_at": "2026-08-24T11:27:28.285003+00:00",
+    "researcher": "deep_osint.py v1.0"
+  }
+}

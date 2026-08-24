@@ -3395,5 +3395,1440 @@
       "researched_at": "2026-08-23T11:08:17.685539+00:00",
       "researcher": "deep_osint.py v1.0"
     }
+  },
+  {
+    "business_name": "Michigan Home Care LLC",
+    "industry": "home services",
+    "location": "Saginaw MI MI",
+    "website": "http://www.michiganhomecarellc.com/",
+    "phone": "(989) 245-7488",
+    "owner_name": "",
+    "owner_title": "",
+    "contact_email": "",
+    "technology_stack": [
+      "Unknown (no CMS detected)"
+    ],
+    "pain_points": [
+      "Limited Social Media Presence: No social media links detected on website",
+      "Potential Mobile Issues: No explicit mobile optimization claims found",
+      "Limited Online Payment Options: No clear online payment or invoicing system"
+    ],
+    "opportunities": [
+      "Social Media Strategy: Build engaged online community with automated posting",
+      "Mobile Optimization: Modern responsive website design",
+      "Online Payment Integration: Secure payment processing and invoicing"
+    ],
+    "confidence_score": 7,
+    "research_sources": [
+      {
+        "url": "http://www.michiganhomecarellc.com/",
+        "type": "website_scrape",
+        "timestamp": "2026-08-24T11:11:38.139853+00:00"
+      },
+      {
+        "url": "http://www.michiganhomecarellc.com/contact-us",
+        "type": "website_scrape",
+        "timestamp": "2026-08-24T11:12:02.902304+00:00"
+      },
+      {
+        "type": "tech_stack_detection",
+        "detected": [
+          "Unknown (no CMS detected)"
+        ],
+        "timestamp": "2026-08-24T11:14:46.721815+00:00"
+      }
+    ],
+    "notes": "Scraped 2 pages from website. Tech stack: Unknown (no CMS detected). Identified 3 pain points. Generated 3 opportunities.",
+    "filename": "michigan_home_care_llc.md",
+    "osint_research": {
+      "scraped_pages": [
+        {
+          "url": "http://www.michiganhomecarellc.com/",
+          "status": 200,
+          "content_length": 12859,
+          "content_type": "text/html; charset=utf-8"
+        },
+        {
+          "url": "http://www.michiganhomecarellc.com/contact-us",
+          "status": 200,
+          "content_length": 10590,
+          "content_type": "text/html; charset=utf-8"
+        }
+      ],
+      "contact_info": {
+        "emails_found": [],
+        "phones_found": []
+      },
+      "data_completeness": {
+        "website_scraped": 10,
+        "contact_info_found": 0,
+        "tech_stack_detected": 10,
+        "pain_points_identified": 10,
+        "opportunities_generated": 5,
+        "business_info_extracted": 0
+      },
+      "legal_compliance": {
+        "accessed_data": "Publicly available website content and business directory data",
+        "compliance": [
+          "CFAA",
+          "GDPR",
+          "CCPA",
+          "CAN-SPAM"
+        ],
+        "data_use": "B2B sales prospecting - no personal data collected beyond public business contact info",
+        "opt_out": "privacy@soetechllc.com"
+      },
+      "researched_at": "2026-08-24T11:14:46.723269+00:00",
+      "researcher": "deep_osint.py v1.0"
+    }
+  },
+  {
+    "business_name": "Skorupski Family Funeral Home & Cremation Services",
+    "industry": "funeral homes",
+    "location": "Midland MI MI",
+    "website": "https://www.skorupskifamilyfunerals.com/",
+    "phone": "(989) 790-7334",
+    "owner_name": "",
+    "owner_title": "",
+    "contact_email": "",
+    "technology_stack": [
+      "SSL/HTTPS"
+    ],
+    "pain_points": [
+      "Limited Social Media Presence: No social media links detected on website",
+      "Potential Mobile Issues: No explicit mobile optimization claims found",
+      "Limited Online Payment Options: No clear online payment or invoicing system"
+    ],
+    "opportunities": [
+      "Social Media Strategy: Build engaged online community with automated posting",
+      "Mobile Optimization: Modern responsive website design",
+      "Online Payment Integration: Secure payment processing and invoicing"
+    ],
+    "confidence_score": 8,
+    "research_sources": [
+      {
+        "url": "https://www.skorupskifamilyfunerals.com/",
+        "type": "website_scrape",
+        "timestamp": "2026-08-24T11:14:51.373044+00:00"
+      },
+      {
+        "url": "https://www.skorupskifamilyfunerals.com/contact",
+        "type": "website_scrape",
+        "timestamp": "2026-08-24T11:14:59.973317+00:00"
+      },
+      {
+        "url": "https://www.skorupskifamilyfunerals.com/contact-us",
+        "type": "website_scrape",
+        "timestamp": "2026-08-24T11:15:05.323378+00:00"
+      },
+      {
+        "type": "tech_stack_detection",
+        "detected": [
+          "SSL/HTTPS"
+        ],
+        "timestamp": "2026-08-24T11:17:43.135882+00:00"
+      }
+    ],
+    "notes": "Scraped 3 pages from website. Tech stack: SSL/HTTPS. Identified 3 pain points. Generated 3 opportunities.",
+    "filename": "skorupski_family_funeral_home_cremation_services.md",
+    "osint_research": {
+      "scraped_pages": [
+        {
+          "url": "https://www.skorupskifamilyfunerals.com/",
+          "status": 200,
+          "content_length": 64452,
+          "content_type": "text/html; charset=utf-8"
+        },
+        {
+          "url": "https://www.skorupskifamilyfunerals.com/contact",
+          "status": 200,
+          "content_length": 64452,
+          "content_type": "text/html; charset=utf-8"
+        },
+        {
+          "url": "https://www.skorupskifamilyfunerals.com/contact-us",
+          "status": 200,
+          "content_length": 41073,
+          "content_type": "text/html; charset=utf-8"
+        }
+      ],
+      "contact_info": {
+        "emails_found": [],
+        "phones_found": []
+      },
+      "data_completeness": {
+        "website_scraped": 10,
+        "contact_info_found": 0,
+        "tech_stack_detected": 10,
+        "pain_points_identified": 10,
+        "opportunities_generated": 5,
+        "business_info_extracted": 0
+      },
+      "legal_compliance": {
+        "accessed_data": "Publicly available website content and business directory data",
+        "compliance": [
+          "CFAA",
+          "GDPR",
+          "CCPA",
+          "CAN-SPAM"
+        ],
+        "data_use": "B2B sales prospecting - no personal data collected beyond public business contact info",
+        "opt_out": "privacy@soetechllc.com"
+      },
+      "researched_at": "2026-08-24T11:17:43.146707+00:00",
+      "researcher": "deep_osint.py v1.0"
+    }
+  },
+  {
+    "business_name": "Anderson Dental",
+    "industry": "dental practices",
+    "location": "Midland MI MI",
+    "website": "http://andersondentalmidland.com/",
+    "phone": "(989) 835-5261",
+    "owner_name": "",
+    "owner_title": "",
+    "contact_email": "",
+    "technology_stack": [
+      "Unknown (no CMS detected)"
+    ],
+    "pain_points": [
+      "Limited Social Media Presence: No social media links detected on website",
+      "Potential Mobile Issues: No explicit mobile optimization claims found",
+      "Limited Online Payment Options: No clear online payment or invoicing system"
+    ],
+    "opportunities": [
+      "Social Media Strategy: Build engaged online community with automated posting",
+      "Mobile Optimization: Modern responsive website design",
+      "Online Payment Integration: Secure payment processing and invoicing"
+    ],
+    "confidence_score": 7,
+    "research_sources": [
+      {
+        "url": "http://andersondentalmidland.com/",
+        "type": "website_scrape",
+        "timestamp": "2026-08-24T11:17:52.833847+00:00"
+      },
+      {
+        "url": "http://andersondentalmidland.com/contact",
+        "type": "website_scrape",
+        "timestamp": "2026-08-24T11:17:57.953675+00:00"
+      },
+      {
+        "type": "tech_stack_detection",
+        "detected": [
+          "Unknown (no CMS detected)"
+        ],
+        "timestamp": "2026-08-24T11:21:06.964939+00:00"
+      }
+    ],
+    "notes": "Scraped 2 pages from website. Tech stack: Unknown (no CMS detected). Identified 3 pain points. Generated 3 opportunities.",
+    "filename": "anderson_dental.md",
+    "osint_research": {
+      "scraped_pages": [
+        {
+          "url": "http://andersondentalmidland.com/",
+          "status": 200,
+          "content_length": 41039,
+          "content_type": "text/html;charset=utf-8"
+        },
+        {
+          "url": "http://andersondentalmidland.com/contact",
+          "status": 200,
+          "content_length": 28997,
+          "content_type": "text/html;charset=utf-8"
+        }
+      ],
+      "contact_info": {
+        "emails_found": [],
+        "phones_found": []
+      },
+      "data_completeness": {
+        "website_scraped": 10,
+        "contact_info_found": 0,
+        "tech_stack_detected": 10,
+        "pain_points_identified": 10,
+        "opportunities_generated": 5,
+        "business_info_extracted": 0
+      },
+      "legal_compliance": {
+        "accessed_data": "Publicly available website content and business directory data",
+        "compliance": [
+          "CFAA",
+          "GDPR",
+          "CCPA",
+          "CAN-SPAM"
+        ],
+        "data_use": "B2B sales prospecting - no personal data collected beyond public business contact info",
+        "opt_out": "privacy@soetechllc.com"
+      },
+      "researched_at": "2026-08-24T11:21:06.968790+00:00",
+      "researcher": "deep_osint.py v1.0"
+    }
+  },
+  {
+    "business_name": "Quick Reliable Printing (QRP)",
+    "industry": "marketing agencies",
+    "location": "Midland MI MI",
+    "website": "https://qrp.ink/",
+    "phone": "(989) 496-2955",
+    "owner_name": "",
+    "owner_title": "",
+    "contact_email": "",
+    "technology_stack": [
+      "SSL/HTTPS"
+    ],
+    "pain_points": [
+      "Limited Social Media Presence: No social media links detected on website",
+      "Potential Mobile Issues: No explicit mobile optimization claims found",
+      "Limited Online Payment Options: No clear online payment or invoicing system"
+    ],
+    "opportunities": [
+      "Social Media Strategy: Build engaged online community with automated posting",
+      "Mobile Optimization: Modern responsive website design",
+      "Online Payment Integration: Secure payment processing and invoicing"
+    ],
+    "confidence_score": 7,
+    "research_sources": [
+      {
+        "url": "https://qrp.ink/",
+        "type": "website_scrape",
+        "timestamp": "2026-08-24T11:21:12.029697+00:00"
+      },
+      {
+        "type": "tech_stack_detection",
+        "detected": [
+          "SSL/HTTPS"
+        ],
+        "timestamp": "2026-08-24T11:24:59.228209+00:00"
+      }
+    ],
+    "notes": "Scraped 1 pages from website. Tech stack: SSL/HTTPS. Identified 3 pain points. Generated 3 opportunities.",
+    "filename": "quick_reliable_printing_qrp.md",
+    "osint_research": {
+      "scraped_pages": [
+        {
+          "url": "https://qrp.ink/",
+          "status": 200,
+          "content_length": 27338,
+          "content_type": "text/html; charset=UTF-8"
+        }
+      ],
+      "contact_info": {
+        "emails_found": [],
+        "phones_found": []
+      },
+      "data_completeness": {
+        "website_scraped": 10,
+        "contact_info_found": 0,
+        "tech_stack_detected": 10,
+        "pain_points_identified": 10,
+        "opportunities_generated": 5,
+        "business_info_extracted": 0
+      },
+      "legal_compliance": {
+        "accessed_data": "Publicly available website content and business directory data",
+        "compliance": [
+          "CFAA",
+          "GDPR",
+          "CCPA",
+          "CAN-SPAM"
+        ],
+        "data_use": "B2B sales prospecting - no personal data collected beyond public business contact info",
+        "opt_out": "privacy@soetechllc.com"
+      },
+      "researched_at": "2026-08-24T11:24:59.230073+00:00",
+      "researcher": "deep_osint.py v1.0"
+    }
+  },
+  {
+    "business_name": "Josephs Family Dentistry",
+    "industry": "dental practices",
+    "location": "Flint MI MI",
+    "website": "https://www.josephsfamilydentistry.com/",
+    "phone": "(810) 631-3630",
+    "owner_name": "",
+    "owner_title": "",
+    "contact_email": "",
+    "technology_stack": [
+      "SSL/HTTPS"
+    ],
+    "pain_points": [
+      "Limited Social Media Presence: No social media links detected on website",
+      "Potential Mobile Issues: No explicit mobile optimization claims found",
+      "Limited Online Payment Options: No clear online payment or invoicing system"
+    ],
+    "opportunities": [
+      "Social Media Strategy: Build engaged online community with automated posting",
+      "Mobile Optimization: Modern responsive website design",
+      "Online Payment Integration: Secure payment processing and invoicing"
+    ],
+    "confidence_score": 8,
+    "research_sources": [
+      {
+        "url": "https://www.josephsfamilydentistry.com/",
+        "type": "website_scrape",
+        "timestamp": "2026-08-24T11:25:03.919611+00:00"
+      },
+      {
+        "url": "https://www.josephsfamilydentistry.com/contact",
+        "type": "website_scrape",
+        "timestamp": "2026-08-24T11:25:09.622663+00:00"
+      },
+      {
+        "url": "https://www.josephsfamilydentistry.com/about",
+        "type": "website_scrape",
+        "timestamp": "2026-08-24T11:27:28.277052+00:00"
+      },
+      {
+        "type": "tech_stack_detection",
+        "detected": [
+          "SSL/HTTPS"
+        ],
+        "timestamp": "2026-08-24T11:27:28.280992+00:00"
+      }
+    ],
+    "notes": "Scraped 3 pages from website. Tech stack: SSL/HTTPS. Identified 3 pain points. Generated 3 opportunities.",
+    "filename": "josephs_family_dentistry.md",
+    "osint_research": {
+      "scraped_pages": [
+        {
+          "url": "https://www.josephsfamilydentistry.com/",
+          "status": 200,
+          "content_length": 31026,
+          "content_type": "text/html; charset=utf-8"
+        },
+        {
+          "url": "https://www.josephsfamilydentistry.com/contact",
+          "status": 200,
+          "content_length": 21145,
+          "content_type": "text/html; charset=utf-8"
+        },
+        {
+          "url": "https://www.josephsfamilydentistry.com/about",
+          "status": 200,
+          "content_length": 25378,
+          "content_type": "text/html; charset=utf-8"
+        }
+      ],
+      "contact_info": {
+        "emails_found": [],
+        "phones_found": []
+      },
+      "data_completeness": {
+        "website_scraped": 10,
+        "contact_info_found": 0,
+        "tech_stack_detected": 10,
+        "pain_points_identified": 10,
+        "opportunities_generated": 5,
+        "business_info_extracted": 0
+      },
+      "legal_compliance": {
+        "accessed_data": "Publicly available website content and business directory data",
+        "compliance": [
+          "CFAA",
+          "GDPR",
+          "CCPA",
+          "CAN-SPAM"
+        ],
+        "data_use": "B2B sales prospecting - no personal data collected beyond public business contact info",
+        "opt_out": "privacy@soetechllc.com"
+      },
+      "researched_at": "2026-08-24T11:27:28.285003+00:00",
+      "researcher": "deep_osint.py v1.0"
+    }
+  },
+  {
+    "business_name": "Hyper Digital Marketing",
+    "industry": "marketing agencies",
+    "location": "Bay City MI MI",
+    "website": "http://www.hyperdm.com/",
+    "phone": "(248) 234-1499",
+    "owner_name": "",
+    "owner_title": "",
+    "contact_email": "",
+    "technology_stack": [
+      "Unknown (no HTML content)"
+    ],
+    "pain_points": [],
+    "opportunities": [
+      "Client Management: Streamline multi-client workflow automation"
+    ],
+    "confidence_score": 2,
+    "research_sources": [
+      {
+        "type": "tech_stack_detection",
+        "detected": [
+          "Unknown (no HTML content)"
+        ],
+        "timestamp": "2026-08-24T11:31:25.434595+00:00"
+      }
+    ],
+    "notes": "Tech stack: Unknown (no HTML content). Generated 1 opportunities.",
+    "filename": "hyper_digital_marketing.md",
+    "osint_research": {
+      "scraped_pages": [],
+      "contact_info": {},
+      "data_completeness": {
+        "website_scraped": 0,
+        "contact_info_found": 0,
+        "tech_stack_detected": 10,
+        "pain_points_identified": 0,
+        "opportunities_generated": 5,
+        "business_info_extracted": 0
+      },
+      "legal_compliance": {
+        "accessed_data": "Publicly available website content and business directory data",
+        "compliance": [
+          "CFAA",
+          "GDPR",
+          "CCPA",
+          "CAN-SPAM"
+        ],
+        "data_use": "B2B sales prospecting - no personal data collected beyond public business contact info",
+        "opt_out": "privacy@soetechllc.com"
+      },
+      "researched_at": "2026-08-24T11:31:25.434746+00:00",
+      "researcher": "deep_osint.py v1.0"
+    }
+  },
+  {
+    "business_name": "Board & Brush Creative Studio - Saginaw",
+    "industry": "marketing agencies",
+    "location": "Saginaw MI MI",
+    "website": "https://boardandbrush.com/saginaw?utm_source=google&utm_medium=local&utm_campaign=localmaps&utm_content=216",
+    "phone": "(989) 726-3336",
+    "owner_name": "",
+    "owner_title": "",
+    "contact_email": "",
+    "technology_stack": [
+      "SSL/HTTPS"
+    ],
+    "pain_points": [
+      "Limited Social Media Presence: No social media links detected on website",
+      "Potential Mobile Issues: No explicit mobile optimization claims found",
+      "Limited Online Payment Options: No clear online payment or invoicing system"
+    ],
+    "opportunities": [
+      "Social Media Strategy: Build engaged online community with automated posting",
+      "Mobile Optimization: Modern responsive website design",
+      "Online Payment Integration: Secure payment processing and invoicing"
+    ],
+    "confidence_score": 8,
+    "research_sources": [
+      {
+        "url": "https://boardandbrush.com/saginaw?utm_source=google&utm_medium=local&utm_campaign=localmaps&utm_content=216",
+        "type": "website_scrape",
+        "timestamp": "2026-08-24T11:07:51.570847+00:00"
+      },
+      {
+        "url": "https://boardandbrush.com/contact",
+        "type": "website_scrape",
+        "timestamp": "2026-08-24T11:07:57.216211+00:00"
+      },
+      {
+        "type": "tech_stack_detection",
+        "detected": [
+          "SSL/HTTPS"
+        ],
+        "timestamp": "2026-08-24T11:11:13.915406+00:00"
+      }
+    ],
+    "notes": "Scraped 2 pages from website. Tech stack: SSL/HTTPS. Identified 3 pain points. Generated 3 opportunities.",
+    "filename": "board_brush_creative_studio_saginaw.md",
+    "osint_research": {
+      "scraped_pages": [
+        {
+          "url": "https://boardandbrush.com/saginaw?utm_source=google&utm_medium=local&utm_campaign=localmaps&utm_content=216",
+          "status": 200,
+          "content_length": 21430,
+          "content_type": "text/html; charset=UTF-8"
+        },
+        {
+          "url": "https://boardandbrush.com/contact",
+          "status": 200,
+          "content_length": 24424,
+          "content_type": "text/html; charset=UTF-8"
+        }
+      ],
+      "contact_info": {
+        "emails_found": [],
+        "phones_found": []
+      },
+      "data_completeness": {
+        "website_scraped": 10,
+        "contact_info_found": 0,
+        "tech_stack_detected": 10,
+        "pain_points_identified": 10,
+        "opportunities_generated": 5,
+        "business_info_extracted": 0
+      },
+      "legal_compliance": {
+        "accessed_data": "Publicly available website content and business directory data",
+        "compliance": [
+          "CFAA",
+          "GDPR",
+          "CCPA",
+          "CAN-SPAM"
+        ],
+        "data_use": "B2B sales prospecting - no personal data collected beyond public business contact info",
+        "opt_out": "privacy@soetechllc.com"
+      },
+      "researched_at": "2026-08-24T11:11:13.918130+00:00",
+      "researcher": "deep_osint.py v1.0"
+    }
+  },
+  {
+    "business_name": "Flint Dental Associates",
+    "industry": "dental practices",
+    "location": "Flint MI MI",
+    "website": "http://www.flintdentalassociates.com/",
+    "phone": "(810) 720-1399",
+    "owner_name": "",
+    "owner_title": "",
+    "contact_email": "",
+    "technology_stack": [
+      "Unknown (no HTML content)"
+    ],
+    "pain_points": [],
+    "opportunities": [
+      "Patient Relationship Management: Automated follow-ups and treatment reminders"
+    ],
+    "confidence_score": 2,
+    "research_sources": [
+      {
+        "type": "tech_stack_detection",
+        "detected": [
+          "Unknown (no HTML content)"
+        ],
+        "timestamp": "2026-08-24T11:12:02.727077+00:00"
+      }
+    ],
+    "notes": "Tech stack: Unknown (no HTML content). Generated 1 opportunities.",
+    "filename": "flint_dental_associates.md",
+    "osint_research": {
+      "scraped_pages": [],
+      "contact_info": {},
+      "data_completeness": {
+        "website_scraped": 0,
+        "contact_info_found": 0,
+        "tech_stack_detected": 10,
+        "pain_points_identified": 0,
+        "opportunities_generated": 5,
+        "business_info_extracted": 0
+      },
+      "legal_compliance": {
+        "accessed_data": "Publicly available website content and business directory data",
+        "compliance": [
+          "CFAA",
+          "GDPR",
+          "CCPA",
+          "CAN-SPAM"
+        ],
+        "data_use": "B2B sales prospecting - no personal data collected beyond public business contact info",
+        "opt_out": "privacy@soetechllc.com"
+      },
+      "researched_at": "2026-08-24T11:12:02.727137+00:00",
+      "researcher": "deep_osint.py v1.0"
+    }
+  },
+  {
+    "business_name": "Lakehouse Family Dental",
+    "industry": "dental practices",
+    "location": "Midland MI MI",
+    "website": "https://lakehousefamilydental.com/",
+    "phone": "(989) 631-6760",
+    "owner_name": "",
+    "owner_title": "",
+    "contact_email": "",
+    "technology_stack": [
+      "SSL/HTTPS"
+    ],
+    "pain_points": [
+      "Limited Social Media Presence: No social media links detected on website",
+      "Potential Mobile Issues: No explicit mobile optimization claims found",
+      "Limited Online Payment Options: No clear online payment or invoicing system"
+    ],
+    "opportunities": [
+      "Social Media Strategy: Build engaged online community with automated posting",
+      "Mobile Optimization: Modern responsive website design",
+      "Online Payment Integration: Secure payment processing and invoicing"
+    ],
+    "confidence_score": 8,
+    "research_sources": [
+      {
+        "url": "https://lakehousefamilydental.com/",
+        "type": "website_scrape",
+        "timestamp": "2026-08-24T11:12:12.548212+00:00"
+      },
+      {
+        "url": "https://lakehousefamilydental.com/contact",
+        "type": "website_scrape",
+        "timestamp": "2026-08-24T11:12:20.372739+00:00"
+      },
+      {
+        "url": "https://lakehousefamilydental.com/about/contact",
+        "type": "website_scrape",
+        "timestamp": "2026-08-24T11:13:47.629255+00:00"
+      },
+      {
+        "type": "tech_stack_detection",
+        "detected": [
+          "SSL/HTTPS"
+        ],
+        "timestamp": "2026-08-24T11:15:35.533685+00:00"
+      }
+    ],
+    "notes": "Scraped 3 pages from website. Tech stack: SSL/HTTPS. Identified 3 pain points. Generated 3 opportunities.",
+    "filename": "lakehouse_family_dental.md",
+    "osint_research": {
+      "scraped_pages": [
+        {
+          "url": "https://lakehousefamilydental.com/",
+          "status": 200,
+          "content_length": 22318,
+          "content_type": "text/html; charset=UTF-8"
+        },
+        {
+          "url": "https://lakehousefamilydental.com/contact",
+          "status": 200,
+          "content_length": 16547,
+          "content_type": "text/html; charset=UTF-8"
+        },
+        {
+          "url": "https://lakehousefamilydental.com/about/contact",
+          "status": 200,
+          "content_length": 16548,
+          "content_type": "text/html; charset=UTF-8"
+        }
+      ],
+      "contact_info": {
+        "emails_found": [],
+        "phones_found": []
+      },
+      "data_completeness": {
+        "website_scraped": 10,
+        "contact_info_found": 0,
+        "tech_stack_detected": 10,
+        "pain_points_identified": 10,
+        "opportunities_generated": 5,
+        "business_info_extracted": 0
+      },
+      "legal_compliance": {
+        "accessed_data": "Publicly available website content and business directory data",
+        "compliance": [
+          "CFAA",
+          "GDPR",
+          "CCPA",
+          "CAN-SPAM"
+        ],
+        "data_use": "B2B sales prospecting - no personal data collected beyond public business contact info",
+        "opt_out": "privacy@soetechllc.com"
+      },
+      "researched_at": "2026-08-24T11:15:35.536492+00:00",
+      "researcher": "deep_osint.py v1.0"
+    }
+  },
+  {
+    "business_name": "Mary's Bouquet & Gifts",
+    "industry": "florists",
+    "location": "Flint MI MI",
+    "website": "https://marys-bouquet-gifts.edan.io/",
+    "phone": "(810) 235-3822",
+    "owner_name": "",
+    "owner_title": "",
+    "contact_email": "",
+    "technology_stack": [
+      "SSL/HTTPS"
+    ],
+    "pain_points": [
+      "Limited Social Media Presence: No social media links detected on website",
+      "Potential Mobile Issues: No explicit mobile optimization claims found",
+      "Limited Online Payment Options: No clear online payment or invoicing system"
+    ],
+    "opportunities": [
+      "Social Media Strategy: Build engaged online community with automated posting",
+      "Mobile Optimization: Modern responsive website design",
+      "Online Payment Integration: Secure payment processing and invoicing"
+    ],
+    "confidence_score": 8,
+    "research_sources": [
+      {
+        "url": "https://marys-bouquet-gifts.edan.io/",
+        "type": "website_scrape",
+        "timestamp": "2026-08-24T11:15:41.523751+00:00"
+      },
+      {
+        "url": "https://marys-bouquet-gifts.edan.io/contact",
+        "type": "website_scrape",
+        "timestamp": "2026-08-24T11:15:48.043763+00:00"
+      },
+      {
+        "url": "https://marys-bouquet-gifts.edan.io/about/contact",
+        "type": "website_scrape",
+        "timestamp": "2026-08-24T11:17:05.947430+00:00"
+      },
+      {
+        "url": "https://marys-bouquet-gifts.edan.io/about",
+        "type": "website_scrape",
+        "timestamp": "2026-08-24T11:18:22.734188+00:00"
+      },
+      {
+        "type": "tech_stack_detection",
+        "detected": [
+          "SSL/HTTPS"
+        ],
+        "timestamp": "2026-08-24T11:18:22.734847+00:00"
+      }
+    ],
+    "notes": "Scraped 4 pages from website. Tech stack: SSL/HTTPS. Identified 3 pain points. Generated 3 opportunities.",
+    "filename": "mary_s_bouquet_gifts.md",
+    "osint_research": {
+      "scraped_pages": [
+        {
+          "url": "https://marys-bouquet-gifts.edan.io/",
+          "status": 200,
+          "content_length": 12020,
+          "content_type": "text/html"
+        },
+        {
+          "url": "https://marys-bouquet-gifts.edan.io/contact",
+          "status": 200,
+          "content_length": 4757,
+          "content_type": "text/html"
+        },
+        {
+          "url": "https://marys-bouquet-gifts.edan.io/about/contact",
+          "status": 200,
+          "content_length": 3943,
+          "content_type": "text/html"
+        },
+        {
+          "url": "https://marys-bouquet-gifts.edan.io/about",
+          "status": 200,
+          "content_length": 3925,
+          "content_type": "text/html"
+        }
+      ],
+      "contact_info": {
+        "emails_found": [],
+        "phones_found": []
+      },
+      "data_completeness": {
+        "website_scraped": 10,
+        "contact_info_found": 0,
+        "tech_stack_detected": 10,
+        "pain_points_identified": 10,
+        "opportunities_generated": 5,
+        "business_info_extracted": 0
+      },
+      "legal_compliance": {
+        "accessed_data": "Publicly available website content and business directory data",
+        "compliance": [
+          "CFAA",
+          "GDPR",
+          "CCPA",
+          "CAN-SPAM"
+        ],
+        "data_use": "B2B sales prospecting - no personal data collected beyond public business contact info",
+        "opt_out": "privacy@soetechllc.com"
+      },
+      "researched_at": "2026-08-24T11:18:22.736038+00:00",
+      "researcher": "deep_osint.py v1.0"
+    }
+  },
+  {
+    "business_name": "Kimberly Kramer Attorney",
+    "industry": "law offices",
+    "location": "Bay City MI MI",
+    "website": "http://www.kimberlykramerlaw.com/",
+    "phone": "(989) 671-4333",
+    "owner_name": "",
+    "owner_title": "",
+    "contact_email": "",
+    "technology_stack": [
+      "Unknown (no CMS detected)"
+    ],
+    "pain_points": [
+      "Limited Social Media Presence: No social media links detected on website",
+      "Potential Mobile Issues: No explicit mobile optimization claims found",
+      "Limited Online Payment Options: No clear online payment or invoicing system"
+    ],
+    "opportunities": [
+      "Social Media Strategy: Build engaged online community with automated posting",
+      "Mobile Optimization: Modern responsive website design",
+      "Online Payment Integration: Secure payment processing and invoicing"
+    ],
+    "confidence_score": 7,
+    "research_sources": [
+      {
+        "url": "http://www.kimberlykramerlaw.com/",
+        "type": "website_scrape",
+        "timestamp": "2026-08-24T11:19:06.757683+00:00"
+      },
+      {
+        "url": "http://www.kimberlykramerlaw.com/contact",
+        "type": "website_scrape",
+        "timestamp": "2026-08-24T11:19:10.722261+00:00"
+      },
+      {
+        "url": "http://www.kimberlykramerlaw.com/about/contact",
+        "type": "website_scrape",
+        "timestamp": "2026-08-24T11:20:26.485990+00:00"
+      },
+      {
+        "url": "http://www.kimberlykramerlaw.com/about",
+        "type": "website_scrape",
+        "timestamp": "2026-08-24T11:21:44.346441+00:00"
+      },
+      {
+        "type": "tech_stack_detection",
+        "detected": [
+          "Unknown (no CMS detected)"
+        ],
+        "timestamp": "2026-08-24T11:21:44.350973+00:00"
+      }
+    ],
+    "notes": "Scraped 4 pages from website. Tech stack: Unknown (no CMS detected). Identified 3 pain points. Generated 3 opportunities.",
+    "filename": "kimberly_kramer_attorney.md",
+    "osint_research": {
+      "scraped_pages": [
+        {
+          "url": "http://www.kimberlykramerlaw.com/",
+          "status": 200,
+          "content_length": 25210,
+          "content_type": "text/html; charset=UTF-8"
+        },
+        {
+          "url": "http://www.kimberlykramerlaw.com/contact",
+          "status": 200,
+          "content_length": 21889,
+          "content_type": "text/html; charset=UTF-8"
+        },
+        {
+          "url": "http://www.kimberlykramerlaw.com/about/contact",
+          "status": 200,
+          "content_length": 21760,
+          "content_type": "text/html; charset=UTF-8"
+        },
+        {
+          "url": "http://www.kimberlykramerlaw.com/about",
+          "status": 200,
+          "content_length": 27050,
+          "content_type": "text/html; charset=UTF-8"
+        }
+      ],
+      "contact_info": {
+        "emails_found": [],
+        "phones_found": []
+      },
+      "data_completeness": {
+        "website_scraped": 10,
+        "contact_info_found": 0,
+        "tech_stack_detected": 10,
+        "pain_points_identified": 10,
+        "opportunities_generated": 5,
+        "business_info_extracted": 0
+      },
+      "legal_compliance": {
+        "accessed_data": "Publicly available website content and business directory data",
+        "compliance": [
+          "CFAA",
+          "GDPR",
+          "CCPA",
+          "CAN-SPAM"
+        ],
+        "data_use": "B2B sales prospecting - no personal data collected beyond public business contact info",
+        "opt_out": "privacy@soetechllc.com"
+      },
+      "researched_at": "2026-08-24T11:21:44.355896+00:00",
+      "researcher": "deep_osint.py v1.0"
+    }
+  },
+  {
+    "business_name": "Flower Gallery",
+    "industry": "florists",
+    "location": "Flint MI MI",
+    "website": "https://www.flowergallery.net/",
+    "phone": "(810) 221-7871",
+    "owner_name": "",
+    "owner_title": "",
+    "contact_email": "",
+    "technology_stack": [
+      "Unknown (no HTML content)"
+    ],
+    "pain_points": [],
+    "opportunities": [
+      "Order Management: Automated order confirmation and delivery tracking"
+    ],
+    "confidence_score": 2,
+    "research_sources": [
+      {
+        "type": "tech_stack_detection",
+        "detected": [
+          "Unknown (no HTML content)"
+        ],
+        "timestamp": "2026-08-24T11:30:11.565220+00:00"
+      }
+    ],
+    "notes": "Tech stack: Unknown (no HTML content). Generated 1 opportunities.",
+    "filename": "flower_gallery.md",
+    "osint_research": {
+      "scraped_pages": [],
+      "contact_info": {},
+      "data_completeness": {
+        "website_scraped": 0,
+        "contact_info_found": 0,
+        "tech_stack_detected": 10,
+        "pain_points_identified": 0,
+        "opportunities_generated": 5,
+        "business_info_extracted": 0
+      },
+      "legal_compliance": {
+        "accessed_data": "Publicly available website content and business directory data",
+        "compliance": [
+          "CFAA",
+          "GDPR",
+          "CCPA",
+          "CAN-SPAM"
+        ],
+        "data_use": "B2B sales prospecting - no personal data collected beyond public business contact info",
+        "opt_out": "privacy@soetechllc.com"
+      },
+      "researched_at": "2026-08-24T11:30:11.565387+00:00",
+      "researcher": "deep_osint.py v1.0"
+    }
+  },
+  {
+    "business_name": "The Dental Depot",
+    "industry": "dental practices",
+    "location": "Flint MI MI",
+    "website": "http://dentaldepotdds.com/",
+    "phone": "(810) 732-4740",
+    "owner_name": "",
+    "owner_title": "",
+    "contact_email": "",
+    "technology_stack": [
+      "Unknown (no CMS detected)"
+    ],
+    "pain_points": [
+      "Limited Social Media Presence: No social media links detected on website",
+      "Potential Mobile Issues: No explicit mobile optimization claims found",
+      "Limited Online Payment Options: No clear online payment or invoicing system"
+    ],
+    "opportunities": [
+      "Social Media Strategy: Build engaged online community with automated posting",
+      "Mobile Optimization: Modern responsive website design",
+      "Online Payment Integration: Secure payment processing and invoicing"
+    ],
+    "confidence_score": 7,
+    "research_sources": [
+      {
+        "url": "http://dentaldepotdds.com/",
+        "type": "website_scrape",
+        "timestamp": "2026-08-24T11:17:56.667336+00:00"
+      },
+      {
+        "url": "http://dentaldepotdds.com/contact",
+        "type": "website_scrape",
+        "timestamp": "2026-08-24T11:18:03.199146+00:00"
+      },
+      {
+        "type": "tech_stack_detection",
+        "detected": [
+          "Unknown (no CMS detected)"
+        ],
+        "timestamp": "2026-08-24T11:21:18.331052+00:00"
+      }
+    ],
+    "notes": "Scraped 2 pages from website. Tech stack: Unknown (no CMS detected). Identified 3 pain points. Generated 3 opportunities.",
+    "filename": "the_dental_depot.md",
+    "osint_research": {
+      "scraped_pages": [
+        {
+          "url": "http://dentaldepotdds.com/",
+          "status": 200,
+          "content_length": 19682,
+          "content_type": "text/html; charset=utf-8"
+        },
+        {
+          "url": "http://dentaldepotdds.com/contact",
+          "status": 200,
+          "content_length": 16891,
+          "content_type": "text/html; charset=utf-8"
+        }
+      ],
+      "contact_info": {
+        "emails_found": [],
+        "phones_found": []
+      },
+      "data_completeness": {
+        "website_scraped": 10,
+        "contact_info_found": 0,
+        "tech_stack_detected": 10,
+        "pain_points_identified": 10,
+        "opportunities_generated": 5,
+        "business_info_extracted": 0
+      },
+      "legal_compliance": {
+        "accessed_data": "Publicly available website content and business directory data",
+        "compliance": [
+          "CFAA",
+          "GDPR",
+          "CCPA",
+          "CAN-SPAM"
+        ],
+        "data_use": "B2B sales prospecting - no personal data collected beyond public business contact info",
+        "opt_out": "privacy@soetechllc.com"
+      },
+      "researched_at": "2026-08-24T11:21:18.333055+00:00",
+      "researcher": "deep_osint.py v1.0"
+    }
+  },
+  {
+    "business_name": "Make The Turn",
+    "industry": "marketing agencies",
+    "location": "Flint MI MI",
+    "website": "https://www.maketheturn.com/",
+    "phone": "(248) 823-8121",
+    "owner_name": "",
+    "owner_title": "",
+    "contact_email": "",
+    "technology_stack": [
+      "Unknown (no HTML content)"
+    ],
+    "pain_points": [],
+    "opportunities": [
+      "Client Management: Streamline multi-client workflow automation"
+    ],
+    "confidence_score": 2,
+    "research_sources": [
+      {
+        "type": "tech_stack_detection",
+        "detected": [
+          "Unknown (no HTML content)"
+        ],
+        "timestamp": "2026-08-24T11:24:55.110441+00:00"
+      }
+    ],
+    "notes": "Tech stack: Unknown (no HTML content). Generated 1 opportunities.",
+    "filename": "make_the_turn.md",
+    "osint_research": {
+      "scraped_pages": [],
+      "contact_info": {},
+      "data_completeness": {
+        "website_scraped": 0,
+        "contact_info_found": 0,
+        "tech_stack_detected": 10,
+        "pain_points_identified": 0,
+        "opportunities_generated": 5,
+        "business_info_extracted": 0
+      },
+      "legal_compliance": {
+        "accessed_data": "Publicly available website content and business directory data",
+        "compliance": [
+          "CFAA",
+          "GDPR",
+          "CCPA",
+          "CAN-SPAM"
+        ],
+        "data_use": "B2B sales prospecting - no personal data collected beyond public business contact info",
+        "opt_out": "privacy@soetechllc.com"
+      },
+      "researched_at": "2026-08-24T11:24:55.110601+00:00",
+      "researcher": "deep_osint.py v1.0"
+    }
+  },
+  {
+    "business_name": "Bernelis Garage",
+    "industry": "auto repair",
+    "location": "Bay City MI MI",
+    "website": "https://bernelisgarage.com/?utm_source=gbp_listing&utm_medium=organic&utm_campaign=main_button",
+    "phone": "(989) 225-2436",
+    "owner_name": "",
+    "owner_title": "",
+    "contact_email": "",
+    "technology_stack": [
+      "SSL/HTTPS"
+    ],
+    "pain_points": [
+      "Limited Social Media Presence: No social media links detected on website",
+      "No Automated Service Reminders: No automated appointment reminders or follow-ups",
+      "Potential Mobile Issues: No explicit mobile optimization claims found",
+      "Limited Online Payment Options: No clear online payment or invoicing system"
+    ],
+    "opportunities": [
+      "Social Media Strategy: Build engaged online community with automated posting",
+      "Automated Communication System: AI-powered reminders and follow-ups",
+      "Mobile Optimization: Modern responsive website design",
+      "Online Payment Integration: Secure payment processing and invoicing"
+    ],
+    "confidence_score": 8,
+    "research_sources": [
+      {
+        "url": "https://bernelisgarage.com/?utm_source=gbp_listing&utm_medium=organic&utm_campaign=main_button",
+        "type": "website_scrape",
+        "timestamp": "2026-08-24T11:25:00.346243+00:00"
+      },
+      {
+        "url": "https://bernelisgarage.com/about",
+        "type": "website_scrape",
+        "timestamp": "2026-08-24T11:28:06.671682+00:00"
+      },
+      {
+        "type": "tech_stack_detection",
+        "detected": [
+          "SSL/HTTPS"
+        ],
+        "timestamp": "2026-08-24T11:28:06.673855+00:00"
+      }
+    ],
+    "notes": "Scraped 2 pages from website. Tech stack: SSL/HTTPS. Identified 4 pain points. Generated 4 opportunities.",
+    "filename": "bernelis_garage.md",
+    "osint_research": {
+      "scraped_pages": [
+        {
+          "url": "https://bernelisgarage.com/?utm_source=gbp_listing&utm_medium=organic&utm_campaign=main_button",
+          "status": 200,
+          "content_length": 21386,
+          "content_type": "text/html; charset=UTF-8"
+        },
+        {
+          "url": "https://bernelisgarage.com/about",
+          "status": 200,
+          "content_length": 15624,
+          "content_type": "text/html; charset=UTF-8"
+        }
+      ],
+      "contact_info": {
+        "emails_found": [],
+        "phones_found": []
+      },
+      "data_completeness": {
+        "website_scraped": 10,
+        "contact_info_found": 0,
+        "tech_stack_detected": 10,
+        "pain_points_identified": 10,
+        "opportunities_generated": 5,
+        "business_info_extracted": 0
+      },
+      "legal_compliance": {
+        "accessed_data": "Publicly available website content and business directory data",
+        "compliance": [
+          "CFAA",
+          "GDPR",
+          "CCPA",
+          "CAN-SPAM"
+        ],
+        "data_use": "B2B sales prospecting - no personal data collected beyond public business contact info",
+        "opt_out": "privacy@soetechllc.com"
+      },
+      "researched_at": "2026-08-24T11:28:06.675742+00:00",
+      "researcher": "deep_osint.py v1.0"
+    }
+  },
+  {
+    "business_name": "Excited Goat Coffee Company",
+    "industry": "coffee shops",
+    "location": "Bay City MI MI",
+    "website": "https://excitedgoatcoffeeco.square.site/",
+    "phone": "(989) 589-1068",
+    "owner_name": "",
+    "owner_title": "",
+    "contact_email": "",
+    "technology_stack": [
+      "SSL/HTTPS"
+    ],
+    "pain_points": [
+      "Limited Social Media Presence: No social media links detected on website",
+      "Potential Mobile Issues: No explicit mobile optimization claims found",
+      "Limited Online Payment Options: No clear online payment or invoicing system"
+    ],
+    "opportunities": [
+      "Social Media Strategy: Build engaged online community with automated posting",
+      "Mobile Optimization: Modern responsive website design",
+      "Online Payment Integration: Secure payment processing and invoicing"
+    ],
+    "confidence_score": 8,
+    "research_sources": [
+      {
+        "url": "https://excitedgoatcoffeeco.square.site/",
+        "type": "website_scrape",
+        "timestamp": "2026-08-24T11:28:12.991767+00:00"
+      },
+      {
+        "url": "https://excitedgoatcoffeeco.square.site/contact-us",
+        "type": "website_scrape",
+        "timestamp": "2026-08-24T11:28:40.180083+00:00"
+      },
+      {
+        "url": "https://excitedgoatcoffeeco.square.site/about",
+        "type": "website_scrape",
+        "timestamp": "2026-08-24T11:31:05.174341+00:00"
+      },
+      {
+        "type": "tech_stack_detection",
+        "detected": [
+          "SSL/HTTPS"
+        ],
+        "timestamp": "2026-08-24T11:31:05.177244+00:00"
+      }
+    ],
+    "notes": "Scraped 3 pages from website. Tech stack: SSL/HTTPS. Identified 3 pain points. Generated 3 opportunities.",
+    "filename": "excited_goat_coffee_company.md",
+    "osint_research": {
+      "scraped_pages": [
+        {
+          "url": "https://excitedgoatcoffeeco.square.site/",
+          "status": 200,
+          "content_length": 14457,
+          "content_type": "text/html; charset=utf-8"
+        },
+        {
+          "url": "https://excitedgoatcoffeeco.square.site/contact-us",
+          "status": 200,
+          "content_length": 15903,
+          "content_type": "text/html; charset=utf-8"
+        },
+        {
+          "url": "https://excitedgoatcoffeeco.square.site/about",
+          "status": 200,
+          "content_length": 16477,
+          "content_type": "text/html; charset=utf-8"
+        }
+      ],
+      "contact_info": {
+        "emails_found": [],
+        "phones_found": []
+      },
+      "data_completeness": {
+        "website_scraped": 10,
+        "contact_info_found": 0,
+        "tech_stack_detected": 10,
+        "pain_points_identified": 10,
+        "opportunities_generated": 5,
+        "business_info_extracted": 0
+      },
+      "legal_compliance": {
+        "accessed_data": "Publicly available website content and business directory data",
+        "compliance": [
+          "CFAA",
+          "GDPR",
+          "CCPA",
+          "CAN-SPAM"
+        ],
+        "data_use": "B2B sales prospecting - no personal data collected beyond public business contact info",
+        "opt_out": "privacy@soetechllc.com"
+      },
+      "researched_at": "2026-08-24T11:31:05.179896+00:00",
+      "researcher": "deep_osint.py v1.0"
+    }
+  },
+  {
+    "business_name": "Nicole M. Paxson, DDS",
+    "industry": "dental practices",
+    "location": "Saginaw MI MI",
+    "website": "http://paxsondental.com/",
+    "phone": "(989) 793-8650",
+    "owner_name": "",
+    "owner_title": "",
+    "contact_email": "",
+    "technology_stack": [
+      "Unknown (no CMS detected)"
+    ],
+    "pain_points": [
+      "Limited Social Media Presence: No social media links detected on website",
+      "Potential Mobile Issues: No explicit mobile optimization claims found",
+      "Limited Online Payment Options: No clear online payment or invoicing system"
+    ],
+    "opportunities": [
+      "Social Media Strategy: Build engaged online community with automated posting",
+      "Mobile Optimization: Modern responsive website design",
+      "Online Payment Integration: Secure payment processing and invoicing"
+    ],
+    "confidence_score": 7,
+    "research_sources": [
+      {
+        "url": "http://paxsondental.com/",
+        "type": "website_scrape",
+        "timestamp": "2026-08-24T11:31:09.562517+00:00"
+      },
+      {
+        "url": "http://paxsondental.com/contact",
+        "type": "website_scrape",
+        "timestamp": "2026-08-24T11:31:18.503128+00:00"
+      },
+      {
+        "url": "http://paxsondental.com/about/contact",
+        "type": "website_scrape",
+        "timestamp": "2026-08-24T11:32:30.337072+00:00"
+      },
+      {
+        "url": "http://paxsondental.com/about",
+        "type": "website_scrape",
+        "timestamp": "2026-08-24T11:33:42.450000+00:00"
+      },
+      {
+        "type": "tech_stack_detection",
+        "detected": [
+          "Unknown (no CMS detected)"
+        ],
+        "timestamp": "2026-08-24T11:33:42.452391+00:00"
+      }
+    ],
+    "notes": "Scraped 4 pages from website. Tech stack: Unknown (no CMS detected). Identified 3 pain points. Generated 3 opportunities.",
+    "filename": "nicole_m_paxson_dds.md",
+    "osint_research": {
+      "scraped_pages": [
+        {
+          "url": "http://paxsondental.com/",
+          "status": 200,
+          "content_length": 15359,
+          "content_type": "text/html; charset=UTF-8"
+        },
+        {
+          "url": "http://paxsondental.com/contact",
+          "status": 200,
+          "content_length": 11534,
+          "content_type": "text/html; charset=UTF-8"
+        },
+        {
+          "url": "http://paxsondental.com/about/contact",
+          "status": 200,
+          "content_length": 11528,
+          "content_type": "text/html; charset=UTF-8"
+        },
+        {
+          "url": "http://paxsondental.com/about",
+          "status": 200,
+          "content_length": 13793,
+          "content_type": "text/html; charset=UTF-8"
+        }
+      ],
+      "contact_info": {
+        "emails_found": [],
+        "phones_found": []
+      },
+      "data_completeness": {
+        "website_scraped": 10,
+        "contact_info_found": 0,
+        "tech_stack_detected": 10,
+        "pain_points_identified": 10,
+        "opportunities_generated": 5,
+        "business_info_extracted": 0
+      },
+      "legal_compliance": {
+        "accessed_data": "Publicly available website content and business directory data",
+        "compliance": [
+          "CFAA",
+          "GDPR",
+          "CCPA",
+          "CAN-SPAM"
+        ],
+        "data_use": "B2B sales prospecting - no personal data collected beyond public business contact info",
+        "opt_out": "privacy@soetechllc.com"
+      },
+      "researched_at": "2026-08-24T11:33:42.455308+00:00",
+      "researcher": "deep_osint.py v1.0"
+    }
   }
 ]

@@ -1,0 +1,86 @@
+{
+  "business_name": "Board & Brush Creative Studio - Saginaw",
+  "industry": "marketing agencies",
+  "location": "Saginaw MI MI",
+  "website": "https://boardandbrush.com/saginaw?utm_source=google&utm_medium=local&utm_campaign=localmaps&utm_content=216",
+  "phone": "(989) 726-3336",
+  "owner_name": "",
+  "owner_title": "",
+  "contact_email": "",
+  "technology_stack": [
+    "SSL/HTTPS"
+  ],
+  "pain_points": [
+    "Limited Social Media Presence: No social media links detected on website",
+    "Potential Mobile Issues: No explicit mobile optimization claims found",
+    "Limited Online Payment Options: No clear online payment or invoicing system"
+  ],
+  "opportunities": [
+    "Social Media Strategy: Build engaged online community with automated posting",
+    "Mobile Optimization: Modern responsive website design",
+    "Online Payment Integration: Secure payment processing and invoicing"
+  ],
+  "confidence_score": 8,
+  "research_sources": [
+    {
+      "url": "https://boardandbrush.com/saginaw?utm_source=google&utm_medium=local&utm_campaign=localmaps&utm_content=216",
+      "type": "website_scrape",
+      "timestamp": "2026-08-24T11:07:51.570847+00:00"
+    },
+    {
+      "url": "https://boardandbrush.com/contact",
+      "type": "website_scrape",
+      "timestamp": "2026-08-24T11:07:57.216211+00:00"
+    },
+    {
+      "type": "tech_stack_detection",
+      "detected": [
+        "SSL/HTTPS"
+      ],
+      "timestamp": "2026-08-24T11:11:13.915406+00:00"
+    }
+  ],
+  "notes": "Scraped 2 pages from website. Tech stack: SSL/HTTPS. Identified 3 pain points. Generated 3 opportunities.",
+  "filename": "board_brush_creative_studio_saginaw.md",
+  "osint_research": {
+    "scraped_pages": [
+      {
+        "url": "https://boardandbrush.com/saginaw?utm_source=google&utm_medium=local&utm_campaign=localmaps&utm_content=216",
+        "status": 200,
+        "content_length": 21430,
+        "content_type": "text/html; charset=UTF-8"
+      },
+      {
+        "url": "https://boardandbrush.com/contact",
+        "status": 200,
+        "content_length": 24424,
+        "content_type": "text/html; charset=UTF-8"
+      }
+    ],
+    "contact_info": {
+      "emails_found": [],
+      "phones_found": []
+    },
+    "data_completeness": {
+      "website_scraped": 10,
+      "contact_info_found": 0,
+      "tech_stack_detected": 10,
+      "pain_points_identified": 10,
+      "opportunities_generated": 5,
+      "business_info_extracted": 0
+    },
+    "legal_compliance": {
+      "accessed_data": "Publicly available website content and business directory data",
+      "compliance": [
+        "CFAA",
+        "GDPR",
+        "CCPA",
+        "CAN-SPAM"
+      ],
+      "data_use": "B2B sales prospecting - no personal data collected beyond public business contact info",
+      "opt_out": "privacy@soetechllc.com"
+    },
+    "researched_at": "2026-08-24T11:11:13.918130+00:00",
+    "researcher": "deep_osint.py v1.0"
+  }
+}

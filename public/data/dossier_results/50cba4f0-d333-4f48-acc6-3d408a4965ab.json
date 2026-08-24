@@ -1,0 +1,108 @@
+{
+  "business_name": "Nicole M. Paxson, DDS",
+  "industry": "dental practices",
+  "location": "Saginaw MI MI",
+  "website": "http://paxsondental.com/",
+  "phone": "(989) 793-8650",
+  "owner_name": "",
+  "owner_title": "",
+  "contact_email": "",
+  "technology_stack": [
+    "Unknown (no CMS detected)"
+  ],
+  "pain_points": [
+    "Limited Social Media Presence: No social media links detected on website",
+    "Potential Mobile Issues: No explicit mobile optimization claims found",
+    "Limited Online Payment Options: No clear online payment or invoicing system"
+  ],
+  "opportunities": [
+    "Social Media Strategy: Build engaged online community with automated posting",
+    "Mobile Optimization: Modern responsive website design",
+    "Online Payment Integration: Secure payment processing and invoicing"
+  ],
+  "confidence_score": 7,
+  "research_sources": [
+    {
+      "url": "http://paxsondental.com/",
+      "type": "website_scrape",
+      "timestamp": "2026-08-24T11:31:09.562517+00:00"
+    },
+    {
+      "url": "http://paxsondental.com/contact",
+      "type": "website_scrape",
+      "timestamp": "2026-08-24T11:31:18.503128+00:00"
+    },
+    {
+      "url": "http://paxsondental.com/about/contact",
+      "type": "website_scrape",
+      "timestamp": "2026-08-24T11:32:30.337072+00:00"
+    },
+    {
+      "url": "http://paxsondental.com/about",
+      "type": "website_scrape",
+      "timestamp": "2026-08-24T11:33:42.450000+00:00"
+    },
+    {
+      "type": "tech_stack_detection",
+      "detected": [
+        "Unknown (no CMS detected)"
+      ],
+      "timestamp": "2026-08-24T11:33:42.452391+00:00"
+    }
+  ],
+  "notes": "Scraped 4 pages from website. Tech stack: Unknown (no CMS detected). Identified 3 pain points. Generated 3 opportunities.",
+  "filename": "nicole_m_paxson_dds.md",
+  "osint_research": {
+    "scraped_pages": [
+      {
+        "url": "http://paxsondental.com/",
+        "status": 200,
+        "content_length": 15359,
+        "content_type": "text/html; charset=UTF-8"
+      },
+      {
+        "url": "http://paxsondental.com/contact",
+        "status": 200,
+        "content_length": 11534,
+        "content_type": "text/html; charset=UTF-8"
+      },
+      {
+        "url": "http://paxsondental.com/about/contact",
+        "status": 200,
+        "content_length": 11528,
+        "content_type": "text/html; charset=UTF-8"
+      },
+      {
+        "url": "http://paxsondental.com/about",
+        "status": 200,
+        "content_length": 13793,
+        "content_type": "text/html; charset=UTF-8"
+      }
+    ],
+    "contact_info": {
+      "emails_found": [],
+      "phones_found": []
+    },
+    "data_completeness": {
+      "website_scraped": 10,
+      "contact_info_found": 0,
+      "tech_stack_detected": 10,
+      "pain_points_identified": 10,
+      "opportunities_generated": 5,
+      "business_info_extracted": 0
+    },
+    "legal_compliance": {
+      "accessed_data": "Publicly available website content and business directory data",
+      "compliance": [
+        "CFAA",
+        "GDPR",
+        "CCPA",
+        "CAN-SPAM"
+      ],
+      "data_use": "B2B sales prospecting - no personal data collected beyond public business contact info",
+      "opt_out": "privacy@soetechllc.com"
+    },
+    "researched_at": "2026-08-24T11:33:42.455308+00:00",
+    "researcher": "deep_osint.py v1.0"
+  }
+}
