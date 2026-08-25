@@ -202,6 +202,7 @@ const DEMO_EMAILS: OutreachEmail[] = [
 
 
 
+
 const DEMO_DEALS: Deal[] = [
   {
     id: 'deal-001', lead_id: 'lead-002', title: 'Growth Labs - Website Redesign',
