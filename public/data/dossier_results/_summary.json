@@ -1,0 +1,149 @@
+{
+  "stage": 2,
+  "total": 20,
+  "success": 20,
+  "errors": 0,
+  "results": [
+    {
+      "index": 0,
+      "name": "Lotus Garden Center",
+      "lead_id": "97ffe1ba-9534-4563-aed4-f4e8304885fe",
+      "status": "success",
+      "confidence": 1
+    },
+    {
+      "index": 1,
+      "name": "Palm Springs Florist, Inc.",
+      "lead_id": "80178fb1-8112-4670-8a1f-e31a9ba889a1",
+      "status": "success",
+      "confidence": 1
+    },
+    {
+      "index": 2,
+      "name": "Dr. Orchid Floral Design",
+      "lead_id": "766130bc-9ab3-4dfc-a893-45efdc2c2ee8",
+      "status": "success",
+      "confidence": 1
+    },
+    {
+      "index": 3,
+      "name": "Find A Good Accountant",
+      "lead_id": "b59db0d1-fa3d-48bd-9de1-945e974afb1a",
+      "status": "success",
+      "confidence": 1
+    },
+    {
+      "index": 4,
+      "name": "Newell Taylor Accountancy",
+      "lead_id": "850fda64-7f13-4bef-ae2a-e1948afc0077",
+      "status": "success",
+      "confidence": 1
+    },
+    {
+      "index": 5,
+      "name": "CGC Accountants & Advisors",
+      "lead_id": "23a23f62-e2e6-4eb2-b8cd-47f680fc2e6a",
+      "status": "success",
+      "confidence": 1
+    },
+    {
+      "index": 6,
+      "name": "Harmony Coffee",
+      "lead_id": "08e61f1c-8e6a-4f1e-8ae9-60cd0d1bca24",
+      "status": "success",
+      "confidence": 1
+    },
+    {
+      "index": 7,
+      "name": "HAYSTACK COFFEE",
+      "lead_id": "d2d580fd-2260-4488-820b-f632a2f2a2ba",
+      "status": "success",
+      "confidence": 1
+    },
+    {
+      "index": 8,
+      "name": "Jimenez Law Offices",
+      "lead_id": "a981a3f2-882e-42d3-a2a3-383e2038c6ca",
+      "status": "success",
+      "confidence": 1
+    },
+    {
+      "index": 9,
+      "name": "Palm Desert Law",
+      "lead_id": "f4df25e4-b0bc-494a-b2c9-b7dc1b984825",
+      "status": "success",
+      "confidence": 1
+    },
+    {
+      "index": 10,
+      "name": "Desert Auto Repair",
+      "lead_id": "625860eb-652b-43fe-8c87-906fb807028b",
+      "status": "success",
+      "confidence": 1
+    },
+    {
+      "index": 11,
+      "name": "Sparks Family Dentistry",
+      "lead_id": "3eaaf5da-6690-4e03-8073-34fa80194b3e",
+      "status": "success",
+      "confidence": 1
+    },
+    {
+      "index": 12,
+      "name": "Simple Cremation Sparks",
+      "lead_id": "d155d12d-6c0d-4b58-87e1-e2fe5d1bec6b",
+      "status": "success",
+      "confidence": 1
+    },
+    {
+      "index": 13,
+      "name": "MorningStar Senior Living of Sparks",
+      "lead_id": "0f3844dd-d19e-4a9d-8888-6972fb1ac759",
+      "status": "success",
+      "confidence": 1
+    },
+    {
+      "index": 14,
+      "name": "Brookdale Vista",
+      "lead_id": "15c5be89-2a5c-40eb-a9a3-3bcb5d911ceb",
+      "status": "success",
+      "confidence": 1
+    },
+    {
+      "index": 15,
+      "name": "Sierra Crest Senior Living",
+      "lead_id": "894a1d4e-1bfd-4d3a-a8df-a12592d2c318",
+      "status": "success",
+      "confidence": 1
+    },
+    {
+      "index": 16,
+      "name": "Sparks Senior Care",
+      "lead_id": "9ea3a108-44a7-459a-a08d-ec1ad71bf7b4",
+      "status": "success",
+      "confidence": 1
+    },
+    {
+      "index": 17,
+      "name": "Preferred Auto Care",
+      "lead_id": "3f8d98c1-c863-471c-b83b-7aed84408d2c",
+      "status": "success",
+      "confidence": 1
+    },
+    {
+      "index": 18,
+      "name": "RPM Automotive Inc.",
+      "lead_id": "dc981dd5-eba3-40ed-a8ef-bf45e5e46548",
+      "status": "success",
+      "confidence": 1
+    },
+    {
+      "index": 19,
+      "name": "Roy Foster's Automotive",
+      "lead_id": "b688dda5-26de-4b90-a5cd-446884ee4b95",
+      "status": "success",
+      "confidence": 1
+    }
+  ],
+  "errors_detail": []
+}
