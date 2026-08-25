@@ -179,7 +179,7 @@ function generateId(): string {
 const DEMO_LEADS: Lead[] = [
   {
     id: '',
-    name: 'Cam Stone's Automotive',
+    name: 'Cam Stone\'s Automotive',
     company: '',
     email: '',
     phone: '(760) 568-2999',
@@ -243,7 +243,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Ozzie's Automotive Inc.',
+    name: 'Ozzie\'s Automotive Inc.',
     company: '',
     email: '',
     phone: '(760) 773-5939',
@@ -323,7 +323,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Lino's Auto Repair',
+    name: 'Lino\'s Auto Repair',
     company: '',
     email: '',
     phone: '(760) 773-4707',
@@ -355,7 +355,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Kim's Automotive',
+    name: 'Kim\'s Automotive',
     company: '',
     email: '',
     phone: '(760) 346-2443',
@@ -947,7 +947,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Cam Stone's Automotive',
+    name: 'Cam Stone\'s Automotive',
     company: '',
     email: '',
     phone: '(760) 568-2999',
@@ -1011,7 +1011,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Ozzie's Automotive Inc.',
+    name: 'Ozzie\'s Automotive Inc.',
     company: '',
     email: '',
     phone: '(760) 773-5939',
@@ -1091,7 +1091,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Lino's Auto Repair',
+    name: 'Lino\'s Auto Repair',
     company: '',
     email: '',
     phone: '(760) 773-4707',
@@ -1123,7 +1123,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Kim's Automotive',
+    name: 'Kim\'s Automotive',
     company: '',
     email: '',
     phone: '(760) 346-2443',
@@ -1715,7 +1715,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Cam Stone's Automotive',
+    name: 'Cam Stone\'s Automotive',
     company: '',
     email: '',
     phone: '(760) 568-2999',
@@ -1779,7 +1779,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Ozzie's Automotive Inc.',
+    name: 'Ozzie\'s Automotive Inc.',
     company: '',
     email: '',
     phone: '(760) 773-5939',
@@ -1859,7 +1859,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Lino's Auto Repair',
+    name: 'Lino\'s Auto Repair',
     company: '',
     email: '',
     phone: '(760) 773-4707',
@@ -1891,7 +1891,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Kim's Automotive',
+    name: 'Kim\'s Automotive',
     company: '',
     email: '',
     phone: '(760) 346-2443',
@@ -2483,7 +2483,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Cam Stone's Automotive',
+    name: 'Cam Stone\'s Automotive',
     company: '',
     email: '',
     phone: '(760) 568-2999',
@@ -2547,7 +2547,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Ozzie's Automotive Inc.',
+    name: 'Ozzie\'s Automotive Inc.',
     company: '',
     email: '',
     phone: '(760) 773-5939',
@@ -2627,7 +2627,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Lino's Auto Repair',
+    name: 'Lino\'s Auto Repair',
     company: '',
     email: '',
     phone: '(760) 773-4707',
@@ -2659,7 +2659,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Kim's Automotive',
+    name: 'Kim\'s Automotive',
     company: '',
     email: '',
     phone: '(760) 346-2443',
@@ -3284,7 +3284,7 @@ const DEMO_LEADS: Lead[] = [
   {
     id: '',
     name: '',
-    company: 'The Artisan's Nook',
+    company: 'The Artisan\'s Nook',
     email: 'theartisansnook@gmail.com',
     phone: '989-284-9444',
     website: 'https://theartisansnook.com/',
@@ -3412,7 +3412,7 @@ const DEMO_LEADS: Lead[] = [
   {
     id: '',
     name: '',
-    company: 'Java Joe's Cafe',
+    company: 'Java Joe\'s Cafe',
     email: 'javajoescafe@gmail.com',
     phone: '906-643-9211',
     website: 'https://www.javajoescafemi.com/',
@@ -4691,7 +4691,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Cesar's Tires',
+    name: 'Cesar\'s Tires',
     company: '',
     email: '',
     phone: '(248) 453-6847',
@@ -4707,7 +4707,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'C J's Auto Services Center',
+    name: 'C J\'s Auto Services Center',
     company: '',
     email: '',
     phone: '(989) 799-0910',
@@ -4755,7 +4755,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Beyer's Service Center',
+    name: 'Beyer\'s Service Center',
     company: '',
     email: '',
     phone: '(989) 792-8071',
@@ -4899,7 +4899,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Fuzzy's Restaurant',
+    name: 'Fuzzy\'s Restaurant',
     company: '',
     email: '',
     phone: '(989) 790-1719',
@@ -4963,7 +4963,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'N'Orlins Cafe',
+    name: 'N\'Orlins Cafe',
     company: '',
     email: '',
     phone: '(602) 796-5500',
@@ -5011,7 +5011,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Grohman's Flowers',
+    name: 'Grohman\'s Flowers',
     company: '',
     email: '',
     phone: '(989) 754-7457',
@@ -5043,7 +5043,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Erika's Flowers',
+    name: 'Erika\'s Flowers',
     company: '',
     email: '',
     phone: '(989) 755-9330',
@@ -5075,7 +5075,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Hank's Flowerland',
+    name: 'Hank\'s Flowerland',
     company: '',
     email: '',
     phone: '(989) 754-7481',
@@ -5123,7 +5123,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Austin's Flowers & Gifts',
+    name: 'Austin\'s Flowers & Gifts',
     company: '',
     email: '',
     phone: '(989) 695-9100',
@@ -5219,7 +5219,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Boehler's Greenhouse',
+    name: 'Boehler\'s Greenhouse',
     company: '',
     email: '',
     phone: '(989) 792-2039',
@@ -6435,7 +6435,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'O'Guinn Family Funeral Homes',
+    name: 'O\'Guinn Family Funeral Homes',
     company: '',
     email: '',
     phone: '(810) 686-5070',
@@ -6803,7 +6803,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'CHET'S AUTO SERVICE',
+    name: 'CHET\'S AUTO SERVICE',
     company: '',
     email: '',
     phone: '(810) 767-9201',
@@ -7075,7 +7075,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Beny's Coffee',
+    name: 'Beny\'s Coffee',
     company: '',
     email: '',
     phone: '(810) 214-1016',
@@ -7139,7 +7139,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Scooter's Coffee',
+    name: 'Scooter\'s Coffee',
     company: '',
     email: '',
     phone: '(877) 719-1288',
@@ -7155,7 +7155,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'ZD's Corner',
+    name: 'ZD\'s Corner',
     company: '',
     email: '',
     phone: '(810) 487-9065',
@@ -7219,7 +7219,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Vogt's Flowers and Gifts',
+    name: 'Vogt\'s Flowers and Gifts',
     company: '',
     email: '',
     phone: '(810) 238-6487',
@@ -7251,7 +7251,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Anthea's Gardens of Flint - Formerly Carousel Family Florist',
+    name: 'Anthea\'s Gardens of Flint - Formerly Carousel Family Florist',
     company: '',
     email: '',
     phone: '(810) 732-6871',
@@ -7299,7 +7299,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Mary's Bouquet & Gifts',
+    name: 'Mary\'s Bouquet & Gifts',
     company: '',
     email: '',
     phone: '(810) 235-3822',
@@ -7315,7 +7315,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Fenner's Floral and Design Company',
+    name: 'Fenner\'s Floral and Design Company',
     company: '',
     email: '',
     phone: '(810) 820-2312',
@@ -7363,7 +7363,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Pink Lady's Slipper',
+    name: 'Pink Lady\'s Slipper',
     company: '',
     email: '',
     phone: '(810) 635-8164',
@@ -7379,7 +7379,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Vogt's Flowers of Davison',
+    name: 'Vogt\'s Flowers of Davison',
     company: '',
     email: '',
     phone: '(810) 653-3700',
@@ -7411,7 +7411,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'MarySam's Florist and Plant Shop',
+    name: 'MarySam\'s Florist and Plant Shop',
     company: '',
     email: '',
     phone: '(810) 309-9694',
@@ -7475,7 +7475,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Ken's Greenhouse',
+    name: 'Ken\'s Greenhouse',
     company: '',
     email: '',
     phone: '(810) 732-8522',
@@ -7715,7 +7715,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Victoria's House',
+    name: 'Victoria\'s House',
     company: '',
     email: '',
     phone: '(810) 732-1946',
@@ -8003,7 +8003,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Walker June Calhoun CPA's, PC',
+    name: 'Walker June Calhoun CPA\'s, PC',
     company: '',
     email: '',
     phone: '(810) 743-5000',
@@ -8835,7 +8835,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Zari's Loving Touch',
+    name: 'Zari\'s Loving Touch',
     company: '',
     email: '',
     phone: '',
@@ -9347,7 +9347,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Morgan's Auto Repair',
+    name: 'Morgan\'s Auto Repair',
     company: '',
     email: '',
     phone: '(989) 892-0567',
@@ -9379,7 +9379,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Ty's Auto Service LLC',
+    name: 'Ty\'s Auto Service LLC',
     company: '',
     email: '',
     phone: '(989) 397-6550',
@@ -9619,7 +9619,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Suzie Q's Breakfast Nook',
+    name: 'Suzie Q\'s Breakfast Nook',
     company: '',
     email: '',
     phone: '(989) 402-1792',
@@ -9667,7 +9667,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Paul's Flowers',
+    name: 'Paul\'s Flowers',
     company: '',
     email: '',
     phone: '(989) 894-1199',
@@ -9779,7 +9779,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Hank's Flowerland',
+    name: 'Hank\'s Flowerland',
     company: '',
     email: '',
     phone: '(989) 754-7481',
@@ -9827,7 +9827,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Erika's Flowers',
+    name: 'Erika\'s Flowers',
     company: '',
     email: '',
     phone: '(989) 755-9330',
@@ -9843,7 +9843,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Auburn's Flowers From the Heart',
+    name: 'Auburn\'s Flowers From the Heart',
     company: '',
     email: '',
     phone: '(989) 662-7818',
@@ -10131,7 +10131,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Quast Janke & Co CPA's',
+    name: 'Quast Janke & Co CPA\'s',
     company: '',
     email: '',
     phone: '(989) 892-4549',
@@ -10771,7 +10771,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Kj's Home Improvement Specialist',
+    name: 'Kj\'s Home Improvement Specialist',
     company: '',
     email: '',
     phone: '(989) 657-6981',
@@ -10931,7 +10931,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Auburn Chapel-Cunningham-Taylor F.H.'s Inc.',
+    name: 'Auburn Chapel-Cunningham-Taylor F.H.\'s Inc.',
     company: '',
     email: '',
     phone: '(989) 662-4711',
@@ -11283,7 +11283,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'All A's Automotive & Transmission Repair',
+    name: 'All A\'s Automotive & Transmission Repair',
     company: '',
     email: '',
     phone: '(989) 631-4672',
@@ -11331,7 +11331,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Terry's Auto Sevice Center',
+    name: 'Terry\'s Auto Sevice Center',
     company: '',
     email: '',
     phone: '(989) 486-3800',
@@ -11475,7 +11475,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Suderman's Car Care',
+    name: 'Suderman\'s Car Care',
     company: '',
     email: '',
     phone: '(989) 631-6910',
@@ -11571,7 +11571,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Chef Sergey's Bakery',
+    name: 'Chef Sergey\'s Bakery',
     company: '',
     email: '',
     phone: '(989) 313-9743',
@@ -11715,7 +11715,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Smith's Flowers and Gifts',
+    name: 'Smith\'s Flowers and Gifts',
     company: '',
     email: '',
     phone: '(989) 631-0470',
@@ -11731,7 +11731,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Hannah's Flowers & Floral Preservation',
+    name: 'Hannah\'s Flowers & Floral Preservation',
     company: '',
     email: '',
     phone: '(989) 750-7200',
@@ -11747,7 +11747,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Randi's Green Thumb',
+    name: 'Randi\'s Green Thumb',
     company: '',
     email: '',
     phone: '(989) 835-3963',
@@ -11779,7 +11779,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Lapelle's Flowers & Gifts',
+    name: 'Lapelle\'s Flowers & Gifts',
     company: '',
     email: '',
     phone: '(989) 631-0450',
@@ -11811,7 +11811,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Austin's Flowers & Gifts',
+    name: 'Austin\'s Flowers & Gifts',
     company: '',
     email: '',
     phone: '(989) 695-9100',
@@ -11827,7 +11827,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Auburn's Flowers From the Heart',
+    name: 'Auburn\'s Flowers From the Heart',
     company: '',
     email: '',
     phone: '(989) 662-7818',
@@ -13027,7 +13027,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Joannie's Floral of Birch Run',
+    name: 'Joannie\'s Floral of Birch Run',
     company: '',
     email: '',
     phone: '(989) 624-5684',
@@ -13043,7 +13043,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Paul's Flowers',
+    name: 'Paul\'s Flowers',
     company: '',
     email: '',
     phone: '(989) 894-1199',
@@ -13491,7 +13491,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Randi's Green Thumb',
+    name: 'Randi\'s Green Thumb',
     company: '',
     email: '',
     phone: '(989) 835-3963',
@@ -13587,7 +13587,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Cohoon's Elevator',
+    name: 'Cohoon\'s Elevator',
     company: '',
     email: '',
     phone: '(989) 835-7724',
@@ -13812,7 +13812,7 @@ const DEMO_LEADS: Lead[] = [
   {
     id: '',
     name: '',
-    company: 'The Artisan's Nook',
+    company: 'The Artisan\'s Nook',
     email: 'theartisansnook@gmail.com',
     phone: '989-284-9444',
     website: 'https://theartisansnook.com/',
@@ -13940,7 +13940,7 @@ const DEMO_LEADS: Lead[] = [
   {
     id: '',
     name: '',
-    company: 'Java Joe's Cafe',
+    company: 'Java Joe\'s Cafe',
     email: 'javajoescafe@gmail.com',
     phone: '906-643-9211',
     website: 'https://www.javajoescafemi.com/',
@@ -15267,7 +15267,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Cesar's Tires',
+    name: 'Cesar\'s Tires',
     company: '',
     email: '',
     phone: '(248) 453-6847',
@@ -15283,7 +15283,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'C J's Auto Services Center',
+    name: 'C J\'s Auto Services Center',
     company: '',
     email: '',
     phone: '(989) 799-0910',
@@ -15331,7 +15331,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Beyer's Service Center',
+    name: 'Beyer\'s Service Center',
     company: '',
     email: '',
     phone: '(989) 792-8071',
@@ -15475,7 +15475,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Fuzzy's Restaurant',
+    name: 'Fuzzy\'s Restaurant',
     company: '',
     email: '',
     phone: '(989) 790-1719',
@@ -15539,7 +15539,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'N'Orlins Cafe',
+    name: 'N\'Orlins Cafe',
     company: '',
     email: '',
     phone: '(602) 796-5500',
@@ -15587,7 +15587,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Grohman's Flowers',
+    name: 'Grohman\'s Flowers',
     company: '',
     email: '',
     phone: '(989) 754-7457',
@@ -15619,7 +15619,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Erika's Flowers',
+    name: 'Erika\'s Flowers',
     company: '',
     email: '',
     phone: '(989) 755-9330',
@@ -15651,7 +15651,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Hank's Flowerland',
+    name: 'Hank\'s Flowerland',
     company: '',
     email: '',
     phone: '(989) 754-7481',
@@ -15699,7 +15699,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Austin's Flowers & Gifts',
+    name: 'Austin\'s Flowers & Gifts',
     company: '',
     email: '',
     phone: '(989) 695-9100',
@@ -15795,7 +15795,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Boehler's Greenhouse',
+    name: 'Boehler\'s Greenhouse',
     company: '',
     email: '',
     phone: '(989) 792-2039',
@@ -17011,7 +17011,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'O'Guinn Family Funeral Homes',
+    name: 'O\'Guinn Family Funeral Homes',
     company: '',
     email: '',
     phone: '(810) 686-5070',
@@ -17379,7 +17379,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'CHET'S AUTO SERVICE',
+    name: 'CHET\'S AUTO SERVICE',
     company: '',
     email: '',
     phone: '(810) 767-9201',
@@ -17651,7 +17651,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Beny's Coffee',
+    name: 'Beny\'s Coffee',
     company: '',
     email: '',
     phone: '(810) 214-1016',
@@ -17715,7 +17715,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Scooter's Coffee',
+    name: 'Scooter\'s Coffee',
     company: '',
     email: '',
     phone: '(877) 719-1288',
@@ -17731,7 +17731,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'ZD's Corner',
+    name: 'ZD\'s Corner',
     company: '',
     email: '',
     phone: '(810) 487-9065',
@@ -17795,7 +17795,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Vogt's Flowers and Gifts',
+    name: 'Vogt\'s Flowers and Gifts',
     company: '',
     email: '',
     phone: '(810) 238-6487',
@@ -17827,7 +17827,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Anthea's Gardens of Flint - Formerly Carousel Family Florist',
+    name: 'Anthea\'s Gardens of Flint - Formerly Carousel Family Florist',
     company: '',
     email: '',
     phone: '(810) 732-6871',
@@ -17875,7 +17875,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Mary's Bouquet & Gifts',
+    name: 'Mary\'s Bouquet & Gifts',
     company: '',
     email: '',
     phone: '(810) 235-3822',
@@ -17891,7 +17891,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Fenner's Floral and Design Company',
+    name: 'Fenner\'s Floral and Design Company',
     company: '',
     email: '',
     phone: '(810) 820-2312',
@@ -17939,7 +17939,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Pink Lady's Slipper',
+    name: 'Pink Lady\'s Slipper',
     company: '',
     email: '',
     phone: '(810) 635-8164',
@@ -17955,7 +17955,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Vogt's Flowers of Davison',
+    name: 'Vogt\'s Flowers of Davison',
     company: '',
     email: '',
     phone: '(810) 653-3700',
@@ -17987,7 +17987,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'MarySam's Florist and Plant Shop',
+    name: 'MarySam\'s Florist and Plant Shop',
     company: '',
     email: '',
     phone: '(810) 309-9694',
@@ -18051,7 +18051,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Ken's Greenhouse',
+    name: 'Ken\'s Greenhouse',
     company: '',
     email: '',
     phone: '(810) 732-8522',
@@ -18291,7 +18291,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Victoria's House',
+    name: 'Victoria\'s House',
     company: '',
     email: '',
     phone: '(810) 732-1946',
@@ -18579,7 +18579,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Walker June Calhoun CPA's, PC',
+    name: 'Walker June Calhoun CPA\'s, PC',
     company: '',
     email: '',
     phone: '(810) 743-5000',
@@ -19411,7 +19411,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Zari's Loving Touch',
+    name: 'Zari\'s Loving Touch',
     company: '',
     email: '',
     phone: '',
@@ -19923,7 +19923,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Morgan's Auto Repair',
+    name: 'Morgan\'s Auto Repair',
     company: '',
     email: '',
     phone: '(989) 892-0567',
@@ -19955,7 +19955,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Ty's Auto Service LLC',
+    name: 'Ty\'s Auto Service LLC',
     company: '',
     email: '',
     phone: '(989) 397-6550',
@@ -20195,7 +20195,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Suzie Q's Breakfast Nook',
+    name: 'Suzie Q\'s Breakfast Nook',
     company: '',
     email: '',
     phone: '(989) 402-1792',
@@ -20243,7 +20243,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Paul's Flowers',
+    name: 'Paul\'s Flowers',
     company: '',
     email: '',
     phone: '(989) 894-1199',
@@ -20355,7 +20355,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Hank's Flowerland',
+    name: 'Hank\'s Flowerland',
     company: '',
     email: '',
     phone: '(989) 754-7481',
@@ -20403,7 +20403,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Erika's Flowers',
+    name: 'Erika\'s Flowers',
     company: '',
     email: '',
     phone: '(989) 755-9330',
@@ -20419,7 +20419,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Auburn's Flowers From the Heart',
+    name: 'Auburn\'s Flowers From the Heart',
     company: '',
     email: '',
     phone: '(989) 662-7818',
@@ -20707,7 +20707,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Quast Janke & Co CPA's',
+    name: 'Quast Janke & Co CPA\'s',
     company: '',
     email: '',
     phone: '(989) 892-4549',
@@ -21347,7 +21347,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Kj's Home Improvement Specialist',
+    name: 'Kj\'s Home Improvement Specialist',
     company: '',
     email: '',
     phone: '(989) 657-6981',
@@ -21507,7 +21507,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Auburn Chapel-Cunningham-Taylor F.H.'s Inc.',
+    name: 'Auburn Chapel-Cunningham-Taylor F.H.\'s Inc.',
     company: '',
     email: '',
     phone: '(989) 662-4711',
@@ -21859,7 +21859,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'All A's Automotive & Transmission Repair',
+    name: 'All A\'s Automotive & Transmission Repair',
     company: '',
     email: '',
     phone: '(989) 631-4672',
@@ -21907,7 +21907,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Terry's Auto Sevice Center',
+    name: 'Terry\'s Auto Sevice Center',
     company: '',
     email: '',
     phone: '(989) 486-3800',
@@ -22051,7 +22051,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Suderman's Car Care',
+    name: 'Suderman\'s Car Care',
     company: '',
     email: '',
     phone: '(989) 631-6910',
@@ -22147,7 +22147,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Chef Sergey's Bakery',
+    name: 'Chef Sergey\'s Bakery',
     company: '',
     email: '',
     phone: '(989) 313-9743',
@@ -22291,7 +22291,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Smith's Flowers and Gifts',
+    name: 'Smith\'s Flowers and Gifts',
     company: '',
     email: '',
     phone: '(989) 631-0470',
@@ -22307,7 +22307,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Hannah's Flowers & Floral Preservation',
+    name: 'Hannah\'s Flowers & Floral Preservation',
     company: '',
     email: '',
     phone: '(989) 750-7200',
@@ -22323,7 +22323,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Randi's Green Thumb',
+    name: 'Randi\'s Green Thumb',
     company: '',
     email: '',
     phone: '(989) 835-3963',
@@ -22355,7 +22355,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Lapelle's Flowers & Gifts',
+    name: 'Lapelle\'s Flowers & Gifts',
     company: '',
     email: '',
     phone: '(989) 631-0450',
@@ -22387,7 +22387,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Austin's Flowers & Gifts',
+    name: 'Austin\'s Flowers & Gifts',
     company: '',
     email: '',
     phone: '(989) 695-9100',
@@ -22403,7 +22403,7 @@ const DEMO_LEADS: Lead[] = [
   },
   {
     id: '',
-    name: 'Auburn's Flowers From the Heart',
+    name: 'Auburn\'s Flowers From the Heart',
     company: '',
     email: '',
     phone: '(989) 662-7818',
@@ -23556,7 +23556,7 @@ const DEMO_LEADS: Lead[] = [
   {
     id: '',
     name: '',
-    company: 'The Artisan's Nook',
+    company: 'The Artisan\'s Nook',
     email: 'theartisansnook@gmail.com',
     phone: '989-284-9444',
     website: 'https://theartisansnook.com/',
@@ -23684,7 +23684,7 @@ const DEMO_LEADS: Lead[] = [
   {
     id: '',
     name: '',
-    company: 'Java Joe's Cafe',
+    company: 'Java Joe\'s Cafe',
     email: 'javajoescafe@gmail.com',
     phone: '906-643-9211',
     website: 'https://www.javajoescafemi.com/',

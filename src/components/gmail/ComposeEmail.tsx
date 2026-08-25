@@ -42,7 +42,7 @@ export default function ComposeEmail({
         payload.cc = cc.split(',').map((s) => s.trim()).filter(Boolean);
       }
 
-      const res = await fetch('/api/gmail/send', {
+      const res = await fetch('https://lnm-command-center-production.up.railway.app/api/gmail/send', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),
