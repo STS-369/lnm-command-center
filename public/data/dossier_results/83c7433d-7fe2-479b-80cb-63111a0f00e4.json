@@ -1,0 +1,108 @@
+{
+  "business_name": "ServiceMaster Restoration Serviecs - Midland",
+  "industry": "home services",
+  "location": "Midland MI MI",
+  "website": "https://servicemasterrestore.com/servicemaster-restoration-services-midland?utm_source=google&utm_medium=organic&utm_campaign=gmb",
+  "phone": "(989) 502-0703",
+  "owner_name": "",
+  "owner_title": "",
+  "contact_email": "",
+  "technology_stack": [
+    "SSL/HTTPS"
+  ],
+  "pain_points": [
+    "Limited Social Media Presence: No social media links detected on website",
+    "Potential Mobile Issues: No explicit mobile optimization claims found",
+    "Limited Online Payment Options: No clear online payment or invoicing system"
+  ],
+  "opportunities": [
+    "Social Media Strategy: Build engaged online community with automated posting",
+    "Mobile Optimization: Modern responsive website design",
+    "Online Payment Integration: Secure payment processing and invoicing"
+  ],
+  "confidence_score": 8,
+  "research_sources": [
+    {
+      "url": "https://servicemasterrestore.com/servicemaster-restoration-services-midland?utm_source=google&utm_medium=organic&utm_campaign=gmb",
+      "type": "website_scrape",
+      "timestamp": "2026-08-26T11:21:52.074832+00:00"
+    },
+    {
+      "url": "https://servicemasterrestore.com/contact",
+      "type": "website_scrape",
+      "timestamp": "2026-08-26T11:21:53.850916+00:00"
+    },
+    {
+      "url": "https://servicemasterrestore.com/contact-us",
+      "type": "website_scrape",
+      "timestamp": "2026-08-26T11:21:56.232313+00:00"
+    },
+    {
+      "url": "https://servicemasterrestore.com/about",
+      "type": "website_scrape",
+      "timestamp": "2026-08-26T11:22:23.454718+00:00"
+    },
+    {
+      "type": "tech_stack_detection",
+      "detected": [
+        "SSL/HTTPS"
+      ],
+      "timestamp": "2026-08-26T11:22:23.462845+00:00"
+    }
+  ],
+  "notes": "Scraped 4 pages from website. Tech stack: SSL/HTTPS. Identified 3 pain points. Generated 3 opportunities.",
+  "filename": "servicemaster_restoration_serviecs_midland.md",
+  "osint_research": {
+    "scraped_pages": [
+      {
+        "url": "https://servicemasterrestore.com/servicemaster-restoration-services-midland?utm_source=google&utm_medium=organic&utm_campaign=gmb",
+        "status": 200,
+        "content_length": 61162,
+        "content_type": "text/html; charset=UTF-8"
+      },
+      {
+        "url": "https://servicemasterrestore.com/contact",
+        "status": 200,
+        "content_length": 30145,
+        "content_type": "text/html; charset=UTF-8"
+      },
+      {
+        "url": "https://servicemasterrestore.com/contact-us",
+        "status": 200,
+        "content_length": 32224,
+        "content_type": "text/html; charset=UTF-8"
+      },
+      {
+        "url": "https://servicemasterrestore.com/about",
+        "status": 200,
+        "content_length": 38860,
+        "content_type": "text/html; charset=UTF-8"
+      }
+    ],
+    "contact_info": {
+      "emails_found": [],
+      "phones_found": []
+    },
+    "data_completeness": {
+      "website_scraped": 10,
+      "contact_info_found": 0,
+      "tech_stack_detected": 10,
+      "pain_points_identified": 10,
+      "opportunities_generated": 5,
+      "business_info_extracted": 0
+    },
+    "legal_compliance": {
+      "accessed_data": "Publicly available website content and business directory data",
+      "compliance": [
+        "CFAA",
+        "GDPR",
+        "CCPA",
+        "CAN-SPAM"
+      ],
+      "data_use": "B2B sales prospecting - no personal data collected beyond public business contact info",
+      "opt_out": "privacy@soetechllc.com"
+    },
+    "researched_at": "2026-08-26T11:22:23.478802+00:00",
+    "researcher": "deep_osint.py v1.0"
+  }
+}

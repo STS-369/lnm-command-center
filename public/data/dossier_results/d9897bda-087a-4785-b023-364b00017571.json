@@ -1,0 +1,130 @@
+{
+  "business_name": "Comfort Keepers Bay City",
+  "industry": "home services",
+  "location": "Bay City MI MI",
+  "website": "https://www.comfortkeepers.com/offices/michigan/bay-city/?utm_source=local&utm_medium=organic",
+  "phone": "(989) 684-8448",
+  "owner_name": "",
+  "owner_title": "",
+  "contact_email": "",
+  "technology_stack": [
+    "SSL/HTTPS"
+  ],
+  "pain_points": [
+    "Limited Social Media Presence: No social media links detected on website",
+    "Potential Mobile Issues: No explicit mobile optimization claims found",
+    "Limited Online Payment Options: No clear online payment or invoicing system"
+  ],
+  "opportunities": [
+    "Social Media Strategy: Build engaged online community with automated posting",
+    "Mobile Optimization: Modern responsive website design",
+    "Online Payment Integration: Secure payment processing and invoicing"
+  ],
+  "confidence_score": 8,
+  "research_sources": [
+    {
+      "url": "https://www.comfortkeepers.com/offices/michigan/bay-city/?utm_source=local&utm_medium=organic",
+      "type": "website_scrape",
+      "timestamp": "2026-08-27T11:16:27.428178+00:00"
+    },
+    {
+      "url": "https://www.comfortkeepers.com/contact",
+      "type": "website_scrape",
+      "timestamp": "2026-08-27T11:16:29.644264+00:00"
+    },
+    {
+      "url": "https://www.comfortkeepers.com/contact-us",
+      "type": "website_scrape",
+      "timestamp": "2026-08-27T11:16:31.269987+00:00"
+    },
+    {
+      "url": "https://www.comfortkeepers.com/contact.html",
+      "type": "website_scrape",
+      "timestamp": "2026-08-27T11:16:35.021474+00:00"
+    },
+    {
+      "url": "https://www.comfortkeepers.com/contact-us.html",
+      "type": "website_scrape",
+      "timestamp": "2026-08-27T11:16:38.139587+00:00"
+    },
+    {
+      "url": "https://www.comfortkeepers.com/about",
+      "type": "website_scrape",
+      "timestamp": "2026-08-27T11:16:41.529854+00:00"
+    },
+    {
+      "type": "tech_stack_detection",
+      "detected": [
+        "SSL/HTTPS"
+      ],
+      "timestamp": "2026-08-27T11:16:41.532168+00:00"
+    }
+  ],
+  "notes": "Scraped 6 pages from website. Tech stack: SSL/HTTPS. Identified 3 pain points. Generated 3 opportunities.",
+  "filename": "comfort_keepers_bay_city.md",
+  "osint_research": {
+    "scraped_pages": [
+      {
+        "url": "https://www.comfortkeepers.com/offices/michigan/bay-city/?utm_source=local&utm_medium=organic",
+        "status": 200,
+        "content_length": 23265,
+        "content_type": "text/html; charset=utf-8"
+      },
+      {
+        "url": "https://www.comfortkeepers.com/contact",
+        "status": 200,
+        "content_length": 13814,
+        "content_type": "text/html; charset=utf-8"
+      },
+      {
+        "url": "https://www.comfortkeepers.com/contact-us",
+        "status": 200,
+        "content_length": 11517,
+        "content_type": "text/html; charset=utf-8"
+      },
+      {
+        "url": "https://www.comfortkeepers.com/contact.html",
+        "status": 200,
+        "content_length": 11517,
+        "content_type": "text/html; charset=utf-8"
+      },
+      {
+        "url": "https://www.comfortkeepers.com/contact-us.html",
+        "status": 200,
+        "content_length": 11517,
+        "content_type": "text/html; charset=utf-8"
+      },
+      {
+        "url": "https://www.comfortkeepers.com/about",
+        "status": 200,
+        "content_length": 11828,
+        "content_type": "text/html; charset=utf-8"
+      }
+    ],
+    "contact_info": {
+      "emails_found": [],
+      "phones_found": []
+    },
+    "data_completeness": {
+      "website_scraped": 10,
+      "contact_info_found": 0,
+      "tech_stack_detected": 10,
+      "pain_points_identified": 10,
+      "opportunities_generated": 5,
+      "business_info_extracted": 0
+    },
+    "legal_compliance": {
+      "accessed_data": "Publicly available website content and business directory data",
+      "compliance": [
+        "CFAA",
+        "GDPR",
+        "CCPA",
+        "CAN-SPAM"
+      ],
+      "data_use": "B2B sales prospecting - no personal data collected beyond public business contact info",
+      "opt_out": "privacy@soetechllc.com"
+    },
+    "researched_at": "2026-08-27T11:16:41.536476+00:00",
+    "researcher": "deep_osint.py v1.0"
+  }
+}

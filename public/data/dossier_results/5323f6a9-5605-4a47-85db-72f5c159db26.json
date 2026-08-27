@@ -1,14 +1,14 @@
 {
-  "business_name": "Hyper Digital Marketing",
-  "industry": "marketing agencies",
-  "location": "Bay City MI MI",
-  "website": "http://www.hyperdm.com/",
-  "phone": "(248) 234-1499",
+  "business_name": "Right at Home",
+  "industry": "home services",
+  "location": "Midland MI MI",
+  "website": "https://www.rightathome.net/northern-michigan/?utm_source=google&utm_medium=local&utm_campaign=localmaps&utm_content=1339",
+  "phone": "(989) 486-9557",
   "owner_name": "",
   "owner_title": "",
   "contact_email": "",
   "technology_stack": [
-    "Unknown (no CMS detected)"
+    "SSL/HTTPS"
   ],
   "pain_points": [
     "Limited Social Media Presence: No social media links detected on website",
@@ -20,30 +20,41 @@
     "Mobile Optimization: Modern responsive website design",
     "Online Payment Integration: Secure payment processing and invoicing"
   ],
-  "confidence_score": 6,
+  "confidence_score": 8,
   "research_sources": [
     {
-      "url": "http://www.hyperdm.com/",
+      "url": "https://www.rightathome.net/northern-michigan/?utm_source=google&utm_medium=local&utm_campaign=localmaps&utm_content=1339",
       "type": "website_scrape",
-      "timestamp": "2026-08-26T11:32:03.748122+00:00"
+      "timestamp": "2026-08-26T11:19:39.833674+00:00"
+    },
+    {
+      "url": "https://www.rightathome.net/contact-us",
+      "type": "website_scrape",
+      "timestamp": "2026-08-26T11:19:57.872602+00:00"
     },
     {
       "type": "tech_stack_detection",
       "detected": [
-        "Unknown (no CMS detected)"
+        "SSL/HTTPS"
       ],
-      "timestamp": "2026-08-26T11:33:05.169151+00:00"
+      "timestamp": "2026-08-26T11:20:37.137146+00:00"
     }
   ],
-  "notes": "Scraped 1 pages from website. Tech stack: Unknown (no CMS detected). Identified 3 pain points. Generated 3 opportunities.",
-  "filename": "hyper_digital_marketing.md",
+  "notes": "Scraped 2 pages from website. Tech stack: SSL/HTTPS. Identified 3 pain points. Generated 3 opportunities.",
+  "filename": "right_at_home.md",
   "osint_research": {
     "scraped_pages": [
       {
-        "url": "http://www.hyperdm.com/",
+        "url": "https://www.rightathome.net/northern-michigan/?utm_source=google&utm_medium=local&utm_campaign=localmaps&utm_content=1339",
         "status": 200,
-        "content_length": 146310,
-        "content_type": "text/html; charset=UTF-8"
+        "content_length": 21572,
+        "content_type": "text/html; charset=utf-8"
+      },
+      {
+        "url": "https://www.rightathome.net/contact-us",
+        "status": 200,
+        "content_length": 17337,
+        "content_type": "text/html; charset=utf-8"
       }
     ],
     "contact_info": {
@@ -69,7 +80,7 @@
       "data_use": "B2B sales prospecting - no personal data collected beyond public business contact info",
       "opt_out": "privacy@soetechllc.com"
     },
-    "researched_at": "2026-08-26T11:33:05.181562+00:00",
+    "researched_at": "2026-08-26T11:20:37.139263+00:00",
     "researcher": "deep_osint.py v1.0"
   }
 }

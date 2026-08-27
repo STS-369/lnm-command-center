@@ -1,24 +1,21 @@
 {
-  "business_name": "Make The Turn",
-  "industry": "marketing agencies",
-  "location": "Flint MI MI",
-  "website": "https://www.maketheturn.com/",
-  "phone": "(248) 823-8121",
+  "business_name": "All Seasons Heating and Cooling",
+  "industry": "home services",
+  "location": "Midland MI MI",
+  "website": "https://www.allseasonsheatingmidland.com/",
+  "phone": "(989) 710-9390",
   "owner_name": "",
   "owner_title": "",
   "contact_email": "",
   "technology_stack": [
-    "Wix",
     "SSL/HTTPS"
   ],
   "pain_points": [
-    "Outdated Website Platform: Uses Wix; may lack modern features and SEO capabilities",
     "Limited Social Media Presence: No social media links detected on website",
     "Potential Mobile Issues: No explicit mobile optimization claims found",
     "Limited Online Payment Options: No clear online payment or invoicing system"
   ],
   "opportunities": [
-    "Website Modernization: Upgrade to a modern, feature-rich platform",
     "Social Media Strategy: Build engaged online community with automated posting",
     "Mobile Optimization: Modern responsive website design",
     "Online Payment Integration: Secure payment processing and invoicing"
@@ -26,39 +23,60 @@
   "confidence_score": 8,
   "research_sources": [
     {
-      "url": "https://www.maketheturn.com/",
+      "url": "https://www.allseasonsheatingmidland.com/",
       "type": "website_scrape",
-      "timestamp": "2026-08-27T11:04:35.435280+00:00"
+      "timestamp": "2026-08-26T11:21:15.372448+00:00"
     },
     {
-      "url": "https://www.maketheturn.com/contact",
+      "url": "https://www.allseasonsheatingmidland.com/contact",
       "type": "website_scrape",
-      "timestamp": "2026-08-27T11:04:38.704959+00:00"
+      "timestamp": "2026-08-26T11:21:19.005647+00:00"
+    },
+    {
+      "url": "https://www.allseasonsheatingmidland.com/contact-us",
+      "type": "website_scrape",
+      "timestamp": "2026-08-26T11:21:21.275203+00:00"
+    },
+    {
+      "url": "https://www.allseasonsheatingmidland.com/about",
+      "type": "website_scrape",
+      "timestamp": "2026-08-26T11:21:48.438825+00:00"
     },
     {
       "type": "tech_stack_detection",
       "detected": [
-        "Wix",
         "SSL/HTTPS"
       ],
-      "timestamp": "2026-08-27T11:05:20.845942+00:00"
+      "timestamp": "2026-08-26T11:21:48.490896+00:00"
     }
   ],
-  "notes": "Scraped 2 pages from website. Tech stack: Wix, SSL/HTTPS. Identified 4 pain points. Generated 4 opportunities.",
-  "filename": "make_the_turn.md",
+  "notes": "Scraped 4 pages from website. Tech stack: SSL/HTTPS. Identified 3 pain points. Generated 3 opportunities.",
+  "filename": "all_seasons_heating_and_cooling.md",
   "osint_research": {
     "scraped_pages": [
       {
-        "url": "https://www.maketheturn.com/",
+        "url": "https://www.allseasonsheatingmidland.com/",
         "status": 200,
-        "content_length": 258997,
-        "content_type": "text/html; charset=UTF-8"
+        "content_length": 133143,
+        "content_type": "text/html"
       },
       {
-        "url": "https://www.maketheturn.com/contact",
+        "url": "https://www.allseasonsheatingmidland.com/contact",
         "status": 200,
-        "content_length": 238483,
-        "content_type": "text/html; charset=UTF-8"
+        "content_length": 24581,
+        "content_type": "text/html"
+      },
+      {
+        "url": "https://www.allseasonsheatingmidland.com/contact-us",
+        "status": 200,
+        "content_length": 24624,
+        "content_type": "text/html"
+      },
+      {
+        "url": "https://www.allseasonsheatingmidland.com/about",
+        "status": 200,
+        "content_length": 215270,
+        "content_type": "text/html"
       }
     ],
     "contact_info": {
@@ -84,7 +102,7 @@
       "data_use": "B2B sales prospecting - no personal data collected beyond public business contact info",
       "opt_out": "privacy@soetechllc.com"
     },
-    "researched_at": "2026-08-27T11:05:20.871242+00:00",
+    "researched_at": "2026-08-26T11:21:48.521578+00:00",
     "researcher": "deep_osint.py v1.0"
   }
 }

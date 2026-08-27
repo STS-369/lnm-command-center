@@ -1,9 +1,9 @@
 {
-  "business_name": "Hyper Digital Marketing",
-  "industry": "marketing agencies",
-  "location": "Bay City MI MI",
-  "website": "http://www.hyperdm.com/",
-  "phone": "(248) 234-1499",
+  "business_name": "First State Home Health & Hospice Care",
+  "industry": "home services",
+  "location": "Saginaw MI MI",
+  "website": "http://www.firststatehomehealth.com/",
+  "phone": "(989) 771-2100",
   "owner_name": "",
   "owner_title": "",
   "contact_email": "",
@@ -20,29 +20,51 @@
     "Mobile Optimization: Modern responsive website design",
     "Online Payment Integration: Secure payment processing and invoicing"
   ],
-  "confidence_score": 6,
+  "confidence_score": 7,
   "research_sources": [
     {
-      "url": "http://www.hyperdm.com/",
+      "url": "http://www.firststatehomehealth.com/",
       "type": "website_scrape",
-      "timestamp": "2026-08-26T11:32:03.748122+00:00"
+      "timestamp": "2026-08-27T11:16:44.687151+00:00"
+    },
+    {
+      "url": "http://www.firststatehomehealth.com/contact",
+      "type": "website_scrape",
+      "timestamp": "2026-08-27T11:16:50.848816+00:00"
+    },
+    {
+      "url": "http://www.firststatehomehealth.com/about",
+      "type": "website_scrape",
+      "timestamp": "2026-08-27T11:17:35.506222+00:00"
     },
     {
       "type": "tech_stack_detection",
       "detected": [
         "Unknown (no CMS detected)"
       ],
-      "timestamp": "2026-08-26T11:33:05.169151+00:00"
+      "timestamp": "2026-08-27T11:17:35.509122+00:00"
     }
   ],
-  "notes": "Scraped 1 pages from website. Tech stack: Unknown (no CMS detected). Identified 3 pain points. Generated 3 opportunities.",
-  "filename": "hyper_digital_marketing.md",
+  "notes": "Scraped 3 pages from website. Tech stack: Unknown (no CMS detected). Identified 3 pain points. Generated 3 opportunities.",
+  "filename": "first_state_home_health_hospice_care.md",
   "osint_research": {
     "scraped_pages": [
       {
-        "url": "http://www.hyperdm.com/",
+        "url": "http://www.firststatehomehealth.com/",
         "status": 200,
-        "content_length": 146310,
+        "content_length": 18506,
+        "content_type": "text/html; charset=UTF-8"
+      },
+      {
+        "url": "http://www.firststatehomehealth.com/contact",
+        "status": 200,
+        "content_length": 17265,
+        "content_type": "text/html; charset=UTF-8"
+      },
+      {
+        "url": "http://www.firststatehomehealth.com/about",
+        "status": 200,
+        "content_length": 16507,
         "content_type": "text/html; charset=UTF-8"
       }
     ],
@@ -69,7 +91,7 @@
       "data_use": "B2B sales prospecting - no personal data collected beyond public business contact info",
       "opt_out": "privacy@soetechllc.com"
     },
-    "researched_at": "2026-08-26T11:33:05.181562+00:00",
+    "researched_at": "2026-08-27T11:17:35.512260+00:00",
     "researcher": "deep_osint.py v1.0"
   }
 }

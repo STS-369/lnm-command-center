@@ -3847,32 +3847,53 @@
     "owner_title": "",
     "contact_email": "",
     "technology_stack": [
-      "Unknown (no HTML content)"
+      "Unknown (no CMS detected)"
     ],
-    "pain_points": [],
+    "pain_points": [
+      "Limited Social Media Presence: No social media links detected on website",
+      "Potential Mobile Issues: No explicit mobile optimization claims found",
+      "Limited Online Payment Options: No clear online payment or invoicing system"
+    ],
     "opportunities": [
-      "Client Management: Streamline multi-client workflow automation"
+      "Social Media Strategy: Build engaged online community with automated posting",
+      "Mobile Optimization: Modern responsive website design",
+      "Online Payment Integration: Secure payment processing and invoicing"
     ],
-    "confidence_score": 2,
+    "confidence_score": 6,
     "research_sources": [
+      {
+        "url": "http://www.hyperdm.com/",
+        "type": "website_scrape",
+        "timestamp": "2026-08-26T11:32:03.748122+00:00"
+      },
       {
         "type": "tech_stack_detection",
         "detected": [
-          "Unknown (no HTML content)"
+          "Unknown (no CMS detected)"
         ],
-        "timestamp": "2026-08-24T11:31:25.434595+00:00"
+        "timestamp": "2026-08-26T11:33:05.169151+00:00"
       }
     ],
-    "notes": "Tech stack: Unknown (no HTML content). Generated 1 opportunities.",
+    "notes": "Scraped 1 pages from website. Tech stack: Unknown (no CMS detected). Identified 3 pain points. Generated 3 opportunities.",
     "filename": "hyper_digital_marketing.md",
     "osint_research": {
-      "scraped_pages": [],
-      "contact_info": {},
+      "scraped_pages": [
+        {
+          "url": "http://www.hyperdm.com/",
+          "status": 200,
+          "content_length": 146310,
+          "content_type": "text/html; charset=UTF-8"
+        }
+      ],
+      "contact_info": {
+        "emails_found": [],
+        "phones_found": []
+      },
       "data_completeness": {
-        "website_scraped": 0,
+        "website_scraped": 10,
         "contact_info_found": 0,
         "tech_stack_detected": 10,
-        "pain_points_identified": 0,
+        "pain_points_identified": 10,
         "opportunities_generated": 5,
         "business_info_extracted": 0
       },
@@ -3887,7 +3908,7 @@
         "data_use": "B2B sales prospecting - no personal data collected beyond public business contact info",
         "opt_out": "privacy@soetechllc.com"
       },
-      "researched_at": "2026-08-24T11:31:25.434746+00:00",
+      "researched_at": "2026-08-26T11:33:05.181562+00:00",
       "researcher": "deep_osint.py v1.0"
     }
   },
@@ -4494,32 +4515,68 @@
     "owner_title": "",
     "contact_email": "",
     "technology_stack": [
-      "Unknown (no HTML content)"
+      "Wix",
+      "SSL/HTTPS"
     ],
-    "pain_points": [],
+    "pain_points": [
+      "Outdated Website Platform: Uses Wix; may lack modern features and SEO capabilities",
+      "Limited Social Media Presence: No social media links detected on website",
+      "Potential Mobile Issues: No explicit mobile optimization claims found",
+      "Limited Online Payment Options: No clear online payment or invoicing system"
+    ],
     "opportunities": [
-      "Client Management: Streamline multi-client workflow automation"
+      "Website Modernization: Upgrade to a modern, feature-rich platform",
+      "Social Media Strategy: Build engaged online community with automated posting",
+      "Mobile Optimization: Modern responsive website design",
+      "Online Payment Integration: Secure payment processing and invoicing"
     ],
-    "confidence_score": 2,
+    "confidence_score": 8,
     "research_sources": [
+      {
+        "url": "https://www.maketheturn.com/",
+        "type": "website_scrape",
+        "timestamp": "2026-08-27T11:04:35.435280+00:00"
+      },
+      {
+        "url": "https://www.maketheturn.com/contact",
+        "type": "website_scrape",
+        "timestamp": "2026-08-27T11:04:38.704959+00:00"
+      },
       {
         "type": "tech_stack_detection",
         "detected": [
-          "Unknown (no HTML content)"
+          "Wix",
+          "SSL/HTTPS"
         ],
-        "timestamp": "2026-08-24T11:24:55.110441+00:00"
+        "timestamp": "2026-08-27T11:05:20.845942+00:00"
       }
     ],
-    "notes": "Tech stack: Unknown (no HTML content). Generated 1 opportunities.",
+    "notes": "Scraped 2 pages from website. Tech stack: Wix, SSL/HTTPS. Identified 4 pain points. Generated 4 opportunities.",
     "filename": "make_the_turn.md",
     "osint_research": {
-      "scraped_pages": [],
-      "contact_info": {},
+      "scraped_pages": [
+        {
+          "url": "https://www.maketheturn.com/",
+          "status": 200,
+          "content_length": 258997,
+          "content_type": "text/html; charset=UTF-8"
+        },
+        {
+          "url": "https://www.maketheturn.com/contact",
+          "status": 200,
+          "content_length": 238483,
+          "content_type": "text/html; charset=UTF-8"
+        }
+      ],
+      "contact_info": {
+        "emails_found": [],
+        "phones_found": []
+      },
       "data_completeness": {
-        "website_scraped": 0,
+        "website_scraped": 10,
         "contact_info_found": 0,
         "tech_stack_detected": 10,
-        "pain_points_identified": 0,
+        "pain_points_identified": 10,
         "opportunities_generated": 5,
         "business_info_extracted": 0
       },
@@ -4534,7 +4591,7 @@
         "data_use": "B2B sales prospecting - no personal data collected beyond public business contact info",
         "opt_out": "privacy@soetechllc.com"
       },
-      "researched_at": "2026-08-24T11:24:55.110601+00:00",
+      "researched_at": "2026-08-27T11:05:20.871242+00:00",
       "researcher": "deep_osint.py v1.0"
     }
   },
@@ -4828,6 +4885,3288 @@
         "opt_out": "privacy@soetechllc.com"
       },
       "researched_at": "2026-08-24T11:33:42.455308+00:00",
+      "researcher": "deep_osint.py v1.0"
+    }
+  },
+  {
+    "business_name": "Right at Home",
+    "industry": "home services",
+    "location": "Midland MI MI",
+    "website": "https://www.rightathome.net/northern-michigan/?utm_source=google&utm_medium=local&utm_campaign=localmaps&utm_content=1339",
+    "phone": "(989) 486-9557",
+    "owner_name": "",
+    "owner_title": "",
+    "contact_email": "",
+    "technology_stack": [
+      "SSL/HTTPS"
+    ],
+    "pain_points": [
+      "Limited Social Media Presence: No social media links detected on website",
+      "Potential Mobile Issues: No explicit mobile optimization claims found",
+      "Limited Online Payment Options: No clear online payment or invoicing system"
+    ],
+    "opportunities": [
+      "Social Media Strategy: Build engaged online community with automated posting",
+      "Mobile Optimization: Modern responsive website design",
+      "Online Payment Integration: Secure payment processing and invoicing"
+    ],
+    "confidence_score": 8,
+    "research_sources": [
+      {
+        "url": "https://www.rightathome.net/northern-michigan/?utm_source=google&utm_medium=local&utm_campaign=localmaps&utm_content=1339",
+        "type": "website_scrape",
+        "timestamp": "2026-08-26T11:19:39.833674+00:00"
+      },
+      {
+        "url": "https://www.rightathome.net/contact-us",
+        "type": "website_scrape",
+        "timestamp": "2026-08-26T11:19:57.872602+00:00"
+      },
+      {
+        "type": "tech_stack_detection",
+        "detected": [
+          "SSL/HTTPS"
+        ],
+        "timestamp": "2026-08-26T11:20:37.137146+00:00"
+      }
+    ],
+    "notes": "Scraped 2 pages from website. Tech stack: SSL/HTTPS. Identified 3 pain points. Generated 3 opportunities.",
+    "filename": "right_at_home.md",
+    "osint_research": {
+      "scraped_pages": [
+        {
+          "url": "https://www.rightathome.net/northern-michigan/?utm_source=google&utm_medium=local&utm_campaign=localmaps&utm_content=1339",
+          "status": 200,
+          "content_length": 21572,
+          "content_type": "text/html; charset=utf-8"
+        },
+        {
+          "url": "https://www.rightathome.net/contact-us",
+          "status": 200,
+          "content_length": 17337,
+          "content_type": "text/html; charset=utf-8"
+        }
+      ],
+      "contact_info": {
+        "emails_found": [],
+        "phones_found": []
+      },
+      "data_completeness": {
+        "website_scraped": 10,
+        "contact_info_found": 0,
+        "tech_stack_detected": 10,
+        "pain_points_identified": 10,
+        "opportunities_generated": 5,
+        "business_info_extracted": 0
+      },
+      "legal_compliance": {
+        "accessed_data": "Publicly available website content and business directory data",
+        "compliance": [
+          "CFAA",
+          "GDPR",
+          "CCPA",
+          "CAN-SPAM"
+        ],
+        "data_use": "B2B sales prospecting - no personal data collected beyond public business contact info",
+        "opt_out": "privacy@soetechllc.com"
+      },
+      "researched_at": "2026-08-26T11:20:37.139263+00:00",
+      "researcher": "deep_osint.py v1.0"
+    }
+  },
+  {
+    "business_name": "Victors Home Solutions",
+    "industry": "home services",
+    "location": "Saginaw MI MI",
+    "website": "https://victors.com/areas-served/saginaw/?UTM_source=gmb_listingSaginaw&UTM_medium=organic",
+    "phone": "(989) 653-6434",
+    "owner_name": "",
+    "owner_title": "",
+    "contact_email": "",
+    "technology_stack": [
+      "SSL/HTTPS"
+    ],
+    "pain_points": [
+      "Limited Social Media Presence: No social media links detected on website",
+      "Potential Mobile Issues: No explicit mobile optimization claims found",
+      "Limited Online Payment Options: No clear online payment or invoicing system"
+    ],
+    "opportunities": [
+      "Social Media Strategy: Build engaged online community with automated posting",
+      "Mobile Optimization: Modern responsive website design",
+      "Online Payment Integration: Secure payment processing and invoicing"
+    ],
+    "confidence_score": 8,
+    "research_sources": [
+      {
+        "url": "https://victors.com/areas-served/saginaw/?UTM_source=gmb_listingSaginaw&UTM_medium=organic",
+        "type": "website_scrape",
+        "timestamp": "2026-08-26T11:20:41.079854+00:00"
+      },
+      {
+        "url": "https://victors.com/contact",
+        "type": "website_scrape",
+        "timestamp": "2026-08-26T11:20:44.488995+00:00"
+      },
+      {
+        "url": "https://victors.com/contact-us",
+        "type": "website_scrape",
+        "timestamp": "2026-08-26T11:20:46.394915+00:00"
+      },
+      {
+        "url": "https://victors.com/about",
+        "type": "website_scrape",
+        "timestamp": "2026-08-26T11:21:12.858778+00:00"
+      },
+      {
+        "type": "tech_stack_detection",
+        "detected": [
+          "SSL/HTTPS"
+        ],
+        "timestamp": "2026-08-26T11:21:12.861821+00:00"
+      }
+    ],
+    "notes": "Scraped 4 pages from website. Tech stack: SSL/HTTPS. Identified 3 pain points. Generated 3 opportunities.",
+    "filename": "victors_home_solutions.md",
+    "osint_research": {
+      "scraped_pages": [
+        {
+          "url": "https://victors.com/areas-served/saginaw/?UTM_source=gmb_listingSaginaw&UTM_medium=organic",
+          "status": 200,
+          "content_length": 24454,
+          "content_type": "text/html; charset=UTF-8"
+        },
+        {
+          "url": "https://victors.com/contact",
+          "status": 200,
+          "content_length": 21711,
+          "content_type": "text/html; charset=UTF-8"
+        },
+        {
+          "url": "https://victors.com/contact-us",
+          "status": 200,
+          "content_length": 21711,
+          "content_type": "text/html; charset=UTF-8"
+        },
+        {
+          "url": "https://victors.com/about",
+          "status": 200,
+          "content_length": 15672,
+          "content_type": "text/html; charset=UTF-8"
+        }
+      ],
+      "contact_info": {
+        "emails_found": [],
+        "phones_found": []
+      },
+      "data_completeness": {
+        "website_scraped": 10,
+        "contact_info_found": 0,
+        "tech_stack_detected": 10,
+        "pain_points_identified": 10,
+        "opportunities_generated": 5,
+        "business_info_extracted": 0
+      },
+      "legal_compliance": {
+        "accessed_data": "Publicly available website content and business directory data",
+        "compliance": [
+          "CFAA",
+          "GDPR",
+          "CCPA",
+          "CAN-SPAM"
+        ],
+        "data_use": "B2B sales prospecting - no personal data collected beyond public business contact info",
+        "opt_out": "privacy@soetechllc.com"
+      },
+      "researched_at": "2026-08-26T11:21:12.866804+00:00",
+      "researcher": "deep_osint.py v1.0"
+    }
+  },
+  {
+    "business_name": "All Seasons Heating and Cooling",
+    "industry": "home services",
+    "location": "Midland MI MI",
+    "website": "https://www.allseasonsheatingmidland.com/",
+    "phone": "(989) 710-9390",
+    "owner_name": "",
+    "owner_title": "",
+    "contact_email": "",
+    "technology_stack": [
+      "SSL/HTTPS"
+    ],
+    "pain_points": [
+      "Limited Social Media Presence: No social media links detected on website",
+      "Potential Mobile Issues: No explicit mobile optimization claims found",
+      "Limited Online Payment Options: No clear online payment or invoicing system"
+    ],
+    "opportunities": [
+      "Social Media Strategy: Build engaged online community with automated posting",
+      "Mobile Optimization: Modern responsive website design",
+      "Online Payment Integration: Secure payment processing and invoicing"
+    ],
+    "confidence_score": 8,
+    "research_sources": [
+      {
+        "url": "https://www.allseasonsheatingmidland.com/",
+        "type": "website_scrape",
+        "timestamp": "2026-08-26T11:21:15.372448+00:00"
+      },
+      {
+        "url": "https://www.allseasonsheatingmidland.com/contact",
+        "type": "website_scrape",
+        "timestamp": "2026-08-26T11:21:19.005647+00:00"
+      },
+      {
+        "url": "https://www.allseasonsheatingmidland.com/contact-us",
+        "type": "website_scrape",
+        "timestamp": "2026-08-26T11:21:21.275203+00:00"
+      },
+      {
+        "url": "https://www.allseasonsheatingmidland.com/about",
+        "type": "website_scrape",
+        "timestamp": "2026-08-26T11:21:48.438825+00:00"
+      },
+      {
+        "type": "tech_stack_detection",
+        "detected": [
+          "SSL/HTTPS"
+        ],
+        "timestamp": "2026-08-26T11:21:48.490896+00:00"
+      }
+    ],
+    "notes": "Scraped 4 pages from website. Tech stack: SSL/HTTPS. Identified 3 pain points. Generated 3 opportunities.",
+    "filename": "all_seasons_heating_and_cooling.md",
+    "osint_research": {
+      "scraped_pages": [
+        {
+          "url": "https://www.allseasonsheatingmidland.com/",
+          "status": 200,
+          "content_length": 133143,
+          "content_type": "text/html"
+        },
+        {
+          "url": "https://www.allseasonsheatingmidland.com/contact",
+          "status": 200,
+          "content_length": 24581,
+          "content_type": "text/html"
+        },
+        {
+          "url": "https://www.allseasonsheatingmidland.com/contact-us",
+          "status": 200,
+          "content_length": 24624,
+          "content_type": "text/html"
+        },
+        {
+          "url": "https://www.allseasonsheatingmidland.com/about",
+          "status": 200,
+          "content_length": 215270,
+          "content_type": "text/html"
+        }
+      ],
+      "contact_info": {
+        "emails_found": [],
+        "phones_found": []
+      },
+      "data_completeness": {
+        "website_scraped": 10,
+        "contact_info_found": 0,
+        "tech_stack_detected": 10,
+        "pain_points_identified": 10,
+        "opportunities_generated": 5,
+        "business_info_extracted": 0
+      },
+      "legal_compliance": {
+        "accessed_data": "Publicly available website content and business directory data",
+        "compliance": [
+          "CFAA",
+          "GDPR",
+          "CCPA",
+          "CAN-SPAM"
+        ],
+        "data_use": "B2B sales prospecting - no personal data collected beyond public business contact info",
+        "opt_out": "privacy@soetechllc.com"
+      },
+      "researched_at": "2026-08-26T11:21:48.521578+00:00",
+      "researcher": "deep_osint.py v1.0"
+    }
+  },
+  {
+    "business_name": "ServiceMaster Restoration Serviecs - Midland",
+    "industry": "home services",
+    "location": "Midland MI MI",
+    "website": "https://servicemasterrestore.com/servicemaster-restoration-services-midland?utm_source=google&utm_medium=organic&utm_campaign=gmb",
+    "phone": "(989) 502-0703",
+    "owner_name": "",
+    "owner_title": "",
+    "contact_email": "",
+    "technology_stack": [
+      "SSL/HTTPS"
+    ],
+    "pain_points": [
+      "Limited Social Media Presence: No social media links detected on website",
+      "Potential Mobile Issues: No explicit mobile optimization claims found",
+      "Limited Online Payment Options: No clear online payment or invoicing system"
+    ],
+    "opportunities": [
+      "Social Media Strategy: Build engaged online community with automated posting",
+      "Mobile Optimization: Modern responsive website design",
+      "Online Payment Integration: Secure payment processing and invoicing"
+    ],
+    "confidence_score": 8,
+    "research_sources": [
+      {
+        "url": "https://servicemasterrestore.com/servicemaster-restoration-services-midland?utm_source=google&utm_medium=organic&utm_campaign=gmb",
+        "type": "website_scrape",
+        "timestamp": "2026-08-26T11:21:52.074832+00:00"
+      },
+      {
+        "url": "https://servicemasterrestore.com/contact",
+        "type": "website_scrape",
+        "timestamp": "2026-08-26T11:21:53.850916+00:00"
+      },
+      {
+        "url": "https://servicemasterrestore.com/contact-us",
+        "type": "website_scrape",
+        "timestamp": "2026-08-26T11:21:56.232313+00:00"
+      },
+      {
+        "url": "https://servicemasterrestore.com/about",
+        "type": "website_scrape",
+        "timestamp": "2026-08-26T11:22:23.454718+00:00"
+      },
+      {
+        "type": "tech_stack_detection",
+        "detected": [
+          "SSL/HTTPS"
+        ],
+        "timestamp": "2026-08-26T11:22:23.462845+00:00"
+      }
+    ],
+    "notes": "Scraped 4 pages from website. Tech stack: SSL/HTTPS. Identified 3 pain points. Generated 3 opportunities.",
+    "filename": "servicemaster_restoration_serviecs_midland.md",
+    "osint_research": {
+      "scraped_pages": [
+        {
+          "url": "https://servicemasterrestore.com/servicemaster-restoration-services-midland?utm_source=google&utm_medium=organic&utm_campaign=gmb",
+          "status": 200,
+          "content_length": 61162,
+          "content_type": "text/html; charset=UTF-8"
+        },
+        {
+          "url": "https://servicemasterrestore.com/contact",
+          "status": 200,
+          "content_length": 30145,
+          "content_type": "text/html; charset=UTF-8"
+        },
+        {
+          "url": "https://servicemasterrestore.com/contact-us",
+          "status": 200,
+          "content_length": 32224,
+          "content_type": "text/html; charset=UTF-8"
+        },
+        {
+          "url": "https://servicemasterrestore.com/about",
+          "status": 200,
+          "content_length": 38860,
+          "content_type": "text/html; charset=UTF-8"
+        }
+      ],
+      "contact_info": {
+        "emails_found": [],
+        "phones_found": []
+      },
+      "data_completeness": {
+        "website_scraped": 10,
+        "contact_info_found": 0,
+        "tech_stack_detected": 10,
+        "pain_points_identified": 10,
+        "opportunities_generated": 5,
+        "business_info_extracted": 0
+      },
+      "legal_compliance": {
+        "accessed_data": "Publicly available website content and business directory data",
+        "compliance": [
+          "CFAA",
+          "GDPR",
+          "CCPA",
+          "CAN-SPAM"
+        ],
+        "data_use": "B2B sales prospecting - no personal data collected beyond public business contact info",
+        "opt_out": "privacy@soetechllc.com"
+      },
+      "researched_at": "2026-08-26T11:22:23.478802+00:00",
+      "researcher": "deep_osint.py v1.0"
+    }
+  },
+  {
+    "business_name": "Paul Davis Restoration of Central Michigan",
+    "industry": "home services",
+    "location": "Bay City MI MI",
+    "website": "http://www.pauldavismi.com/",
+    "phone": "(989) 894-4450",
+    "owner_name": "",
+    "owner_title": "",
+    "contact_email": "",
+    "technology_stack": [
+      "Unknown (no HTML content)"
+    ],
+    "pain_points": [],
+    "opportunities": [],
+    "confidence_score": 1,
+    "research_sources": [
+      {
+        "type": "tech_stack_detection",
+        "detected": [
+          "Unknown (no HTML content)"
+        ],
+        "timestamp": "2026-08-27T11:04:15.391017+00:00"
+      }
+    ],
+    "notes": "Tech stack: Unknown (no HTML content).",
+    "filename": "paul_davis_restoration_of_central_michigan.md",
+    "osint_research": {
+      "scraped_pages": [],
+      "contact_info": {},
+      "data_completeness": {
+        "website_scraped": 0,
+        "contact_info_found": 0,
+        "tech_stack_detected": 10,
+        "pain_points_identified": 0,
+        "opportunities_generated": 0,
+        "business_info_extracted": 0
+      },
+      "legal_compliance": {
+        "accessed_data": "Publicly available website content and business directory data",
+        "compliance": [
+          "CFAA",
+          "GDPR",
+          "CCPA",
+          "CAN-SPAM"
+        ],
+        "data_use": "B2B sales prospecting - no personal data collected beyond public business contact info",
+        "opt_out": "privacy@soetechllc.com"
+      },
+      "researched_at": "2026-08-27T11:04:15.391719+00:00",
+      "researcher": "deep_osint.py v1.0"
+    }
+  },
+  {
+    "business_name": "Caregiving Network Inc.",
+    "industry": "home services",
+    "location": "Midland MI MI",
+    "website": "http://caregiving.network/",
+    "phone": "(989) 837-9757",
+    "owner_name": "",
+    "owner_title": "",
+    "contact_email": "",
+    "technology_stack": [
+      "Unknown (no CMS detected)"
+    ],
+    "pain_points": [
+      "Limited Social Media Presence: No social media links detected on website",
+      "Potential Mobile Issues: No explicit mobile optimization claims found",
+      "Limited Online Payment Options: No clear online payment or invoicing system"
+    ],
+    "opportunities": [
+      "Social Media Strategy: Build engaged online community with automated posting",
+      "Mobile Optimization: Modern responsive website design",
+      "Online Payment Integration: Secure payment processing and invoicing"
+    ],
+    "confidence_score": 7,
+    "research_sources": [
+      {
+        "url": "http://caregiving.network/",
+        "type": "website_scrape",
+        "timestamp": "2026-08-26T11:23:33.211523+00:00"
+      },
+      {
+        "url": "http://caregiving.network/contact",
+        "type": "website_scrape",
+        "timestamp": "2026-08-26T11:23:36.312008+00:00"
+      },
+      {
+        "url": "http://caregiving.network/about",
+        "type": "website_scrape",
+        "timestamp": "2026-08-26T11:24:16.211093+00:00"
+      },
+      {
+        "type": "tech_stack_detection",
+        "detected": [
+          "Unknown (no CMS detected)"
+        ],
+        "timestamp": "2026-08-26T11:24:16.213636+00:00"
+      }
+    ],
+    "notes": "Scraped 3 pages from website. Tech stack: Unknown (no CMS detected). Identified 3 pain points. Generated 3 opportunities.",
+    "filename": "caregiving_network_inc.md",
+    "osint_research": {
+      "scraped_pages": [
+        {
+          "url": "http://caregiving.network/",
+          "status": 200,
+          "content_length": 15377,
+          "content_type": "text/html;charset=utf-8"
+        },
+        {
+          "url": "http://caregiving.network/contact",
+          "status": 200,
+          "content_length": 21294,
+          "content_type": "text/html;charset=utf-8"
+        },
+        {
+          "url": "http://caregiving.network/about",
+          "status": 200,
+          "content_length": 14047,
+          "content_type": "text/html;charset=utf-8"
+        }
+      ],
+      "contact_info": {
+        "emails_found": [],
+        "phones_found": []
+      },
+      "data_completeness": {
+        "website_scraped": 10,
+        "contact_info_found": 0,
+        "tech_stack_detected": 10,
+        "pain_points_identified": 10,
+        "opportunities_generated": 5,
+        "business_info_extracted": 0
+      },
+      "legal_compliance": {
+        "accessed_data": "Publicly available website content and business directory data",
+        "compliance": [
+          "CFAA",
+          "GDPR",
+          "CCPA",
+          "CAN-SPAM"
+        ],
+        "data_use": "B2B sales prospecting - no personal data collected beyond public business contact info",
+        "opt_out": "privacy@soetechllc.com"
+      },
+      "researched_at": "2026-08-26T11:24:16.216758+00:00",
+      "researcher": "deep_osint.py v1.0"
+    }
+  },
+  {
+    "business_name": "Molly Maid of Flint, Grand Blanc and Fenton",
+    "industry": "home services",
+    "location": "Flint MI MI",
+    "website": "https://www.mollymaid.com/locations/flint/?cid=LSTL_MLY000192&utm_source=gmb&utm_campaign=local&utm_medium=organic",
+    "phone": "(810) 370-7676",
+    "owner_name": "",
+    "owner_title": "",
+    "contact_email": "",
+    "technology_stack": [
+      "SSL/HTTPS"
+    ],
+    "pain_points": [
+      "Limited Social Media Presence: No social media links detected on website",
+      "Potential Mobile Issues: No explicit mobile optimization claims found",
+      "Limited Online Payment Options: No clear online payment or invoicing system"
+    ],
+    "opportunities": [
+      "Social Media Strategy: Build engaged online community with automated posting",
+      "Mobile Optimization: Modern responsive website design",
+      "Online Payment Integration: Secure payment processing and invoicing"
+    ],
+    "confidence_score": 8,
+    "research_sources": [
+      {
+        "url": "https://www.mollymaid.com/locations/flint/?cid=LSTL_MLY000192&utm_source=gmb&utm_campaign=local&utm_medium=organic",
+        "type": "website_scrape",
+        "timestamp": "2026-08-26T11:24:17.646363+00:00"
+      },
+      {
+        "url": "https://www.mollymaid.com/contact",
+        "type": "website_scrape",
+        "timestamp": "2026-08-26T11:24:19.808452+00:00"
+      },
+      {
+        "url": "https://www.mollymaid.com/contact.html",
+        "type": "website_scrape",
+        "timestamp": "2026-08-26T11:24:34.295567+00:00"
+      },
+      {
+        "type": "tech_stack_detection",
+        "detected": [
+          "SSL/HTTPS"
+        ],
+        "timestamp": "2026-08-26T11:24:57.969897+00:00"
+      }
+    ],
+    "notes": "Scraped 3 pages from website. Tech stack: SSL/HTTPS. Identified 3 pain points. Generated 3 opportunities.",
+    "filename": "molly_maid_of_flint_grand_blanc_and_fenton.md",
+    "osint_research": {
+      "scraped_pages": [
+        {
+          "url": "https://www.mollymaid.com/locations/flint/?cid=LSTL_MLY000192&utm_source=gmb&utm_campaign=local&utm_medium=organic",
+          "status": 200,
+          "content_length": 62624,
+          "content_type": "text/html; charset=utf-8"
+        },
+        {
+          "url": "https://www.mollymaid.com/contact",
+          "status": 200,
+          "content_length": 87425,
+          "content_type": "text/html; charset=utf-8"
+        },
+        {
+          "url": "https://www.mollymaid.com/contact.html",
+          "status": 200,
+          "content_length": 87427,
+          "content_type": "text/html; charset=utf-8"
+        }
+      ],
+      "contact_info": {
+        "emails_found": [],
+        "phones_found": []
+      },
+      "data_completeness": {
+        "website_scraped": 10,
+        "contact_info_found": 0,
+        "tech_stack_detected": 10,
+        "pain_points_identified": 10,
+        "opportunities_generated": 5,
+        "business_info_extracted": 0
+      },
+      "legal_compliance": {
+        "accessed_data": "Publicly available website content and business directory data",
+        "compliance": [
+          "CFAA",
+          "GDPR",
+          "CCPA",
+          "CAN-SPAM"
+        ],
+        "data_use": "B2B sales prospecting - no personal data collected beyond public business contact info",
+        "opt_out": "privacy@soetechllc.com"
+      },
+      "researched_at": "2026-08-26T11:24:57.985137+00:00",
+      "researcher": "deep_osint.py v1.0"
+    }
+  },
+  {
+    "business_name": "Simply Restored Handyman Services, LLC",
+    "industry": "home services",
+    "location": "Saginaw MI MI",
+    "website": "http://simplyrestoredhandyman.com/",
+    "phone": "(989) 522-4564",
+    "owner_name": "",
+    "owner_title": "",
+    "contact_email": "",
+    "technology_stack": [
+      "Unknown (no CMS detected)"
+    ],
+    "pain_points": [
+      "Limited Social Media Presence: No social media links detected on website",
+      "Potential Mobile Issues: No explicit mobile optimization claims found",
+      "Limited Online Payment Options: No clear online payment or invoicing system"
+    ],
+    "opportunities": [
+      "Social Media Strategy: Build engaged online community with automated posting",
+      "Mobile Optimization: Modern responsive website design",
+      "Online Payment Integration: Secure payment processing and invoicing"
+    ],
+    "confidence_score": 6,
+    "research_sources": [
+      {
+        "url": "http://simplyrestoredhandyman.com/",
+        "type": "website_scrape",
+        "timestamp": "2026-08-26T11:25:00.603136+00:00"
+      },
+      {
+        "type": "tech_stack_detection",
+        "detected": [
+          "Unknown (no CMS detected)"
+        ],
+        "timestamp": "2026-08-26T11:25:53.555218+00:00"
+      }
+    ],
+    "notes": "Scraped 1 pages from website. Tech stack: Unknown (no CMS detected). Identified 3 pain points. Generated 3 opportunities.",
+    "filename": "simply_restored_handyman_services_llc.md",
+    "osint_research": {
+      "scraped_pages": [
+        {
+          "url": "http://simplyrestoredhandyman.com/",
+          "status": 200,
+          "content_length": 32690,
+          "content_type": "text/html;charset=utf-8"
+        }
+      ],
+      "contact_info": {
+        "emails_found": [],
+        "phones_found": []
+      },
+      "data_completeness": {
+        "website_scraped": 10,
+        "contact_info_found": 0,
+        "tech_stack_detected": 10,
+        "pain_points_identified": 10,
+        "opportunities_generated": 5,
+        "business_info_extracted": 0
+      },
+      "legal_compliance": {
+        "accessed_data": "Publicly available website content and business directory data",
+        "compliance": [
+          "CFAA",
+          "GDPR",
+          "CCPA",
+          "CAN-SPAM"
+        ],
+        "data_use": "B2B sales prospecting - no personal data collected beyond public business contact info",
+        "opt_out": "privacy@soetechllc.com"
+      },
+      "researched_at": "2026-08-26T11:25:53.557668+00:00",
+      "researcher": "deep_osint.py v1.0"
+    }
+  },
+  {
+    "business_name": "Home to Stay Housing Assistance Center",
+    "industry": "home services",
+    "location": "Midland MI MI",
+    "website": "http://www.myhometostay.org/",
+    "phone": "(989) 496-9550",
+    "owner_name": "",
+    "owner_title": "",
+    "contact_email": "",
+    "technology_stack": [
+      "Unknown (no CMS detected)"
+    ],
+    "pain_points": [
+      "Limited Social Media Presence: No social media links detected on website",
+      "Potential Mobile Issues: No explicit mobile optimization claims found",
+      "Limited Online Payment Options: No clear online payment or invoicing system"
+    ],
+    "opportunities": [
+      "Social Media Strategy: Build engaged online community with automated posting",
+      "Mobile Optimization: Modern responsive website design",
+      "Online Payment Integration: Secure payment processing and invoicing"
+    ],
+    "confidence_score": 7,
+    "research_sources": [
+      {
+        "url": "http://www.myhometostay.org/",
+        "type": "website_scrape",
+        "timestamp": "2026-08-26T11:25:56.800490+00:00"
+      },
+      {
+        "url": "http://www.myhometostay.org/contact-us",
+        "type": "website_scrape",
+        "timestamp": "2026-08-26T11:26:08.196677+00:00"
+      },
+      {
+        "url": "http://www.myhometostay.org/contact-us.html",
+        "type": "website_scrape",
+        "timestamp": "2026-08-26T11:26:22.410766+00:00"
+      },
+      {
+        "url": "http://www.myhometostay.org/about",
+        "type": "website_scrape",
+        "timestamp": "2026-08-26T11:26:28.370470+00:00"
+      },
+      {
+        "type": "tech_stack_detection",
+        "detected": [
+          "Unknown (no CMS detected)"
+        ],
+        "timestamp": "2026-08-26T11:26:28.379226+00:00"
+      }
+    ],
+    "notes": "Scraped 4 pages from website. Tech stack: Unknown (no CMS detected). Identified 3 pain points. Generated 3 opportunities.",
+    "filename": "home_to_stay_housing_assistance_center.md",
+    "osint_research": {
+      "scraped_pages": [
+        {
+          "url": "http://www.myhometostay.org/",
+          "status": 200,
+          "content_length": 25828,
+          "content_type": "text/html; charset=UTF-8"
+        },
+        {
+          "url": "http://www.myhometostay.org/contact-us",
+          "status": 200,
+          "content_length": 18316,
+          "content_type": "text/html; charset=UTF-8"
+        },
+        {
+          "url": "http://www.myhometostay.org/contact-us.html",
+          "status": 200,
+          "content_length": 18454,
+          "content_type": "text/html; charset=UTF-8"
+        },
+        {
+          "url": "http://www.myhometostay.org/about",
+          "status": 200,
+          "content_length": 45098,
+          "content_type": "text/html; charset=UTF-8"
+        }
+      ],
+      "contact_info": {
+        "emails_found": [],
+        "phones_found": []
+      },
+      "data_completeness": {
+        "website_scraped": 10,
+        "contact_info_found": 0,
+        "tech_stack_detected": 10,
+        "pain_points_identified": 10,
+        "opportunities_generated": 5,
+        "business_info_extracted": 0
+      },
+      "legal_compliance": {
+        "accessed_data": "Publicly available website content and business directory data",
+        "compliance": [
+          "CFAA",
+          "GDPR",
+          "CCPA",
+          "CAN-SPAM"
+        ],
+        "data_use": "B2B sales prospecting - no personal data collected beyond public business contact info",
+        "opt_out": "privacy@soetechllc.com"
+      },
+      "researched_at": "2026-08-26T11:26:28.390579+00:00",
+      "researcher": "deep_osint.py v1.0"
+    }
+  },
+  {
+    "business_name": "Cornerstone Caregiving",
+    "industry": "home services",
+    "location": "Flint MI MI",
+    "website": "https://cornerstonecaregiving.com/locations/flint-mi?utm_source=google&utm_medium=yext",
+    "phone": "(810) 553-3853",
+    "owner_name": "",
+    "owner_title": "",
+    "contact_email": "",
+    "technology_stack": [
+      "SSL/HTTPS"
+    ],
+    "pain_points": [
+      "Limited Social Media Presence: No social media links detected on website",
+      "Potential Mobile Issues: No explicit mobile optimization claims found",
+      "Limited Online Payment Options: No clear online payment or invoicing system"
+    ],
+    "opportunities": [
+      "Social Media Strategy: Build engaged online community with automated posting",
+      "Mobile Optimization: Modern responsive website design",
+      "Online Payment Integration: Secure payment processing and invoicing"
+    ],
+    "confidence_score": 8,
+    "research_sources": [
+      {
+        "url": "https://cornerstonecaregiving.com/locations/flint-mi?utm_source=google&utm_medium=yext",
+        "type": "website_scrape",
+        "timestamp": "2026-08-26T11:26:32.669073+00:00"
+      },
+      {
+        "url": "https://cornerstonecaregiving.com/contact",
+        "type": "website_scrape",
+        "timestamp": "2026-08-26T11:26:35.253181+00:00"
+      },
+      {
+        "url": "https://cornerstonecaregiving.com/contact-us",
+        "type": "website_scrape",
+        "timestamp": "2026-08-26T11:26:36.966890+00:00"
+      },
+      {
+        "url": "https://cornerstonecaregiving.com/about",
+        "type": "website_scrape",
+        "timestamp": "2026-08-26T11:27:06.724410+00:00"
+      },
+      {
+        "type": "tech_stack_detection",
+        "detected": [
+          "SSL/HTTPS"
+        ],
+        "timestamp": "2026-08-26T11:27:06.751876+00:00"
+      }
+    ],
+    "notes": "Scraped 4 pages from website. Tech stack: SSL/HTTPS. Identified 3 pain points. Generated 3 opportunities.",
+    "filename": "cornerstone_caregiving.md",
+    "osint_research": {
+      "scraped_pages": [
+        {
+          "url": "https://cornerstonecaregiving.com/locations/flint-mi?utm_source=google&utm_medium=yext",
+          "status": 200,
+          "content_length": 114251,
+          "content_type": "text/html; charset=UTF-8"
+        },
+        {
+          "url": "https://cornerstonecaregiving.com/contact",
+          "status": 200,
+          "content_length": 102612,
+          "content_type": "text/html; charset=UTF-8"
+        },
+        {
+          "url": "https://cornerstonecaregiving.com/contact-us",
+          "status": 200,
+          "content_length": 102697,
+          "content_type": "text/html; charset=UTF-8"
+        },
+        {
+          "url": "https://cornerstonecaregiving.com/about",
+          "status": 200,
+          "content_length": 111312,
+          "content_type": "text/html; charset=UTF-8"
+        }
+      ],
+      "contact_info": {
+        "emails_found": [],
+        "phones_found": []
+      },
+      "data_completeness": {
+        "website_scraped": 10,
+        "contact_info_found": 0,
+        "tech_stack_detected": 10,
+        "pain_points_identified": 10,
+        "opportunities_generated": 5,
+        "business_info_extracted": 0
+      },
+      "legal_compliance": {
+        "accessed_data": "Publicly available website content and business directory data",
+        "compliance": [
+          "CFAA",
+          "GDPR",
+          "CCPA",
+          "CAN-SPAM"
+        ],
+        "data_use": "B2B sales prospecting - no personal data collected beyond public business contact info",
+        "opt_out": "privacy@soetechllc.com"
+      },
+      "researched_at": "2026-08-26T11:27:06.792746+00:00",
+      "researcher": "deep_osint.py v1.0"
+    }
+  },
+  {
+    "business_name": "Bay Shores Cleaning Company",
+    "industry": "home services",
+    "location": "Midland MI MI",
+    "website": "https://bayshorescleaning.com/",
+    "phone": "(989) 491-4150",
+    "owner_name": "",
+    "owner_title": "",
+    "contact_email": "",
+    "technology_stack": [
+      "SSL/HTTPS"
+    ],
+    "pain_points": [
+      "Limited Social Media Presence: No social media links detected on website",
+      "Potential Mobile Issues: No explicit mobile optimization claims found",
+      "Limited Online Payment Options: No clear online payment or invoicing system"
+    ],
+    "opportunities": [
+      "Social Media Strategy: Build engaged online community with automated posting",
+      "Mobile Optimization: Modern responsive website design",
+      "Online Payment Integration: Secure payment processing and invoicing"
+    ],
+    "confidence_score": 8,
+    "research_sources": [
+      {
+        "url": "https://bayshorescleaning.com/",
+        "type": "website_scrape",
+        "timestamp": "2026-08-26T11:27:09.607787+00:00"
+      },
+      {
+        "url": "https://bayshorescleaning.com/contact",
+        "type": "website_scrape",
+        "timestamp": "2026-08-26T11:27:14.267368+00:00"
+      },
+      {
+        "url": "https://bayshorescleaning.com/about",
+        "type": "website_scrape",
+        "timestamp": "2026-08-26T11:28:08.438234+00:00"
+      },
+      {
+        "type": "tech_stack_detection",
+        "detected": [
+          "SSL/HTTPS"
+        ],
+        "timestamp": "2026-08-26T11:28:08.444095+00:00"
+      }
+    ],
+    "notes": "Scraped 3 pages from website. Tech stack: SSL/HTTPS. Identified 3 pain points. Generated 3 opportunities.",
+    "filename": "bay_shores_cleaning_company.md",
+    "osint_research": {
+      "scraped_pages": [
+        {
+          "url": "https://bayshorescleaning.com/",
+          "status": 200,
+          "content_length": 34505,
+          "content_type": "text/html; charset=UTF-8"
+        },
+        {
+          "url": "https://bayshorescleaning.com/contact",
+          "status": 200,
+          "content_length": 30330,
+          "content_type": "text/html; charset=UTF-8"
+        },
+        {
+          "url": "https://bayshorescleaning.com/about",
+          "status": 200,
+          "content_length": 33541,
+          "content_type": "text/html; charset=UTF-8"
+        }
+      ],
+      "contact_info": {
+        "emails_found": [],
+        "phones_found": []
+      },
+      "data_completeness": {
+        "website_scraped": 10,
+        "contact_info_found": 0,
+        "tech_stack_detected": 10,
+        "pain_points_identified": 10,
+        "opportunities_generated": 5,
+        "business_info_extracted": 0
+      },
+      "legal_compliance": {
+        "accessed_data": "Publicly available website content and business directory data",
+        "compliance": [
+          "CFAA",
+          "GDPR",
+          "CCPA",
+          "CAN-SPAM"
+        ],
+        "data_use": "B2B sales prospecting - no personal data collected beyond public business contact info",
+        "opt_out": "privacy@soetechllc.com"
+      },
+      "researched_at": "2026-08-26T11:28:08.451392+00:00",
+      "researcher": "deep_osint.py v1.0"
+    }
+  },
+  {
+    "business_name": "Americans Home Health & Hospice Care Inc",
+    "industry": "home services",
+    "location": "Saginaw MI MI",
+    "website": "http://ahhcmi.com/",
+    "phone": "(989) 791-7951",
+    "owner_name": "",
+    "owner_title": "",
+    "contact_email": "",
+    "technology_stack": [
+      "Unknown (no CMS detected)"
+    ],
+    "pain_points": [
+      "Limited Social Media Presence: No social media links detected on website",
+      "Potential Mobile Issues: No explicit mobile optimization claims found",
+      "Limited Online Payment Options: No clear online payment or invoicing system"
+    ],
+    "opportunities": [
+      "Social Media Strategy: Build engaged online community with automated posting",
+      "Mobile Optimization: Modern responsive website design",
+      "Online Payment Integration: Secure payment processing and invoicing"
+    ],
+    "confidence_score": 6,
+    "research_sources": [
+      {
+        "url": "http://ahhcmi.com/",
+        "type": "website_scrape",
+        "timestamp": "2026-08-26T11:28:14.787206+00:00"
+      },
+      {
+        "type": "tech_stack_detection",
+        "detected": [
+          "Unknown (no CMS detected)"
+        ],
+        "timestamp": "2026-08-26T11:29:27.271676+00:00"
+      }
+    ],
+    "notes": "Scraped 1 pages from website. Tech stack: Unknown (no CMS detected). Identified 3 pain points. Generated 3 opportunities.",
+    "filename": "americans_home_health_hospice_care_inc.md",
+    "osint_research": {
+      "scraped_pages": [
+        {
+          "url": "http://ahhcmi.com/",
+          "status": 200,
+          "content_length": 3982,
+          "content_type": "text/html; charset=UTF-8"
+        }
+      ],
+      "contact_info": {
+        "emails_found": [],
+        "phones_found": []
+      },
+      "data_completeness": {
+        "website_scraped": 10,
+        "contact_info_found": 0,
+        "tech_stack_detected": 10,
+        "pain_points_identified": 10,
+        "opportunities_generated": 5,
+        "business_info_extracted": 0
+      },
+      "legal_compliance": {
+        "accessed_data": "Publicly available website content and business directory data",
+        "compliance": [
+          "CFAA",
+          "GDPR",
+          "CCPA",
+          "CAN-SPAM"
+        ],
+        "data_use": "B2B sales prospecting - no personal data collected beyond public business contact info",
+        "opt_out": "privacy@soetechllc.com"
+      },
+      "researched_at": "2026-08-26T11:29:27.272153+00:00",
+      "researcher": "deep_osint.py v1.0"
+    }
+  },
+  {
+    "business_name": "Environmental Services",
+    "industry": "home services",
+    "location": "Midland MI MI",
+    "website": "http://tntenvironmentalservicesllc.com/",
+    "phone": "(989) 443-0638",
+    "owner_name": "",
+    "owner_title": "",
+    "contact_email": "",
+    "technology_stack": [
+      "Unknown (no CMS detected)"
+    ],
+    "pain_points": [
+      "Limited Social Media Presence: No social media links detected on website",
+      "Potential Mobile Issues: No explicit mobile optimization claims found",
+      "Limited Online Payment Options: No clear online payment or invoicing system"
+    ],
+    "opportunities": [
+      "Social Media Strategy: Build engaged online community with automated posting",
+      "Mobile Optimization: Modern responsive website design",
+      "Online Payment Integration: Secure payment processing and invoicing"
+    ],
+    "confidence_score": 7,
+    "research_sources": [
+      {
+        "url": "http://tntenvironmentalservicesllc.com/",
+        "type": "website_scrape",
+        "timestamp": "2026-08-26T11:29:29.737242+00:00"
+      },
+      {
+        "url": "http://tntenvironmentalservicesllc.com/contact",
+        "type": "website_scrape",
+        "timestamp": "2026-08-26T11:29:32.529298+00:00"
+      },
+      {
+        "type": "tech_stack_detection",
+        "detected": [
+          "Unknown (no CMS detected)"
+        ],
+        "timestamp": "2026-08-26T11:30:18.243013+00:00"
+      }
+    ],
+    "notes": "Scraped 2 pages from website. Tech stack: Unknown (no CMS detected). Identified 3 pain points. Generated 3 opportunities.",
+    "filename": "environmental_services.md",
+    "osint_research": {
+      "scraped_pages": [
+        {
+          "url": "http://tntenvironmentalservicesllc.com/",
+          "status": 200,
+          "content_length": 31593,
+          "content_type": "text/html; charset=UTF-8"
+        },
+        {
+          "url": "http://tntenvironmentalservicesllc.com/contact",
+          "status": 200,
+          "content_length": 26521,
+          "content_type": "text/html; charset=UTF-8"
+        }
+      ],
+      "contact_info": {
+        "emails_found": [],
+        "phones_found": []
+      },
+      "data_completeness": {
+        "website_scraped": 10,
+        "contact_info_found": 0,
+        "tech_stack_detected": 10,
+        "pain_points_identified": 10,
+        "opportunities_generated": 5,
+        "business_info_extracted": 0
+      },
+      "legal_compliance": {
+        "accessed_data": "Publicly available website content and business directory data",
+        "compliance": [
+          "CFAA",
+          "GDPR",
+          "CCPA",
+          "CAN-SPAM"
+        ],
+        "data_use": "B2B sales prospecting - no personal data collected beyond public business contact info",
+        "opt_out": "privacy@soetechllc.com"
+      },
+      "researched_at": "2026-08-26T11:30:18.246280+00:00",
+      "researcher": "deep_osint.py v1.0"
+    }
+  },
+  {
+    "business_name": "Kj's Home Improvement Specialist",
+    "industry": "home services",
+    "location": "Bay City MI MI",
+    "website": "http://www.kjshomeimprovementmi.com/",
+    "phone": "(989) 657-6981",
+    "owner_name": "",
+    "owner_title": "",
+    "contact_email": "",
+    "technology_stack": [
+      "Unknown (no CMS detected)"
+    ],
+    "pain_points": [
+      "Limited Social Media Presence: No social media links detected on website",
+      "Potential Mobile Issues: No explicit mobile optimization claims found",
+      "Limited Online Payment Options: No clear online payment or invoicing system"
+    ],
+    "opportunities": [
+      "Social Media Strategy: Build engaged online community with automated posting",
+      "Mobile Optimization: Modern responsive website design",
+      "Online Payment Integration: Secure payment processing and invoicing"
+    ],
+    "confidence_score": 7,
+    "research_sources": [
+      {
+        "url": "http://www.kjshomeimprovementmi.com/",
+        "type": "website_scrape",
+        "timestamp": "2026-08-26T11:30:20.446308+00:00"
+      },
+      {
+        "url": "http://www.kjshomeimprovementmi.com/contact-us",
+        "type": "website_scrape",
+        "timestamp": "2026-08-26T11:30:37.337696+00:00"
+      },
+      {
+        "url": "http://www.kjshomeimprovementmi.com/about",
+        "type": "website_scrape",
+        "timestamp": "2026-08-26T11:31:01.218103+00:00"
+      },
+      {
+        "type": "tech_stack_detection",
+        "detected": [
+          "Unknown (no CMS detected)"
+        ],
+        "timestamp": "2026-08-26T11:31:01.222678+00:00"
+      }
+    ],
+    "notes": "Scraped 3 pages from website. Tech stack: Unknown (no CMS detected). Identified 3 pain points. Generated 3 opportunities.",
+    "filename": "kj_s_home_improvement_specialist.md",
+    "osint_research": {
+      "scraped_pages": [
+        {
+          "url": "http://www.kjshomeimprovementmi.com/",
+          "status": 200,
+          "content_length": 32770,
+          "content_type": "text/html;charset=utf-8"
+        },
+        {
+          "url": "http://www.kjshomeimprovementmi.com/contact-us",
+          "status": 200,
+          "content_length": 27045,
+          "content_type": "text/html;charset=utf-8"
+        },
+        {
+          "url": "http://www.kjshomeimprovementmi.com/about",
+          "status": 200,
+          "content_length": 27302,
+          "content_type": "text/html;charset=utf-8"
+        }
+      ],
+      "contact_info": {
+        "emails_found": [],
+        "phones_found": []
+      },
+      "data_completeness": {
+        "website_scraped": 10,
+        "contact_info_found": 0,
+        "tech_stack_detected": 10,
+        "pain_points_identified": 10,
+        "opportunities_generated": 5,
+        "business_info_extracted": 0
+      },
+      "legal_compliance": {
+        "accessed_data": "Publicly available website content and business directory data",
+        "compliance": [
+          "CFAA",
+          "GDPR",
+          "CCPA",
+          "CAN-SPAM"
+        ],
+        "data_use": "B2B sales prospecting - no personal data collected beyond public business contact info",
+        "opt_out": "privacy@soetechllc.com"
+      },
+      "researched_at": "2026-08-26T11:31:01.229084+00:00",
+      "researcher": "deep_osint.py v1.0"
+    }
+  },
+  {
+    "business_name": "Zari's Loving Touch",
+    "industry": "home services",
+    "location": "Flint MI MI",
+    "website": "http://www.zarislovingtouch.com/",
+    "phone": "",
+    "owner_name": "",
+    "owner_title": "",
+    "contact_email": "",
+    "technology_stack": [
+      "Unknown (no HTML content)"
+    ],
+    "pain_points": [],
+    "opportunities": [],
+    "confidence_score": 1,
+    "research_sources": [
+      {
+        "type": "tech_stack_detection",
+        "detected": [
+          "Unknown (no HTML content)"
+        ],
+        "timestamp": "2026-08-27T11:04:30.270619+00:00"
+      }
+    ],
+    "notes": "Tech stack: Unknown (no HTML content).",
+    "filename": "zari_s_loving_touch.md",
+    "osint_research": {
+      "scraped_pages": [],
+      "contact_info": {},
+      "data_completeness": {
+        "website_scraped": 0,
+        "contact_info_found": 0,
+        "tech_stack_detected": 10,
+        "pain_points_identified": 0,
+        "opportunities_generated": 0,
+        "business_info_extracted": 0
+      },
+      "legal_compliance": {
+        "accessed_data": "Publicly available website content and business directory data",
+        "compliance": [
+          "CFAA",
+          "GDPR",
+          "CCPA",
+          "CAN-SPAM"
+        ],
+        "data_use": "B2B sales prospecting - no personal data collected beyond public business contact info",
+        "opt_out": "privacy@soetechllc.com"
+      },
+      "researched_at": "2026-08-27T11:04:30.270789+00:00",
+      "researcher": "deep_osint.py v1.0"
+    }
+  },
+  {
+    "business_name": "Quality Care Home Repair",
+    "industry": "home services",
+    "location": "Midland MI MI",
+    "website": "https://topbusinessesusa.top/details/quality-care-home-repair-ChIJq6p",
+    "phone": "(989) 750-5701",
+    "owner_name": "",
+    "owner_title": "",
+    "contact_email": "",
+    "technology_stack": [
+      "SSL/HTTPS"
+    ],
+    "pain_points": [
+      "Limited Social Media Presence: No social media links detected on website",
+      "Potential Mobile Issues: No explicit mobile optimization claims found",
+      "Limited Online Payment Options: No clear online payment or invoicing system"
+    ],
+    "opportunities": [
+      "Social Media Strategy: Build engaged online community with automated posting",
+      "Mobile Optimization: Modern responsive website design",
+      "Online Payment Integration: Secure payment processing and invoicing"
+    ],
+    "confidence_score": 8,
+    "research_sources": [
+      {
+        "url": "https://topbusinessesusa.top/details/quality-care-home-repair-ChIJq6p",
+        "type": "website_scrape",
+        "timestamp": "2026-08-26T11:31:21.688997+00:00"
+      },
+      {
+        "url": "https://topbusinessesusa.top/contact",
+        "type": "website_scrape",
+        "timestamp": "2026-08-26T11:31:24.228484+00:00"
+      },
+      {
+        "url": "https://topbusinessesusa.top/contact-us",
+        "type": "website_scrape",
+        "timestamp": "2026-08-26T11:31:27.027046+00:00"
+      },
+      {
+        "url": "https://topbusinessesusa.top/contact.html",
+        "type": "website_scrape",
+        "timestamp": "2026-08-26T11:31:29.903440+00:00"
+      },
+      {
+        "url": "https://topbusinessesusa.top/contact-us.html",
+        "type": "website_scrape",
+        "timestamp": "2026-08-26T11:31:33.444473+00:00"
+      },
+      {
+        "url": "https://topbusinessesusa.top/about",
+        "type": "website_scrape",
+        "timestamp": "2026-08-26T11:31:35.845942+00:00"
+      },
+      {
+        "type": "tech_stack_detection",
+        "detected": [
+          "SSL/HTTPS"
+        ],
+        "timestamp": "2026-08-26T11:31:35.846339+00:00"
+      }
+    ],
+    "notes": "Scraped 6 pages from website. Tech stack: SSL/HTTPS. Identified 3 pain points. Generated 3 opportunities.",
+    "filename": "quality_care_home_repair.md",
+    "osint_research": {
+      "scraped_pages": [
+        {
+          "url": "https://topbusinessesusa.top/details/quality-care-home-repair-ChIJq6p",
+          "status": 200,
+          "content_length": 1897,
+          "content_type": "text/html"
+        },
+        {
+          "url": "https://topbusinessesusa.top/contact",
+          "status": 200,
+          "content_length": 1897,
+          "content_type": "text/html"
+        },
+        {
+          "url": "https://topbusinessesusa.top/contact-us",
+          "status": 200,
+          "content_length": 1897,
+          "content_type": "text/html"
+        },
+        {
+          "url": "https://topbusinessesusa.top/contact.html",
+          "status": 200,
+          "content_length": 1897,
+          "content_type": "text/html"
+        },
+        {
+          "url": "https://topbusinessesusa.top/contact-us.html",
+          "status": 200,
+          "content_length": 1897,
+          "content_type": "text/html"
+        },
+        {
+          "url": "https://topbusinessesusa.top/about",
+          "status": 200,
+          "content_length": 1897,
+          "content_type": "text/html"
+        }
+      ],
+      "contact_info": {
+        "emails_found": [],
+        "phones_found": []
+      },
+      "data_completeness": {
+        "website_scraped": 10,
+        "contact_info_found": 0,
+        "tech_stack_detected": 10,
+        "pain_points_identified": 10,
+        "opportunities_generated": 5,
+        "business_info_extracted": 0
+      },
+      "legal_compliance": {
+        "accessed_data": "Publicly available website content and business directory data",
+        "compliance": [
+          "CFAA",
+          "GDPR",
+          "CCPA",
+          "CAN-SPAM"
+        ],
+        "data_use": "B2B sales prospecting - no personal data collected beyond public business contact info",
+        "opt_out": "privacy@soetechllc.com"
+      },
+      "researched_at": "2026-08-26T11:31:35.847642+00:00",
+      "researcher": "deep_osint.py v1.0"
+    }
+  },
+  {
+    "business_name": "CenterWell Home Health",
+    "industry": "home services",
+    "location": "Flint MI MI",
+    "website": "https://www.centerwell.com/find-care/home-health/location?location=CenterWell%20Home%20Health%20-%20Flint&hcode=H078&utm_source=Organic&utm_campaign=GBP",
+    "phone": "(810) 732-9030",
+    "owner_name": "",
+    "owner_title": "",
+    "contact_email": "",
+    "technology_stack": [
+      "SSL/HTTPS"
+    ],
+    "pain_points": [
+      "Limited Social Media Presence: No social media links detected on website",
+      "Potential Mobile Issues: No explicit mobile optimization claims found",
+      "Limited Online Payment Options: No clear online payment or invoicing system"
+    ],
+    "opportunities": [
+      "Social Media Strategy: Build engaged online community with automated posting",
+      "Mobile Optimization: Modern responsive website design",
+      "Online Payment Integration: Secure payment processing and invoicing"
+    ],
+    "confidence_score": 8,
+    "research_sources": [
+      {
+        "url": "https://www.centerwell.com/find-care/home-health/location?location=CenterWell%20Home%20Health%20-%20Flint&hcode=H078&utm_source=Organic&utm_campaign=GBP",
+        "type": "website_scrape",
+        "timestamp": "2026-08-26T11:31:38.946088+00:00"
+      },
+      {
+        "url": "https://www.centerwell.com/contact",
+        "type": "website_scrape",
+        "timestamp": "2026-08-26T11:31:47.172931+00:00"
+      },
+      {
+        "url": "https://www.centerwell.com/contact-us",
+        "type": "website_scrape",
+        "timestamp": "2026-08-26T11:31:51.683243+00:00"
+      },
+      {
+        "url": "https://www.centerwell.com/contact.html",
+        "type": "website_scrape",
+        "timestamp": "2026-08-26T11:31:54.560036+00:00"
+      },
+      {
+        "url": "https://www.centerwell.com/contact-us.html",
+        "type": "website_scrape",
+        "timestamp": "2026-08-26T11:31:56.912455+00:00"
+      },
+      {
+        "url": "https://www.centerwell.com/about",
+        "type": "website_scrape",
+        "timestamp": "2026-08-26T11:32:00.819559+00:00"
+      },
+      {
+        "type": "tech_stack_detection",
+        "detected": [
+          "SSL/HTTPS"
+        ],
+        "timestamp": "2026-08-26T11:32:00.821401+00:00"
+      }
+    ],
+    "notes": "Scraped 6 pages from website. Tech stack: SSL/HTTPS. Identified 3 pain points. Generated 3 opportunities.",
+    "filename": "centerwell_home_health.md",
+    "osint_research": {
+      "scraped_pages": [
+        {
+          "url": "https://www.centerwell.com/find-care/home-health/location?location=CenterWell%20Home%20Health%20-%20Flint&hcode=H078&utm_source=Organic&utm_campaign=GBP",
+          "status": 200,
+          "content_length": 14739,
+          "content_type": "text/html; charset=utf-8"
+        },
+        {
+          "url": "https://www.centerwell.com/contact",
+          "status": 200,
+          "content_length": 9036,
+          "content_type": "text/html; charset=utf-8"
+        },
+        {
+          "url": "https://www.centerwell.com/contact-us",
+          "status": 200,
+          "content_length": 8980,
+          "content_type": "text/html; charset=utf-8"
+        },
+        {
+          "url": "https://www.centerwell.com/contact.html",
+          "status": 200,
+          "content_length": 3910,
+          "content_type": "text/html; charset=utf-8"
+        },
+        {
+          "url": "https://www.centerwell.com/contact-us.html",
+          "status": 200,
+          "content_length": 3928,
+          "content_type": "text/html; charset=utf-8"
+        },
+        {
+          "url": "https://www.centerwell.com/about",
+          "status": 200,
+          "content_length": 8982,
+          "content_type": "text/html; charset=utf-8"
+        }
+      ],
+      "contact_info": {
+        "emails_found": [],
+        "phones_found": []
+      },
+      "data_completeness": {
+        "website_scraped": 10,
+        "contact_info_found": 0,
+        "tech_stack_detected": 10,
+        "pain_points_identified": 10,
+        "opportunities_generated": 5,
+        "business_info_extracted": 0
+      },
+      "legal_compliance": {
+        "accessed_data": "Publicly available website content and business directory data",
+        "compliance": [
+          "CFAA",
+          "GDPR",
+          "CCPA",
+          "CAN-SPAM"
+        ],
+        "data_use": "B2B sales prospecting - no personal data collected beyond public business contact info",
+        "opt_out": "privacy@soetechllc.com"
+      },
+      "researched_at": "2026-08-26T11:32:00.824512+00:00",
+      "researcher": "deep_osint.py v1.0"
+    }
+  },
+  {
+    "business_name": "Bold Media Marketing Agency | Web, Social & Advertising",
+    "industry": "marketing agencies",
+    "location": "Midland MI MI",
+    "website": "https://pickbold.com/",
+    "phone": "(248) 477-5994",
+    "owner_name": "",
+    "owner_title": "",
+    "contact_email": "",
+    "technology_stack": [
+      "SSL/HTTPS"
+    ],
+    "pain_points": [
+      "Limited Social Media Presence: No social media links detected on website",
+      "Potential Mobile Issues: No explicit mobile optimization claims found",
+      "Limited Online Payment Options: No clear online payment or invoicing system"
+    ],
+    "opportunities": [
+      "Social Media Strategy: Build engaged online community with automated posting",
+      "Mobile Optimization: Modern responsive website design",
+      "Online Payment Integration: Secure payment processing and invoicing"
+    ],
+    "confidence_score": 8,
+    "research_sources": [
+      {
+        "url": "https://pickbold.com/",
+        "type": "website_scrape",
+        "timestamp": "2026-08-26T11:34:18.705950+00:00"
+      },
+      {
+        "url": "https://pickbold.com/contact-us",
+        "type": "website_scrape",
+        "timestamp": "2026-08-26T11:34:32.627619+00:00"
+      },
+      {
+        "url": "https://pickbold.com/about",
+        "type": "website_scrape",
+        "timestamp": "2026-08-26T11:35:05.825521+00:00"
+      },
+      {
+        "type": "tech_stack_detection",
+        "detected": [
+          "SSL/HTTPS"
+        ],
+        "timestamp": "2026-08-26T11:35:05.831284+00:00"
+      }
+    ],
+    "notes": "Scraped 3 pages from website. Tech stack: SSL/HTTPS. Identified 3 pain points. Generated 3 opportunities.",
+    "filename": "bold_media_marketing_agency_web_social_advertising.md",
+    "osint_research": {
+      "scraped_pages": [
+        {
+          "url": "https://pickbold.com/",
+          "status": 200,
+          "content_length": 41633,
+          "content_type": "text/html; charset=UTF-8"
+        },
+        {
+          "url": "https://pickbold.com/contact-us",
+          "status": 200,
+          "content_length": 27736,
+          "content_type": "text/html; charset=UTF-8"
+        },
+        {
+          "url": "https://pickbold.com/about",
+          "status": 200,
+          "content_length": 31645,
+          "content_type": "text/html; charset=UTF-8"
+        }
+      ],
+      "contact_info": {
+        "emails_found": [],
+        "phones_found": []
+      },
+      "data_completeness": {
+        "website_scraped": 10,
+        "contact_info_found": 0,
+        "tech_stack_detected": 10,
+        "pain_points_identified": 10,
+        "opportunities_generated": 5,
+        "business_info_extracted": 0
+      },
+      "legal_compliance": {
+        "accessed_data": "Publicly available website content and business directory data",
+        "compliance": [
+          "CFAA",
+          "GDPR",
+          "CCPA",
+          "CAN-SPAM"
+        ],
+        "data_use": "B2B sales prospecting - no personal data collected beyond public business contact info",
+        "opt_out": "privacy@soetechllc.com"
+      },
+      "researched_at": "2026-08-26T11:35:05.839029+00:00",
+      "researcher": "deep_osint.py v1.0"
+    }
+  },
+  {
+    "business_name": "FirstLight Home Care of Greater Genesee County",
+    "industry": "home services",
+    "location": "Flint MI MI",
+    "website": "https://www.firstlighthomecare.com/home-healthcare-greater-genesee-county/?utm_source=google&utm_medium=organic&utm_campaign=gbp",
+    "phone": "(810) 875-9805",
+    "owner_name": "",
+    "owner_title": "",
+    "contact_email": "",
+    "technology_stack": [
+      "SSL/HTTPS"
+    ],
+    "pain_points": [
+      "Limited Social Media Presence: No social media links detected on website",
+      "Potential Mobile Issues: No explicit mobile optimization claims found",
+      "Limited Online Payment Options: No clear online payment or invoicing system"
+    ],
+    "opportunities": [
+      "Social Media Strategy: Build engaged online community with automated posting",
+      "Mobile Optimization: Modern responsive website design",
+      "Online Payment Integration: Secure payment processing and invoicing"
+    ],
+    "confidence_score": 8,
+    "research_sources": [
+      {
+        "url": "https://www.firstlighthomecare.com/home-healthcare-greater-genesee-county/?utm_source=google&utm_medium=organic&utm_campaign=gbp",
+        "type": "website_scrape",
+        "timestamp": "2026-08-27T11:05:23.106655+00:00"
+      },
+      {
+        "url": "https://www.firstlighthomecare.com/contact-us",
+        "type": "website_scrape",
+        "timestamp": "2026-08-27T11:05:37.518850+00:00"
+      },
+      {
+        "type": "tech_stack_detection",
+        "detected": [
+          "SSL/HTTPS"
+        ],
+        "timestamp": "2026-08-27T11:06:11.329719+00:00"
+      }
+    ],
+    "notes": "Scraped 2 pages from website. Tech stack: SSL/HTTPS. Identified 3 pain points. Generated 3 opportunities.",
+    "filename": "firstlight_home_care_of_greater_genesee_county.md",
+    "osint_research": {
+      "scraped_pages": [
+        {
+          "url": "https://www.firstlighthomecare.com/home-healthcare-greater-genesee-county/?utm_source=google&utm_medium=organic&utm_campaign=gbp",
+          "status": 200,
+          "content_length": 25997,
+          "content_type": "text/html; charset=UTF-8"
+        },
+        {
+          "url": "https://www.firstlighthomecare.com/contact-us",
+          "status": 200,
+          "content_length": 23044,
+          "content_type": "text/html; charset=UTF-8"
+        }
+      ],
+      "contact_info": {
+        "emails_found": [],
+        "phones_found": []
+      },
+      "data_completeness": {
+        "website_scraped": 10,
+        "contact_info_found": 0,
+        "tech_stack_detected": 10,
+        "pain_points_identified": 10,
+        "opportunities_generated": 5,
+        "business_info_extracted": 0
+      },
+      "legal_compliance": {
+        "accessed_data": "Publicly available website content and business directory data",
+        "compliance": [
+          "CFAA",
+          "GDPR",
+          "CCPA",
+          "CAN-SPAM"
+        ],
+        "data_use": "B2B sales prospecting - no personal data collected beyond public business contact info",
+        "opt_out": "privacy@soetechllc.com"
+      },
+      "researched_at": "2026-08-27T11:06:11.332308+00:00",
+      "researcher": "deep_osint.py v1.0"
+    }
+  },
+  {
+    "business_name": "Assistance to Independence Home Care Services",
+    "industry": "home services",
+    "location": "Midland MI MI",
+    "website": "http://www.atihomecare.com/",
+    "phone": "(989) 898-7941",
+    "owner_name": "",
+    "owner_title": "",
+    "contact_email": "",
+    "technology_stack": [
+      "Unknown (no CMS detected)"
+    ],
+    "pain_points": [
+      "Limited Social Media Presence: No social media links detected on website",
+      "Potential Mobile Issues: No explicit mobile optimization claims found",
+      "Limited Online Payment Options: No clear online payment or invoicing system"
+    ],
+    "opportunities": [
+      "Social Media Strategy: Build engaged online community with automated posting",
+      "Mobile Optimization: Modern responsive website design",
+      "Online Payment Integration: Secure payment processing and invoicing"
+    ],
+    "confidence_score": 6,
+    "research_sources": [
+      {
+        "url": "http://www.atihomecare.com/",
+        "type": "website_scrape",
+        "timestamp": "2026-08-27T11:06:13.840049+00:00"
+      },
+      {
+        "type": "tech_stack_detection",
+        "detected": [
+          "Unknown (no CMS detected)"
+        ],
+        "timestamp": "2026-08-27T11:07:15.861974+00:00"
+      }
+    ],
+    "notes": "Scraped 1 pages from website. Tech stack: Unknown (no CMS detected). Identified 3 pain points. Generated 3 opportunities.",
+    "filename": "assistance_to_independence_home_care_services.md",
+    "osint_research": {
+      "scraped_pages": [
+        {
+          "url": "http://www.atihomecare.com/",
+          "status": 200,
+          "content_length": 4065,
+          "content_type": "text/html; charset=utf-8"
+        }
+      ],
+      "contact_info": {
+        "emails_found": [],
+        "phones_found": []
+      },
+      "data_completeness": {
+        "website_scraped": 10,
+        "contact_info_found": 0,
+        "tech_stack_detected": 10,
+        "pain_points_identified": 10,
+        "opportunities_generated": 5,
+        "business_info_extracted": 0
+      },
+      "legal_compliance": {
+        "accessed_data": "Publicly available website content and business directory data",
+        "compliance": [
+          "CFAA",
+          "GDPR",
+          "CCPA",
+          "CAN-SPAM"
+        ],
+        "data_use": "B2B sales prospecting - no personal data collected beyond public business contact info",
+        "opt_out": "privacy@soetechllc.com"
+      },
+      "researched_at": "2026-08-27T11:07:15.862399+00:00",
+      "researcher": "deep_osint.py v1.0"
+    }
+  },
+  {
+    "business_name": "Home Helpers Home Care of Saginaw, MI",
+    "industry": "home services",
+    "location": "Saginaw MI MI",
+    "website": "https://homehelpershomecare.com/saginaw-mi",
+    "phone": "(989) 418-0207",
+    "owner_name": "",
+    "owner_title": "",
+    "contact_email": "",
+    "technology_stack": [
+      "SSL/HTTPS",
+      "Vue.js"
+    ],
+    "pain_points": [
+      "Limited Social Media Presence: No social media links detected on website",
+      "Potential Mobile Issues: No explicit mobile optimization claims found",
+      "Limited Online Payment Options: No clear online payment or invoicing system"
+    ],
+    "opportunities": [
+      "Social Media Strategy: Build engaged online community with automated posting",
+      "Mobile Optimization: Modern responsive website design",
+      "Online Payment Integration: Secure payment processing and invoicing"
+    ],
+    "confidence_score": 8,
+    "research_sources": [
+      {
+        "url": "https://homehelpershomecare.com/saginaw-mi",
+        "type": "website_scrape",
+        "timestamp": "2026-08-27T11:07:17.593398+00:00"
+      },
+      {
+        "url": "https://homehelpershomecare.com/contact",
+        "type": "website_scrape",
+        "timestamp": "2026-08-27T11:07:21.478393+00:00"
+      },
+      {
+        "url": "https://homehelpershomecare.com/contact-us",
+        "type": "website_scrape",
+        "timestamp": "2026-08-27T11:07:25.052466+00:00"
+      },
+      {
+        "url": "https://homehelpershomecare.com/about",
+        "type": "website_scrape",
+        "timestamp": "2026-08-27T11:07:50.914055+00:00"
+      },
+      {
+        "type": "tech_stack_detection",
+        "detected": [
+          "SSL/HTTPS",
+          "Vue.js"
+        ],
+        "timestamp": "2026-08-27T11:07:50.920058+00:00"
+      }
+    ],
+    "notes": "Scraped 4 pages from website. Tech stack: SSL/HTTPS, Vue.js. Identified 3 pain points. Generated 3 opportunities.",
+    "filename": "home_helpers_home_care_of_saginaw_mi.md",
+    "osint_research": {
+      "scraped_pages": [
+        {
+          "url": "https://homehelpershomecare.com/saginaw-mi",
+          "status": 200,
+          "content_length": 71727,
+          "content_type": "text/html; charset=UTF-8"
+        },
+        {
+          "url": "https://homehelpershomecare.com/contact",
+          "status": 200,
+          "content_length": 56746,
+          "content_type": "text/html; charset=UTF-8"
+        },
+        {
+          "url": "https://homehelpershomecare.com/contact-us",
+          "status": 200,
+          "content_length": 56572,
+          "content_type": "text/html; charset=UTF-8"
+        },
+        {
+          "url": "https://homehelpershomecare.com/about",
+          "status": 200,
+          "content_length": 34879,
+          "content_type": "text/html; charset=UTF-8"
+        }
+      ],
+      "contact_info": {
+        "emails_found": [],
+        "phones_found": []
+      },
+      "data_completeness": {
+        "website_scraped": 10,
+        "contact_info_found": 0,
+        "tech_stack_detected": 10,
+        "pain_points_identified": 10,
+        "opportunities_generated": 5,
+        "business_info_extracted": 0
+      },
+      "legal_compliance": {
+        "accessed_data": "Publicly available website content and business directory data",
+        "compliance": [
+          "CFAA",
+          "GDPR",
+          "CCPA",
+          "CAN-SPAM"
+        ],
+        "data_use": "B2B sales prospecting - no personal data collected beyond public business contact info",
+        "opt_out": "privacy@soetechllc.com"
+      },
+      "researched_at": "2026-08-27T11:07:50.931773+00:00",
+      "researcher": "deep_osint.py v1.0"
+    }
+  },
+  {
+    "business_name": "MI Home Hub",
+    "industry": "home services",
+    "location": "Midland MI MI",
+    "website": "https://mihomehub.com/",
+    "phone": "(989) 898-0951",
+    "owner_name": "",
+    "owner_title": "",
+    "contact_email": "",
+    "technology_stack": [
+      "SSL/HTTPS"
+    ],
+    "pain_points": [
+      "Limited Social Media Presence: No social media links detected on website",
+      "Potential Mobile Issues: No explicit mobile optimization claims found",
+      "Limited Online Payment Options: No clear online payment or invoicing system"
+    ],
+    "opportunities": [
+      "Social Media Strategy: Build engaged online community with automated posting",
+      "Mobile Optimization: Modern responsive website design",
+      "Online Payment Integration: Secure payment processing and invoicing"
+    ],
+    "confidence_score": 8,
+    "research_sources": [
+      {
+        "url": "https://mihomehub.com/",
+        "type": "website_scrape",
+        "timestamp": "2026-08-27T11:07:53.241021+00:00"
+      },
+      {
+        "url": "https://mihomehub.com/about",
+        "type": "website_scrape",
+        "timestamp": "2026-08-27T11:08:42.040116+00:00"
+      },
+      {
+        "type": "tech_stack_detection",
+        "detected": [
+          "SSL/HTTPS"
+        ],
+        "timestamp": "2026-08-27T11:08:42.041587+00:00"
+      }
+    ],
+    "notes": "Scraped 2 pages from website. Tech stack: SSL/HTTPS. Identified 3 pain points. Generated 3 opportunities.",
+    "filename": "mi_home_hub.md",
+    "osint_research": {
+      "scraped_pages": [
+        {
+          "url": "https://mihomehub.com/",
+          "status": 200,
+          "content_length": 11888,
+          "content_type": "text/html"
+        },
+        {
+          "url": "https://mihomehub.com/about",
+          "status": 200,
+          "content_length": 7551,
+          "content_type": "text/html"
+        }
+      ],
+      "contact_info": {
+        "emails_found": [],
+        "phones_found": []
+      },
+      "data_completeness": {
+        "website_scraped": 10,
+        "contact_info_found": 0,
+        "tech_stack_detected": 10,
+        "pain_points_identified": 10,
+        "opportunities_generated": 5,
+        "business_info_extracted": 0
+      },
+      "legal_compliance": {
+        "accessed_data": "Publicly available website content and business directory data",
+        "compliance": [
+          "CFAA",
+          "GDPR",
+          "CCPA",
+          "CAN-SPAM"
+        ],
+        "data_use": "B2B sales prospecting - no personal data collected beyond public business contact info",
+        "opt_out": "privacy@soetechllc.com"
+      },
+      "researched_at": "2026-08-27T11:08:42.042697+00:00",
+      "researcher": "deep_osint.py v1.0"
+    }
+  },
+  {
+    "business_name": "Golden Heart Home Services, LLC",
+    "industry": "home services",
+    "location": "Saginaw MI MI",
+    "website": "http://goldenhhs.com/",
+    "phone": "(989) 401-0042",
+    "owner_name": "",
+    "owner_title": "",
+    "contact_email": "",
+    "technology_stack": [
+      "Unknown (no HTML content)"
+    ],
+    "pain_points": [],
+    "opportunities": [],
+    "confidence_score": 1,
+    "research_sources": [
+      {
+        "type": "tech_stack_detection",
+        "detected": [
+          "Unknown (no HTML content)"
+        ],
+        "timestamp": "2026-08-27T11:08:56.771181+00:00"
+      }
+    ],
+    "notes": "Tech stack: Unknown (no HTML content).",
+    "filename": "golden_heart_home_services_llc.md",
+    "osint_research": {
+      "scraped_pages": [],
+      "contact_info": {},
+      "data_completeness": {
+        "website_scraped": 0,
+        "contact_info_found": 0,
+        "tech_stack_detected": 10,
+        "pain_points_identified": 0,
+        "opportunities_generated": 0,
+        "business_info_extracted": 0
+      },
+      "legal_compliance": {
+        "accessed_data": "Publicly available website content and business directory data",
+        "compliance": [
+          "CFAA",
+          "GDPR",
+          "CCPA",
+          "CAN-SPAM"
+        ],
+        "data_use": "B2B sales prospecting - no personal data collected beyond public business contact info",
+        "opt_out": "privacy@soetechllc.com"
+      },
+      "researched_at": "2026-08-27T11:08:56.771353+00:00",
+      "researcher": "deep_osint.py v1.0"
+    }
+  },
+  {
+    "business_name": "Flint Home Care Agency - Medicaid Benefit Group",
+    "industry": "home services",
+    "location": "Flint MI MI",
+    "website": "https://thehomecareagency.top/",
+    "phone": "(810) 258-0800",
+    "owner_name": "",
+    "owner_title": "",
+    "contact_email": "",
+    "technology_stack": [
+      "SSL/HTTPS"
+    ],
+    "pain_points": [
+      "Limited Social Media Presence: No social media links detected on website",
+      "Potential Mobile Issues: No explicit mobile optimization claims found",
+      "Limited Online Payment Options: No clear online payment or invoicing system"
+    ],
+    "opportunities": [
+      "Social Media Strategy: Build engaged online community with automated posting",
+      "Mobile Optimization: Modern responsive website design",
+      "Online Payment Integration: Secure payment processing and invoicing"
+    ],
+    "confidence_score": 7,
+    "research_sources": [
+      {
+        "url": "https://thehomecareagency.top/",
+        "type": "website_scrape",
+        "timestamp": "2026-08-27T11:09:01.363840+00:00"
+      },
+      {
+        "type": "tech_stack_detection",
+        "detected": [
+          "SSL/HTTPS"
+        ],
+        "timestamp": "2026-08-27T11:10:11.356321+00:00"
+      }
+    ],
+    "notes": "Scraped 1 pages from website. Tech stack: SSL/HTTPS. Identified 3 pain points. Generated 3 opportunities.",
+    "filename": "flint_home_care_agency_medicaid_benefit_group.md",
+    "osint_research": {
+      "scraped_pages": [
+        {
+          "url": "https://thehomecareagency.top/",
+          "status": 200,
+          "content_length": 11714,
+          "content_type": "text/html"
+        }
+      ],
+      "contact_info": {
+        "emails_found": [],
+        "phones_found": []
+      },
+      "data_completeness": {
+        "website_scraped": 10,
+        "contact_info_found": 0,
+        "tech_stack_detected": 10,
+        "pain_points_identified": 10,
+        "opportunities_generated": 5,
+        "business_info_extracted": 0
+      },
+      "legal_compliance": {
+        "accessed_data": "Publicly available website content and business directory data",
+        "compliance": [
+          "CFAA",
+          "GDPR",
+          "CCPA",
+          "CAN-SPAM"
+        ],
+        "data_use": "B2B sales prospecting - no personal data collected beyond public business contact info",
+        "opt_out": "privacy@soetechllc.com"
+      },
+      "researched_at": "2026-08-27T11:10:11.357078+00:00",
+      "researcher": "deep_osint.py v1.0"
+    }
+  },
+  {
+    "business_name": "Michigan Family Caregiver LLC",
+    "industry": "home services",
+    "location": "Flint MI MI",
+    "website": "http://www.michiganfamilycaregiverllc.com/",
+    "phone": "(810) 207-3799",
+    "owner_name": "",
+    "owner_title": "",
+    "contact_email": "",
+    "technology_stack": [
+      "Unknown (no CMS detected)"
+    ],
+    "pain_points": [
+      "Limited Social Media Presence: No social media links detected on website",
+      "Potential Mobile Issues: No explicit mobile optimization claims found",
+      "Limited Online Payment Options: No clear online payment or invoicing system"
+    ],
+    "opportunities": [
+      "Social Media Strategy: Build engaged online community with automated posting",
+      "Mobile Optimization: Modern responsive website design",
+      "Online Payment Integration: Secure payment processing and invoicing"
+    ],
+    "confidence_score": 7,
+    "research_sources": [
+      {
+        "url": "http://www.michiganfamilycaregiverllc.com/",
+        "type": "website_scrape",
+        "timestamp": "2026-08-27T11:12:27.482399+00:00"
+      },
+      {
+        "url": "http://www.michiganfamilycaregiverllc.com/contact.html",
+        "type": "website_scrape",
+        "timestamp": "2026-08-27T11:12:56.859056+00:00"
+      },
+      {
+        "type": "tech_stack_detection",
+        "detected": [
+          "Unknown (no CMS detected)"
+        ],
+        "timestamp": "2026-08-27T11:13:21.823368+00:00"
+      }
+    ],
+    "notes": "Scraped 2 pages from website. Tech stack: Unknown (no CMS detected). Identified 3 pain points. Generated 3 opportunities.",
+    "filename": "michigan_family_caregiver_llc.md",
+    "osint_research": {
+      "scraped_pages": [
+        {
+          "url": "http://www.michiganfamilycaregiverllc.com/",
+          "status": 200,
+          "content_length": 8360,
+          "content_type": "text/html"
+        },
+        {
+          "url": "http://www.michiganfamilycaregiverllc.com/contact.html",
+          "status": 200,
+          "content_length": 4071,
+          "content_type": "text/html"
+        }
+      ],
+      "contact_info": {
+        "emails_found": [],
+        "phones_found": []
+      },
+      "data_completeness": {
+        "website_scraped": 10,
+        "contact_info_found": 0,
+        "tech_stack_detected": 10,
+        "pain_points_identified": 10,
+        "opportunities_generated": 5,
+        "business_info_extracted": 0
+      },
+      "legal_compliance": {
+        "accessed_data": "Publicly available website content and business directory data",
+        "compliance": [
+          "CFAA",
+          "GDPR",
+          "CCPA",
+          "CAN-SPAM"
+        ],
+        "data_use": "B2B sales prospecting - no personal data collected beyond public business contact info",
+        "opt_out": "privacy@soetechllc.com"
+      },
+      "researched_at": "2026-08-27T11:13:21.824243+00:00",
+      "researcher": "deep_osint.py v1.0"
+    }
+  },
+  {
+    "business_name": "Neighborhood Home Care Services, PLLC",
+    "industry": "home services",
+    "location": "Bay City MI MI",
+    "website": "http://neighborhoodhha.com/",
+    "phone": "(989) 391-4144",
+    "owner_name": "",
+    "owner_title": "",
+    "contact_email": "",
+    "technology_stack": [
+      "Unknown (no HTML content)"
+    ],
+    "pain_points": [],
+    "opportunities": [],
+    "confidence_score": 1,
+    "research_sources": [
+      {
+        "type": "tech_stack_detection",
+        "detected": [
+          "Unknown (no HTML content)"
+        ],
+        "timestamp": "2026-08-27T11:14:29.083698+00:00"
+      }
+    ],
+    "notes": "Tech stack: Unknown (no HTML content).",
+    "filename": "neighborhood_home_care_services_pllc.md",
+    "osint_research": {
+      "scraped_pages": [],
+      "contact_info": {},
+      "data_completeness": {
+        "website_scraped": 0,
+        "contact_info_found": 0,
+        "tech_stack_detected": 10,
+        "pain_points_identified": 0,
+        "opportunities_generated": 0,
+        "business_info_extracted": 0
+      },
+      "legal_compliance": {
+        "accessed_data": "Publicly available website content and business directory data",
+        "compliance": [
+          "CFAA",
+          "GDPR",
+          "CCPA",
+          "CAN-SPAM"
+        ],
+        "data_use": "B2B sales prospecting - no personal data collected beyond public business contact info",
+        "opt_out": "privacy@soetechllc.com"
+      },
+      "researched_at": "2026-08-27T11:14:29.083872+00:00",
+      "researcher": "deep_osint.py v1.0"
+    }
+  },
+  {
+    "business_name": "Stay Home Care Giving",
+    "industry": "home services",
+    "location": "Saginaw MI MI",
+    "website": "https://stayhomecaregiving.com/contact-us/",
+    "phone": "(989) 245-4113",
+    "owner_name": "",
+    "owner_title": "",
+    "contact_email": "",
+    "technology_stack": [
+      "SSL/HTTPS"
+    ],
+    "pain_points": [
+      "Limited Social Media Presence: No social media links detected on website",
+      "Potential Mobile Issues: No explicit mobile optimization claims found",
+      "Limited Online Payment Options: No clear online payment or invoicing system"
+    ],
+    "opportunities": [
+      "Social Media Strategy: Build engaged online community with automated posting",
+      "Mobile Optimization: Modern responsive website design",
+      "Online Payment Integration: Secure payment processing and invoicing"
+    ],
+    "confidence_score": 8,
+    "research_sources": [
+      {
+        "url": "https://stayhomecaregiving.com/contact-us/",
+        "type": "website_scrape",
+        "timestamp": "2026-08-27T11:14:30.989097+00:00"
+      },
+      {
+        "url": "https://stayhomecaregiving.com/contact",
+        "type": "website_scrape",
+        "timestamp": "2026-08-27T11:14:35.470376+00:00"
+      },
+      {
+        "url": "https://stayhomecaregiving.com/contact-us",
+        "type": "website_scrape",
+        "timestamp": "2026-08-27T11:14:38.089553+00:00"
+      },
+      {
+        "url": "https://stayhomecaregiving.com/about",
+        "type": "website_scrape",
+        "timestamp": "2026-08-27T11:15:07.118080+00:00"
+      },
+      {
+        "type": "tech_stack_detection",
+        "detected": [
+          "SSL/HTTPS"
+        ],
+        "timestamp": "2026-08-27T11:15:07.121782+00:00"
+      }
+    ],
+    "notes": "Scraped 4 pages from website. Tech stack: SSL/HTTPS. Identified 3 pain points. Generated 3 opportunities.",
+    "filename": "stay_home_care_giving.md",
+    "osint_research": {
+      "scraped_pages": [
+        {
+          "url": "https://stayhomecaregiving.com/contact-us/",
+          "status": 200,
+          "content_length": 19278,
+          "content_type": "text/html; charset=UTF-8"
+        },
+        {
+          "url": "https://stayhomecaregiving.com/contact",
+          "status": 200,
+          "content_length": 19278,
+          "content_type": "text/html; charset=UTF-8"
+        },
+        {
+          "url": "https://stayhomecaregiving.com/contact-us",
+          "status": 200,
+          "content_length": 19278,
+          "content_type": "text/html; charset=UTF-8"
+        },
+        {
+          "url": "https://stayhomecaregiving.com/about",
+          "status": 200,
+          "content_length": 22222,
+          "content_type": "text/html; charset=UTF-8"
+        }
+      ],
+      "contact_info": {
+        "emails_found": [],
+        "phones_found": []
+      },
+      "data_completeness": {
+        "website_scraped": 10,
+        "contact_info_found": 0,
+        "tech_stack_detected": 10,
+        "pain_points_identified": 10,
+        "opportunities_generated": 5,
+        "business_info_extracted": 0
+      },
+      "legal_compliance": {
+        "accessed_data": "Publicly available website content and business directory data",
+        "compliance": [
+          "CFAA",
+          "GDPR",
+          "CCPA",
+          "CAN-SPAM"
+        ],
+        "data_use": "B2B sales prospecting - no personal data collected beyond public business contact info",
+        "opt_out": "privacy@soetechllc.com"
+      },
+      "researched_at": "2026-08-27T11:15:07.126034+00:00",
+      "researcher": "deep_osint.py v1.0"
+    }
+  },
+  {
+    "business_name": "Walmart Home Services",
+    "industry": "home services",
+    "location": "Flint MI MI",
+    "website": "https://www.walmart.com/store/1928-flint-mi/home-services?veh=seo_loc",
+    "phone": "(833) 600-0406",
+    "owner_name": "",
+    "owner_title": "",
+    "contact_email": "",
+    "technology_stack": [
+      "SSL/HTTPS"
+    ],
+    "pain_points": [
+      "Limited Social Media Presence: No social media links detected on website",
+      "Potential Mobile Issues: No explicit mobile optimization claims found",
+      "Limited Online Payment Options: No clear online payment or invoicing system"
+    ],
+    "opportunities": [
+      "Social Media Strategy: Build engaged online community with automated posting",
+      "Mobile Optimization: Modern responsive website design",
+      "Online Payment Integration: Secure payment processing and invoicing"
+    ],
+    "confidence_score": 8,
+    "research_sources": [
+      {
+        "url": "https://www.walmart.com/store/1928-flint-mi/home-services?veh=seo_loc",
+        "type": "website_scrape",
+        "timestamp": "2026-08-27T11:15:11.666874+00:00"
+      },
+      {
+        "url": "https://www.walmart.com/contact",
+        "type": "website_scrape",
+        "timestamp": "2026-08-27T11:15:14.569922+00:00"
+      },
+      {
+        "url": "https://www.walmart.com/contact-us",
+        "type": "website_scrape",
+        "timestamp": "2026-08-27T11:15:16.538790+00:00"
+      },
+      {
+        "url": "https://www.walmart.com/contact.html",
+        "type": "website_scrape",
+        "timestamp": "2026-08-27T11:15:23.987904+00:00"
+      },
+      {
+        "url": "https://www.walmart.com/about",
+        "type": "website_scrape",
+        "timestamp": "2026-08-27T11:15:40.712547+00:00"
+      },
+      {
+        "type": "tech_stack_detection",
+        "detected": [
+          "SSL/HTTPS"
+        ],
+        "timestamp": "2026-08-27T11:15:40.713814+00:00"
+      }
+    ],
+    "notes": "Scraped 5 pages from website. Tech stack: SSL/HTTPS. Identified 3 pain points. Generated 3 opportunities.",
+    "filename": "walmart_home_services.md",
+    "osint_research": {
+      "scraped_pages": [
+        {
+          "url": "https://www.walmart.com/store/1928-flint-mi/home-services?veh=seo_loc",
+          "status": 200,
+          "content_length": 50968,
+          "content_type": "text/html; charset=utf-8"
+        },
+        {
+          "url": "https://www.walmart.com/contact",
+          "status": 200,
+          "content_length": 3208,
+          "content_type": "text/html; charset=utf-8"
+        },
+        {
+          "url": "https://www.walmart.com/contact-us",
+          "status": 200,
+          "content_length": 3208,
+          "content_type": "text/html; charset=utf-8"
+        },
+        {
+          "url": "https://www.walmart.com/contact.html",
+          "status": 200,
+          "content_length": 3208,
+          "content_type": "text/html; charset=utf-8"
+        },
+        {
+          "url": "https://www.walmart.com/about",
+          "status": 200,
+          "content_length": 3208,
+          "content_type": "text/html; charset=utf-8"
+        }
+      ],
+      "contact_info": {
+        "emails_found": [],
+        "phones_found": []
+      },
+      "data_completeness": {
+        "website_scraped": 10,
+        "contact_info_found": 0,
+        "tech_stack_detected": 10,
+        "pain_points_identified": 10,
+        "opportunities_generated": 5,
+        "business_info_extracted": 0
+      },
+      "legal_compliance": {
+        "accessed_data": "Publicly available website content and business directory data",
+        "compliance": [
+          "CFAA",
+          "GDPR",
+          "CCPA",
+          "CAN-SPAM"
+        ],
+        "data_use": "B2B sales prospecting - no personal data collected beyond public business contact info",
+        "opt_out": "privacy@soetechllc.com"
+      },
+      "researched_at": "2026-08-27T11:15:40.717271+00:00",
+      "researcher": "deep_osint.py v1.0"
+    }
+  },
+  {
+    "business_name": "Safely Nurse",
+    "industry": "home services",
+    "location": "Saginaw MI MI",
+    "website": "https://www.safelynurse.com/",
+    "phone": "(877) 837-2803",
+    "owner_name": "",
+    "owner_title": "",
+    "contact_email": "",
+    "technology_stack": [
+      "SSL/HTTPS"
+    ],
+    "pain_points": [
+      "Limited Social Media Presence: No social media links detected on website",
+      "Potential Mobile Issues: No explicit mobile optimization claims found",
+      "Limited Online Payment Options: No clear online payment or invoicing system"
+    ],
+    "opportunities": [
+      "Social Media Strategy: Build engaged online community with automated posting",
+      "Mobile Optimization: Modern responsive website design",
+      "Online Payment Integration: Secure payment processing and invoicing"
+    ],
+    "confidence_score": 8,
+    "research_sources": [
+      {
+        "url": "https://www.safelynurse.com/",
+        "type": "website_scrape",
+        "timestamp": "2026-08-27T11:15:46.144892+00:00"
+      },
+      {
+        "url": "https://www.safelynurse.com/contact",
+        "type": "website_scrape",
+        "timestamp": "2026-08-27T11:15:48.984376+00:00"
+      },
+      {
+        "url": "https://www.safelynurse.com/contact-us",
+        "type": "website_scrape",
+        "timestamp": "2026-08-27T11:15:52.543349+00:00"
+      },
+      {
+        "url": "https://www.safelynurse.com/about",
+        "type": "website_scrape",
+        "timestamp": "2026-08-27T11:16:24.904053+00:00"
+      },
+      {
+        "type": "tech_stack_detection",
+        "detected": [
+          "SSL/HTTPS"
+        ],
+        "timestamp": "2026-08-27T11:16:24.908744+00:00"
+      }
+    ],
+    "notes": "Scraped 4 pages from website. Tech stack: SSL/HTTPS. Identified 3 pain points. Generated 3 opportunities.",
+    "filename": "safely_nurse.md",
+    "osint_research": {
+      "scraped_pages": [
+        {
+          "url": "https://www.safelynurse.com/",
+          "status": 200,
+          "content_length": 32907,
+          "content_type": "text/html; charset=UTF-8"
+        },
+        {
+          "url": "https://www.safelynurse.com/contact",
+          "status": 200,
+          "content_length": 23685,
+          "content_type": "text/html; charset=UTF-8"
+        },
+        {
+          "url": "https://www.safelynurse.com/contact-us",
+          "status": 200,
+          "content_length": 23658,
+          "content_type": "text/html; charset=UTF-8"
+        },
+        {
+          "url": "https://www.safelynurse.com/about",
+          "status": 200,
+          "content_length": 29854,
+          "content_type": "text/html; charset=UTF-8"
+        }
+      ],
+      "contact_info": {
+        "emails_found": [],
+        "phones_found": []
+      },
+      "data_completeness": {
+        "website_scraped": 10,
+        "contact_info_found": 0,
+        "tech_stack_detected": 10,
+        "pain_points_identified": 10,
+        "opportunities_generated": 5,
+        "business_info_extracted": 0
+      },
+      "legal_compliance": {
+        "accessed_data": "Publicly available website content and business directory data",
+        "compliance": [
+          "CFAA",
+          "GDPR",
+          "CCPA",
+          "CAN-SPAM"
+        ],
+        "data_use": "B2B sales prospecting - no personal data collected beyond public business contact info",
+        "opt_out": "privacy@soetechllc.com"
+      },
+      "researched_at": "2026-08-27T11:16:24.914250+00:00",
+      "researcher": "deep_osint.py v1.0"
+    }
+  },
+  {
+    "business_name": "Comfort Keepers Bay City",
+    "industry": "home services",
+    "location": "Bay City MI MI",
+    "website": "https://www.comfortkeepers.com/offices/michigan/bay-city/?utm_source=local&utm_medium=organic",
+    "phone": "(989) 684-8448",
+    "owner_name": "",
+    "owner_title": "",
+    "contact_email": "",
+    "technology_stack": [
+      "SSL/HTTPS"
+    ],
+    "pain_points": [
+      "Limited Social Media Presence: No social media links detected on website",
+      "Potential Mobile Issues: No explicit mobile optimization claims found",
+      "Limited Online Payment Options: No clear online payment or invoicing system"
+    ],
+    "opportunities": [
+      "Social Media Strategy: Build engaged online community with automated posting",
+      "Mobile Optimization: Modern responsive website design",
+      "Online Payment Integration: Secure payment processing and invoicing"
+    ],
+    "confidence_score": 8,
+    "research_sources": [
+      {
+        "url": "https://www.comfortkeepers.com/offices/michigan/bay-city/?utm_source=local&utm_medium=organic",
+        "type": "website_scrape",
+        "timestamp": "2026-08-27T11:16:27.428178+00:00"
+      },
+      {
+        "url": "https://www.comfortkeepers.com/contact",
+        "type": "website_scrape",
+        "timestamp": "2026-08-27T11:16:29.644264+00:00"
+      },
+      {
+        "url": "https://www.comfortkeepers.com/contact-us",
+        "type": "website_scrape",
+        "timestamp": "2026-08-27T11:16:31.269987+00:00"
+      },
+      {
+        "url": "https://www.comfortkeepers.com/contact.html",
+        "type": "website_scrape",
+        "timestamp": "2026-08-27T11:16:35.021474+00:00"
+      },
+      {
+        "url": "https://www.comfortkeepers.com/contact-us.html",
+        "type": "website_scrape",
+        "timestamp": "2026-08-27T11:16:38.139587+00:00"
+      },
+      {
+        "url": "https://www.comfortkeepers.com/about",
+        "type": "website_scrape",
+        "timestamp": "2026-08-27T11:16:41.529854+00:00"
+      },
+      {
+        "type": "tech_stack_detection",
+        "detected": [
+          "SSL/HTTPS"
+        ],
+        "timestamp": "2026-08-27T11:16:41.532168+00:00"
+      }
+    ],
+    "notes": "Scraped 6 pages from website. Tech stack: SSL/HTTPS. Identified 3 pain points. Generated 3 opportunities.",
+    "filename": "comfort_keepers_bay_city.md",
+    "osint_research": {
+      "scraped_pages": [
+        {
+          "url": "https://www.comfortkeepers.com/offices/michigan/bay-city/?utm_source=local&utm_medium=organic",
+          "status": 200,
+          "content_length": 23265,
+          "content_type": "text/html; charset=utf-8"
+        },
+        {
+          "url": "https://www.comfortkeepers.com/contact",
+          "status": 200,
+          "content_length": 13814,
+          "content_type": "text/html; charset=utf-8"
+        },
+        {
+          "url": "https://www.comfortkeepers.com/contact-us",
+          "status": 200,
+          "content_length": 11517,
+          "content_type": "text/html; charset=utf-8"
+        },
+        {
+          "url": "https://www.comfortkeepers.com/contact.html",
+          "status": 200,
+          "content_length": 11517,
+          "content_type": "text/html; charset=utf-8"
+        },
+        {
+          "url": "https://www.comfortkeepers.com/contact-us.html",
+          "status": 200,
+          "content_length": 11517,
+          "content_type": "text/html; charset=utf-8"
+        },
+        {
+          "url": "https://www.comfortkeepers.com/about",
+          "status": 200,
+          "content_length": 11828,
+          "content_type": "text/html; charset=utf-8"
+        }
+      ],
+      "contact_info": {
+        "emails_found": [],
+        "phones_found": []
+      },
+      "data_completeness": {
+        "website_scraped": 10,
+        "contact_info_found": 0,
+        "tech_stack_detected": 10,
+        "pain_points_identified": 10,
+        "opportunities_generated": 5,
+        "business_info_extracted": 0
+      },
+      "legal_compliance": {
+        "accessed_data": "Publicly available website content and business directory data",
+        "compliance": [
+          "CFAA",
+          "GDPR",
+          "CCPA",
+          "CAN-SPAM"
+        ],
+        "data_use": "B2B sales prospecting - no personal data collected beyond public business contact info",
+        "opt_out": "privacy@soetechllc.com"
+      },
+      "researched_at": "2026-08-27T11:16:41.536476+00:00",
+      "researcher": "deep_osint.py v1.0"
+    }
+  },
+  {
+    "business_name": "First State Home Health & Hospice Care",
+    "industry": "home services",
+    "location": "Saginaw MI MI",
+    "website": "http://www.firststatehomehealth.com/",
+    "phone": "(989) 771-2100",
+    "owner_name": "",
+    "owner_title": "",
+    "contact_email": "",
+    "technology_stack": [
+      "Unknown (no CMS detected)"
+    ],
+    "pain_points": [
+      "Limited Social Media Presence: No social media links detected on website",
+      "Potential Mobile Issues: No explicit mobile optimization claims found",
+      "Limited Online Payment Options: No clear online payment or invoicing system"
+    ],
+    "opportunities": [
+      "Social Media Strategy: Build engaged online community with automated posting",
+      "Mobile Optimization: Modern responsive website design",
+      "Online Payment Integration: Secure payment processing and invoicing"
+    ],
+    "confidence_score": 7,
+    "research_sources": [
+      {
+        "url": "http://www.firststatehomehealth.com/",
+        "type": "website_scrape",
+        "timestamp": "2026-08-27T11:16:44.687151+00:00"
+      },
+      {
+        "url": "http://www.firststatehomehealth.com/contact",
+        "type": "website_scrape",
+        "timestamp": "2026-08-27T11:16:50.848816+00:00"
+      },
+      {
+        "url": "http://www.firststatehomehealth.com/about",
+        "type": "website_scrape",
+        "timestamp": "2026-08-27T11:17:35.506222+00:00"
+      },
+      {
+        "type": "tech_stack_detection",
+        "detected": [
+          "Unknown (no CMS detected)"
+        ],
+        "timestamp": "2026-08-27T11:17:35.509122+00:00"
+      }
+    ],
+    "notes": "Scraped 3 pages from website. Tech stack: Unknown (no CMS detected). Identified 3 pain points. Generated 3 opportunities.",
+    "filename": "first_state_home_health_hospice_care.md",
+    "osint_research": {
+      "scraped_pages": [
+        {
+          "url": "http://www.firststatehomehealth.com/",
+          "status": 200,
+          "content_length": 18506,
+          "content_type": "text/html; charset=UTF-8"
+        },
+        {
+          "url": "http://www.firststatehomehealth.com/contact",
+          "status": 200,
+          "content_length": 17265,
+          "content_type": "text/html; charset=UTF-8"
+        },
+        {
+          "url": "http://www.firststatehomehealth.com/about",
+          "status": 200,
+          "content_length": 16507,
+          "content_type": "text/html; charset=UTF-8"
+        }
+      ],
+      "contact_info": {
+        "emails_found": [],
+        "phones_found": []
+      },
+      "data_completeness": {
+        "website_scraped": 10,
+        "contact_info_found": 0,
+        "tech_stack_detected": 10,
+        "pain_points_identified": 10,
+        "opportunities_generated": 5,
+        "business_info_extracted": 0
+      },
+      "legal_compliance": {
+        "accessed_data": "Publicly available website content and business directory data",
+        "compliance": [
+          "CFAA",
+          "GDPR",
+          "CCPA",
+          "CAN-SPAM"
+        ],
+        "data_use": "B2B sales prospecting - no personal data collected beyond public business contact info",
+        "opt_out": "privacy@soetechllc.com"
+      },
+      "researched_at": "2026-08-27T11:17:35.512260+00:00",
+      "researcher": "deep_osint.py v1.0"
+    }
+  },
+  {
+    "business_name": "All Valley Home Health & Hospice Care",
+    "industry": "home services",
+    "location": "Saginaw MI MI",
+    "website": "http://www.valleyhospicecareinc.com/hospice-care-contact-us",
+    "phone": "(989) 401-3019",
+    "owner_name": "",
+    "owner_title": "",
+    "contact_email": "",
+    "technology_stack": [
+      "Unknown (no CMS detected)"
+    ],
+    "pain_points": [
+      "Limited Social Media Presence: No social media links detected on website",
+      "Potential Mobile Issues: No explicit mobile optimization claims found",
+      "Limited Online Payment Options: No clear online payment or invoicing system"
+    ],
+    "opportunities": [
+      "Social Media Strategy: Build engaged online community with automated posting",
+      "Mobile Optimization: Modern responsive website design",
+      "Online Payment Integration: Secure payment processing and invoicing"
+    ],
+    "confidence_score": 7,
+    "research_sources": [
+      {
+        "url": "http://www.valleyhospicecareinc.com/hospice-care-contact-us",
+        "type": "website_scrape",
+        "timestamp": "2026-08-27T11:17:38.636473+00:00"
+      },
+      {
+        "url": "http://www.valleyhospicecareinc.com/contact",
+        "type": "website_scrape",
+        "timestamp": "2026-08-27T11:17:41.242224+00:00"
+      },
+      {
+        "url": "http://www.valleyhospicecareinc.com/contact-us",
+        "type": "website_scrape",
+        "timestamp": "2026-08-27T11:17:43.619033+00:00"
+      },
+      {
+        "url": "http://www.valleyhospicecareinc.com/contact.html",
+        "type": "website_scrape",
+        "timestamp": "2026-08-27T11:17:45.893387+00:00"
+      },
+      {
+        "url": "http://www.valleyhospicecareinc.com/contact-us.html",
+        "type": "website_scrape",
+        "timestamp": "2026-08-27T11:17:47.664693+00:00"
+      },
+      {
+        "url": "http://www.valleyhospicecareinc.com/about",
+        "type": "website_scrape",
+        "timestamp": "2026-08-27T11:17:49.666201+00:00"
+      },
+      {
+        "type": "tech_stack_detection",
+        "detected": [
+          "Unknown (no CMS detected)"
+        ],
+        "timestamp": "2026-08-27T11:17:49.666346+00:00"
+      }
+    ],
+    "notes": "Scraped 6 pages from website. Tech stack: Unknown (no CMS detected). Identified 3 pain points. Generated 3 opportunities.",
+    "filename": "all_valley_home_health_hospice_care.md",
+    "osint_research": {
+      "scraped_pages": [
+        {
+          "url": "http://www.valleyhospicecareinc.com/hospice-care-contact-us",
+          "status": 200,
+          "content_length": 393,
+          "content_type": "text/html; charset=UTF-8"
+        },
+        {
+          "url": "http://www.valleyhospicecareinc.com/contact",
+          "status": 200,
+          "content_length": 393,
+          "content_type": "text/html; charset=UTF-8"
+        },
+        {
+          "url": "http://www.valleyhospicecareinc.com/contact-us",
+          "status": 200,
+          "content_length": 393,
+          "content_type": "text/html; charset=UTF-8"
+        },
+        {
+          "url": "http://www.valleyhospicecareinc.com/contact.html",
+          "status": 200,
+          "content_length": 393,
+          "content_type": "text/html; charset=UTF-8"
+        },
+        {
+          "url": "http://www.valleyhospicecareinc.com/contact-us.html",
+          "status": 200,
+          "content_length": 393,
+          "content_type": "text/html; charset=UTF-8"
+        },
+        {
+          "url": "http://www.valleyhospicecareinc.com/about",
+          "status": 200,
+          "content_length": 393,
+          "content_type": "text/html; charset=UTF-8"
+        }
+      ],
+      "contact_info": {
+        "emails_found": [],
+        "phones_found": []
+      },
+      "data_completeness": {
+        "website_scraped": 10,
+        "contact_info_found": 0,
+        "tech_stack_detected": 10,
+        "pain_points_identified": 10,
+        "opportunities_generated": 5,
+        "business_info_extracted": 0
+      },
+      "legal_compliance": {
+        "accessed_data": "Publicly available website content and business directory data",
+        "compliance": [
+          "CFAA",
+          "GDPR",
+          "CCPA",
+          "CAN-SPAM"
+        ],
+        "data_use": "B2B sales prospecting - no personal data collected beyond public business contact info",
+        "opt_out": "privacy@soetechllc.com"
+      },
+      "researched_at": "2026-08-27T11:17:49.666626+00:00",
+      "researcher": "deep_osint.py v1.0"
+    }
+  },
+  {
+    "business_name": "Queen Of Clean Services",
+    "industry": "home services",
+    "location": "Midland MI MI",
+    "website": "https://www.queenofcleanservicesmi.com/",
+    "phone": "(989) 225-9699",
+    "owner_name": "",
+    "owner_title": "",
+    "contact_email": "",
+    "technology_stack": [
+      "SSL/HTTPS"
+    ],
+    "pain_points": [],
+    "opportunities": [],
+    "confidence_score": 1,
+    "research_sources": [
+      {
+        "type": "tech_stack_detection",
+        "detected": [
+          "SSL/HTTPS"
+        ],
+        "timestamp": "2026-08-27T11:18:06.394290+00:00"
+      }
+    ],
+    "notes": "Tech stack: SSL/HTTPS.",
+    "filename": "queen_of_clean_services.md",
+    "osint_research": {
+      "scraped_pages": [],
+      "contact_info": {},
+      "data_completeness": {
+        "website_scraped": 0,
+        "contact_info_found": 0,
+        "tech_stack_detected": 10,
+        "pain_points_identified": 0,
+        "opportunities_generated": 0,
+        "business_info_extracted": 0
+      },
+      "legal_compliance": {
+        "accessed_data": "Publicly available website content and business directory data",
+        "compliance": [
+          "CFAA",
+          "GDPR",
+          "CCPA",
+          "CAN-SPAM"
+        ],
+        "data_use": "B2B sales prospecting - no personal data collected beyond public business contact info",
+        "opt_out": "privacy@soetechllc.com"
+      },
+      "researched_at": "2026-08-27T11:18:06.394418+00:00",
+      "researcher": "deep_osint.py v1.0"
+    }
+  },
+  {
+    "business_name": "AdvisaCare Home Health & Hospice",
+    "industry": "home services",
+    "location": "Flint MI MI",
+    "website": "http://www.advisacare.com/",
+    "phone": "(810) 743-8888",
+    "owner_name": "",
+    "owner_title": "",
+    "contact_email": "",
+    "technology_stack": [
+      "Unknown (no CMS detected)"
+    ],
+    "pain_points": [
+      "Limited Social Media Presence: No social media links detected on website",
+      "Potential Mobile Issues: No explicit mobile optimization claims found",
+      "Limited Online Payment Options: No clear online payment or invoicing system"
+    ],
+    "opportunities": [
+      "Social Media Strategy: Build engaged online community with automated posting",
+      "Mobile Optimization: Modern responsive website design",
+      "Online Payment Integration: Secure payment processing and invoicing"
+    ],
+    "confidence_score": 7,
+    "research_sources": [
+      {
+        "url": "http://www.advisacare.com/",
+        "type": "website_scrape",
+        "timestamp": "2026-08-27T11:18:10.074818+00:00"
+      },
+      {
+        "url": "http://www.advisacare.com/contact",
+        "type": "website_scrape",
+        "timestamp": "2026-08-27T11:18:13.618986+00:00"
+      },
+      {
+        "url": "http://www.advisacare.com/about",
+        "type": "website_scrape",
+        "timestamp": "2026-08-27T11:18:53.313575+00:00"
+      },
+      {
+        "type": "tech_stack_detection",
+        "detected": [
+          "Unknown (no CMS detected)"
+        ],
+        "timestamp": "2026-08-27T11:18:53.317234+00:00"
+      }
+    ],
+    "notes": "Scraped 3 pages from website. Tech stack: Unknown (no CMS detected). Identified 3 pain points. Generated 3 opportunities.",
+    "filename": "advisacare_home_health_hospice.md",
+    "osint_research": {
+      "scraped_pages": [
+        {
+          "url": "http://www.advisacare.com/",
+          "status": 200,
+          "content_length": 27212,
+          "content_type": "text/html; charset=UTF-8"
+        },
+        {
+          "url": "http://www.advisacare.com/contact",
+          "status": 200,
+          "content_length": 22397,
+          "content_type": "text/html; charset=UTF-8"
+        },
+        {
+          "url": "http://www.advisacare.com/about",
+          "status": 200,
+          "content_length": 22330,
+          "content_type": "text/html; charset=UTF-8"
+        }
+      ],
+      "contact_info": {
+        "emails_found": [],
+        "phones_found": []
+      },
+      "data_completeness": {
+        "website_scraped": 10,
+        "contact_info_found": 0,
+        "tech_stack_detected": 10,
+        "pain_points_identified": 10,
+        "opportunities_generated": 5,
+        "business_info_extracted": 0
+      },
+      "legal_compliance": {
+        "accessed_data": "Publicly available website content and business directory data",
+        "compliance": [
+          "CFAA",
+          "GDPR",
+          "CCPA",
+          "CAN-SPAM"
+        ],
+        "data_use": "B2B sales prospecting - no personal data collected beyond public business contact info",
+        "opt_out": "privacy@soetechllc.com"
+      },
+      "researched_at": "2026-08-27T11:18:53.321241+00:00",
+      "researcher": "deep_osint.py v1.0"
+    }
+  },
+  {
+    "business_name": "HarmonyCares Medical Group",
+    "industry": "home services",
+    "location": "Bay City MI MI",
+    "website": "https://harmonycares.com/service-areas/michigan/saginaw/?utm_source=gmb&utm_medium=yext&utm_campaign=bay-city",
+    "phone": "(989) 686-9866",
+    "owner_name": "",
+    "owner_title": "",
+    "contact_email": "",
+    "technology_stack": [
+      "SSL/HTTPS"
+    ],
+    "pain_points": [
+      "Limited Social Media Presence: No social media links detected on website",
+      "Potential Mobile Issues: No explicit mobile optimization claims found",
+      "Limited Online Payment Options: No clear online payment or invoicing system"
+    ],
+    "opportunities": [
+      "Social Media Strategy: Build engaged online community with automated posting",
+      "Mobile Optimization: Modern responsive website design",
+      "Online Payment Integration: Secure payment processing and invoicing"
+    ],
+    "confidence_score": 8,
+    "research_sources": [
+      {
+        "url": "https://harmonycares.com/service-areas/michigan/saginaw/?utm_source=gmb&utm_medium=yext&utm_campaign=bay-city",
+        "type": "website_scrape",
+        "timestamp": "2026-08-27T11:18:56.553245+00:00"
+      },
+      {
+        "url": "https://harmonycares.com/contact",
+        "type": "website_scrape",
+        "timestamp": "2026-08-27T11:18:58.662497+00:00"
+      },
+      {
+        "url": "https://harmonycares.com/contact-us",
+        "type": "website_scrape",
+        "timestamp": "2026-08-27T11:19:00.547545+00:00"
+      },
+      {
+        "url": "https://harmonycares.com/about",
+        "type": "website_scrape",
+        "timestamp": "2026-08-27T11:19:29.603762+00:00"
+      },
+      {
+        "type": "tech_stack_detection",
+        "detected": [
+          "SSL/HTTPS"
+        ],
+        "timestamp": "2026-08-27T11:19:29.610579+00:00"
+      }
+    ],
+    "notes": "Scraped 4 pages from website. Tech stack: SSL/HTTPS. Identified 3 pain points. Generated 3 opportunities.",
+    "filename": "harmonycares_medical_group.md",
+    "osint_research": {
+      "scraped_pages": [
+        {
+          "url": "https://harmonycares.com/service-areas/michigan/saginaw/?utm_source=gmb&utm_medium=yext&utm_campaign=bay-city",
+          "status": 200,
+          "content_length": 34519,
+          "content_type": "text/html; charset=UTF-8"
+        },
+        {
+          "url": "https://harmonycares.com/contact",
+          "status": 200,
+          "content_length": 31502,
+          "content_type": "text/html; charset=UTF-8"
+        },
+        {
+          "url": "https://harmonycares.com/contact-us",
+          "status": 200,
+          "content_length": 31499,
+          "content_type": "text/html; charset=UTF-8"
+        },
+        {
+          "url": "https://harmonycares.com/about",
+          "status": 200,
+          "content_length": 41795,
+          "content_type": "text/html; charset=UTF-8"
+        }
+      ],
+      "contact_info": {
+        "emails_found": [],
+        "phones_found": []
+      },
+      "data_completeness": {
+        "website_scraped": 10,
+        "contact_info_found": 0,
+        "tech_stack_detected": 10,
+        "pain_points_identified": 10,
+        "opportunities_generated": 5,
+        "business_info_extracted": 0
+      },
+      "legal_compliance": {
+        "accessed_data": "Publicly available website content and business directory data",
+        "compliance": [
+          "CFAA",
+          "GDPR",
+          "CCPA",
+          "CAN-SPAM"
+        ],
+        "data_use": "B2B sales prospecting - no personal data collected beyond public business contact info",
+        "opt_out": "privacy@soetechllc.com"
+      },
+      "researched_at": "2026-08-27T11:19:29.617842+00:00",
       "researcher": "deep_osint.py v1.0"
     }
   }

@@ -1,14 +1,14 @@
 {
-  "business_name": "Hyper Digital Marketing",
-  "industry": "marketing agencies",
-  "location": "Bay City MI MI",
-  "website": "http://www.hyperdm.com/",
-  "phone": "(248) 234-1499",
+  "business_name": "FirstLight Home Care of Greater Genesee County",
+  "industry": "home services",
+  "location": "Flint MI MI",
+  "website": "https://www.firstlighthomecare.com/home-healthcare-greater-genesee-county/?utm_source=google&utm_medium=organic&utm_campaign=gbp",
+  "phone": "(810) 875-9805",
   "owner_name": "",
   "owner_title": "",
   "contact_email": "",
   "technology_stack": [
-    "Unknown (no CMS detected)"
+    "SSL/HTTPS"
   ],
   "pain_points": [
     "Limited Social Media Presence: No social media links detected on website",
@@ -20,29 +20,40 @@
     "Mobile Optimization: Modern responsive website design",
     "Online Payment Integration: Secure payment processing and invoicing"
   ],
-  "confidence_score": 6,
+  "confidence_score": 8,
   "research_sources": [
     {
-      "url": "http://www.hyperdm.com/",
+      "url": "https://www.firstlighthomecare.com/home-healthcare-greater-genesee-county/?utm_source=google&utm_medium=organic&utm_campaign=gbp",
       "type": "website_scrape",
-      "timestamp": "2026-08-26T11:32:03.748122+00:00"
+      "timestamp": "2026-08-27T11:05:23.106655+00:00"
+    },
+    {
+      "url": "https://www.firstlighthomecare.com/contact-us",
+      "type": "website_scrape",
+      "timestamp": "2026-08-27T11:05:37.518850+00:00"
     },
     {
       "type": "tech_stack_detection",
       "detected": [
-        "Unknown (no CMS detected)"
+        "SSL/HTTPS"
       ],
-      "timestamp": "2026-08-26T11:33:05.169151+00:00"
+      "timestamp": "2026-08-27T11:06:11.329719+00:00"
     }
   ],
-  "notes": "Scraped 1 pages from website. Tech stack: Unknown (no CMS detected). Identified 3 pain points. Generated 3 opportunities.",
-  "filename": "hyper_digital_marketing.md",
+  "notes": "Scraped 2 pages from website. Tech stack: SSL/HTTPS. Identified 3 pain points. Generated 3 opportunities.",
+  "filename": "firstlight_home_care_of_greater_genesee_county.md",
   "osint_research": {
     "scraped_pages": [
       {
-        "url": "http://www.hyperdm.com/",
+        "url": "https://www.firstlighthomecare.com/home-healthcare-greater-genesee-county/?utm_source=google&utm_medium=organic&utm_campaign=gbp",
         "status": 200,
-        "content_length": 146310,
+        "content_length": 25997,
+        "content_type": "text/html; charset=UTF-8"
+      },
+      {
+        "url": "https://www.firstlighthomecare.com/contact-us",
+        "status": 200,
+        "content_length": 23044,
         "content_type": "text/html; charset=UTF-8"
       }
     ],
@@ -69,7 +80,7 @@
       "data_use": "B2B sales prospecting - no personal data collected beyond public business contact info",
       "opt_out": "privacy@soetechllc.com"
     },
-    "researched_at": "2026-08-26T11:33:05.181562+00:00",
+    "researched_at": "2026-08-27T11:06:11.332308+00:00",
     "researcher": "deep_osint.py v1.0"
   }
 }

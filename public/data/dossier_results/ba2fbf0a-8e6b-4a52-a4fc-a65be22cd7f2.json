@@ -1,24 +1,21 @@
 {
-  "business_name": "Make The Turn",
-  "industry": "marketing agencies",
-  "location": "Flint MI MI",
-  "website": "https://www.maketheturn.com/",
-  "phone": "(248) 823-8121",
+  "business_name": "Victors Home Solutions",
+  "industry": "home services",
+  "location": "Saginaw MI MI",
+  "website": "https://victors.com/areas-served/saginaw/?UTM_source=gmb_listingSaginaw&UTM_medium=organic",
+  "phone": "(989) 653-6434",
   "owner_name": "",
   "owner_title": "",
   "contact_email": "",
   "technology_stack": [
-    "Wix",
     "SSL/HTTPS"
   ],
   "pain_points": [
-    "Outdated Website Platform: Uses Wix; may lack modern features and SEO capabilities",
     "Limited Social Media Presence: No social media links detected on website",
     "Potential Mobile Issues: No explicit mobile optimization claims found",
     "Limited Online Payment Options: No clear online payment or invoicing system"
   ],
   "opportunities": [
-    "Website Modernization: Upgrade to a modern, feature-rich platform",
     "Social Media Strategy: Build engaged online community with automated posting",
     "Mobile Optimization: Modern responsive website design",
     "Online Payment Integration: Secure payment processing and invoicing"
@@ -26,38 +23,59 @@
   "confidence_score": 8,
   "research_sources": [
     {
-      "url": "https://www.maketheturn.com/",
+      "url": "https://victors.com/areas-served/saginaw/?UTM_source=gmb_listingSaginaw&UTM_medium=organic",
       "type": "website_scrape",
-      "timestamp": "2026-08-27T11:04:35.435280+00:00"
+      "timestamp": "2026-08-26T11:20:41.079854+00:00"
     },
     {
-      "url": "https://www.maketheturn.com/contact",
+      "url": "https://victors.com/contact",
       "type": "website_scrape",
-      "timestamp": "2026-08-27T11:04:38.704959+00:00"
+      "timestamp": "2026-08-26T11:20:44.488995+00:00"
+    },
+    {
+      "url": "https://victors.com/contact-us",
+      "type": "website_scrape",
+      "timestamp": "2026-08-26T11:20:46.394915+00:00"
+    },
+    {
+      "url": "https://victors.com/about",
+      "type": "website_scrape",
+      "timestamp": "2026-08-26T11:21:12.858778+00:00"
     },
     {
       "type": "tech_stack_detection",
       "detected": [
-        "Wix",
         "SSL/HTTPS"
       ],
-      "timestamp": "2026-08-27T11:05:20.845942+00:00"
+      "timestamp": "2026-08-26T11:21:12.861821+00:00"
     }
   ],
-  "notes": "Scraped 2 pages from website. Tech stack: Wix, SSL/HTTPS. Identified 4 pain points. Generated 4 opportunities.",
-  "filename": "make_the_turn.md",
+  "notes": "Scraped 4 pages from website. Tech stack: SSL/HTTPS. Identified 3 pain points. Generated 3 opportunities.",
+  "filename": "victors_home_solutions.md",
   "osint_research": {
     "scraped_pages": [
       {
-        "url": "https://www.maketheturn.com/",
+        "url": "https://victors.com/areas-served/saginaw/?UTM_source=gmb_listingSaginaw&UTM_medium=organic",
         "status": 200,
-        "content_length": 258997,
+        "content_length": 24454,
         "content_type": "text/html; charset=UTF-8"
       },
       {
-        "url": "https://www.maketheturn.com/contact",
+        "url": "https://victors.com/contact",
         "status": 200,
-        "content_length": 238483,
+        "content_length": 21711,
+        "content_type": "text/html; charset=UTF-8"
+      },
+      {
+        "url": "https://victors.com/contact-us",
+        "status": 200,
+        "content_length": 21711,
+        "content_type": "text/html; charset=UTF-8"
+      },
+      {
+        "url": "https://victors.com/about",
+        "status": 200,
+        "content_length": 15672,
         "content_type": "text/html; charset=UTF-8"
       }
     ],
@@ -84,7 +102,7 @@
       "data_use": "B2B sales prospecting - no personal data collected beyond public business contact info",
       "opt_out": "privacy@soetechllc.com"
     },
-    "researched_at": "2026-08-27T11:05:20.871242+00:00",
+    "researched_at": "2026-08-26T11:21:12.866804+00:00",
     "researcher": "deep_osint.py v1.0"
   }
 }

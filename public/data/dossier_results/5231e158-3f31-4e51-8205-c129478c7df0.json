@@ -1,0 +1,130 @@
+{
+  "business_name": "CenterWell Home Health",
+  "industry": "home services",
+  "location": "Flint MI MI",
+  "website": "https://www.centerwell.com/find-care/home-health/location?location=CenterWell%20Home%20Health%20-%20Flint&hcode=H078&utm_source=Organic&utm_campaign=GBP",
+  "phone": "(810) 732-9030",
+  "owner_name": "",
+  "owner_title": "",
+  "contact_email": "",
+  "technology_stack": [
+    "SSL/HTTPS"
+  ],
+  "pain_points": [
+    "Limited Social Media Presence: No social media links detected on website",
+    "Potential Mobile Issues: No explicit mobile optimization claims found",
+    "Limited Online Payment Options: No clear online payment or invoicing system"
+  ],
+  "opportunities": [
+    "Social Media Strategy: Build engaged online community with automated posting",
+    "Mobile Optimization: Modern responsive website design",
+    "Online Payment Integration: Secure payment processing and invoicing"
+  ],
+  "confidence_score": 8,
+  "research_sources": [
+    {
+      "url": "https://www.centerwell.com/find-care/home-health/location?location=CenterWell%20Home%20Health%20-%20Flint&hcode=H078&utm_source=Organic&utm_campaign=GBP",
+      "type": "website_scrape",
+      "timestamp": "2026-08-26T11:31:38.946088+00:00"
+    },
+    {
+      "url": "https://www.centerwell.com/contact",
+      "type": "website_scrape",
+      "timestamp": "2026-08-26T11:31:47.172931+00:00"
+    },
+    {
+      "url": "https://www.centerwell.com/contact-us",
+      "type": "website_scrape",
+      "timestamp": "2026-08-26T11:31:51.683243+00:00"
+    },
+    {
+      "url": "https://www.centerwell.com/contact.html",
+      "type": "website_scrape",
+      "timestamp": "2026-08-26T11:31:54.560036+00:00"
+    },
+    {
+      "url": "https://www.centerwell.com/contact-us.html",
+      "type": "website_scrape",
+      "timestamp": "2026-08-26T11:31:56.912455+00:00"
+    },
+    {
+      "url": "https://www.centerwell.com/about",
+      "type": "website_scrape",
+      "timestamp": "2026-08-26T11:32:00.819559+00:00"
+    },
+    {
+      "type": "tech_stack_detection",
+      "detected": [
+        "SSL/HTTPS"
+      ],
+      "timestamp": "2026-08-26T11:32:00.821401+00:00"
+    }
+  ],
+  "notes": "Scraped 6 pages from website. Tech stack: SSL/HTTPS. Identified 3 pain points. Generated 3 opportunities.",
+  "filename": "centerwell_home_health.md",
+  "osint_research": {
+    "scraped_pages": [
+      {
+        "url": "https://www.centerwell.com/find-care/home-health/location?location=CenterWell%20Home%20Health%20-%20Flint&hcode=H078&utm_source=Organic&utm_campaign=GBP",
+        "status": 200,
+        "content_length": 14739,
+        "content_type": "text/html; charset=utf-8"
+      },
+      {
+        "url": "https://www.centerwell.com/contact",
+        "status": 200,
+        "content_length": 9036,
+        "content_type": "text/html; charset=utf-8"
+      },
+      {
+        "url": "https://www.centerwell.com/contact-us",
+        "status": 200,
+        "content_length": 8980,
+        "content_type": "text/html; charset=utf-8"
+      },
+      {
+        "url": "https://www.centerwell.com/contact.html",
+        "status": 200,
+        "content_length": 3910,
+        "content_type": "text/html; charset=utf-8"
+      },
+      {
+        "url": "https://www.centerwell.com/contact-us.html",
+        "status": 200,
+        "content_length": 3928,
+        "content_type": "text/html; charset=utf-8"
+      },
+      {
+        "url": "https://www.centerwell.com/about",
+        "status": 200,
+        "content_length": 8982,
+        "content_type": "text/html; charset=utf-8"
+      }
+    ],
+    "contact_info": {
+      "emails_found": [],
+      "phones_found": []
+    },
+    "data_completeness": {
+      "website_scraped": 10,
+      "contact_info_found": 0,
+      "tech_stack_detected": 10,
+      "pain_points_identified": 10,
+      "opportunities_generated": 5,
+      "business_info_extracted": 0
+    },
+    "legal_compliance": {
+      "accessed_data": "Publicly available website content and business directory data",
+      "compliance": [
+        "CFAA",
+        "GDPR",
+        "CCPA",
+        "CAN-SPAM"
+      ],
+      "data_use": "B2B sales prospecting - no personal data collected beyond public business contact info",
+      "opt_out": "privacy@soetechllc.com"
+    },
+    "researched_at": "2026-08-26T11:32:00.824512+00:00",
+    "researcher": "deep_osint.py v1.0"
+  }
+}

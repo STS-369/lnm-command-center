@@ -1,0 +1,119 @@
+{
+  "business_name": "Walmart Home Services",
+  "industry": "home services",
+  "location": "Flint MI MI",
+  "website": "https://www.walmart.com/store/1928-flint-mi/home-services?veh=seo_loc",
+  "phone": "(833) 600-0406",
+  "owner_name": "",
+  "owner_title": "",
+  "contact_email": "",
+  "technology_stack": [
+    "SSL/HTTPS"
+  ],
+  "pain_points": [
+    "Limited Social Media Presence: No social media links detected on website",
+    "Potential Mobile Issues: No explicit mobile optimization claims found",
+    "Limited Online Payment Options: No clear online payment or invoicing system"
+  ],
+  "opportunities": [
+    "Social Media Strategy: Build engaged online community with automated posting",
+    "Mobile Optimization: Modern responsive website design",
+    "Online Payment Integration: Secure payment processing and invoicing"
+  ],
+  "confidence_score": 8,
+  "research_sources": [
+    {
+      "url": "https://www.walmart.com/store/1928-flint-mi/home-services?veh=seo_loc",
+      "type": "website_scrape",
+      "timestamp": "2026-08-27T11:15:11.666874+00:00"
+    },
+    {
+      "url": "https://www.walmart.com/contact",
+      "type": "website_scrape",
+      "timestamp": "2026-08-27T11:15:14.569922+00:00"
+    },
+    {
+      "url": "https://www.walmart.com/contact-us",
+      "type": "website_scrape",
+      "timestamp": "2026-08-27T11:15:16.538790+00:00"
+    },
+    {
+      "url": "https://www.walmart.com/contact.html",
+      "type": "website_scrape",
+      "timestamp": "2026-08-27T11:15:23.987904+00:00"
+    },
+    {
+      "url": "https://www.walmart.com/about",
+      "type": "website_scrape",
+      "timestamp": "2026-08-27T11:15:40.712547+00:00"
+    },
+    {
+      "type": "tech_stack_detection",
+      "detected": [
+        "SSL/HTTPS"
+      ],
+      "timestamp": "2026-08-27T11:15:40.713814+00:00"
+    }
+  ],
+  "notes": "Scraped 5 pages from website. Tech stack: SSL/HTTPS. Identified 3 pain points. Generated 3 opportunities.",
+  "filename": "walmart_home_services.md",
+  "osint_research": {
+    "scraped_pages": [
+      {
+        "url": "https://www.walmart.com/store/1928-flint-mi/home-services?veh=seo_loc",
+        "status": 200,
+        "content_length": 50968,
+        "content_type": "text/html; charset=utf-8"
+      },
+      {
+        "url": "https://www.walmart.com/contact",
+        "status": 200,
+        "content_length": 3208,
+        "content_type": "text/html; charset=utf-8"
+      },
+      {
+        "url": "https://www.walmart.com/contact-us",
+        "status": 200,
+        "content_length": 3208,
+        "content_type": "text/html; charset=utf-8"
+      },
+      {
+        "url": "https://www.walmart.com/contact.html",
+        "status": 200,
+        "content_length": 3208,
+        "content_type": "text/html; charset=utf-8"
+      },
+      {
+        "url": "https://www.walmart.com/about",
+        "status": 200,
+        "content_length": 3208,
+        "content_type": "text/html; charset=utf-8"
+      }
+    ],
+    "contact_info": {
+      "emails_found": [],
+      "phones_found": []
+    },
+    "data_completeness": {
+      "website_scraped": 10,
+      "contact_info_found": 0,
+      "tech_stack_detected": 10,
+      "pain_points_identified": 10,
+      "opportunities_generated": 5,
+      "business_info_extracted": 0
+    },
+    "legal_compliance": {
+      "accessed_data": "Publicly available website content and business directory data",
+      "compliance": [
+        "CFAA",
+        "GDPR",
+        "CCPA",
+        "CAN-SPAM"
+      ],
+      "data_use": "B2B sales prospecting - no personal data collected beyond public business contact info",
+      "opt_out": "privacy@soetechllc.com"
+    },
+    "researched_at": "2026-08-27T11:15:40.717271+00:00",
+    "researcher": "deep_osint.py v1.0"
+  }
+}

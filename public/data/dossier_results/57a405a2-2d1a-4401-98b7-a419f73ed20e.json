@@ -1,9 +1,9 @@
 {
-  "business_name": "Hyper Digital Marketing",
-  "industry": "marketing agencies",
-  "location": "Bay City MI MI",
-  "website": "http://www.hyperdm.com/",
-  "phone": "(248) 234-1499",
+  "business_name": "AdvisaCare Home Health & Hospice",
+  "industry": "home services",
+  "location": "Flint MI MI",
+  "website": "http://www.advisacare.com/",
+  "phone": "(810) 743-8888",
   "owner_name": "",
   "owner_title": "",
   "contact_email": "",
@@ -20,29 +20,51 @@
     "Mobile Optimization: Modern responsive website design",
     "Online Payment Integration: Secure payment processing and invoicing"
   ],
-  "confidence_score": 6,
+  "confidence_score": 7,
   "research_sources": [
     {
-      "url": "http://www.hyperdm.com/",
+      "url": "http://www.advisacare.com/",
       "type": "website_scrape",
-      "timestamp": "2026-08-26T11:32:03.748122+00:00"
+      "timestamp": "2026-08-27T11:18:10.074818+00:00"
+    },
+    {
+      "url": "http://www.advisacare.com/contact",
+      "type": "website_scrape",
+      "timestamp": "2026-08-27T11:18:13.618986+00:00"
+    },
+    {
+      "url": "http://www.advisacare.com/about",
+      "type": "website_scrape",
+      "timestamp": "2026-08-27T11:18:53.313575+00:00"
     },
     {
       "type": "tech_stack_detection",
       "detected": [
         "Unknown (no CMS detected)"
       ],
-      "timestamp": "2026-08-26T11:33:05.169151+00:00"
+      "timestamp": "2026-08-27T11:18:53.317234+00:00"
     }
   ],
-  "notes": "Scraped 1 pages from website. Tech stack: Unknown (no CMS detected). Identified 3 pain points. Generated 3 opportunities.",
-  "filename": "hyper_digital_marketing.md",
+  "notes": "Scraped 3 pages from website. Tech stack: Unknown (no CMS detected). Identified 3 pain points. Generated 3 opportunities.",
+  "filename": "advisacare_home_health_hospice.md",
   "osint_research": {
     "scraped_pages": [
       {
-        "url": "http://www.hyperdm.com/",
+        "url": "http://www.advisacare.com/",
         "status": 200,
-        "content_length": 146310,
+        "content_length": 27212,
+        "content_type": "text/html; charset=UTF-8"
+      },
+      {
+        "url": "http://www.advisacare.com/contact",
+        "status": 200,
+        "content_length": 22397,
+        "content_type": "text/html; charset=UTF-8"
+      },
+      {
+        "url": "http://www.advisacare.com/about",
+        "status": 200,
+        "content_length": 22330,
         "content_type": "text/html; charset=UTF-8"
       }
     ],
@@ -69,7 +91,7 @@
       "data_use": "B2B sales prospecting - no personal data collected beyond public business contact info",
       "opt_out": "privacy@soetechllc.com"
     },
-    "researched_at": "2026-08-26T11:33:05.181562+00:00",
+    "researched_at": "2026-08-27T11:18:53.321241+00:00",
     "researcher": "deep_osint.py v1.0"
   }
 }

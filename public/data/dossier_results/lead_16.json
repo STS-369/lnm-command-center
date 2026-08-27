@@ -1,0 +1,130 @@
+{
+  "business_name": "All Valley Home Health & Hospice Care",
+  "industry": "home services",
+  "location": "Saginaw MI MI",
+  "website": "http://www.valleyhospicecareinc.com/hospice-care-contact-us",
+  "phone": "(989) 401-3019",
+  "owner_name": "",
+  "owner_title": "",
+  "contact_email": "",
+  "technology_stack": [
+    "Unknown (no CMS detected)"
+  ],
+  "pain_points": [
+    "Limited Social Media Presence: No social media links detected on website",
+    "Potential Mobile Issues: No explicit mobile optimization claims found",
+    "Limited Online Payment Options: No clear online payment or invoicing system"
+  ],
+  "opportunities": [
+    "Social Media Strategy: Build engaged online community with automated posting",
+    "Mobile Optimization: Modern responsive website design",
+    "Online Payment Integration: Secure payment processing and invoicing"
+  ],
+  "confidence_score": 7,
+  "research_sources": [
+    {
+      "url": "http://www.valleyhospicecareinc.com/hospice-care-contact-us",
+      "type": "website_scrape",
+      "timestamp": "2026-08-27T11:17:38.636473+00:00"
+    },
+    {
+      "url": "http://www.valleyhospicecareinc.com/contact",
+      "type": "website_scrape",
+      "timestamp": "2026-08-27T11:17:41.242224+00:00"
+    },
+    {
+      "url": "http://www.valleyhospicecareinc.com/contact-us",
+      "type": "website_scrape",
+      "timestamp": "2026-08-27T11:17:43.619033+00:00"
+    },
+    {
+      "url": "http://www.valleyhospicecareinc.com/contact.html",
+      "type": "website_scrape",
+      "timestamp": "2026-08-27T11:17:45.893387+00:00"
+    },
+    {
+      "url": "http://www.valleyhospicecareinc.com/contact-us.html",
+      "type": "website_scrape",
+      "timestamp": "2026-08-27T11:17:47.664693+00:00"
+    },
+    {
+      "url": "http://www.valleyhospicecareinc.com/about",
+      "type": "website_scrape",
+      "timestamp": "2026-08-27T11:17:49.666201+00:00"
+    },
+    {
+      "type": "tech_stack_detection",
+      "detected": [
+        "Unknown (no CMS detected)"
+      ],
+      "timestamp": "2026-08-27T11:17:49.666346+00:00"
+    }
+  ],
+  "notes": "Scraped 6 pages from website. Tech stack: Unknown (no CMS detected). Identified 3 pain points. Generated 3 opportunities.",
+  "filename": "all_valley_home_health_hospice_care.md",
+  "osint_research": {
+    "scraped_pages": [
+      {
+        "url": "http://www.valleyhospicecareinc.com/hospice-care-contact-us",
+        "status": 200,
+        "content_length": 393,
+        "content_type": "text/html; charset=UTF-8"
+      },
+      {
+        "url": "http://www.valleyhospicecareinc.com/contact",
+        "status": 200,
+        "content_length": 393,
+        "content_type": "text/html; charset=UTF-8"
+      },
+      {
+        "url": "http://www.valleyhospicecareinc.com/contact-us",
+        "status": 200,
+        "content_length": 393,
+        "content_type": "text/html; charset=UTF-8"
+      },
+      {
+        "url": "http://www.valleyhospicecareinc.com/contact.html",
+        "status": 200,
+        "content_length": 393,
+        "content_type": "text/html; charset=UTF-8"
+      },
+      {
+        "url": "http://www.valleyhospicecareinc.com/contact-us.html",
+        "status": 200,
+        "content_length": 393,
+        "content_type": "text/html; charset=UTF-8"
+      },
+      {
+        "url": "http://www.valleyhospicecareinc.com/about",
+        "status": 200,
+        "content_length": 393,
+        "content_type": "text/html; charset=UTF-8"
+      }
+    ],
+    "contact_info": {
+      "emails_found": [],
+      "phones_found": []
+    },
+    "data_completeness": {
+      "website_scraped": 10,
+      "contact_info_found": 0,
+      "tech_stack_detected": 10,
+      "pain_points_identified": 10,
+      "opportunities_generated": 5,
+      "business_info_extracted": 0
+    },
+    "legal_compliance": {
+      "accessed_data": "Publicly available website content and business directory data",
+      "compliance": [
+        "CFAA",
+        "GDPR",
+        "CCPA",
+        "CAN-SPAM"
+      ],
+      "data_use": "B2B sales prospecting - no personal data collected beyond public business contact info",
+      "opt_out": "privacy@soetechllc.com"
+    },
+    "researched_at": "2026-08-27T11:17:49.666626+00:00",
+    "researcher": "deep_osint.py v1.0"
+  }
+}

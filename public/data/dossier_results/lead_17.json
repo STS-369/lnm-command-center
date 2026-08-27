@@ -1,0 +1,52 @@
+{
+  "business_name": "Queen Of Clean Services",
+  "industry": "home services",
+  "location": "Midland MI MI",
+  "website": "https://www.queenofcleanservicesmi.com/",
+  "phone": "(989) 225-9699",
+  "owner_name": "",
+  "owner_title": "",
+  "contact_email": "",
+  "technology_stack": [
+    "SSL/HTTPS"
+  ],
+  "pain_points": [],
+  "opportunities": [],
+  "confidence_score": 1,
+  "research_sources": [
+    {
+      "type": "tech_stack_detection",
+      "detected": [
+        "SSL/HTTPS"
+      ],
+      "timestamp": "2026-08-27T11:18:06.394290+00:00"
+    }
+  ],
+  "notes": "Tech stack: SSL/HTTPS.",
+  "filename": "queen_of_clean_services.md",
+  "osint_research": {
+    "scraped_pages": [],
+    "contact_info": {},
+    "data_completeness": {
+      "website_scraped": 0,
+      "contact_info_found": 0,
+      "tech_stack_detected": 10,
+      "pain_points_identified": 0,
+      "opportunities_generated": 0,
+      "business_info_extracted": 0
+    },
+    "legal_compliance": {
+      "accessed_data": "Publicly available website content and business directory data",
+      "compliance": [
+        "CFAA",
+        "GDPR",
+        "CCPA",
+        "CAN-SPAM"
+      ],
+      "data_use": "B2B sales prospecting - no personal data collected beyond public business contact info",
+      "opt_out": "privacy@soetechllc.com"
+    },
+    "researched_at": "2026-08-27T11:18:06.394418+00:00",
+    "researcher": "deep_osint.py v1.0"
+  }
+}

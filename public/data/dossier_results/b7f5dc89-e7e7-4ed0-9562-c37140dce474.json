@@ -1,14 +1,14 @@
 {
-  "business_name": "Hyper Digital Marketing",
+  "business_name": "Bold Media Marketing Agency | Web, Social & Advertising",
   "industry": "marketing agencies",
-  "location": "Bay City MI MI",
-  "website": "http://www.hyperdm.com/",
-  "phone": "(248) 234-1499",
+  "location": "Midland MI MI",
+  "website": "https://pickbold.com/",
+  "phone": "(248) 477-5994",
   "owner_name": "",
   "owner_title": "",
   "contact_email": "",
   "technology_stack": [
-    "Unknown (no CMS detected)"
+    "SSL/HTTPS"
   ],
   "pain_points": [
     "Limited Social Media Presence: No social media links detected on website",
@@ -20,29 +20,51 @@
     "Mobile Optimization: Modern responsive website design",
     "Online Payment Integration: Secure payment processing and invoicing"
   ],
-  "confidence_score": 6,
+  "confidence_score": 8,
   "research_sources": [
     {
-      "url": "http://www.hyperdm.com/",
+      "url": "https://pickbold.com/",
       "type": "website_scrape",
-      "timestamp": "2026-08-26T11:32:03.748122+00:00"
+      "timestamp": "2026-08-26T11:34:18.705950+00:00"
+    },
+    {
+      "url": "https://pickbold.com/contact-us",
+      "type": "website_scrape",
+      "timestamp": "2026-08-26T11:34:32.627619+00:00"
+    },
+    {
+      "url": "https://pickbold.com/about",
+      "type": "website_scrape",
+      "timestamp": "2026-08-26T11:35:05.825521+00:00"
     },
     {
       "type": "tech_stack_detection",
       "detected": [
-        "Unknown (no CMS detected)"
+        "SSL/HTTPS"
       ],
-      "timestamp": "2026-08-26T11:33:05.169151+00:00"
+      "timestamp": "2026-08-26T11:35:05.831284+00:00"
     }
   ],
-  "notes": "Scraped 1 pages from website. Tech stack: Unknown (no CMS detected). Identified 3 pain points. Generated 3 opportunities.",
-  "filename": "hyper_digital_marketing.md",
+  "notes": "Scraped 3 pages from website. Tech stack: SSL/HTTPS. Identified 3 pain points. Generated 3 opportunities.",
+  "filename": "bold_media_marketing_agency_web_social_advertising.md",
   "osint_research": {
     "scraped_pages": [
       {
-        "url": "http://www.hyperdm.com/",
+        "url": "https://pickbold.com/",
         "status": 200,
-        "content_length": 146310,
+        "content_length": 41633,
+        "content_type": "text/html; charset=UTF-8"
+      },
+      {
+        "url": "https://pickbold.com/contact-us",
+        "status": 200,
+        "content_length": 27736,
+        "content_type": "text/html; charset=UTF-8"
+      },
+      {
+        "url": "https://pickbold.com/about",
+        "status": 200,
+        "content_length": 31645,
         "content_type": "text/html; charset=UTF-8"
       }
     ],
@@ -69,7 +91,7 @@
       "data_use": "B2B sales prospecting - no personal data collected beyond public business contact info",
       "opt_out": "privacy@soetechllc.com"
     },
-    "researched_at": "2026-08-26T11:33:05.181562+00:00",
+    "researched_at": "2026-08-26T11:35:05.839029+00:00",
     "researcher": "deep_osint.py v1.0"
   }
 }

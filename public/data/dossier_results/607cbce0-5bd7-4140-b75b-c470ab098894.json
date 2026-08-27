@@ -1,0 +1,130 @@
+{
+  "business_name": "Quality Care Home Repair",
+  "industry": "home services",
+  "location": "Midland MI MI",
+  "website": "https://topbusinessesusa.top/details/quality-care-home-repair-ChIJq6p",
+  "phone": "(989) 750-5701",
+  "owner_name": "",
+  "owner_title": "",
+  "contact_email": "",
+  "technology_stack": [
+    "SSL/HTTPS"
+  ],
+  "pain_points": [
+    "Limited Social Media Presence: No social media links detected on website",
+    "Potential Mobile Issues: No explicit mobile optimization claims found",
+    "Limited Online Payment Options: No clear online payment or invoicing system"
+  ],
+  "opportunities": [
+    "Social Media Strategy: Build engaged online community with automated posting",
+    "Mobile Optimization: Modern responsive website design",
+    "Online Payment Integration: Secure payment processing and invoicing"
+  ],
+  "confidence_score": 8,
+  "research_sources": [
+    {
+      "url": "https://topbusinessesusa.top/details/quality-care-home-repair-ChIJq6p",
+      "type": "website_scrape",
+      "timestamp": "2026-08-26T11:31:21.688997+00:00"
+    },
+    {
+      "url": "https://topbusinessesusa.top/contact",
+      "type": "website_scrape",
+      "timestamp": "2026-08-26T11:31:24.228484+00:00"
+    },
+    {
+      "url": "https://topbusinessesusa.top/contact-us",
+      "type": "website_scrape",
+      "timestamp": "2026-08-26T11:31:27.027046+00:00"
+    },
+    {
+      "url": "https://topbusinessesusa.top/contact.html",
+      "type": "website_scrape",
+      "timestamp": "2026-08-26T11:31:29.903440+00:00"
+    },
+    {
+      "url": "https://topbusinessesusa.top/contact-us.html",
+      "type": "website_scrape",
+      "timestamp": "2026-08-26T11:31:33.444473+00:00"
+    },
+    {
+      "url": "https://topbusinessesusa.top/about",
+      "type": "website_scrape",
+      "timestamp": "2026-08-26T11:31:35.845942+00:00"
+    },
+    {
+      "type": "tech_stack_detection",
+      "detected": [
+        "SSL/HTTPS"
+      ],
+      "timestamp": "2026-08-26T11:31:35.846339+00:00"
+    }
+  ],
+  "notes": "Scraped 6 pages from website. Tech stack: SSL/HTTPS. Identified 3 pain points. Generated 3 opportunities.",
+  "filename": "quality_care_home_repair.md",
+  "osint_research": {
+    "scraped_pages": [
+      {
+        "url": "https://topbusinessesusa.top/details/quality-care-home-repair-ChIJq6p",
+        "status": 200,
+        "content_length": 1897,
+        "content_type": "text/html"
+      },
+      {
+        "url": "https://topbusinessesusa.top/contact",
+        "status": 200,
+        "content_length": 1897,
+        "content_type": "text/html"
+      },
+      {
+        "url": "https://topbusinessesusa.top/contact-us",
+        "status": 200,
+        "content_length": 1897,
+        "content_type": "text/html"
+      },
+      {
+        "url": "https://topbusinessesusa.top/contact.html",
+        "status": 200,
+        "content_length": 1897,
+        "content_type": "text/html"
+      },
+      {
+        "url": "https://topbusinessesusa.top/contact-us.html",
+        "status": 200,
+        "content_length": 1897,
+        "content_type": "text/html"
+      },
+      {
+        "url": "https://topbusinessesusa.top/about",
+        "status": 200,
+        "content_length": 1897,
+        "content_type": "text/html"
+      }
+    ],
+    "contact_info": {
+      "emails_found": [],
+      "phones_found": []
+    },
+    "data_completeness": {
+      "website_scraped": 10,
+      "contact_info_found": 0,
+      "tech_stack_detected": 10,
+      "pain_points_identified": 10,
+      "opportunities_generated": 5,
+      "business_info_extracted": 0
+    },
+    "legal_compliance": {
+      "accessed_data": "Publicly available website content and business directory data",
+      "compliance": [
+        "CFAA",
+        "GDPR",
+        "CCPA",
+        "CAN-SPAM"
+      ],
+      "data_use": "B2B sales prospecting - no personal data collected beyond public business contact info",
+      "opt_out": "privacy@soetechllc.com"
+    },
+    "researched_at": "2026-08-26T11:31:35.847642+00:00",
+    "researcher": "deep_osint.py v1.0"
+  }
+}

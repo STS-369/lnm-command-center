@@ -1,24 +1,21 @@
 {
-  "business_name": "Make The Turn",
-  "industry": "marketing agencies",
-  "location": "Flint MI MI",
-  "website": "https://www.maketheturn.com/",
-  "phone": "(248) 823-8121",
+  "business_name": "Safely Nurse",
+  "industry": "home services",
+  "location": "Saginaw MI MI",
+  "website": "https://www.safelynurse.com/",
+  "phone": "(877) 837-2803",
   "owner_name": "",
   "owner_title": "",
   "contact_email": "",
   "technology_stack": [
-    "Wix",
     "SSL/HTTPS"
   ],
   "pain_points": [
-    "Outdated Website Platform: Uses Wix; may lack modern features and SEO capabilities",
     "Limited Social Media Presence: No social media links detected on website",
     "Potential Mobile Issues: No explicit mobile optimization claims found",
     "Limited Online Payment Options: No clear online payment or invoicing system"
   ],
   "opportunities": [
-    "Website Modernization: Upgrade to a modern, feature-rich platform",
     "Social Media Strategy: Build engaged online community with automated posting",
     "Mobile Optimization: Modern responsive website design",
     "Online Payment Integration: Secure payment processing and invoicing"
@@ -26,38 +23,59 @@
   "confidence_score": 8,
   "research_sources": [
     {
-      "url": "https://www.maketheturn.com/",
+      "url": "https://www.safelynurse.com/",
       "type": "website_scrape",
-      "timestamp": "2026-08-27T11:04:35.435280+00:00"
+      "timestamp": "2026-08-27T11:15:46.144892+00:00"
     },
     {
-      "url": "https://www.maketheturn.com/contact",
+      "url": "https://www.safelynurse.com/contact",
       "type": "website_scrape",
-      "timestamp": "2026-08-27T11:04:38.704959+00:00"
+      "timestamp": "2026-08-27T11:15:48.984376+00:00"
+    },
+    {
+      "url": "https://www.safelynurse.com/contact-us",
+      "type": "website_scrape",
+      "timestamp": "2026-08-27T11:15:52.543349+00:00"
+    },
+    {
+      "url": "https://www.safelynurse.com/about",
+      "type": "website_scrape",
+      "timestamp": "2026-08-27T11:16:24.904053+00:00"
     },
     {
       "type": "tech_stack_detection",
       "detected": [
-        "Wix",
         "SSL/HTTPS"
       ],
-      "timestamp": "2026-08-27T11:05:20.845942+00:00"
+      "timestamp": "2026-08-27T11:16:24.908744+00:00"
     }
   ],
-  "notes": "Scraped 2 pages from website. Tech stack: Wix, SSL/HTTPS. Identified 4 pain points. Generated 4 opportunities.",
-  "filename": "make_the_turn.md",
+  "notes": "Scraped 4 pages from website. Tech stack: SSL/HTTPS. Identified 3 pain points. Generated 3 opportunities.",
+  "filename": "safely_nurse.md",
   "osint_research": {
     "scraped_pages": [
       {
-        "url": "https://www.maketheturn.com/",
+        "url": "https://www.safelynurse.com/",
         "status": 200,
-        "content_length": 258997,
+        "content_length": 32907,
         "content_type": "text/html; charset=UTF-8"
       },
       {
-        "url": "https://www.maketheturn.com/contact",
+        "url": "https://www.safelynurse.com/contact",
         "status": 200,
-        "content_length": 238483,
+        "content_length": 23685,
+        "content_type": "text/html; charset=UTF-8"
+      },
+      {
+        "url": "https://www.safelynurse.com/contact-us",
+        "status": 200,
+        "content_length": 23658,
+        "content_type": "text/html; charset=UTF-8"
+      },
+      {
+        "url": "https://www.safelynurse.com/about",
+        "status": 200,
+        "content_length": 29854,
         "content_type": "text/html; charset=UTF-8"
       }
     ],
@@ -84,7 +102,7 @@
       "data_use": "B2B sales prospecting - no personal data collected beyond public business contact info",
       "opt_out": "privacy@soetechllc.com"
     },
-    "researched_at": "2026-08-27T11:05:20.871242+00:00",
+    "researched_at": "2026-08-27T11:16:24.914250+00:00",
     "researcher": "deep_osint.py v1.0"
   }
 }

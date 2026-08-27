@@ -1,0 +1,114 @@
+{
+  "results": [
+    {
+      "name": "Michigan Family Caregiver LLC",
+      "lead_id": "lead_09",
+      "confidence": 7,
+      "pain_points": 3,
+      "opportunities": 3,
+      "pages_scraped": 0,
+      "elapsed": "57.8s",
+      "status": "OK"
+    },
+    {
+      "name": "Neighborhood Home Care Services, PLLC",
+      "lead_id": "lead_10",
+      "confidence": 1,
+      "pain_points": 0,
+      "opportunities": 0,
+      "pages_scraped": 0,
+      "elapsed": "67.3s",
+      "status": "OK"
+    },
+    {
+      "name": "Stay Home Care Giving",
+      "lead_id": "lead_11",
+      "confidence": 8,
+      "pain_points": 3,
+      "opportunities": 3,
+      "pages_scraped": 0,
+      "elapsed": "38.0s",
+      "status": "OK"
+    },
+    {
+      "name": "Walmart Home Services",
+      "lead_id": "lead_12",
+      "confidence": 8,
+      "pain_points": 3,
+      "opportunities": 3,
+      "pages_scraped": 0,
+      "elapsed": "33.6s",
+      "status": "OK"
+    },
+    {
+      "name": "Safely Nurse",
+      "lead_id": "lead_13",
+      "confidence": 8,
+      "pain_points": 3,
+      "opportunities": 3,
+      "pages_scraped": 0,
+      "elapsed": "44.2s",
+      "status": "OK"
+    },
+    {
+      "name": "Comfort Keepers Bay City",
+      "lead_id": "lead_14",
+      "confidence": 8,
+      "pain_points": 3,
+      "opportunities": 3,
+      "pages_scraped": 0,
+      "elapsed": "16.6s",
+      "status": "OK"
+    },
+    {
+      "name": "First State Home Health & Hospice Care",
+      "lead_id": "lead_15",
+      "confidence": 7,
+      "pain_points": 3,
+      "opportunities": 3,
+      "pages_scraped": 0,
+      "elapsed": "54.0s",
+      "status": "OK"
+    },
+    {
+      "name": "All Valley Home Health & Hospice Care",
+      "lead_id": "lead_16",
+      "confidence": 7,
+      "pain_points": 3,
+      "opportunities": 3,
+      "pages_scraped": 0,
+      "elapsed": "14.2s",
+      "status": "OK"
+    },
+    {
+      "name": "Queen Of Clean Services",
+      "lead_id": "lead_17",
+      "confidence": 1,
+      "pain_points": 0,
+      "opportunities": 0,
+      "pages_scraped": 0,
+      "elapsed": "16.7s",
+      "status": "OK"
+    },
+    {
+      "name": "AdvisaCare Home Health & Hospice",
+      "lead_id": "lead_18",
+      "confidence": 7,
+      "pain_points": 3,
+      "opportunities": 3,
+      "pages_scraped": 0,
+      "elapsed": "46.9s",
+      "status": "OK"
+    },
+    {
+      "name": "HarmonyCares Medical Group",
+      "lead_id": "lead_19",
+      "confidence": 8,
+      "pain_points": 3,
+      "opportunities": 3,
+      "pages_scraped": 0,
+      "elapsed": "36.3s",
+      "status": "OK"
+    }
+  ]
+}

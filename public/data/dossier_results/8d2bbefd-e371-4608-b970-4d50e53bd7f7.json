@@ -1,9 +1,9 @@
 {
-  "business_name": "Hyper Digital Marketing",
-  "industry": "marketing agencies",
+  "business_name": "Kj's Home Improvement Specialist",
+  "industry": "home services",
   "location": "Bay City MI MI",
-  "website": "http://www.hyperdm.com/",
-  "phone": "(248) 234-1499",
+  "website": "http://www.kjshomeimprovementmi.com/",
+  "phone": "(989) 657-6981",
   "owner_name": "",
   "owner_title": "",
   "contact_email": "",
@@ -20,30 +20,52 @@
     "Mobile Optimization: Modern responsive website design",
     "Online Payment Integration: Secure payment processing and invoicing"
   ],
-  "confidence_score": 6,
+  "confidence_score": 7,
   "research_sources": [
     {
-      "url": "http://www.hyperdm.com/",
+      "url": "http://www.kjshomeimprovementmi.com/",
       "type": "website_scrape",
-      "timestamp": "2026-08-26T11:32:03.748122+00:00"
+      "timestamp": "2026-08-26T11:30:20.446308+00:00"
+    },
+    {
+      "url": "http://www.kjshomeimprovementmi.com/contact-us",
+      "type": "website_scrape",
+      "timestamp": "2026-08-26T11:30:37.337696+00:00"
+    },
+    {
+      "url": "http://www.kjshomeimprovementmi.com/about",
+      "type": "website_scrape",
+      "timestamp": "2026-08-26T11:31:01.218103+00:00"
     },
     {
       "type": "tech_stack_detection",
       "detected": [
         "Unknown (no CMS detected)"
       ],
-      "timestamp": "2026-08-26T11:33:05.169151+00:00"
+      "timestamp": "2026-08-26T11:31:01.222678+00:00"
     }
   ],
-  "notes": "Scraped 1 pages from website. Tech stack: Unknown (no CMS detected). Identified 3 pain points. Generated 3 opportunities.",
-  "filename": "hyper_digital_marketing.md",
+  "notes": "Scraped 3 pages from website. Tech stack: Unknown (no CMS detected). Identified 3 pain points. Generated 3 opportunities.",
+  "filename": "kj_s_home_improvement_specialist.md",
   "osint_research": {
     "scraped_pages": [
       {
-        "url": "http://www.hyperdm.com/",
+        "url": "http://www.kjshomeimprovementmi.com/",
         "status": 200,
-        "content_length": 146310,
-        "content_type": "text/html; charset=UTF-8"
+        "content_length": 32770,
+        "content_type": "text/html;charset=utf-8"
+      },
+      {
+        "url": "http://www.kjshomeimprovementmi.com/contact-us",
+        "status": 200,
+        "content_length": 27045,
+        "content_type": "text/html;charset=utf-8"
+      },
+      {
+        "url": "http://www.kjshomeimprovementmi.com/about",
+        "status": 200,
+        "content_length": 27302,
+        "content_type": "text/html;charset=utf-8"
       }
     ],
     "contact_info": {
@@ -69,7 +91,7 @@
       "data_use": "B2B sales prospecting - no personal data collected beyond public business contact info",
       "opt_out": "privacy@soetechllc.com"
     },
-    "researched_at": "2026-08-26T11:33:05.181562+00:00",
+    "researched_at": "2026-08-26T11:31:01.229084+00:00",
     "researcher": "deep_osint.py v1.0"
   }
 }

@@ -1,9 +1,9 @@
 {
-  "business_name": "Hyper Digital Marketing",
-  "industry": "marketing agencies",
-  "location": "Bay City MI MI",
-  "website": "http://www.hyperdm.com/",
-  "phone": "(248) 234-1499",
+  "business_name": "Simply Restored Handyman Services, LLC",
+  "industry": "home services",
+  "location": "Saginaw MI MI",
+  "website": "http://simplyrestoredhandyman.com/",
+  "phone": "(989) 522-4564",
   "owner_name": "",
   "owner_title": "",
   "contact_email": "",
@@ -23,27 +23,27 @@
   "confidence_score": 6,
   "research_sources": [
     {
-      "url": "http://www.hyperdm.com/",
+      "url": "http://simplyrestoredhandyman.com/",
       "type": "website_scrape",
-      "timestamp": "2026-08-26T11:32:03.748122+00:00"
+      "timestamp": "2026-08-26T11:25:00.603136+00:00"
     },
     {
       "type": "tech_stack_detection",
       "detected": [
         "Unknown (no CMS detected)"
       ],
-      "timestamp": "2026-08-26T11:33:05.169151+00:00"
+      "timestamp": "2026-08-26T11:25:53.555218+00:00"
     }
   ],
   "notes": "Scraped 1 pages from website. Tech stack: Unknown (no CMS detected). Identified 3 pain points. Generated 3 opportunities.",
-  "filename": "hyper_digital_marketing.md",
+  "filename": "simply_restored_handyman_services_llc.md",
   "osint_research": {
     "scraped_pages": [
       {
-        "url": "http://www.hyperdm.com/",
+        "url": "http://simplyrestoredhandyman.com/",
         "status": 200,
-        "content_length": 146310,
-        "content_type": "text/html; charset=UTF-8"
+        "content_length": 32690,
+        "content_type": "text/html;charset=utf-8"
       }
     ],
     "contact_info": {
@@ -69,7 +69,7 @@
       "data_use": "B2B sales prospecting - no personal data collected beyond public business contact info",
       "opt_out": "privacy@soetechllc.com"
     },
-    "researched_at": "2026-08-26T11:33:05.181562+00:00",
+    "researched_at": "2026-08-26T11:25:53.557668+00:00",
     "researcher": "deep_osint.py v1.0"
   }
 }
