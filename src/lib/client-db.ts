@@ -85,6 +85,23 @@ export interface Activity {
   created_at: string;
 }
 
+export interface CalendarEvent {
+  id: string;
+  title: string;
+  description: string;
+  date: string;           // ISO date (YYYY-MM-DD)
+  time?: string;          // Optional time (HH:MM)
+  end_time?: string;      // Optional end time
+  event_type: 'manual' | 'follow_up' | 'meeting' | 'deadline' | 'reminder';
+  color?: string;         // Custom color override
+  lead_id?: string;       // Optional link to a lead
+  task_id?: string;       // Optional link to a task
+  is_all_day: boolean;
+  recurrence?: 'none' | 'daily' | 'weekly' | 'monthly';
+  created_at: string;
+  updated_at: string;
+}
+
 export interface Setting {
   id: string;
   key: string;
@@ -181,17 +198,6 @@ const DEMO_LEADS: Lead[] = [];
 
 const DEMO_EMAILS: OutreachEmail[] = [
 ];
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -970,4 +976,74 @@ export function updateLeadStatus(leadId: string, newStatus: LeadStatus): Lead | 
 
 export function getStatusOptions(): readonly string[] {
   return STATUS_OPTIONS;
+}
+
+// ===== CALENDAR EVENT CRUD =====
+export async function getCalendarEvents(): Promise<CalendarEvent[]> {
+  const mode = await detectMode();
+  if (mode === 'api') {
+    try {
+      return await apiGet<CalendarEvent[]>('/api/calendar');
+    } catch {
+      return [];
+    }
+  }
+  return loadFromStorage<CalendarEvent>('calendar_events');
+}
+
+export async function addCalendarEvent(event: Omit<CalendarEvent, 'id' | 'created_at' | 'updated_at'>): Promise<CalendarEvent> {
+  const mode = await detectMode();
+  if (mode === 'api') {
+    return apiPost<CalendarEvent>('/api/calendar', event);
+  }
+
+  const now = new Date().toISOString();
+  const newEvent: CalendarEvent = {
+    ...event,
+    id: generateId(),
+    created_at: now,
+    updated_at: now,
+  };
+  const events = loadFromStorage<CalendarEvent>('calendar_events');
+  events.push(newEvent);
+  saveToStorage('calendar_events', events);
+  return newEvent;
+}
+
+export async function updateCalendarEvent(id: string, updates: Partial<CalendarEvent>): Promise<CalendarEvent | null> {
+  const mode = await detectMode();
+  if (mode === 'api') {
+    const res = await fetch(`/api/calendar`, {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ id, ...updates }),
+    });
+    if (!res.ok) return null;
+    return res.json();
+  }
+
+  const events = loadFromStorage<CalendarEvent>('calendar_events');
+  const idx = events.findIndex(e => e.id === id);
+  if (idx === -1) return null;
+  events[idx] = { ...events[idx], ...updates, updated_at: new Date().toISOString() };
+  saveToStorage('calendar_events', events);
+  return events[idx];
+}
+
+export async function deleteCalendarEvent(id: string): Promise<boolean> {
+  const mode = await detectMode();
+  if (mode === 'api') {
+    try {
+      await apiDelete(`/api/calendar?id=${id}`);
+      return true;
+    } catch {
+      return false;
+    }
+  }
+
+  const events = loadFromStorage<CalendarEvent>('calendar_events');
+  const filtered = events.filter(e => e.id !== id);
+  if (filtered.length === events.length) return false;
+  saveToStorage('calendar_events', filtered);
+  return true;
 }

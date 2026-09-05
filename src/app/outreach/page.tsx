@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import React, { useState } from 'react';
 import axios from 'axios';
@@ -16,7 +16,7 @@ export default function OutreachPage() {
     setMessage('');
 
     try {
-      const apiUrl = 'https://lnm-command-center-production.up.railway.app/api/gmail/send';
+      const apiUrl = process.env.RAILWAY_API_URL || '/api/gmail/send';
       const response = await axios.post(apiUrl, { to, subject, body });
       
       if (response.data.success) {
