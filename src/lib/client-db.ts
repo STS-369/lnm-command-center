@@ -85,6 +85,23 @@ export interface Activity {
   created_at: string;
 }
 
+export interface CalendarEvent {
+  id: string;
+  title: string;
+  description: string;
+  date: string;           // ISO date (YYYY-MM-DD)
+  time?: string;          // Optional time (HH:MM)
+  end_time?: string;      // Optional end time
+  event_type: 'manual' | 'follow_up' | 'meeting' | 'deadline' | 'reminder';
+  color?: string;         // Custom color override
+  lead_id?: string;       // Optional link to a lead
+  task_id?: string;       // Optional link to a task
+  is_all_day: boolean;
+  recurrence?: 'none' | 'daily' | 'weekly' | 'monthly';
+  created_at: string;
+  updated_at: string;
+}
+
 export interface Setting {
   id: string;
   key: string;
@@ -179,9655 +196,7 @@ function generateId(): string {
 const DEMO_LEADS: Lead[] = [
   {
     id: '',
-    name: '',
-    company: 'Desert Dream Dentistry & Spa',
-    email: '',
-    phone: '(760) 565-0234',
-    website: 'https://desertdreamdentistry.com/?utm_source=GMB&utm_medium=organic&utm_campaign=DevOptimization&utm_content=Website',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862394',
-    updated_at: '2026-08-31T17:44:00.862405'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Portola Dental Group',
-    email: '',
-    phone: '(760) 346-1414',
-    website: 'https://www.portoladentalgroup.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862412',
-    updated_at: '2026-08-31T17:44:00.862413'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Palm Desert Smiles',
-    email: '',
-    phone: '(760) 568-3602',
-    website: 'http://palmdesertsmiles.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862416',
-    updated_at: '2026-08-31T17:44:00.862417'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'FitzHenry-Wiefels Palm Desert Mortuary',
-    email: '',
-    phone: '(760) 568-9481',
-    website: 'http://www.fitzhenrywiefels.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862419',
-    updated_at: '2026-08-31T17:44:00.862420'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Rose Mortuaries & Cremation',
-    email: '',
-    phone: '(760) 773-6500',
-    website: 'https://www.rosemortuaries.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862422',
-    updated_at: '2026-08-31T17:44:00.862423'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Wiefels',
-    email: '',
-    phone: '(760) 568-9481',
-    website: 'http://www.fitzhenrywiefels.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862426',
-    updated_at: '2026-08-31T17:44:00.862426'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Amber House Luxury Senior Living',
-    email: '',
-    phone: '(760) 851-4714',
-    website: 'https://amberhouseseniorliving.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862429',
-    updated_at: '2026-08-31T17:44:00.862429'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Emerald Rose Garden Inc',
-    email: '',
-    phone: '(909) 533-0642',
-    website: 'http://emeraldrosegarden.blogspot.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862432',
-    updated_at: '2026-08-31T17:44:00.862433'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'OneStone Oak Senior Living',
-    email: '',
-    phone: '(210) 436-8669',
-    website: 'https://onestoneoakseniorliving.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862435',
-    updated_at: '2026-08-31T17:44:00.862436'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Texas Tough Home Services',
-    email: '',
-    phone: '(210) 405-1402',
-    website: 'https://txtoughhomeservices.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862438',
-    updated_at: '2026-08-31T17:44:00.862438'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'El Café On the Go',
-    email: '',
-    phone: '(726) 241-2412',
-    website: 'https://instagram.com/el_cafe_go?igshid=NGVhN2U2NjQ0Yg==',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862442',
-    updated_at: '2026-08-31T17:44:00.862443'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Crosley Law',
-    email: '',
-    phone: '(210) 529-3000',
-    website: 'https://crosleylaw.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862445',
-    updated_at: '2026-08-31T17:44:00.862446'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Thompson Law',
-    email: '',
-    phone: '(210) 880-6020',
-    website: 'https://1800lionlaw.com/san-antonio-personal-injury-lawyers/?utm_source=Google&utm_medium=Map+San+Antonio',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862449',
-    updated_at: '2026-08-31T17:44:00.862450'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Omar Ochoa Law Firm',
-    email: '',
-    phone: '(726) 200-5969',
-    website: 'https://www.omarochoalaw.com/san-antonio-insurance-lawyer?utm_source=google&utm_medium=organic&utm_campaign=gbp_san_antonio_tx_78209',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862452',
-    updated_at: '2026-08-31T17:44:00.862453'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'CJ CPAs',
-    email: '',
-    phone: '(210) 331-7161',
-    website: 'https://cjtxaudit.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862455',
-    updated_at: '2026-08-31T17:44:00.862456'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Carl Muniz CPA LLC',
-    email: '',
-    phone: '(210) 975-9158',
-    website: 'https://muniz.cpa/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862458',
-    updated_at: '2026-08-31T17:44:00.862458'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'S&S Mechanical and Plumbing',
-    email: '',
-    phone: '(775) 406-1687',
-    website: 'http://www.ssmechanicalnv.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862461',
-    updated_at: '2026-08-31T17:44:00.862461'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Sparks Heating & Air Conditioning',
-    email: '',
-    phone: '(775) 364-5127',
-    website: 'https://sparksheatingair.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862464',
-    updated_at: '2026-08-31T17:44:00.862464'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Glory Cloud Coffee Roasters',
-    email: '',
-    phone: '(844) 745-6792',
-    website: 'http://www.glorycloudcoffee.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862467',
-    updated_at: '2026-08-31T17:44:00.862467'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Hartmann Professional Services',
-    email: '',
-    phone: '(775) 331-2378',
-    website: 'http://hpsinv.com/profile/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862469',
-    updated_at: '2026-08-31T17:44:00.862470'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Palm Desert Dental Center',
-    email: '',
-    phone: '(760) 773-0052',
-    website: 'http://www.palmdesertdental.net/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862473',
-    updated_at: '2026-08-31T17:44:00.862474'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Desert Dream Dentistry & Spa',
-    email: '',
-    phone: '(760) 565-0234',
-    website: 'https://desertdreamdentistry.com/?utm_source=GMB&utm_medium=organic&utm_campaign=DevOptimization&utm_content=Website',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862486',
-    updated_at: '2026-08-31T17:44:00.862488'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Palm Desert Modern Dentistry',
-    email: '',
-    phone: '(760) 342-4341',
-    website: 'https://www.palmdesertmoderndentistry.com/?sc_cid=GBP%3AO%3AGP%3A386%3AOrganic_Search%3AGeneral%3Ana&_vsrefdom=organic_gbp&y_source=1_MjEwMTg5NDUtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862491',
-    updated_at: '2026-08-31T17:44:00.862491'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Portola Dental Group',
-    email: '',
-    phone: '(760) 346-1414',
-    website: 'https://www.portoladentalgroup.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862494',
-    updated_at: '2026-08-31T17:44:00.862495'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Palm Desert Smiles',
-    email: '',
-    phone: '(760) 568-3602',
-    website: 'http://palmdesertsmiles.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862497',
-    updated_at: '2026-08-31T17:44:00.862498'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Desert Dental Spa',
-    email: '',
-    phone: '(760) 825-6651',
-    website: 'https://www.desertdentalspa.com/?utm_campaign=gmb&utm_medium=local&utm_source=google',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862500',
-    updated_at: '2026-08-31T17:44:00.862501'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Palm Desert Dentist: Cosmetic, Restorative, & Implant Dentistry',
-    email: '',
-    phone: '(760) 980-7274',
-    website: 'https://www.palmdesertdentist.com/?utm_source=google.com&utm_medium=business+profile&utm_campaign=',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862504',
-    updated_at: '2026-08-31T17:44:00.862504'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Aspen Dental - Palm Desert, CA (South)',
-    email: '',
-    phone: '(760) 469-2563',
-    website: 'https://www.aspendental.com/dentist/ca/palm-desert/44100-town-center-way-ste-a-3?utm_source=googleplaces&utm_medium=lociqgoogleplaces&utm_campaign=Palm-Desert,CA-Palm-Desert_CA-4083&utm_content=listing',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862507',
-    updated_at: '2026-08-31T17:44:00.862508'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Desert Crossing Dental Group and Orthodontics',
-    email: '',
-    phone: '(760) 674-9666',
-    website: 'https://www.desertcrossingdental.com/?sc_cid=GBP%3AO%3AGP%3A51%3AOrganic_Search%3AGeneral%3Ana&_vsrefdom=organic_gbp&y_source=1_MTEwMjY2MC03MTUtbG9jYXRpb24ud2Vic2l0ZQ%3D%3D',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862511',
-    updated_at: '2026-08-31T17:44:00.862512'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Desert Gateway Dental Group',
-    email: '',
-    phone: '(760) 610-0358',
-    website: 'https://www.desertgatewaydental.com/?sc_cid=GBP%3AO%3AGP%3A147%3AOrganic_Search%3AGeneral%3Ana&_vsrefdom=organic_gbp&y_source=1_MTEwMjczOS03MTUtbG9jYXRpb24ud2Vic2l0ZQ%3D%3D',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862514',
-    updated_at: '2026-08-31T17:44:00.862514'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Evolution Dental',
-    email: '',
-    phone: '(760) 301-5252',
-    website: 'https://evolutiondds.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862517',
-    updated_at: '2026-08-31T17:44:00.862517'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Desert Willow Dentistry',
-    email: '',
-    phone: '(760) 568-6900',
-    website: 'https://desertwillowdentistry.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862520',
-    updated_at: '2026-08-31T17:44:00.862521'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Periodontics of the Desert',
-    email: '',
-    phone: '(760) 678-6696',
-    website: 'https://www.perioofthedesert.com/?utm_source=google.com&utm_medium=business+profile&utm_campaign=',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862523',
-    updated_at: '2026-08-31T17:44:00.862523'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Mountainside Dental Group - Rancho Mirage',
-    email: '',
-    phone: '(760) 568-2797',
-    website: 'https://mountainside-dental.com/rancho-mirage/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862526',
-    updated_at: '2026-08-31T17:44:00.862526'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Desert Pearl Dentistry',
-    email: '',
-    phone: '(760) 993-3071',
-    website: 'https://desertpearldentistry.com/?utm_campaign=gmb',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862529',
-    updated_at: '2026-08-31T17:44:00.862530'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Rancho Mirage Dental Group',
-    email: '',
-    phone: '(760) 340-5155',
-    website: 'https://www.ranchomiragedental.com/?sc_cid=GBP%3AO%3AGP%3A164%3AOrganic_Search%3AGeneral%3Ana&_vsrefdom=organic_gbp&y_source=1_MTEwMjc1My03MTUtbG9jYXRpb24ud2Vic2l0ZQ%3D%3D',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862532',
-    updated_at: '2026-08-31T17:44:00.862533'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Gregg K. Balis, DDS',
-    email: '',
-    phone: '(760) 346-6273',
-    website: 'http://www.drbalisdds.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862535',
-    updated_at: '2026-08-31T17:44:00.862536'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Mountainside Dental Group - La Quinta',
-    email: '',
-    phone: '(760) 564-5455',
-    website: 'https://mountainside-dental.com/la-quinta/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862539',
-    updated_at: '2026-08-31T17:44:00.862539'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Hospitality Dental & Orthodontics',
-    email: '',
-    phone: '(760) 360-7074',
-    website: 'https://www.hospitalitydental.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862542',
-    updated_at: '2026-08-31T17:44:00.862543'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Parc Center Dental Group',
-    email: '',
-    phone: '(760) 772-7082',
-    website: 'http://www.parccenterdental.com/?utm_source=google-gmb-maps&utm_medium=gmb-website-button&utm_campaign=locl.io&utm_content=0483d67b-c79d-446c-8d8d-219e41f9c68c',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862545',
-    updated_at: '2026-08-31T17:44:00.862546'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'FitzHenry-Wiefels Palm Desert Mortuary',
-    email: '',
-    phone: '(760) 568-9481',
-    website: 'http://www.fitzhenrywiefels.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862548',
-    updated_at: '2026-08-31T17:44:00.862549'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'All California Cremation',
-    email: '',
-    phone: '(800) 575-0551',
-    website: 'https://www.allcaliforniacremation.com/?utm_source=gmb&utm_medium=organic&utm_campaign=website',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862551',
-    updated_at: '2026-08-31T17:44:00.862552'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Rose Mortuaries & Cremation',
-    email: '',
-    phone: '(760) 773-6500',
-    website: 'https://www.rosemortuaries.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862554',
-    updated_at: '2026-08-31T17:44:00.862555'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Forest Lawn',
-    email: '',
-    phone: '(760) 328-3140',
-    website: 'https://flcoachellavalley.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862557',
-    updated_at: '2026-08-31T17:44:00.862558'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Trident Society',
-    email: '',
-    phone: '(760) 764-9197',
-    website: 'https://www.tridentsociety.com/location/palm-desert-ca/?utm_source=gmb&utm_medium=organic&utm_campaign=web-button-2858',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862560',
-    updated_at: '2026-08-31T17:44:00.862561'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Smart Cremation',
-    email: '',
-    phone: '(844) 305-4531',
-    website: 'https://www.smartcremation.com/california/cathedral-city/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862563',
-    updated_at: '2026-08-31T17:44:00.862564'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'New Journey Cremation and Funeral Services',
-    email: '',
-    phone: '(760) 565-6258',
-    website: 'http://newjourneycremation.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862566',
-    updated_at: '2026-08-31T17:44:00.862567'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Wiefels',
-    email: '',
-    phone: '(760) 568-9481',
-    website: 'http://www.fitzhenrywiefels.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862569',
-    updated_at: '2026-08-31T17:44:00.862570'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Valley Funeral and Cremation Center',
-    email: '',
-    phone: '(760) 668-7426',
-    website: 'https://www.valleyfuneralandcremation.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862572',
-    updated_at: '2026-08-31T17:44:00.862573'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'FitzHenry-Wiefels Indio Mortuary',
-    email: '',
-    phone: '(760) 347-2265',
-    website: 'http://www.fitzhenrywiefels.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862575',
-    updated_at: '2026-08-31T17:44:00.862576'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Anubis, Inc.',
-    email: '',
-    phone: '(323) 644-3323',
-    website: 'http://www.anubiscremations.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862578',
-    updated_at: '2026-08-31T17:44:00.862579'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Casillas Family Funeral Home',
-    email: '',
-    phone: '(760) 398-1536',
-    website: 'https://www.casillasfuneralhome.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862581',
-    updated_at: '2026-08-31T17:44:00.862582'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Casillas Funeral Home',
-    email: '',
-    phone: '(760) 202-7420',
-    website: 'http://casillasfuneralhome.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862584',
-    updated_at: '2026-08-31T17:44:00.862585'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'High Desert Funeral Chapel & Cremation',
-    email: '',
-    phone: '(800) 575-0551',
-    website: 'https://www.allcaliforniacremation.com/?utm_source=gmb&utm_medium=organic&utm_campaign=website',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862587',
-    updated_at: '2026-08-31T17:44:00.862588'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Vnaic Mourning Star Center',
-    email: '',
-    phone: '(760) 836-0360',
-    website: '',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862590',
-    updated_at: '2026-08-31T17:44:00.862591'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Segovia',
-    email: '',
-    phone: '(760) 501-2281',
-    website: 'https://oakmontseniorliving.com/segovia',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862593',
-    updated_at: '2026-08-31T17:44:00.862594'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'The Carlotta, Ivy Signature Living',
-    email: '',
-    phone: '(760) 477-4249',
-    website: 'https://ivyliving.com/thecarlotta/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862596',
-    updated_at: '2026-08-31T17:44:00.862597'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Atria Palm Desert',
-    email: '',
-    phone: '(760) 773-3772',
-    website: 'https://www.atriaseniorliving.com/retirement-communities/atria-palm-desert-palm-desert-ca/?utm_source=GMB&utm_medium=Birdeye',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862599',
-    updated_at: '2026-08-31T17:44:00.862599'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Amber House Luxury Senior Living',
-    email: '',
-    phone: '(760) 851-4714',
-    website: 'https://amberhouseseniorliving.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862601',
-    updated_at: '2026-08-31T17:44:00.862602'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Emerald Rose Garden Inc',
-    email: '',
-    phone: '(909) 533-0642',
-    website: 'http://emeraldrosegarden.blogspot.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862604',
-    updated_at: '2026-08-31T17:44:00.862605'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Brookdale Mirage Inn',
-    email: '',
-    phone: '(760) 346-7772',
-    website: 'https://www.brookdale.com/en/communities/brookdale-mirage-inn.html?cid=yext',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862607',
-    updated_at: '2026-08-31T17:44:00.862608'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Revel Palm Desert',
-    email: '',
-    phone: '(442) 282-6558',
-    website: 'https://revelcommunities.com/communities/palm-desert/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862610',
-    updated_at: '2026-08-31T17:44:00.862611'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Bella Villaggio',
-    email: '',
-    phone: '(760) 607-5200',
-    website: 'https://www.leisurecare.com/our-communities/bella-villaggio/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862613',
-    updated_at: '2026-08-31T17:44:00.862614'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Atria Hacienda',
-    email: '',
-    phone: '(760) 341-0890',
-    website: 'https://www.atriaseniorliving.com/retirement-communities/atria-hacienda-palm-desert-ca/?utm_source=GMB&utm_medium=Birdeye',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862616',
-    updated_at: '2026-08-31T17:44:00.862617'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Bayshire Rancho Mirage',
-    email: '',
-    phone: '(760) 343-5811',
-    website: 'https://bayshireranchomirage.com/?utm_source=google&utm_medium=organic&utm_campaign=gmb',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862619',
-    updated_at: '2026-08-31T17:44:00.862620'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'The Springs Healthcare Center at the Carlotta',
-    email: '',
-    phone: '(760) 610-6480',
-    website: 'https://thespringshealth.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862622',
-    updated_at: '2026-08-31T17:44:00.862623'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Emerald Rose Garden 2',
-    email: '',
-    phone: '(909) 533-0642',
-    website: 'https://emeraldrosegarden.blogspot.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862625',
-    updated_at: '2026-08-31T17:44:00.862625'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'MD Premier Luxury Senior Homes',
-    email: '',
-    phone: '(949) 335-2364',
-    website: 'http://www.luxuryseniorhome.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862627',
-    updated_at: '2026-08-31T17:44:00.862628'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Atria Rancho Mirage',
-    email: '',
-    phone: '(760) 770-7737',
-    website: 'https://www.atriaseniorliving.com/retirement-communities/atria-rancho-mirage-rancho-mirage-ca/?utm_source=GMB&utm_medium=Birdeye',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862630',
-    updated_at: '2026-08-31T17:44:00.862631'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Everleigh Palm Desert',
-    email: '',
-    phone: '(760) 904-3947',
-    website: 'https://liveeverleigh.com/communities/palm-desert/?switch_cls[id]=95345&utm_source=gmb&utm_medium=organic',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862636',
-    updated_at: '2026-08-31T17:44:00.862636'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Visiting Angels Senior Home Care',
-    email: '',
-    phone: '(760) 404-0220',
-    website: 'https://www.visitingangels.com/coachellavalley/home?utm_source=gmb&utm_medium=organic&utm_campaign=local',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862639',
-    updated_at: '2026-08-31T17:44:00.862639'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Vista Cove at Rancho Mirage',
-    email: '',
-    phone: '(760) 324-4604',
-    website: 'https://www.vistacove-rm.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862642',
-    updated_at: '2026-08-31T17:44:00.862642'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Stonewall Gardens Assisted Living',
-    email: '',
-    phone: '(760) 548-0970',
-    website: 'http://www.stonewallgardens.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862644',
-    updated_at: '2026-08-31T17:44:00.862645'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Always Best Care Senior Services - Home Care in Palm Desert',
-    email: '',
-    phone: '(760) 606-4238',
-    website: 'https://alwaysbestcare.com/palm-desert/in-home-care/?utm_campaign=gmb',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862647',
-    updated_at: '2026-08-31T17:44:00.862648'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Astoria Care Homes',
-    email: '',
-    phone: '(714) 277-9980',
-    website: 'http://astoriacarehomes.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862650',
-    updated_at: '2026-08-31T17:44:00.862651'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Service Pros Air Conditioning and Plumbing',
-    email: '',
-    phone: '(760) 437-5893',
-    website: 'https://www.yoursvcpros.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862653',
-    updated_at: '2026-08-31T17:44:00.862654'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'All Seasons Air Conditioning, Plumbing & Heating Inc.',
-    email: '',
-    phone: '(760) 849-1031',
-    website: 'https://allseasonscomfort.com/?utm_source=gmblisting&utm_medium=referral',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862656',
-    updated_at: '2026-08-31T17:44:00.862656'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'NexGen HVAC & Plumbing',
-    email: '',
-    phone: '(760) 906-8526',
-    website: 'https://nexgenairandplumbing.com/locations/inland-empire/palm-desert/?utm_campaign=gmb-listing-palm-desert&utm_source=google&utm_medium=organic',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862659',
-    updated_at: '2026-08-31T17:44:00.862660'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Chris Wilson Plumbing & HVAC',
-    email: '',
-    phone: '(760) 836-9321',
-    website: 'https://www.chriswilsonhvac.com/?utm_source=google&utm_medium=organic&utm_campaign=gmb-profile-palmdessert',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862662',
-    updated_at: '2026-08-31T17:44:00.862663'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Palm Desert Air Conditioning and Heating Co.',
-    email: '',
-    phone: '(760) 610-0297',
-    website: 'https://palmdesertac.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862667',
-    updated_at: '2026-08-31T17:44:00.862668'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Anthem Air Conditioning & Plumbing Palm Desert',
-    email: '',
-    phone: '(760) 206-8014',
-    website: 'https://anthemcv.com/palm-desert-ca-hvac-and-plumbing/?utm_source=gmb&utm_medium=organic&utm_campaign=organic',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862670',
-    updated_at: '2026-08-31T17:44:00.862671'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Sunny Air Conditioning, Plumbing & Electrical',
-    email: '',
-    phone: '(760) 699-5002',
-    website: 'https://www.sunnythepenguin.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862673',
-    updated_at: '2026-08-31T17:44:00.862674'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Urban Worx',
-    email: '',
-    phone: '(760) 321-3770',
-    website: 'https://www.callurbanworx.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862676',
-    updated_at: '2026-08-31T17:44:00.862677'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'General Air Conditioning & Plumbing',
-    email: '',
-    phone: '(760) 343-7488',
-    website: 'http://www.callthegeneral.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862679',
-    updated_at: '2026-08-31T17:44:00.862679'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Esser Air Conditioning and Heating',
-    email: '',
-    phone: '(760) 550-9998',
-    website: 'http://www.esserac.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862682',
-    updated_at: '2026-08-31T17:44:00.862682'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Hermetic Heating And Air',
-    email: '',
-    phone: '(760) 573-5452',
-    website: 'https://hermeticac.com/?utm_source=google&utm_medium=organic&utm_campaign=GMBListing-Palm-Desert-CA',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862684',
-    updated_at: '2026-08-31T17:44:00.862685'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'First Choice A/C & Heating Inc.',
-    email: '',
-    phone: '(760) 989-2369',
-    website: 'https://www.airconditioning-experts.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862687',
-    updated_at: '2026-08-31T17:44:00.862688'
-  },
-  {
-    id: '',
-    name: '',
-    company: '1st HVAC Repair Services Palm Desert CA',
-    email: '',
-    phone: '(760) 298-0159',
-    website: '',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862690',
-    updated_at: '2026-08-31T17:44:00.862691'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Hydes Air Conditioning',
-    email: '',
-    phone: '(760) 541-4000',
-    website: 'https://www.hydesac.com/?utm_source=gmb&utm_medium=organic',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862693',
-    updated_at: '2026-08-31T17:44:00.862694'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Absolute Air Conditioning and Heating',
-    email: '',
-    phone: '(760) 318-5541',
-    website: 'https://www.absoluteaircv.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862696',
-    updated_at: '2026-08-31T17:44:00.862696'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Priority One Air Conditioning Plumbing & Heating Inc.',
-    email: '',
-    phone: '(760) 773-0811',
-    website: 'https://priorityonepd.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862701',
-    updated_at: '2026-08-31T17:44:00.862702'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Brightwater Services Inc',
-    email: '',
-    phone: '(760) 341-1488',
-    website: 'https://brightwaterservicesinc.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862709',
-    updated_at: '2026-08-31T17:44:00.862710'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Assured Heating and Air Conditioning Services LLC',
-    email: '',
-    phone: '(442) 334-7026',
-    website: 'https://assuredairpros.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862716',
-    updated_at: '2026-08-31T17:44:00.862719'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'All Valley Air',
-    email: '',
-    phone: '(760) 214-9738',
-    website: 'https://cvallvalleyair.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp_listing&utm_content=website_button',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862725',
-    updated_at: '2026-08-31T17:44:00.862725'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Cam Stone's Automotive',
-    email: '',
-    phone: '(760) 568-2999',
-    website: 'http://www.camstonesautomotive.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862728',
-    updated_at: '2026-08-31T17:44:00.862728'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'PALM DESERT AUTOMOTIVE',
-    email: '',
-    phone: '(760) 341-4685',
-    website: 'https://www.mitchell1crm.com/crmutilities/AppointmentRequest.aspx?c=EAAAAMV6n%2BUXGSvpNZ7SWxMIDV83V9CqTmiau7aBsJXbU0a3SU%2BpIxzCaoqlQS3%2BKGrTWQ%3D%3D',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862731',
-    updated_at: '2026-08-31T17:44:00.862732'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Palms To Pines Automotive',
-    email: '',
-    phone: '(760) 346-3115',
-    website: 'https://www.palmsautorepair.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862734',
-    updated_at: '2026-08-31T17:44:00.862735'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'J & E Automotive',
-    email: '',
-    phone: '(760) 346-8329',
-    website: 'https://www.jeautomotiverepair.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862737',
-    updated_at: '2026-08-31T17:44:00.862737'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Ozzie's Automotive Inc.',
-    email: '',
-    phone: '(760) 773-5939',
-    website: 'https://ozziesautomotive.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862739',
-    updated_at: '2026-08-31T17:44:00.862740'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'A.G. Auto Care',
-    email: '',
-    phone: '(760) 346-5949',
-    website: 'http://www.agautocare.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862742',
-    updated_at: '2026-08-31T17:44:00.862743'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Fix Auto Palm Desert',
-    email: '',
-    phone: '(760) 345-0099',
-    website: 'https://fixautousa.com/locations/ca/palm-desert/fix-auto-palm-desert-24131/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862745',
-    updated_at: '2026-08-31T17:44:00.862746'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Brake Master Mobile Mechanics',
-    email: '',
-    phone: '(442) 666-4151',
-    website: 'http://brakemastermobilemechanics.biz/home',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862748',
-    updated_at: '2026-08-31T17:44:00.862749'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'European Auto Services',
-    email: '',
-    phone: '(760) 345-3334',
-    website: '',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862751',
-    updated_at: '2026-08-31T17:44:00.862751'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Desert Car Medics',
-    email: '',
-    phone: '(760) 200-9850',
-    website: 'http://desertcarmedics.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862753',
-    updated_at: '2026-08-31T17:44:00.862754'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Mountain View Tire & Auto Service',
-    email: '',
-    phone: '(760) 340-1411',
-    website: 'https://locations.mountainviewtire.com/ca/palm-desert/44420-town-center-way?&utm_source=google&utm_medium=organic&utm_campaign=gbp-listing-store_1730',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862757',
-    updated_at: '2026-08-31T17:44:00.862757'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Lino's Auto Repair',
-    email: '',
-    phone: '(760) 773-4707',
-    website: 'https://www.linosautorepair.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862760',
-    updated_at: '2026-08-31T17:44:00.862760'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Kim's Automotive',
-    email: '',
-    phone: '(760) 346-2443',
-    website: 'http://www.kimsautomotive.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862765',
-    updated_at: '2026-08-31T17:44:00.862766'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Fix Auto Palm Desert-South',
-    email: '',
-    phone: '(760) 674-8990',
-    website: 'https://fixautousa.com/locations/ca/palm-desert/fix-auto-palm-desert-south-24243/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862768',
-    updated_at: '2026-08-31T17:44:00.862769'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Desert Classic Cars Auto Repair',
-    email: '',
-    phone: '(760) 416-3333',
-    website: '',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862771',
-    updated_at: '2026-08-31T17:44:00.862772'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Palm Desert Tire and Auto',
-    email: '',
-    phone: '(760) 423-2464',
-    website: '',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862774',
-    updated_at: '2026-08-31T17:44:00.862775'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Frank's Auto Care',
-    email: '',
-    phone: '(760) 774-2865',
-    website: 'https://frankautocare.weebly.com/contact.html',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862777',
-    updated_at: '2026-08-31T17:44:00.862778'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Palm Desert Auto Center',
-    email: '',
-    phone: '(760) 906-0558',
-    website: 'http://desertautocenter.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862780',
-    updated_at: '2026-08-31T17:44:00.862781'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Ramona Tire & Service Centers',
-    email: '',
-    phone: '(760) 493-6169',
-    website: 'https://www.ramonatire.com/locations/ca/palmdesert/auto-repair-78018-country-club-dr?utm_source=local_listing&utm_medium=organic&utm_campaign=store_3013',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862783',
-    updated_at: '2026-08-31T17:44:00.862783'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Desert Kid Coffee',
-    email: '',
-    phone: '',
-    website: 'http://www.desertkid.coffee/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862786',
-    updated_at: '2026-08-31T17:44:00.862786'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Varraco Coffee Roasters',
-    email: '',
-    phone: '(760) 423-6656',
-    website: 'http://www.varracoroasting.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862789',
-    updated_at: '2026-08-31T17:44:00.862789'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Rutina Coffee',
-    email: '',
-    phone: '(760) 307-0003',
-    website: 'http://rutinacafe.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862792',
-    updated_at: '2026-08-31T17:44:00.862792'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'D’ Coffee Bouteaque',
-    email: '',
-    phone: '(760) 834-8344',
-    website: '',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862799',
-    updated_at: '2026-08-31T17:44:00.862800'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Harmony Coffee',
-    email: '',
-    phone: '(971) 988-9989',
-    website: '',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862802',
-    updated_at: '2026-08-31T17:44:00.862803'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'SOTToVOCE CAFE',
-    email: '',
-    phone: '(760) 833-2909',
-    website: 'https://sottovocecafe.com/?utm_source=google',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862806',
-    updated_at: '2026-08-31T17:44:00.862806'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'IW Coffee & Chai Bar',
-    email: '',
-    phone: '(760) 610-1596',
-    website: 'http://iwcoffeeandchai.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862809',
-    updated_at: '2026-08-31T17:44:00.862809'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'La Provence Patisserie & Cafe Palm Desert',
-    email: '',
-    phone: '(760) 797-7557',
-    website: 'http://www.laprovencecafe.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862812',
-    updated_at: '2026-08-31T17:44:00.862812'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Wonder.',
-    email: '',
-    phone: '(442) 300-7050',
-    website: 'https://www.eatwonder.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862815',
-    updated_at: '2026-08-31T17:44:00.862815'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Buena Matcha',
-    email: '',
-    phone: '(442) 400-0901',
-    website: 'https://www.buenamatcha.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862817',
-    updated_at: '2026-08-31T17:44:00.862818'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Everbloom Coffee - Midtown',
-    email: '',
-    phone: '(442) 274-1316',
-    website: 'http://everbloom.coffee/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862820',
-    updated_at: '2026-08-31T17:44:00.862821'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'IW Coffee - Indian Wells',
-    email: '',
-    phone: '(442) 666-3022',
-    website: 'http://iwcoffeeco.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862823',
-    updated_at: '2026-08-31T17:44:00.862824'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Cheers Coffee',
-    email: '',
-    phone: '(818) 818-8160',
-    website: '',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862826',
-    updated_at: '2026-08-31T17:44:00.862827'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'The Vintage Coffee House',
-    email: '',
-    phone: '(760) 564-2407',
-    website: 'https://www.facebook.com/TheVintageCoffeeHouse/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862829',
-    updated_at: '2026-08-31T17:44:00.862830'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'JC’s Cafe',
-    email: '',
-    phone: '(760) 568-0733',
-    website: 'http://www.jcsonelpaseo.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862832',
-    updated_at: '2026-08-31T17:44:00.862833'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'French Corner Cafe',
-    email: '',
-    phone: '(760) 568-5362',
-    website: 'http://www.frenchcornercafe.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862835',
-    updated_at: '2026-08-31T17:44:00.862835'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Café La Jefa',
-    email: '',
-    phone: '(760) 364-9609',
-    website: 'http://www.cafelajefa.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862838',
-    updated_at: '2026-08-31T17:44:00.862839'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'RM Coffee Cafe/ Restaurant',
-    email: '',
-    phone: '(760) 861-1563',
-    website: '',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862841',
-    updated_at: '2026-08-31T17:44:00.862842'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Mentosa Coffee - Palm Springs',
-    email: '',
-    phone: '(760) 307-1871',
-    website: 'https://mentosacoffeepalmsprings.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862844',
-    updated_at: '2026-08-31T17:44:00.862845'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'HAYSTACK COFFEE',
-    email: '',
-    phone: '(760) 285-5277',
-    website: 'https://haystack-coffee-101496.square.site/?location=11edc4fce6cc2bd1a7d7ac1f6bbba828&item=28#items',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862847',
-    updated_at: '2026-08-31T17:44:00.862847'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Jimenez Law Offices',
-    email: '',
-    phone: '(760) 345-4777',
-    website: 'http://www.desertdefenders.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862850',
-    updated_at: '2026-08-31T17:44:00.862850'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Palm Desert Law, A Professional Corporation',
-    email: '',
-    phone: '(760) 674-7175',
-    website: 'https://palmdesertlaw.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862853',
-    updated_at: '2026-08-31T17:44:00.862853'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Mark J McGowan Law Offices PC',
-    email: '',
-    phone: '(760) 340-3332',
-    website: 'http://www.markjmcgowan.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862856',
-    updated_at: '2026-08-31T17:44:00.862856'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Desert Law Group',
-    email: '',
-    phone: '(760) 776-9977',
-    website: 'https://desertlawgroup.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862859',
-    updated_at: '2026-08-31T17:44:00.862859'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Walter Clark Legal Group',
-    email: '',
-    phone: '(760) 973-2672',
-    website: 'https://walterclark.com/?utm_source=GBP&utm_medium=GBP&utm_campaign=GBP_Rancho_Mirage&utm_id=GBP_Rancho_Mirage',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862862',
-    updated_at: '2026-08-31T17:44:00.862863'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'RP Law Group',
-    email: '',
-    phone: '(951) 419-4477',
-    website: 'https://rplawcenter.com/palm-desert/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862865',
-    updated_at: '2026-08-31T17:44:00.862866'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Bochnewich Law Offices',
-    email: '',
-    phone: '(760) 776-1377',
-    website: 'https://www.btrustlaw.com/?utm_source=google-local&utm_medium=organic&utm_campaign=3866',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862868',
-    updated_at: '2026-08-31T17:44:00.862868'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Law Offices of Soda & Greenberg',
-    email: '',
-    phone: '(760) 320-2000',
-    website: 'https://lawofficesofsodaandgreenberg.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862871',
-    updated_at: '2026-08-31T17:44:00.862872'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'AFSAR Law Group, APC',
-    email: '',
-    phone: '(760) 345-3110',
-    website: 'http://www.afsarlaw.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862874',
-    updated_at: '2026-08-31T17:44:00.862874'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Law Office of Jeremy J. Ofseyer: APC',
-    email: '',
-    phone: '(760) 346-3355',
-    website: 'https://www.ofseyer.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862877',
-    updated_at: '2026-08-31T17:44:00.862877'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Dale Gribow Attorney at Law',
-    email: '',
-    phone: '(760) 837-7500',
-    website: 'https://www.dalegribowlaw.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862879',
-    updated_at: '2026-08-31T17:44:00.862880'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Lagorio Law Group',
-    email: '',
-    phone: '(760) 360-0600',
-    website: 'http://www.lagoriolawgroup.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862882',
-    updated_at: '2026-08-31T17:44:00.862883'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Reel Fathers Rights APC',
-    email: '',
-    phone: '(951) 386-2854',
-    website: 'https://reelfathersrights.com/palm-desert-ca/fathers-rights-lawyer/?utm_source=google&utm_medium=organic&utm_campaign=gbp-listing-palm-desert',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862885',
-    updated_at: '2026-08-31T17:44:00.862886'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Desert Defense Lawyers',
-    email: '',
-    phone: '(760) 610-6109',
-    website: 'https://www.desertdefenselawyers.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862888',
-    updated_at: '2026-08-31T17:44:00.862889'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Hartunian Law Firm',
-    email: '',
-    phone: '(760) 575-5555',
-    website: 'http://www.hartunianlaw.com/?utm_source=google-gmb-maps&utm_medium=gmb-website-button&utm_campaign=locl.io&utm_content=228b25f8-3786-4a62-974b-bf4049951e85',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862891',
-    updated_at: '2026-08-31T17:44:00.862892'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Law Office of Bosky Kathuria',
-    email: '',
-    phone: '(760) 409-3647',
-    website: 'http://boskykathuria.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862894',
-    updated_at: '2026-08-31T17:44:00.862895'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Sloat Law Group, APC',
-    email: '',
-    phone: '(760) 779-1313',
-    website: 'https://www.sloatlawgroup.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862897',
-    updated_at: '2026-08-31T17:44:00.862898'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Tanner Law Firm, PC',
-    email: '',
-    phone: '(760) 989-4529',
-    website: 'http://atannerlaw.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862900',
-    updated_at: '2026-08-31T17:44:00.862901'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Law Offices of David Chesley',
-    email: '',
-    phone: '(760) 266-4100',
-    website: 'https://www.chesleylawyers.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862903',
-    updated_at: '2026-08-31T17:44:00.862903'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Law Offices of Rhona S. Kauffman',
-    email: '',
-    phone: '(760) 249-7191',
-    website: 'https://www.rhonakauffmanlaw.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862906',
-    updated_at: '2026-08-31T17:44:00.862906'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Find A Good Accountant',
-    email: '',
-    phone: '(760) 423-6226',
-    website: 'https://findagoodaccountant.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862909',
-    updated_at: '2026-08-31T17:44:00.862909'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Newell Taylor, A Professional Accountancy Corporation',
-    email: '',
-    phone: '(760) 733-3735',
-    website: 'http://www.newelltaylorcpa.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862912',
-    updated_at: '2026-08-31T17:44:00.862912'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'CGC Accountants & Advisors',
-    email: '',
-    phone: '(760) 345-2570',
-    website: 'https://www.cgcbiz.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862915',
-    updated_at: '2026-08-31T17:44:00.862915'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Palm Desert Tax',
-    email: '',
-    phone: '(760) 972-4234',
-    website: 'http://pdtax.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862917',
-    updated_at: '2026-08-31T17:44:00.862918'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'O'Brien & Panchuk, LLP CPAs',
-    email: '',
-    phone: '(760) 851-0056',
-    website: 'http://www.obrienpanchuk.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862920',
-    updated_at: '2026-08-31T17:44:00.862921'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Jonathan and Associates, Inc.',
-    email: '',
-    phone: '(760) 341-6656',
-    website: 'https://www.jonathanandassociates.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862923',
-    updated_at: '2026-08-31T17:44:00.862924'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'M & J Tax Services',
-    email: '',
-    phone: '(760) 565-6916',
-    website: 'http://www.mandjtaxservices.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862926',
-    updated_at: '2026-08-31T17:44:00.862927'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Brennan & Company',
-    email: '',
-    phone: '(760) 346-1487',
-    website: 'https://accountingpros.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862929',
-    updated_at: '2026-08-31T17:44:00.862930'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Thomas E Vineyard & Associates',
-    email: '',
-    phone: '(760) 346-9729',
-    website: 'http://tvineyardcpa.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862932',
-    updated_at: '2026-08-31T17:44:00.862933'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'The GAP CPA, PC',
-    email: '',
-    phone: '(760) 405-8717',
-    website: 'https://www.thegapcpa.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862935',
-    updated_at: '2026-08-31T17:44:00.862935'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'JS4 Certified Public Accountants',
-    email: '',
-    phone: '(760) 610-0953',
-    website: 'https://www.js4cpa.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862938',
-    updated_at: '2026-08-31T17:44:00.862938'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'DJK CPA',
-    email: '',
-    phone: '(760) 340-9200',
-    website: 'https://www.djkcpa.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862941',
-    updated_at: '2026-08-31T17:44:00.862941'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Remus A Haste Inc: Haste Remus A CPA',
-    email: '',
-    phone: '(760) 360-2069',
-    website: '',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862943',
-    updated_at: '2026-08-31T17:44:00.862944'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'The Practice Certified Public Acountants',
-    email: '',
-    phone: '(760) 777-7377',
-    website: 'http://www.thepracticecpa.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862947',
-    updated_at: '2026-08-31T17:44:00.862947'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Allman & Allman, APAC',
-    email: '',
-    phone: '(760) 773-1120',
-    website: 'https://allmancpa.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862949',
-    updated_at: '2026-08-31T17:44:00.862950'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Alicia Almanza, CPA Accounting & Tax',
-    email: '',
-    phone: '(760) 340-4905',
-    website: 'http://www.palmdesertcpa.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862952',
-    updated_at: '2026-08-31T17:44:00.862953'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Cathy Ann Helmstadter',
-    email: '',
-    phone: '(760) 776-5520',
-    website: 'http://www.cathyhelmstadtercpa.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862956',
-    updated_at: '2026-08-31T17:44:00.862956'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Abel Krieger & Wilmeth: Wilmeth Jr Robert D CPA',
-    email: '',
-    phone: '(760) 346-7413',
-    website: 'http://www.akwcpa.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862958',
-    updated_at: '2026-08-31T17:44:00.862959'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Lakeview CPA',
-    email: '',
-    phone: '(760) 423-8089',
-    website: 'https://lakeviewcpa.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862962',
-    updated_at: '2026-08-31T17:44:00.862962'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Eric W. Martin, CPA',
-    email: '',
-    phone: '(760) 776-4321',
-    website: '',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862964',
-    updated_at: '2026-08-31T17:44:00.862965'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Blitz Marketing Group',
-    email: '',
-    phone: '(760) 469-9129',
-    website: 'https://www.blitzmarketing.org/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862967',
-    updated_at: '2026-08-31T17:44:00.862968'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Rexpert Marketing',
-    email: '',
-    phone: '(760) 666-6123',
-    website: 'http://rexpertmarketing.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862970',
-    updated_at: '2026-08-31T17:44:00.862971'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Xeneth Marketing',
-    email: '',
-    phone: '(760) 289-5297',
-    website: 'https://xenethmarketing.com/?utm_source=GMBlisting&utm_medium=organic',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862973',
-    updated_at: '2026-08-31T17:44:00.862974'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Flashlight Marketing',
-    email: '',
-    phone: '(760) 469-9995',
-    website: 'https://flashlightagency.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862976',
-    updated_at: '2026-08-31T17:44:00.862977'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Pure Community Systems',
-    email: '',
-    phone: '(760) 836-2484',
-    website: 'http://www.purecommunitysystems.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862979',
-    updated_at: '2026-08-31T17:44:00.862980'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'On The Mark Indoor Digital Advertising Network',
-    email: '',
-    phone: '(760) 259-0505',
-    website: 'https://www.onthemarkad.com/?utm_source=google-gmb-maps&utm_medium=gmb-website-button&utm_campaign=locl.io&utm_content=2821d2b3-ad73-47b0-8d24-6cda68d92daf',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862982',
-    updated_at: '2026-08-31T17:44:00.862983'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Indigo Marketing Agency',
-    email: '',
-    phone: '(619) 786-7787',
-    website: 'https://indigomarketingagency.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862985',
-    updated_at: '2026-08-31T17:44:00.862986'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Cord Media Company',
-    email: '',
-    phone: '(760) 834-8599',
-    website: 'https://www.cordmedia.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862988',
-    updated_at: '2026-08-31T17:44:00.862989'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Pay Per Lead Marketing Agency',
-    email: '',
-    phone: '',
-    website: 'https://www.payperlead.com/palm-desert-california',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862991',
-    updated_at: '2026-08-31T17:44:00.862992'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Big Rig Media LLC',
-    email: '',
-    phone: '(866) 524-4744',
-    website: 'https://www.getindio.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862994',
-    updated_at: '2026-08-31T17:44:00.862995'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Lamar Advertising of Palm Springs',
-    email: '',
-    phone: '(760) 327-4500',
-    website: 'http://www.lamar.com/PalmSprings',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.862997',
-    updated_at: '2026-08-31T17:44:00.862998'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'MECA',
-    email: '',
-    phone: '(424) 625-2025',
-    website: 'http://www.mecacreative.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863000',
-    updated_at: '2026-08-31T17:44:00.863001'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'JNS Next',
-    email: '',
-    phone: '(760) 775-0000',
-    website: 'https://jnsnext.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863003',
-    updated_at: '2026-08-31T17:44:00.863004'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Spring Digital, Inc.',
-    email: '',
-    phone: '(949) 478-4766',
-    website: 'https://springdigital.agency/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863006',
-    updated_at: '2026-08-31T17:44:00.863007'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Desert Nomad Media - Cathedral City',
-    email: '',
-    phone: '(760) 831-8382',
-    website: 'https://desertnomadmedia.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863009',
-    updated_at: '2026-08-31T17:44:00.863010'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Imagine It! Media',
-    email: '',
-    phone: '(760) 325-6998',
-    website: 'https://www.imagineitmedia.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863012',
-    updated_at: '2026-08-31T17:44:00.863012'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Service Zoom Marketing Agency',
-    email: '',
-    phone: '(760) 459-8898',
-    website: 'http://www.servicezoomsmm.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863014',
-    updated_at: '2026-08-31T17:44:00.863015'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Janice Hurlburt Online Management',
-    email: '',
-    phone: '(760) 898-4060',
-    website: 'http://janicehurlburt.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863017',
-    updated_at: '2026-08-31T17:44:00.863018'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Comeback Investments',
-    email: '',
-    phone: '(760) 627-7222',
-    website: 'https://comebackinvestments.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863020',
-    updated_at: '2026-08-31T17:44:00.863021'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Desert Properties Realtors',
-    email: '',
-    phone: '(760) 574-7662',
-    website: 'http://desertpropertiesrealtors.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863023',
-    updated_at: '2026-08-31T17:44:00.863024'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Brady Sandahl Real Estate Group',
-    email: '',
-    phone: '(760) 699-2624',
-    website: 'https://www.bradysandahl.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863026',
-    updated_at: '2026-08-31T17:44:00.863027'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Ahu Kocaballi Real Estate Group',
-    email: '',
-    phone: '(760) 216-0212',
-    website: 'https://www.ahukocaballi.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863029',
-    updated_at: '2026-08-31T17:44:00.863030'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'DW & Associates',
-    email: '',
-    phone: '(760) 776-7070',
-    website: 'http://www.dianewilliamsandassociates.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863032',
-    updated_at: '2026-08-31T17:44:00.863033'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Jelmberg Team',
-    email: '',
-    phone: '(760) 367-7253',
-    website: 'https://www.jelmbergteam.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863035',
-    updated_at: '2026-08-31T17:44:00.863036'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'KUD Properties',
-    email: '',
-    phone: '(760) 273-5150',
-    website: 'http://kudproperties.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863038',
-    updated_at: '2026-08-31T17:44:00.863038'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Century 21 Coachella Valley Real Estate',
-    email: '',
-    phone: '(760) 349-8080',
-    website: 'https://coachellavalleyrealestate.c21.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863041',
-    updated_at: '2026-08-31T17:44:00.863041'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Brad Schmett Real Estate Group',
-    email: '',
-    phone: '(760) 880-5845',
-    website: 'https://www.bradschmett.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863043',
-    updated_at: '2026-08-31T17:44:00.863044'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Brenda Devlin - "The Desert's Most Trusted Realtor"',
-    email: '',
-    phone: '(760) 408-8588',
-    website: 'http://www.brendadevlin.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863046',
-    updated_at: '2026-08-31T17:44:00.863047'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Utopia Property Management',
-    email: '',
-    phone: '(760) 324-9999',
-    website: 'https://utopiamanagement.com/locations/palm-desert-ca',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863049',
-    updated_at: '2026-08-31T17:44:00.863050'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'The Drummond Team',
-    email: '',
-    phone: '(760) 772-2411',
-    website: 'https://thedrummondteam.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863052',
-    updated_at: '2026-08-31T17:44:00.863053'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Equity Union Palm Desert',
-    email: '',
-    phone: '(760) 621-0395',
-    website: 'http://equityunion.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863055',
-    updated_at: '2026-08-31T17:44:00.863056'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Krisie Cook Desert Realtor',
-    email: '',
-    phone: '(949) 633-1994',
-    website: 'http://kcookhomes.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863058',
-    updated_at: '2026-08-31T17:44:00.863059'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Amirah Halum Real Estate Group',
-    email: '',
-    phone: '(760) 625-7247',
-    website: 'http://halumrealestategroup.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863061',
-    updated_at: '2026-08-31T17:44:00.863061'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'BBS Brokers Realty',
-    email: '',
-    phone: '(760) 702-3022',
-    website: 'http://www.bbsbrokers.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863064',
-    updated_at: '2026-08-31T17:44:00.863064'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Desert Home Listings',
-    email: '',
-    phone: '(760) 641-4877',
-    website: 'https://deserthomelistings.com/?utm_source=gmb&utm_medium=organic',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863067',
-    updated_at: '2026-08-31T17:44:00.863067'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Palm Desert Luxury Real Estate Agent Ryan Gaertner',
-    email: '',
-    phone: '(760) 880-8385',
-    website: 'https://www.desertrealestatesearch.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863069',
-    updated_at: '2026-08-31T17:44:00.863070'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Brandy Valentine Real Estate',
-    email: '',
-    phone: '(760) 507-1282',
-    website: 'https://brandyvalentine.homesmart.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863072',
-    updated_at: '2026-08-31T17:44:00.863073'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Vlada March Real Estate Group',
-    email: '',
-    phone: '(323) 717-0018',
-    website: 'http://www.vladamarch.com/',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863075',
-    updated_at: '2026-08-31T17:44:00.863076'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Lee & Associates Palm Desert',
-    email: '',
-    phone: '(760) 346-2500',
-    website: '',
-    city: 'Palm Desert CA',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863078',
-    updated_at: '2026-08-31T17:44:00.863079'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Z Dentist San Antonio',
-    email: '',
-    phone: '(210) 802-9999',
-    website: 'https://www.z-dentist.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863081',
-    updated_at: '2026-08-31T17:44:00.863082'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Local Dental',
-    email: '',
-    phone: '(210) 686-1486',
-    website: 'https://localdentalsa.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863084',
-    updated_at: '2026-08-31T17:44:00.863084'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Sonterra Dental',
-    email: '',
-    phone: '(210) 341-3222',
-    website: 'https://sonterradentalcare.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863087',
-    updated_at: '2026-08-31T17:44:00.863087'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Texas Dental',
-    email: '',
-    phone: '(210) 661-4211',
-    website: 'https://www.texas-dental.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863090',
-    updated_at: '2026-08-31T17:44:00.863090'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Dental Care of San Antonio',
-    email: '',
-    phone: '(210) 868-6037',
-    website: 'https://www.dentalcareofsa.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863092',
-    updated_at: '2026-08-31T17:44:00.863093'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'All Smiles Dental Center',
-    email: '',
-    phone: '(210) 714-7429',
-    website: 'https://www.allsmilesdentalcenter.com/?utm_source=GMB&utm_medium=organic&utm_campaign=DevOptimization&utm_content=Website',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863096',
-    updated_at: '2026-08-31T17:44:00.863096'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Villa Dental',
-    email: '',
-    phone: '(210) 920-8481',
-    website: 'http://www.villadentaltexas.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863099',
-    updated_at: '2026-08-31T17:44:00.863099'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Northwoods Dental Spa',
-    email: '',
-    phone: '(210) 495-7800',
-    website: 'http://www.northwoods-dental.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863102',
-    updated_at: '2026-08-31T17:44:00.863102'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Advanced Dental Associates',
-    email: '',
-    phone: '(726) 233-2698',
-    website: 'https://www.advanceddentalsa.com/?utm_source=gbp&utm_medium=local&utm_campaign=website_button',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863105',
-    updated_at: '2026-08-31T17:44:00.863106'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Legacy Dental SA',
-    email: '',
-    phone: '(210) 767-3562',
-    website: 'https://www.legacydentalsa.com/?utm_source=google.com&utm_medium=business+profile&utm_campaign=',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863108',
-    updated_at: '2026-08-31T17:44:00.863109'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Sonrisa Dental - San Antonio',
-    email: '',
-    phone: '(210) 590-4100',
-    website: 'https://yoursonrisa.com/?utm_source=google_organic&utm_medium=gmb_website&utm_campaign=gmb_website_link',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863111',
-    updated_at: '2026-08-31T17:44:00.863112'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Comfort Dental West Avenue - San Antonio',
-    email: '',
-    phone: '(210) 977-0321',
-    website: 'https://comfortdental.com/office/tx-west-avenue/?utm_source=google&utm_medium=organic&utm_campaign=Yext',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863114',
-    updated_at: '2026-08-31T17:44:00.863115'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'South Park Family Dental',
-    email: '',
-    phone: '(210) 927-1400',
-    website: 'https://safamilydentalcare.com/?utm_source=Maps&utm_medium=GBM',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863117',
-    updated_at: '2026-08-31T17:44:00.863118'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Stone Oak Dental',
-    email: '',
-    phone: '(210) 348-3828',
-    website: 'https://www.mystoneoakdental.com/?utm_source=google&utm_medium=google_business_profile&utm_campaign=website_click',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863120',
-    updated_at: '2026-08-31T17:44:00.863121'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Thousand Oaks Dental',
-    email: '',
-    phone: '(210) 499-0975',
-    website: 'https://www.yoursanantoniodentists.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863123',
-    updated_at: '2026-08-31T17:44:00.863124'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Rio Dental Emergency Dentist San Antonio',
-    email: '',
-    phone: '(210) 785-8526',
-    website: 'https://www.riodentaltx.com/?utm_source=google&utm_medium=gmb',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863126',
-    updated_at: '2026-08-31T17:44:00.863127'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Inspire Dental of San Antonio',
-    email: '',
-    phone: '(210) 972-0768',
-    website: 'https://inspiredentalsa.com/#',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863129',
-    updated_at: '2026-08-31T17:44:00.863130'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Texas Smiles dental center',
-    email: '',
-    phone: '(210) 432-0909',
-    website: 'http://www.texassmilesusa.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863132',
-    updated_at: '2026-08-31T17:44:00.863133'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'New Heights Dental & Braces',
-    email: '',
-    phone: '(210) 828-5300',
-    website: 'https://newheightsdental.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863135',
-    updated_at: '2026-08-31T17:44:00.863136'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Emergency Dental Care USA',
-    email: '',
-    phone: '(830) 261-3552',
-    website: 'https://www.emergencydental.com/sanantonio/?utm_source=google&utm_medium=organic&utm_campaign=gbp&utm_content=san-antonio-tx',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863138',
-    updated_at: '2026-08-31T17:44:00.863139'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Sunset North Funeral Home',
-    email: '',
-    phone: '(210) 594-1143',
-    website: 'https://www.dignitymemorial.com/funeral-homes/texas/san-antonio/sunset-north-funeral-home/4452?utm_source=google_my_business&utm_medium=organic',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863142',
-    updated_at: '2026-08-31T17:44:00.863142'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Porter Loring Mortuary - McCullough',
-    email: '',
-    phone: '(210) 905-0861',
-    website: 'https://www.dignitymemorial.com/funeral-homes/texas/san-antonio/porter-loring-mortuary-mccullough/3693?utm_source=google_my_business&utm_medium=organic',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863145',
-    updated_at: '2026-08-31T17:44:00.863146'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Sunset Northwest Funeral Home',
-    email: '',
-    phone: '(210) 775-4419',
-    website: 'https://www.dignitymemorial.com/funeral-homes/texas/san-antonio/sunset-northwest-funeral-home/4223?utm_source=google_my_business&utm_medium=organic',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863148',
-    updated_at: '2026-08-31T17:44:00.863149'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Texas Funeral Home',
-    email: '',
-    phone: '(210) 433-1000',
-    website: 'http://txfuneralhome.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863151',
-    updated_at: '2026-08-31T17:44:00.863152'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Sunset Memorial Park & Funeral Home',
-    email: '',
-    phone: '(210) 695-0943',
-    website: 'https://www.dignitymemorial.com/funeral-homes/texas/san-antonio/sunset-funeral-home/4411?utm_source=google_my_business&utm_medium=organic',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863154',
-    updated_at: '2026-08-31T17:44:00.863155'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Mission Park Funeral Chapels South, Cemeteries & Crematories',
-    email: '',
-    phone: '(210) 924-4242',
-    website: 'https://www.missionparks.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863157',
-    updated_at: '2026-08-31T17:44:00.863157'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Puente & Sons Funeral Chapels',
-    email: '',
-    phone: '(210) 533-5300',
-    website: 'https://www.puenteandsons.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863160',
-    updated_at: '2026-08-31T17:44:00.863160'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Castillo Funeral Home',
-    email: '',
-    phone: '(210) 432-8586',
-    website: 'http://www.castillofuneralhome.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863162',
-    updated_at: '2026-08-31T17:44:00.863163'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Funeral Caring USA',
-    email: '',
-    phone: '(210) 822-4445',
-    website: 'https://www.funeralcaringusa.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863165',
-    updated_at: '2026-08-31T17:44:00.863166'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Bexar Memorial Funeral Home & Cremations',
-    email: '',
-    phone: '(210) 361-3566',
-    website: 'https://bexarmemorialfh.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863168',
-    updated_at: '2026-08-31T17:44:00.863169'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'D W Brooks Funeral Home',
-    email: '',
-    phone: '(210) 223-2045',
-    website: 'http://www.dwbrooksfuneralhome.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863171',
-    updated_at: '2026-08-31T17:44:00.863172'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Hillcrest Funeral Home',
-    email: '',
-    phone: '(210) 431-9820',
-    website: 'http://www.hillcrestfuneral.net/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863174',
-    updated_at: '2026-08-31T17:44:00.863175'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Funeraria del Angel Trevino',
-    email: '',
-    phone: '(210) 369-4308',
-    website: 'https://www.dignitymemorial.com/funeral-homes/texas/san-antonio/funeraria-del-angel-trevino-funeral-home/7479?utm_source=google_my_business&utm_medium=organic',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863177',
-    updated_at: '2026-08-31T17:44:00.863178'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Porter Loring Mortuary - North',
-    email: '',
-    phone: '(210) 905-0794',
-    website: 'https://www.dignitymemorial.com/funeral-homes/texas/san-antonio/porter-loring-mortuary-north/3694?utm_source=google_my_business&utm_medium=organic',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863180',
-    updated_at: '2026-08-31T17:44:00.863181'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Funeraria del Angel Roy Akers',
-    email: '',
-    phone: '(210) 588-9757',
-    website: 'https://www.dignitymemorial.com/funeral-homes/texas/san-antonio/funeraria-del-angel-roy-akers/4401?utm_source=google_my_business&utm_medium=organic',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863183',
-    updated_at: '2026-08-31T17:44:00.863184'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Mission Park Funeral Chapels Cherry Ridge',
-    email: '',
-    phone: '(210) 349-1414',
-    website: 'https://www.missionparks.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863186',
-    updated_at: '2026-08-31T17:44:00.863187'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Cabrera Funeral Home',
-    email: '',
-    phone: '(210) 267-1326',
-    website: 'http://www.cabrerafuneralhome.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863189',
-    updated_at: '2026-08-31T17:44:00.863189'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'M.E. Rodriguez Funeral Home',
-    email: '',
-    phone: '(210) 226-6111',
-    website: 'https://www.merodriguez.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp-san-antonio&utm_id=local&utm_content=san-antonio',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863192',
-    updated_at: '2026-08-31T17:44:00.863192'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Delgado Funeral Home',
-    email: '',
-    phone: '(210) 533-0003',
-    website: 'http://www.delgadofuneralhome.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863194',
-    updated_at: '2026-08-31T17:44:00.863195'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'OneStone Oak Senior Living',
-    email: '',
-    phone: '(210) 436-8669',
-    website: 'https://onestoneoakseniorliving.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863197',
-    updated_at: '2026-08-31T17:44:00.863198'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Villa de San Antonio Senior & Assisted Living',
-    email: '',
-    phone: '(210) 558-7600',
-    website: 'https://stellarliving.com/communities/villa-de-san-antonio-senior-assisted-living-san-antonio-tx/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863200',
-    updated_at: '2026-08-31T17:44:00.863201'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Senior Living Specialists San Antonio',
-    email: '',
-    phone: '(972) 743-6012',
-    website: 'https://seniorlivingspecialistssatx.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863203',
-    updated_at: '2026-08-31T17:44:00.863204'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Premier Assisted Living Residential Care Home',
-    email: '',
-    phone: '(210) 932-0000',
-    website: 'https://premieralfs.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863206',
-    updated_at: '2026-08-31T17:44:00.863207'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Adante Assisted Living & Memory Care',
-    email: '',
-    phone: '(210) 750-4216',
-    website: 'https://www.adanteassistedliving.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863209',
-    updated_at: '2026-08-31T17:44:00.863210'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Adante Independent Living',
-    email: '',
-    phone: '(210) 791-7004',
-    website: 'https://www.adanteindependentliving.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863212',
-    updated_at: '2026-08-31T17:44:00.863213'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'The Village at Incarnate Word',
-    email: '',
-    phone: '(210) 829-7561',
-    website: 'http://www.thevillageiw.org/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863215',
-    updated_at: '2026-08-31T17:44:00.863216'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'The Waterford at Westover Hills',
-    email: '',
-    phone: '(726) 727-3192',
-    website: 'https://www.sonidaseniorliving.com/community/the-waterford-at-westover/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863218',
-    updated_at: '2026-08-31T17:44:00.863219'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Emerald Oaks Retirement Resort',
-    email: '',
-    phone: '(210) 625-8611',
-    website: 'https://rlcommunities.com/communities/texas/emerald-oaks-retirement/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863221',
-    updated_at: '2026-08-31T17:44:00.863222'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'The Waterford on Huebner',
-    email: '',
-    phone: '(210) 558-9111',
-    website: 'https://www.sonidaseniorliving.com/community/the-waterford-on-huebner/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863224',
-    updated_at: '2026-08-31T17:44:00.863225'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Always For You Assisted Living – VA Approved Facility',
-    email: '',
-    phone: '(210) 540-4800',
-    website: 'http://www.alwaysforyouassistedliving.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863228',
-    updated_at: '2026-08-31T17:44:00.863228'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Morningside at The Meadows Independent Living',
-    email: '',
-    phone: '(210) 734-1155',
-    website: 'https://www.mmliving.org/communities/the-meadows/?utm_source=google&utm_medium=gmb&utm_campaign=meadows&utm_content=independent',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863231',
-    updated_at: '2026-08-31T17:44:00.863231'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Adante assisted living',
-    email: '',
-    phone: '(210) 750-4216',
-    website: 'https://www.adanteassistedliving.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863233',
-    updated_at: '2026-08-31T17:44:00.863234'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Shavano Park Senior Living',
-    email: '',
-    phone: '(210) 492-4040',
-    website: 'http://www.shavanoparkseniorliving.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863236',
-    updated_at: '2026-08-31T17:44:00.863237'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'The Waterford at Shavano Park',
-    email: '',
-    phone: '(726) 262-9862',
-    website: 'https://www.sonidaseniorliving.com/community/the-waterford-at-shavano-park/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863240',
-    updated_at: '2026-08-31T17:44:00.863240'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'The Waterford at Thousand Oaks',
-    email: '',
-    phone: '(726) 200-5711',
-    website: 'https://www.sonidaseniorliving.com/community/the-waterford-at-thousand-oaks/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863243',
-    updated_at: '2026-08-31T17:44:00.863244'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Discovery Village Dominion',
-    email: '',
-    phone: '(210) 840-8000',
-    website: 'https://discoveryvillagedominion.seniorlivingnearme.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863246',
-    updated_at: '2026-08-31T17:44:00.863247'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Cornerstone Assisted Living',
-    email: '',
-    phone: '(206) 349-1816',
-    website: 'https://www.cornerstone-assistedliving.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863249',
-    updated_at: '2026-08-31T17:44:00.863250'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'The Haven & The Laurels in Stone Oak',
-    email: '',
-    phone: '(210) 404-2687',
-    website: 'https://thehavenandlaurelsstoneoak.seniorlivingnearme.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863252',
-    updated_at: '2026-08-31T17:44:00.863253'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Madison Estates - Sky Active Living',
-    email: '',
-    phone: '(210) 694-7000',
-    website: 'https://madisonestatesseniorliving.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863255',
-    updated_at: '2026-08-31T17:44:00.863255'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Evenflow Home & Commercial Services',
-    email: '',
-    phone: '(210) 985-4955',
-    website: 'https://www.evenflowhomeservices.com/?utm_source=gbp&utm_medium=organic&utm_campaign=webite&utm_content=web-cta&utm_term=san-antonio-tx',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863258',
-    updated_at: '2026-08-31T17:44:00.863258'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Elmer's Home Services',
-    email: '',
-    phone: '(210) 390-9988',
-    website: 'https://elmershomeservices.com/?utm_source=google&utm_medium=organic&utm_campaign=google-business-profile&utm_content=san-antonio',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863261',
-    updated_at: '2026-08-31T17:44:00.863261'
-  },
-  {
-    id: '',
-    name: '',
-    company: '1st Call Plumbing & AC',
-    email: '',
-    phone: '(210) 446-0200',
-    website: 'https://1stcallplumbingandac.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863263',
-    updated_at: '2026-08-31T17:44:00.863264'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Champion Home Services',
-    email: '',
-    phone: '(210) 446-0803',
-    website: 'https://www.championac.com/service-areas/san-antonio-tx/?utm_source=google-gbp&utm_medium=organic&utm_campaign=*321*champion-comfort-san-antonio',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863266',
-    updated_at: '2026-08-31T17:44:00.863267'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Premier PROS Plumbing & HVAC',
-    email: '',
-    phone: '(210) 322-8232',
-    website: 'https://premierpros.us/?utm_campaign=gmb',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863269',
-    updated_at: '2026-08-31T17:44:00.863270'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Simple Service Plumbing, Heating & Air',
-    email: '',
-    phone: '(210) 405-9825',
-    website: 'https://callsimpleservice.com/?utm_source=GoogleBusinessProfile&utm_medium=organic',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863272',
-    updated_at: '2026-08-31T17:44:00.863273'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Wright Home Services',
-    email: '',
-    phone: '(210) 318-4410',
-    website: 'https://www.wrightac.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863275',
-    updated_at: '2026-08-31T17:44:00.863276'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Blue Ribbon Cooling, Heating, Plumbing, & Electrical',
-    email: '',
-    phone: '(512) 957-4630',
-    website: 'https://www.blueribbonservices.com/hvac/san-antonio-tx/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863278',
-    updated_at: '2026-08-31T17:44:00.863279'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Air & Plumbing Today: HVAC Department',
-    email: '',
-    phone: '(210) 622-2344',
-    website: 'https://airandplumbingtoday.com/?utm_source=GBP&utm_medium=organic',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863281',
-    updated_at: '2026-08-31T17:44:00.863282'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Tiger Home Services',
-    email: '',
-    phone: '(210) 679-1806',
-    website: 'https://www.tiger-services.com/?utm_source=Google&utm_medium=GBP&utm_campaign=Organic_GBP_Tiger&se_campaign=Organic_GBP_Tiger',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863284',
-    updated_at: '2026-08-31T17:44:00.863285'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Shafer Services Plus',
-    email: '',
-    phone: '(210) 227-8358',
-    website: 'https://shaferservices.com/?utm_source=gmb&utm_medium=organic',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863287',
-    updated_at: '2026-08-31T17:44:00.863288'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Radiant Plumbing & Air Conditioning - San Antonio',
-    email: '',
-    phone: '(210) 934-3761',
-    website: 'https://radiantplumbing.com/san-antonio/?utm_source=google&utm_medium=businesslisting&utm_campaign=stx-brand_gmb_1023&utm_content=stx-brand',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863290',
-    updated_at: '2026-08-31T17:44:00.863291'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Goettl Air Conditioning and Plumbing - San Antonio TX',
-    email: '',
-    phone: '(210) 460-3966',
-    website: 'https://www.goettl.com/location/san-antonio-texas/?utm_source=Google&utm_medium=GBP&utm_campaign=Google.Business.Profile',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863293',
-    updated_at: '2026-08-31T17:44:00.863294'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Leaky’s Plumbing, Heating & A/C - San Antonio',
-    email: '',
-    phone: '(210) 361-6947',
-    website: 'https://leakys.com/hvac-and-plumbing-services-in-san-antonio/?utm_source=gmb&utm_medium=organic&utm_campaign=gmb',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863296',
-    updated_at: '2026-08-31T17:44:00.863297'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Rosenberg Plumbing & Air',
-    email: '',
-    phone: '(210) 503-7388',
-    website: 'https://rosenberghvac.com/?utm_source=Google&utm_medium=GBP&utm_campaign=Organic_GBP_Rosenberg',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863299',
-    updated_at: '2026-08-31T17:44:00.863300'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Texas Tough Home Services',
-    email: '',
-    phone: '(210) 405-1402',
-    website: 'https://txtoughhomeservices.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863302',
-    updated_at: '2026-08-31T17:44:00.863303'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'JRV Home Services',
-    email: '',
-    phone: '(210) 405-1774',
-    website: 'https://jrvhomeservices.com/?utm_source=gmb&utm_medium=organic&utm_campaign=gmb',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863305',
-    updated_at: '2026-08-31T17:44:00.863305'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Will Fix It',
-    email: '',
-    phone: '(210) 866-8048',
-    website: 'https://www.willfixit.com/locations?utm_source=google&utm_medium=gbp&utm_campaign=local_seo&utm_content=gbp_website_click',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863308',
-    updated_at: '2026-08-31T17:44:00.863308'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Tietze Plumbing, Heating and Air',
-    email: '',
-    phone: '(210) 688-3350',
-    website: 'http://www.tietzeplumbing.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863311',
-    updated_at: '2026-08-31T17:44:00.863311'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Texas Auto Repairs',
-    email: '',
-    phone: '(210) 464-2406',
-    website: 'http://texasautorepairs.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863313',
-    updated_at: '2026-08-31T17:44:00.863314'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Premier1 Auto Care',
-    email: '',
-    phone: '(210) 202-1902',
-    website: 'https://premier1auto.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863316',
-    updated_at: '2026-08-31T17:44:00.863317'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'AT Automotive',
-    email: '',
-    phone: '(210) 734-2050',
-    website: 'https://www.atautosa.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863319',
-    updated_at: '2026-08-31T17:44:00.863320'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Jackie's Auto Clinic',
-    email: '',
-    phone: '(210) 737-1277',
-    website: 'https://jackies-auto-clinic.blogspot.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863322',
-    updated_at: '2026-08-31T17:44:00.863323'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'MD Automotive',
-    email: '',
-    phone: '(210) 688-2366',
-    website: 'https://www.mdautomotiveonline.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863325',
-    updated_at: '2026-08-31T17:44:00.863326'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Auto Service Experts',
-    email: '',
-    phone: '(210) 495-6688',
-    website: 'https://www.autorepairsanantonio.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863328',
-    updated_at: '2026-08-31T17:44:00.863329'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Mr. Mechanic & Tire Muffler Shop',
-    email: '',
-    phone: '(210) 922-3333',
-    website: 'https://tireandmechanicshopinsanantoniotexas.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863331',
-    updated_at: '2026-08-31T17:44:00.863331'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Thousand Oaks Automotive',
-    email: '',
-    phone: '(210) 495-1100',
-    website: 'http://www.thousandoaksautomotive.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863334',
-    updated_at: '2026-08-31T17:44:00.863334'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'My C.A.R Center',
-    email: '',
-    phone: '(210) 527-7716',
-    website: 'https://www.mycarcentersa.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863336',
-    updated_at: '2026-08-31T17:44:00.863337'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Sun Auto Service',
-    email: '',
-    phone: '(210) 526-0201',
-    website: 'https://www.sunautoservice.com/locations/tx/sanantonio/auto-repair-8274-culebra-rd?utm_source=local_listing&utm_medium=organic&utm_campaign=store_4409',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863339',
-    updated_at: '2026-08-31T17:44:00.863340'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Surgo Automotive',
-    email: '',
-    phone: '(726) 268-5866',
-    website: 'https://surgoautomotive.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863342',
-    updated_at: '2026-08-31T17:44:00.863343'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Sanford Auto Service',
-    email: '',
-    phone: '(210) 416-3900',
-    website: 'https://sanfordautoservice.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863345',
-    updated_at: '2026-08-31T17:44:00.863346'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Certified Automotive Repair Service',
-    email: '',
-    phone: '(210) 342-2222',
-    website: '',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863348',
-    updated_at: '2026-08-31T17:44:00.863349'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Chad Miller Auto Care',
-    email: '',
-    phone: '(210) 934-1582',
-    website: 'https://cmautocare.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863351',
-    updated_at: '2026-08-31T17:44:00.863352'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Mike's Downtown Garage',
-    email: '',
-    phone: '(210) 223-6500',
-    website: 'http://www.alamotireauto.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863354',
-    updated_at: '2026-08-31T17:44:00.863354'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Martin's Auto Clinic',
-    email: '',
-    phone: '(210) 523-1191',
-    website: 'http://www.martinsautoclinic.net/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863357',
-    updated_at: '2026-08-31T17:44:00.863357'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Ruben's Auto Repair',
-    email: '',
-    phone: '(210) 647-1148',
-    website: 'https://rubensautocare.com/?utm_source=google&utm_medium=gmb',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863360',
-    updated_at: '2026-08-31T17:44:00.863360'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Aspeed Auto Repair',
-    email: '',
-    phone: '(210) 761-9999',
-    website: 'https://aspeedauto.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863363',
-    updated_at: '2026-08-31T17:44:00.863364'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Sam's Hybrid Auto Repair',
-    email: '',
-    phone: '(210) 400-1000',
-    website: '',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863366',
-    updated_at: '2026-08-31T17:44:00.863367'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'R&S Auto Mechanic Services',
-    email: '',
-    phone: '(210) 255-8578',
-    website: 'https://rsauto-mechanic.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863369',
-    updated_at: '2026-08-31T17:44:00.863370'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Early Bird Coffee',
-    email: '',
-    phone: '(210) 857-7769',
-    website: 'https://coffeewithearlybird.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863372',
-    updated_at: '2026-08-31T17:44:00.863373'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Coffee + Culture Bakery',
-    email: '',
-    phone: '(210) 721-7750',
-    website: 'https://www.coffeeculturecompany.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863375',
-    updated_at: '2026-08-31T17:44:00.863375'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'The Mermaid Cafe',
-    email: '',
-    phone: '(210) 231-0442',
-    website: 'https://themermaid.cafe/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863378',
-    updated_at: '2026-08-31T17:44:00.863379'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Downtowner Coffee Co',
-    email: '',
-    phone: '',
-    website: 'https://downtownercoffeeco.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863381',
-    updated_at: '2026-08-31T17:44:00.863381'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'bright',
-    email: '',
-    phone: '(210) 504-9615',
-    website: 'https://brightcoffeesatx.square.site/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863384',
-    updated_at: '2026-08-31T17:44:00.863384'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Estate Coffee Company',
-    email: '',
-    phone: '(210) 267-8725',
-    website: 'http://www.estatecoffeecompany.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863386',
-    updated_at: '2026-08-31T17:44:00.863387'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Qatra Specialty Coffee',
-    email: '',
-    phone: '(210) 251-2072',
-    website: 'https://qatracoffee.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863389',
-    updated_at: '2026-08-31T17:44:00.863390'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Vela Coffee',
-    email: '',
-    phone: '',
-    website: 'http://www.velacoffee.co/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863392',
-    updated_at: '2026-08-31T17:44:00.863393'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Kafe Krave',
-    email: '',
-    phone: '(726) 248-8930',
-    website: 'https://kafekravesatx.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863395',
-    updated_at: '2026-08-31T17:44:00.863396'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Haraz Coffee House',
-    email: '',
-    phone: '(210) 257-5767',
-    website: 'https://harazcoffeehouse.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863398',
-    updated_at: '2026-08-31T17:44:00.863399'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Crème Coffee & Social',
-    email: '',
-    phone: '(210) 446-8399',
-    website: 'https://www.cremesatx.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863401',
-    updated_at: '2026-08-31T17:44:00.863402'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'El Café On the Go',
-    email: '',
-    phone: '(726) 241-2412',
-    website: 'https://instagram.com/el_cafe_go?igshid=NGVhN2U2NjQ0Yg==',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863404',
-    updated_at: '2026-08-31T17:44:00.863405'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Kulture kafe',
-    email: '',
-    phone: '(210) 739-9363',
-    website: 'https://www.kulturekafesatx.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863407',
-    updated_at: '2026-08-31T17:44:00.863408'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Kiki's Coffee & Spirits',
-    email: '',
-    phone: '(210) 290-8348',
-    website: 'https://kikisonjones.com/?utm_source=google',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863410',
-    updated_at: '2026-08-31T17:44:00.863411'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Local Coffee',
-    email: '',
-    phone: '(210) 530-1004',
-    website: 'http://www.localcoffee.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863413',
-    updated_at: '2026-08-31T17:44:00.863413'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'What's Brewing Coffee Roasters',
-    email: '',
-    phone: '(210) 308-8882',
-    website: 'http://www.sacoffeeroasters.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863416',
-    updated_at: '2026-08-31T17:44:00.863417'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Mila Coffee',
-    email: '',
-    phone: '(210) 929-3678',
-    website: '',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863419',
-    updated_at: '2026-08-31T17:44:00.863420'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'La Vida Coffee',
-    email: '',
-    phone: '(210) 239-9895',
-    website: 'https://lavidacoffeesa.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863422',
-    updated_at: '2026-08-31T17:44:00.863423'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Kaffeinated at blanco',
-    email: '',
-    phone: '(210) 233-1600',
-    website: 'https://www.kaffeinated.co/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863425',
-    updated_at: '2026-08-31T17:44:00.863426'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Cafe La Lele',
-    email: '',
-    phone: '(210) 589-4008',
-    website: '',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863428',
-    updated_at: '2026-08-31T17:44:00.863429'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'The Packard Law Firm',
-    email: '',
-    phone: '(210) 972-8918',
-    website: 'https://www.packardfirm.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863431',
-    updated_at: '2026-08-31T17:44:00.863431'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Carabin Shaw',
-    email: '',
-    phone: '(210) 222-2288',
-    website: 'https://www.carabinshaw.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863433',
-    updated_at: '2026-08-31T17:44:00.863434'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Barton & Associates, Attorneys at Law',
-    email: '',
-    phone: '(210) 500-0000',
-    website: 'https://www.bartonlawoffice.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863436',
-    updated_at: '2026-08-31T17:44:00.863437'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Texas Suits - Corporate & Courtroom Lawyers',
-    email: '',
-    phone: '(210) 503-2800',
-    website: 'http://www.txsuits.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863440',
-    updated_at: '2026-08-31T17:44:00.863440'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Gamez Law Firm',
-    email: '',
-    phone: '(210) 736-4040',
-    website: 'https://www.joegamezlaw.com/?utm_source=google&utm_medium=organic&utm_campaign=gmb_local_growthlab',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863443',
-    updated_at: '2026-08-31T17:44:00.863443'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Crosley Law',
-    email: '',
-    phone: '(210) 529-3000',
-    website: 'https://crosleylaw.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863446',
-    updated_at: '2026-08-31T17:44:00.863446'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Hilley & Solis Law, P.L.L.C.',
-    email: '',
-    phone: '(210) 903-5456',
-    website: 'https://www.hilley-solis.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863449',
-    updated_at: '2026-08-31T17:44:00.863449'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Davis Law Firm',
-    email: '',
-    phone: '(210) 444-4444',
-    website: 'https://jeffdavislawfirm.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863452',
-    updated_at: '2026-08-31T17:44:00.863452'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Texas Law Guns, Injury & Accident Lawyers',
-    email: '',
-    phone: '(210) 972-3771',
-    website: 'https://www.vblawgroup.com/?utm_source=gmb&utm_medium=organic&utm_campaign=gmb-listing-sa',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863455',
-    updated_at: '2026-08-31T17:44:00.863456'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'The Law Office of Shawn C. Brown, PC',
-    email: '',
-    phone: '(210) 224-8200',
-    website: 'http://www.shawnbrownlaw.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863458',
-    updated_at: '2026-08-31T17:44:00.863458'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Thompson Law',
-    email: '',
-    phone: '(210) 880-6020',
-    website: 'https://1800lionlaw.com/san-antonio-personal-injury-lawyers/?utm_source=Google&utm_medium=Map+San+Antonio',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863461',
-    updated_at: '2026-08-31T17:44:00.863462'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Dunham & Jones',
-    email: '',
-    phone: '(210) 777-7777',
-    website: 'https://www.dunhamlaw.com/tx/san-antonio-criminal-attorneys/?utm_source=gbp&utm_medium=organic&utm_campaign=maps-initiative-san-antonio',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863464',
-    updated_at: '2026-08-31T17:44:00.863465'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Harper Law Firm',
-    email: '',
-    phone: '(210) 941-4179',
-    website: 'https://harperlawtx.com/san-antonio-personal-injury-lawyer/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863467',
-    updated_at: '2026-08-31T17:44:00.863468'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Omar Ochoa Law Firm',
-    email: '',
-    phone: '(726) 200-5969',
-    website: 'https://www.omarochoalaw.com/san-antonio-insurance-lawyer?utm_source=google&utm_medium=organic&utm_campaign=gbp_san_antonio_tx_78209',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863470',
-    updated_at: '2026-08-31T17:44:00.863471'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Law Office of Dirk Ashbaugh, P.C.',
-    email: '',
-    phone: '(210) 822-4200',
-    website: 'http://www.ashbaughlegal.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863473',
-    updated_at: '2026-08-31T17:44:00.863473'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Wyatt Law Firm, PLLC',
-    email: '',
-    phone: '(210) 340-5550',
-    website: 'https://www.wyattlawfirm.com/?utm_source=google&utm_medium=organic&utm_campaign=GoogleLocal-SanAntonio',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863476',
-    updated_at: '2026-08-31T17:44:00.863477'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'The Law Firm of Oscar A. Garza, PLLC.',
-    email: '',
-    phone: '(210) 732-3030',
-    website: 'http://oscargarzalaw.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863479',
-    updated_at: '2026-08-31T17:44:00.863480'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Manuel Diaz Law Firm, PC',
-    email: '',
-    phone: '(210) 796-7714',
-    website: 'http://www.diazlf.com/?UTM_campaign=GMB',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863482',
-    updated_at: '2026-08-31T17:44:00.863483'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Ramos & Del Cueto, PLLC',
-    email: '',
-    phone: '(210) 761-6004',
-    website: 'https://www.ramosdelcueto.com/?npcmp=dir:local:5066836:78210',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863485',
-    updated_at: '2026-08-31T17:44:00.863486'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Paul A. Torres - Torres Law Firm',
-    email: '',
-    phone: '(210) 737-2672',
-    website: 'http://www.paultorreslaw.com/contact.html',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863488',
-    updated_at: '2026-08-31T17:44:00.863489'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Richard J Garcia CPA',
-    email: '',
-    phone: '(210) 349-1040',
-    website: 'http://richardjgarciacpa.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863491',
-    updated_at: '2026-08-31T17:44:00.863491'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Haynie',
-    email: '',
-    phone: '(210) 979-0055',
-    website: 'https://www.hayniecpas.com/san-antonio-texas/?utm_source=GBPlisting&utm_medium=organic',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863494',
-    updated_at: '2026-08-31T17:44:00.863494'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'CJ CPAs',
-    email: '',
-    phone: '(210) 331-7161',
-    website: 'https://cjtxaudit.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863496',
-    updated_at: '2026-08-31T17:44:00.863497'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Flint CPA, PC',
-    email: '',
-    phone: '(210) 496-1444',
-    website: 'http://www.flint-cpa.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863499',
-    updated_at: '2026-08-31T17:44:00.863500'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Guerrero CPA',
-    email: '',
-    phone: '(210) 490-7100',
-    website: 'https://guerrerocpa.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863502',
-    updated_at: '2026-08-31T17:44:00.863503'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'JMS CPAs, PLLC',
-    email: '',
-    phone: '(210) 526-9747',
-    website: 'https://jms-cpas.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863505',
-    updated_at: '2026-08-31T17:44:00.863506'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Rodriguez Reiffert - San Antonio CPA & Tax Preparation',
-    email: '',
-    phone: '(210) 822-9950',
-    website: 'https://cpasat.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863508',
-    updated_at: '2026-08-31T17:44:00.863509'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Carl Muniz CPA LLC',
-    email: '',
-    phone: '(210) 975-9158',
-    website: 'https://muniz.cpa/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863512',
-    updated_at: '2026-08-31T17:44:00.863512'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Laborde & Associates PC, CPAs',
-    email: '',
-    phone: '(210) 227-2800',
-    website: 'http://www.labordecpa.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863514',
-    updated_at: '2026-08-31T17:44:00.863515'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Sol Schwartz & Associates, PC',
-    email: '',
-    phone: '(210) 384-8000',
-    website: 'http://www.ssacpa.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863517',
-    updated_at: '2026-08-31T17:44:00.863518'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Adam Dickreiter, CPA, PLLC',
-    email: '',
-    phone: '(210) 413-4019',
-    website: '',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863520',
-    updated_at: '2026-08-31T17:44:00.863521'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Calvetti Ferguson',
-    email: '',
-    phone: '(210) 536-3200',
-    website: 'https://calvettiferguson.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863523',
-    updated_at: '2026-08-31T17:44:00.863524'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Mission Accounting & Advisory',
-    email: '',
-    phone: '(210) 201-6965',
-    website: 'https://missionaccounting.io/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863526',
-    updated_at: '2026-08-31T17:44:00.863527'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Minerva G. Cuellar, CPA PLLC',
-    email: '',
-    phone: '(210) 455-1560',
-    website: 'http://cuellarcpa.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863529',
-    updated_at: '2026-08-31T17:44:00.863529'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Ray CPA Tax and Accounting, LLC',
-    email: '',
-    phone: '(210) 288-0824',
-    website: 'http://www.thesanantoniocpa.com/index.php',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863531',
-    updated_at: '2026-08-31T17:44:00.863532'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Mark Wood CPA',
-    email: '',
-    phone: '(210) 824-5611',
-    website: 'http://markwoodcpa.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863534',
-    updated_at: '2026-08-31T17:44:00.863535'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Diana Martinez Attorney - CPA PLLC',
-    email: '',
-    phone: '(210) 973-7337',
-    website: 'http://www.martinezlawcpa.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863537',
-    updated_at: '2026-08-31T17:44:00.863538'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'ADKF',
-    email: '',
-    phone: '(210) 829-1300',
-    website: 'https://www.adkf.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863540',
-    updated_at: '2026-08-31T17:44:00.863541'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Valadez CPA PLLC',
-    email: '',
-    phone: '(210) 346-0036',
-    website: 'https://valadezcpa.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863543',
-    updated_at: '2026-08-31T17:44:00.863544'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Herbert Kraus, CPA',
-    email: '',
-    phone: '(210) 255-1403',
-    website: 'http://herbertkrauscpa.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863546',
-    updated_at: '2026-08-31T17:44:00.863547'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Digital Wheelhouse Marketing Agency',
-    email: '',
-    phone: '(210) 796-7531',
-    website: 'http://www.digitalwheelhouse.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863549',
-    updated_at: '2026-08-31T17:44:00.863550'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Capture That Media',
-    email: '',
-    phone: '(210) 934-1975',
-    website: 'http://capturethatmedia.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863552',
-    updated_at: '2026-08-31T17:44:00.863553'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Funnel Boost Media',
-    email: '',
-    phone: '(210) 880-1902',
-    website: 'https://www.funnelboostmedia.net/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863555',
-    updated_at: '2026-08-31T17:44:00.863555'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'FOG Digital Marketing',
-    email: '',
-    phone: '(726) 224-4920',
-    website: 'https://www.fogdigitalmarketing.com/?utm_campaign=gmb',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863558',
-    updated_at: '2026-08-31T17:44:00.863558'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Boss Creative',
-    email: '',
-    phone: '(210) 568-9677',
-    website: 'https://bosscreative.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863560',
-    updated_at: '2026-08-31T17:44:00.863561'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Sharkmatic Advertising',
-    email: '',
-    phone: '(210) 375-0000',
-    website: 'https://www.sharkmatic.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863563',
-    updated_at: '2026-08-31T17:44:00.863564'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'The CE Group Inc.',
-    email: '',
-    phone: '(210) 822-5001',
-    website: 'https://www.cegroupinc.net/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863566',
-    updated_at: '2026-08-31T17:44:00.863567'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'The Creative Mango',
-    email: '',
-    phone: '(210) 730-2964',
-    website: 'http://thecreativemango.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863569',
-    updated_at: '2026-08-31T17:44:00.863570'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'B Michele Branding Agency',
-    email: '',
-    phone: '(832) 637-6611',
-    website: 'https://bmichele.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863572',
-    updated_at: '2026-08-31T17:44:00.863573'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Citywide SEO',
-    email: '',
-    phone: '(210) 200-8924',
-    website: 'https://www.citywideseo.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863575',
-    updated_at: '2026-08-31T17:44:00.863576'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Grow Marketing',
-    email: '',
-    phone: '(210) 860-0499',
-    website: 'https://www.growmarketingservices.com/?utm_source=google-business&utm_medium=organic',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863578',
-    updated_at: '2026-08-31T17:44:00.863579'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Parallel, A Brand Agency',
-    email: '',
-    phone: '(210) 255-3809',
-    website: 'https://parallelbrandagency.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863581',
-    updated_at: '2026-08-31T17:44:00.863582'
-  },
-  {
-    id: '',
-    name: '',
-    company: '2ten Marketing - Digital Marketing Agency',
-    email: '',
-    phone: '(210) 268-7595',
-    website: 'http://www.2tenmarketing.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863584',
-    updated_at: '2026-08-31T17:44:00.863585'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Tribu Creative',
-    email: '',
-    phone: '(210) 209-9209',
-    website: 'https://www.wearetribu.com/?utm_source=google&utm_medium=gmb&utm_campaign=evergreen',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863587',
-    updated_at: '2026-08-31T17:44:00.863588'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Creative Noggin',
-    email: '',
-    phone: '(210) 320-0230',
-    website: 'https://www.creativenoggin.com/?utm_campaign=General%20Initial%20Outreach&utm_source=google&utm_medium=listing&utm_term=business-profile&utm_content=san-antonio',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863590',
-    updated_at: '2026-08-31T17:44:00.863591'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Texas Creative',
-    email: '',
-    phone: '(210) 828-8003',
-    website: 'https://texascreative.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863593',
-    updated_at: '2026-08-31T17:44:00.863594'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Thrive Internet Marketing Agency',
-    email: '',
-    phone: '(210) 880-9020',
-    website: 'https://thriveagency.com/san-antonio-digital-marketing-agency/?utm_source=GMBlisting&utm_medium=organic',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863596',
-    updated_at: '2026-08-31T17:44:00.863597'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Greater Brands',
-    email: '',
-    phone: '(210) 596-9005',
-    website: 'http://www.buildgreaterbrands.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863599',
-    updated_at: '2026-08-31T17:44:00.863600'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Heartfire Media',
-    email: '',
-    phone: '(210) 467-8244',
-    website: 'https://heartfiremedia.net/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863602',
-    updated_at: '2026-08-31T17:44:00.863603'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Gray Digital Group',
-    email: '',
-    phone: '(210) 750-4443',
-    website: 'http://www.graydigitalgroup.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863605',
-    updated_at: '2026-08-31T17:44:00.863606'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Levi Rodgers Real Estate Group',
-    email: '',
-    phone: '(210) 610-0760',
-    website: 'http://www.lrgrealty.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863608',
-    updated_at: '2026-08-31T17:44:00.863609'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Neal & Neal Team',
-    email: '',
-    phone: '(210) 955-9573',
-    website: 'https://www.mysanantoniohomesearch.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863611',
-    updated_at: '2026-08-31T17:44:00.863612'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Team Kristen Schramme - Group of Keller Williams',
-    email: '',
-    phone: '(210) 482-9094',
-    website: 'http://www.sahomeguide.net/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863614',
-    updated_at: '2026-08-31T17:44:00.863615'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'The Hesles Agency Mario Hesles Best San Antonio Realtors',
-    email: '',
-    phone: '(210) 908-6567',
-    website: 'http://www.heslesagency.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863617',
-    updated_at: '2026-08-31T17:44:00.863618'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'KW Heritage',
-    email: '',
-    phone: '(210) 493-3030',
-    website: 'https://www.kwsanantonio.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863620',
-    updated_at: '2026-08-31T17:44:00.863621'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Alexis Weigand Real Estate',
-    email: '',
-    phone: '(210) 987-8801',
-    website: 'https://weigandrealestate.com/?utm_source=gbp&utm_medium=organic',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863623',
-    updated_at: '2026-08-31T17:44:00.863624'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'JBGoodwin Realtors',
-    email: '',
-    phone: '(210) 581-9050',
-    website: 'https://jbgoodwin.com/?utm_source=gbp&utm_medium=organic',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863626',
-    updated_at: '2026-08-31T17:44:00.863627'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'The Schrader Group - Brokered by eXp Realty',
-    email: '',
-    phone: '(210) 729-6099',
-    website: 'https://theschradergroup.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863629',
-    updated_at: '2026-08-31T17:44:00.863630'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Exquisite Properties, LLC',
-    email: '',
-    phone: '(210) 494-1695',
-    website: 'https://exquisitesa.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863632',
-    updated_at: '2026-08-31T17:44:00.863633'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'RD Realty',
-    email: '',
-    phone: '(210) 683-9914',
-    website: 'http://www.rdrealtygrouptx.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863635',
-    updated_at: '2026-08-31T17:44:00.863635'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Texas LoneStar Realestate',
-    email: '',
-    phone: '(210) 822-4663',
-    website: 'http://www.texaslonestarrealestate.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863638',
-    updated_at: '2026-08-31T17:44:00.863638'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Rangel Real Estate Group brokered by REAL Broker, LLC - San Antonio, TX',
-    email: '',
-    phone: '(210) 334-7717',
-    website: 'http://www.rangelrealestategroup.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863641',
-    updated_at: '2026-08-31T17:44:00.863641'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'RISE Realty Group',
-    email: '',
-    phone: '(210) 864-4891',
-    website: 'https://www.riserealtygroupsa.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863644',
-    updated_at: '2026-08-31T17:44:00.863644'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Proper Realty',
-    email: '',
-    phone: '(210) 864-6386',
-    website: 'http://www.properrealtysa.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863646',
-    updated_at: '2026-08-31T17:44:00.863647'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'The Zachary Team San Antonio REALTORS®',
-    email: '',
-    phone: '(210) 504-5301',
-    website: 'http://www.gabrielandkristina.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863649',
-    updated_at: '2026-08-31T17:44:00.863650'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'M. Stagers Realty Partners',
-    email: '',
-    phone: '(210) 305-5665',
-    website: 'https://mstagersrealtypartners.com/?utm_source=gbp&utm_medium=organic',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863652',
-    updated_at: '2026-08-31T17:44:00.863653'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Garza Home Team - Keller Williams City View',
-    email: '',
-    phone: '(210) 663-4092',
-    website: 'http://www.forsalesanantoniohomes.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863655',
-    updated_at: '2026-08-31T17:44:00.863656'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'San Antonio Property Group Brokered by LPT Realty, LLC',
-    email: '',
-    phone: '(210) 332-2532',
-    website: 'https://sanantoniopropertygroup.lptsearch.com/index.php',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863658',
-    updated_at: '2026-08-31T17:44:00.863659'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Gilley International Group - Real Broker',
-    email: '',
-    phone: '(210) 445-1384',
-    website: 'https://gilleyinternationalgroup.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863661',
-    updated_at: '2026-08-31T17:44:00.863662'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Chris Dudley, Legacy Realty Group Brokered by Real Broker, LLC - San Antonio, TX',
-    email: '',
-    phone: '(210) 900-9657',
-    website: 'http://www.chrisdudleyrealty.com/',
-    city: 'San Antonio TX',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863664',
-    updated_at: '2026-08-31T17:44:00.863665'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Northern Nevada Family Dental',
-    email: '',
-    phone: '(775) 626-7772',
-    website: 'https://www.northernnevadafamilydental.com/?y_source=1_MjAxMjkzOTc1OS03MTUtbG9jYXRpb24ud2Vic2l0ZQ%3D%3D',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863667',
-    updated_at: '2026-08-31T17:44:00.863668'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Silverlake Dental Care of Sparks',
-    email: '',
-    phone: '(775) 391-6212',
-    website: 'https://dentistsparksnv.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863670',
-    updated_at: '2026-08-31T17:44:00.863671'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Spanish Springs Family Dental',
-    email: '',
-    phone: '(775) 626-6556',
-    website: 'https://www.spanishspringsdentistry.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863673',
-    updated_at: '2026-08-31T17:44:00.863674'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Absolute Dental - Sparks',
-    email: '',
-    phone: '(775) 331-8400',
-    website: 'https://www.absolutedental.com/locations/nevada/sparks/1125-n-mccarran/?utm_campaign=local-listings&utm_term=sparks',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863676',
-    updated_at: '2026-08-31T17:44:00.863676'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Sparks Modern Dentistry',
-    email: '',
-    phone: '(775) 525-5510',
-    website: 'https://www.sparksmoderndentistry.com/?sc_cid=GBP%3AO%3AGP%3A341%3AOrganic_Search%3AGeneral%3Ana&_vsrefdom=organic_gbp&y_source=1_MjEwMTg5NDktNzE1LWxvY2F0aW9uLndlYnNpdGU%3D',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863679',
-    updated_at: '2026-08-31T17:44:00.863679'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Sparks Family Dentistry',
-    email: '',
-    phone: '(775) 359-3336',
-    website: 'http://www.sparksfamilydentistry.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863681',
-    updated_at: '2026-08-31T17:44:00.863682'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Champagne Family Dentistry',
-    email: '',
-    phone: '(775) 359-3934',
-    website: 'https://www.champagnedental.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863685',
-    updated_at: '2026-08-31T17:44:00.863685'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Brunelli Dental Partners-Sparks',
-    email: '',
-    phone: '(775) 415-8931',
-    website: 'https://bestsparksdental.com/?y_source=1_NTU4MzQ4MDYtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863710',
-    updated_at: '2026-08-31T17:44:00.863711'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'McCarran Modern Dentistry',
-    email: '',
-    phone: '(775) 341-4010',
-    website: 'https://www.mccarranmoderndentistry.com/?sc_cid=GBP%3AO%3AGP%3A1268%3AOrganic_Search%3AGeneral%3Ana&_vsrefdom=organic_gbp&y_source=1_MjAyNTI5OTk1Ni03MTUtbG9jYXRpb24ud2Vic2l0ZQ%3D%3D',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863714',
-    updated_at: '2026-08-31T17:44:00.863715'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Gentle Dental Sparks',
-    email: '',
-    phone: '(775) 624-8718',
-    website: 'https://gentledental.interdent.com/locations/nv/sparks/?utm_source=gbp&utm_medium=organic&utm_campaign=gbp-listing&utm_content=GDSPARKS&y_source=1_MTA5NjAyNjYzNS03MTUtbG9jYXRpb24ud2Vic2l0ZQ%3D%3D',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863717',
-    updated_at: '2026-08-31T17:44:00.863717'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Vista Dental Care',
-    email: '',
-    phone: '(775) 626-3535',
-    website: 'https://www.vistadental.net/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863720',
-    updated_at: '2026-08-31T17:44:00.863720'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Wildcreek Dental',
-    email: '',
-    phone: '(775) 356-8254',
-    website: 'http://wildcreekdental.com/?utm_source=local&utm_medium=organic&utm_campaign=gmb',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863723',
-    updated_at: '2026-08-31T17:44:00.863723'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Sparks Marina Dentistry',
-    email: '',
-    phone: '(775) 359-1565',
-    website: 'https://www.sparksmarinadentistry.com/?sc_cid=GBP%3AO%3AGP%3A289%3AOrganic_Search%3AGeneral%3Ana&_vsrefdom=organic_gbp&y_source=1_MjQyNzQ5Mi03MTUtbG9jYXRpb24ud2Vic2l0ZQ%3D%3D',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863726',
-    updated_at: '2026-08-31T17:44:00.863726'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Absolute Dental - Spanish Springs',
-    email: '',
-    phone: '(775) 424-3000',
-    website: 'https://www.absolutedental.com/locations/nevada/sparks/5015-pyramid-highway/?utm_campaign=local-listings&utm_term=spanish-springs',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863728',
-    updated_at: '2026-08-31T17:44:00.863729'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Pyramid Family Dental',
-    email: '',
-    phone: '(775) 403-6038',
-    website: 'https://www.pyramidfamilydental.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863731',
-    updated_at: '2026-08-31T17:44:00.863732'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Spanish Springs Modern Dentistry',
-    email: '',
-    phone: '(775) 354-1785',
-    website: 'https://www.spanishspringsmoderndentistry.com/?sc_cid=GBP%3AO%3AGP%3A189%3AOrganic_Search%3AGeneral%3Ana&_vsrefdom=organic_gbp&y_source=1_MTQ2Njg5NC03MTUtbG9jYXRpb24ud2Vic2l0ZQ%3D%3D',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863734',
-    updated_at: '2026-08-31T17:44:00.863735'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Champagne Pediatric Dentistry - Sparks',
-    email: '',
-    phone: '(775) 335-3199',
-    website: 'https://champagnepediatricdentistry.com/?utm_campaign=gmb',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863737',
-    updated_at: '2026-08-31T17:44:00.863738'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Atlas Dental Boutique',
-    email: '',
-    phone: '(775) 451-3591',
-    website: 'https://www.atlasdentalboutique.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863740',
-    updated_at: '2026-08-31T17:44:00.863741'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Apple Family Dentistry',
-    email: '',
-    phone: '(775) 626-6300',
-    website: 'http://www.applefamilydentistry.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863743',
-    updated_at: '2026-08-31T17:44:00.863743'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Boca Dental and Braces',
-    email: '',
-    phone: '(775) 237-2209',
-    website: 'https://bocadentalrenotahoe.com/clinics/sparks-mccarran/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863745',
-    updated_at: '2026-08-31T17:44:00.863746'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Walton's Funerals & Cremations - Sparks',
-    email: '',
-    phone: '(775) 359-2210',
-    website: 'http://www.waltonsfuneralhomes.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863748',
-    updated_at: '2026-08-31T17:44:00.863748'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Cremation Society of Nevada - John Sparks',
-    email: '',
-    phone: '(775) 331-1112',
-    website: 'http://cremationsocietynevada.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863750',
-    updated_at: '2026-08-31T17:44:00.863751'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Walton’s Funerals & Cremations – Sierra Chapel',
-    email: '',
-    phone: '(775) 323-7189',
-    website: 'http://www.waltonsfuneralhomes.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863753',
-    updated_at: '2026-08-31T17:44:00.863753'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Walton's Funerals & Cremations - Ross, Burke & Knobel',
-    email: '',
-    phone: '(775) 323-4154',
-    website: 'https://www.waltonsfuneralhomes.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863755',
-    updated_at: '2026-08-31T17:44:00.863756'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Simple Cremation Sparks',
-    email: '',
-    phone: '(775) 335-0001',
-    website: 'http://www.simplecremation.us/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863758',
-    updated_at: '2026-08-31T17:44:00.863759'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Walton's Funerals & Cremations - O'Brien-Rogers & Crosby Funeral',
-    email: '',
-    phone: '(775) 323-6191',
-    website: 'https://www.waltonsfuneralhomes.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863761',
-    updated_at: '2026-08-31T17:44:00.863761'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'La Paloma Funeral Services',
-    email: '',
-    phone: '(775) 827-3700',
-    website: 'https://lapalomafuneralservices.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp-reno&utm_id=local&utm_content=reno',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863763',
-    updated_at: '2026-08-31T17:44:00.863764'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Mountain View Mortuary',
-    email: '',
-    phone: '(775) 788-2199',
-    website: 'http://mountainviewmortuary.net/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863766',
-    updated_at: '2026-08-31T17:44:00.863767'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Cremation Society of Nevada - Affinity',
-    email: '',
-    phone: '(775) 322-9200',
-    website: 'http://www.cremationsocietynevada.com/Affinity_Burial_and_Cremation_986168.html',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863768',
-    updated_at: '2026-08-31T17:44:00.863769'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Neptune Society',
-    email: '',
-    phone: '(775) 525-3533',
-    website: 'https://neptunesociety.com/locations/nevada/reno-cremation-1968?utm_source=gmb&utm_medium=organic&utm_campaign=web-button-1968',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863771',
-    updated_at: '2026-08-31T17:44:00.863772'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Truckee Meadows Cremation & Burial',
-    email: '',
-    phone: '(775) 324-4611',
-    website: 'http://www.truckeemeadowscremation.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863774',
-    updated_at: '2026-08-31T17:44:00.863774'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Walton's Funerals and Cremations - Chapel of the Valley',
-    email: '',
-    phone: '(775) 359-2210',
-    website: 'http://www.waltonsfuneralhomes.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863776',
-    updated_at: '2026-08-31T17:44:00.863777'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Simple Cremation Reno',
-    email: '',
-    phone: '(775) 324-3720',
-    website: 'http://www.simplecremation.us/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863779',
-    updated_at: '2026-08-31T17:44:00.863779'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Cremation Society of Nevada - Northern Nevada',
-    email: '',
-    phone: '(775) 322-2772',
-    website: 'https://cremationsocietynevada.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863781',
-    updated_at: '2026-08-31T17:44:00.863782'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Our Mother of Sorrows Catholic Cemetery',
-    email: '',
-    phone: '(775) 323-0133',
-    website: 'http://www.catholiccemeteryreno.org/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863784',
-    updated_at: '2026-08-31T17:44:00.863785'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Walton's Funerals & Cremations - Gardnerville',
-    email: '',
-    phone: '(775) 783-9312',
-    website: 'https://www.waltonsfuneralhomes.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863787',
-    updated_at: '2026-08-31T17:44:00.863787'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Ross Burke & Knobel Mortuaries',
-    email: '',
-    phone: '(775) 359-0440',
-    website: '',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863789',
-    updated_at: '2026-08-31T17:44:00.863790'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'MorningStar Senior Living of Sparks',
-    email: '',
-    phone: '(775) 403-6015',
-    website: 'https://www.morningstarseniorliving.com/communities/senior-living-sparks/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863792',
-    updated_at: '2026-08-31T17:44:00.863792'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Kiley Ranch Senior Living',
-    email: '',
-    phone: '(775) 387-3700',
-    website: 'https://kileyranchseniorliving.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863794',
-    updated_at: '2026-08-31T17:44:00.863795'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Brookdale Vista',
-    email: '',
-    phone: '(775) 359-7733',
-    website: 'https://www.brookdale.com/en/communities/brookdale-vista.html?cid=yext',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863797',
-    updated_at: '2026-08-31T17:44:00.863798'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Brookdale Sparks',
-    email: '',
-    phone: '(775) 359-7700',
-    website: 'https://www.brookdale.com/en/communities/brookdale-sparks.html?cid=yext',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863800',
-    updated_at: '2026-08-31T17:44:00.863800'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Arbors Memory Care',
-    email: '',
-    phone: '(775) 414-6867',
-    website: 'https://www.arborsmemorycare.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863802',
-    updated_at: '2026-08-31T17:44:00.863803'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Cascades of the Sierra',
-    email: '',
-    phone: '(775) 424-5400',
-    website: 'https://www.cascadeliving.com/community/cascades-of-the-sierra/?utm_source=google&utm_medium=organic&utm_campaign=gmblisting',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863805',
-    updated_at: '2026-08-31T17:44:00.863805'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Premier Residences of Reno',
-    email: '',
-    phone: '(775) 525-6080',
-    website: 'https://premierlivingreno.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863807',
-    updated_at: '2026-08-31T17:44:00.863808'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Casa Romana II Group Home',
-    email: '',
-    phone: '(669) 233-3295',
-    website: '',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863810',
-    updated_at: '2026-08-31T17:44:00.863811'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Sierra Crest Senior Living',
-    email: '',
-    phone: '(775) 254-5855',
-    website: 'http://sierracrestseniorliving.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863813',
-    updated_at: '2026-08-31T17:44:00.863814'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Northern Nevada State Veterans Home',
-    email: '',
-    phone: '(775) 827-2955',
-    website: 'https://veterans.nv.gov/benefits-and-services/northern-nevada-state-veterans-home-sparks-nv/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863815',
-    updated_at: '2026-08-31T17:44:00.863816'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'More To Life Adult Day Health Center',
-    email: '',
-    phone: '(775) 358-1988',
-    website: 'http://www.adultdaycarereno.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863818',
-    updated_at: '2026-08-31T17:44:00.863819'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Sparks Senior Citizens Center',
-    email: '',
-    phone: '(775) 353-3110',
-    website: 'https://www.cityofsparks.us/explore_sparks/seniors_service/sparks_senior_center.php',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863821',
-    updated_at: '2026-08-31T17:44:00.863822'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Summit Group Home',
-    email: '',
-    phone: '(775) 825-1481',
-    website: 'https://summitgrouphome1.wixsite.com/website',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863824',
-    updated_at: '2026-08-31T17:44:00.863824'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Atria Summit Ridge',
-    email: '',
-    phone: '(775) 787-3000',
-    website: 'https://www.atriaseniorliving.com/retirement-communities/atria-summit-ridge-reno-nv/?utm_source=GMB&utm_medium=Birdeye',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863826',
-    updated_at: '2026-08-31T17:44:00.863827'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'The Seasons of Reno',
-    email: '',
-    phone: '(775) 787-8200',
-    website: 'https://www.pegasusseniorliving.com/the-seasons-of-reno',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863829',
-    updated_at: '2026-08-31T17:44:00.863830'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Lincoln Way Senior Apartment Living',
-    email: '',
-    phone: '(775) 507-4114',
-    website: 'https://www.silversagemanor.org/lincolnwaysenior.html',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863832',
-    updated_at: '2026-08-31T17:44:00.863832'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Holiday Sky Peaks',
-    email: '',
-    phone: '(775) 747-9555',
-    website: 'https://www.holidayseniorliving.com/retirement-communities/holiday-sky-peaks-reno-nv/?utm_source=GMB&utm_medium=Birdeye',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863834',
-    updated_at: '2026-08-31T17:44:00.863835'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Lakeside Manor Retirement',
-    email: '',
-    phone: '(775) 827-3607',
-    website: 'https://www.lakesideretirement.com/?utm_source=onlinepresence&utm_campaign=gbp&utm_id=cumulus',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863837',
-    updated_at: '2026-08-31T17:44:00.863838'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Northern Nevada Center For Independent Living',
-    email: '',
-    phone: '(775) 353-3599',
-    website: 'http://www.nncil.org/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863839',
-    updated_at: '2026-08-31T17:44:00.863840'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Good Samaritan Adult Family',
-    email: '',
-    phone: '(775) 355-3220',
-    website: '',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863842',
-    updated_at: '2026-08-31T17:44:00.863843'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'DeHart Plumbing, Heating, & Air',
-    email: '',
-    phone: '(775) 358-6188',
-    website: 'https://www.dehartinc.com/reno',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863845',
-    updated_at: '2026-08-31T17:44:00.863845'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'All Hours Air',
-    email: '',
-    phone: '(775) 210-5023',
-    website: 'https://allhoursair.com/?utm_source=GMB&utm_medium=organic',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863847',
-    updated_at: '2026-08-31T17:44:00.863848'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Nevada Heating, Cooling, Plumbing',
-    email: '',
-    phone: '(775) 235-2135',
-    website: 'https://nevadaheating.com/?utm_source=Google&utm_medium=GBP&utm_campaign=Google.Business.Profile',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863850',
-    updated_at: '2026-08-31T17:44:00.863851'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Lincoln Heating & Air',
-    email: '',
-    phone: '(775) 413-2288',
-    website: 'https://lincolnheating.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863853',
-    updated_at: '2026-08-31T17:44:00.863853'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Gibson Plumbing & Mechanical, Inc.',
-    email: '',
-    phone: '(775) 425-5685',
-    website: 'https://gibsonplumbingnv.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863855',
-    updated_at: '2026-08-31T17:44:00.863856'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Legacy Heating, Cooling, Plumbing & Electrical',
-    email: '',
-    phone: '(775) 977-1375',
-    website: 'https://legacyac.com/service-area/reno-nevada/?utm_source=google-gbp&utm_medium=organic&utm_campaign=*281*legacy-air-reno',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863858',
-    updated_at: '2026-08-31T17:44:00.863858'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'M&S Heating and Air Conditioning',
-    email: '',
-    phone: '(775) 843-7930',
-    website: 'https://ms-ac.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863860',
-    updated_at: '2026-08-31T17:44:00.863861'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'S&S Mechanical and Plumbing',
-    email: '',
-    phone: '(775) 406-1687',
-    website: 'http://www.ssmechanicalnv.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863863',
-    updated_at: '2026-08-31T17:44:00.863864'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'D&D Plumbing',
-    email: '',
-    phone: '(775) 415-9219',
-    website: 'https://ddplumbing.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp&utm_content=website-button',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863866',
-    updated_at: '2026-08-31T17:44:00.863866'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Alexander Mechanical',
-    email: '',
-    phone: '(775) 233-7318',
-    website: 'https://alexandermech.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863868',
-    updated_at: '2026-08-31T17:44:00.863869'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Desert Air LLC',
-    email: '',
-    phone: '(775) 359-0656',
-    website: 'http://www.desertairhvac.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863871',
-    updated_at: '2026-08-31T17:44:00.863872'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Root-O-Matic, Inc.',
-    email: '',
-    phone: '(775) 786-9581',
-    website: 'http://rootomatic.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863874',
-    updated_at: '2026-08-31T17:44:00.863874'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Sierra Air Cooling Heating & Plumbing Reno',
-    email: '',
-    phone: '(775) 446-6621',
-    website: 'https://sierraair.com/?utm_source=GBP&utm_medium=organic&utm_campaign=SIR_ORG_EVER_A_GBP_Listing',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863877',
-    updated_at: '2026-08-31T17:44:00.863877'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Ira Hansen and Sons Plumbing',
-    email: '',
-    phone: '(775) 626-7777',
-    website: 'https://www.ihsplumbing.com/?utm_source=cumulus&utm_medium=onlinepresence&utm_campaign=gbp',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863879',
-    updated_at: '2026-08-31T17:44:00.863880'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Tanks Water Heaters and Plumbing LLC',
-    email: '',
-    phone: '(775) 997-8071',
-    website: 'https://renosparkswaterheaters.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp_profile',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863882',
-    updated_at: '2026-08-31T17:44:00.863883'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Sparks Heating & Air Conditioning',
-    email: '',
-    phone: '(775) 364-5127',
-    website: 'https://sparksheatingair.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863885',
-    updated_at: '2026-08-31T17:44:00.863885'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Best Plumbing & Heating LLC',
-    email: '',
-    phone: '(775) 830-9309',
-    website: 'https://www.bphllc.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863887',
-    updated_at: '2026-08-31T17:44:00.863888'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Jet Plumbing, Heating & Drain Services',
-    email: '',
-    phone: '(775) 331-3933',
-    website: 'https://jetplumbing.com/?utm_source=google&utm_medium=gmb',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863890',
-    updated_at: '2026-08-31T17:44:00.863891'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Timberidge Plumbing & Heating, Inc.',
-    email: '',
-    phone: '(775) 359-9446',
-    website: 'https://www.timberidgeplumbing.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863892',
-    updated_at: '2026-08-31T17:44:00.863893'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Happy Heating & Air Conditioning',
-    email: '',
-    phone: '(775) 674-2779',
-    website: 'http://www.happyheaters.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863895',
-    updated_at: '2026-08-31T17:44:00.863896'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Nevadas Mobile Auto Mechanic',
-    email: '',
-    phone: '(775) 528-3333',
-    website: 'http://www.nevadasmobileautomechanic.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863898',
-    updated_at: '2026-08-31T17:44:00.863898'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'A Master Mechanic',
-    email: '',
-    phone: '(775) 358-6777',
-    website: 'https://www.amastermechanic.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863900',
-    updated_at: '2026-08-31T17:44:00.863901'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'The Auto Shop',
-    email: '',
-    phone: '(775) 358-2114',
-    website: '',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863903',
-    updated_at: '2026-08-31T17:44:00.863904'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Independent Automotive Inc',
-    email: '',
-    phone: '(775) 358-8184',
-    website: '',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863906',
-    updated_at: '2026-08-31T17:44:00.863907'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Allen's Automotive Sparks',
-    email: '',
-    phone: '(775) 358-4143',
-    website: 'https://www.allenstireandbrake.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863909',
-    updated_at: '2026-08-31T17:44:00.863910'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'The Auto Hospital',
-    email: '',
-    phone: '(775) 827-2444',
-    website: 'https://www.autohospitalsparks.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863912',
-    updated_at: '2026-08-31T17:44:00.863912'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'My Car Shop',
-    email: '',
-    phone: '(775) 352-9465',
-    website: 'https://www.mycarshopllc.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863914',
-    updated_at: '2026-08-31T17:44:00.863915'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Preferred Auto Care',
-    email: '',
-    phone: '(775) 355-7033',
-    website: 'https://preferredautoreno.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863917',
-    updated_at: '2026-08-31T17:44:00.863917'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'All American Auto Repair & Tires',
-    email: '',
-    phone: '(775) 433-2225',
-    website: 'https://775allamericanauto.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863919',
-    updated_at: '2026-08-31T17:44:00.863920'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Equality Automotive',
-    email: '',
-    phone: '(775) 384-2650',
-    website: 'https://equalityautomotivereno.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863922',
-    updated_at: '2026-08-31T17:44:00.863923'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'RPM Automotive Inc.',
-    email: '',
-    phone: '(775) 835-4013',
-    website: 'https://www.rpmautomotiveinc.com/?utm_source=google&utm_medium=gmb',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863925',
-    updated_at: '2026-08-31T17:44:00.863925'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Sparks Auto Care',
-    email: '',
-    phone: '(775) 352-9491',
-    website: 'https://sparksautocarenv.wixsite.com/home',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863927',
-    updated_at: '2026-08-31T17:44:00.863928'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Reno Vulcanizing Auto Care and Tires',
-    email: '',
-    phone: '(775) 356-7500',
-    website: 'https://renovulc.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp&utm_content=website-button',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863930',
-    updated_at: '2026-08-31T17:44:00.863930'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Wayne's Automotive Center',
-    email: '',
-    phone: '(775) 356-6996',
-    website: 'https://www.waynesautocenter.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863932',
-    updated_at: '2026-08-31T17:44:00.863933'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Sunshine Service Brake & Alignment',
-    email: '',
-    phone: '(775) 358-5486',
-    website: 'https://www.sunshineservicealignment.com/?utm_source=cumulus&utm_medium=onlinepresence&utm_campaign=gbp',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863935',
-    updated_at: '2026-08-31T17:44:00.863936'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Andy's Automotive',
-    email: '',
-    phone: '(775) 269-3896',
-    website: 'https://andysautomotivenv.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863937',
-    updated_at: '2026-08-31T17:44:00.863938'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'L & C Auto Repair',
-    email: '',
-    phone: '(775) 507-7226',
-    website: '',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863940',
-    updated_at: '2026-08-31T17:44:00.863941'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Santi Auto Care',
-    email: '',
-    phone: '(775) 618-8838',
-    website: 'https://santiautocare.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863943',
-    updated_at: '2026-08-31T17:44:00.863943'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Mobile Mechanic Pros of Sparks',
-    email: '',
-    phone: '(775) 234-0822',
-    website: 'https://www.renonvmobilemechanic.com/cities-served/sparks/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863945',
-    updated_at: '2026-08-31T17:44:00.863946'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'One Stop Automotive LLC',
-    email: '',
-    phone: '(775) 357-9299',
-    website: 'https://onestopauto.my.canva.site/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863948',
-    updated_at: '2026-08-31T17:44:00.863949'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Roamer Coffee House - Sparks',
-    email: '',
-    phone: '(775) 360-6574',
-    website: 'https://roamercoffeehouse.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863951',
-    updated_at: '2026-08-31T17:44:00.863951'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Sparks Coffee Shop',
-    email: '',
-    phone: '(775) 355-9440',
-    website: 'http://sparkscoffeeshop.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863954',
-    updated_at: '2026-08-31T17:44:00.863954'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Adventure Cafe',
-    email: '',
-    phone: '(775) 424-5689',
-    website: '',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863956',
-    updated_at: '2026-08-31T17:44:00.863957'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Lighthouse Coffee',
-    email: '',
-    phone: '(775) 870-1380',
-    website: 'http://lighthousecoffeeshop.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863959',
-    updated_at: '2026-08-31T17:44:00.863960'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Crazy Bean Coffee',
-    email: '',
-    phone: '(775) 240-8253',
-    website: 'http://www.crazybeancoffee.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863962',
-    updated_at: '2026-08-31T17:44:00.863963'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'The Roost',
-    email: '',
-    phone: '',
-    website: 'https://www.theroostreno.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863964',
-    updated_at: '2026-08-31T17:44:00.863965'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Cafe Con Papi',
-    email: '',
-    phone: '',
-    website: '',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863967',
-    updated_at: '2026-08-31T17:44:00.863968'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Café Bellini',
-    email: '',
-    phone: '(775) 331-1069',
-    website: 'http://www.westernvillagesparks.com/dining/cafe-bellini',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863970',
-    updated_at: '2026-08-31T17:44:00.863970'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Jacobo's Coffee House',
-    email: '',
-    phone: '(775) 800-1225',
-    website: 'https://jackscoffeehousenv.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863972',
-    updated_at: '2026-08-31T17:44:00.863973'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Roamer Coffee House',
-    email: '',
-    phone: '(775) 360-6574',
-    website: 'https://roamercoffeehouse.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863975',
-    updated_at: '2026-08-31T17:44:00.863976'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Pangolin Cafe',
-    email: '',
-    phone: '(775) 453-4075',
-    website: 'https://pangolincafe.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863977',
-    updated_at: '2026-08-31T17:44:00.863978'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'MENDOZAS COFFEE SHOP',
-    email: '',
-    phone: '(775) 360-6663',
-    website: '',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863980',
-    updated_at: '2026-08-31T17:44:00.863981'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Coffee N' Comics - Baring',
-    email: '',
-    phone: '(775) 204-6690',
-    website: 'http://www.coffeencomics.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863983',
-    updated_at: '2026-08-31T17:44:00.863983'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'The Human Bean',
-    email: '',
-    phone: '(775) 413-3250',
-    website: 'https://thehumanbean.com/location/the-human-bean-800-holman-way-sparks-nv/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863985',
-    updated_at: '2026-08-31T17:44:00.863986'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Walden's Coffeehouse - Breakfast & Coffee in Reno',
-    email: '',
-    phone: '(775) 787-3307',
-    website: 'http://www.waldenscoffeehouse.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863988',
-    updated_at: '2026-08-31T17:44:00.863989'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Coffeebar',
-    email: '',
-    phone: '(775) 800-1090',
-    website: 'https://www.coffeebar.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863991',
-    updated_at: '2026-08-31T17:44:00.863991'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Cs Mad Batter Cakery',
-    email: '',
-    phone: '(775) 451-5001',
-    website: 'https://csmadbattercakery.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863993',
-    updated_at: '2026-08-31T17:44:00.863994'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Glory Cloud Coffee Roasters',
-    email: '',
-    phone: '(844) 745-6792',
-    website: 'http://www.glorycloudcoffee.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863996',
-    updated_at: '2026-08-31T17:44:00.863996'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Mountain Legacy Law, PLLC',
-    email: '',
-    phone: '(775) 434-8681',
-    website: 'https://mountainlegacylaw.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.863998',
-    updated_at: '2026-08-31T17:44:00.863999'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Nevada Counsel, LLC',
-    email: '',
-    phone: '(775) 832-3012',
-    website: 'http://nevadacounsel.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.864001',
-    updated_at: '2026-08-31T17:44:00.864001'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Law Office of Richard C Blower',
-    email: '',
-    phone: '(775) 674-3363',
-    website: 'http://www.blowerlaw.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.864003',
-    updated_at: '2026-08-31T17:44:00.864004'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Eaton Law',
-    email: '',
-    phone: '(775) 828-0800',
-    website: 'https://eatonbusinesslaw.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.864006',
-    updated_at: '2026-08-31T17:44:00.864007'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Sierra Crest Business Law Group',
-    email: '',
-    phone: '(775) 448-6070',
-    website: 'http://www.sierracrestlaw.com/?utm_campaign=gmb',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.864009',
-    updated_at: '2026-08-31T17:44:00.864009'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Kidder Law Group',
-    email: '',
-    phone: '(775) 359-1936',
-    website: '',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.864011',
-    updated_at: '2026-08-31T17:44:00.864012'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Ristenpart Law',
-    email: '',
-    phone: '(775) 200-1699',
-    website: 'http://www.ristenpartlaw.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.864014',
-    updated_at: '2026-08-31T17:44:00.864015'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Carlson & Work',
-    email: '',
-    phone: '(775) 386-2226',
-    website: 'https://www.renolawfirm.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.864016',
-    updated_at: '2026-08-31T17:44:00.864017'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Benson & Bingham Accident Injury Lawyers, LLC - Reno',
-    email: '',
-    phone: '(775) 600-6000',
-    website: 'https://www.bensonbingham.com/reno/?utm_source=google&utm_medium=organic&utm_campaign=gbp',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.864019',
-    updated_at: '2026-08-31T17:44:00.864020'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Reno Sparks Bankruptcy Attorney',
-    email: '',
-    phone: '(775) 331-1222',
-    website: 'https://www.affordablebankruptcyreno.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.864022',
-    updated_at: '2026-08-31T17:44:00.864022'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Thierman Buck Law Firm',
-    email: '',
-    phone: '(775) 284-1500',
-    website: 'https://thiermanbuck.com/contact/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.864024',
-    updated_at: '2026-08-31T17:44:00.864025'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Williams Frederick D',
-    email: '',
-    phone: '(775) 386-2345',
-    website: 'http://www.rickwilliamslaw.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.864027',
-    updated_at: '2026-08-31T17:44:00.864028'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Gilbert Sheldon',
-    email: '',
-    phone: '(775) 674-8787',
-    website: '',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.864029',
-    updated_at: '2026-08-31T17:44:00.864030'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Silver State Law',
-    email: '',
-    phone: '(775) 786-7445',
-    website: 'http://www.sslawnv.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.864032',
-    updated_at: '2026-08-31T17:44:00.864033'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Attorney Marilyn D. York. Inc.',
-    email: '',
-    phone: '(775) 324-7979',
-    website: 'https://www.marilynyork.net/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.864035',
-    updated_at: '2026-08-31T17:44:00.864036'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'The Law Offices of Joel A. Santos',
-    email: '',
-    phone: '(775) 323-1084',
-    website: 'http://www.santoslawoffices.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.864038',
-    updated_at: '2026-08-31T17:44:00.864038'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'The Tax Law Pros',
-    email: '',
-    phone: '(775) 500-0979',
-    website: 'https://thetaxlawpros.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.864040',
-    updated_at: '2026-08-31T17:44:00.864041'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Northern Nevada Legal Aid (formerly Washoe Legal Services)',
-    email: '',
-    phone: '(775) 329-2727',
-    website: '',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.864043',
-    updated_at: '2026-08-31T17:44:00.864044'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Richard P. Davies, Esq.',
-    email: '',
-    phone: '(775) 360-6894',
-    website: 'https://www.richardpdavieslaw.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.864045',
-    updated_at: '2026-08-31T17:44:00.864046'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Jaymie Mitchell Attorney at Law',
-    email: '',
-    phone: '(775) 333-9455',
-    website: '',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.864048',
-    updated_at: '2026-08-31T17:44:00.864049'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Hartmann & Associates',
-    email: '',
-    phone: '(775) 358-6649',
-    website: 'https://www.hartmannandassociates.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.864051',
-    updated_at: '2026-08-31T17:44:00.864052'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Andrew & Co CPA',
-    email: '',
-    phone: '(775) 420-4237',
-    website: 'https://www.andrewcocpa.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.864054',
-    updated_at: '2026-08-31T17:44:00.864054'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Tax Prep & Bookkeeping Services',
-    email: '',
-    phone: '(775) 746-3200',
-    website: 'https://www.taxprepbooks.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.864056',
-    updated_at: '2026-08-31T17:44:00.864057'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Hartmann Professional Services',
-    email: '',
-    phone: '(775) 331-2378',
-    website: 'http://hpsinv.com/profile/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.864059',
-    updated_at: '2026-08-31T17:44:00.864060'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Mark Borel & Associates, Inc.',
-    email: '',
-    phone: '(775) 828-7111',
-    website: 'https://borelassociates.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.864062',
-    updated_at: '2026-08-31T17:44:00.864063'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Monica's Tax Preparation LLC',
-    email: '',
-    phone: '(775) 351-2277',
-    website: '',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.864064',
-    updated_at: '2026-08-31T17:44:00.864065'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Stone Ridge CPAs',
-    email: '',
-    phone: '(775) 826-9400',
-    website: 'http://www.renocpa.net/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.864067',
-    updated_at: '2026-08-31T17:44:00.864068'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Tax Plus',
-    email: '',
-    phone: '(775) 853-2356',
-    website: 'http://taxplusinc.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.864069',
-    updated_at: '2026-08-31T17:44:00.864070'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Michael Mellberg CPA',
-    email: '',
-    phone: '(775) 323-8131',
-    website: 'http://mellbergcpa.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.864072',
-    updated_at: '2026-08-31T17:44:00.864073'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Amanda Williams & Associates',
-    email: '',
-    phone: '(775) 355-8822',
-    website: 'http://williamstaxprep.biz/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.864075',
-    updated_at: '2026-08-31T17:44:00.864075'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Michael Litchfield CPA in Reno, NV',
-    email: '',
-    phone: '(775) 571-1302',
-    website: '',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.864077',
-    updated_at: '2026-08-31T17:44:00.864078'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Mark Robertson CPA',
-    email: '',
-    phone: '(775) 825-5522',
-    website: 'http://www.renocpafirm.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.864080',
-    updated_at: '2026-08-31T17:44:00.864081'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Sidley & Associates',
-    email: '',
-    phone: '(775) 355-7769',
-    website: 'http://www.sidleytax.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.864082',
-    updated_at: '2026-08-31T17:44:00.864083'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Business Financial &Tax Solution Inc.',
-    email: '',
-    phone: '(775) 356-7077',
-    website: 'http://nvaccountingandtaxes.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.864085',
-    updated_at: '2026-08-31T17:44:00.864086'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Assured Bookkeeping Plus of Nevada',
-    email: '',
-    phone: '(775) 830-2373',
-    website: 'https://www.assuredbookkeepingplus.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.864088',
-    updated_at: '2026-08-31T17:44:00.864088'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Hispanic Center LLC',
-    email: '',
-    phone: '(775) 313-5094',
-    website: 'http://hispanic-center.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.864090',
-    updated_at: '2026-08-31T17:44:00.864091'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'H&R Block',
-    email: '',
-    phone: '(775) 284-4986',
-    website: 'https://www.hrblock.com/tax-office-near-me/nevada/sparks/27798/?otppartnerid=9308&campaignid=pw_mcm_9308_9762&utm_medium=local',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.864093',
-    updated_at: '2026-08-31T17:44:00.864093'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Forbush CPAs',
-    email: '',
-    phone: '(775) 337-6001',
-    website: 'http://forbushcpa.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.864095',
-    updated_at: '2026-08-31T17:44:00.864096'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Clawson Gene H CPA',
-    email: '',
-    phone: '(775) 322-6626',
-    website: '',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.864098',
-    updated_at: '2026-08-31T17:44:00.864099'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'OCG Creative',
-    email: '',
-    phone: '(775) 324-1644',
-    website: 'https://ocgcreative.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.864100',
-    updated_at: '2026-08-31T17:44:00.864101'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Talents Into Profits LLC',
-    email: '',
-    phone: '(775) 300-3601',
-    website: 'https://www.talentsintoprofits.com/?utm_source=gbp',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.864103',
-    updated_at: '2026-08-31T17:44:00.864104'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Fullsphere Digital',
-    email: '',
-    phone: '(530) 613-7201',
-    website: 'https://www.fullspheredigital.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.864106',
-    updated_at: '2026-08-31T17:44:00.864106'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Muse Group Marketing',
-    email: '',
-    phone: '(775) 240-9677',
-    website: 'http://musegroupmarketing.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.864108',
-    updated_at: '2026-08-31T17:44:00.864109'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'The Factory Creatives',
-    email: '',
-    phone: '(775) 846-0522',
-    website: 'https://www.factorycreatives.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.864111',
-    updated_at: '2026-08-31T17:44:00.864111'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Unravel',
-    email: '',
-    phone: '(775) 525-3966',
-    website: 'https://unravel.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.864113',
-    updated_at: '2026-08-31T17:44:00.864114'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'D4 Advanced Media',
-    email: '',
-    phone: '(775) 636-9986',
-    website: 'https://www.d4am.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.864116',
-    updated_at: '2026-08-31T17:44:00.864117'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Wonder Web Development',
-    email: '',
-    phone: '(775) 253-8139',
-    website: 'https://wonderwebdevelopment.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.864119',
-    updated_at: '2026-08-31T17:44:00.864119'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Beacon Media + Marketing',
-    email: '',
-    phone: '(775) 824-5626',
-    website: 'http://www.beaconmm.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.864121',
-    updated_at: '2026-08-31T17:44:00.864122'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Noble Studios',
-    email: '',
-    phone: '(775) 883-6000',
-    website: 'https://noblestudios.com/?utm_source=gmb&utm_medium=organic',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.864124',
-    updated_at: '2026-08-31T17:44:00.864125'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Day by Day Solutions',
-    email: '',
-    phone: '(775) 298-1093',
-    website: '',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.864127',
-    updated_at: '2026-08-31T17:44:00.864127'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'NexVenture Marketing',
-    email: '',
-    phone: '(775) 501-2924',
-    website: 'http://nexventuremarketing.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.864129',
-    updated_at: '2026-08-31T17:44:00.864130'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Right to Rank',
-    email: '',
-    phone: '(775) 600-9463',
-    website: '',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.864132',
-    updated_at: '2026-08-31T17:44:00.864132'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Eye on Advertising Solutions',
-    email: '',
-    phone: '(626) 374-8847',
-    website: 'https://www.eyeonadvertisingsolutions.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.864134',
-    updated_at: '2026-08-31T17:44:00.864135'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Med Spa Marketing Group',
-    email: '',
-    phone: '(775) 800-7721',
-    website: '',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.864137',
-    updated_at: '2026-08-31T17:44:00.864138'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Michael Seriosa & Associates',
-    email: '',
-    phone: '(775) 448-6477',
-    website: 'https://somgu.top/michael-seriosa-associates',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.864140',
-    updated_at: '2026-08-31T17:44:00.864140'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'BALANCED Agency',
-    email: '',
-    phone: '(775) 900-0910',
-    website: 'http://www.balancedagency.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.864142',
-    updated_at: '2026-08-31T17:44:00.864143'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'The WebSmith Group',
-    email: '',
-    phone: '(775) 722-4949',
-    website: 'http://www.thewebsmithgroup.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.864145',
-    updated_at: '2026-08-31T17:44:00.864145'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Go Hyper-Local Now',
-    email: '',
-    phone: '(916) 276-4004',
-    website: 'http://www.gohyperlocalnow.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.864147',
-    updated_at: '2026-08-31T17:44:00.864148'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'RE/MAX Professionals - Sparks',
-    email: '',
-    phone: '(775) 446-7200',
-    website: 'http://renorealestateprofessionals.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.864150',
-    updated_at: '2026-08-31T17:44:00.864151'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Lolis Vazquez Reno-Sparks Realty LLC. Lic.#S.38647',
-    email: '',
-    phone: '(775) 771-2537',
-    website: 'https://lolisvrenosparksrealtyllc.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.864153',
-    updated_at: '2026-08-31T17:44:00.864153'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Brent Copeland - Nevada Real Estate Group, LPT Realty',
-    email: '',
-    phone: '(775) 277-2120',
-    website: 'https://www.nevadarealestategroup.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.864155',
-    updated_at: '2026-08-31T17:44:00.864156'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Chase International Real Estate',
-    email: '',
-    phone: '(775) 737-5900',
-    website: 'https://www.chaseinternational.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.864158',
-    updated_at: '2026-08-31T17:44:00.864159'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Keller Williams Group One, Inc.',
-    email: '',
-    phone: '(775) 336-3800',
-    website: 'https://kwsierranevada.yourkwoffice.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.864160',
-    updated_at: '2026-08-31T17:44:00.864161'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Heath Montgomery Real Estate Group at Keller Williams Group One Inc. S.67157',
-    email: '',
-    phone: '(775) 287-6132',
-    website: 'https://www.myrenosparksrealestate.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.864163',
-    updated_at: '2026-08-31T17:44:00.864164'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Sandy Gabrielli - Gabrielli Homes Team at RE/MAX Professionals',
-    email: '',
-    phone: '(775) 451-3956',
-    website: 'https://nevadacurbappeal.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.864166',
-    updated_at: '2026-08-31T17:44:00.864166'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Spencer & Associates Real Estate Group at RE/MAX Professionals-Sparks',
-    email: '',
-    phone: '(775) 232-4628',
-    website: 'https://anita-spencer.remax.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.864168',
-    updated_at: '2026-08-31T17:44:00.864169'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'HomeGate Realty of Nevada',
-    email: '',
-    phone: '(775) 284-4663',
-    website: 'https://homegatenevada.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.864171',
-    updated_at: '2026-08-31T17:44:00.864172'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Amber Donnelly, Realtor',
-    email: '',
-    phone: '(775) 414-9559',
-    website: 'http://ambersellsnevada.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.864173',
-    updated_at: '2026-08-31T17:44:00.864174'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'David Martin - Dickson Realty Property Management',
-    email: '',
-    phone: '(775) 284-4401',
-    website: 'https://www.renospropertymanagement.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.864176',
-    updated_at: '2026-08-31T17:44:00.864177'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Ferrari-Lund Real Estate',
-    email: '',
-    phone: '(775) 685-7788',
-    website: 'http://www.ferrari-lund.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.864179',
-    updated_at: '2026-08-31T17:44:00.864179'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Lisamarie Wand Group - Commercial Real Estate & Business Brokering Experts',
-    email: '',
-    phone: '(775) 224-5300',
-    website: 'https://lisamariewand.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.864182',
-    updated_at: '2026-08-31T17:44:00.864182'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Dickson Realty',
-    email: '',
-    phone: '(775) 284-4401',
-    website: 'https://www.renospropertymanagement.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.864184',
-    updated_at: '2026-08-31T17:44:00.864185'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Real Estate of Reno/Sparks',
-    email: '',
-    phone: '(775) 828-7200',
-    website: 'http://rers.net/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.864187',
-    updated_at: '2026-08-31T17:44:00.864187'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Beth Cooney - Dickson Realty',
-    email: '',
-    phone: '(775) 544-6026',
-    website: 'https://bethcooney.dicksonrealty.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.864189',
-    updated_at: '2026-08-31T17:44:00.864190'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Kayla Dalton, Real Estate Advisor',
-    email: '',
-    phone: '(775) 525-4659',
-    website: 'http://www.kayladaltonre.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.864192',
-    updated_at: '2026-08-31T17:44:00.864192'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Joanne Tiernan, Realtor® ABR CRS SRES MRP – Keller Williams Group One (Lic. S.0173922)',
-    email: '',
-    phone: '(775) 745-2185',
-    website: 'https://discovernorthernnevada.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.864195',
-    updated_at: '2026-08-31T17:44:00.864196'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Moira Shea, RE/MAX Professionals',
-    email: '',
-    phone: '(775) 772-8066',
-    website: 'https://www.washoehomes.com/',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.864198',
-    updated_at: '2026-08-31T17:44:00.864198'
-  },
-  {
-    id: '',
-    name: '',
-    company: 'Christina Jacobsen, REALTOR; RE/MAX Professionals Sparks',
-    email: '',
-    phone: '(775) 502-6000',
-    website: 'https://www.remax.com/real-estate-agents/christina-jacobsen-sparks-nv/102054860',
-    city: 'Sparks NV',
-    state: '',
-    industry: '',
-    source: '',
-    status: 'new',
-    score: 0,
-    created_at: '2026-08-31T17:44:00.864200',
-    updated_at: '2026-08-31T17:44:00.864201'
-  },
-  {
-    id: '',
-    name: 'Cam Stone's Automotive',
+    name: `Cam Stone's Automotive`,
     company: '',
     email: '',
     phone: '(760) 568-2999',
@@ -9838,8 +207,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864204',
-    updated_at: '2026-08-31T17:44:00.864205'
+    created_at: '2026-08-25T05:04:37.746868',
+    updated_at: '2026-08-25T05:04:37.746877'
   },
   {
     id: '',
@@ -9854,8 +223,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864207',
-    updated_at: '2026-08-31T17:44:00.864208'
+    created_at: '2026-08-25T05:04:37.746883',
+    updated_at: '2026-08-25T05:04:37.746883'
   },
   {
     id: '',
@@ -9870,8 +239,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864210',
-    updated_at: '2026-08-31T17:44:00.864211'
+    created_at: '2026-08-25T05:04:37.746887',
+    updated_at: '2026-08-25T05:04:37.746888'
   },
   {
     id: '',
@@ -9886,12 +255,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864213',
-    updated_at: '2026-08-31T17:44:00.864214'
+    created_at: '2026-08-25T05:04:37.746890',
+    updated_at: '2026-08-25T05:04:37.746891'
   },
   {
     id: '',
-    name: 'Ozzie's Automotive Inc.',
+    name: `Ozzie's Automotive Inc.`,
     company: '',
     email: '',
     phone: '(760) 773-5939',
@@ -9902,8 +271,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864216',
-    updated_at: '2026-08-31T17:44:00.864217'
+    created_at: '2026-08-25T05:04:37.746894',
+    updated_at: '2026-08-25T05:04:37.746894'
   },
   {
     id: '',
@@ -9918,8 +287,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864219',
-    updated_at: '2026-08-31T17:44:00.864219'
+    created_at: '2026-08-25T05:04:37.746897',
+    updated_at: '2026-08-25T05:04:37.746898'
   },
   {
     id: '',
@@ -9934,8 +303,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864222',
-    updated_at: '2026-08-31T17:44:00.864222'
+    created_at: '2026-08-25T05:04:37.746901',
+    updated_at: '2026-08-25T05:04:37.746902'
   },
   {
     id: '',
@@ -9950,8 +319,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864224',
-    updated_at: '2026-08-31T17:44:00.864225'
+    created_at: '2026-08-25T05:04:37.746904',
+    updated_at: '2026-08-25T05:04:37.746905'
   },
   {
     id: '',
@@ -9966,12 +335,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864227',
-    updated_at: '2026-08-31T17:44:00.864228'
+    created_at: '2026-08-25T05:04:37.746907',
+    updated_at: '2026-08-25T05:04:37.746908'
   },
   {
     id: '',
-    name: 'Lino's Auto Repair',
+    name: `Lino's Auto Repair`,
     company: '',
     email: '',
     phone: '(760) 773-4707',
@@ -9982,8 +351,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864230',
-    updated_at: '2026-08-31T17:44:00.864231'
+    created_at: '2026-08-25T05:04:37.746910',
+    updated_at: '2026-08-25T05:04:37.746911'
   },
   {
     id: '',
@@ -9998,12 +367,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864233',
-    updated_at: '2026-08-31T17:44:00.864233'
+    created_at: '2026-08-25T05:04:37.746914',
+    updated_at: '2026-08-25T05:04:37.746914'
   },
   {
     id: '',
-    name: 'Kim's Automotive',
+    name: `Kim's Automotive`,
     company: '',
     email: '',
     phone: '(760) 346-2443',
@@ -10014,8 +383,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864235',
-    updated_at: '2026-08-31T17:44:00.864236'
+    created_at: '2026-08-25T05:04:37.746917',
+    updated_at: '2026-08-25T05:04:37.746917'
   },
   {
     id: '',
@@ -10030,8 +399,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864238',
-    updated_at: '2026-08-31T17:44:00.864239'
+    created_at: '2026-08-25T05:04:37.746920',
+    updated_at: '2026-08-25T05:04:37.746920'
   },
   {
     id: '',
@@ -10046,8 +415,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864241',
-    updated_at: '2026-08-31T17:44:00.864242'
+    created_at: '2026-08-25T05:04:37.746923',
+    updated_at: '2026-08-25T05:04:37.746924'
   },
   {
     id: '',
@@ -10062,8 +431,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864244',
-    updated_at: '2026-08-31T17:44:00.864245'
+    created_at: '2026-08-25T05:04:37.746927',
+    updated_at: '2026-08-25T05:04:37.746927'
   },
   {
     id: '',
@@ -10078,8 +447,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864247',
-    updated_at: '2026-08-31T17:44:00.864247'
+    created_at: '2026-08-25T05:04:37.746930',
+    updated_at: '2026-08-25T05:04:37.746930'
   },
   {
     id: '',
@@ -10094,8 +463,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864249',
-    updated_at: '2026-08-31T17:44:00.864250'
+    created_at: '2026-08-25T05:04:37.746933',
+    updated_at: '2026-08-25T05:04:37.746933'
   },
   {
     id: '',
@@ -10110,8 +479,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864252',
-    updated_at: '2026-08-31T17:44:00.864253'
+    created_at: '2026-08-25T05:04:37.746937',
+    updated_at: '2026-08-25T05:04:37.746937'
   },
   {
     id: '',
@@ -10126,8 +495,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864255',
-    updated_at: '2026-08-31T17:44:00.864255'
+    created_at: '2026-08-25T05:04:37.746940',
+    updated_at: '2026-08-25T05:04:37.746940'
   },
   {
     id: '',
@@ -10142,8 +511,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864257',
-    updated_at: '2026-08-31T17:44:00.864258'
+    created_at: '2026-08-25T05:04:37.746943',
+    updated_at: '2026-08-25T05:04:37.746943'
   },
   {
     id: '',
@@ -10158,8 +527,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864260',
-    updated_at: '2026-08-31T17:44:00.864261'
+    created_at: '2026-08-25T05:04:37.746946',
+    updated_at: '2026-08-25T05:04:37.746946'
   },
   {
     id: '',
@@ -10174,8 +543,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864263',
-    updated_at: '2026-08-31T17:44:00.864263'
+    created_at: '2026-08-25T05:04:37.746949',
+    updated_at: '2026-08-25T05:04:37.746949'
   },
   {
     id: '',
@@ -10190,8 +559,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864266',
-    updated_at: '2026-08-31T17:44:00.864266'
+    created_at: '2026-08-25T05:04:37.746953',
+    updated_at: '2026-08-25T05:04:37.746953'
   },
   {
     id: '',
@@ -10206,8 +575,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864268',
-    updated_at: '2026-08-31T17:44:00.864269'
+    created_at: '2026-08-25T05:04:37.746956',
+    updated_at: '2026-08-25T05:04:37.746956'
   },
   {
     id: '',
@@ -10222,8 +591,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864271',
-    updated_at: '2026-08-31T17:44:00.864272'
+    created_at: '2026-08-25T05:04:37.746959',
+    updated_at: '2026-08-25T05:04:37.746960'
   },
   {
     id: '',
@@ -10238,8 +607,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864274',
-    updated_at: '2026-08-31T17:44:00.864274'
+    created_at: '2026-08-25T05:04:37.746962',
+    updated_at: '2026-08-25T05:04:37.746963'
   },
   {
     id: '',
@@ -10254,8 +623,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864276',
-    updated_at: '2026-08-31T17:44:00.864277'
+    created_at: '2026-08-25T05:04:37.746965',
+    updated_at: '2026-08-25T05:04:37.746966'
   },
   {
     id: '',
@@ -10270,8 +639,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864280',
-    updated_at: '2026-08-31T17:44:00.864280'
+    created_at: '2026-08-25T05:04:37.746968',
+    updated_at: '2026-08-25T05:04:37.746969'
   },
   {
     id: '',
@@ -10286,8 +655,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864282',
-    updated_at: '2026-08-31T17:44:00.864283'
+    created_at: '2026-08-25T05:04:37.746971',
+    updated_at: '2026-08-25T05:04:37.746972'
   },
   {
     id: '',
@@ -10302,8 +671,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864285',
-    updated_at: '2026-08-31T17:44:00.864286'
+    created_at: '2026-08-25T05:04:37.746974',
+    updated_at: '2026-08-25T05:04:37.746974'
   },
   {
     id: '',
@@ -10318,8 +687,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864288',
-    updated_at: '2026-08-31T17:44:00.864288'
+    created_at: '2026-08-25T05:04:37.746977',
+    updated_at: '2026-08-25T05:04:37.746977'
   },
   {
     id: '',
@@ -10334,8 +703,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864291',
-    updated_at: '2026-08-31T17:44:00.864291'
+    created_at: '2026-08-25T05:04:37.746979',
+    updated_at: '2026-08-25T05:04:37.746980'
   },
   {
     id: '',
@@ -10350,8 +719,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864293',
-    updated_at: '2026-08-31T17:44:00.864294'
+    created_at: '2026-08-25T05:04:37.746982',
+    updated_at: '2026-08-25T05:04:37.746983'
   },
   {
     id: '',
@@ -10366,8 +735,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864296',
-    updated_at: '2026-08-31T17:44:00.864297'
+    created_at: '2026-08-25T05:04:37.746985',
+    updated_at: '2026-08-25T05:04:37.746985'
   },
   {
     id: '',
@@ -10382,8 +751,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864299',
-    updated_at: '2026-08-31T17:44:00.864300'
+    created_at: '2026-08-25T05:04:37.746987',
+    updated_at: '2026-08-25T05:04:37.746988'
   },
   {
     id: '',
@@ -10398,8 +767,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864302',
-    updated_at: '2026-08-31T17:44:00.864302'
+    created_at: '2026-08-25T05:04:37.746990',
+    updated_at: '2026-08-25T05:04:37.746991'
   },
   {
     id: '',
@@ -10414,8 +783,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864304',
-    updated_at: '2026-08-31T17:44:00.864305'
+    created_at: '2026-08-25T05:04:37.746993',
+    updated_at: '2026-08-25T05:04:37.746993'
   },
   {
     id: '',
@@ -10430,8 +799,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864307',
-    updated_at: '2026-08-31T17:44:00.864308'
+    created_at: '2026-08-25T05:04:37.746996',
+    updated_at: '2026-08-25T05:04:37.746997'
   },
   {
     id: '',
@@ -10446,8 +815,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864310',
-    updated_at: '2026-08-31T17:44:00.864310'
+    created_at: '2026-08-25T05:04:37.746999',
+    updated_at: '2026-08-25T05:04:37.747000'
   },
   {
     id: '',
@@ -10462,8 +831,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864312',
-    updated_at: '2026-08-31T17:44:00.864313'
+    created_at: '2026-08-25T05:04:37.747002',
+    updated_at: '2026-08-25T05:04:37.747002'
   },
   {
     id: '',
@@ -10478,8 +847,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864315',
-    updated_at: '2026-08-31T17:44:00.864316'
+    created_at: '2026-08-25T05:04:37.747005',
+    updated_at: '2026-08-25T05:04:37.747005'
   },
   {
     id: '',
@@ -10494,8 +863,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864318',
-    updated_at: '2026-08-31T17:44:00.864319'
+    created_at: '2026-08-25T05:04:37.747007',
+    updated_at: '2026-08-25T05:04:37.747008'
   },
   {
     id: '',
@@ -10510,8 +879,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864321',
-    updated_at: '2026-08-31T17:44:00.864321'
+    created_at: '2026-08-25T05:04:37.747010',
+    updated_at: '2026-08-25T05:04:37.747011'
   },
   {
     id: '',
@@ -10526,8 +895,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864323',
-    updated_at: '2026-08-31T17:44:00.864324'
+    created_at: '2026-08-25T05:04:37.747013',
+    updated_at: '2026-08-25T05:04:37.747013'
   },
   {
     id: '',
@@ -10542,8 +911,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864326',
-    updated_at: '2026-08-31T17:44:00.864327'
+    created_at: '2026-08-25T05:04:37.747015',
+    updated_at: '2026-08-25T05:04:37.747016'
   },
   {
     id: '',
@@ -10558,8 +927,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864329',
-    updated_at: '2026-08-31T17:44:00.864329'
+    created_at: '2026-08-25T05:04:37.747018',
+    updated_at: '2026-08-25T05:04:37.747019'
   },
   {
     id: '',
@@ -10574,8 +943,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864331',
-    updated_at: '2026-08-31T17:44:00.864332'
+    created_at: '2026-08-25T05:04:37.747021',
+    updated_at: '2026-08-25T05:04:37.747021'
   },
   {
     id: '',
@@ -10590,12 +959,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864335',
-    updated_at: '2026-08-31T17:44:00.864335'
+    created_at: '2026-08-25T05:04:37.747024',
+    updated_at: '2026-08-25T05:04:37.747024'
   },
   {
     id: '',
-    name: 'Cam Stone's Automotive',
+    name: `Cam Stone's Automotive`,
     company: '',
     email: '',
     phone: '(760) 568-2999',
@@ -10606,8 +975,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864338',
-    updated_at: '2026-08-31T17:44:00.864339'
+    created_at: '2026-08-25T05:04:37.747027',
+    updated_at: '2026-08-25T05:04:37.747028'
   },
   {
     id: '',
@@ -10622,8 +991,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864341',
-    updated_at: '2026-08-31T17:44:00.864342'
+    created_at: '2026-08-25T05:04:37.747030',
+    updated_at: '2026-08-25T05:04:37.747031'
   },
   {
     id: '',
@@ -10638,8 +1007,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864345',
-    updated_at: '2026-08-31T17:44:00.864345'
+    created_at: '2026-08-25T05:04:37.747033',
+    updated_at: '2026-08-25T05:04:37.747034'
   },
   {
     id: '',
@@ -10654,12 +1023,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864347',
-    updated_at: '2026-08-31T17:44:00.864348'
+    created_at: '2026-08-25T05:04:37.747036',
+    updated_at: '2026-08-25T05:04:37.747037'
   },
   {
     id: '',
-    name: 'Ozzie's Automotive Inc.',
+    name: `Ozzie's Automotive Inc.`,
     company: '',
     email: '',
     phone: '(760) 773-5939',
@@ -10670,8 +1039,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864350',
-    updated_at: '2026-08-31T17:44:00.864351'
+    created_at: '2026-08-25T05:04:37.747039',
+    updated_at: '2026-08-25T05:04:37.747040'
   },
   {
     id: '',
@@ -10686,8 +1055,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864353',
-    updated_at: '2026-08-31T17:44:00.864354'
+    created_at: '2026-08-25T05:04:37.747042',
+    updated_at: '2026-08-25T05:04:37.747043'
   },
   {
     id: '',
@@ -10702,8 +1071,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864356',
-    updated_at: '2026-08-31T17:44:00.864356'
+    created_at: '2026-08-25T05:04:37.747047',
+    updated_at: '2026-08-25T05:04:37.747047'
   },
   {
     id: '',
@@ -10718,8 +1087,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864358',
-    updated_at: '2026-08-31T17:44:00.864359'
+    created_at: '2026-08-25T05:04:37.747050',
+    updated_at: '2026-08-25T05:04:37.747050'
   },
   {
     id: '',
@@ -10734,12 +1103,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864361',
-    updated_at: '2026-08-31T17:44:00.864362'
+    created_at: '2026-08-25T05:04:37.747053',
+    updated_at: '2026-08-25T05:04:37.747053'
   },
   {
     id: '',
-    name: 'Lino's Auto Repair',
+    name: `Lino's Auto Repair`,
     company: '',
     email: '',
     phone: '(760) 773-4707',
@@ -10750,8 +1119,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864364',
-    updated_at: '2026-08-31T17:44:00.864365'
+    created_at: '2026-08-25T05:04:37.747056',
+    updated_at: '2026-08-25T05:04:37.747056'
   },
   {
     id: '',
@@ -10766,12 +1135,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864367',
-    updated_at: '2026-08-31T17:44:00.864368'
+    created_at: '2026-08-25T05:04:37.747060',
+    updated_at: '2026-08-25T05:04:37.747061'
   },
   {
     id: '',
-    name: 'Kim's Automotive',
+    name: `Kim's Automotive`,
     company: '',
     email: '',
     phone: '(760) 346-2443',
@@ -10782,8 +1151,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864370',
-    updated_at: '2026-08-31T17:44:00.864370'
+    created_at: '2026-08-25T05:04:37.747064',
+    updated_at: '2026-08-25T05:04:37.747065'
   },
   {
     id: '',
@@ -10798,8 +1167,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864372',
-    updated_at: '2026-08-31T17:44:00.864373'
+    created_at: '2026-08-25T05:04:37.747067',
+    updated_at: '2026-08-25T05:04:37.747067'
   },
   {
     id: '',
@@ -10814,8 +1183,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864375',
-    updated_at: '2026-08-31T17:44:00.864376'
+    created_at: '2026-08-25T05:04:37.747069',
+    updated_at: '2026-08-25T05:04:37.747070'
   },
   {
     id: '',
@@ -10830,8 +1199,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864378',
-    updated_at: '2026-08-31T17:44:00.864379'
+    created_at: '2026-08-25T05:04:37.747072',
+    updated_at: '2026-08-25T05:04:37.747073'
   },
   {
     id: '',
@@ -10846,8 +1215,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864381',
-    updated_at: '2026-08-31T17:44:00.864382'
+    created_at: '2026-08-25T05:04:37.747074',
+    updated_at: '2026-08-25T05:04:37.747075'
   },
   {
     id: '',
@@ -10862,8 +1231,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864384',
-    updated_at: '2026-08-31T17:44:00.864385'
+    created_at: '2026-08-25T05:04:37.747077',
+    updated_at: '2026-08-25T05:04:37.747078'
   },
   {
     id: '',
@@ -10878,8 +1247,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864386',
-    updated_at: '2026-08-31T17:44:00.864387'
+    created_at: '2026-08-25T05:04:37.747080',
+    updated_at: '2026-08-25T05:04:37.747081'
   },
   {
     id: '',
@@ -10894,8 +1263,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864389',
-    updated_at: '2026-08-31T17:44:00.864390'
+    created_at: '2026-08-25T05:04:37.747083',
+    updated_at: '2026-08-25T05:04:37.747084'
   },
   {
     id: '',
@@ -10910,8 +1279,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864392',
-    updated_at: '2026-08-31T17:44:00.864393'
+    created_at: '2026-08-25T05:04:37.747086',
+    updated_at: '2026-08-25T05:04:37.747087'
   },
   {
     id: '',
@@ -10926,8 +1295,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864395',
-    updated_at: '2026-08-31T17:44:00.864395'
+    created_at: '2026-08-25T05:04:37.747089',
+    updated_at: '2026-08-25T05:04:37.747090'
   },
   {
     id: '',
@@ -10942,8 +1311,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864398',
-    updated_at: '2026-08-31T17:44:00.864399'
+    created_at: '2026-08-25T05:04:37.747092',
+    updated_at: '2026-08-25T05:04:37.747092'
   },
   {
     id: '',
@@ -10958,8 +1327,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864401',
-    updated_at: '2026-08-31T17:44:00.864401'
+    created_at: '2026-08-25T05:04:37.747094',
+    updated_at: '2026-08-25T05:04:37.747095'
   },
   {
     id: '',
@@ -10974,8 +1343,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864403',
-    updated_at: '2026-08-31T17:44:00.864404'
+    created_at: '2026-08-25T05:04:37.747097',
+    updated_at: '2026-08-25T05:04:37.747098'
   },
   {
     id: '',
@@ -10990,8 +1359,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864406',
-    updated_at: '2026-08-31T17:44:00.864407'
+    created_at: '2026-08-25T05:04:37.747100',
+    updated_at: '2026-08-25T05:04:37.747101'
   },
   {
     id: '',
@@ -11006,8 +1375,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864409',
-    updated_at: '2026-08-31T17:44:00.864409'
+    created_at: '2026-08-25T05:04:37.747103',
+    updated_at: '2026-08-25T05:04:37.747103'
   },
   {
     id: '',
@@ -11022,8 +1391,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864411',
-    updated_at: '2026-08-31T17:44:00.864412'
+    created_at: '2026-08-25T05:04:37.747105',
+    updated_at: '2026-08-25T05:04:37.747106'
   },
   {
     id: '',
@@ -11038,8 +1407,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864414',
-    updated_at: '2026-08-31T17:44:00.864415'
+    created_at: '2026-08-25T05:04:37.747108',
+    updated_at: '2026-08-25T05:04:37.747109'
   },
   {
     id: '',
@@ -11054,8 +1423,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864417',
-    updated_at: '2026-08-31T17:44:00.864418'
+    created_at: '2026-08-25T05:04:37.747113',
+    updated_at: '2026-08-25T05:04:37.747114'
   },
   {
     id: '',
@@ -11070,8 +1439,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864420',
-    updated_at: '2026-08-31T17:44:00.864420'
+    created_at: '2026-08-25T05:04:37.747116',
+    updated_at: '2026-08-25T05:04:37.747116'
   },
   {
     id: '',
@@ -11086,8 +1455,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864422',
-    updated_at: '2026-08-31T17:44:00.864423'
+    created_at: '2026-08-25T05:04:37.747118',
+    updated_at: '2026-08-25T05:04:37.747119'
   },
   {
     id: '',
@@ -11102,8 +1471,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864425',
-    updated_at: '2026-08-31T17:44:00.864426'
+    created_at: '2026-08-25T05:04:37.747121',
+    updated_at: '2026-08-25T05:04:37.747122'
   },
   {
     id: '',
@@ -11118,8 +1487,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864428',
-    updated_at: '2026-08-31T17:44:00.864428'
+    created_at: '2026-08-25T05:04:37.747123',
+    updated_at: '2026-08-25T05:04:37.747124'
   },
   {
     id: '',
@@ -11134,8 +1503,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864430',
-    updated_at: '2026-08-31T17:44:00.864431'
+    created_at: '2026-08-25T05:04:37.747126',
+    updated_at: '2026-08-25T05:04:37.747127'
   },
   {
     id: '',
@@ -11150,8 +1519,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864433',
-    updated_at: '2026-08-31T17:44:00.864434'
+    created_at: '2026-08-25T05:04:37.747128',
+    updated_at: '2026-08-25T05:04:37.747129'
   },
   {
     id: '',
@@ -11166,8 +1535,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864436',
-    updated_at: '2026-08-31T17:44:00.864436'
+    created_at: '2026-08-25T05:04:37.747131',
+    updated_at: '2026-08-25T05:04:37.747132'
   },
   {
     id: '',
@@ -11182,8 +1551,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864438',
-    updated_at: '2026-08-31T17:44:00.864439'
+    created_at: '2026-08-25T05:04:37.747134',
+    updated_at: '2026-08-25T05:04:37.747135'
   },
   {
     id: '',
@@ -11198,8 +1567,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864441',
-    updated_at: '2026-08-31T17:44:00.864442'
+    created_at: '2026-08-25T05:04:37.747136',
+    updated_at: '2026-08-25T05:04:37.747137'
   },
   {
     id: '',
@@ -11214,8 +1583,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864451',
-    updated_at: '2026-08-31T17:44:00.864452'
+    created_at: '2026-08-25T05:04:37.747139',
+    updated_at: '2026-08-25T05:04:37.747140'
   },
   {
     id: '',
@@ -11230,8 +1599,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864455',
-    updated_at: '2026-08-31T17:44:00.864455'
+    created_at: '2026-08-25T05:04:37.747142',
+    updated_at: '2026-08-25T05:04:37.747143'
   },
   {
     id: '',
@@ -11246,8 +1615,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864458',
-    updated_at: '2026-08-31T17:44:00.864459'
+    created_at: '2026-08-25T05:04:37.747147',
+    updated_at: '2026-08-25T05:04:37.747148'
   },
   {
     id: '',
@@ -11262,8 +1631,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864461',
-    updated_at: '2026-08-31T17:44:00.864461'
+    created_at: '2026-08-25T05:04:37.747150',
+    updated_at: '2026-08-25T05:04:37.747151'
   },
   {
     id: '',
@@ -11278,8 +1647,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864464',
-    updated_at: '2026-08-31T17:44:00.864464'
+    created_at: '2026-08-25T05:04:37.747153',
+    updated_at: '2026-08-25T05:04:37.747153'
   },
   {
     id: '',
@@ -11294,8 +1663,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864466',
-    updated_at: '2026-08-31T17:44:00.864467'
+    created_at: '2026-08-25T05:04:37.747155',
+    updated_at: '2026-08-25T05:04:37.747156'
   },
   {
     id: '',
@@ -11310,8 +1679,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864469',
-    updated_at: '2026-08-31T17:44:00.864469'
+    created_at: '2026-08-25T05:04:37.747158',
+    updated_at: '2026-08-25T05:04:37.747159'
   },
   {
     id: '',
@@ -11326,8 +1695,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864472',
-    updated_at: '2026-08-31T17:44:00.864472'
+    created_at: '2026-08-25T05:04:37.747160',
+    updated_at: '2026-08-25T05:04:37.747161'
   },
   {
     id: '',
@@ -11342,8 +1711,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864474',
-    updated_at: '2026-08-31T17:44:00.864475'
+    created_at: '2026-08-25T05:04:37.747163',
+    updated_at: '2026-08-25T05:04:37.747164'
   },
   {
     id: '',
@@ -11358,12 +1727,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864477',
-    updated_at: '2026-08-31T17:44:00.864478'
+    created_at: '2026-08-25T05:04:37.747166',
+    updated_at: '2026-08-25T05:04:37.747166'
   },
   {
     id: '',
-    name: 'Cam Stone's Automotive',
+    name: `Cam Stone's Automotive`,
     company: '',
     email: '',
     phone: '(760) 568-2999',
@@ -11374,8 +1743,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864481',
-    updated_at: '2026-08-31T17:44:00.864482'
+    created_at: '2026-08-25T05:04:37.747169',
+    updated_at: '2026-08-25T05:04:37.747170'
   },
   {
     id: '',
@@ -11390,8 +1759,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864484',
-    updated_at: '2026-08-31T17:44:00.864484'
+    created_at: '2026-08-25T05:04:37.747172',
+    updated_at: '2026-08-25T05:04:37.747173'
   },
   {
     id: '',
@@ -11406,8 +1775,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864487',
-    updated_at: '2026-08-31T17:44:00.864488'
+    created_at: '2026-08-25T05:04:37.747176',
+    updated_at: '2026-08-25T05:04:37.747176'
   },
   {
     id: '',
@@ -11422,12 +1791,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864490',
-    updated_at: '2026-08-31T17:44:00.864490'
+    created_at: '2026-08-25T05:04:37.747178',
+    updated_at: '2026-08-25T05:04:37.747179'
   },
   {
     id: '',
-    name: 'Ozzie's Automotive Inc.',
+    name: `Ozzie's Automotive Inc.`,
     company: '',
     email: '',
     phone: '(760) 773-5939',
@@ -11438,8 +1807,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864493',
-    updated_at: '2026-08-31T17:44:00.864493'
+    created_at: '2026-08-25T05:04:37.747181',
+    updated_at: '2026-08-25T05:04:37.747182'
   },
   {
     id: '',
@@ -11454,8 +1823,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864496',
-    updated_at: '2026-08-31T17:44:00.864496'
+    created_at: '2026-08-25T05:04:37.747184',
+    updated_at: '2026-08-25T05:04:37.747185'
   },
   {
     id: '',
@@ -11470,8 +1839,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864498',
-    updated_at: '2026-08-31T17:44:00.864499'
+    created_at: '2026-08-25T05:04:37.747187',
+    updated_at: '2026-08-25T05:04:37.747188'
   },
   {
     id: '',
@@ -11486,8 +1855,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864501',
-    updated_at: '2026-08-31T17:44:00.864502'
+    created_at: '2026-08-25T05:04:37.747190',
+    updated_at: '2026-08-25T05:04:37.747191'
   },
   {
     id: '',
@@ -11502,12 +1871,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864504',
-    updated_at: '2026-08-31T17:44:00.864504'
+    created_at: '2026-08-25T05:04:37.747193',
+    updated_at: '2026-08-25T05:04:37.747193'
   },
   {
     id: '',
-    name: 'Lino's Auto Repair',
+    name: `Lino's Auto Repair`,
     company: '',
     email: '',
     phone: '(760) 773-4707',
@@ -11518,8 +1887,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864506',
-    updated_at: '2026-08-31T17:44:00.864507'
+    created_at: '2026-08-25T05:04:37.747198',
+    updated_at: '2026-08-25T05:04:37.747199'
   },
   {
     id: '',
@@ -11534,12 +1903,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864509',
-    updated_at: '2026-08-31T17:44:00.864510'
+    created_at: '2026-08-25T05:04:37.747201',
+    updated_at: '2026-08-25T05:04:37.747201'
   },
   {
     id: '',
-    name: 'Kim's Automotive',
+    name: `Kim's Automotive`,
     company: '',
     email: '',
     phone: '(760) 346-2443',
@@ -11550,8 +1919,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864512',
-    updated_at: '2026-08-31T17:44:00.864513'
+    created_at: '2026-08-25T05:04:37.747204',
+    updated_at: '2026-08-25T05:04:37.747204'
   },
   {
     id: '',
@@ -11566,8 +1935,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864515',
-    updated_at: '2026-08-31T17:44:00.864516'
+    created_at: '2026-08-25T05:04:37.747207',
+    updated_at: '2026-08-25T05:04:37.747210'
   },
   {
     id: '',
@@ -11582,8 +1951,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864518',
-    updated_at: '2026-08-31T17:44:00.864518'
+    created_at: '2026-08-25T05:04:37.747212',
+    updated_at: '2026-08-25T05:04:37.747213'
   },
   {
     id: '',
@@ -11598,8 +1967,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864520',
-    updated_at: '2026-08-31T17:44:00.864521'
+    created_at: '2026-08-25T05:04:37.747215',
+    updated_at: '2026-08-25T05:04:37.747216'
   },
   {
     id: '',
@@ -11614,8 +1983,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864523',
-    updated_at: '2026-08-31T17:44:00.864524'
+    created_at: '2026-08-25T05:04:37.747218',
+    updated_at: '2026-08-25T05:04:37.747219'
   },
   {
     id: '',
@@ -11630,8 +1999,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864526',
-    updated_at: '2026-08-31T17:44:00.864527'
+    created_at: '2026-08-25T05:04:37.747221',
+    updated_at: '2026-08-25T05:04:37.747222'
   },
   {
     id: '',
@@ -11646,8 +2015,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864529',
-    updated_at: '2026-08-31T17:44:00.864530'
+    created_at: '2026-08-25T05:04:37.747224',
+    updated_at: '2026-08-25T05:04:37.747224'
   },
   {
     id: '',
@@ -11662,8 +2031,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864531',
-    updated_at: '2026-08-31T17:44:00.864532'
+    created_at: '2026-08-25T05:04:37.747226',
+    updated_at: '2026-08-25T05:04:37.747227'
   },
   {
     id: '',
@@ -11678,8 +2047,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864534',
-    updated_at: '2026-08-31T17:44:00.864535'
+    created_at: '2026-08-25T05:04:37.747229',
+    updated_at: '2026-08-25T05:04:37.747230'
   },
   {
     id: '',
@@ -11694,8 +2063,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864537',
-    updated_at: '2026-08-31T17:44:00.864537'
+    created_at: '2026-08-25T05:04:37.747232',
+    updated_at: '2026-08-25T05:04:37.747232'
   },
   {
     id: '',
@@ -11710,8 +2079,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864539',
-    updated_at: '2026-08-31T17:44:00.864540'
+    created_at: '2026-08-25T05:04:37.747235',
+    updated_at: '2026-08-25T05:04:37.747235'
   },
   {
     id: '',
@@ -11726,8 +2095,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864542',
-    updated_at: '2026-08-31T17:44:00.864543'
+    created_at: '2026-08-25T05:04:37.747237',
+    updated_at: '2026-08-25T05:04:37.747238'
   },
   {
     id: '',
@@ -11742,8 +2111,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864545',
-    updated_at: '2026-08-31T17:44:00.864546'
+    created_at: '2026-08-25T05:04:37.747240',
+    updated_at: '2026-08-25T05:04:37.747241'
   },
   {
     id: '',
@@ -11758,8 +2127,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864548',
-    updated_at: '2026-08-31T17:44:00.864549'
+    created_at: '2026-08-25T05:04:37.747243',
+    updated_at: '2026-08-25T05:04:37.747244'
   },
   {
     id: '',
@@ -11774,8 +2143,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864551',
-    updated_at: '2026-08-31T17:44:00.864551'
+    created_at: '2026-08-25T05:04:37.747246',
+    updated_at: '2026-08-25T05:04:37.747247'
   },
   {
     id: '',
@@ -11790,8 +2159,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864553',
-    updated_at: '2026-08-31T17:44:00.864554'
+    created_at: '2026-08-25T05:04:37.747249',
+    updated_at: '2026-08-25T05:04:37.747249'
   },
   {
     id: '',
@@ -11806,8 +2175,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864556',
-    updated_at: '2026-08-31T17:44:00.864557'
+    created_at: '2026-08-25T05:04:37.747252',
+    updated_at: '2026-08-25T05:04:37.747252'
   },
   {
     id: '',
@@ -11822,8 +2191,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864559',
-    updated_at: '2026-08-31T17:44:00.864559'
+    created_at: '2026-08-25T05:04:37.747254',
+    updated_at: '2026-08-25T05:04:37.747255'
   },
   {
     id: '',
@@ -11838,8 +2207,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864561',
-    updated_at: '2026-08-31T17:44:00.864562'
+    created_at: '2026-08-25T05:04:37.747257',
+    updated_at: '2026-08-25T05:04:37.747257'
   },
   {
     id: '',
@@ -11854,8 +2223,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864564',
-    updated_at: '2026-08-31T17:44:00.864565'
+    created_at: '2026-08-25T05:04:37.747259',
+    updated_at: '2026-08-25T05:04:37.747260'
   },
   {
     id: '',
@@ -11870,8 +2239,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864567',
-    updated_at: '2026-08-31T17:44:00.864567'
+    created_at: '2026-08-25T05:04:37.747262',
+    updated_at: '2026-08-25T05:04:37.747263'
   },
   {
     id: '',
@@ -11886,8 +2255,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864569',
-    updated_at: '2026-08-31T17:44:00.864570'
+    created_at: '2026-08-25T05:04:37.747264',
+    updated_at: '2026-08-25T05:04:37.747265'
   },
   {
     id: '',
@@ -11902,8 +2271,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864572',
-    updated_at: '2026-08-31T17:44:00.864573'
+    created_at: '2026-08-25T05:04:37.747267',
+    updated_at: '2026-08-25T05:04:37.747268'
   },
   {
     id: '',
@@ -11918,8 +2287,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864575',
-    updated_at: '2026-08-31T17:44:00.864575'
+    created_at: '2026-08-25T05:04:37.747270',
+    updated_at: '2026-08-25T05:04:37.747270'
   },
   {
     id: '',
@@ -11934,8 +2303,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864577',
-    updated_at: '2026-08-31T17:44:00.864578'
+    created_at: '2026-08-25T05:04:37.747272',
+    updated_at: '2026-08-25T05:04:37.747273'
   },
   {
     id: '',
@@ -11950,8 +2319,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864580',
-    updated_at: '2026-08-31T17:44:00.864581'
+    created_at: '2026-08-25T05:04:37.747275',
+    updated_at: '2026-08-25T05:04:37.747276'
   },
   {
     id: '',
@@ -11966,8 +2335,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864583',
-    updated_at: '2026-08-31T17:44:00.864583'
+    created_at: '2026-08-25T05:04:37.747278',
+    updated_at: '2026-08-25T05:04:37.747278'
   },
   {
     id: '',
@@ -11982,8 +2351,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864585',
-    updated_at: '2026-08-31T17:44:00.864586'
+    created_at: '2026-08-25T05:04:37.747280',
+    updated_at: '2026-08-25T05:04:37.747281'
   },
   {
     id: '',
@@ -11998,8 +2367,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864588',
-    updated_at: '2026-08-31T17:44:00.864589'
+    created_at: '2026-08-25T05:04:37.747287',
+    updated_at: '2026-08-25T05:04:37.747288'
   },
   {
     id: '',
@@ -12014,8 +2383,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864591',
-    updated_at: '2026-08-31T17:44:00.864592'
+    created_at: '2026-08-25T05:04:37.747290',
+    updated_at: '2026-08-25T05:04:37.747291'
   },
   {
     id: '',
@@ -12030,8 +2399,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864594',
-    updated_at: '2026-08-31T17:44:00.864595'
+    created_at: '2026-08-25T05:04:37.747293',
+    updated_at: '2026-08-25T05:04:37.747293'
   },
   {
     id: '',
@@ -12046,8 +2415,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864596',
-    updated_at: '2026-08-31T17:44:00.864597'
+    created_at: '2026-08-25T05:04:37.747295',
+    updated_at: '2026-08-25T05:04:37.747296'
   },
   {
     id: '',
@@ -12062,8 +2431,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864599',
-    updated_at: '2026-08-31T17:44:00.864600'
+    created_at: '2026-08-25T05:04:37.747298',
+    updated_at: '2026-08-25T05:04:37.747299'
   },
   {
     id: '',
@@ -12078,8 +2447,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864602',
-    updated_at: '2026-08-31T17:44:00.864602'
+    created_at: '2026-08-25T05:04:37.747301',
+    updated_at: '2026-08-25T05:04:37.747302'
   },
   {
     id: '',
@@ -12094,8 +2463,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864604',
-    updated_at: '2026-08-31T17:44:00.864605'
+    created_at: '2026-08-25T05:04:37.747304',
+    updated_at: '2026-08-25T05:04:37.747305'
   },
   {
     id: '',
@@ -12110,8 +2479,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864607',
-    updated_at: '2026-08-31T17:44:00.864608'
+    created_at: '2026-08-25T05:04:37.747307',
+    updated_at: '2026-08-25T05:04:37.747308'
   },
   {
     id: '',
@@ -12126,12 +2495,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864610',
-    updated_at: '2026-08-31T17:44:00.864610'
+    created_at: '2026-08-25T05:04:37.747310',
+    updated_at: '2026-08-25T05:04:37.747311'
   },
   {
     id: '',
-    name: 'Cam Stone's Automotive',
+    name: `Cam Stone's Automotive`,
     company: '',
     email: '',
     phone: '(760) 568-2999',
@@ -12142,8 +2511,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864613',
-    updated_at: '2026-08-31T17:44:00.864614'
+    created_at: '2026-08-25T05:04:37.747314',
+    updated_at: '2026-08-25T05:04:37.747314'
   },
   {
     id: '',
@@ -12158,8 +2527,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864616',
-    updated_at: '2026-08-31T17:44:00.864617'
+    created_at: '2026-08-25T05:04:37.747317',
+    updated_at: '2026-08-25T05:04:37.747317'
   },
   {
     id: '',
@@ -12174,8 +2543,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864619',
-    updated_at: '2026-08-31T17:44:00.864620'
+    created_at: '2026-08-25T05:04:37.747319',
+    updated_at: '2026-08-25T05:04:37.747320'
   },
   {
     id: '',
@@ -12190,12 +2559,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864622',
-    updated_at: '2026-08-31T17:44:00.864623'
+    created_at: '2026-08-25T05:04:37.747322',
+    updated_at: '2026-08-25T05:04:37.747323'
   },
   {
     id: '',
-    name: 'Ozzie's Automotive Inc.',
+    name: `Ozzie's Automotive Inc.`,
     company: '',
     email: '',
     phone: '(760) 773-5939',
@@ -12206,8 +2575,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864625',
-    updated_at: '2026-08-31T17:44:00.864626'
+    created_at: '2026-08-25T05:04:37.747325',
+    updated_at: '2026-08-25T05:04:37.747326'
   },
   {
     id: '',
@@ -12222,8 +2591,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864628',
-    updated_at: '2026-08-31T17:44:00.864629'
+    created_at: '2026-08-25T05:04:37.747328',
+    updated_at: '2026-08-25T05:04:37.747329'
   },
   {
     id: '',
@@ -12238,8 +2607,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864631',
-    updated_at: '2026-08-31T17:44:00.864632'
+    created_at: '2026-08-25T05:04:37.747331',
+    updated_at: '2026-08-25T05:04:37.747332'
   },
   {
     id: '',
@@ -12254,8 +2623,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864635',
-    updated_at: '2026-08-31T17:44:00.864636'
+    created_at: '2026-08-25T05:04:37.747334',
+    updated_at: '2026-08-25T05:04:37.747335'
   },
   {
     id: '',
@@ -12270,12 +2639,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864638',
-    updated_at: '2026-08-31T17:44:00.864639'
+    created_at: '2026-08-25T05:04:37.747337',
+    updated_at: '2026-08-25T05:04:37.747338'
   },
   {
     id: '',
-    name: 'Lino's Auto Repair',
+    name: `Lino's Auto Repair`,
     company: '',
     email: '',
     phone: '(760) 773-4707',
@@ -12286,8 +2655,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864642',
-    updated_at: '2026-08-31T17:44:00.864642'
+    created_at: '2026-08-25T05:04:37.747340',
+    updated_at: '2026-08-25T05:04:37.747340'
   },
   {
     id: '',
@@ -12302,12 +2671,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864645',
-    updated_at: '2026-08-31T17:44:00.864646'
+    created_at: '2026-08-25T05:04:37.747343',
+    updated_at: '2026-08-25T05:04:37.747343'
   },
   {
     id: '',
-    name: 'Kim's Automotive',
+    name: `Kim's Automotive`,
     company: '',
     email: '',
     phone: '(760) 346-2443',
@@ -12318,8 +2687,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864648',
-    updated_at: '2026-08-31T17:44:00.864649'
+    created_at: '2026-08-25T05:04:37.747345',
+    updated_at: '2026-08-25T05:04:37.747346'
   },
   {
     id: '',
@@ -12334,8 +2703,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864651',
-    updated_at: '2026-08-31T17:44:00.864651'
+    created_at: '2026-08-25T05:04:37.747348',
+    updated_at: '2026-08-25T05:04:37.747348'
   },
   {
     id: '',
@@ -12350,8 +2719,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864654',
-    updated_at: '2026-08-31T17:44:00.864654'
+    created_at: '2026-08-25T05:04:37.747351',
+    updated_at: '2026-08-25T05:04:37.747351'
   },
   {
     id: '',
@@ -12366,8 +2735,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864661',
-    updated_at: '2026-08-31T17:44:00.864661'
+    created_at: '2026-08-25T05:04:37.747353',
+    updated_at: '2026-08-25T05:04:37.747354'
   },
   {
     id: '',
@@ -12382,8 +2751,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864664',
-    updated_at: '2026-08-31T17:44:00.864665'
+    created_at: '2026-08-25T05:04:37.747356',
+    updated_at: '2026-08-25T05:04:37.747357'
   },
   {
     id: '',
@@ -12398,8 +2767,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864667',
-    updated_at: '2026-08-31T17:44:00.864668'
+    created_at: '2026-08-25T05:04:37.747359',
+    updated_at: '2026-08-25T05:04:37.747360'
   },
   {
     id: '',
@@ -12414,8 +2783,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864670',
-    updated_at: '2026-08-31T17:44:00.864671'
+    created_at: '2026-08-25T05:04:37.747362',
+    updated_at: '2026-08-25T05:04:37.747362'
   },
   {
     id: '',
@@ -12430,8 +2799,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864675',
-    updated_at: '2026-08-31T17:44:00.864676'
+    created_at: '2026-08-25T05:04:37.747364',
+    updated_at: '2026-08-25T05:04:37.747365'
   },
   {
     id: '',
@@ -12446,8 +2815,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864678',
-    updated_at: '2026-08-31T17:44:00.864679'
+    created_at: '2026-08-25T05:04:37.747367',
+    updated_at: '2026-08-25T05:04:37.747368'
   },
   {
     id: '',
@@ -12462,8 +2831,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864681',
-    updated_at: '2026-08-31T17:44:00.864682'
+    created_at: '2026-08-25T05:04:37.747370',
+    updated_at: '2026-08-25T05:04:37.747370'
   },
   {
     id: '',
@@ -12478,8 +2847,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864685',
-    updated_at: '2026-08-31T17:44:00.864685'
+    created_at: '2026-08-25T05:04:37.747372',
+    updated_at: '2026-08-25T05:04:37.747373'
   },
   {
     id: '',
@@ -12494,8 +2863,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864688',
-    updated_at: '2026-08-31T17:44:00.864689'
+    created_at: '2026-08-25T05:04:37.747375',
+    updated_at: '2026-08-25T05:04:37.747376'
   },
   {
     id: '',
@@ -12510,8 +2879,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864691',
-    updated_at: '2026-08-31T17:44:00.864693'
+    created_at: '2026-08-25T05:04:37.747378',
+    updated_at: '2026-08-25T05:04:37.747379'
   },
   {
     id: '',
@@ -12526,8 +2895,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864696',
-    updated_at: '2026-08-31T17:44:00.864697'
+    created_at: '2026-08-25T05:04:37.747380',
+    updated_at: '2026-08-25T05:04:37.747381'
   },
   {
     id: '',
@@ -12542,8 +2911,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864699',
-    updated_at: '2026-08-31T17:44:00.864700'
+    created_at: '2026-08-25T05:04:37.747383',
+    updated_at: '2026-08-25T05:04:37.747384'
   },
   {
     id: '',
@@ -12558,8 +2927,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864702',
-    updated_at: '2026-08-31T17:44:00.864703'
+    created_at: '2026-08-25T05:04:37.747386',
+    updated_at: '2026-08-25T05:04:37.747387'
   },
   {
     id: '',
@@ -12574,8 +2943,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864706',
-    updated_at: '2026-08-31T17:44:00.864707'
+    created_at: '2026-08-25T05:04:37.747389',
+    updated_at: '2026-08-25T05:04:37.747389'
   },
   {
     id: '',
@@ -12590,8 +2959,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864710',
-    updated_at: '2026-08-31T17:44:00.864711'
+    created_at: '2026-08-25T05:04:37.747395',
+    updated_at: '2026-08-25T05:04:37.747396'
   },
   {
     id: '',
@@ -12606,8 +2975,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864713',
-    updated_at: '2026-08-31T17:44:00.864714'
+    created_at: '2026-08-25T05:04:37.747398',
+    updated_at: '2026-08-25T05:04:37.747399'
   },
   {
     id: '',
@@ -12622,8 +2991,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864716',
-    updated_at: '2026-08-31T17:44:00.864717'
+    created_at: '2026-08-25T05:04:37.747401',
+    updated_at: '2026-08-25T05:04:37.747401'
   },
   {
     id: '',
@@ -12638,8 +3007,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864720',
-    updated_at: '2026-08-31T17:44:00.864720'
+    created_at: '2026-08-25T05:04:37.747403',
+    updated_at: '2026-08-25T05:04:37.747404'
   },
   {
     id: '',
@@ -12654,8 +3023,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864723',
-    updated_at: '2026-08-31T17:44:00.864723'
+    created_at: '2026-08-25T05:04:37.747406',
+    updated_at: '2026-08-25T05:04:37.747407'
   },
   {
     id: '',
@@ -12670,8 +3039,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864725',
-    updated_at: '2026-08-31T17:44:00.864726'
+    created_at: '2026-08-25T05:04:37.747409',
+    updated_at: '2026-08-25T05:04:37.747410'
   },
   {
     id: '',
@@ -12686,8 +3055,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864730',
-    updated_at: '2026-08-31T17:44:00.864731'
+    created_at: '2026-08-25T05:04:37.747412',
+    updated_at: '2026-08-25T05:04:37.747412'
   },
   {
     id: '',
@@ -12702,8 +3071,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864733',
-    updated_at: '2026-08-31T17:44:00.864734'
+    created_at: '2026-08-25T05:04:37.747414',
+    updated_at: '2026-08-25T05:04:37.747415'
   },
   {
     id: '',
@@ -12718,8 +3087,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864736',
-    updated_at: '2026-08-31T17:44:00.864737'
+    created_at: '2026-08-25T05:04:37.747417',
+    updated_at: '2026-08-25T05:04:37.747418'
   },
   {
     id: '',
@@ -12734,8 +3103,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864739',
-    updated_at: '2026-08-31T17:44:00.864740'
+    created_at: '2026-08-25T05:04:37.747420',
+    updated_at: '2026-08-25T05:04:37.747420'
   },
   {
     id: '',
@@ -12750,8 +3119,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864742',
-    updated_at: '2026-08-31T17:44:00.864743'
+    created_at: '2026-08-25T05:04:37.747422',
+    updated_at: '2026-08-25T05:04:37.747423'
   },
   {
     id: '',
@@ -12766,8 +3135,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864747',
-    updated_at: '2026-08-31T17:44:00.864748'
+    created_at: '2026-08-25T05:04:37.747425',
+    updated_at: '2026-08-25T05:04:37.747426'
   },
   {
     id: '',
@@ -12782,8 +3151,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864750',
-    updated_at: '2026-08-31T17:44:00.864751'
+    created_at: '2026-08-25T05:04:37.747428',
+    updated_at: '2026-08-25T05:04:37.747429'
   },
   {
     id: '',
@@ -12798,8 +3167,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864753',
-    updated_at: '2026-08-31T17:44:00.864754'
+    created_at: '2026-08-25T05:04:37.747430',
+    updated_at: '2026-08-25T05:04:37.747431'
   },
   {
     id: '',
@@ -12814,8 +3183,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864756',
-    updated_at: '2026-08-31T17:44:00.864757'
+    created_at: '2026-08-25T05:04:37.747433',
+    updated_at: '2026-08-25T05:04:37.747434'
   },
   {
     id: '',
@@ -12830,8 +3199,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864759',
-    updated_at: '2026-08-31T17:44:00.864760'
+    created_at: '2026-08-25T05:04:37.747436',
+    updated_at: '2026-08-25T05:04:37.747437'
   },
   {
     id: '',
@@ -12846,8 +3215,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864764',
-    updated_at: '2026-08-31T17:44:00.864765'
+    created_at: '2026-08-25T05:04:37.747439',
+    updated_at: '2026-08-25T05:04:37.747439'
   },
   {
     id: '',
@@ -12862,8 +3231,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864767',
-    updated_at: '2026-08-31T17:44:00.864768'
+    created_at: '2026-08-25T05:04:37.747446',
+    updated_at: '2026-08-25T05:04:37.747446'
   },
   {
     id: '',
@@ -12878,8 +3247,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864770',
-    updated_at: '2026-08-31T17:44:00.864771'
+    created_at: '2026-08-25T05:04:37.747448',
+    updated_at: '2026-08-25T05:04:37.747449'
   },
   {
     id: '',
@@ -12894,8 +3263,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864773',
-    updated_at: '2026-08-31T17:44:00.864774'
+    created_at: '2026-08-25T05:04:37.747451',
+    updated_at: '2026-08-25T05:04:37.747452'
   },
   {
     id: '',
@@ -12910,8 +3279,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864777',
-    updated_at: '2026-08-31T17:44:00.864778'
+    created_at: '2026-08-25T05:04:37.747454',
+    updated_at: '2026-08-25T05:04:37.747455'
   },
   {
     id: '',
@@ -12926,13 +3295,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864782',
-    updated_at: '2026-08-31T17:44:00.864783'
+    created_at: '2026-08-25T05:04:37.747457',
+    updated_at: '2026-08-25T05:04:37.747458'
   },
   {
     id: '',
     name: '',
-    company: 'The Artisan's Nook',
+    company: `The Artisan's Nook`,
     email: 'theartisansnook@gmail.com',
     phone: '989-284-9444',
     website: 'https://theartisansnook.com/',
@@ -12942,8 +3311,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864785',
-    updated_at: '2026-08-31T17:44:00.864786'
+    created_at: '2026-08-25T05:04:37.747460',
+    updated_at: '2026-08-25T05:04:37.747461'
   },
   {
     id: '',
@@ -12958,8 +3327,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864788',
-    updated_at: '2026-08-31T17:44:00.864789'
+    created_at: '2026-08-25T05:04:37.747464',
+    updated_at: '2026-08-25T05:04:37.747464'
   },
   {
     id: '',
@@ -12974,8 +3343,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864791',
-    updated_at: '2026-08-31T17:44:00.864792'
+    created_at: '2026-08-25T05:04:37.747467',
+    updated_at: '2026-08-25T05:04:37.747467'
   },
   {
     id: '',
@@ -12990,8 +3359,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864794',
-    updated_at: '2026-08-31T17:44:00.864795'
+    created_at: '2026-08-25T05:04:37.747470',
+    updated_at: '2026-08-25T05:04:37.747470'
   },
   {
     id: '',
@@ -13006,8 +3375,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864799',
-    updated_at: '2026-08-31T17:44:00.864800'
+    created_at: '2026-08-25T05:04:37.747472',
+    updated_at: '2026-08-25T05:04:37.747473'
   },
   {
     id: '',
@@ -13022,8 +3391,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864802',
-    updated_at: '2026-08-31T17:44:00.864803'
+    created_at: '2026-08-25T05:04:37.747475',
+    updated_at: '2026-08-25T05:04:37.747476'
   },
   {
     id: '',
@@ -13038,8 +3407,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864805',
-    updated_at: '2026-08-31T17:44:00.864806'
+    created_at: '2026-08-25T05:04:37.747478',
+    updated_at: '2026-08-25T05:04:37.747479'
   },
   {
     id: '',
@@ -13054,13 +3423,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864808',
-    updated_at: '2026-08-31T17:44:00.864809'
+    created_at: '2026-08-25T05:04:37.747481',
+    updated_at: '2026-08-25T05:04:37.747481'
   },
   {
     id: '',
     name: '',
-    company: 'Java Joe's Cafe',
+    company: `Java Joe's Cafe`,
     email: 'javajoescafe@gmail.com',
     phone: '906-643-9211',
     website: 'https://www.javajoescafemi.com/',
@@ -13070,8 +3439,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864811',
-    updated_at: '2026-08-31T17:44:00.864812'
+    created_at: '2026-08-25T05:04:37.747484',
+    updated_at: '2026-08-25T05:04:37.747484'
   },
   {
     id: '',
@@ -13086,8 +3455,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864814',
-    updated_at: '2026-08-31T17:44:00.864815'
+    created_at: '2026-08-25T05:04:37.747486',
+    updated_at: '2026-08-25T05:04:37.747487'
   },
   {
     id: '',
@@ -13102,8 +3471,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864819',
-    updated_at: '2026-08-31T17:44:00.864819'
+    created_at: '2026-08-25T05:04:37.747489',
+    updated_at: '2026-08-25T05:04:37.747490'
   },
   {
     id: '',
@@ -13118,8 +3487,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864822',
-    updated_at: '2026-08-31T17:44:00.864822'
+    created_at: '2026-08-25T05:04:37.747492',
+    updated_at: '2026-08-25T05:04:37.747492'
   },
   {
     id: '',
@@ -13134,8 +3503,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864825',
-    updated_at: '2026-08-31T17:44:00.864825'
+    created_at: '2026-08-25T05:04:37.747494',
+    updated_at: '2026-08-25T05:04:37.747495'
   },
   {
     id: '',
@@ -13150,8 +3519,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864828',
-    updated_at: '2026-08-31T17:44:00.864828'
+    created_at: '2026-08-25T05:04:37.747497',
+    updated_at: '2026-08-25T05:04:37.747498'
   },
   {
     id: '',
@@ -13166,8 +3535,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864831',
-    updated_at: '2026-08-31T17:44:00.864831'
+    created_at: '2026-08-25T05:04:37.747500',
+    updated_at: '2026-08-25T05:04:37.747501'
   },
   {
     id: '',
@@ -13182,8 +3551,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864836',
-    updated_at: '2026-08-31T17:44:00.864836'
+    created_at: '2026-08-25T05:04:37.747503',
+    updated_at: '2026-08-25T05:04:37.747503'
   },
   {
     id: '',
@@ -13198,8 +3567,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864838',
-    updated_at: '2026-08-31T17:44:00.864839'
+    created_at: '2026-08-25T05:04:37.747505',
+    updated_at: '2026-08-25T05:04:37.747506'
   },
   {
     id: '',
@@ -13214,8 +3583,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864842',
-    updated_at: '2026-08-31T17:44:00.864842'
+    created_at: '2026-08-25T05:04:37.747508',
+    updated_at: '2026-08-25T05:04:37.747509'
   },
   {
     id: '',
@@ -13230,8 +3599,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864845',
-    updated_at: '2026-08-31T17:44:00.864845'
+    created_at: '2026-08-25T05:04:37.747511',
+    updated_at: '2026-08-25T05:04:37.747511'
   },
   {
     id: '',
@@ -13246,8 +3615,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864848',
-    updated_at: '2026-08-31T17:44:00.864848'
+    created_at: '2026-08-25T05:04:37.747513',
+    updated_at: '2026-08-25T05:04:37.747514'
   },
   {
     id: '',
@@ -13262,8 +3631,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864851',
-    updated_at: '2026-08-31T17:44:00.864851'
+    created_at: '2026-08-25T05:04:37.747516',
+    updated_at: '2026-08-25T05:04:37.747517'
   },
   {
     id: '',
@@ -13278,8 +3647,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864855',
-    updated_at: '2026-08-31T17:44:00.864856'
+    created_at: '2026-08-25T05:04:37.747519',
+    updated_at: '2026-08-25T05:04:37.747520'
   },
   {
     id: '',
@@ -13294,8 +3663,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864859',
-    updated_at: '2026-08-31T17:44:00.864859'
+    created_at: '2026-08-25T05:04:37.747522',
+    updated_at: '2026-08-25T05:04:37.747522'
   },
   {
     id: '',
@@ -13310,8 +3679,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864862',
-    updated_at: '2026-08-31T17:44:00.864862'
+    created_at: '2026-08-25T05:04:37.747524',
+    updated_at: '2026-08-25T05:04:37.747525'
   },
   {
     id: '',
@@ -13326,8 +3695,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864865',
-    updated_at: '2026-08-31T17:44:00.864865'
+    created_at: '2026-08-25T05:04:37.747527',
+    updated_at: '2026-08-25T05:04:37.747528'
   },
   {
     id: '',
@@ -13342,8 +3711,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864868',
-    updated_at: '2026-08-31T17:44:00.864868'
+    created_at: '2026-08-25T05:04:37.747530',
+    updated_at: '2026-08-25T05:04:37.747531'
   },
   {
     id: '',
@@ -13358,8 +3727,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864871',
-    updated_at: '2026-08-31T17:44:00.864873'
+    created_at: '2026-08-25T05:04:37.747533',
+    updated_at: '2026-08-25T05:04:37.747533'
   },
   {
     id: '',
@@ -13374,8 +3743,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864875',
-    updated_at: '2026-08-31T17:44:00.864876'
+    created_at: '2026-08-25T05:04:37.747535',
+    updated_at: '2026-08-25T05:04:37.747536'
   },
   {
     id: '',
@@ -13390,8 +3759,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864878',
-    updated_at: '2026-08-31T17:44:00.864879'
+    created_at: '2026-08-25T05:04:37.747538',
+    updated_at: '2026-08-25T05:04:37.747539'
   },
   {
     id: '',
@@ -13406,8 +3775,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864882',
-    updated_at: '2026-08-31T17:44:00.864882'
+    created_at: '2026-08-25T05:04:37.747541',
+    updated_at: '2026-08-25T05:04:37.747542'
   },
   {
     id: '',
@@ -13422,8 +3791,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864884',
-    updated_at: '2026-08-31T17:44:00.864885'
+    created_at: '2026-08-25T05:04:37.747544',
+    updated_at: '2026-08-25T05:04:37.747544'
   },
   {
     id: '',
@@ -13438,8 +3807,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864888',
-    updated_at: '2026-08-31T17:44:00.864888'
+    created_at: '2026-08-25T05:04:37.747546',
+    updated_at: '2026-08-25T05:04:37.747547'
   },
   {
     id: '',
@@ -13454,8 +3823,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864892',
-    updated_at: '2026-08-31T17:44:00.864893'
+    created_at: '2026-08-25T05:04:37.747549',
+    updated_at: '2026-08-25T05:04:37.747550'
   },
   {
     id: '',
@@ -13470,8 +3839,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864895',
-    updated_at: '2026-08-31T17:44:00.864896'
+    created_at: '2026-08-25T05:04:37.747552',
+    updated_at: '2026-08-25T05:04:37.747555'
   },
   {
     id: '',
@@ -13486,8 +3855,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864898',
-    updated_at: '2026-08-31T17:44:00.864899'
+    created_at: '2026-08-25T05:04:37.747557',
+    updated_at: '2026-08-25T05:04:37.747558'
   },
   {
     id: '',
@@ -13502,8 +3871,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864901',
-    updated_at: '2026-08-31T17:44:00.864902'
+    created_at: '2026-08-25T05:04:37.747560',
+    updated_at: '2026-08-25T05:04:37.747560'
   },
   {
     id: '',
@@ -13518,8 +3887,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864904',
-    updated_at: '2026-08-31T17:44:00.864905'
+    created_at: '2026-08-25T05:04:37.747563',
+    updated_at: '2026-08-25T05:04:37.747563'
   },
   {
     id: '',
@@ -13534,8 +3903,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864907',
-    updated_at: '2026-08-31T17:44:00.864908'
+    created_at: '2026-08-25T05:04:37.747565',
+    updated_at: '2026-08-25T05:04:37.747566'
   },
   {
     id: '',
@@ -13550,8 +3919,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864917',
-    updated_at: '2026-08-31T17:44:00.864918'
+    created_at: '2026-08-25T05:04:37.747568',
+    updated_at: '2026-08-25T05:04:37.747569'
   },
   {
     id: '',
@@ -13566,8 +3935,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864921',
-    updated_at: '2026-08-31T17:44:00.864921'
+    created_at: '2026-08-25T05:04:37.747571',
+    updated_at: '2026-08-25T05:04:37.747572'
   },
   {
     id: '',
@@ -13582,8 +3951,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864924',
-    updated_at: '2026-08-31T17:44:00.864924'
+    created_at: '2026-08-25T05:04:37.747579',
+    updated_at: '2026-08-25T05:04:37.747580'
   },
   {
     id: '',
@@ -13598,8 +3967,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864927',
-    updated_at: '2026-08-31T17:44:00.864927'
+    created_at: '2026-08-25T05:04:37.747582',
+    updated_at: '2026-08-25T05:04:37.747583'
   },
   {
     id: '',
@@ -13614,8 +3983,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864930',
-    updated_at: '2026-08-31T17:44:00.864931'
+    created_at: '2026-08-25T05:04:37.747586',
+    updated_at: '2026-08-25T05:04:37.747586'
   },
   {
     id: '',
@@ -13630,8 +3999,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864934',
-    updated_at: '2026-08-31T17:44:00.864935'
+    created_at: '2026-08-25T05:04:37.747589',
+    updated_at: '2026-08-25T05:04:37.747589'
   },
   {
     id: '',
@@ -13646,8 +4015,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864938',
-    updated_at: '2026-08-31T17:44:00.864938'
+    created_at: '2026-08-25T05:04:37.747591',
+    updated_at: '2026-08-25T05:04:37.747592'
   },
   {
     id: '',
@@ -13662,8 +4031,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864940',
-    updated_at: '2026-08-31T17:44:00.864941'
+    created_at: '2026-08-25T05:04:37.747595',
+    updated_at: '2026-08-25T05:04:37.747595'
   },
   {
     id: '',
@@ -13678,8 +4047,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864943',
-    updated_at: '2026-08-31T17:44:00.864944'
+    created_at: '2026-08-25T05:04:37.747598',
+    updated_at: '2026-08-25T05:04:37.747598'
   },
   {
     id: '',
@@ -13694,8 +4063,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864946',
-    updated_at: '2026-08-31T17:44:00.864947'
+    created_at: '2026-08-25T05:04:37.747600',
+    updated_at: '2026-08-25T05:04:37.747601'
   },
   {
     id: '',
@@ -13710,8 +4079,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864949',
-    updated_at: '2026-08-31T17:44:00.864950'
+    created_at: '2026-08-25T05:04:37.747603',
+    updated_at: '2026-08-25T05:04:37.747604'
   },
   {
     id: '',
@@ -13726,8 +4095,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864954',
-    updated_at: '2026-08-31T17:44:00.864955'
+    created_at: '2026-08-25T05:04:37.747606',
+    updated_at: '2026-08-25T05:04:37.747607'
   },
   {
     id: '',
@@ -13742,8 +4111,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864957',
-    updated_at: '2026-08-31T17:44:00.864958'
+    created_at: '2026-08-25T05:04:37.747609',
+    updated_at: '2026-08-25T05:04:37.747610'
   },
   {
     id: '',
@@ -13758,8 +4127,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864960',
-    updated_at: '2026-08-31T17:44:00.864961'
+    created_at: '2026-08-25T05:04:37.747612',
+    updated_at: '2026-08-25T05:04:37.747613'
   },
   {
     id: '',
@@ -13774,8 +4143,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864963',
-    updated_at: '2026-08-31T17:44:00.864963'
+    created_at: '2026-08-25T05:04:37.747615',
+    updated_at: '2026-08-25T05:04:37.747616'
   },
   {
     id: '',
@@ -13790,8 +4159,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864966',
-    updated_at: '2026-08-31T17:44:00.864967'
+    created_at: '2026-08-25T05:04:37.747618',
+    updated_at: '2026-08-25T05:04:37.747619'
   },
   {
     id: '',
@@ -13806,8 +4175,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864971',
-    updated_at: '2026-08-31T17:44:00.864971'
+    created_at: '2026-08-25T05:04:37.747621',
+    updated_at: '2026-08-25T05:04:37.747622'
   },
   {
     id: '',
@@ -13822,8 +4191,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864973',
-    updated_at: '2026-08-31T17:44:00.864974'
+    created_at: '2026-08-25T05:04:37.747624',
+    updated_at: '2026-08-25T05:04:37.747625'
   },
   {
     id: '',
@@ -13838,8 +4207,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864976',
-    updated_at: '2026-08-31T17:44:00.864977'
+    created_at: '2026-08-25T05:04:37.747627',
+    updated_at: '2026-08-25T05:04:37.747628'
   },
   {
     id: '',
@@ -13854,8 +4223,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864979',
-    updated_at: '2026-08-31T17:44:00.864980'
+    created_at: '2026-08-25T05:04:37.747630',
+    updated_at: '2026-08-25T05:04:37.747631'
   },
   {
     id: '',
@@ -13870,8 +4239,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864982',
-    updated_at: '2026-08-31T17:44:00.864983'
+    created_at: '2026-08-25T05:04:37.747633',
+    updated_at: '2026-08-25T05:04:37.747634'
   },
   {
     id: '',
@@ -13886,8 +4255,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864985',
-    updated_at: '2026-08-31T17:44:00.864986'
+    created_at: '2026-08-25T05:04:37.747636',
+    updated_at: '2026-08-25T05:04:37.747637'
   },
   {
     id: '',
@@ -13902,8 +4271,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864990',
-    updated_at: '2026-08-31T17:44:00.864991'
+    created_at: '2026-08-25T05:04:37.747640',
+    updated_at: '2026-08-25T05:04:37.747640'
   },
   {
     id: '',
@@ -13918,8 +4287,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864993',
-    updated_at: '2026-08-31T17:44:00.864994'
+    created_at: '2026-08-25T05:04:37.747643',
+    updated_at: '2026-08-25T05:04:37.747644'
   },
   {
     id: '',
@@ -13934,8 +4303,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.864997',
-    updated_at: '2026-08-31T17:44:00.864998'
+    created_at: '2026-08-25T05:04:37.747646',
+    updated_at: '2026-08-25T05:04:37.747647'
   },
   {
     id: '',
@@ -13950,8 +4319,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865000',
-    updated_at: '2026-08-31T17:44:00.865001'
+    created_at: '2026-08-25T05:04:37.747649',
+    updated_at: '2026-08-25T05:04:37.747650'
   },
   {
     id: '',
@@ -13966,8 +4335,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865003',
-    updated_at: '2026-08-31T17:44:00.865004'
+    created_at: '2026-08-25T05:04:37.747652',
+    updated_at: '2026-08-25T05:04:37.747653'
   },
   {
     id: '',
@@ -13982,8 +4351,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865008',
-    updated_at: '2026-08-31T17:44:00.865009'
+    created_at: '2026-08-25T05:04:37.747655',
+    updated_at: '2026-08-25T05:04:37.747656'
   },
   {
     id: '',
@@ -13998,8 +4367,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865012',
-    updated_at: '2026-08-31T17:44:00.865013'
+    created_at: '2026-08-25T05:04:37.747659',
+    updated_at: '2026-08-25T05:04:37.747659'
   },
   {
     id: '',
@@ -14014,8 +4383,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865015',
-    updated_at: '2026-08-31T17:44:00.865016'
+    created_at: '2026-08-25T05:04:37.747662',
+    updated_at: '2026-08-25T05:04:37.747663'
   },
   {
     id: '',
@@ -14030,8 +4399,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865018',
-    updated_at: '2026-08-31T17:44:00.865019'
+    created_at: '2026-08-25T05:04:37.747665',
+    updated_at: '2026-08-25T05:04:37.747666'
   },
   {
     id: '',
@@ -14046,8 +4415,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865021',
-    updated_at: '2026-08-31T17:44:00.865022'
+    created_at: '2026-08-25T05:04:37.747669',
+    updated_at: '2026-08-25T05:04:37.747669'
   },
   {
     id: '',
@@ -14062,8 +4431,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865024',
-    updated_at: '2026-08-31T17:44:00.865027'
+    created_at: '2026-08-25T05:04:37.747672',
+    updated_at: '2026-08-25T05:04:37.747672'
   },
   {
     id: '',
@@ -14078,8 +4447,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865029',
-    updated_at: '2026-08-31T17:44:00.865030'
+    created_at: '2026-08-25T05:04:37.747675',
+    updated_at: '2026-08-25T05:04:37.747675'
   },
   {
     id: '',
@@ -14094,8 +4463,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865032',
-    updated_at: '2026-08-31T17:44:00.865033'
+    created_at: '2026-08-25T05:04:37.747678',
+    updated_at: '2026-08-25T05:04:37.747679'
   },
   {
     id: '',
@@ -14110,8 +4479,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865035',
-    updated_at: '2026-08-31T17:44:00.865036'
+    created_at: '2026-08-25T05:04:37.747681',
+    updated_at: '2026-08-25T05:04:37.747682'
   },
   {
     id: '',
@@ -14126,8 +4495,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865038',
-    updated_at: '2026-08-31T17:44:00.865039'
+    created_at: '2026-08-25T05:04:37.747684',
+    updated_at: '2026-08-25T05:04:37.747685'
   },
   {
     id: '',
@@ -14142,8 +4511,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865041',
-    updated_at: '2026-08-31T17:44:00.865042'
+    created_at: '2026-08-25T05:04:37.747687',
+    updated_at: '2026-08-25T05:04:37.747688'
   },
   {
     id: '',
@@ -14158,8 +4527,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865046',
-    updated_at: '2026-08-31T17:44:00.865047'
+    created_at: '2026-08-25T05:04:37.747690',
+    updated_at: '2026-08-25T05:04:37.747691'
   },
   {
     id: '',
@@ -14174,8 +4543,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865049',
-    updated_at: '2026-08-31T17:44:00.865050'
+    created_at: '2026-08-25T05:04:37.747693',
+    updated_at: '2026-08-25T05:04:37.747694'
   },
   {
     id: '',
@@ -14190,8 +4559,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865053',
-    updated_at: '2026-08-31T17:44:00.865053'
+    created_at: '2026-08-25T05:04:37.747696',
+    updated_at: '2026-08-25T05:04:37.747697'
   },
   {
     id: '',
@@ -14206,8 +4575,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865056',
-    updated_at: '2026-08-31T17:44:00.865056'
+    created_at: '2026-08-25T05:04:37.747699',
+    updated_at: '2026-08-25T05:04:37.747700'
   },
   {
     id: '',
@@ -14222,8 +4591,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865059',
-    updated_at: '2026-08-31T17:44:00.865059'
+    created_at: '2026-08-25T05:04:37.747702',
+    updated_at: '2026-08-25T05:04:37.747703'
   },
   {
     id: '',
@@ -14238,8 +4607,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865067',
-    updated_at: '2026-08-31T17:44:00.865068'
+    created_at: '2026-08-25T05:04:37.747705',
+    updated_at: '2026-08-25T05:04:37.747706'
   },
   {
     id: '',
@@ -14254,8 +4623,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865070',
-    updated_at: '2026-08-31T17:44:00.865071'
+    created_at: '2026-08-25T05:04:37.747708',
+    updated_at: '2026-08-25T05:04:37.747708'
   },
   {
     id: '',
@@ -14270,8 +4639,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865073',
-    updated_at: '2026-08-31T17:44:00.865074'
+    created_at: '2026-08-25T05:04:37.747711',
+    updated_at: '2026-08-25T05:04:37.747712'
   },
   {
     id: '',
@@ -14286,8 +4655,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865076',
-    updated_at: '2026-08-31T17:44:00.865077'
+    created_at: '2026-08-25T05:04:37.747714',
+    updated_at: '2026-08-25T05:04:37.747714'
   },
   {
     id: '',
@@ -14302,8 +4671,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865079',
-    updated_at: '2026-08-31T17:44:00.865080'
+    created_at: '2026-08-25T05:04:37.747717',
+    updated_at: '2026-08-25T05:04:37.747717'
   },
   {
     id: '',
@@ -14318,8 +4687,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865082',
-    updated_at: '2026-08-31T17:44:00.865083'
+    created_at: '2026-08-25T05:04:37.747720',
+    updated_at: '2026-08-25T05:04:37.747721'
   },
   {
     id: '',
@@ -14334,12 +4703,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865087',
-    updated_at: '2026-08-31T17:44:00.865088'
+    created_at: '2026-08-25T05:04:37.747723',
+    updated_at: '2026-08-25T05:04:37.747724'
   },
   {
     id: '',
-    name: 'Cesar's Tires',
+    name: `Cesar's Tires`,
     company: '',
     email: '',
     phone: '(248) 453-6847',
@@ -14350,12 +4719,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865090',
-    updated_at: '2026-08-31T17:44:00.865091'
+    created_at: '2026-08-25T05:04:37.747726',
+    updated_at: '2026-08-25T05:04:37.747727'
   },
   {
     id: '',
-    name: 'C J's Auto Services Center',
+    name: `C J's Auto Services Center`,
     company: '',
     email: '',
     phone: '(989) 799-0910',
@@ -14366,8 +4735,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865093',
-    updated_at: '2026-08-31T17:44:00.865094'
+    created_at: '2026-08-25T05:04:37.747729',
+    updated_at: '2026-08-25T05:04:37.747730'
   },
   {
     id: '',
@@ -14382,8 +4751,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865096',
-    updated_at: '2026-08-31T17:44:00.865097'
+    created_at: '2026-08-25T05:04:37.747732',
+    updated_at: '2026-08-25T05:04:37.747732'
   },
   {
     id: '',
@@ -14398,12 +4767,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865099',
-    updated_at: '2026-08-31T17:44:00.865100'
+    created_at: '2026-08-25T05:04:37.747735',
+    updated_at: '2026-08-25T05:04:37.747735'
   },
   {
     id: '',
-    name: 'Beyer's Service Center',
+    name: `Beyer's Service Center`,
     company: '',
     email: '',
     phone: '(989) 792-8071',
@@ -14414,8 +4783,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865102',
-    updated_at: '2026-08-31T17:44:00.865103'
+    created_at: '2026-08-25T05:04:37.747738',
+    updated_at: '2026-08-25T05:04:37.747738'
   },
   {
     id: '',
@@ -14430,8 +4799,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865107',
-    updated_at: '2026-08-31T17:44:00.865107'
+    created_at: '2026-08-25T05:04:37.747741',
+    updated_at: '2026-08-25T05:04:37.747742'
   },
   {
     id: '',
@@ -14446,8 +4815,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865110',
-    updated_at: '2026-08-31T17:44:00.865110'
+    created_at: '2026-08-25T05:04:37.747744',
+    updated_at: '2026-08-25T05:04:37.747745'
   },
   {
     id: '',
@@ -14462,8 +4831,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865113',
-    updated_at: '2026-08-31T17:44:00.865113'
+    created_at: '2026-08-25T05:04:37.747747',
+    updated_at: '2026-08-25T05:04:37.747747'
   },
   {
     id: '',
@@ -14478,8 +4847,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865115',
-    updated_at: '2026-08-31T17:44:00.865116'
+    created_at: '2026-08-25T05:04:37.747750',
+    updated_at: '2026-08-25T05:04:37.747750'
   },
   {
     id: '',
@@ -14494,8 +4863,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865119',
-    updated_at: '2026-08-31T17:44:00.865119'
+    created_at: '2026-08-25T05:04:37.747753',
+    updated_at: '2026-08-25T05:04:37.747754'
   },
   {
     id: '',
@@ -14510,8 +4879,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865123',
-    updated_at: '2026-08-31T17:44:00.865124'
+    created_at: '2026-08-25T05:04:37.747756',
+    updated_at: '2026-08-25T05:04:37.747757'
   },
   {
     id: '',
@@ -14526,8 +4895,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865126',
-    updated_at: '2026-08-31T17:44:00.865127'
+    created_at: '2026-08-25T05:04:37.747759',
+    updated_at: '2026-08-25T05:04:37.747760'
   },
   {
     id: '',
@@ -14542,12 +4911,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865129',
-    updated_at: '2026-08-31T17:44:00.865130'
+    created_at: '2026-08-25T05:04:37.747762',
+    updated_at: '2026-08-25T05:04:37.747763'
   },
   {
     id: '',
-    name: 'Fuzzy's Restaurant',
+    name: `Fuzzy's Restaurant`,
     company: '',
     email: '',
     phone: '(989) 790-1719',
@@ -14558,8 +4927,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865133',
-    updated_at: '2026-08-31T17:44:00.865134'
+    created_at: '2026-08-25T05:04:37.747765',
+    updated_at: '2026-08-25T05:04:37.747766'
   },
   {
     id: '',
@@ -14574,8 +4943,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865136',
-    updated_at: '2026-08-31T17:44:00.865136'
+    created_at: '2026-08-25T05:04:37.747768',
+    updated_at: '2026-08-25T05:04:37.747769'
   },
   {
     id: '',
@@ -14590,8 +4959,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865139',
-    updated_at: '2026-08-31T17:44:00.865139'
+    created_at: '2026-08-25T05:04:37.747771',
+    updated_at: '2026-08-25T05:04:37.747772'
   },
   {
     id: '',
@@ -14606,12 +4975,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865143',
-    updated_at: '2026-08-31T17:44:00.865144'
+    created_at: '2026-08-25T05:04:37.747774',
+    updated_at: '2026-08-25T05:04:37.747775'
   },
   {
     id: '',
-    name: 'N'Orlins Cafe',
+    name: `N'Orlins Cafe`,
     company: '',
     email: '',
     phone: '(602) 796-5500',
@@ -14622,8 +4991,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865147',
-    updated_at: '2026-08-31T17:44:00.865147'
+    created_at: '2026-08-25T05:04:37.747777',
+    updated_at: '2026-08-25T05:04:37.747778'
   },
   {
     id: '',
@@ -14638,8 +5007,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865149',
-    updated_at: '2026-08-31T17:44:00.865150'
+    created_at: '2026-08-25T05:04:37.747790',
+    updated_at: '2026-08-25T05:04:37.747792'
   },
   {
     id: '',
@@ -14654,12 +5023,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865152',
-    updated_at: '2026-08-31T17:44:00.865153'
+    created_at: '2026-08-25T05:04:37.747794',
+    updated_at: '2026-08-25T05:04:37.747795'
   },
   {
     id: '',
-    name: 'Grohman's Flowers',
+    name: `Grohman's Flowers`,
     company: '',
     email: '',
     phone: '(989) 754-7457',
@@ -14670,8 +5039,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865156',
-    updated_at: '2026-08-31T17:44:00.865156'
+    created_at: '2026-08-25T05:04:37.747797',
+    updated_at: '2026-08-25T05:04:37.747798'
   },
   {
     id: '',
@@ -14686,12 +5055,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865160',
-    updated_at: '2026-08-31T17:44:00.865161'
+    created_at: '2026-08-25T05:04:37.747800',
+    updated_at: '2026-08-25T05:04:37.747801'
   },
   {
     id: '',
-    name: 'Erika's Flowers',
+    name: `Erika's Flowers`,
     company: '',
     email: '',
     phone: '(989) 755-9330',
@@ -14702,8 +5071,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865164',
-    updated_at: '2026-08-31T17:44:00.865164'
+    created_at: '2026-08-25T05:04:37.747804',
+    updated_at: '2026-08-25T05:04:37.747805'
   },
   {
     id: '',
@@ -14718,12 +5087,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865167',
-    updated_at: '2026-08-31T17:44:00.865167'
+    created_at: '2026-08-25T05:04:37.747807',
+    updated_at: '2026-08-25T05:04:37.747807'
   },
   {
     id: '',
-    name: 'Hank's Flowerland',
+    name: `Hank's Flowerland`,
     company: '',
     email: '',
     phone: '(989) 754-7481',
@@ -14734,8 +5103,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865169',
-    updated_at: '2026-08-31T17:44:00.865170'
+    created_at: '2026-08-25T05:04:37.747810',
+    updated_at: '2026-08-25T05:04:37.747810'
   },
   {
     id: '',
@@ -14750,8 +5119,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865173',
-    updated_at: '2026-08-31T17:44:00.865173'
+    created_at: '2026-08-25T05:04:37.747813',
+    updated_at: '2026-08-25T05:04:37.747813'
   },
   {
     id: '',
@@ -14766,12 +5135,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865176',
-    updated_at: '2026-08-31T17:44:00.865177'
+    created_at: '2026-08-25T05:04:37.747816',
+    updated_at: '2026-08-25T05:04:37.747816'
   },
   {
     id: '',
-    name: 'Austin's Flowers & Gifts',
+    name: `Austin's Flowers & Gifts`,
     company: '',
     email: '',
     phone: '(989) 695-9100',
@@ -14782,8 +5151,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865180',
-    updated_at: '2026-08-31T17:44:00.865181'
+    created_at: '2026-08-25T05:04:37.747819',
+    updated_at: '2026-08-25T05:04:37.747819'
   },
   {
     id: '',
@@ -14798,8 +5167,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865183',
-    updated_at: '2026-08-31T17:44:00.865184'
+    created_at: '2026-08-25T05:04:37.747821',
+    updated_at: '2026-08-25T05:04:37.747822'
   },
   {
     id: '',
@@ -14814,8 +5183,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865186',
-    updated_at: '2026-08-31T17:44:00.865187'
+    created_at: '2026-08-25T05:04:37.747824',
+    updated_at: '2026-08-25T05:04:37.747825'
   },
   {
     id: '',
@@ -14830,8 +5199,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865189',
-    updated_at: '2026-08-31T17:44:00.865190'
+    created_at: '2026-08-25T05:04:37.747827',
+    updated_at: '2026-08-25T05:04:37.747828'
   },
   {
     id: '',
@@ -14846,8 +5215,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865192',
-    updated_at: '2026-08-31T17:44:00.865193'
+    created_at: '2026-08-25T05:04:37.747830',
+    updated_at: '2026-08-25T05:04:37.747831'
   },
   {
     id: '',
@@ -14862,12 +5231,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865197',
-    updated_at: '2026-08-31T17:44:00.865198'
+    created_at: '2026-08-25T05:04:37.747833',
+    updated_at: '2026-08-25T05:04:37.747834'
   },
   {
     id: '',
-    name: 'Boehler's Greenhouse',
+    name: `Boehler's Greenhouse`,
     company: '',
     email: '',
     phone: '(989) 792-2039',
@@ -14878,8 +5247,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865200',
-    updated_at: '2026-08-31T17:44:00.865201'
+    created_at: '2026-08-25T05:04:37.747836',
+    updated_at: '2026-08-25T05:04:37.747837'
   },
   {
     id: '',
@@ -14894,8 +5263,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865203',
-    updated_at: '2026-08-31T17:44:00.865204'
+    created_at: '2026-08-25T05:04:37.747839',
+    updated_at: '2026-08-25T05:04:37.747840'
   },
   {
     id: '',
@@ -14910,8 +5279,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865206',
-    updated_at: '2026-08-31T17:44:00.865207'
+    created_at: '2026-08-25T05:04:37.747842',
+    updated_at: '2026-08-25T05:04:37.747843'
   },
   {
     id: '',
@@ -14926,8 +5295,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865209',
-    updated_at: '2026-08-31T17:44:00.865210'
+    created_at: '2026-08-25T05:04:37.747845',
+    updated_at: '2026-08-25T05:04:37.747846'
   },
   {
     id: '',
@@ -14942,8 +5311,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865212',
-    updated_at: '2026-08-31T17:44:00.865215'
+    created_at: '2026-08-25T05:04:37.747848',
+    updated_at: '2026-08-25T05:04:37.747849'
   },
   {
     id: '',
@@ -14958,8 +5327,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865217',
-    updated_at: '2026-08-31T17:44:00.865218'
+    created_at: '2026-08-25T05:04:37.747851',
+    updated_at: '2026-08-25T05:04:37.747852'
   },
   {
     id: '',
@@ -14974,8 +5343,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865220',
-    updated_at: '2026-08-31T17:44:00.865221'
+    created_at: '2026-08-25T05:04:37.747854',
+    updated_at: '2026-08-25T05:04:37.747855'
   },
   {
     id: '',
@@ -14990,8 +5359,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865223',
-    updated_at: '2026-08-31T17:44:00.865224'
+    created_at: '2026-08-25T05:04:37.747857',
+    updated_at: '2026-08-25T05:04:37.747858'
   },
   {
     id: '',
@@ -15006,8 +5375,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865226',
-    updated_at: '2026-08-31T17:44:00.865227'
+    created_at: '2026-08-25T05:04:37.747860',
+    updated_at: '2026-08-25T05:04:37.747861'
   },
   {
     id: '',
@@ -15022,8 +5391,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865229',
-    updated_at: '2026-08-31T17:44:00.865230'
+    created_at: '2026-08-25T05:04:37.747863',
+    updated_at: '2026-08-25T05:04:37.747863'
   },
   {
     id: '',
@@ -15038,8 +5407,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865234',
-    updated_at: '2026-08-31T17:44:00.865235'
+    created_at: '2026-08-25T05:04:37.747866',
+    updated_at: '2026-08-25T05:04:37.747866'
   },
   {
     id: '',
@@ -15054,8 +5423,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865237',
-    updated_at: '2026-08-31T17:44:00.865238'
+    created_at: '2026-08-25T05:04:37.747869',
+    updated_at: '2026-08-25T05:04:37.747869'
   },
   {
     id: '',
@@ -15070,8 +5439,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865240',
-    updated_at: '2026-08-31T17:44:00.865241'
+    created_at: '2026-08-25T05:04:37.747872',
+    updated_at: '2026-08-25T05:04:37.747872'
   },
   {
     id: '',
@@ -15086,8 +5455,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865243',
-    updated_at: '2026-08-31T17:44:00.865244'
+    created_at: '2026-08-25T05:04:37.747875',
+    updated_at: '2026-08-25T05:04:37.747876'
   },
   {
     id: '',
@@ -15102,8 +5471,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865246',
-    updated_at: '2026-08-31T17:44:00.865247'
+    created_at: '2026-08-25T05:04:37.747878',
+    updated_at: '2026-08-25T05:04:37.747879'
   },
   {
     id: '',
@@ -15118,8 +5487,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865251',
-    updated_at: '2026-08-31T17:44:00.865251'
+    created_at: '2026-08-25T05:04:37.747881',
+    updated_at: '2026-08-25T05:04:37.747881'
   },
   {
     id: '',
@@ -15134,8 +5503,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865253',
-    updated_at: '2026-08-31T17:44:00.865254'
+    created_at: '2026-08-25T05:04:37.747884',
+    updated_at: '2026-08-25T05:04:37.747885'
   },
   {
     id: '',
@@ -15150,8 +5519,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865256',
-    updated_at: '2026-08-31T17:44:00.865257'
+    created_at: '2026-08-25T05:04:37.747887',
+    updated_at: '2026-08-25T05:04:37.747888'
   },
   {
     id: '',
@@ -15166,8 +5535,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865260',
-    updated_at: '2026-08-31T17:44:00.865260'
+    created_at: '2026-08-25T05:04:37.747890',
+    updated_at: '2026-08-25T05:04:37.747891'
   },
   {
     id: '',
@@ -15182,8 +5551,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865262',
-    updated_at: '2026-08-31T17:44:00.865263'
+    created_at: '2026-08-25T05:04:37.747894',
+    updated_at: '2026-08-25T05:04:37.747894'
   },
   {
     id: '',
@@ -15198,8 +5567,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865267',
-    updated_at: '2026-08-31T17:44:00.865268'
+    created_at: '2026-08-25T05:04:37.747896',
+    updated_at: '2026-08-25T05:04:37.747897'
   },
   {
     id: '',
@@ -15214,8 +5583,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865270',
-    updated_at: '2026-08-31T17:44:00.865271'
+    created_at: '2026-08-25T05:04:37.747900',
+    updated_at: '2026-08-25T05:04:37.747900'
   },
   {
     id: '',
@@ -15230,8 +5599,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865273',
-    updated_at: '2026-08-31T17:44:00.865273'
+    created_at: '2026-08-25T05:04:37.747903',
+    updated_at: '2026-08-25T05:04:37.747903'
   },
   {
     id: '',
@@ -15246,8 +5615,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865276',
-    updated_at: '2026-08-31T17:44:00.865276'
+    created_at: '2026-08-25T05:04:37.747905',
+    updated_at: '2026-08-25T05:04:37.747906'
   },
   {
     id: '',
@@ -15262,8 +5631,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865279',
-    updated_at: '2026-08-31T17:44:00.865279'
+    created_at: '2026-08-25T05:04:37.747909',
+    updated_at: '2026-08-25T05:04:37.747909'
   },
   {
     id: '',
@@ -15278,8 +5647,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865282',
-    updated_at: '2026-08-31T17:44:00.865282'
+    created_at: '2026-08-25T05:04:37.747912',
+    updated_at: '2026-08-25T05:04:37.747912'
   },
   {
     id: '',
@@ -15294,8 +5663,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865286',
-    updated_at: '2026-08-31T17:44:00.865287'
+    created_at: '2026-08-25T05:04:37.747915',
+    updated_at: '2026-08-25T05:04:37.747915'
   },
   {
     id: '',
@@ -15310,8 +5679,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865289',
-    updated_at: '2026-08-31T17:44:00.865290'
+    created_at: '2026-08-25T05:04:37.747918',
+    updated_at: '2026-08-25T05:04:37.747918'
   },
   {
     id: '',
@@ -15326,8 +5695,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865292',
-    updated_at: '2026-08-31T17:44:00.865293'
+    created_at: '2026-08-25T05:04:37.747921',
+    updated_at: '2026-08-25T05:04:37.747921'
   },
   {
     id: '',
@@ -15342,8 +5711,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865295',
-    updated_at: '2026-08-31T17:44:00.865296'
+    created_at: '2026-08-25T05:04:37.747924',
+    updated_at: '2026-08-25T05:04:37.747924'
   },
   {
     id: '',
@@ -15358,8 +5727,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865298',
-    updated_at: '2026-08-31T17:44:00.865299'
+    created_at: '2026-08-25T05:04:37.747927',
+    updated_at: '2026-08-25T05:04:37.747927'
   },
   {
     id: '',
@@ -15374,8 +5743,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865302',
-    updated_at: '2026-08-31T17:44:00.865303'
+    created_at: '2026-08-25T05:04:37.747930',
+    updated_at: '2026-08-25T05:04:37.747930'
   },
   {
     id: '',
@@ -15390,8 +5759,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865305',
-    updated_at: '2026-08-31T17:44:00.865306'
+    created_at: '2026-08-25T05:04:37.747933',
+    updated_at: '2026-08-25T05:04:37.747933'
   },
   {
     id: '',
@@ -15406,8 +5775,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865308',
-    updated_at: '2026-08-31T17:44:00.865309'
+    created_at: '2026-08-25T05:04:37.747936',
+    updated_at: '2026-08-25T05:04:37.747937'
   },
   {
     id: '',
@@ -15422,8 +5791,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865311',
-    updated_at: '2026-08-31T17:44:00.865312'
+    created_at: '2026-08-25T05:04:37.747939',
+    updated_at: '2026-08-25T05:04:37.747939'
   },
   {
     id: '',
@@ -15438,8 +5807,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865314',
-    updated_at: '2026-08-31T17:44:00.865315'
+    created_at: '2026-08-25T05:04:37.747941',
+    updated_at: '2026-08-25T05:04:37.747942'
   },
   {
     id: '',
@@ -15454,8 +5823,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865317',
-    updated_at: '2026-08-31T17:44:00.865318'
+    created_at: '2026-08-25T05:04:37.747944',
+    updated_at: '2026-08-25T05:04:37.747945'
   },
   {
     id: '',
@@ -15470,8 +5839,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865322',
-    updated_at: '2026-08-31T17:44:00.865323'
+    created_at: '2026-08-25T05:04:37.747947',
+    updated_at: '2026-08-25T05:04:37.747948'
   },
   {
     id: '',
@@ -15486,8 +5855,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865325',
-    updated_at: '2026-08-31T17:44:00.865325'
+    created_at: '2026-08-25T05:04:37.747950',
+    updated_at: '2026-08-25T05:04:37.747951'
   },
   {
     id: '',
@@ -15502,8 +5871,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865332',
-    updated_at: '2026-08-31T17:44:00.865333'
+    created_at: '2026-08-25T05:04:37.747953',
+    updated_at: '2026-08-25T05:04:37.747954'
   },
   {
     id: '',
@@ -15518,8 +5887,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865335',
-    updated_at: '2026-08-31T17:44:00.865336'
+    created_at: '2026-08-25T05:04:37.747956',
+    updated_at: '2026-08-25T05:04:37.747957'
   },
   {
     id: '',
@@ -15534,8 +5903,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865338',
-    updated_at: '2026-08-31T17:44:00.865339'
+    created_at: '2026-08-25T05:04:37.747959',
+    updated_at: '2026-08-25T05:04:37.747960'
   },
   {
     id: '',
@@ -15550,8 +5919,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865343',
-    updated_at: '2026-08-31T17:44:00.865344'
+    created_at: '2026-08-25T05:04:37.747962',
+    updated_at: '2026-08-25T05:04:37.747963'
   },
   {
     id: '',
@@ -15566,8 +5935,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865346',
-    updated_at: '2026-08-31T17:44:00.865346'
+    created_at: '2026-08-25T05:04:37.747965',
+    updated_at: '2026-08-25T05:04:37.747966'
   },
   {
     id: '',
@@ -15582,8 +5951,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865349',
-    updated_at: '2026-08-31T17:44:00.865350'
+    created_at: '2026-08-25T05:04:37.747968',
+    updated_at: '2026-08-25T05:04:37.747969'
   },
   {
     id: '',
@@ -15598,8 +5967,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865352',
-    updated_at: '2026-08-31T17:44:00.865352'
+    created_at: '2026-08-25T05:04:37.747971',
+    updated_at: '2026-08-25T05:04:37.747972'
   },
   {
     id: '',
@@ -15614,8 +5983,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865355',
-    updated_at: '2026-08-31T17:44:00.865356'
+    created_at: '2026-08-25T05:04:37.747974',
+    updated_at: '2026-08-25T05:04:37.747974'
   },
   {
     id: '',
@@ -15630,8 +5999,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865358',
-    updated_at: '2026-08-31T17:44:00.865359'
+    created_at: '2026-08-25T05:04:37.747977',
+    updated_at: '2026-08-25T05:04:37.747977'
   },
   {
     id: '',
@@ -15646,8 +6015,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865363',
-    updated_at: '2026-08-31T17:44:00.865363'
+    created_at: '2026-08-25T05:04:37.747980',
+    updated_at: '2026-08-25T05:04:37.747980'
   },
   {
     id: '',
@@ -15662,8 +6031,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865366',
-    updated_at: '2026-08-31T17:44:00.865366'
+    created_at: '2026-08-25T05:04:37.747983',
+    updated_at: '2026-08-25T05:04:37.747983'
   },
   {
     id: '',
@@ -15678,8 +6047,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865369',
-    updated_at: '2026-08-31T17:44:00.865370'
+    created_at: '2026-08-25T05:04:37.747986',
+    updated_at: '2026-08-25T05:04:37.747986'
   },
   {
     id: '',
@@ -15694,8 +6063,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865372',
-    updated_at: '2026-08-31T17:44:00.865373'
+    created_at: '2026-08-25T05:04:37.747989',
+    updated_at: '2026-08-25T05:04:37.747989'
   },
   {
     id: '',
@@ -15710,8 +6079,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865375',
-    updated_at: '2026-08-31T17:44:00.865375'
+    created_at: '2026-08-25T05:04:37.747992',
+    updated_at: '2026-08-25T05:04:37.747992'
   },
   {
     id: '',
@@ -15726,8 +6095,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865379',
-    updated_at: '2026-08-31T17:44:00.865380'
+    created_at: '2026-08-25T05:04:37.747994',
+    updated_at: '2026-08-25T05:04:37.747995'
   },
   {
     id: '',
@@ -15742,8 +6111,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865382',
-    updated_at: '2026-08-31T17:44:00.865383'
+    created_at: '2026-08-25T05:04:37.747997',
+    updated_at: '2026-08-25T05:04:37.747998'
   },
   {
     id: '',
@@ -15758,8 +6127,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865385',
-    updated_at: '2026-08-31T17:44:00.865386'
+    created_at: '2026-08-25T05:04:37.748000',
+    updated_at: '2026-08-25T05:04:37.748001'
   },
   {
     id: '',
@@ -15774,8 +6143,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865388',
-    updated_at: '2026-08-31T17:44:00.865389'
+    created_at: '2026-08-25T05:04:37.748003',
+    updated_at: '2026-08-25T05:04:37.748004'
   },
   {
     id: '',
@@ -15790,8 +6159,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865391',
-    updated_at: '2026-08-31T17:44:00.865392'
+    created_at: '2026-08-25T05:04:37.748006',
+    updated_at: '2026-08-25T05:04:37.748007'
   },
   {
     id: '',
@@ -15806,8 +6175,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865394',
-    updated_at: '2026-08-31T17:44:00.865395'
+    created_at: '2026-08-25T05:04:37.748009',
+    updated_at: '2026-08-25T05:04:37.748010'
   },
   {
     id: '',
@@ -15822,8 +6191,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865406',
-    updated_at: '2026-08-31T17:44:00.865407'
+    created_at: '2026-08-25T05:04:37.748012',
+    updated_at: '2026-08-25T05:04:37.748012'
   },
   {
     id: '',
@@ -15838,8 +6207,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865409',
-    updated_at: '2026-08-31T17:44:00.865410'
+    created_at: '2026-08-25T05:04:37.748014',
+    updated_at: '2026-08-25T05:04:37.748015'
   },
   {
     id: '',
@@ -15854,8 +6223,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865412',
-    updated_at: '2026-08-31T17:44:00.865413'
+    created_at: '2026-08-25T05:04:37.748018',
+    updated_at: '2026-08-25T05:04:37.748018'
   },
   {
     id: '',
@@ -15870,8 +6239,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865415',
-    updated_at: '2026-08-31T17:44:00.865416'
+    created_at: '2026-08-25T05:04:37.748021',
+    updated_at: '2026-08-25T05:04:37.748021'
   },
   {
     id: '',
@@ -15886,8 +6255,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865418',
-    updated_at: '2026-08-31T17:44:00.865419'
+    created_at: '2026-08-25T05:04:37.748023',
+    updated_at: '2026-08-25T05:04:37.748024'
   },
   {
     id: '',
@@ -15902,8 +6271,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865423',
-    updated_at: '2026-08-31T17:44:00.865424'
+    created_at: '2026-08-25T05:04:37.748026',
+    updated_at: '2026-08-25T05:04:37.748027'
   },
   {
     id: '',
@@ -15918,8 +6287,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865426',
-    updated_at: '2026-08-31T17:44:00.865427'
+    created_at: '2026-08-25T05:04:37.748029',
+    updated_at: '2026-08-25T05:04:37.748030'
   },
   {
     id: '',
@@ -15934,8 +6303,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865429',
-    updated_at: '2026-08-31T17:44:00.865430'
+    created_at: '2026-08-25T05:04:37.748032',
+    updated_at: '2026-08-25T05:04:37.748033'
   },
   {
     id: '',
@@ -15950,8 +6319,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865432',
-    updated_at: '2026-08-31T17:44:00.865433'
+    created_at: '2026-08-25T05:04:37.748035',
+    updated_at: '2026-08-25T05:04:37.748036'
   },
   {
     id: '',
@@ -15966,8 +6335,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865435',
-    updated_at: '2026-08-31T17:44:00.865436'
+    created_at: '2026-08-25T05:04:37.748038',
+    updated_at: '2026-08-25T05:04:37.748039'
   },
   {
     id: '',
@@ -15982,8 +6351,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865440',
-    updated_at: '2026-08-31T17:44:00.865441'
+    created_at: '2026-08-25T05:04:37.748041',
+    updated_at: '2026-08-25T05:04:37.748042'
   },
   {
     id: '',
@@ -15998,8 +6367,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865443',
-    updated_at: '2026-08-31T17:44:00.865444'
+    created_at: '2026-08-25T05:04:37.748044',
+    updated_at: '2026-08-25T05:04:37.748045'
   },
   {
     id: '',
@@ -16014,8 +6383,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865446',
-    updated_at: '2026-08-31T17:44:00.865447'
+    created_at: '2026-08-25T05:04:37.748047',
+    updated_at: '2026-08-25T05:04:37.748048'
   },
   {
     id: '',
@@ -16030,8 +6399,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865450',
-    updated_at: '2026-08-31T17:44:00.865450'
+    created_at: '2026-08-25T05:04:37.748050',
+    updated_at: '2026-08-25T05:04:37.748051'
   },
   {
     id: '',
@@ -16046,8 +6415,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865453',
-    updated_at: '2026-08-31T17:44:00.865453'
+    created_at: '2026-08-25T05:04:37.748053',
+    updated_at: '2026-08-25T05:04:37.748054'
   },
   {
     id: '',
@@ -16062,8 +6431,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865457',
-    updated_at: '2026-08-31T17:44:00.865458'
+    created_at: '2026-08-25T05:04:37.748056',
+    updated_at: '2026-08-25T05:04:37.748057'
   },
   {
     id: '',
@@ -16078,12 +6447,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865461',
-    updated_at: '2026-08-31T17:44:00.865461'
+    created_at: '2026-08-25T05:04:37.748060',
+    updated_at: '2026-08-25T05:04:37.748060'
   },
   {
     id: '',
-    name: 'O'Guinn Family Funeral Homes',
+    name: `O'Guinn Family Funeral Homes`,
     company: '',
     email: '',
     phone: '(810) 686-5070',
@@ -16094,8 +6463,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865464',
-    updated_at: '2026-08-31T17:44:00.865465'
+    created_at: '2026-08-25T05:04:37.748063',
+    updated_at: '2026-08-25T05:04:37.748063'
   },
   {
     id: '',
@@ -16110,8 +6479,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865467',
-    updated_at: '2026-08-31T17:44:00.865467'
+    created_at: '2026-08-25T05:04:37.748065',
+    updated_at: '2026-08-25T05:04:37.748066'
   },
   {
     id: '',
@@ -16126,8 +6495,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865470',
-    updated_at: '2026-08-31T17:44:00.865470'
+    created_at: '2026-08-25T05:04:37.748068',
+    updated_at: '2026-08-25T05:04:37.748069'
   },
   {
     id: '',
@@ -16142,8 +6511,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865474',
-    updated_at: '2026-08-31T17:44:00.865475'
+    created_at: '2026-08-25T05:04:37.748071',
+    updated_at: '2026-08-25T05:04:37.748072'
   },
   {
     id: '',
@@ -16158,8 +6527,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865477',
-    updated_at: '2026-08-31T17:44:00.865478'
+    created_at: '2026-08-25T05:04:37.748074',
+    updated_at: '2026-08-25T05:04:37.748075'
   },
   {
     id: '',
@@ -16174,8 +6543,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865480',
-    updated_at: '2026-08-31T17:44:00.865481'
+    created_at: '2026-08-25T05:04:37.748078',
+    updated_at: '2026-08-25T05:04:37.748078'
   },
   {
     id: '',
@@ -16190,8 +6559,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865483',
-    updated_at: '2026-08-31T17:44:00.865484'
+    created_at: '2026-08-25T05:04:37.748080',
+    updated_at: '2026-08-25T05:04:37.748081'
   },
   {
     id: '',
@@ -16206,8 +6575,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865486',
-    updated_at: '2026-08-31T17:44:00.865487'
+    created_at: '2026-08-25T05:04:37.748084',
+    updated_at: '2026-08-25T05:04:37.748084'
   },
   {
     id: '',
@@ -16222,8 +6591,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865491',
-    updated_at: '2026-08-31T17:44:00.865492'
+    created_at: '2026-08-25T05:04:37.748086',
+    updated_at: '2026-08-25T05:04:37.748087'
   },
   {
     id: '',
@@ -16238,8 +6607,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865494',
-    updated_at: '2026-08-31T17:44:00.865495'
+    created_at: '2026-08-25T05:04:37.748090',
+    updated_at: '2026-08-25T05:04:37.748090'
   },
   {
     id: '',
@@ -16254,8 +6623,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865497',
-    updated_at: '2026-08-31T17:44:00.865498'
+    created_at: '2026-08-25T05:04:37.748093',
+    updated_at: '2026-08-25T05:04:37.748093'
   },
   {
     id: '',
@@ -16270,8 +6639,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865500',
-    updated_at: '2026-08-31T17:44:00.865501'
+    created_at: '2026-08-25T05:04:37.748096',
+    updated_at: '2026-08-25T05:04:37.748096'
   },
   {
     id: '',
@@ -16286,8 +6655,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865503',
-    updated_at: '2026-08-31T17:44:00.865504'
+    created_at: '2026-08-25T05:04:37.748099',
+    updated_at: '2026-08-25T05:04:37.748100'
   },
   {
     id: '',
@@ -16302,8 +6671,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865508',
-    updated_at: '2026-08-31T17:44:00.865509'
+    created_at: '2026-08-25T05:04:37.748102',
+    updated_at: '2026-08-25T05:04:37.748103'
   },
   {
     id: '',
@@ -16318,8 +6687,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865511',
-    updated_at: '2026-08-31T17:44:00.865512'
+    created_at: '2026-08-25T05:04:37.748105',
+    updated_at: '2026-08-25T05:04:37.748106'
   },
   {
     id: '',
@@ -16334,8 +6703,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865514',
-    updated_at: '2026-08-31T17:44:00.865515'
+    created_at: '2026-08-25T05:04:37.748109',
+    updated_at: '2026-08-25T05:04:37.748109'
   },
   {
     id: '',
@@ -16350,8 +6719,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865518',
-    updated_at: '2026-08-31T17:44:00.865519'
+    created_at: '2026-08-25T05:04:37.748112',
+    updated_at: '2026-08-25T05:04:37.748113'
   },
   {
     id: '',
@@ -16366,8 +6735,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865521',
-    updated_at: '2026-08-31T17:44:00.865522'
+    created_at: '2026-08-25T05:04:37.748115',
+    updated_at: '2026-08-25T05:04:37.748116'
   },
   {
     id: '',
@@ -16382,8 +6751,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865524',
-    updated_at: '2026-08-31T17:44:00.865525'
+    created_at: '2026-08-25T05:04:37.748118',
+    updated_at: '2026-08-25T05:04:37.748119'
   },
   {
     id: '',
@@ -16398,8 +6767,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865529',
-    updated_at: '2026-08-31T17:44:00.865529'
+    created_at: '2026-08-25T05:04:37.748121',
+    updated_at: '2026-08-25T05:04:37.748122'
   },
   {
     id: '',
@@ -16414,8 +6783,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865532',
-    updated_at: '2026-08-31T17:44:00.865533'
+    created_at: '2026-08-25T05:04:37.748124',
+    updated_at: '2026-08-25T05:04:37.748125'
   },
   {
     id: '',
@@ -16430,8 +6799,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865535',
-    updated_at: '2026-08-31T17:44:00.865536'
+    created_at: '2026-08-25T05:04:37.748127',
+    updated_at: '2026-08-25T05:04:37.748128'
   },
   {
     id: '',
@@ -16446,12 +6815,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865538',
-    updated_at: '2026-08-31T17:44:00.865539'
+    created_at: '2026-08-25T05:04:37.748130',
+    updated_at: '2026-08-25T05:04:37.748131'
   },
   {
     id: '',
-    name: 'CHET'S AUTO SERVICE',
+    name: `CHET'S AUTO SERVICE`,
     company: '',
     email: '',
     phone: '(810) 767-9201',
@@ -16462,8 +6831,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865541',
-    updated_at: '2026-08-31T17:44:00.865542'
+    created_at: '2026-08-25T05:04:37.748133',
+    updated_at: '2026-08-25T05:04:37.748134'
   },
   {
     id: '',
@@ -16478,8 +6847,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865546',
-    updated_at: '2026-08-31T17:44:00.865547'
+    created_at: '2026-08-25T05:04:37.748136',
+    updated_at: '2026-08-25T05:04:37.748137'
   },
   {
     id: '',
@@ -16494,8 +6863,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865549',
-    updated_at: '2026-08-31T17:44:00.865550'
+    created_at: '2026-08-25T05:04:37.748139',
+    updated_at: '2026-08-25T05:04:37.748140'
   },
   {
     id: '',
@@ -16510,8 +6879,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865552',
-    updated_at: '2026-08-31T17:44:00.865553'
+    created_at: '2026-08-25T05:04:37.748142',
+    updated_at: '2026-08-25T05:04:37.748143'
   },
   {
     id: '',
@@ -16526,8 +6895,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865555',
-    updated_at: '2026-08-31T17:44:00.865556'
+    created_at: '2026-08-25T05:04:37.748145',
+    updated_at: '2026-08-25T05:04:37.748146'
   },
   {
     id: '',
@@ -16542,8 +6911,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865558',
-    updated_at: '2026-08-31T17:44:00.865559'
+    created_at: '2026-08-25T05:04:37.748148',
+    updated_at: '2026-08-25T05:04:37.748148'
   },
   {
     id: '',
@@ -16558,8 +6927,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865561',
-    updated_at: '2026-08-31T17:44:00.865562'
+    created_at: '2026-08-25T05:04:37.748151',
+    updated_at: '2026-08-25T05:04:37.748152'
   },
   {
     id: '',
@@ -16574,8 +6943,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865566',
-    updated_at: '2026-08-31T17:44:00.865567'
+    created_at: '2026-08-25T05:04:37.748154',
+    updated_at: '2026-08-25T05:04:37.748155'
   },
   {
     id: '',
@@ -16590,8 +6959,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865569',
-    updated_at: '2026-08-31T17:44:00.865570'
+    created_at: '2026-08-25T05:04:37.748157',
+    updated_at: '2026-08-25T05:04:37.748158'
   },
   {
     id: '',
@@ -16606,8 +6975,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865572',
-    updated_at: '2026-08-31T17:44:00.865573'
+    created_at: '2026-08-25T05:04:37.748160',
+    updated_at: '2026-08-25T05:04:37.748161'
   },
   {
     id: '',
@@ -16622,8 +6991,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865575',
-    updated_at: '2026-08-31T17:44:00.865576'
+    created_at: '2026-08-25T05:04:37.748163',
+    updated_at: '2026-08-25T05:04:37.748164'
   },
   {
     id: '',
@@ -16638,8 +7007,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865578',
-    updated_at: '2026-08-31T17:44:00.865578'
+    created_at: '2026-08-25T05:04:37.748166',
+    updated_at: '2026-08-25T05:04:37.748167'
   },
   {
     id: '',
@@ -16654,8 +7023,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865582',
-    updated_at: '2026-08-31T17:44:00.865583'
+    created_at: '2026-08-25T05:04:37.748169',
+    updated_at: '2026-08-25T05:04:37.748170'
   },
   {
     id: '',
@@ -16670,8 +7039,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865585',
-    updated_at: '2026-08-31T17:44:00.865586'
+    created_at: '2026-08-25T05:04:37.748172',
+    updated_at: '2026-08-25T05:04:37.748173'
   },
   {
     id: '',
@@ -16686,8 +7055,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865588',
-    updated_at: '2026-08-31T17:44:00.865589'
+    created_at: '2026-08-25T05:04:37.748175',
+    updated_at: '2026-08-25T05:04:37.748175'
   },
   {
     id: '',
@@ -16702,8 +7071,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865591',
-    updated_at: '2026-08-31T17:44:00.865592'
+    created_at: '2026-08-25T05:04:37.748178',
+    updated_at: '2026-08-25T05:04:37.748178'
   },
   {
     id: '',
@@ -16718,12 +7087,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865594',
-    updated_at: '2026-08-31T17:44:00.865595'
+    created_at: '2026-08-25T05:04:37.748181',
+    updated_at: '2026-08-25T05:04:37.748181'
   },
   {
     id: '',
-    name: 'Beny's Coffee',
+    name: `Beny's Coffee`,
     company: '',
     email: '',
     phone: '(810) 214-1016',
@@ -16734,8 +7103,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865597',
-    updated_at: '2026-08-31T17:44:00.865598'
+    created_at: '2026-08-25T05:04:37.748184',
+    updated_at: '2026-08-25T05:04:37.748184'
   },
   {
     id: '',
@@ -16750,8 +7119,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865602',
-    updated_at: '2026-08-31T17:44:00.865603'
+    created_at: '2026-08-25T05:04:37.748186',
+    updated_at: '2026-08-25T05:04:37.748187'
   },
   {
     id: '',
@@ -16766,8 +7135,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865605',
-    updated_at: '2026-08-31T17:44:00.865606'
+    created_at: '2026-08-25T05:04:37.748189',
+    updated_at: '2026-08-25T05:04:37.748190'
   },
   {
     id: '',
@@ -16782,12 +7151,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865608',
-    updated_at: '2026-08-31T17:44:00.865609'
+    created_at: '2026-08-25T05:04:37.748193',
+    updated_at: '2026-08-25T05:04:37.748193'
   },
   {
     id: '',
-    name: 'Scooter's Coffee',
+    name: `Scooter's Coffee`,
     company: '',
     email: '',
     phone: '(877) 719-1288',
@@ -16798,12 +7167,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865611',
-    updated_at: '2026-08-31T17:44:00.865612'
+    created_at: '2026-08-25T05:04:37.748195',
+    updated_at: '2026-08-25T05:04:37.748196'
   },
   {
     id: '',
-    name: 'ZD's Corner',
+    name: `ZD's Corner`,
     company: '',
     email: '',
     phone: '(810) 487-9065',
@@ -16814,8 +7183,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865614',
-    updated_at: '2026-08-31T17:44:00.865615'
+    created_at: '2026-08-25T05:04:37.748198',
+    updated_at: '2026-08-25T05:04:37.748199'
   },
   {
     id: '',
@@ -16830,8 +7199,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865617',
-    updated_at: '2026-08-31T17:44:00.865618'
+    created_at: '2026-08-25T05:04:37.748201',
+    updated_at: '2026-08-25T05:04:37.748202'
   },
   {
     id: '',
@@ -16846,8 +7215,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865622',
-    updated_at: '2026-08-31T17:44:00.865623'
+    created_at: '2026-08-25T05:04:37.748204',
+    updated_at: '2026-08-25T05:04:37.748205'
   },
   {
     id: '',
@@ -16862,12 +7231,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865625',
-    updated_at: '2026-08-31T17:44:00.865626'
+    created_at: '2026-08-25T05:04:37.748207',
+    updated_at: '2026-08-25T05:04:37.748208'
   },
   {
     id: '',
-    name: 'Vogt's Flowers and Gifts',
+    name: `Vogt's Flowers and Gifts`,
     company: '',
     email: '',
     phone: '(810) 238-6487',
@@ -16878,8 +7247,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865628',
-    updated_at: '2026-08-31T17:44:00.865629'
+    created_at: '2026-08-25T05:04:37.748210',
+    updated_at: '2026-08-25T05:04:37.748211'
   },
   {
     id: '',
@@ -16894,12 +7263,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865631',
-    updated_at: '2026-08-31T17:44:00.865632'
+    created_at: '2026-08-25T05:04:37.748213',
+    updated_at: '2026-08-25T05:04:37.748214'
   },
   {
     id: '',
-    name: 'Anthea's Gardens of Flint - Formerly Carousel Family Florist',
+    name: `Anthea's Gardens of Flint - Formerly Carousel Family Florist`,
     company: '',
     email: '',
     phone: '(810) 732-6871',
@@ -16910,8 +7279,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865634',
-    updated_at: '2026-08-31T17:44:00.865635'
+    created_at: '2026-08-25T05:04:37.748216',
+    updated_at: '2026-08-25T05:04:37.748217'
   },
   {
     id: '',
@@ -16926,8 +7295,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865642',
-    updated_at: '2026-08-31T17:44:00.865643'
+    created_at: '2026-08-25T05:04:37.748219',
+    updated_at: '2026-08-25T05:04:37.748220'
   },
   {
     id: '',
@@ -16942,12 +7311,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865645',
-    updated_at: '2026-08-31T17:44:00.865646'
+    created_at: '2026-08-25T05:04:37.748222',
+    updated_at: '2026-08-25T05:04:37.748223'
   },
   {
     id: '',
-    name: 'Mary's Bouquet & Gifts',
+    name: `Mary's Bouquet & Gifts`,
     company: '',
     email: '',
     phone: '(810) 235-3822',
@@ -16958,12 +7327,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865648',
-    updated_at: '2026-08-31T17:44:00.865648'
+    created_at: '2026-08-25T05:04:37.748225',
+    updated_at: '2026-08-25T05:04:37.748226'
   },
   {
     id: '',
-    name: 'Fenner's Floral and Design Company',
+    name: `Fenner's Floral and Design Company`,
     company: '',
     email: '',
     phone: '(810) 820-2312',
@@ -16974,8 +7343,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865651',
-    updated_at: '2026-08-31T17:44:00.865651'
+    created_at: '2026-08-25T05:04:37.748228',
+    updated_at: '2026-08-25T05:04:37.748229'
   },
   {
     id: '',
@@ -16990,8 +7359,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865653',
-    updated_at: '2026-08-31T17:44:00.865654'
+    created_at: '2026-08-25T05:04:37.748231',
+    updated_at: '2026-08-25T05:04:37.748232'
   },
   {
     id: '',
@@ -17006,12 +7375,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865656',
-    updated_at: '2026-08-31T17:44:00.865657'
+    created_at: '2026-08-25T05:04:37.748234',
+    updated_at: '2026-08-25T05:04:37.748235'
   },
   {
     id: '',
-    name: 'Pink Lady's Slipper',
+    name: `Pink Lady's Slipper`,
     company: '',
     email: '',
     phone: '(810) 635-8164',
@@ -17022,12 +7391,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865661',
-    updated_at: '2026-08-31T17:44:00.865662'
+    created_at: '2026-08-25T05:04:37.748237',
+    updated_at: '2026-08-25T05:04:37.748238'
   },
   {
     id: '',
-    name: 'Vogt's Flowers of Davison',
+    name: `Vogt's Flowers of Davison`,
     company: '',
     email: '',
     phone: '(810) 653-3700',
@@ -17038,8 +7407,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865665',
-    updated_at: '2026-08-31T17:44:00.865665'
+    created_at: '2026-08-25T05:04:37.748240',
+    updated_at: '2026-08-25T05:04:37.748241'
   },
   {
     id: '',
@@ -17054,12 +7423,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865668',
-    updated_at: '2026-08-31T17:44:00.865668'
+    created_at: '2026-08-25T05:04:37.748243',
+    updated_at: '2026-08-25T05:04:37.748243'
   },
   {
     id: '',
-    name: 'MarySam's Florist and Plant Shop',
+    name: `MarySam's Florist and Plant Shop`,
     company: '',
     email: '',
     phone: '(810) 309-9694',
@@ -17070,8 +7439,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865671',
-    updated_at: '2026-08-31T17:44:00.865671'
+    created_at: '2026-08-25T05:04:37.748246',
+    updated_at: '2026-08-25T05:04:37.748246'
   },
   {
     id: '',
@@ -17086,8 +7455,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865674',
-    updated_at: '2026-08-31T17:44:00.865674'
+    created_at: '2026-08-25T05:04:37.748249',
+    updated_at: '2026-08-25T05:04:37.748249'
   },
   {
     id: '',
@@ -17102,8 +7471,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865677',
-    updated_at: '2026-08-31T17:44:00.865679'
+    created_at: '2026-08-25T05:04:37.748252',
+    updated_at: '2026-08-25T05:04:37.748253'
   },
   {
     id: '',
@@ -17118,12 +7487,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865682',
-    updated_at: '2026-08-31T17:44:00.865682'
+    created_at: '2026-08-25T05:04:37.748255',
+    updated_at: '2026-08-25T05:04:37.748256'
   },
   {
     id: '',
-    name: 'Ken's Greenhouse',
+    name: `Ken's Greenhouse`,
     company: '',
     email: '',
     phone: '(810) 732-8522',
@@ -17134,8 +7503,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865685',
-    updated_at: '2026-08-31T17:44:00.865685'
+    created_at: '2026-08-25T05:04:37.748258',
+    updated_at: '2026-08-25T05:04:37.748258'
   },
   {
     id: '',
@@ -17150,8 +7519,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865688',
-    updated_at: '2026-08-31T17:44:00.865689'
+    created_at: '2026-08-25T05:04:37.748261',
+    updated_at: '2026-08-25T05:04:37.748261'
   },
   {
     id: '',
@@ -17166,8 +7535,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865691',
-    updated_at: '2026-08-31T17:44:00.865692'
+    created_at: '2026-08-25T05:04:37.748264',
+    updated_at: '2026-08-25T05:04:37.748264'
   },
   {
     id: '',
@@ -17182,8 +7551,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865694',
-    updated_at: '2026-08-31T17:44:00.865695'
+    created_at: '2026-08-25T05:04:37.748267',
+    updated_at: '2026-08-25T05:04:37.748267'
   },
   {
     id: '',
@@ -17198,8 +7567,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865699',
-    updated_at: '2026-08-31T17:44:00.865699'
+    created_at: '2026-08-25T05:04:37.748270',
+    updated_at: '2026-08-25T05:04:37.748270'
   },
   {
     id: '',
@@ -17214,8 +7583,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865702',
-    updated_at: '2026-08-31T17:44:00.865702'
+    created_at: '2026-08-25T05:04:37.748273',
+    updated_at: '2026-08-25T05:04:37.748273'
   },
   {
     id: '',
@@ -17230,8 +7599,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865705',
-    updated_at: '2026-08-31T17:44:00.865705'
+    created_at: '2026-08-25T05:04:37.748276',
+    updated_at: '2026-08-25T05:04:37.748277'
   },
   {
     id: '',
@@ -17246,8 +7615,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865707',
-    updated_at: '2026-08-31T17:44:00.865708'
+    created_at: '2026-08-25T05:04:37.748279',
+    updated_at: '2026-08-25T05:04:37.748279'
   },
   {
     id: '',
@@ -17262,8 +7631,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865710',
-    updated_at: '2026-08-31T17:44:00.865711'
+    created_at: '2026-08-25T05:04:37.748282',
+    updated_at: '2026-08-25T05:04:37.748282'
   },
   {
     id: '',
@@ -17278,8 +7647,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865715',
-    updated_at: '2026-08-31T17:44:00.865716'
+    created_at: '2026-08-25T05:04:37.748284',
+    updated_at: '2026-08-25T05:04:37.748285'
   },
   {
     id: '',
@@ -17294,8 +7663,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865718',
-    updated_at: '2026-08-31T17:44:00.865719'
+    created_at: '2026-08-25T05:04:37.748287',
+    updated_at: '2026-08-25T05:04:37.748288'
   },
   {
     id: '',
@@ -17310,8 +7679,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865721',
-    updated_at: '2026-08-31T17:44:00.865722'
+    created_at: '2026-08-25T05:04:37.748290',
+    updated_at: '2026-08-25T05:04:37.748291'
   },
   {
     id: '',
@@ -17326,8 +7695,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865724',
-    updated_at: '2026-08-31T17:44:00.865725'
+    created_at: '2026-08-25T05:04:37.748293',
+    updated_at: '2026-08-25T05:04:37.748294'
   },
   {
     id: '',
@@ -17342,8 +7711,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865727',
-    updated_at: '2026-08-31T17:44:00.865728'
+    created_at: '2026-08-25T05:04:37.748296',
+    updated_at: '2026-08-25T05:04:37.748297'
   },
   {
     id: '',
@@ -17358,12 +7727,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865731',
-    updated_at: '2026-08-31T17:44:00.865732'
+    created_at: '2026-08-25T05:04:37.748299',
+    updated_at: '2026-08-25T05:04:37.748300'
   },
   {
     id: '',
-    name: 'Victoria's House',
+    name: `Victoria's House`,
     company: '',
     email: '',
     phone: '(810) 732-1946',
@@ -17374,8 +7743,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865734',
-    updated_at: '2026-08-31T17:44:00.865735'
+    created_at: '2026-08-25T05:04:37.748302',
+    updated_at: '2026-08-25T05:04:37.748303'
   },
   {
     id: '',
@@ -17390,8 +7759,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865737',
-    updated_at: '2026-08-31T17:44:00.865738'
+    created_at: '2026-08-25T05:04:37.748305',
+    updated_at: '2026-08-25T05:04:37.748306'
   },
   {
     id: '',
@@ -17406,8 +7775,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865740',
-    updated_at: '2026-08-31T17:44:00.865741'
+    created_at: '2026-08-25T05:04:37.748308',
+    updated_at: '2026-08-25T05:04:37.748309'
   },
   {
     id: '',
@@ -17422,8 +7791,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865743',
-    updated_at: '2026-08-31T17:44:00.865744'
+    created_at: '2026-08-25T05:04:37.748311',
+    updated_at: '2026-08-25T05:04:37.748312'
   },
   {
     id: '',
@@ -17438,8 +7807,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865746',
-    updated_at: '2026-08-31T17:44:00.865747'
+    created_at: '2026-08-25T05:04:37.748314',
+    updated_at: '2026-08-25T05:04:37.748315'
   },
   {
     id: '',
@@ -17454,8 +7823,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865751',
-    updated_at: '2026-08-31T17:44:00.865751'
+    created_at: '2026-08-25T05:04:37.748317',
+    updated_at: '2026-08-25T05:04:37.748318'
   },
   {
     id: '',
@@ -17470,8 +7839,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865754',
-    updated_at: '2026-08-31T17:44:00.865754'
+    created_at: '2026-08-25T05:04:37.748320',
+    updated_at: '2026-08-25T05:04:37.748321'
   },
   {
     id: '',
@@ -17486,8 +7855,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865757',
-    updated_at: '2026-08-31T17:44:00.865757'
+    created_at: '2026-08-25T05:04:37.748323',
+    updated_at: '2026-08-25T05:04:37.748324'
   },
   {
     id: '',
@@ -17502,8 +7871,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865760',
-    updated_at: '2026-08-31T17:44:00.865760'
+    created_at: '2026-08-25T05:04:37.748326',
+    updated_at: '2026-08-25T05:04:37.748327'
   },
   {
     id: '',
@@ -17518,8 +7887,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865763',
-    updated_at: '2026-08-31T17:44:00.865763'
+    created_at: '2026-08-25T05:04:37.748329',
+    updated_at: '2026-08-25T05:04:37.748330'
   },
   {
     id: '',
@@ -17534,8 +7903,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865767',
-    updated_at: '2026-08-31T17:44:00.865768'
+    created_at: '2026-08-25T05:04:37.748332',
+    updated_at: '2026-08-25T05:04:37.748332'
   },
   {
     id: '',
@@ -17550,8 +7919,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865770',
-    updated_at: '2026-08-31T17:44:00.865771'
+    created_at: '2026-08-25T05:04:37.748335',
+    updated_at: '2026-08-25T05:04:37.748335'
   },
   {
     id: '',
@@ -17566,8 +7935,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865773',
-    updated_at: '2026-08-31T17:44:00.865774'
+    created_at: '2026-08-25T05:04:37.748338',
+    updated_at: '2026-08-25T05:04:37.748338'
   },
   {
     id: '',
@@ -17582,8 +7951,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865776',
-    updated_at: '2026-08-31T17:44:00.865777'
+    created_at: '2026-08-25T05:04:37.748341',
+    updated_at: '2026-08-25T05:04:37.748341'
   },
   {
     id: '',
@@ -17598,8 +7967,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865779',
-    updated_at: '2026-08-31T17:44:00.865780'
+    created_at: '2026-08-25T05:04:37.748344',
+    updated_at: '2026-08-25T05:04:37.748344'
   },
   {
     id: '',
@@ -17614,8 +7983,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865782',
-    updated_at: '2026-08-31T17:44:00.865783'
+    created_at: '2026-08-25T05:04:37.748347',
+    updated_at: '2026-08-25T05:04:37.748347'
   },
   {
     id: '',
@@ -17630,8 +7999,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865787',
-    updated_at: '2026-08-31T17:44:00.865788'
+    created_at: '2026-08-25T05:04:37.748350',
+    updated_at: '2026-08-25T05:04:37.748350'
   },
   {
     id: '',
@@ -17646,12 +8015,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865790',
-    updated_at: '2026-08-31T17:44:00.865790'
+    created_at: '2026-08-25T05:04:37.748353',
+    updated_at: '2026-08-25T05:04:37.748353'
   },
   {
     id: '',
-    name: 'Walker June Calhoun CPA's, PC',
+    name: `Walker June Calhoun CPA's, PC`,
     company: '',
     email: '',
     phone: '(810) 743-5000',
@@ -17662,8 +8031,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865793',
-    updated_at: '2026-08-31T17:44:00.865794'
+    created_at: '2026-08-25T05:04:37.748355',
+    updated_at: '2026-08-25T05:04:37.748356'
   },
   {
     id: '',
@@ -17678,8 +8047,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865796',
-    updated_at: '2026-08-31T17:44:00.865797'
+    created_at: '2026-08-25T05:04:37.748358',
+    updated_at: '2026-08-25T05:04:37.748359'
   },
   {
     id: '',
@@ -17694,8 +8063,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865799',
-    updated_at: '2026-08-31T17:44:00.865799'
+    created_at: '2026-08-25T05:04:37.748361',
+    updated_at: '2026-08-25T05:04:37.748362'
   },
   {
     id: '',
@@ -17710,8 +8079,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865802',
-    updated_at: '2026-08-31T17:44:00.865804'
+    created_at: '2026-08-25T05:04:37.748364',
+    updated_at: '2026-08-25T05:04:37.748365'
   },
   {
     id: '',
@@ -17726,8 +8095,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865806',
-    updated_at: '2026-08-31T17:44:00.865807'
+    created_at: '2026-08-25T05:04:37.748367',
+    updated_at: '2026-08-25T05:04:37.748368'
   },
   {
     id: '',
@@ -17742,8 +8111,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865809',
-    updated_at: '2026-08-31T17:44:00.865810'
+    created_at: '2026-08-25T05:04:37.748370',
+    updated_at: '2026-08-25T05:04:37.748371'
   },
   {
     id: '',
@@ -17758,8 +8127,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865812',
-    updated_at: '2026-08-31T17:44:00.865812'
+    created_at: '2026-08-25T05:04:37.748373',
+    updated_at: '2026-08-25T05:04:37.748374'
   },
   {
     id: '',
@@ -17774,8 +8143,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865814',
-    updated_at: '2026-08-31T17:44:00.865815'
+    created_at: '2026-08-25T05:04:37.748376',
+    updated_at: '2026-08-25T05:04:37.748377'
   },
   {
     id: '',
@@ -17790,8 +8159,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865818',
-    updated_at: '2026-08-31T17:44:00.865818'
+    created_at: '2026-08-25T05:04:37.748379',
+    updated_at: '2026-08-25T05:04:37.748380'
   },
   {
     id: '',
@@ -17806,8 +8175,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865822',
-    updated_at: '2026-08-31T17:44:00.865823'
+    created_at: '2026-08-25T05:04:37.748382',
+    updated_at: '2026-08-25T05:04:37.748383'
   },
   {
     id: '',
@@ -17822,8 +8191,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865825',
-    updated_at: '2026-08-31T17:44:00.865826'
+    created_at: '2026-08-25T05:04:37.748385',
+    updated_at: '2026-08-25T05:04:37.748386'
   },
   {
     id: '',
@@ -17838,8 +8207,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865828',
-    updated_at: '2026-08-31T17:44:00.865828'
+    created_at: '2026-08-25T05:04:37.748388',
+    updated_at: '2026-08-25T05:04:37.748389'
   },
   {
     id: '',
@@ -17854,8 +8223,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865830',
-    updated_at: '2026-08-31T17:44:00.865831'
+    created_at: '2026-08-25T05:04:37.748391',
+    updated_at: '2026-08-25T05:04:37.748392'
   },
   {
     id: '',
@@ -17870,8 +8239,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865833',
-    updated_at: '2026-08-31T17:44:00.865834'
+    created_at: '2026-08-25T05:04:37.748394',
+    updated_at: '2026-08-25T05:04:37.748395'
   },
   {
     id: '',
@@ -17886,8 +8255,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865838',
-    updated_at: '2026-08-31T17:44:00.865838'
+    created_at: '2026-08-25T05:04:37.748397',
+    updated_at: '2026-08-25T05:04:37.748398'
   },
   {
     id: '',
@@ -17902,8 +8271,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865841',
-    updated_at: '2026-08-31T17:44:00.865842'
+    created_at: '2026-08-25T05:04:37.748400',
+    updated_at: '2026-08-25T05:04:37.748401'
   },
   {
     id: '',
@@ -17918,8 +8287,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865844',
-    updated_at: '2026-08-31T17:44:00.865845'
+    created_at: '2026-08-25T05:04:37.748403',
+    updated_at: '2026-08-25T05:04:37.748404'
   },
   {
     id: '',
@@ -17934,8 +8303,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865847',
-    updated_at: '2026-08-31T17:44:00.865847'
+    created_at: '2026-08-25T05:04:37.748406',
+    updated_at: '2026-08-25T05:04:37.748407'
   },
   {
     id: '',
@@ -17950,8 +8319,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865849',
-    updated_at: '2026-08-31T17:44:00.865850'
+    created_at: '2026-08-25T05:04:37.748409',
+    updated_at: '2026-08-25T05:04:37.748410'
   },
   {
     id: '',
@@ -17966,8 +8335,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865852',
-    updated_at: '2026-08-31T17:44:00.865853'
+    created_at: '2026-08-25T05:04:37.748412',
+    updated_at: '2026-08-25T05:04:37.748413'
   },
   {
     id: '',
@@ -17982,8 +8351,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865857',
-    updated_at: '2026-08-31T17:44:00.865858'
+    created_at: '2026-08-25T05:04:37.748415',
+    updated_at: '2026-08-25T05:04:37.748416'
   },
   {
     id: '',
@@ -17998,8 +8367,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865860',
-    updated_at: '2026-08-31T17:44:00.865860'
+    created_at: '2026-08-25T05:04:37.748418',
+    updated_at: '2026-08-25T05:04:37.748419'
   },
   {
     id: '',
@@ -18014,8 +8383,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865863',
-    updated_at: '2026-08-31T17:44:00.865863'
+    created_at: '2026-08-25T05:04:37.748421',
+    updated_at: '2026-08-25T05:04:37.748422'
   },
   {
     id: '',
@@ -18030,8 +8399,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865866',
-    updated_at: '2026-08-31T17:44:00.865866'
+    created_at: '2026-08-25T05:04:37.748424',
+    updated_at: '2026-08-25T05:04:37.748425'
   },
   {
     id: '',
@@ -18046,8 +8415,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865868',
-    updated_at: '2026-08-31T17:44:00.865869'
+    created_at: '2026-08-25T05:04:37.748427',
+    updated_at: '2026-08-25T05:04:37.748428'
   },
   {
     id: '',
@@ -18062,8 +8431,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865873',
-    updated_at: '2026-08-31T17:44:00.865874'
+    created_at: '2026-08-25T05:04:37.748430',
+    updated_at: '2026-08-25T05:04:37.748431'
   },
   {
     id: '',
@@ -18078,8 +8447,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865876',
-    updated_at: '2026-08-31T17:44:00.865877'
+    created_at: '2026-08-25T05:04:37.748433',
+    updated_at: '2026-08-25T05:04:37.748434'
   },
   {
     id: '',
@@ -18094,8 +8463,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865879',
-    updated_at: '2026-08-31T17:44:00.865880'
+    created_at: '2026-08-25T05:04:37.748436',
+    updated_at: '2026-08-25T05:04:37.748437'
   },
   {
     id: '',
@@ -18110,8 +8479,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865882',
-    updated_at: '2026-08-31T17:44:00.865883'
+    created_at: '2026-08-25T05:04:37.748439',
+    updated_at: '2026-08-25T05:04:37.748440'
   },
   {
     id: '',
@@ -18126,8 +8495,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865885',
-    updated_at: '2026-08-31T17:44:00.865886'
+    created_at: '2026-08-25T05:04:37.748442',
+    updated_at: '2026-08-25T05:04:37.748443'
   },
   {
     id: '',
@@ -18142,8 +8511,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865890',
-    updated_at: '2026-08-31T17:44:00.865891'
+    created_at: '2026-08-25T05:04:37.748445',
+    updated_at: '2026-08-25T05:04:37.748446'
   },
   {
     id: '',
@@ -18158,8 +8527,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865893',
-    updated_at: '2026-08-31T17:44:00.865894'
+    created_at: '2026-08-25T05:04:37.748448',
+    updated_at: '2026-08-25T05:04:37.748449'
   },
   {
     id: '',
@@ -18174,8 +8543,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865896',
-    updated_at: '2026-08-31T17:44:00.865897'
+    created_at: '2026-08-25T05:04:37.748451',
+    updated_at: '2026-08-25T05:04:37.748451'
   },
   {
     id: '',
@@ -18190,8 +8559,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865899',
-    updated_at: '2026-08-31T17:44:00.865899'
+    created_at: '2026-08-25T05:04:37.748454',
+    updated_at: '2026-08-25T05:04:37.748455'
   },
   {
     id: '',
@@ -18206,8 +8575,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865902',
-    updated_at: '2026-08-31T17:44:00.865902'
+    created_at: '2026-08-25T05:04:37.748457',
+    updated_at: '2026-08-25T05:04:37.748457'
   },
   {
     id: '',
@@ -18222,8 +8591,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865904',
-    updated_at: '2026-08-31T17:44:00.865905'
+    created_at: '2026-08-25T05:04:37.748460',
+    updated_at: '2026-08-25T05:04:37.748461'
   },
   {
     id: '',
@@ -18238,8 +8607,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865909',
-    updated_at: '2026-08-31T17:44:00.865910'
+    created_at: '2026-08-25T05:04:37.748463',
+    updated_at: '2026-08-25T05:04:37.748464'
   },
   {
     id: '',
@@ -18254,8 +8623,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865912',
-    updated_at: '2026-08-31T17:44:00.865913'
+    created_at: '2026-08-25T05:04:37.748466',
+    updated_at: '2026-08-25T05:04:37.748467'
   },
   {
     id: '',
@@ -18270,8 +8639,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865915',
-    updated_at: '2026-08-31T17:44:00.865916'
+    created_at: '2026-08-25T05:04:37.748469',
+    updated_at: '2026-08-25T05:04:37.748470'
   },
   {
     id: '',
@@ -18286,8 +8655,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865918',
-    updated_at: '2026-08-31T17:44:00.865919'
+    created_at: '2026-08-25T05:04:37.748472',
+    updated_at: '2026-08-25T05:04:37.748472'
   },
   {
     id: '',
@@ -18302,8 +8671,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865921',
-    updated_at: '2026-08-31T17:44:00.865921'
+    created_at: '2026-08-25T05:04:37.748475',
+    updated_at: '2026-08-25T05:04:37.748475'
   },
   {
     id: '',
@@ -18318,8 +8687,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865926',
-    updated_at: '2026-08-31T17:44:00.865926'
+    created_at: '2026-08-25T05:04:37.748477',
+    updated_at: '2026-08-25T05:04:37.748478'
   },
   {
     id: '',
@@ -18334,8 +8703,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865928',
-    updated_at: '2026-08-31T17:44:00.865929'
+    created_at: '2026-08-25T05:04:37.748480',
+    updated_at: '2026-08-25T05:04:37.748481'
   },
   {
     id: '',
@@ -18350,8 +8719,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865931',
-    updated_at: '2026-08-31T17:44:00.865932'
+    created_at: '2026-08-25T05:04:37.748483',
+    updated_at: '2026-08-25T05:04:37.748484'
   },
   {
     id: '',
@@ -18366,8 +8735,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865934',
-    updated_at: '2026-08-31T17:44:00.865935'
+    created_at: '2026-08-25T05:04:37.748486',
+    updated_at: '2026-08-25T05:04:37.748487'
   },
   {
     id: '',
@@ -18382,8 +8751,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865937',
-    updated_at: '2026-08-31T17:44:00.865938'
+    created_at: '2026-08-25T05:04:37.748489',
+    updated_at: '2026-08-25T05:04:37.748490'
   },
   {
     id: '',
@@ -18398,8 +8767,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865940',
-    updated_at: '2026-08-31T17:44:00.865942'
+    created_at: '2026-08-25T05:04:37.748492',
+    updated_at: '2026-08-25T05:04:37.748493'
   },
   {
     id: '',
@@ -18414,8 +8783,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865945',
-    updated_at: '2026-08-31T17:44:00.865945'
+    created_at: '2026-08-25T05:04:37.748495',
+    updated_at: '2026-08-25T05:04:37.748496'
   },
   {
     id: '',
@@ -18430,8 +8799,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865948',
-    updated_at: '2026-08-31T17:44:00.865949'
+    created_at: '2026-08-25T05:04:37.748498',
+    updated_at: '2026-08-25T05:04:37.748499'
   },
   {
     id: '',
@@ -18446,8 +8815,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865951',
-    updated_at: '2026-08-31T17:44:00.865951'
+    created_at: '2026-08-25T05:04:37.748501',
+    updated_at: '2026-08-25T05:04:37.748502'
   },
   {
     id: '',
@@ -18462,8 +8831,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865953',
-    updated_at: '2026-08-31T17:44:00.865954'
+    created_at: '2026-08-25T05:04:37.748504',
+    updated_at: '2026-08-25T05:04:37.748505'
   },
   {
     id: '',
@@ -18478,12 +8847,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865956',
-    updated_at: '2026-08-31T17:44:00.865957'
+    created_at: '2026-08-25T05:04:37.748507',
+    updated_at: '2026-08-25T05:04:37.748508'
   },
   {
     id: '',
-    name: 'Zari's Loving Touch',
+    name: `Zari's Loving Touch`,
     company: '',
     email: '',
     phone: '',
@@ -18494,8 +8863,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865961',
-    updated_at: '2026-08-31T17:44:00.865961'
+    created_at: '2026-08-25T05:04:37.748511',
+    updated_at: '2026-08-25T05:04:37.748511'
   },
   {
     id: '',
@@ -18510,8 +8879,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865963',
-    updated_at: '2026-08-31T17:44:00.865964'
+    created_at: '2026-08-25T05:04:37.748513',
+    updated_at: '2026-08-25T05:04:37.748514'
   },
   {
     id: '',
@@ -18526,8 +8895,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865966',
-    updated_at: '2026-08-31T17:44:00.865967'
+    created_at: '2026-08-25T05:04:37.748516',
+    updated_at: '2026-08-25T05:04:37.748517'
   },
   {
     id: '',
@@ -18542,8 +8911,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865970',
-    updated_at: '2026-08-31T17:44:00.865970'
+    created_at: '2026-08-25T05:04:37.748519',
+    updated_at: '2026-08-25T05:04:37.748520'
   },
   {
     id: '',
@@ -18558,8 +8927,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865974',
-    updated_at: '2026-08-31T17:44:00.865975'
+    created_at: '2026-08-25T05:04:37.748522',
+    updated_at: '2026-08-25T05:04:37.748523'
   },
   {
     id: '',
@@ -18574,8 +8943,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865977',
-    updated_at: '2026-08-31T17:44:00.865978'
+    created_at: '2026-08-25T05:04:37.748525',
+    updated_at: '2026-08-25T05:04:37.748526'
   },
   {
     id: '',
@@ -18590,8 +8959,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865980',
-    updated_at: '2026-08-31T17:44:00.865981'
+    created_at: '2026-08-25T05:04:37.748528',
+    updated_at: '2026-08-25T05:04:37.748529'
   },
   {
     id: '',
@@ -18606,8 +8975,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865983',
-    updated_at: '2026-08-31T17:44:00.865984'
+    created_at: '2026-08-25T05:04:37.748531',
+    updated_at: '2026-08-25T05:04:37.748532'
   },
   {
     id: '',
@@ -18622,8 +8991,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865986',
-    updated_at: '2026-08-31T17:44:00.865986'
+    created_at: '2026-08-25T05:04:37.748534',
+    updated_at: '2026-08-25T05:04:37.748535'
   },
   {
     id: '',
@@ -18638,8 +9007,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865988',
-    updated_at: '2026-08-31T17:44:00.865989'
+    created_at: '2026-08-25T05:04:37.748537',
+    updated_at: '2026-08-25T05:04:37.748538'
   },
   {
     id: '',
@@ -18654,8 +9023,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865993',
-    updated_at: '2026-08-31T17:44:00.865994'
+    created_at: '2026-08-25T05:04:37.748540',
+    updated_at: '2026-08-25T05:04:37.748541'
   },
   {
     id: '',
@@ -18670,8 +9039,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865996',
-    updated_at: '2026-08-31T17:44:00.865997'
+    created_at: '2026-08-25T05:04:37.748543',
+    updated_at: '2026-08-25T05:04:37.748544'
   },
   {
     id: '',
@@ -18686,8 +9055,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.865999',
-    updated_at: '2026-08-31T17:44:00.866000'
+    created_at: '2026-08-25T05:04:37.748546',
+    updated_at: '2026-08-25T05:04:37.748547'
   },
   {
     id: '',
@@ -18702,8 +9071,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866002',
-    updated_at: '2026-08-31T17:44:00.866003'
+    created_at: '2026-08-25T05:04:37.748549',
+    updated_at: '2026-08-25T05:04:37.748550'
   },
   {
     id: '',
@@ -18718,8 +9087,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866005',
-    updated_at: '2026-08-31T17:44:00.866006'
+    created_at: '2026-08-25T05:04:37.748552',
+    updated_at: '2026-08-25T05:04:37.748553'
   },
   {
     id: '',
@@ -18734,8 +9103,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866009',
-    updated_at: '2026-08-31T17:44:00.866010'
+    created_at: '2026-08-25T05:04:37.748555',
+    updated_at: '2026-08-25T05:04:37.748556'
   },
   {
     id: '',
@@ -18750,8 +9119,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866012',
-    updated_at: '2026-08-31T17:44:00.866013'
+    created_at: '2026-08-25T05:04:37.748558',
+    updated_at: '2026-08-25T05:04:37.748559'
   },
   {
     id: '',
@@ -18766,8 +9135,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866016',
-    updated_at: '2026-08-31T17:44:00.866016'
+    created_at: '2026-08-25T05:04:37.748562',
+    updated_at: '2026-08-25T05:04:37.748562'
   },
   {
     id: '',
@@ -18782,8 +9151,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866018',
-    updated_at: '2026-08-31T17:44:00.866019'
+    created_at: '2026-08-25T05:04:37.748565',
+    updated_at: '2026-08-25T05:04:37.748565'
   },
   {
     id: '',
@@ -18798,8 +9167,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866021',
-    updated_at: '2026-08-31T17:44:00.866022'
+    created_at: '2026-08-25T05:04:37.748567',
+    updated_at: '2026-08-25T05:04:37.748568'
   },
   {
     id: '',
@@ -18814,8 +9183,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866024',
-    updated_at: '2026-08-31T17:44:00.866025'
+    created_at: '2026-08-25T05:04:37.748570',
+    updated_at: '2026-08-25T05:04:37.748571'
   },
   {
     id: '',
@@ -18830,8 +9199,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866029',
-    updated_at: '2026-08-31T17:44:00.866029'
+    created_at: '2026-08-25T05:04:37.748573',
+    updated_at: '2026-08-25T05:04:37.748574'
   },
   {
     id: '',
@@ -18846,8 +9215,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866032',
-    updated_at: '2026-08-31T17:44:00.866033'
+    created_at: '2026-08-25T05:04:37.748576',
+    updated_at: '2026-08-25T05:04:37.748577'
   },
   {
     id: '',
@@ -18862,8 +9231,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866035',
-    updated_at: '2026-08-31T17:44:00.866036'
+    created_at: '2026-08-25T05:04:37.748579',
+    updated_at: '2026-08-25T05:04:37.748580'
   },
   {
     id: '',
@@ -18878,8 +9247,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866038',
-    updated_at: '2026-08-31T17:44:00.866039'
+    created_at: '2026-08-25T05:04:37.748582',
+    updated_at: '2026-08-25T05:04:37.748582'
   },
   {
     id: '',
@@ -18894,8 +9263,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866041',
-    updated_at: '2026-08-31T17:44:00.866043'
+    created_at: '2026-08-25T05:04:37.748585',
+    updated_at: '2026-08-25T05:04:37.748585'
   },
   {
     id: '',
@@ -18910,8 +9279,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866046',
-    updated_at: '2026-08-31T17:44:00.866046'
+    created_at: '2026-08-25T05:04:37.748588',
+    updated_at: '2026-08-25T05:04:37.748588'
   },
   {
     id: '',
@@ -18926,8 +9295,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866048',
-    updated_at: '2026-08-31T17:44:00.866049'
+    created_at: '2026-08-25T05:04:37.748591',
+    updated_at: '2026-08-25T05:04:37.748591'
   },
   {
     id: '',
@@ -18942,8 +9311,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866051',
-    updated_at: '2026-08-31T17:44:00.866052'
+    created_at: '2026-08-25T05:04:37.748594',
+    updated_at: '2026-08-25T05:04:37.748595'
   },
   {
     id: '',
@@ -18958,8 +9327,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866054',
-    updated_at: '2026-08-31T17:44:00.866055'
+    created_at: '2026-08-25T05:04:37.748598',
+    updated_at: '2026-08-25T05:04:37.748599'
   },
   {
     id: '',
@@ -18974,8 +9343,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866057',
-    updated_at: '2026-08-31T17:44:00.866058'
+    created_at: '2026-08-25T05:04:37.748601',
+    updated_at: '2026-08-25T05:04:37.748602'
   },
   {
     id: '',
@@ -18990,12 +9359,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866062',
-    updated_at: '2026-08-31T17:44:00.866063'
+    created_at: '2026-08-25T05:04:37.748604',
+    updated_at: '2026-08-25T05:04:37.748605'
   },
   {
     id: '',
-    name: 'Morgan's Auto Repair',
+    name: `Morgan's Auto Repair`,
     company: '',
     email: '',
     phone: '(989) 892-0567',
@@ -19006,8 +9375,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866065',
-    updated_at: '2026-08-31T17:44:00.866066'
+    created_at: '2026-08-25T05:04:37.748607',
+    updated_at: '2026-08-25T05:04:37.748608'
   },
   {
     id: '',
@@ -19022,12 +9391,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866067',
-    updated_at: '2026-08-31T17:44:00.866068'
+    created_at: '2026-08-25T05:04:37.748610',
+    updated_at: '2026-08-25T05:04:37.748610'
   },
   {
     id: '',
-    name: 'Ty's Auto Service LLC',
+    name: `Ty's Auto Service LLC`,
     company: '',
     email: '',
     phone: '(989) 397-6550',
@@ -19038,8 +9407,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866070',
-    updated_at: '2026-08-31T17:44:00.866071'
+    created_at: '2026-08-25T05:04:37.748612',
+    updated_at: '2026-08-25T05:04:37.748613'
   },
   {
     id: '',
@@ -19054,8 +9423,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866073',
-    updated_at: '2026-08-31T17:44:00.866074'
+    created_at: '2026-08-25T05:04:37.748615',
+    updated_at: '2026-08-25T05:04:37.748616'
   },
   {
     id: '',
@@ -19070,8 +9439,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866076',
-    updated_at: '2026-08-31T17:44:00.866077'
+    created_at: '2026-08-25T05:04:37.748619',
+    updated_at: '2026-08-25T05:04:37.748619'
   },
   {
     id: '',
@@ -19086,8 +9455,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866081',
-    updated_at: '2026-08-31T17:44:00.866081'
+    created_at: '2026-08-25T05:04:37.748621',
+    updated_at: '2026-08-25T05:04:37.748622'
   },
   {
     id: '',
@@ -19102,8 +9471,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866083',
-    updated_at: '2026-08-31T17:44:00.866084'
+    created_at: '2026-08-25T05:04:37.748624',
+    updated_at: '2026-08-25T05:04:37.748625'
   },
   {
     id: '',
@@ -19118,8 +9487,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866086',
-    updated_at: '2026-08-31T17:44:00.866087'
+    created_at: '2026-08-25T05:04:37.748627',
+    updated_at: '2026-08-25T05:04:37.748628'
   },
   {
     id: '',
@@ -19134,8 +9503,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866089',
-    updated_at: '2026-08-31T17:44:00.866090'
+    created_at: '2026-08-25T05:04:37.748630',
+    updated_at: '2026-08-25T05:04:37.748631'
   },
   {
     id: '',
@@ -19150,8 +9519,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866092',
-    updated_at: '2026-08-31T17:44:00.866093'
+    created_at: '2026-08-25T05:04:37.748633',
+    updated_at: '2026-08-25T05:04:37.748634'
   },
   {
     id: '',
@@ -19166,8 +9535,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866097',
-    updated_at: '2026-08-31T17:44:00.866098'
+    created_at: '2026-08-25T05:04:37.748636',
+    updated_at: '2026-08-25T05:04:37.748637'
   },
   {
     id: '',
@@ -19182,8 +9551,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866100',
-    updated_at: '2026-08-31T17:44:00.866101'
+    created_at: '2026-08-25T05:04:37.748639',
+    updated_at: '2026-08-25T05:04:37.748640'
   },
   {
     id: '',
@@ -19198,8 +9567,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866103',
-    updated_at: '2026-08-31T17:44:00.866104'
+    created_at: '2026-08-25T05:04:37.748642',
+    updated_at: '2026-08-25T05:04:37.748643'
   },
   {
     id: '',
@@ -19214,8 +9583,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866106',
-    updated_at: '2026-08-31T17:44:00.866107'
+    created_at: '2026-08-25T05:04:37.748645',
+    updated_at: '2026-08-25T05:04:37.748646'
   },
   {
     id: '',
@@ -19230,8 +9599,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866109',
-    updated_at: '2026-08-31T17:44:00.866110'
+    created_at: '2026-08-25T05:04:37.748648',
+    updated_at: '2026-08-25T05:04:37.748648'
   },
   {
     id: '',
@@ -19246,8 +9615,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866112',
-    updated_at: '2026-08-31T17:44:00.866113'
+    created_at: '2026-08-25T05:04:37.748651',
+    updated_at: '2026-08-25T05:04:37.748651'
   },
   {
     id: '',
@@ -19262,12 +9631,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866117',
-    updated_at: '2026-08-31T17:44:00.866117'
+    created_at: '2026-08-25T05:04:37.748653',
+    updated_at: '2026-08-25T05:04:37.748654'
   },
   {
     id: '',
-    name: 'Suzie Q's Breakfast Nook',
+    name: `Suzie Q's Breakfast Nook`,
     company: '',
     email: '',
     phone: '(989) 402-1792',
@@ -19278,8 +9647,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866120',
-    updated_at: '2026-08-31T17:44:00.866120'
+    created_at: '2026-08-25T05:04:37.748656',
+    updated_at: '2026-08-25T05:04:37.748657'
   },
   {
     id: '',
@@ -19294,8 +9663,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866123',
-    updated_at: '2026-08-31T17:44:00.866123'
+    created_at: '2026-08-25T05:04:37.748659',
+    updated_at: '2026-08-25T05:04:37.748660'
   },
   {
     id: '',
@@ -19310,12 +9679,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866125',
-    updated_at: '2026-08-31T17:44:00.866126'
+    created_at: '2026-08-25T05:04:37.748662',
+    updated_at: '2026-08-25T05:04:37.748663'
   },
   {
     id: '',
-    name: 'Paul's Flowers',
+    name: `Paul's Flowers`,
     company: '',
     email: '',
     phone: '(989) 894-1199',
@@ -19326,8 +9695,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866128',
-    updated_at: '2026-08-31T17:44:00.866129'
+    created_at: '2026-08-25T05:04:37.748665',
+    updated_at: '2026-08-25T05:04:37.748666'
   },
   {
     id: '',
@@ -19342,8 +9711,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866133',
-    updated_at: '2026-08-31T17:44:00.866133'
+    created_at: '2026-08-25T05:04:37.748668',
+    updated_at: '2026-08-25T05:04:37.748668'
   },
   {
     id: '',
@@ -19358,8 +9727,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866136',
-    updated_at: '2026-08-31T17:44:00.866136'
+    created_at: '2026-08-25T05:04:37.748671',
+    updated_at: '2026-08-25T05:04:37.748671'
   },
   {
     id: '',
@@ -19374,8 +9743,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866138',
-    updated_at: '2026-08-31T17:44:00.866139'
+    created_at: '2026-08-25T05:04:37.748673',
+    updated_at: '2026-08-25T05:04:37.748674'
   },
   {
     id: '',
@@ -19390,8 +9759,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866141',
-    updated_at: '2026-08-31T17:44:00.866142'
+    created_at: '2026-08-25T05:04:37.748676',
+    updated_at: '2026-08-25T05:04:37.748677'
   },
   {
     id: '',
@@ -19406,8 +9775,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866144',
-    updated_at: '2026-08-31T17:44:00.866145'
+    created_at: '2026-08-25T05:04:37.748679',
+    updated_at: '2026-08-25T05:04:37.748680'
   },
   {
     id: '',
@@ -19422,12 +9791,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866147',
-    updated_at: '2026-08-31T17:44:00.866149'
+    created_at: '2026-08-25T05:04:37.748682',
+    updated_at: '2026-08-25T05:04:37.748683'
   },
   {
     id: '',
-    name: 'Hank's Flowerland',
+    name: `Hank's Flowerland`,
     company: '',
     email: '',
     phone: '(989) 754-7481',
@@ -19438,8 +9807,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866151',
-    updated_at: '2026-08-31T17:44:00.866152'
+    created_at: '2026-08-25T05:04:37.748685',
+    updated_at: '2026-08-25T05:04:37.748686'
   },
   {
     id: '',
@@ -19454,8 +9823,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866154',
-    updated_at: '2026-08-31T17:44:00.866155'
+    created_at: '2026-08-25T05:04:37.748688',
+    updated_at: '2026-08-25T05:04:37.748689'
   },
   {
     id: '',
@@ -19470,12 +9839,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866166',
-    updated_at: '2026-08-31T17:44:00.866167'
+    created_at: '2026-08-25T05:04:37.748691',
+    updated_at: '2026-08-25T05:04:37.748692'
   },
   {
     id: '',
-    name: 'Erika's Flowers',
+    name: `Erika's Flowers`,
     company: '',
     email: '',
     phone: '(989) 755-9330',
@@ -19486,12 +9855,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866169',
-    updated_at: '2026-08-31T17:44:00.866170'
+    created_at: '2026-08-25T05:04:37.748694',
+    updated_at: '2026-08-25T05:04:37.748695'
   },
   {
     id: '',
-    name: 'Auburn's Flowers From the Heart',
+    name: `Auburn's Flowers From the Heart`,
     company: '',
     email: '',
     phone: '(989) 662-7818',
@@ -19502,8 +9871,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866172',
-    updated_at: '2026-08-31T17:44:00.866173'
+    created_at: '2026-08-25T05:04:37.748697',
+    updated_at: '2026-08-25T05:04:37.748698'
   },
   {
     id: '',
@@ -19518,8 +9887,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866177',
-    updated_at: '2026-08-31T17:44:00.866178'
+    created_at: '2026-08-25T05:04:37.748700',
+    updated_at: '2026-08-25T05:04:37.748701'
   },
   {
     id: '',
@@ -19534,8 +9903,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866180',
-    updated_at: '2026-08-31T17:44:00.866181'
+    created_at: '2026-08-25T05:04:37.748703',
+    updated_at: '2026-08-25T05:04:37.748703'
   },
   {
     id: '',
@@ -19550,8 +9919,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866183',
-    updated_at: '2026-08-31T17:44:00.866184'
+    created_at: '2026-08-25T05:04:37.748705',
+    updated_at: '2026-08-25T05:04:37.748706'
   },
   {
     id: '',
@@ -19566,8 +9935,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866186',
-    updated_at: '2026-08-31T17:44:00.866186'
+    created_at: '2026-08-25T05:04:37.748708',
+    updated_at: '2026-08-25T05:04:37.748709'
   },
   {
     id: '',
@@ -19582,8 +9951,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866189',
-    updated_at: '2026-08-31T17:44:00.866190'
+    created_at: '2026-08-25T05:04:37.748711',
+    updated_at: '2026-08-25T05:04:37.748712'
   },
   {
     id: '',
@@ -19598,8 +9967,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866192',
-    updated_at: '2026-08-31T17:44:00.866193'
+    created_at: '2026-08-25T05:04:37.748714',
+    updated_at: '2026-08-25T05:04:37.748715'
   },
   {
     id: '',
@@ -19614,8 +9983,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866200',
-    updated_at: '2026-08-31T17:44:00.866200'
+    created_at: '2026-08-25T05:04:37.748717',
+    updated_at: '2026-08-25T05:04:37.748718'
   },
   {
     id: '',
@@ -19630,8 +9999,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866203',
-    updated_at: '2026-08-31T17:44:00.866203'
+    created_at: '2026-08-25T05:04:37.748720',
+    updated_at: '2026-08-25T05:04:37.748721'
   },
   {
     id: '',
@@ -19646,8 +10015,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866205',
-    updated_at: '2026-08-31T17:44:00.866206'
+    created_at: '2026-08-25T05:04:37.748723',
+    updated_at: '2026-08-25T05:04:37.748724'
   },
   {
     id: '',
@@ -19662,8 +10031,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866208',
-    updated_at: '2026-08-31T17:44:00.866209'
+    created_at: '2026-08-25T05:04:37.748726',
+    updated_at: '2026-08-25T05:04:37.748727'
   },
   {
     id: '',
@@ -19678,8 +10047,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866211',
-    updated_at: '2026-08-31T17:44:00.866212'
+    created_at: '2026-08-25T05:04:37.748729',
+    updated_at: '2026-08-25T05:04:37.748730'
   },
   {
     id: '',
@@ -19694,8 +10063,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866216',
-    updated_at: '2026-08-31T17:44:00.866217'
+    created_at: '2026-08-25T05:04:37.748732',
+    updated_at: '2026-08-25T05:04:37.748733'
   },
   {
     id: '',
@@ -19710,8 +10079,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866219',
-    updated_at: '2026-08-31T17:44:00.866220'
+    created_at: '2026-08-25T05:04:37.748735',
+    updated_at: '2026-08-25T05:04:37.748736'
   },
   {
     id: '',
@@ -19726,8 +10095,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866222',
-    updated_at: '2026-08-31T17:44:00.866223'
+    created_at: '2026-08-25T05:04:37.748738',
+    updated_at: '2026-08-25T05:04:37.748739'
   },
   {
     id: '',
@@ -19742,8 +10111,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866225',
-    updated_at: '2026-08-31T17:44:00.866226'
+    created_at: '2026-08-25T05:04:37.748741',
+    updated_at: '2026-08-25T05:04:37.748741'
   },
   {
     id: '',
@@ -19758,8 +10127,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866228',
-    updated_at: '2026-08-31T17:44:00.866229'
+    created_at: '2026-08-25T05:04:37.748744',
+    updated_at: '2026-08-25T05:04:37.748744'
   },
   {
     id: '',
@@ -19774,12 +10143,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866232',
-    updated_at: '2026-08-31T17:44:00.866233'
+    created_at: '2026-08-25T05:04:37.748747',
+    updated_at: '2026-08-25T05:04:37.748747'
   },
   {
     id: '',
-    name: 'Quast Janke & Co CPA's',
+    name: `Quast Janke & Co CPA's`,
     company: '',
     email: '',
     phone: '(989) 892-4549',
@@ -19790,8 +10159,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866236',
-    updated_at: '2026-08-31T17:44:00.866237'
+    created_at: '2026-08-25T05:04:37.748750',
+    updated_at: '2026-08-25T05:04:37.748750'
   },
   {
     id: '',
@@ -19806,8 +10175,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866239',
-    updated_at: '2026-08-31T17:44:00.866240'
+    created_at: '2026-08-25T05:04:37.748752',
+    updated_at: '2026-08-25T05:04:37.748753'
   },
   {
     id: '',
@@ -19822,8 +10191,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866242',
-    updated_at: '2026-08-31T17:44:00.866242'
+    created_at: '2026-08-25T05:04:37.748755',
+    updated_at: '2026-08-25T05:04:37.748756'
   },
   {
     id: '',
@@ -19838,8 +10207,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866245',
-    updated_at: '2026-08-31T17:44:00.866245'
+    created_at: '2026-08-25T05:04:37.748758',
+    updated_at: '2026-08-25T05:04:37.748759'
   },
   {
     id: '',
@@ -19854,8 +10223,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866248',
-    updated_at: '2026-08-31T17:44:00.866248'
+    created_at: '2026-08-25T05:04:37.748761',
+    updated_at: '2026-08-25T05:04:37.748762'
   },
   {
     id: '',
@@ -19870,8 +10239,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866252',
-    updated_at: '2026-08-31T17:44:00.866253'
+    created_at: '2026-08-25T05:04:37.748764',
+    updated_at: '2026-08-25T05:04:37.748765'
   },
   {
     id: '',
@@ -19886,8 +10255,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866255',
-    updated_at: '2026-08-31T17:44:00.866256'
+    created_at: '2026-08-25T05:04:37.748767',
+    updated_at: '2026-08-25T05:04:37.748768'
   },
   {
     id: '',
@@ -19902,8 +10271,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866258',
-    updated_at: '2026-08-31T17:44:00.866259'
+    created_at: '2026-08-25T05:04:37.748770',
+    updated_at: '2026-08-25T05:04:37.748771'
   },
   {
     id: '',
@@ -19918,8 +10287,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866261',
-    updated_at: '2026-08-31T17:44:00.866262'
+    created_at: '2026-08-25T05:04:37.748773',
+    updated_at: '2026-08-25T05:04:37.748773'
   },
   {
     id: '',
@@ -19934,8 +10303,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866264',
-    updated_at: '2026-08-31T17:44:00.866265'
+    created_at: '2026-08-25T05:04:37.748775',
+    updated_at: '2026-08-25T05:04:37.748776'
   },
   {
     id: '',
@@ -19950,8 +10319,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866267',
-    updated_at: '2026-08-31T17:44:00.866270'
+    created_at: '2026-08-25T05:04:37.748778',
+    updated_at: '2026-08-25T05:04:37.748779'
   },
   {
     id: '',
@@ -19966,8 +10335,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866272',
-    updated_at: '2026-08-31T17:44:00.866273'
+    created_at: '2026-08-25T05:04:37.748781',
+    updated_at: '2026-08-25T05:04:37.748782'
   },
   {
     id: '',
@@ -19982,8 +10351,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866275',
-    updated_at: '2026-08-31T17:44:00.866276'
+    created_at: '2026-08-25T05:04:37.748784',
+    updated_at: '2026-08-25T05:04:37.748785'
   },
   {
     id: '',
@@ -19998,8 +10367,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866278',
-    updated_at: '2026-08-31T17:44:00.866279'
+    created_at: '2026-08-25T05:04:37.748787',
+    updated_at: '2026-08-25T05:04:37.748788'
   },
   {
     id: '',
@@ -20014,8 +10383,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866281',
-    updated_at: '2026-08-31T17:44:00.866282'
+    created_at: '2026-08-25T05:04:37.748790',
+    updated_at: '2026-08-25T05:04:37.748791'
   },
   {
     id: '',
@@ -20030,8 +10399,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866284',
-    updated_at: '2026-08-31T17:44:00.866285'
+    created_at: '2026-08-25T05:04:37.748793',
+    updated_at: '2026-08-25T05:04:37.748794'
   },
   {
     id: '',
@@ -20046,8 +10415,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866288',
-    updated_at: '2026-08-31T17:44:00.866289'
+    created_at: '2026-08-25T05:04:37.748796',
+    updated_at: '2026-08-25T05:04:37.748797'
   },
   {
     id: '',
@@ -20062,8 +10431,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866292',
-    updated_at: '2026-08-31T17:44:00.866292'
+    created_at: '2026-08-25T05:04:37.748799',
+    updated_at: '2026-08-25T05:04:37.748800'
   },
   {
     id: '',
@@ -20078,8 +10447,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866295',
-    updated_at: '2026-08-31T17:44:00.866295'
+    created_at: '2026-08-25T05:04:37.748802',
+    updated_at: '2026-08-25T05:04:37.748803'
   },
   {
     id: '',
@@ -20094,8 +10463,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866297',
-    updated_at: '2026-08-31T17:44:00.866298'
+    created_at: '2026-08-25T05:04:37.748805',
+    updated_at: '2026-08-25T05:04:37.748806'
   },
   {
     id: '',
@@ -20110,8 +10479,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866300',
-    updated_at: '2026-08-31T17:44:00.866301'
+    created_at: '2026-08-25T05:04:37.748808',
+    updated_at: '2026-08-25T05:04:37.748809'
   },
   {
     id: '',
@@ -20126,8 +10495,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866305',
-    updated_at: '2026-08-31T17:44:00.866306'
+    created_at: '2026-08-25T05:04:37.748811',
+    updated_at: '2026-08-25T05:04:37.748812'
   },
   {
     id: '',
@@ -20142,8 +10511,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866308',
-    updated_at: '2026-08-31T17:44:00.866309'
+    created_at: '2026-08-25T05:04:37.748814',
+    updated_at: '2026-08-25T05:04:37.748815'
   },
   {
     id: '',
@@ -20158,8 +10527,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866311',
-    updated_at: '2026-08-31T17:44:00.866311'
+    created_at: '2026-08-25T05:04:37.748817',
+    updated_at: '2026-08-25T05:04:37.748818'
   },
   {
     id: '',
@@ -20174,8 +10543,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866313',
-    updated_at: '2026-08-31T17:44:00.866314'
+    created_at: '2026-08-25T05:04:37.748820',
+    updated_at: '2026-08-25T05:04:37.748820'
   },
   {
     id: '',
@@ -20190,8 +10559,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866316',
-    updated_at: '2026-08-31T17:44:00.866317'
+    created_at: '2026-08-25T05:04:37.748823',
+    updated_at: '2026-08-25T05:04:37.748823'
   },
   {
     id: '',
@@ -20206,8 +10575,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866319',
-    updated_at: '2026-08-31T17:44:00.866320'
+    created_at: '2026-08-25T05:04:37.748825',
+    updated_at: '2026-08-25T05:04:37.748826'
   },
   {
     id: '',
@@ -20222,8 +10591,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866324',
-    updated_at: '2026-08-31T17:44:00.866324'
+    created_at: '2026-08-25T05:04:37.748828',
+    updated_at: '2026-08-25T05:04:37.748829'
   },
   {
     id: '',
@@ -20238,8 +10607,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866327',
-    updated_at: '2026-08-31T17:44:00.866327'
+    created_at: '2026-08-25T05:04:37.748831',
+    updated_at: '2026-08-25T05:04:37.748832'
   },
   {
     id: '',
@@ -20254,8 +10623,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866330',
-    updated_at: '2026-08-31T17:44:00.866331'
+    created_at: '2026-08-25T05:04:37.748839',
+    updated_at: '2026-08-25T05:04:37.748839'
   },
   {
     id: '',
@@ -20270,8 +10639,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866333',
-    updated_at: '2026-08-31T17:44:00.866333'
+    created_at: '2026-08-25T05:04:37.748842',
+    updated_at: '2026-08-25T05:04:37.748842'
   },
   {
     id: '',
@@ -20286,8 +10655,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866335',
-    updated_at: '2026-08-31T17:44:00.866336'
+    created_at: '2026-08-25T05:04:37.748845',
+    updated_at: '2026-08-25T05:04:37.748845'
   },
   {
     id: '',
@@ -20302,8 +10671,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866340',
-    updated_at: '2026-08-31T17:44:00.866341'
+    created_at: '2026-08-25T05:04:37.748848',
+    updated_at: '2026-08-25T05:04:37.748848'
   },
   {
     id: '',
@@ -20318,8 +10687,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866343',
-    updated_at: '2026-08-31T17:44:00.866344'
+    created_at: '2026-08-25T05:04:37.748851',
+    updated_at: '2026-08-25T05:04:37.748851'
   },
   {
     id: '',
@@ -20334,8 +10703,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866346',
-    updated_at: '2026-08-31T17:44:00.866347'
+    created_at: '2026-08-25T05:04:37.748854',
+    updated_at: '2026-08-25T05:04:37.748854'
   },
   {
     id: '',
@@ -20350,8 +10719,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866349',
-    updated_at: '2026-08-31T17:44:00.866349'
+    created_at: '2026-08-25T05:04:37.748856',
+    updated_at: '2026-08-25T05:04:37.748857'
   },
   {
     id: '',
@@ -20366,8 +10735,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866352',
-    updated_at: '2026-08-31T17:44:00.866352'
+    created_at: '2026-08-25T05:04:37.748859',
+    updated_at: '2026-08-25T05:04:37.748860'
   },
   {
     id: '',
@@ -20382,8 +10751,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866354',
-    updated_at: '2026-08-31T17:44:00.866355'
+    created_at: '2026-08-25T05:04:37.748862',
+    updated_at: '2026-08-25T05:04:37.748863'
   },
   {
     id: '',
@@ -20398,8 +10767,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866359',
-    updated_at: '2026-08-31T17:44:00.866360'
+    created_at: '2026-08-25T05:04:37.748865',
+    updated_at: '2026-08-25T05:04:37.748866'
   },
   {
     id: '',
@@ -20414,12 +10783,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866362',
-    updated_at: '2026-08-31T17:44:00.866363'
+    created_at: '2026-08-25T05:04:37.748868',
+    updated_at: '2026-08-25T05:04:37.748869'
   },
   {
     id: '',
-    name: 'Kj's Home Improvement Specialist',
+    name: `Kj's Home Improvement Specialist`,
     company: '',
     email: '',
     phone: '(989) 657-6981',
@@ -20430,8 +10799,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866365',
-    updated_at: '2026-08-31T17:44:00.866366'
+    created_at: '2026-08-25T05:04:37.748871',
+    updated_at: '2026-08-25T05:04:37.748871'
   },
   {
     id: '',
@@ -20446,8 +10815,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866368',
-    updated_at: '2026-08-31T17:44:00.866369'
+    created_at: '2026-08-25T05:04:37.748874',
+    updated_at: '2026-08-25T05:04:37.748875'
   },
   {
     id: '',
@@ -20462,8 +10831,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866371',
-    updated_at: '2026-08-31T17:44:00.866371'
+    created_at: '2026-08-25T05:04:37.748877',
+    updated_at: '2026-08-25T05:04:37.748878'
   },
   {
     id: '',
@@ -20478,8 +10847,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866375',
-    updated_at: '2026-08-31T17:44:00.866376'
+    created_at: '2026-08-25T05:04:37.748880',
+    updated_at: '2026-08-25T05:04:37.748881'
   },
   {
     id: '',
@@ -20494,8 +10863,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866378',
-    updated_at: '2026-08-31T17:44:00.866379'
+    created_at: '2026-08-25T05:04:37.748883',
+    updated_at: '2026-08-25T05:04:37.748884'
   },
   {
     id: '',
@@ -20510,8 +10879,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866381',
-    updated_at: '2026-08-31T17:44:00.866382'
+    created_at: '2026-08-25T05:04:37.748886',
+    updated_at: '2026-08-25T05:04:37.748887'
   },
   {
     id: '',
@@ -20526,8 +10895,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866384',
-    updated_at: '2026-08-31T17:44:00.866385'
+    created_at: '2026-08-25T05:04:37.748889',
+    updated_at: '2026-08-25T05:04:37.748890'
   },
   {
     id: '',
@@ -20542,8 +10911,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866387',
-    updated_at: '2026-08-31T17:44:00.866387'
+    created_at: '2026-08-25T05:04:37.748892',
+    updated_at: '2026-08-25T05:04:37.748893'
   },
   {
     id: '',
@@ -20558,8 +10927,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866389',
-    updated_at: '2026-08-31T17:44:00.866392'
+    created_at: '2026-08-25T05:04:37.748896',
+    updated_at: '2026-08-25T05:04:37.748896'
   },
   {
     id: '',
@@ -20574,12 +10943,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866394',
-    updated_at: '2026-08-31T17:44:00.866395'
+    created_at: '2026-08-25T05:04:37.748899',
+    updated_at: '2026-08-25T05:04:37.748900'
   },
   {
     id: '',
-    name: 'Auburn Chapel-Cunningham-Taylor F.H.'s Inc.',
+    name: `Auburn Chapel-Cunningham-Taylor F.H.'s Inc.`,
     company: '',
     email: '',
     phone: '(989) 662-4711',
@@ -20590,8 +10959,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866397',
-    updated_at: '2026-08-31T17:44:00.866398'
+    created_at: '2026-08-25T05:04:37.748902',
+    updated_at: '2026-08-25T05:04:37.748903'
   },
   {
     id: '',
@@ -20606,8 +10975,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866400',
-    updated_at: '2026-08-31T17:44:00.866401'
+    created_at: '2026-08-25T05:04:37.748905',
+    updated_at: '2026-08-25T05:04:37.748906'
   },
   {
     id: '',
@@ -20622,8 +10991,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866403',
-    updated_at: '2026-08-31T17:44:00.866404'
+    created_at: '2026-08-25T05:04:37.748908',
+    updated_at: '2026-08-25T05:04:37.748909'
   },
   {
     id: '',
@@ -20638,8 +11007,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866406',
-    updated_at: '2026-08-31T17:44:00.866407'
+    created_at: '2026-08-25T05:04:37.748911',
+    updated_at: '2026-08-25T05:04:37.748912'
   },
   {
     id: '',
@@ -20654,8 +11023,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866410',
-    updated_at: '2026-08-31T17:44:00.866411'
+    created_at: '2026-08-25T05:04:37.748914',
+    updated_at: '2026-08-25T05:04:37.748915'
   },
   {
     id: '',
@@ -20670,8 +11039,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866413',
-    updated_at: '2026-08-31T17:44:00.866414'
+    created_at: '2026-08-25T05:04:37.748917',
+    updated_at: '2026-08-25T05:04:37.748917'
   },
   {
     id: '',
@@ -20686,8 +11055,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866417',
-    updated_at: '2026-08-31T17:44:00.866417'
+    created_at: '2026-08-25T05:04:37.748919',
+    updated_at: '2026-08-25T05:04:37.748920'
   },
   {
     id: '',
@@ -20702,8 +11071,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866419',
-    updated_at: '2026-08-31T17:44:00.866420'
+    created_at: '2026-08-25T05:04:37.748922',
+    updated_at: '2026-08-25T05:04:37.748923'
   },
   {
     id: '',
@@ -20718,8 +11087,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866422',
-    updated_at: '2026-08-31T17:44:00.866423'
+    created_at: '2026-08-25T05:04:37.748925',
+    updated_at: '2026-08-25T05:04:37.748926'
   },
   {
     id: '',
@@ -20734,8 +11103,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866427',
-    updated_at: '2026-08-31T17:44:00.866428'
+    created_at: '2026-08-25T05:04:37.748928',
+    updated_at: '2026-08-25T05:04:37.748929'
   },
   {
     id: '',
@@ -20750,8 +11119,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866430',
-    updated_at: '2026-08-31T17:44:00.866431'
+    created_at: '2026-08-25T05:04:37.748931',
+    updated_at: '2026-08-25T05:04:37.748932'
   },
   {
     id: '',
@@ -20766,8 +11135,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866433',
-    updated_at: '2026-08-31T17:44:00.866433'
+    created_at: '2026-08-25T05:04:37.748934',
+    updated_at: '2026-08-25T05:04:37.748935'
   },
   {
     id: '',
@@ -20782,8 +11151,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866436',
-    updated_at: '2026-08-31T17:44:00.866436'
+    created_at: '2026-08-25T05:04:37.748937',
+    updated_at: '2026-08-25T05:04:37.748938'
   },
   {
     id: '',
@@ -20798,8 +11167,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866438',
-    updated_at: '2026-08-31T17:44:00.866439'
+    created_at: '2026-08-25T05:04:37.748940',
+    updated_at: '2026-08-25T05:04:37.748940'
   },
   {
     id: '',
@@ -20814,8 +11183,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866443',
-    updated_at: '2026-08-31T17:44:00.866444'
+    created_at: '2026-08-25T05:04:37.748942',
+    updated_at: '2026-08-25T05:04:37.748943'
   },
   {
     id: '',
@@ -20830,8 +11199,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866446',
-    updated_at: '2026-08-31T17:44:00.866447'
+    created_at: '2026-08-25T05:04:37.748945',
+    updated_at: '2026-08-25T05:04:37.748946'
   },
   {
     id: '',
@@ -20846,8 +11215,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866449',
-    updated_at: '2026-08-31T17:44:00.866450'
+    created_at: '2026-08-25T05:04:37.748948',
+    updated_at: '2026-08-25T05:04:37.748949'
   },
   {
     id: '',
@@ -20862,8 +11231,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866452',
-    updated_at: '2026-08-31T17:44:00.866453'
+    created_at: '2026-08-25T05:04:37.748951',
+    updated_at: '2026-08-25T05:04:37.748951'
   },
   {
     id: '',
@@ -20878,8 +11247,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866455',
-    updated_at: '2026-08-31T17:44:00.866456'
+    created_at: '2026-08-25T05:04:37.748954',
+    updated_at: '2026-08-25T05:04:37.748954'
   },
   {
     id: '',
@@ -20894,8 +11263,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866460',
-    updated_at: '2026-08-31T17:44:00.866461'
+    created_at: '2026-08-25T05:04:37.748957',
+    updated_at: '2026-08-25T05:04:37.748957'
   },
   {
     id: '',
@@ -20910,8 +11279,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866463',
-    updated_at: '2026-08-31T17:44:00.866463'
+    created_at: '2026-08-25T05:04:37.748960',
+    updated_at: '2026-08-25T05:04:37.748960'
   },
   {
     id: '',
@@ -20926,12 +11295,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866466',
-    updated_at: '2026-08-31T17:44:00.866467'
+    created_at: '2026-08-25T05:04:37.748963',
+    updated_at: '2026-08-25T05:04:37.748963'
   },
   {
     id: '',
-    name: 'All A's Automotive & Transmission Repair',
+    name: `All A's Automotive & Transmission Repair`,
     company: '',
     email: '',
     phone: '(989) 631-4672',
@@ -20942,8 +11311,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866469',
-    updated_at: '2026-08-31T17:44:00.866469'
+    created_at: '2026-08-25T05:04:37.748966',
+    updated_at: '2026-08-25T05:04:37.748966'
   },
   {
     id: '',
@@ -20958,8 +11327,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866472',
-    updated_at: '2026-08-31T17:44:00.866472'
+    created_at: '2026-08-25T05:04:37.748968',
+    updated_at: '2026-08-25T05:04:37.748969'
   },
   {
     id: '',
@@ -20974,12 +11343,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866474',
-    updated_at: '2026-08-31T17:44:00.866475'
+    created_at: '2026-08-25T05:04:37.748971',
+    updated_at: '2026-08-25T05:04:37.748972'
   },
   {
     id: '',
-    name: 'Terry's Auto Sevice Center',
+    name: `Terry's Auto Sevice Center`,
     company: '',
     email: '',
     phone: '(989) 486-3800',
@@ -20990,8 +11359,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866479',
-    updated_at: '2026-08-31T17:44:00.866480'
+    created_at: '2026-08-25T05:04:37.748974',
+    updated_at: '2026-08-25T05:04:37.748974'
   },
   {
     id: '',
@@ -21006,8 +11375,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866482',
-    updated_at: '2026-08-31T17:44:00.866482'
+    created_at: '2026-08-25T05:04:37.748976',
+    updated_at: '2026-08-25T05:04:37.748977'
   },
   {
     id: '',
@@ -21022,8 +11391,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866485',
-    updated_at: '2026-08-31T17:44:00.866486'
+    created_at: '2026-08-25T05:04:37.748979',
+    updated_at: '2026-08-25T05:04:37.748980'
   },
   {
     id: '',
@@ -21038,8 +11407,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866488',
-    updated_at: '2026-08-31T17:44:00.866489'
+    created_at: '2026-08-25T05:04:37.748982',
+    updated_at: '2026-08-25T05:04:37.748983'
   },
   {
     id: '',
@@ -21054,8 +11423,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866491',
-    updated_at: '2026-08-31T17:44:00.866492'
+    created_at: '2026-08-25T05:04:37.748985',
+    updated_at: '2026-08-25T05:04:37.748985'
   },
   {
     id: '',
@@ -21070,8 +11439,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866496',
-    updated_at: '2026-08-31T17:44:00.866496'
+    created_at: '2026-08-25T05:04:37.748987',
+    updated_at: '2026-08-25T05:04:37.748988'
   },
   {
     id: '',
@@ -21086,8 +11455,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866499',
-    updated_at: '2026-08-31T17:44:00.866500'
+    created_at: '2026-08-25T05:04:37.748990',
+    updated_at: '2026-08-25T05:04:37.748991'
   },
   {
     id: '',
@@ -21102,8 +11471,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866502',
-    updated_at: '2026-08-31T17:44:00.866503'
+    created_at: '2026-08-25T05:04:37.748993',
+    updated_at: '2026-08-25T05:04:37.748994'
   },
   {
     id: '',
@@ -21118,12 +11487,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866505',
-    updated_at: '2026-08-31T17:44:00.866505'
+    created_at: '2026-08-25T05:04:37.748996',
+    updated_at: '2026-08-25T05:04:37.748996'
   },
   {
     id: '',
-    name: 'Suderman's Car Care',
+    name: `Suderman's Car Care`,
     company: '',
     email: '',
     phone: '(989) 631-6910',
@@ -21134,8 +11503,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866508',
-    updated_at: '2026-08-31T17:44:00.866508'
+    created_at: '2026-08-25T05:04:37.748999',
+    updated_at: '2026-08-25T05:04:37.748999'
   },
   {
     id: '',
@@ -21150,8 +11519,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866510',
-    updated_at: '2026-08-31T17:44:00.866511'
+    created_at: '2026-08-25T05:04:37.749002',
+    updated_at: '2026-08-25T05:04:37.749002'
   },
   {
     id: '',
@@ -21166,8 +11535,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866515',
-    updated_at: '2026-08-31T17:44:00.866516'
+    created_at: '2026-08-25T05:04:37.749005',
+    updated_at: '2026-08-25T05:04:37.749006'
   },
   {
     id: '',
@@ -21182,8 +11551,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866518',
-    updated_at: '2026-08-31T17:44:00.866519'
+    created_at: '2026-08-25T05:04:37.749008',
+    updated_at: '2026-08-25T05:04:37.749008'
   },
   {
     id: '',
@@ -21198,8 +11567,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866521',
-    updated_at: '2026-08-31T17:44:00.866521'
+    created_at: '2026-08-25T05:04:37.749011',
+    updated_at: '2026-08-25T05:04:37.749011'
   },
   {
     id: '',
@@ -21214,12 +11583,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866524',
-    updated_at: '2026-08-31T17:44:00.866524'
+    created_at: '2026-08-25T05:04:37.749014',
+    updated_at: '2026-08-25T05:04:37.749014'
   },
   {
     id: '',
-    name: 'Chef Sergey's Bakery',
+    name: `Chef Sergey's Bakery`,
     company: '',
     email: '',
     phone: '(989) 313-9743',
@@ -21230,8 +11599,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866526',
-    updated_at: '2026-08-31T17:44:00.866527'
+    created_at: '2026-08-25T05:04:37.749016',
+    updated_at: '2026-08-25T05:04:37.749017'
   },
   {
     id: '',
@@ -21246,8 +11615,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866531',
-    updated_at: '2026-08-31T17:44:00.866532'
+    created_at: '2026-08-25T05:04:37.749020',
+    updated_at: '2026-08-25T05:04:37.749020'
   },
   {
     id: '',
@@ -21262,8 +11631,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866534',
-    updated_at: '2026-08-31T17:44:00.866535'
+    created_at: '2026-08-25T05:04:37.749023',
+    updated_at: '2026-08-25T05:04:37.749023'
   },
   {
     id: '',
@@ -21278,8 +11647,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866537',
-    updated_at: '2026-08-31T17:44:00.866538'
+    created_at: '2026-08-25T05:04:37.749025',
+    updated_at: '2026-08-25T05:04:37.749026'
   },
   {
     id: '',
@@ -21294,8 +11663,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866540',
-    updated_at: '2026-08-31T17:44:00.866540'
+    created_at: '2026-08-25T05:04:37.749028',
+    updated_at: '2026-08-25T05:04:37.749029'
   },
   {
     id: '',
@@ -21310,8 +11679,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866542',
-    updated_at: '2026-08-31T17:44:00.866543'
+    created_at: '2026-08-25T05:04:37.749031',
+    updated_at: '2026-08-25T05:04:37.749032'
   },
   {
     id: '',
@@ -21326,8 +11695,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866545',
-    updated_at: '2026-08-31T17:44:00.866546'
+    created_at: '2026-08-25T05:04:37.749034',
+    updated_at: '2026-08-25T05:04:37.749035'
   },
   {
     id: '',
@@ -21342,8 +11711,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866550',
-    updated_at: '2026-08-31T17:44:00.866551'
+    created_at: '2026-08-25T05:04:37.749037',
+    updated_at: '2026-08-25T05:04:37.749038'
   },
   {
     id: '',
@@ -21358,12 +11727,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866553',
-    updated_at: '2026-08-31T17:44:00.866554'
+    created_at: '2026-08-25T05:04:37.749040',
+    updated_at: '2026-08-25T05:04:37.749041'
   },
   {
     id: '',
-    name: 'Smith's Flowers and Gifts',
+    name: `Smith's Flowers and Gifts`,
     company: '',
     email: '',
     phone: '(989) 631-0470',
@@ -21374,12 +11743,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866556',
-    updated_at: '2026-08-31T17:44:00.866557'
+    created_at: '2026-08-25T05:04:37.749045',
+    updated_at: '2026-08-25T05:04:37.749046'
   },
   {
     id: '',
-    name: 'Hannah's Flowers & Floral Preservation',
+    name: `Hannah's Flowers & Floral Preservation`,
     company: '',
     email: '',
     phone: '(989) 750-7200',
@@ -21390,12 +11759,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866559',
-    updated_at: '2026-08-31T17:44:00.866559'
+    created_at: '2026-08-25T05:04:37.749048',
+    updated_at: '2026-08-25T05:04:37.749049'
   },
   {
     id: '',
-    name: 'Randi's Green Thumb',
+    name: `Randi's Green Thumb`,
     company: '',
     email: '',
     phone: '(989) 835-3963',
@@ -21406,8 +11775,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866561',
-    updated_at: '2026-08-31T17:44:00.866562'
+    created_at: '2026-08-25T05:04:37.749051',
+    updated_at: '2026-08-25T05:04:37.749052'
   },
   {
     id: '',
@@ -21422,12 +11791,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866566',
-    updated_at: '2026-08-31T17:44:00.866567'
+    created_at: '2026-08-25T05:04:37.749071',
+    updated_at: '2026-08-25T05:04:37.749072'
   },
   {
     id: '',
-    name: 'Lapelle's Flowers & Gifts',
+    name: `Lapelle's Flowers & Gifts`,
     company: '',
     email: '',
     phone: '(989) 631-0450',
@@ -21438,8 +11807,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866569',
-    updated_at: '2026-08-31T17:44:00.866570'
+    created_at: '2026-08-25T05:04:37.749075',
+    updated_at: '2026-08-25T05:04:37.749076'
   },
   {
     id: '',
@@ -21454,12 +11823,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866572',
-    updated_at: '2026-08-31T17:44:00.866572'
+    created_at: '2026-08-25T05:04:37.749078',
+    updated_at: '2026-08-25T05:04:37.749079'
   },
   {
     id: '',
-    name: 'Austin's Flowers & Gifts',
+    name: `Austin's Flowers & Gifts`,
     company: '',
     email: '',
     phone: '(989) 695-9100',
@@ -21470,12 +11839,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866574',
-    updated_at: '2026-08-31T17:44:00.866575'
+    created_at: '2026-08-25T05:04:37.749081',
+    updated_at: '2026-08-25T05:04:37.749082'
   },
   {
     id: '',
-    name: 'Auburn's Flowers From the Heart',
+    name: `Auburn's Flowers From the Heart`,
     company: '',
     email: '',
     phone: '(989) 662-7818',
@@ -21486,8 +11855,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866577',
-    updated_at: '2026-08-31T17:44:00.866578'
+    created_at: '2026-08-25T05:04:37.749084',
+    updated_at: '2026-08-25T05:04:37.749084'
   },
   {
     id: '',
@@ -21502,8 +11871,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866580',
-    updated_at: '2026-08-31T17:44:00.866581'
+    created_at: '2026-08-25T05:04:37.749086',
+    updated_at: '2026-08-25T05:04:37.749087'
   },
   {
     id: '',
@@ -21518,8 +11887,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866585',
-    updated_at: '2026-08-31T17:44:00.866586'
+    created_at: '2026-08-25T05:04:37.749089',
+    updated_at: '2026-08-25T05:04:37.749090'
   },
   {
     id: '',
@@ -21534,8 +11903,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866588',
-    updated_at: '2026-08-31T17:44:00.866588'
+    created_at: '2026-08-25T05:04:37.749092',
+    updated_at: '2026-08-25T05:04:37.749092'
   },
   {
     id: '',
@@ -21550,8 +11919,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866590',
-    updated_at: '2026-08-31T17:44:00.866591'
+    created_at: '2026-08-25T05:04:37.749094',
+    updated_at: '2026-08-25T05:04:37.749095'
   },
   {
     id: '',
@@ -21566,8 +11935,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866593',
-    updated_at: '2026-08-31T17:44:00.866594'
+    created_at: '2026-08-25T05:04:37.749097',
+    updated_at: '2026-08-25T05:04:37.749098'
   },
   {
     id: '',
@@ -21582,8 +11951,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866596',
-    updated_at: '2026-08-31T17:44:00.866597'
+    created_at: '2026-08-25T05:04:37.749100',
+    updated_at: '2026-08-25T05:04:37.749101'
   },
   {
     id: '',
@@ -21598,8 +11967,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866601',
-    updated_at: '2026-08-31T17:44:00.866602'
+    created_at: '2026-08-25T05:04:37.749103',
+    updated_at: '2026-08-25T05:04:37.749104'
   },
   {
     id: '',
@@ -21614,8 +11983,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866604',
-    updated_at: '2026-08-31T17:44:00.866605'
+    created_at: '2026-08-25T05:04:37.749106',
+    updated_at: '2026-08-25T05:04:37.749106'
   },
   {
     id: '',
@@ -21630,8 +11999,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866607',
-    updated_at: '2026-08-31T17:44:00.866608'
+    created_at: '2026-08-25T05:04:37.749108',
+    updated_at: '2026-08-25T05:04:37.749109'
   },
   {
     id: '',
@@ -21646,8 +12015,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866610',
-    updated_at: '2026-08-31T17:44:00.866611'
+    created_at: '2026-08-25T05:04:37.749111',
+    updated_at: '2026-08-25T05:04:37.749112'
   },
   {
     id: '',
@@ -21662,8 +12031,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866613',
-    updated_at: '2026-08-31T17:44:00.866613'
+    created_at: '2026-08-25T05:04:37.749115',
+    updated_at: '2026-08-25T05:04:37.749116'
   },
   {
     id: '',
@@ -21678,8 +12047,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866617',
-    updated_at: '2026-08-31T17:44:00.866618'
+    created_at: '2026-08-25T05:04:37.749118',
+    updated_at: '2026-08-25T05:04:37.749119'
   },
   {
     id: '',
@@ -21694,8 +12063,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866620',
-    updated_at: '2026-08-31T17:44:00.866621'
+    created_at: '2026-08-25T05:04:37.749121',
+    updated_at: '2026-08-25T05:04:37.749122'
   },
   {
     id: '',
@@ -21710,8 +12079,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866623',
-    updated_at: '2026-08-31T17:44:00.866624'
+    created_at: '2026-08-25T05:04:37.749125',
+    updated_at: '2026-08-25T05:04:37.749125'
   },
   {
     id: '',
@@ -21726,8 +12095,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866626',
-    updated_at: '2026-08-31T17:44:00.866627'
+    created_at: '2026-08-25T05:04:37.749128',
+    updated_at: '2026-08-25T05:04:37.749128'
   },
   {
     id: '',
@@ -21742,8 +12111,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866629',
-    updated_at: '2026-08-31T17:44:00.866629'
+    created_at: '2026-08-25T05:04:37.749130',
+    updated_at: '2026-08-25T05:04:37.749131'
   },
   {
     id: '',
@@ -21758,8 +12127,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866632',
-    updated_at: '2026-08-31T17:44:00.866632'
+    created_at: '2026-08-25T05:04:37.749133',
+    updated_at: '2026-08-25T05:04:37.749134'
   },
   {
     id: '',
@@ -21774,8 +12143,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866636',
-    updated_at: '2026-08-31T17:44:00.866637'
+    created_at: '2026-08-25T05:04:37.749136',
+    updated_at: '2026-08-25T05:04:37.749137'
   },
   {
     id: '',
@@ -21790,8 +12159,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866639',
-    updated_at: '2026-08-31T17:44:00.866640'
+    created_at: '2026-08-25T05:04:37.749139',
+    updated_at: '2026-08-25T05:04:37.749140'
   },
   {
     id: '',
@@ -21806,8 +12175,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866642',
-    updated_at: '2026-08-31T17:44:00.866643'
+    created_at: '2026-08-25T05:04:37.749142',
+    updated_at: '2026-08-25T05:04:37.749143'
   },
   {
     id: '',
@@ -21822,8 +12191,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866645',
-    updated_at: '2026-08-31T17:44:00.866646'
+    created_at: '2026-08-25T05:04:37.749145',
+    updated_at: '2026-08-25T05:04:37.749145'
   },
   {
     id: '',
@@ -21838,8 +12207,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866648',
-    updated_at: '2026-08-31T17:44:00.866649'
+    created_at: '2026-08-25T05:04:37.749148',
+    updated_at: '2026-08-25T05:04:37.749148'
   },
   {
     id: '',
@@ -21854,8 +12223,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866652',
-    updated_at: '2026-08-31T17:44:00.866653'
+    created_at: '2026-08-25T05:04:37.749150',
+    updated_at: '2026-08-25T05:04:37.749151'
   },
   {
     id: '',
@@ -21870,8 +12239,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866655',
-    updated_at: '2026-08-31T17:44:00.866656'
+    created_at: '2026-08-25T05:04:37.749153',
+    updated_at: '2026-08-25T05:04:37.749154'
   },
   {
     id: '',
@@ -21886,8 +12255,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866658',
-    updated_at: '2026-08-31T17:44:00.866659'
+    created_at: '2026-08-25T05:04:37.749156',
+    updated_at: '2026-08-25T05:04:37.749157'
   },
   {
     id: '',
@@ -21902,8 +12271,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866661',
-    updated_at: '2026-08-31T17:44:00.866662'
+    created_at: '2026-08-25T05:04:37.749159',
+    updated_at: '2026-08-25T05:04:37.749159'
   },
   {
     id: '',
@@ -21918,8 +12287,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866664',
-    updated_at: '2026-08-31T17:44:00.866665'
+    created_at: '2026-08-25T05:04:37.749162',
+    updated_at: '2026-08-25T05:04:37.749162'
   },
   {
     id: '',
@@ -21934,8 +12303,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866667',
-    updated_at: '2026-08-31T17:44:00.866668'
+    created_at: '2026-08-25T05:04:37.749164',
+    updated_at: '2026-08-25T05:04:37.749165'
   },
   {
     id: '',
@@ -21950,8 +12319,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866672',
-    updated_at: '2026-08-31T17:44:00.866672'
+    created_at: '2026-08-25T05:04:37.749167',
+    updated_at: '2026-08-25T05:04:37.749168'
   },
   {
     id: '',
@@ -21966,8 +12335,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866675',
-    updated_at: '2026-08-31T17:44:00.866675'
+    created_at: '2026-08-25T05:04:37.749170',
+    updated_at: '2026-08-25T05:04:37.749170'
   },
   {
     id: '',
@@ -21982,8 +12351,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866677',
-    updated_at: '2026-08-31T17:44:00.866678'
+    created_at: '2026-08-25T05:04:37.749172',
+    updated_at: '2026-08-25T05:04:37.749173'
   },
   {
     id: '',
@@ -21998,8 +12367,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866681',
-    updated_at: '2026-08-31T17:44:00.866681'
+    created_at: '2026-08-25T05:04:37.749175',
+    updated_at: '2026-08-25T05:04:37.749176'
   },
   {
     id: '',
@@ -22014,8 +12383,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866684',
-    updated_at: '2026-08-31T17:44:00.866684'
+    created_at: '2026-08-25T05:04:37.749178',
+    updated_at: '2026-08-25T05:04:37.749179'
   },
   {
     id: '',
@@ -22030,8 +12399,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866688',
-    updated_at: '2026-08-31T17:44:00.866689'
+    created_at: '2026-08-25T05:04:37.749181',
+    updated_at: '2026-08-25T05:04:37.749181'
   },
   {
     id: '',
@@ -22046,8 +12415,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866692',
-    updated_at: '2026-08-31T17:44:00.866692'
+    created_at: '2026-08-25T05:04:37.749184',
+    updated_at: '2026-08-25T05:04:37.749184'
   },
   {
     id: '',
@@ -22062,8 +12431,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866694',
-    updated_at: '2026-08-31T17:44:00.866695'
+    created_at: '2026-08-25T05:04:37.749186',
+    updated_at: '2026-08-25T05:04:37.749187'
   },
   {
     id: '',
@@ -22078,8 +12447,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866697',
-    updated_at: '2026-08-31T17:44:00.866698'
+    created_at: '2026-08-25T05:04:37.749189',
+    updated_at: '2026-08-25T05:04:37.749190'
   },
   {
     id: '',
@@ -22094,8 +12463,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866700',
-    updated_at: '2026-08-31T17:44:00.866701'
+    created_at: '2026-08-25T05:04:37.749192',
+    updated_at: '2026-08-25T05:04:37.749193'
   },
   {
     id: '',
@@ -22110,8 +12479,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866703',
-    updated_at: '2026-08-31T17:44:00.866704'
+    created_at: '2026-08-25T05:04:37.749195',
+    updated_at: '2026-08-25T05:04:37.749195'
   },
   {
     id: '',
@@ -22126,8 +12495,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866708',
-    updated_at: '2026-08-31T17:44:00.866709'
+    created_at: '2026-08-25T05:04:37.749197',
+    updated_at: '2026-08-25T05:04:37.749198'
   },
   {
     id: '',
@@ -22142,8 +12511,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866711',
-    updated_at: '2026-08-31T17:44:00.866711'
+    created_at: '2026-08-25T05:04:37.749200',
+    updated_at: '2026-08-25T05:04:37.749201'
   },
   {
     id: '',
@@ -22158,8 +12527,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866713',
-    updated_at: '2026-08-31T17:44:00.866714'
+    created_at: '2026-08-25T05:04:37.749203',
+    updated_at: '2026-08-25T05:04:37.749203'
   },
   {
     id: '',
@@ -22174,8 +12543,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866716',
-    updated_at: '2026-08-31T17:44:00.866717'
+    created_at: '2026-08-25T05:04:37.749205',
+    updated_at: '2026-08-25T05:04:37.749206'
   },
   {
     id: '',
@@ -22190,8 +12559,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866719',
-    updated_at: '2026-08-31T17:44:00.866720'
+    created_at: '2026-08-25T05:04:37.749208',
+    updated_at: '2026-08-25T05:04:37.749209'
   },
   {
     id: '',
@@ -22206,8 +12575,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866722',
-    updated_at: '2026-08-31T17:44:00.866723'
+    created_at: '2026-08-25T05:04:37.749211',
+    updated_at: '2026-08-25T05:04:37.749211'
   },
   {
     id: '',
@@ -22222,8 +12591,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866726',
-    updated_at: '2026-08-31T17:44:00.866727'
+    created_at: '2026-08-25T05:04:37.749214',
+    updated_at: '2026-08-25T05:04:37.749214'
   },
   {
     id: '',
@@ -22238,8 +12607,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866730',
-    updated_at: '2026-08-31T17:44:00.866731'
+    created_at: '2026-08-25T05:04:37.749216',
+    updated_at: '2026-08-25T05:04:37.749217'
   },
   {
     id: '',
@@ -22254,8 +12623,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866733',
-    updated_at: '2026-08-31T17:44:00.866734'
+    created_at: '2026-08-25T05:04:37.749219',
+    updated_at: '2026-08-25T05:04:37.749220'
   },
   {
     id: '',
@@ -22270,8 +12639,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866737',
-    updated_at: '2026-08-31T17:44:00.866738'
+    created_at: '2026-08-25T05:04:37.749222',
+    updated_at: '2026-08-25T05:04:37.749222'
   },
   {
     id: '',
@@ -22286,8 +12655,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866740',
-    updated_at: '2026-08-31T17:44:00.866741'
+    created_at: '2026-08-25T05:04:37.749225',
+    updated_at: '2026-08-25T05:04:37.749225'
   },
   {
     id: '',
@@ -22302,8 +12671,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866747',
-    updated_at: '2026-08-31T17:44:00.866748'
+    created_at: '2026-08-25T05:04:37.749227',
+    updated_at: '2026-08-25T05:04:37.749228'
   },
   {
     id: '',
@@ -22318,8 +12687,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866750',
-    updated_at: '2026-08-31T17:44:00.866751'
+    created_at: '2026-08-25T05:04:37.749230',
+    updated_at: '2026-08-25T05:04:37.749231'
   },
   {
     id: '',
@@ -22334,8 +12703,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866753',
-    updated_at: '2026-08-31T17:44:00.866754'
+    created_at: '2026-08-25T05:04:37.749233',
+    updated_at: '2026-08-25T05:04:37.749234'
   },
   {
     id: '',
@@ -22350,8 +12719,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866756',
-    updated_at: '2026-08-31T17:44:00.866757'
+    created_at: '2026-08-25T05:04:37.749236',
+    updated_at: '2026-08-25T05:04:37.749236'
   },
   {
     id: '',
@@ -22366,8 +12735,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866759',
-    updated_at: '2026-08-31T17:44:00.866760'
+    created_at: '2026-08-25T05:04:37.749238',
+    updated_at: '2026-08-25T05:04:37.749239'
   },
   {
     id: '',
@@ -22382,8 +12751,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866762',
-    updated_at: '2026-08-31T17:44:00.866763'
+    created_at: '2026-08-25T05:04:37.749241',
+    updated_at: '2026-08-25T05:04:37.749242'
   },
   {
     id: '',
@@ -22398,8 +12767,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866767',
-    updated_at: '2026-08-31T17:44:00.866767'
+    created_at: '2026-08-25T05:04:37.749244',
+    updated_at: '2026-08-25T05:04:37.749244'
   },
   {
     id: '',
@@ -22414,8 +12783,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866770',
-    updated_at: '2026-08-31T17:44:00.866770'
+    created_at: '2026-08-25T05:04:37.749246',
+    updated_at: '2026-08-25T05:04:37.749247'
   },
   {
     id: '',
@@ -22430,8 +12799,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866773',
-    updated_at: '2026-08-31T17:44:00.866773'
+    created_at: '2026-08-25T05:04:37.749249',
+    updated_at: '2026-08-25T05:04:37.749250'
   },
   {
     id: '',
@@ -22446,8 +12815,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866776',
-    updated_at: '2026-08-31T17:44:00.866776'
+    created_at: '2026-08-25T05:04:37.749252',
+    updated_at: '2026-08-25T05:04:37.749253'
   },
   {
     id: '',
@@ -22462,8 +12831,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866779',
-    updated_at: '2026-08-31T17:44:00.866779'
+    created_at: '2026-08-25T05:04:37.749255',
+    updated_at: '2026-08-25T05:04:37.749256'
   },
   {
     id: '',
@@ -22478,8 +12847,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866783',
-    updated_at: '2026-08-31T17:44:00.866784'
+    created_at: '2026-08-25T05:04:37.749258',
+    updated_at: '2026-08-25T05:04:37.749258'
   },
   {
     id: '',
@@ -22494,8 +12863,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866786',
-    updated_at: '2026-08-31T17:44:00.866787'
+    created_at: '2026-08-25T05:04:37.749260',
+    updated_at: '2026-08-25T05:04:37.749261'
   },
   {
     id: '',
@@ -22510,8 +12879,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866789',
-    updated_at: '2026-08-31T17:44:00.866790'
+    created_at: '2026-08-25T05:04:37.749263',
+    updated_at: '2026-08-25T05:04:37.749264'
   },
   {
     id: '',
@@ -22526,8 +12895,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866792',
-    updated_at: '2026-08-31T17:44:00.866793'
+    created_at: '2026-08-25T05:04:37.749266',
+    updated_at: '2026-08-25T05:04:37.749266'
   },
   {
     id: '',
@@ -22542,8 +12911,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866795',
-    updated_at: '2026-08-31T17:44:00.866796'
+    created_at: '2026-08-25T05:04:37.749268',
+    updated_at: '2026-08-25T05:04:37.749269'
   },
   {
     id: '',
@@ -22558,8 +12927,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866799',
-    updated_at: '2026-08-31T17:44:00.866800'
+    created_at: '2026-08-25T05:04:37.749271',
+    updated_at: '2026-08-25T05:04:37.749272'
   },
   {
     id: '',
@@ -22574,8 +12943,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866802',
-    updated_at: '2026-08-31T17:44:00.866803'
+    created_at: '2026-08-25T05:04:37.749274',
+    updated_at: '2026-08-25T05:04:37.749275'
   },
   {
     id: '',
@@ -22590,8 +12959,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866805',
-    updated_at: '2026-08-31T17:44:00.866806'
+    created_at: '2026-08-25T05:04:37.749277',
+    updated_at: '2026-08-25T05:04:37.749277'
   },
   {
     id: '',
@@ -22606,8 +12975,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866808',
-    updated_at: '2026-08-31T17:44:00.866809'
+    created_at: '2026-08-25T05:04:37.749279',
+    updated_at: '2026-08-25T05:04:37.749280'
   },
   {
     id: '',
@@ -22622,8 +12991,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866811',
-    updated_at: '2026-08-31T17:44:00.866812'
+    created_at: '2026-08-25T05:04:37.749282',
+    updated_at: '2026-08-25T05:04:37.749283'
   },
   {
     id: '',
@@ -22638,8 +13007,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866814',
-    updated_at: '2026-08-31T17:44:00.866814'
+    created_at: '2026-08-25T05:04:37.749285',
+    updated_at: '2026-08-25T05:04:37.749286'
   },
   {
     id: '',
@@ -22654,8 +13023,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866818',
-    updated_at: '2026-08-31T17:44:00.866819'
+    created_at: '2026-08-25T05:04:37.749288',
+    updated_at: '2026-08-25T05:04:37.749288'
   },
   {
     id: '',
@@ -22670,12 +13039,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866821',
-    updated_at: '2026-08-31T17:44:00.866822'
+    created_at: '2026-08-25T05:04:37.749290',
+    updated_at: '2026-08-25T05:04:37.749291'
   },
   {
     id: '',
-    name: 'Joannie's Floral of Birch Run',
+    name: `Joannie's Floral of Birch Run`,
     company: '',
     email: '',
     phone: '(989) 624-5684',
@@ -22686,12 +13055,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866824',
-    updated_at: '2026-08-31T17:44:00.866825'
+    created_at: '2026-08-25T05:04:37.749293',
+    updated_at: '2026-08-25T05:04:37.749294'
   },
   {
     id: '',
-    name: 'Paul's Flowers',
+    name: `Paul's Flowers`,
     company: '',
     email: '',
     phone: '(989) 894-1199',
@@ -22702,8 +13071,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866827',
-    updated_at: '2026-08-31T17:44:00.866828'
+    created_at: '2026-08-25T05:04:37.749296',
+    updated_at: '2026-08-25T05:04:37.749296'
   },
   {
     id: '',
@@ -22718,8 +13087,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866830',
-    updated_at: '2026-08-31T17:44:00.866831'
+    created_at: '2026-08-25T05:04:37.749299',
+    updated_at: '2026-08-25T05:04:37.749299'
   },
   {
     id: '',
@@ -22734,8 +13103,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866835',
-    updated_at: '2026-08-31T17:44:00.866836'
+    created_at: '2026-08-25T05:04:37.749302',
+    updated_at: '2026-08-25T05:04:37.749302'
   },
   {
     id: '',
@@ -22750,8 +13119,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866838',
-    updated_at: '2026-08-31T17:44:00.866839'
+    created_at: '2026-08-25T05:04:37.749304',
+    updated_at: '2026-08-25T05:04:37.749305'
   },
   {
     id: '',
@@ -22766,8 +13135,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866841',
-    updated_at: '2026-08-31T17:44:00.866841'
+    created_at: '2026-08-25T05:04:37.749307',
+    updated_at: '2026-08-25T05:04:37.749308'
   },
   {
     id: '',
@@ -22782,8 +13151,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866844',
-    updated_at: '2026-08-31T17:44:00.866845'
+    created_at: '2026-08-25T05:04:37.749310',
+    updated_at: '2026-08-25T05:04:37.749311'
   },
   {
     id: '',
@@ -22798,8 +13167,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866847',
-    updated_at: '2026-08-31T17:44:00.866848'
+    created_at: '2026-08-25T05:04:37.749313',
+    updated_at: '2026-08-25T05:04:37.749314'
   },
   {
     id: '',
@@ -22814,8 +13183,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866850',
-    updated_at: '2026-08-31T17:44:00.866851'
+    created_at: '2026-08-25T05:04:37.749316',
+    updated_at: '2026-08-25T05:04:37.749316'
   },
   {
     id: '',
@@ -22830,8 +13199,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866854',
-    updated_at: '2026-08-31T17:44:00.866855'
+    created_at: '2026-08-25T05:04:37.749318',
+    updated_at: '2026-08-25T05:04:37.749319'
   },
   {
     id: '',
@@ -22846,8 +13215,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866857',
-    updated_at: '2026-08-31T17:44:00.866858'
+    created_at: '2026-08-25T05:04:37.749321',
+    updated_at: '2026-08-25T05:04:37.749322'
   },
   {
     id: '',
@@ -22862,8 +13231,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866860',
-    updated_at: '2026-08-31T17:44:00.866861'
+    created_at: '2026-08-25T05:04:37.749324',
+    updated_at: '2026-08-25T05:04:37.749325'
   },
   {
     id: '',
@@ -22878,8 +13247,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866863',
-    updated_at: '2026-08-31T17:44:00.866864'
+    created_at: '2026-08-25T05:04:37.749327',
+    updated_at: '2026-08-25T05:04:37.749328'
   },
   {
     id: '',
@@ -22894,8 +13263,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866866',
-    updated_at: '2026-08-31T17:44:00.866867'
+    created_at: '2026-08-25T05:04:37.749330',
+    updated_at: '2026-08-25T05:04:37.749331'
   },
   {
     id: '',
@@ -22910,8 +13279,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866871',
-    updated_at: '2026-08-31T17:44:00.866871'
+    created_at: '2026-08-25T05:04:37.749333',
+    updated_at: '2026-08-25T05:04:37.749334'
   },
   {
     id: '',
@@ -22926,8 +13295,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866873',
-    updated_at: '2026-08-31T17:44:00.866874'
+    created_at: '2026-08-25T05:04:37.749336',
+    updated_at: '2026-08-25T05:04:37.749336'
   },
   {
     id: '',
@@ -22942,8 +13311,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866877',
-    updated_at: '2026-08-31T17:44:00.866877'
+    created_at: '2026-08-25T05:04:37.749338',
+    updated_at: '2026-08-25T05:04:37.749339'
   },
   {
     id: '',
@@ -22958,8 +13327,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866879',
-    updated_at: '2026-08-31T17:44:00.866880'
+    created_at: '2026-08-25T05:04:37.749341',
+    updated_at: '2026-08-25T05:04:37.749342'
   },
   {
     id: '',
@@ -22974,8 +13343,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866882',
-    updated_at: '2026-08-31T17:44:00.866883'
+    created_at: '2026-08-25T05:04:37.749344',
+    updated_at: '2026-08-25T05:04:37.749345'
   },
   {
     id: '',
@@ -22990,8 +13359,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866885',
-    updated_at: '2026-08-31T17:44:00.866886'
+    created_at: '2026-08-25T05:04:37.749347',
+    updated_at: '2026-08-25T05:04:37.749348'
   },
   {
     id: '',
@@ -23006,8 +13375,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866890',
-    updated_at: '2026-08-31T17:44:00.866890'
+    created_at: '2026-08-25T05:04:37.749350',
+    updated_at: '2026-08-25T05:04:37.749350'
   },
   {
     id: '',
@@ -23022,8 +13391,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866893',
-    updated_at: '2026-08-31T17:44:00.866893'
+    created_at: '2026-08-25T05:04:37.749352',
+    updated_at: '2026-08-25T05:04:37.749353'
   },
   {
     id: '',
@@ -23038,8 +13407,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866896',
-    updated_at: '2026-08-31T17:44:00.866896'
+    created_at: '2026-08-25T05:04:37.749355',
+    updated_at: '2026-08-25T05:04:37.749356'
   },
   {
     id: '',
@@ -23054,8 +13423,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866899',
-    updated_at: '2026-08-31T17:44:00.866899'
+    created_at: '2026-08-25T05:04:37.749358',
+    updated_at: '2026-08-25T05:04:37.749359'
   },
   {
     id: '',
@@ -23070,8 +13439,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866901',
-    updated_at: '2026-08-31T17:44:00.866902'
+    created_at: '2026-08-25T05:04:37.749361',
+    updated_at: '2026-08-25T05:04:37.749362'
   },
   {
     id: '',
@@ -23086,8 +13455,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866906',
-    updated_at: '2026-08-31T17:44:00.866907'
+    created_at: '2026-08-25T05:04:37.749364',
+    updated_at: '2026-08-25T05:04:37.749365'
   },
   {
     id: '',
@@ -23102,8 +13471,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866909',
-    updated_at: '2026-08-31T17:44:00.866910'
+    created_at: '2026-08-25T05:04:37.749367',
+    updated_at: '2026-08-25T05:04:37.749368'
   },
   {
     id: '',
@@ -23118,8 +13487,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866913',
-    updated_at: '2026-08-31T17:44:00.866913'
+    created_at: '2026-08-25T05:04:37.749370',
+    updated_at: '2026-08-25T05:04:37.749370'
   },
   {
     id: '',
@@ -23134,12 +13503,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866916',
-    updated_at: '2026-08-31T17:44:00.866916'
+    created_at: '2026-08-25T05:04:37.749372',
+    updated_at: '2026-08-25T05:04:37.749373'
   },
   {
     id: '',
-    name: 'Randi's Green Thumb',
+    name: `Randi's Green Thumb`,
     company: '',
     email: '',
     phone: '(989) 835-3963',
@@ -23150,8 +13519,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866919',
-    updated_at: '2026-08-31T17:44:00.866919'
+    created_at: '2026-08-25T05:04:37.749375',
+    updated_at: '2026-08-25T05:04:37.749376'
   },
   {
     id: '',
@@ -23166,8 +13535,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866923',
-    updated_at: '2026-08-31T17:44:00.866924'
+    created_at: '2026-08-25T05:04:37.749378',
+    updated_at: '2026-08-25T05:04:37.749379'
   },
   {
     id: '',
@@ -23182,8 +13551,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866926',
-    updated_at: '2026-08-31T17:44:00.866927'
+    created_at: '2026-08-25T05:04:37.749381',
+    updated_at: '2026-08-25T05:04:37.749382'
   },
   {
     id: '',
@@ -23198,8 +13567,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866929',
-    updated_at: '2026-08-31T17:44:00.866930'
+    created_at: '2026-08-25T05:04:37.749384',
+    updated_at: '2026-08-25T05:04:37.749385'
   },
   {
     id: '',
@@ -23214,8 +13583,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866932',
-    updated_at: '2026-08-31T17:44:00.866933'
+    created_at: '2026-08-25T05:04:37.749387',
+    updated_at: '2026-08-25T05:04:37.749387'
   },
   {
     id: '',
@@ -23230,12 +13599,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866935',
-    updated_at: '2026-08-31T17:44:00.866936'
+    created_at: '2026-08-25T05:04:37.749389',
+    updated_at: '2026-08-25T05:04:37.749390'
   },
   {
     id: '',
-    name: 'Cohoon's Elevator',
+    name: `Cohoon's Elevator`,
     company: '',
     email: '',
     phone: '(989) 835-7724',
@@ -23246,8 +13615,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866938',
-    updated_at: '2026-08-31T17:44:00.866938'
+    created_at: '2026-08-25T05:04:37.749392',
+    updated_at: '2026-08-25T05:04:37.749393'
   },
   {
     id: '',
@@ -23262,8 +13631,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866942',
-    updated_at: '2026-08-31T17:44:00.866943'
+    created_at: '2026-08-25T05:04:37.749395',
+    updated_at: '2026-08-25T05:04:37.749396'
   },
   {
     id: '',
@@ -23278,8 +13647,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866945',
-    updated_at: '2026-08-31T17:44:00.866946'
+    created_at: '2026-08-25T05:04:37.749398',
+    updated_at: '2026-08-25T05:04:37.749398'
   },
   {
     id: '',
@@ -23294,8 +13663,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866948',
-    updated_at: '2026-08-31T17:44:00.866949'
+    created_at: '2026-08-25T05:04:37.749400',
+    updated_at: '2026-08-25T05:04:37.749401'
   },
   {
     id: '',
@@ -23310,8 +13679,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866951',
-    updated_at: '2026-08-31T17:44:00.866952'
+    created_at: '2026-08-25T05:04:37.749403',
+    updated_at: '2026-08-25T05:04:37.749404'
   },
   {
     id: '',
@@ -23326,8 +13695,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866954',
-    updated_at: '2026-08-31T17:44:00.866955'
+    created_at: '2026-08-25T05:04:37.749406',
+    updated_at: '2026-08-25T05:04:37.749406'
   },
   {
     id: '',
@@ -23342,8 +13711,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866958',
-    updated_at: '2026-08-31T17:44:00.866959'
+    created_at: '2026-08-25T05:04:37.749408',
+    updated_at: '2026-08-25T05:04:37.749409'
   },
   {
     id: '',
@@ -23358,8 +13727,8 @@ const DEMO_LEADS: Lead[] = [
     source: 'Google Places API - SOETech Non-Michigan Lead Expansion',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866962',
-    updated_at: '2026-08-31T17:44:00.866963'
+    created_at: '2026-08-25T05:04:37.749412',
+    updated_at: '2026-08-25T05:04:37.749412'
   },
   {
     id: '',
@@ -23374,8 +13743,8 @@ const DEMO_LEADS: Lead[] = [
     source: 'Google Places API - SOETech Non-Michigan Lead Expansion',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866965',
-    updated_at: '2026-08-31T17:44:00.866966'
+    created_at: '2026-08-25T05:04:37.749415',
+    updated_at: '2026-08-25T05:04:37.749415'
   },
   {
     id: '',
@@ -23390,8 +13759,8 @@ const DEMO_LEADS: Lead[] = [
     source: 'Google Places API - SOETech Non-Michigan Lead Expansion',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866968',
-    updated_at: '2026-08-31T17:44:00.866969'
+    created_at: '2026-08-25T05:04:37.749418',
+    updated_at: '2026-08-25T05:04:37.749418'
   },
   {
     id: '',
@@ -23406,8 +13775,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866971',
-    updated_at: '2026-08-31T17:44:00.866972'
+    created_at: '2026-08-25T05:04:37.749421',
+    updated_at: '2026-08-25T05:04:37.749421'
   },
   {
     id: '',
@@ -23422,8 +13791,8 @@ const DEMO_LEADS: Lead[] = [
     source: 'Google Places API - SOETech Non-Michigan Lead Expansion',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866975',
-    updated_at: '2026-08-31T17:44:00.866976'
+    created_at: '2026-08-25T05:04:37.749424',
+    updated_at: '2026-08-25T05:04:37.749425'
   },
   {
     id: '',
@@ -23438,8 +13807,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866980',
-    updated_at: '2026-08-31T17:44:00.866981'
+    created_at: '2026-08-25T05:04:37.749427',
+    updated_at: '2026-08-25T05:04:37.749428'
   },
   {
     id: '',
@@ -23454,13 +13823,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866983',
-    updated_at: '2026-08-31T17:44:00.866984'
+    created_at: '2026-08-25T05:04:37.749430',
+    updated_at: '2026-08-25T05:04:37.749431'
   },
   {
     id: '',
     name: '',
-    company: 'The Artisan's Nook',
+    company: `The Artisan's Nook`,
     email: 'theartisansnook@gmail.com',
     phone: '989-284-9444',
     website: 'https://theartisansnook.com/',
@@ -23470,8 +13839,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866987',
-    updated_at: '2026-08-31T17:44:00.866988'
+    created_at: '2026-08-25T05:04:37.749434',
+    updated_at: '2026-08-25T05:04:37.749435'
   },
   {
     id: '',
@@ -23486,8 +13855,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866990',
-    updated_at: '2026-08-31T17:44:00.866991'
+    created_at: '2026-08-25T05:04:37.749437',
+    updated_at: '2026-08-25T05:04:37.749438'
   },
   {
     id: '',
@@ -23502,8 +13871,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866993',
-    updated_at: '2026-08-31T17:44:00.866994'
+    created_at: '2026-08-25T05:04:37.749440',
+    updated_at: '2026-08-25T05:04:37.749441'
   },
   {
     id: '',
@@ -23518,8 +13887,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.866996',
-    updated_at: '2026-08-31T17:44:00.866997'
+    created_at: '2026-08-25T05:04:37.749443',
+    updated_at: '2026-08-25T05:04:37.749444'
   },
   {
     id: '',
@@ -23534,8 +13903,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867001',
-    updated_at: '2026-08-31T17:44:00.867002'
+    created_at: '2026-08-25T05:04:37.749446',
+    updated_at: '2026-08-25T05:04:37.749447'
   },
   {
     id: '',
@@ -23550,8 +13919,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867004',
-    updated_at: '2026-08-31T17:44:00.867005'
+    created_at: '2026-08-25T05:04:37.749449',
+    updated_at: '2026-08-25T05:04:37.749450'
   },
   {
     id: '',
@@ -23566,8 +13935,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867007',
-    updated_at: '2026-08-31T17:44:00.867008'
+    created_at: '2026-08-25T05:04:37.749452',
+    updated_at: '2026-08-25T05:04:37.749453'
   },
   {
     id: '',
@@ -23582,13 +13951,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867010',
-    updated_at: '2026-08-31T17:44:00.867011'
+    created_at: '2026-08-25T05:04:37.749455',
+    updated_at: '2026-08-25T05:04:37.749455'
   },
   {
     id: '',
     name: '',
-    company: 'Java Joe's Cafe',
+    company: `Java Joe's Cafe`,
     email: 'javajoescafe@gmail.com',
     phone: '906-643-9211',
     website: 'https://www.javajoescafemi.com/',
@@ -23598,8 +13967,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867014',
-    updated_at: '2026-08-31T17:44:00.867014'
+    created_at: '2026-08-25T05:04:37.749457',
+    updated_at: '2026-08-25T05:04:37.749458'
   },
   {
     id: '',
@@ -23614,8 +13983,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867017',
-    updated_at: '2026-08-31T17:44:00.867019'
+    created_at: '2026-08-25T05:04:37.749460',
+    updated_at: '2026-08-25T05:04:37.749461'
   },
   {
     id: '',
@@ -23630,8 +13999,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867021',
-    updated_at: '2026-08-31T17:44:00.867022'
+    created_at: '2026-08-25T05:04:37.749463',
+    updated_at: '2026-08-25T05:04:37.749464'
   },
   {
     id: '',
@@ -23646,8 +14015,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867024',
-    updated_at: '2026-08-31T17:44:00.867025'
+    created_at: '2026-08-25T05:04:37.749466',
+    updated_at: '2026-08-25T05:04:37.749467'
   },
   {
     id: '',
@@ -23662,8 +14031,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867027',
-    updated_at: '2026-08-31T17:44:00.867028'
+    created_at: '2026-08-25T05:04:37.749468',
+    updated_at: '2026-08-25T05:04:37.749469'
   },
   {
     id: '',
@@ -23678,8 +14047,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867030',
-    updated_at: '2026-08-31T17:44:00.867031'
+    created_at: '2026-08-25T05:04:37.749471',
+    updated_at: '2026-08-25T05:04:37.749472'
   },
   {
     id: '',
@@ -23694,8 +14063,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867033',
-    updated_at: '2026-08-31T17:44:00.867034'
+    created_at: '2026-08-25T05:04:37.749474',
+    updated_at: '2026-08-25T05:04:37.749475'
   },
   {
     id: '',
@@ -23710,8 +14079,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867038',
-    updated_at: '2026-08-31T17:44:00.867039'
+    created_at: '2026-08-25T05:04:37.749477',
+    updated_at: '2026-08-25T05:04:37.749478'
   },
   {
     id: '',
@@ -23726,8 +14095,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867041',
-    updated_at: '2026-08-31T17:44:00.867042'
+    created_at: '2026-08-25T05:04:37.749480',
+    updated_at: '2026-08-25T05:04:37.749481'
   },
   {
     id: '',
@@ -23742,8 +14111,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867044',
-    updated_at: '2026-08-31T17:44:00.867045'
+    created_at: '2026-08-25T05:04:37.749483',
+    updated_at: '2026-08-25T05:04:37.749483'
   },
   {
     id: '',
@@ -23758,8 +14127,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867047',
-    updated_at: '2026-08-31T17:44:00.867048'
+    created_at: '2026-08-25T05:04:37.749485',
+    updated_at: '2026-08-25T05:04:37.749486'
   },
   {
     id: '',
@@ -23774,8 +14143,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867050',
-    updated_at: '2026-08-31T17:44:00.867051'
+    created_at: '2026-08-25T05:04:37.749488',
+    updated_at: '2026-08-25T05:04:37.749489'
   },
   {
     id: '',
@@ -23790,8 +14159,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867053',
-    updated_at: '2026-08-31T17:44:00.867056'
+    created_at: '2026-08-25T05:04:37.749491',
+    updated_at: '2026-08-25T05:04:37.749491'
   },
   {
     id: '',
@@ -23806,8 +14175,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867058',
-    updated_at: '2026-08-31T17:44:00.867059'
+    created_at: '2026-08-25T05:04:37.749493',
+    updated_at: '2026-08-25T05:04:37.749494'
   },
   {
     id: '',
@@ -23822,8 +14191,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867061',
-    updated_at: '2026-08-31T17:44:00.867062'
+    created_at: '2026-08-25T05:04:37.749496',
+    updated_at: '2026-08-25T05:04:37.749497'
   },
   {
     id: '',
@@ -23838,8 +14207,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867064',
-    updated_at: '2026-08-31T17:44:00.867065'
+    created_at: '2026-08-25T05:04:37.749499',
+    updated_at: '2026-08-25T05:04:37.749499'
   },
   {
     id: '',
@@ -23854,8 +14223,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867067',
-    updated_at: '2026-08-31T17:44:00.867068'
+    created_at: '2026-08-25T05:04:37.749502',
+    updated_at: '2026-08-25T05:04:37.749502'
   },
   {
     id: '',
@@ -23870,8 +14239,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867070',
-    updated_at: '2026-08-31T17:44:00.867070'
+    created_at: '2026-08-25T05:04:37.749505',
+    updated_at: '2026-08-25T05:04:37.749505'
   },
   {
     id: '',
@@ -23886,8 +14255,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867074',
-    updated_at: '2026-08-31T17:44:00.867075'
+    created_at: '2026-08-25T05:04:37.749507',
+    updated_at: '2026-08-25T05:04:37.749508'
   },
   {
     id: '',
@@ -23902,8 +14271,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867077',
-    updated_at: '2026-08-31T17:44:00.867078'
+    created_at: '2026-08-25T05:04:37.749510',
+    updated_at: '2026-08-25T05:04:37.749511'
   },
   {
     id: '',
@@ -23918,8 +14287,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867080',
-    updated_at: '2026-08-31T17:44:00.867081'
+    created_at: '2026-08-25T05:04:37.749513',
+    updated_at: '2026-08-25T05:04:37.749513'
   },
   {
     id: '',
@@ -23934,8 +14303,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867084',
-    updated_at: '2026-08-31T17:44:00.867084'
+    created_at: '2026-08-25T05:04:37.749515',
+    updated_at: '2026-08-25T05:04:37.749516'
   },
   {
     id: '',
@@ -23950,8 +14319,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867087',
-    updated_at: '2026-08-31T17:44:00.867087'
+    created_at: '2026-08-25T05:04:37.749518',
+    updated_at: '2026-08-25T05:04:37.749519'
   },
   {
     id: '',
@@ -23966,8 +14335,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867090',
-    updated_at: '2026-08-31T17:44:00.867091'
+    created_at: '2026-08-25T05:04:37.749521',
+    updated_at: '2026-08-25T05:04:37.749522'
   },
   {
     id: '',
@@ -23982,8 +14351,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867095',
-    updated_at: '2026-08-31T17:44:00.867095'
+    created_at: '2026-08-25T05:04:37.749524',
+    updated_at: '2026-08-25T05:04:37.749525'
   },
   {
     id: '',
@@ -23998,8 +14367,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867098',
-    updated_at: '2026-08-31T17:44:00.867098'
+    created_at: '2026-08-25T05:04:37.749527',
+    updated_at: '2026-08-25T05:04:37.749527'
   },
   {
     id: '',
@@ -24014,8 +14383,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867101',
-    updated_at: '2026-08-31T17:44:00.867101'
+    created_at: '2026-08-25T05:04:37.749529',
+    updated_at: '2026-08-25T05:04:37.749530'
   },
   {
     id: '',
@@ -24030,8 +14399,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867104',
-    updated_at: '2026-08-31T17:44:00.867104'
+    created_at: '2026-08-25T05:04:37.749532',
+    updated_at: '2026-08-25T05:04:37.749533'
   },
   {
     id: '',
@@ -24046,8 +14415,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867107',
-    updated_at: '2026-08-31T17:44:00.867107'
+    created_at: '2026-08-25T05:04:37.749535',
+    updated_at: '2026-08-25T05:04:37.749535'
   },
   {
     id: '',
@@ -24062,8 +14431,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867111',
-    updated_at: '2026-08-31T17:44:00.867112'
+    created_at: '2026-08-25T05:04:37.749538',
+    updated_at: '2026-08-25T05:04:37.749538'
   },
   {
     id: '',
@@ -24078,8 +14447,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867115',
-    updated_at: '2026-08-31T17:44:00.867116'
+    created_at: '2026-08-25T05:04:37.749540',
+    updated_at: '2026-08-25T05:04:37.749541'
   },
   {
     id: '',
@@ -24094,8 +14463,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867118',
-    updated_at: '2026-08-31T17:44:00.867119'
+    created_at: '2026-08-25T05:04:37.749543',
+    updated_at: '2026-08-25T05:04:37.749544'
   },
   {
     id: '',
@@ -24110,8 +14479,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867121',
-    updated_at: '2026-08-31T17:44:00.867122'
+    created_at: '2026-08-25T05:04:37.749546',
+    updated_at: '2026-08-25T05:04:37.749547'
   },
   {
     id: '',
@@ -24126,8 +14495,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867124',
-    updated_at: '2026-08-31T17:44:00.867124'
+    created_at: '2026-08-25T05:04:37.749549',
+    updated_at: '2026-08-25T05:04:37.749550'
   },
   {
     id: '',
@@ -24142,8 +14511,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867127',
-    updated_at: '2026-08-31T17:44:00.867128'
+    created_at: '2026-08-25T05:04:37.749552',
+    updated_at: '2026-08-25T05:04:37.749553'
   },
   {
     id: '',
@@ -24158,8 +14527,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867131',
-    updated_at: '2026-08-31T17:44:00.867132'
+    created_at: '2026-08-25T05:04:37.749555',
+    updated_at: '2026-08-25T05:04:37.749556'
   },
   {
     id: '',
@@ -24174,8 +14543,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867134',
-    updated_at: '2026-08-31T17:44:00.867135'
+    created_at: '2026-08-25T05:04:37.749558',
+    updated_at: '2026-08-25T05:04:37.749559'
   },
   {
     id: '',
@@ -24190,8 +14559,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867138',
-    updated_at: '2026-08-31T17:44:00.867138'
+    created_at: '2026-08-25T05:04:37.749561',
+    updated_at: '2026-08-25T05:04:37.749562'
   },
   {
     id: '',
@@ -24206,8 +14575,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867141',
-    updated_at: '2026-08-31T17:44:00.867141'
+    created_at: '2026-08-25T05:04:37.749564',
+    updated_at: '2026-08-25T05:04:37.749564'
   },
   {
     id: '',
@@ -24222,8 +14591,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867143',
-    updated_at: '2026-08-31T17:44:00.867144'
+    created_at: '2026-08-25T05:04:37.749566',
+    updated_at: '2026-08-25T05:04:37.749567'
   },
   {
     id: '',
@@ -24238,8 +14607,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867148',
-    updated_at: '2026-08-31T17:44:00.867149'
+    created_at: '2026-08-25T05:04:37.749569',
+    updated_at: '2026-08-25T05:04:37.749570'
   },
   {
     id: '',
@@ -24254,8 +14623,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867151',
-    updated_at: '2026-08-31T17:44:00.867152'
+    created_at: '2026-08-25T05:04:37.749572',
+    updated_at: '2026-08-25T05:04:37.749573'
   },
   {
     id: '',
@@ -24270,8 +14639,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867154',
-    updated_at: '2026-08-31T17:44:00.867155'
+    created_at: '2026-08-25T05:04:37.749575',
+    updated_at: '2026-08-25T05:04:37.749575'
   },
   {
     id: '',
@@ -24286,8 +14655,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867157',
-    updated_at: '2026-08-31T17:44:00.867158'
+    created_at: '2026-08-25T05:04:37.749578',
+    updated_at: '2026-08-25T05:04:37.749579'
   },
   {
     id: '',
@@ -24302,8 +14671,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867160',
-    updated_at: '2026-08-31T17:44:00.867161'
+    created_at: '2026-08-25T05:04:37.749581',
+    updated_at: '2026-08-25T05:04:37.749581'
   },
   {
     id: '',
@@ -24318,8 +14687,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867163',
-    updated_at: '2026-08-31T17:44:00.867164'
+    created_at: '2026-08-25T05:04:37.749584',
+    updated_at: '2026-08-25T05:04:37.749584'
   },
   {
     id: '',
@@ -24334,8 +14703,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867168',
-    updated_at: '2026-08-31T17:44:00.867169'
+    created_at: '2026-08-25T05:04:37.749587',
+    updated_at: '2026-08-25T05:04:37.749587'
   },
   {
     id: '',
@@ -24350,8 +14719,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867171',
-    updated_at: '2026-08-31T17:44:00.867172'
+    created_at: '2026-08-25T05:04:37.749590',
+    updated_at: '2026-08-25T05:04:37.749590'
   },
   {
     id: '',
@@ -24366,8 +14735,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867174',
-    updated_at: '2026-08-31T17:44:00.867175'
+    created_at: '2026-08-25T05:04:37.749593',
+    updated_at: '2026-08-25T05:04:37.749593'
   },
   {
     id: '',
@@ -24382,8 +14751,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867177',
-    updated_at: '2026-08-31T17:44:00.867178'
+    created_at: '2026-08-25T05:04:37.749596',
+    updated_at: '2026-08-25T05:04:37.749596'
   },
   {
     id: '',
@@ -24398,8 +14767,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867180',
-    updated_at: '2026-08-31T17:44:00.867181'
+    created_at: '2026-08-25T05:04:37.749599',
+    updated_at: '2026-08-25T05:04:37.749599'
   },
   {
     id: '',
@@ -24414,8 +14783,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867185',
-    updated_at: '2026-08-31T17:44:00.867186'
+    created_at: '2026-08-25T05:04:37.749602',
+    updated_at: '2026-08-25T05:04:37.749603'
   },
   {
     id: '',
@@ -24430,8 +14799,8 @@ const DEMO_LEADS: Lead[] = [
     source: 'Google Places API - SOETech Non-Michigan Lead Expansion',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867188',
-    updated_at: '2026-08-31T17:44:00.867189'
+    created_at: '2026-08-25T05:04:37.749605',
+    updated_at: '2026-08-25T05:04:37.749606'
   },
   {
     id: '',
@@ -24446,8 +14815,8 @@ const DEMO_LEADS: Lead[] = [
     source: 'Google Places API - SOETech Non-Michigan Lead Expansion',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867191',
-    updated_at: '2026-08-31T17:44:00.867192'
+    created_at: '2026-08-25T05:04:37.749608',
+    updated_at: '2026-08-25T05:04:37.749609'
   },
   {
     id: '',
@@ -24462,8 +14831,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867194',
-    updated_at: '2026-08-31T17:44:00.867195'
+    created_at: '2026-08-25T05:04:37.749611',
+    updated_at: '2026-08-25T05:04:37.749611'
   },
   {
     id: '',
@@ -24478,8 +14847,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867198',
-    updated_at: '2026-08-31T17:44:00.867199'
+    created_at: '2026-08-25T05:04:37.749614',
+    updated_at: '2026-08-25T05:04:37.749615'
   },
   {
     id: '',
@@ -24494,8 +14863,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867201',
-    updated_at: '2026-08-31T17:44:00.867202'
+    created_at: '2026-08-25T05:04:37.749617',
+    updated_at: '2026-08-25T05:04:37.749618'
   },
   {
     id: '',
@@ -24510,8 +14879,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867206',
-    updated_at: '2026-08-31T17:44:00.867207'
+    created_at: '2026-08-25T05:04:37.749620',
+    updated_at: '2026-08-25T05:04:37.749621'
   },
   {
     id: '',
@@ -24526,8 +14895,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867210',
-    updated_at: '2026-08-31T17:44:00.867210'
+    created_at: '2026-08-25T05:04:37.749623',
+    updated_at: '2026-08-25T05:04:37.749624'
   },
   {
     id: '',
@@ -24542,8 +14911,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867213',
-    updated_at: '2026-08-31T17:44:00.867213'
+    created_at: '2026-08-25T05:04:37.749627',
+    updated_at: '2026-08-25T05:04:37.749627'
   },
   {
     id: '',
@@ -24558,8 +14927,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867216',
-    updated_at: '2026-08-31T17:44:00.867217'
+    created_at: '2026-08-25T05:04:37.749630',
+    updated_at: '2026-08-25T05:04:37.749630'
   },
   {
     id: '',
@@ -24574,8 +14943,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867219',
-    updated_at: '2026-08-31T17:44:00.867219'
+    created_at: '2026-08-25T05:04:37.749633',
+    updated_at: '2026-08-25T05:04:37.749633'
   },
   {
     id: '',
@@ -24590,8 +14959,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867222',
-    updated_at: '2026-08-31T17:44:00.867223'
+    created_at: '2026-08-25T05:04:37.749636',
+    updated_at: '2026-08-25T05:04:37.749636'
   },
   {
     id: '',
@@ -24606,8 +14975,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867226',
-    updated_at: '2026-08-31T17:44:00.867227'
+    created_at: '2026-08-25T05:04:37.749638',
+    updated_at: '2026-08-25T05:04:37.749639'
   },
   {
     id: '',
@@ -24622,8 +14991,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867230',
-    updated_at: '2026-08-31T17:44:00.867230'
+    created_at: '2026-08-25T05:04:37.749641',
+    updated_at: '2026-08-25T05:04:37.749642'
   },
   {
     id: '',
@@ -24638,8 +15007,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867233',
-    updated_at: '2026-08-31T17:44:00.867234'
+    created_at: '2026-08-25T05:04:37.749644',
+    updated_at: '2026-08-25T05:04:37.749645'
   },
   {
     id: '',
@@ -24654,8 +15023,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867236',
-    updated_at: '2026-08-31T17:44:00.867237'
+    created_at: '2026-08-25T05:04:37.749647',
+    updated_at: '2026-08-25T05:04:37.749648'
   },
   {
     id: '',
@@ -24670,8 +15039,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867239',
-    updated_at: '2026-08-31T17:44:00.867240'
+    created_at: '2026-08-25T05:04:37.749650',
+    updated_at: '2026-08-25T05:04:37.749650'
   },
   {
     id: '',
@@ -24686,8 +15055,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867244',
-    updated_at: '2026-08-31T17:44:00.867245'
+    created_at: '2026-08-25T05:04:37.749653',
+    updated_at: '2026-08-25T05:04:37.749653'
   },
   {
     id: '',
@@ -24702,8 +15071,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867247',
-    updated_at: '2026-08-31T17:44:00.867248'
+    created_at: '2026-08-25T05:04:37.749656',
+    updated_at: '2026-08-25T05:04:37.749656'
   },
   {
     id: '',
@@ -24718,8 +15087,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867250',
-    updated_at: '2026-08-31T17:44:00.867251'
+    created_at: '2026-08-25T05:04:37.749658',
+    updated_at: '2026-08-25T05:04:37.749659'
   },
   {
     id: '',
@@ -24734,8 +15103,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867253',
-    updated_at: '2026-08-31T17:44:00.867254'
+    created_at: '2026-08-25T05:04:37.749661',
+    updated_at: '2026-08-25T05:04:37.749662'
   },
   {
     id: '',
@@ -24750,8 +15119,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867256',
-    updated_at: '2026-08-31T17:44:00.867257'
+    created_at: '2026-08-25T05:04:37.749664',
+    updated_at: '2026-08-25T05:04:37.749665'
   },
   {
     id: '',
@@ -24766,8 +15135,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867261',
-    updated_at: '2026-08-31T17:44:00.867262'
+    created_at: '2026-08-25T05:04:37.749667',
+    updated_at: '2026-08-25T05:04:37.749668'
   },
   {
     id: '',
@@ -24782,8 +15151,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867264',
-    updated_at: '2026-08-31T17:44:00.867264'
+    created_at: '2026-08-25T05:04:37.749670',
+    updated_at: '2026-08-25T05:04:37.749670'
   },
   {
     id: '',
@@ -24798,8 +15167,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867266',
-    updated_at: '2026-08-31T17:44:00.867267'
+    created_at: '2026-08-25T05:04:37.749672',
+    updated_at: '2026-08-25T05:04:37.749673'
   },
   {
     id: '',
@@ -24814,8 +15183,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867270',
-    updated_at: '2026-08-31T17:44:00.867270'
+    created_at: '2026-08-25T05:04:37.749682',
+    updated_at: '2026-08-25T05:04:37.749683'
   },
   {
     id: '',
@@ -24830,8 +15199,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867272',
-    updated_at: '2026-08-31T17:44:00.867273'
+    created_at: '2026-08-25T05:04:37.749685',
+    updated_at: '2026-08-25T05:04:37.749686'
   },
   {
     id: '',
@@ -24846,8 +15215,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867275',
-    updated_at: '2026-08-31T17:44:00.867276'
+    created_at: '2026-08-25T05:04:37.749688',
+    updated_at: '2026-08-25T05:04:37.749689'
   },
   {
     id: '',
@@ -24862,8 +15231,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867280',
-    updated_at: '2026-08-31T17:44:00.867281'
+    created_at: '2026-08-25T05:04:37.749691',
+    updated_at: '2026-08-25T05:04:37.749692'
   },
   {
     id: '',
@@ -24878,8 +15247,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867283',
-    updated_at: '2026-08-31T17:44:00.867284'
+    created_at: '2026-08-25T05:04:37.749694',
+    updated_at: '2026-08-25T05:04:37.749695'
   },
   {
     id: '',
@@ -24894,8 +15263,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867286',
-    updated_at: '2026-08-31T17:44:00.867287'
+    created_at: '2026-08-25T05:04:37.749697',
+    updated_at: '2026-08-25T05:04:37.749698'
   },
   {
     id: '',
@@ -24910,12 +15279,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867289',
-    updated_at: '2026-08-31T17:44:00.867290'
+    created_at: '2026-08-25T05:04:37.749974',
+    updated_at: '2026-08-25T05:04:37.749975'
   },
   {
     id: '',
-    name: 'Cesar's Tires',
+    name: `Cesar's Tires`,
     company: '',
     email: '',
     phone: '(248) 453-6847',
@@ -24926,12 +15295,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867292',
-    updated_at: '2026-08-31T17:44:00.867293'
+    created_at: '2026-08-25T05:04:37.749977',
+    updated_at: '2026-08-25T05:04:37.749978'
   },
   {
     id: '',
-    name: 'C J's Auto Services Center',
+    name: `C J's Auto Services Center`,
     company: '',
     email: '',
     phone: '(989) 799-0910',
@@ -24942,8 +15311,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867295',
-    updated_at: '2026-08-31T17:44:00.867297'
+    created_at: '2026-08-25T05:04:37.749980',
+    updated_at: '2026-08-25T05:04:37.749981'
   },
   {
     id: '',
@@ -24958,8 +15327,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867299',
-    updated_at: '2026-08-31T17:44:00.867300'
+    created_at: '2026-08-25T05:04:37.749985',
+    updated_at: '2026-08-25T05:04:37.749985'
   },
   {
     id: '',
@@ -24974,12 +15343,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867302',
-    updated_at: '2026-08-31T17:44:00.867303'
+    created_at: '2026-08-25T05:04:37.749987',
+    updated_at: '2026-08-25T05:04:37.749988'
   },
   {
     id: '',
-    name: 'Beyer's Service Center',
+    name: `Beyer's Service Center`,
     company: '',
     email: '',
     phone: '(989) 792-8071',
@@ -24990,8 +15359,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867305',
-    updated_at: '2026-08-31T17:44:00.867306'
+    created_at: '2026-08-25T05:04:37.749990',
+    updated_at: '2026-08-25T05:04:37.749991'
   },
   {
     id: '',
@@ -25006,8 +15375,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867308',
-    updated_at: '2026-08-31T17:44:00.867309'
+    created_at: '2026-08-25T05:04:37.749993',
+    updated_at: '2026-08-25T05:04:37.749993'
   },
   {
     id: '',
@@ -25022,8 +15391,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867311',
-    updated_at: '2026-08-31T17:44:00.867311'
+    created_at: '2026-08-25T05:04:37.749995',
+    updated_at: '2026-08-25T05:04:37.749996'
   },
   {
     id: '',
@@ -25038,8 +15407,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867318',
-    updated_at: '2026-08-31T17:44:00.867318'
+    created_at: '2026-08-25T05:04:37.749999',
+    updated_at: '2026-08-25T05:04:37.750000'
   },
   {
     id: '',
@@ -25054,8 +15423,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867320',
-    updated_at: '2026-08-31T17:44:00.867321'
+    created_at: '2026-08-25T05:04:37.750002',
+    updated_at: '2026-08-25T05:04:37.750003'
   },
   {
     id: '',
@@ -25070,8 +15439,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867324',
-    updated_at: '2026-08-31T17:44:00.867324'
+    created_at: '2026-08-25T05:04:37.750005',
+    updated_at: '2026-08-25T05:04:37.750005'
   },
   {
     id: '',
@@ -25086,8 +15455,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867327',
-    updated_at: '2026-08-31T17:44:00.867328'
+    created_at: '2026-08-25T05:04:37.750007',
+    updated_at: '2026-08-25T05:04:37.750008'
   },
   {
     id: '',
@@ -25102,8 +15471,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867330',
-    updated_at: '2026-08-31T17:44:00.867330'
+    created_at: '2026-08-25T05:04:37.750010',
+    updated_at: '2026-08-25T05:04:37.750011'
   },
   {
     id: '',
@@ -25118,12 +15487,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867333',
-    updated_at: '2026-08-31T17:44:00.867334'
+    created_at: '2026-08-25T05:04:37.750012',
+    updated_at: '2026-08-25T05:04:37.750013'
   },
   {
     id: '',
-    name: 'Fuzzy's Restaurant',
+    name: `Fuzzy's Restaurant`,
     company: '',
     email: '',
     phone: '(989) 790-1719',
@@ -25134,8 +15503,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867337',
-    updated_at: '2026-08-31T17:44:00.867338'
+    created_at: '2026-08-25T05:04:37.750016',
+    updated_at: '2026-08-25T05:04:37.750017'
   },
   {
     id: '',
@@ -25150,8 +15519,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867340',
-    updated_at: '2026-08-31T17:44:00.867341'
+    created_at: '2026-08-25T05:04:37.750019',
+    updated_at: '2026-08-25T05:04:37.750020'
   },
   {
     id: '',
@@ -25166,8 +15535,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867343',
-    updated_at: '2026-08-31T17:44:00.867344'
+    created_at: '2026-08-25T05:04:37.750022',
+    updated_at: '2026-08-25T05:04:37.750022'
   },
   {
     id: '',
@@ -25182,12 +15551,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867346',
-    updated_at: '2026-08-31T17:44:00.867347'
+    created_at: '2026-08-25T05:04:37.750024',
+    updated_at: '2026-08-25T05:04:37.750025'
   },
   {
     id: '',
-    name: 'N'Orlins Cafe',
+    name: `N'Orlins Cafe`,
     company: '',
     email: '',
     phone: '(602) 796-5500',
@@ -25198,8 +15567,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867349',
-    updated_at: '2026-08-31T17:44:00.867350'
+    created_at: '2026-08-25T05:04:37.750027',
+    updated_at: '2026-08-25T05:04:37.750027'
   },
   {
     id: '',
@@ -25214,8 +15583,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867354',
-    updated_at: '2026-08-31T17:44:00.867355'
+    created_at: '2026-08-25T05:04:37.750031',
+    updated_at: '2026-08-25T05:04:37.750032'
   },
   {
     id: '',
@@ -25230,12 +15599,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867357',
-    updated_at: '2026-08-31T17:44:00.867357'
+    created_at: '2026-08-25T05:04:37.750033',
+    updated_at: '2026-08-25T05:04:37.750034'
   },
   {
     id: '',
-    name: 'Grohman's Flowers',
+    name: `Grohman's Flowers`,
     company: '',
     email: '',
     phone: '(989) 754-7457',
@@ -25246,8 +15615,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867360',
-    updated_at: '2026-08-31T17:44:00.867360'
+    created_at: '2026-08-25T05:04:37.750036',
+    updated_at: '2026-08-25T05:04:37.750037'
   },
   {
     id: '',
@@ -25262,12 +15631,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867363',
-    updated_at: '2026-08-31T17:44:00.867363'
+    created_at: '2026-08-25T05:04:37.750038',
+    updated_at: '2026-08-25T05:04:37.750039'
   },
   {
     id: '',
-    name: 'Erika's Flowers',
+    name: `Erika's Flowers`,
     company: '',
     email: '',
     phone: '(989) 755-9330',
@@ -25278,8 +15647,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867365',
-    updated_at: '2026-08-31T17:44:00.867366'
+    created_at: '2026-08-25T05:04:37.750041',
+    updated_at: '2026-08-25T05:04:37.750042'
   },
   {
     id: '',
@@ -25294,12 +15663,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867368',
-    updated_at: '2026-08-31T17:44:00.867369'
+    created_at: '2026-08-25T05:04:37.750043',
+    updated_at: '2026-08-25T05:04:37.750044'
   },
   {
     id: '',
-    name: 'Hank's Flowerland',
+    name: `Hank's Flowerland`,
     company: '',
     email: '',
     phone: '(989) 754-7481',
@@ -25310,8 +15679,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867373',
-    updated_at: '2026-08-31T17:44:00.867373'
+    created_at: '2026-08-25T05:04:37.750084',
+    updated_at: '2026-08-25T05:04:37.750085'
   },
   {
     id: '',
@@ -25326,8 +15695,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867376',
-    updated_at: '2026-08-31T17:44:00.867376'
+    created_at: '2026-08-25T05:04:37.750088',
+    updated_at: '2026-08-25T05:04:37.750088'
   },
   {
     id: '',
@@ -25342,12 +15711,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867378',
-    updated_at: '2026-08-31T17:44:00.867379'
+    created_at: '2026-08-25T05:04:37.750091',
+    updated_at: '2026-08-25T05:04:37.750091'
   },
   {
     id: '',
-    name: 'Austin's Flowers & Gifts',
+    name: `Austin's Flowers & Gifts`,
     company: '',
     email: '',
     phone: '(989) 695-9100',
@@ -25358,8 +15727,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867381',
-    updated_at: '2026-08-31T17:44:00.867382'
+    created_at: '2026-08-25T05:04:37.750094',
+    updated_at: '2026-08-25T05:04:37.750095'
   },
   {
     id: '',
@@ -25374,8 +15743,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867384',
-    updated_at: '2026-08-31T17:44:00.867385'
+    created_at: '2026-08-25T05:04:37.750097',
+    updated_at: '2026-08-25T05:04:37.750097'
   },
   {
     id: '',
@@ -25390,8 +15759,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867389',
-    updated_at: '2026-08-31T17:44:00.867390'
+    created_at: '2026-08-25T05:04:37.750100',
+    updated_at: '2026-08-25T05:04:37.750100'
   },
   {
     id: '',
@@ -25406,8 +15775,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867392',
-    updated_at: '2026-08-31T17:44:00.867393'
+    created_at: '2026-08-25T05:04:37.750102',
+    updated_at: '2026-08-25T05:04:37.750103'
   },
   {
     id: '',
@@ -25422,8 +15791,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867395',
-    updated_at: '2026-08-31T17:44:00.867395'
+    created_at: '2026-08-25T05:04:37.750105',
+    updated_at: '2026-08-25T05:04:37.750106'
   },
   {
     id: '',
@@ -25438,12 +15807,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867398',
-    updated_at: '2026-08-31T17:44:00.867399'
+    created_at: '2026-08-25T05:04:37.750108',
+    updated_at: '2026-08-25T05:04:37.750108'
   },
   {
     id: '',
-    name: 'Boehler's Greenhouse',
+    name: `Boehler's Greenhouse`,
     company: '',
     email: '',
     phone: '(989) 792-2039',
@@ -25454,8 +15823,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867401',
-    updated_at: '2026-08-31T17:44:00.867402'
+    created_at: '2026-08-25T05:04:37.750111',
+    updated_at: '2026-08-25T05:04:37.750111'
   },
   {
     id: '',
@@ -25470,8 +15839,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867404',
-    updated_at: '2026-08-31T17:44:00.867404'
+    created_at: '2026-08-25T05:04:37.750114',
+    updated_at: '2026-08-25T05:04:37.750114'
   },
   {
     id: '',
@@ -25486,8 +15855,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867408',
-    updated_at: '2026-08-31T17:44:00.867409'
+    created_at: '2026-08-25T05:04:37.750116',
+    updated_at: '2026-08-25T05:04:37.750117'
   },
   {
     id: '',
@@ -25502,8 +15871,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867411',
-    updated_at: '2026-08-31T17:44:00.867412'
+    created_at: '2026-08-25T05:04:37.750119',
+    updated_at: '2026-08-25T05:04:37.750120'
   },
   {
     id: '',
@@ -25518,8 +15887,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867414',
-    updated_at: '2026-08-31T17:44:00.867415'
+    created_at: '2026-08-25T05:04:37.750122',
+    updated_at: '2026-08-25T05:04:37.750123'
   },
   {
     id: '',
@@ -25534,8 +15903,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867417',
-    updated_at: '2026-08-31T17:44:00.867418'
+    created_at: '2026-08-25T05:04:37.750125',
+    updated_at: '2026-08-25T05:04:37.750126'
   },
   {
     id: '',
@@ -25550,8 +15919,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867420',
-    updated_at: '2026-08-31T17:44:00.867421'
+    created_at: '2026-08-25T05:04:37.750128',
+    updated_at: '2026-08-25T05:04:37.750128'
   },
   {
     id: '',
@@ -25566,8 +15935,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867424',
-    updated_at: '2026-08-31T17:44:00.867425'
+    created_at: '2026-08-25T05:04:37.750130',
+    updated_at: '2026-08-25T05:04:37.750131'
   },
   {
     id: '',
@@ -25582,8 +15951,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867428',
-    updated_at: '2026-08-31T17:44:00.867428'
+    created_at: '2026-08-25T05:04:37.750133',
+    updated_at: '2026-08-25T05:04:37.750134'
   },
   {
     id: '',
@@ -25598,8 +15967,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867430',
-    updated_at: '2026-08-31T17:44:00.867431'
+    created_at: '2026-08-25T05:04:37.750136',
+    updated_at: '2026-08-25T05:04:37.750137'
   },
   {
     id: '',
@@ -25614,8 +15983,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867434',
-    updated_at: '2026-08-31T17:44:00.867434'
+    created_at: '2026-08-25T05:04:37.750139',
+    updated_at: '2026-08-25T05:04:37.750140'
   },
   {
     id: '',
@@ -25630,8 +15999,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867437',
-    updated_at: '2026-08-31T17:44:00.867437'
+    created_at: '2026-08-25T05:04:37.750142',
+    updated_at: '2026-08-25T05:04:37.750143'
   },
   {
     id: '',
@@ -25646,8 +16015,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867441',
-    updated_at: '2026-08-31T17:44:00.867442'
+    created_at: '2026-08-25T05:04:37.750145',
+    updated_at: '2026-08-25T05:04:37.750145'
   },
   {
     id: '',
@@ -25662,8 +16031,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867444',
-    updated_at: '2026-08-31T17:44:00.867445'
+    created_at: '2026-08-25T05:04:37.750147',
+    updated_at: '2026-08-25T05:04:37.750148'
   },
   {
     id: '',
@@ -25678,8 +16047,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867447',
-    updated_at: '2026-08-31T17:44:00.867448'
+    created_at: '2026-08-25T05:04:37.750150',
+    updated_at: '2026-08-25T05:04:37.750151'
   },
   {
     id: '',
@@ -25694,8 +16063,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867450',
-    updated_at: '2026-08-31T17:44:00.867451'
+    created_at: '2026-08-25T05:04:37.750153',
+    updated_at: '2026-08-25T05:04:37.750154'
   },
   {
     id: '',
@@ -25710,8 +16079,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867453',
-    updated_at: '2026-08-31T17:44:00.867454'
+    created_at: '2026-08-25T05:04:37.750156',
+    updated_at: '2026-08-25T05:04:37.750157'
   },
   {
     id: '',
@@ -25726,8 +16095,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867458',
-    updated_at: '2026-08-31T17:44:00.867459'
+    created_at: '2026-08-25T05:04:37.750159',
+    updated_at: '2026-08-25T05:04:37.750159'
   },
   {
     id: '',
@@ -25742,8 +16111,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867461',
-    updated_at: '2026-08-31T17:44:00.867462'
+    created_at: '2026-08-25T05:04:37.750161',
+    updated_at: '2026-08-25T05:04:37.750162'
   },
   {
     id: '',
@@ -25758,8 +16127,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867464',
-    updated_at: '2026-08-31T17:44:00.867465'
+    created_at: '2026-08-25T05:04:37.750164',
+    updated_at: '2026-08-25T05:04:37.750165'
   },
   {
     id: '',
@@ -25774,8 +16143,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867467',
-    updated_at: '2026-08-31T17:44:00.867468'
+    created_at: '2026-08-25T05:04:37.750167',
+    updated_at: '2026-08-25T05:04:37.750167'
   },
   {
     id: '',
@@ -25790,8 +16159,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867470',
-    updated_at: '2026-08-31T17:44:00.867471'
+    created_at: '2026-08-25T05:04:37.750169',
+    updated_at: '2026-08-25T05:04:37.750170'
   },
   {
     id: '',
@@ -25806,8 +16175,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867473',
-    updated_at: '2026-08-31T17:44:00.867474'
+    created_at: '2026-08-25T05:04:37.750172',
+    updated_at: '2026-08-25T05:04:37.750173'
   },
   {
     id: '',
@@ -25822,8 +16191,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867478',
-    updated_at: '2026-08-31T17:44:00.867479'
+    created_at: '2026-08-25T05:04:37.750175',
+    updated_at: '2026-08-25T05:04:37.750176'
   },
   {
     id: '',
@@ -25838,8 +16207,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867481',
-    updated_at: '2026-08-31T17:44:00.867482'
+    created_at: '2026-08-25T05:04:37.750178',
+    updated_at: '2026-08-25T05:04:37.750178'
   },
   {
     id: '',
@@ -25854,8 +16223,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867484',
-    updated_at: '2026-08-31T17:44:00.867485'
+    created_at: '2026-08-25T05:04:37.750180',
+    updated_at: '2026-08-25T05:04:37.750181'
   },
   {
     id: '',
@@ -25870,8 +16239,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867487',
-    updated_at: '2026-08-31T17:44:00.867488'
+    created_at: '2026-08-25T05:04:37.750183',
+    updated_at: '2026-08-25T05:04:37.750184'
   },
   {
     id: '',
@@ -25886,8 +16255,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867490',
-    updated_at: '2026-08-31T17:44:00.867490'
+    created_at: '2026-08-25T05:04:37.750186',
+    updated_at: '2026-08-25T05:04:37.750187'
   },
   {
     id: '',
@@ -25902,8 +16271,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867494',
-    updated_at: '2026-08-31T17:44:00.867495'
+    created_at: '2026-08-25T05:04:37.750189',
+    updated_at: '2026-08-25T05:04:37.750189'
   },
   {
     id: '',
@@ -25918,8 +16287,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867497',
-    updated_at: '2026-08-31T17:44:00.867498'
+    created_at: '2026-08-25T05:04:37.750191',
+    updated_at: '2026-08-25T05:04:37.750192'
   },
   {
     id: '',
@@ -25934,8 +16303,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867500',
-    updated_at: '2026-08-31T17:44:00.867501'
+    created_at: '2026-08-25T05:04:37.750194',
+    updated_at: '2026-08-25T05:04:37.750195'
   },
   {
     id: '',
@@ -25950,8 +16319,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867503',
-    updated_at: '2026-08-31T17:44:00.867504'
+    created_at: '2026-08-25T05:04:37.750197',
+    updated_at: '2026-08-25T05:04:37.750198'
   },
   {
     id: '',
@@ -25966,8 +16335,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867506',
-    updated_at: '2026-08-31T17:44:00.867507'
+    created_at: '2026-08-25T05:04:37.750200',
+    updated_at: '2026-08-25T05:04:37.750201'
   },
   {
     id: '',
@@ -25982,8 +16351,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867509',
-    updated_at: '2026-08-31T17:44:00.867510'
+    created_at: '2026-08-25T05:04:37.750203',
+    updated_at: '2026-08-25T05:04:37.750203'
   },
   {
     id: '',
@@ -25998,8 +16367,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867513',
-    updated_at: '2026-08-31T17:44:00.867514'
+    created_at: '2026-08-25T05:04:37.750206',
+    updated_at: '2026-08-25T05:04:37.750206'
   },
   {
     id: '',
@@ -26014,8 +16383,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867516',
-    updated_at: '2026-08-31T17:44:00.867517'
+    created_at: '2026-08-25T05:04:37.750208',
+    updated_at: '2026-08-25T05:04:37.750209'
   },
   {
     id: '',
@@ -26030,8 +16399,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867519',
-    updated_at: '2026-08-31T17:44:00.867520'
+    created_at: '2026-08-25T05:04:37.750211',
+    updated_at: '2026-08-25T05:04:37.750212'
   },
   {
     id: '',
@@ -26046,8 +16415,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867522',
-    updated_at: '2026-08-31T17:44:00.867523'
+    created_at: '2026-08-25T05:04:37.750214',
+    updated_at: '2026-08-25T05:04:37.750214'
   },
   {
     id: '',
@@ -26062,8 +16431,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867525',
-    updated_at: '2026-08-31T17:44:00.867525'
+    created_at: '2026-08-25T05:04:37.750217',
+    updated_at: '2026-08-25T05:04:37.750217'
   },
   {
     id: '',
@@ -26078,8 +16447,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867529',
-    updated_at: '2026-08-31T17:44:00.867530'
+    created_at: '2026-08-25T05:04:37.750219',
+    updated_at: '2026-08-25T05:04:37.750220'
   },
   {
     id: '',
@@ -26094,8 +16463,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867532',
-    updated_at: '2026-08-31T17:44:00.867533'
+    created_at: '2026-08-25T05:04:37.750222',
+    updated_at: '2026-08-25T05:04:37.750223'
   },
   {
     id: '',
@@ -26110,8 +16479,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867535',
-    updated_at: '2026-08-31T17:44:00.867536'
+    created_at: '2026-08-25T05:04:37.750225',
+    updated_at: '2026-08-25T05:04:37.750225'
   },
   {
     id: '',
@@ -26126,8 +16495,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867538',
-    updated_at: '2026-08-31T17:44:00.867539'
+    created_at: '2026-08-25T05:04:37.750227',
+    updated_at: '2026-08-25T05:04:37.750228'
   },
   {
     id: '',
@@ -26142,8 +16511,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867541',
-    updated_at: '2026-08-31T17:44:00.867541'
+    created_at: '2026-08-25T05:04:37.750230',
+    updated_at: '2026-08-25T05:04:37.750231'
   },
   {
     id: '',
@@ -26158,8 +16527,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867543',
-    updated_at: '2026-08-31T17:44:00.867544'
+    created_at: '2026-08-25T05:04:37.750233',
+    updated_at: '2026-08-25T05:04:37.750234'
   },
   {
     id: '',
@@ -26174,8 +16543,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867548',
-    updated_at: '2026-08-31T17:44:00.867549'
+    created_at: '2026-08-25T05:04:37.750236',
+    updated_at: '2026-08-25T05:04:37.750236'
   },
   {
     id: '',
@@ -26190,8 +16559,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867551',
-    updated_at: '2026-08-31T17:44:00.867552'
+    created_at: '2026-08-25T05:04:37.750238',
+    updated_at: '2026-08-25T05:04:37.750239'
   },
   {
     id: '',
@@ -26206,8 +16575,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867554',
-    updated_at: '2026-08-31T17:44:00.867555'
+    created_at: '2026-08-25T05:04:37.750241',
+    updated_at: '2026-08-25T05:04:37.750242'
   },
   {
     id: '',
@@ -26222,8 +16591,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867557',
-    updated_at: '2026-08-31T17:44:00.867558'
+    created_at: '2026-08-25T05:04:37.750244',
+    updated_at: '2026-08-25T05:04:37.750245'
   },
   {
     id: '',
@@ -26238,8 +16607,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867560',
-    updated_at: '2026-08-31T17:44:00.867560'
+    created_at: '2026-08-25T05:04:37.750247',
+    updated_at: '2026-08-25T05:04:37.750247'
   },
   {
     id: '',
@@ -26254,8 +16623,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867564',
-    updated_at: '2026-08-31T17:44:00.867565'
+    created_at: '2026-08-25T05:04:37.750249',
+    updated_at: '2026-08-25T05:04:37.750250'
   },
   {
     id: '',
@@ -26270,8 +16639,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867567',
-    updated_at: '2026-08-31T17:44:00.867568'
+    created_at: '2026-08-25T05:04:37.750252',
+    updated_at: '2026-08-25T05:04:37.750253'
   },
   {
     id: '',
@@ -26286,8 +16655,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867570',
-    updated_at: '2026-08-31T17:44:00.867571'
+    created_at: '2026-08-25T05:04:37.750255',
+    updated_at: '2026-08-25T05:04:37.750256'
   },
   {
     id: '',
@@ -26302,8 +16671,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867573',
-    updated_at: '2026-08-31T17:44:00.867574'
+    created_at: '2026-08-25T05:04:37.750258',
+    updated_at: '2026-08-25T05:04:37.750258'
   },
   {
     id: '',
@@ -26318,8 +16687,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867576',
-    updated_at: '2026-08-31T17:44:00.867577'
+    created_at: '2026-08-25T05:04:37.750261',
+    updated_at: '2026-08-25T05:04:37.750261'
   },
   {
     id: '',
@@ -26334,8 +16703,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867579',
-    updated_at: '2026-08-31T17:44:00.867580'
+    created_at: '2026-08-25T05:04:37.750263',
+    updated_at: '2026-08-25T05:04:37.750264'
   },
   {
     id: '',
@@ -26350,8 +16719,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867584',
-    updated_at: '2026-08-31T17:44:00.867584'
+    created_at: '2026-08-25T05:04:37.750267',
+    updated_at: '2026-08-25T05:04:37.750267'
   },
   {
     id: '',
@@ -26366,8 +16735,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867587',
-    updated_at: '2026-08-31T17:44:00.867588'
+    created_at: '2026-08-25T05:04:37.750269',
+    updated_at: '2026-08-25T05:04:37.750270'
   },
   {
     id: '',
@@ -26382,8 +16751,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867590',
-    updated_at: '2026-08-31T17:44:00.867591'
+    created_at: '2026-08-25T05:04:37.750272',
+    updated_at: '2026-08-25T05:04:37.750273'
   },
   {
     id: '',
@@ -26398,8 +16767,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867593',
-    updated_at: '2026-08-31T17:44:00.867594'
+    created_at: '2026-08-25T05:04:37.750275',
+    updated_at: '2026-08-25T05:04:37.750275'
   },
   {
     id: '',
@@ -26414,8 +16783,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867596',
-    updated_at: '2026-08-31T17:44:00.867596'
+    created_at: '2026-08-25T05:04:37.750277',
+    updated_at: '2026-08-25T05:04:37.750278'
   },
   {
     id: '',
@@ -26430,8 +16799,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867600',
-    updated_at: '2026-08-31T17:44:00.867601'
+    created_at: '2026-08-25T05:04:37.750280',
+    updated_at: '2026-08-25T05:04:37.750281'
   },
   {
     id: '',
@@ -26446,8 +16815,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867604',
-    updated_at: '2026-08-31T17:44:00.867604'
+    created_at: '2026-08-25T05:04:37.750283',
+    updated_at: '2026-08-25T05:04:37.750284'
   },
   {
     id: '',
@@ -26462,8 +16831,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867607',
-    updated_at: '2026-08-31T17:44:00.867607'
+    created_at: '2026-08-25T05:04:37.750286',
+    updated_at: '2026-08-25T05:04:37.750286'
   },
   {
     id: '',
@@ -26478,8 +16847,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867610',
-    updated_at: '2026-08-31T17:44:00.867610'
+    created_at: '2026-08-25T05:04:37.750289',
+    updated_at: '2026-08-25T05:04:37.750289'
   },
   {
     id: '',
@@ -26494,8 +16863,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867613',
-    updated_at: '2026-08-31T17:44:00.867613'
+    created_at: '2026-08-25T05:04:37.750292',
+    updated_at: '2026-08-25T05:04:37.750292'
   },
   {
     id: '',
@@ -26510,8 +16879,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867617',
-    updated_at: '2026-08-31T17:44:00.867618'
+    created_at: '2026-08-25T05:04:37.750294',
+    updated_at: '2026-08-25T05:04:37.750295'
   },
   {
     id: '',
@@ -26526,8 +16895,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867620',
-    updated_at: '2026-08-31T17:44:00.867621'
+    created_at: '2026-08-25T05:04:37.750297',
+    updated_at: '2026-08-25T05:04:37.750298'
   },
   {
     id: '',
@@ -26542,8 +16911,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867623',
-    updated_at: '2026-08-31T17:44:00.867624'
+    created_at: '2026-08-25T05:04:37.750300',
+    updated_at: '2026-08-25T05:04:37.750301'
   },
   {
     id: '',
@@ -26558,8 +16927,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867626',
-    updated_at: '2026-08-31T17:44:00.867627'
+    created_at: '2026-08-25T05:04:37.750303',
+    updated_at: '2026-08-25T05:04:37.750304'
   },
   {
     id: '',
@@ -26574,8 +16943,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867629',
-    updated_at: '2026-08-31T17:44:00.867630'
+    created_at: '2026-08-25T05:04:37.750306',
+    updated_at: '2026-08-25T05:04:37.750306'
   },
   {
     id: '',
@@ -26590,8 +16959,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867632',
-    updated_at: '2026-08-31T17:44:00.867635'
+    created_at: '2026-08-25T05:04:37.750308',
+    updated_at: '2026-08-25T05:04:37.750309'
   },
   {
     id: '',
@@ -26606,8 +16975,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867637',
-    updated_at: '2026-08-31T17:44:00.867638'
+    created_at: '2026-08-25T05:04:37.750311',
+    updated_at: '2026-08-25T05:04:37.750312'
   },
   {
     id: '',
@@ -26622,8 +16991,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867640',
-    updated_at: '2026-08-31T17:44:00.867641'
+    created_at: '2026-08-25T05:04:37.750314',
+    updated_at: '2026-08-25T05:04:37.750315'
   },
   {
     id: '',
@@ -26638,8 +17007,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867643',
-    updated_at: '2026-08-31T17:44:00.867644'
+    created_at: '2026-08-25T05:04:37.750317',
+    updated_at: '2026-08-25T05:04:37.750317'
   },
   {
     id: '',
@@ -26654,12 +17023,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867646',
-    updated_at: '2026-08-31T17:44:00.867647'
+    created_at: '2026-08-25T05:04:37.750319',
+    updated_at: '2026-08-25T05:04:37.750320'
   },
   {
     id: '',
-    name: 'O'Guinn Family Funeral Homes',
+    name: `O'Guinn Family Funeral Homes`,
     company: '',
     email: '',
     phone: '(810) 686-5070',
@@ -26670,8 +17039,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867651',
-    updated_at: '2026-08-31T17:44:00.867652'
+    created_at: '2026-08-25T05:04:37.750322',
+    updated_at: '2026-08-25T05:04:37.750323'
   },
   {
     id: '',
@@ -26686,8 +17055,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867654',
-    updated_at: '2026-08-31T17:44:00.867655'
+    created_at: '2026-08-25T05:04:37.750325',
+    updated_at: '2026-08-25T05:04:37.750326'
   },
   {
     id: '',
@@ -26702,8 +17071,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867657',
-    updated_at: '2026-08-31T17:44:00.867657'
+    created_at: '2026-08-25T05:04:37.750328',
+    updated_at: '2026-08-25T05:04:37.750328'
   },
   {
     id: '',
@@ -26718,8 +17087,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867660',
-    updated_at: '2026-08-31T17:44:00.867660'
+    created_at: '2026-08-25T05:04:37.750330',
+    updated_at: '2026-08-25T05:04:37.750331'
   },
   {
     id: '',
@@ -26734,8 +17103,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867662',
-    updated_at: '2026-08-31T17:44:00.867663'
+    created_at: '2026-08-25T05:04:37.750333',
+    updated_at: '2026-08-25T05:04:37.750334'
   },
   {
     id: '',
@@ -26750,8 +17119,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867667',
-    updated_at: '2026-08-31T17:44:00.867668'
+    created_at: '2026-08-25T05:04:37.750336',
+    updated_at: '2026-08-25T05:04:37.750336'
   },
   {
     id: '',
@@ -26766,8 +17135,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867670',
-    updated_at: '2026-08-31T17:44:00.867671'
+    created_at: '2026-08-25T05:04:37.750338',
+    updated_at: '2026-08-25T05:04:37.750339'
   },
   {
     id: '',
@@ -26782,8 +17151,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867673',
-    updated_at: '2026-08-31T17:44:00.867674'
+    created_at: '2026-08-25T05:04:37.750341',
+    updated_at: '2026-08-25T05:04:37.750342'
   },
   {
     id: '',
@@ -26798,8 +17167,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867676',
-    updated_at: '2026-08-31T17:44:00.867677'
+    created_at: '2026-08-25T05:04:37.750344',
+    updated_at: '2026-08-25T05:04:37.750345'
   },
   {
     id: '',
@@ -26814,8 +17183,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867679',
-    updated_at: '2026-08-31T17:44:00.867680'
+    created_at: '2026-08-25T05:04:37.750347',
+    updated_at: '2026-08-25T05:04:37.750348'
   },
   {
     id: '',
@@ -26830,8 +17199,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867682',
-    updated_at: '2026-08-31T17:44:00.867683'
+    created_at: '2026-08-25T05:04:37.750350',
+    updated_at: '2026-08-25T05:04:37.750351'
   },
   {
     id: '',
@@ -26846,8 +17215,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867687',
-    updated_at: '2026-08-31T17:44:00.867688'
+    created_at: '2026-08-25T05:04:37.750353',
+    updated_at: '2026-08-25T05:04:37.750353'
   },
   {
     id: '',
@@ -26862,8 +17231,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867690',
-    updated_at: '2026-08-31T17:44:00.867691'
+    created_at: '2026-08-25T05:04:37.750742',
+    updated_at: '2026-08-25T05:04:37.750743'
   },
   {
     id: '',
@@ -26878,8 +17247,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867693',
-    updated_at: '2026-08-31T17:44:00.867694'
+    created_at: '2026-08-25T05:04:37.750745',
+    updated_at: '2026-08-25T05:04:37.750746'
   },
   {
     id: '',
@@ -26894,8 +17263,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867696',
-    updated_at: '2026-08-31T17:44:00.867697'
+    created_at: '2026-08-25T05:04:37.750748',
+    updated_at: '2026-08-25T05:04:37.750749'
   },
   {
     id: '',
@@ -26910,8 +17279,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867700',
-    updated_at: '2026-08-31T17:44:00.867701'
+    created_at: '2026-08-25T05:04:37.750751',
+    updated_at: '2026-08-25T05:04:37.750752'
   },
   {
     id: '',
@@ -26926,8 +17295,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867705',
-    updated_at: '2026-08-31T17:44:00.867706'
+    created_at: '2026-08-25T05:04:37.750770',
+    updated_at: '2026-08-25T05:04:37.750772'
   },
   {
     id: '',
@@ -26942,8 +17311,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867708',
-    updated_at: '2026-08-31T17:44:00.867709'
+    created_at: '2026-08-25T05:04:37.750774',
+    updated_at: '2026-08-25T05:04:37.750774'
   },
   {
     id: '',
@@ -26958,8 +17327,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867711',
-    updated_at: '2026-08-31T17:44:00.867712'
+    created_at: '2026-08-25T05:04:37.750776',
+    updated_at: '2026-08-25T05:04:37.750777'
   },
   {
     id: '',
@@ -26974,8 +17343,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867714',
-    updated_at: '2026-08-31T17:44:00.867715'
+    created_at: '2026-08-25T05:04:37.750779',
+    updated_at: '2026-08-25T05:04:37.750780'
   },
   {
     id: '',
@@ -26990,8 +17359,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867717',
-    updated_at: '2026-08-31T17:44:00.867718'
+    created_at: '2026-08-25T05:04:37.750781',
+    updated_at: '2026-08-25T05:04:37.750782'
   },
   {
     id: '',
@@ -27006,8 +17375,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867722',
-    updated_at: '2026-08-31T17:44:00.867723'
+    created_at: '2026-08-25T05:04:37.750787',
+    updated_at: '2026-08-25T05:04:37.750788'
   },
   {
     id: '',
@@ -27022,12 +17391,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867725',
-    updated_at: '2026-08-31T17:44:00.867726'
+    created_at: '2026-08-25T05:04:37.750790',
+    updated_at: '2026-08-25T05:04:37.750791'
   },
   {
     id: '',
-    name: 'CHET'S AUTO SERVICE',
+    name: `CHET'S AUTO SERVICE`,
     company: '',
     email: '',
     phone: '(810) 767-9201',
@@ -27038,8 +17407,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867728',
-    updated_at: '2026-08-31T17:44:00.867729'
+    created_at: '2026-08-25T05:04:37.750793',
+    updated_at: '2026-08-25T05:04:37.750793'
   },
   {
     id: '',
@@ -27054,8 +17423,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867731',
-    updated_at: '2026-08-31T17:44:00.867732'
+    created_at: '2026-08-25T05:04:37.750795',
+    updated_at: '2026-08-25T05:04:37.750796'
   },
   {
     id: '',
@@ -27070,8 +17439,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867734',
-    updated_at: '2026-08-31T17:44:00.867735'
+    created_at: '2026-08-25T05:04:37.750798',
+    updated_at: '2026-08-25T05:04:37.750798'
   },
   {
     id: '',
@@ -27086,8 +17455,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867737',
-    updated_at: '2026-08-31T17:44:00.867738'
+    created_at: '2026-08-25T05:04:37.750800',
+    updated_at: '2026-08-25T05:04:37.750801'
   },
   {
     id: '',
@@ -27102,8 +17471,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867742',
-    updated_at: '2026-08-31T17:44:00.867742'
+    created_at: '2026-08-25T05:04:37.750805',
+    updated_at: '2026-08-25T05:04:37.750806'
   },
   {
     id: '',
@@ -27118,8 +17487,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867745',
-    updated_at: '2026-08-31T17:44:00.867745'
+    created_at: '2026-08-25T05:04:37.750808',
+    updated_at: '2026-08-25T05:04:37.750809'
   },
   {
     id: '',
@@ -27134,8 +17503,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867747',
-    updated_at: '2026-08-31T17:44:00.867748'
+    created_at: '2026-08-25T05:04:37.750810',
+    updated_at: '2026-08-25T05:04:37.750811'
   },
   {
     id: '',
@@ -27150,8 +17519,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867750',
-    updated_at: '2026-08-31T17:44:00.867751'
+    created_at: '2026-08-25T05:04:37.750813',
+    updated_at: '2026-08-25T05:04:37.750814'
   },
   {
     id: '',
@@ -27166,8 +17535,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867753',
-    updated_at: '2026-08-31T17:44:00.867754'
+    created_at: '2026-08-25T05:04:37.750816',
+    updated_at: '2026-08-25T05:04:37.750816'
   },
   {
     id: '',
@@ -27182,8 +17551,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867758',
-    updated_at: '2026-08-31T17:44:00.867759'
+    created_at: '2026-08-25T05:04:37.750821',
+    updated_at: '2026-08-25T05:04:37.750822'
   },
   {
     id: '',
@@ -27198,8 +17567,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867761',
-    updated_at: '2026-08-31T17:44:00.867762'
+    created_at: '2026-08-25T05:04:37.750823',
+    updated_at: '2026-08-25T05:04:37.750824'
   },
   {
     id: '',
@@ -27214,8 +17583,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867764',
-    updated_at: '2026-08-31T17:44:00.867764'
+    created_at: '2026-08-25T05:04:37.750826',
+    updated_at: '2026-08-25T05:04:37.750826'
   },
   {
     id: '',
@@ -27230,8 +17599,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867767',
-    updated_at: '2026-08-31T17:44:00.867768'
+    created_at: '2026-08-25T05:04:37.750828',
+    updated_at: '2026-08-25T05:04:37.750829'
   },
   {
     id: '',
@@ -27246,8 +17615,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867770',
-    updated_at: '2026-08-31T17:44:00.867771'
+    created_at: '2026-08-25T05:04:37.750830',
+    updated_at: '2026-08-25T05:04:37.750831'
   },
   {
     id: '',
@@ -27262,8 +17631,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867773',
-    updated_at: '2026-08-31T17:44:00.867773'
+    created_at: '2026-08-25T05:04:37.750833',
+    updated_at: '2026-08-25T05:04:37.750834'
   },
   {
     id: '',
@@ -27278,8 +17647,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867776',
-    updated_at: '2026-08-31T17:44:00.867776'
+    created_at: '2026-08-25T05:04:37.750838',
+    updated_at: '2026-08-25T05:04:37.750839'
   },
   {
     id: '',
@@ -27294,12 +17663,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867778',
-    updated_at: '2026-08-31T17:44:00.867779'
+    created_at: '2026-08-25T05:04:37.750841',
+    updated_at: '2026-08-25T05:04:37.750842'
   },
   {
     id: '',
-    name: 'Beny's Coffee',
+    name: `Beny's Coffee`,
     company: '',
     email: '',
     phone: '(810) 214-1016',
@@ -27310,8 +17679,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867781',
-    updated_at: '2026-08-31T17:44:00.867782'
+    created_at: '2026-08-25T05:04:37.750843',
+    updated_at: '2026-08-25T05:04:37.750844'
   },
   {
     id: '',
@@ -27326,8 +17695,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867784',
-    updated_at: '2026-08-31T17:44:00.867785'
+    created_at: '2026-08-25T05:04:37.750846',
+    updated_at: '2026-08-25T05:04:37.750846'
   },
   {
     id: '',
@@ -27342,8 +17711,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867787',
-    updated_at: '2026-08-31T17:44:00.867788'
+    created_at: '2026-08-25T05:04:37.750848',
+    updated_at: '2026-08-25T05:04:37.750849'
   },
   {
     id: '',
@@ -27358,12 +17727,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867790',
-    updated_at: '2026-08-31T17:44:00.867792'
+    created_at: '2026-08-25T05:04:37.750851',
+    updated_at: '2026-08-25T05:04:37.750851'
   },
   {
     id: '',
-    name: 'Scooter's Coffee',
+    name: `Scooter's Coffee`,
     company: '',
     email: '',
     phone: '(877) 719-1288',
@@ -27374,12 +17743,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867795',
-    updated_at: '2026-08-31T17:44:00.867795'
+    created_at: '2026-08-25T05:04:37.750856',
+    updated_at: '2026-08-25T05:04:37.750856'
   },
   {
     id: '',
-    name: 'ZD's Corner',
+    name: `ZD's Corner`,
     company: '',
     email: '',
     phone: '(810) 487-9065',
@@ -27390,8 +17759,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867798',
-    updated_at: '2026-08-31T17:44:00.867799'
+    created_at: '2026-08-25T05:04:37.750859',
+    updated_at: '2026-08-25T05:04:37.750859'
   },
   {
     id: '',
@@ -27406,8 +17775,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867801',
-    updated_at: '2026-08-31T17:44:00.867802'
+    created_at: '2026-08-25T05:04:37.750861',
+    updated_at: '2026-08-25T05:04:37.750862'
   },
   {
     id: '',
@@ -27422,8 +17791,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867804',
-    updated_at: '2026-08-31T17:44:00.867804'
+    created_at: '2026-08-25T05:04:37.750863',
+    updated_at: '2026-08-25T05:04:37.750864'
   },
   {
     id: '',
@@ -27438,12 +17807,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867806',
-    updated_at: '2026-08-31T17:44:00.867807'
+    created_at: '2026-08-25T05:04:37.750866',
+    updated_at: '2026-08-25T05:04:37.750867'
   },
   {
     id: '',
-    name: 'Vogt's Flowers and Gifts',
+    name: `Vogt's Flowers and Gifts`,
     company: '',
     email: '',
     phone: '(810) 238-6487',
@@ -27454,8 +17823,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867811',
-    updated_at: '2026-08-31T17:44:00.867812'
+    created_at: '2026-08-25T05:04:37.750868',
+    updated_at: '2026-08-25T05:04:37.750872'
   },
   {
     id: '',
@@ -27470,12 +17839,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867814',
-    updated_at: '2026-08-31T17:44:00.867815'
+    created_at: '2026-08-25T05:04:37.750874',
+    updated_at: '2026-08-25T05:04:37.750874'
   },
   {
     id: '',
-    name: 'Anthea's Gardens of Flint - Formerly Carousel Family Florist',
+    name: `Anthea's Gardens of Flint - Formerly Carousel Family Florist`,
     company: '',
     email: '',
     phone: '(810) 732-6871',
@@ -27486,8 +17855,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867817',
-    updated_at: '2026-08-31T17:44:00.867818'
+    created_at: '2026-08-25T05:04:37.750876',
+    updated_at: '2026-08-25T05:04:37.750877'
   },
   {
     id: '',
@@ -27502,8 +17871,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867820',
-    updated_at: '2026-08-31T17:44:00.867821'
+    created_at: '2026-08-25T05:04:37.750879',
+    updated_at: '2026-08-25T05:04:37.750879'
   },
   {
     id: '',
@@ -27518,12 +17887,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867823',
-    updated_at: '2026-08-31T17:44:00.867824'
+    created_at: '2026-08-25T05:04:37.750881',
+    updated_at: '2026-08-25T05:04:37.750882'
   },
   {
     id: '',
-    name: 'Mary's Bouquet & Gifts',
+    name: `Mary's Bouquet & Gifts`,
     company: '',
     email: '',
     phone: '(810) 235-3822',
@@ -27534,12 +17903,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867826',
-    updated_at: '2026-08-31T17:44:00.867827'
+    created_at: '2026-08-25T05:04:37.750884',
+    updated_at: '2026-08-25T05:04:37.750884'
   },
   {
     id: '',
-    name: 'Fenner's Floral and Design Company',
+    name: `Fenner's Floral and Design Company`,
     company: '',
     email: '',
     phone: '(810) 820-2312',
@@ -27550,8 +17919,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867830',
-    updated_at: '2026-08-31T17:44:00.867831'
+    created_at: '2026-08-25T05:04:37.750889',
+    updated_at: '2026-08-25T05:04:37.750890'
   },
   {
     id: '',
@@ -27566,8 +17935,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867833',
-    updated_at: '2026-08-31T17:44:00.867834'
+    created_at: '2026-08-25T05:04:37.750892',
+    updated_at: '2026-08-25T05:04:37.750892'
   },
   {
     id: '',
@@ -27582,12 +17951,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867836',
-    updated_at: '2026-08-31T17:44:00.867837'
+    created_at: '2026-08-25T05:04:37.750894',
+    updated_at: '2026-08-25T05:04:37.750895'
   },
   {
     id: '',
-    name: 'Pink Lady's Slipper',
+    name: `Pink Lady's Slipper`,
     company: '',
     email: '',
     phone: '(810) 635-8164',
@@ -27598,12 +17967,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867839',
-    updated_at: '2026-08-31T17:44:00.867840'
+    created_at: '2026-08-25T05:04:37.750897',
+    updated_at: '2026-08-25T05:04:37.750897'
   },
   {
     id: '',
-    name: 'Vogt's Flowers of Davison',
+    name: `Vogt's Flowers of Davison`,
     company: '',
     email: '',
     phone: '(810) 653-3700',
@@ -27614,8 +17983,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867842',
-    updated_at: '2026-08-31T17:44:00.867843'
+    created_at: '2026-08-25T05:04:37.750899',
+    updated_at: '2026-08-25T05:04:37.750900'
   },
   {
     id: '',
@@ -27630,12 +17999,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867847',
-    updated_at: '2026-08-31T17:44:00.867848'
+    created_at: '2026-08-25T05:04:37.750901',
+    updated_at: '2026-08-25T05:04:37.750905'
   },
   {
     id: '',
-    name: 'MarySam's Florist and Plant Shop',
+    name: `MarySam's Florist and Plant Shop`,
     company: '',
     email: '',
     phone: '(810) 309-9694',
@@ -27646,8 +18015,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867850',
-    updated_at: '2026-08-31T17:44:00.867850'
+    created_at: '2026-08-25T05:04:37.750907',
+    updated_at: '2026-08-25T05:04:37.750907'
   },
   {
     id: '',
@@ -27662,8 +18031,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867853',
-    updated_at: '2026-08-31T17:44:00.867853'
+    created_at: '2026-08-25T05:04:37.750909',
+    updated_at: '2026-08-25T05:04:37.750910'
   },
   {
     id: '',
@@ -27678,8 +18047,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867855',
-    updated_at: '2026-08-31T17:44:00.867856'
+    created_at: '2026-08-25T05:04:37.750912',
+    updated_at: '2026-08-25T05:04:37.750912'
   },
   {
     id: '',
@@ -27694,12 +18063,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867858',
-    updated_at: '2026-08-31T17:44:00.867859'
+    created_at: '2026-08-25T05:04:37.750914',
+    updated_at: '2026-08-25T05:04:37.750915'
   },
   {
     id: '',
-    name: 'Ken's Greenhouse',
+    name: `Ken's Greenhouse`,
     company: '',
     email: '',
     phone: '(810) 732-8522',
@@ -27710,8 +18079,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867861',
-    updated_at: '2026-08-31T17:44:00.867862'
+    created_at: '2026-08-25T05:04:37.750916',
+    updated_at: '2026-08-25T05:04:37.750917'
   },
   {
     id: '',
@@ -27726,8 +18095,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867866',
-    updated_at: '2026-08-31T17:44:00.867867'
+    created_at: '2026-08-25T05:04:37.750922',
+    updated_at: '2026-08-25T05:04:37.750923'
   },
   {
     id: '',
@@ -27742,8 +18111,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867869',
-    updated_at: '2026-08-31T17:44:00.867870'
+    created_at: '2026-08-25T05:04:37.750924',
+    updated_at: '2026-08-25T05:04:37.750925'
   },
   {
     id: '',
@@ -27758,8 +18127,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867872',
-    updated_at: '2026-08-31T17:44:00.867873'
+    created_at: '2026-08-25T05:04:37.750927',
+    updated_at: '2026-08-25T05:04:37.750927'
   },
   {
     id: '',
@@ -27774,8 +18143,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867875',
-    updated_at: '2026-08-31T17:44:00.867876'
+    created_at: '2026-08-25T05:04:37.750929',
+    updated_at: '2026-08-25T05:04:37.750930'
   },
   {
     id: '',
@@ -27790,8 +18159,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867878',
-    updated_at: '2026-08-31T17:44:00.867879'
+    created_at: '2026-08-25T05:04:37.750932',
+    updated_at: '2026-08-25T05:04:37.750932'
   },
   {
     id: '',
@@ -27806,8 +18175,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867885',
-    updated_at: '2026-08-31T17:44:00.867886'
+    created_at: '2026-08-25T05:04:37.750935',
+    updated_at: '2026-08-25T05:04:37.750938'
   },
   {
     id: '',
@@ -27822,8 +18191,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867888',
-    updated_at: '2026-08-31T17:44:00.867889'
+    created_at: '2026-08-25T05:04:37.750940',
+    updated_at: '2026-08-25T05:04:37.750941'
   },
   {
     id: '',
@@ -27838,8 +18207,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867891',
-    updated_at: '2026-08-31T17:44:00.867892'
+    created_at: '2026-08-25T05:04:37.750942',
+    updated_at: '2026-08-25T05:04:37.750943'
   },
   {
     id: '',
@@ -27854,8 +18223,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867894',
-    updated_at: '2026-08-31T17:44:00.867895'
+    created_at: '2026-08-25T05:04:37.750945',
+    updated_at: '2026-08-25T05:04:37.750946'
   },
   {
     id: '',
@@ -27870,8 +18239,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867897',
-    updated_at: '2026-08-31T17:44:00.867898'
+    created_at: '2026-08-25T05:04:37.750947',
+    updated_at: '2026-08-25T05:04:37.750948'
   },
   {
     id: '',
@@ -27886,8 +18255,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867900',
-    updated_at: '2026-08-31T17:44:00.867901'
+    created_at: '2026-08-25T05:04:37.750950',
+    updated_at: '2026-08-25T05:04:37.750951'
   },
   {
     id: '',
@@ -27902,8 +18271,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867905',
-    updated_at: '2026-08-31T17:44:00.867906'
+    created_at: '2026-08-25T05:04:37.750955',
+    updated_at: '2026-08-25T05:04:37.750956'
   },
   {
     id: '',
@@ -27918,8 +18287,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867908',
-    updated_at: '2026-08-31T17:44:00.867909'
+    created_at: '2026-08-25T05:04:37.750958',
+    updated_at: '2026-08-25T05:04:37.750959'
   },
   {
     id: '',
@@ -27934,12 +18303,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867911',
-    updated_at: '2026-08-31T17:44:00.867912'
+    created_at: '2026-08-25T05:04:37.750961',
+    updated_at: '2026-08-25T05:04:37.750962'
   },
   {
     id: '',
-    name: 'Victoria's House',
+    name: `Victoria's House`,
     company: '',
     email: '',
     phone: '(810) 732-1946',
@@ -27950,8 +18319,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867914',
-    updated_at: '2026-08-31T17:44:00.867915'
+    created_at: '2026-08-25T05:04:37.750963',
+    updated_at: '2026-08-25T05:04:37.750964'
   },
   {
     id: '',
@@ -27966,8 +18335,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867917',
-    updated_at: '2026-08-31T17:44:00.867918'
+    created_at: '2026-08-25T05:04:37.750966',
+    updated_at: '2026-08-25T05:04:37.750967'
   },
   {
     id: '',
@@ -27982,8 +18351,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867922',
-    updated_at: '2026-08-31T17:44:00.867923'
+    created_at: '2026-08-25T05:04:37.750971',
+    updated_at: '2026-08-25T05:04:37.750972'
   },
   {
     id: '',
@@ -27998,8 +18367,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867925',
-    updated_at: '2026-08-31T17:44:00.867926'
+    created_at: '2026-08-25T05:04:37.750974',
+    updated_at: '2026-08-25T05:04:37.750974'
   },
   {
     id: '',
@@ -28014,8 +18383,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867928',
-    updated_at: '2026-08-31T17:44:00.867929'
+    created_at: '2026-08-25T05:04:37.750976',
+    updated_at: '2026-08-25T05:04:37.750977'
   },
   {
     id: '',
@@ -28030,8 +18399,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867931',
-    updated_at: '2026-08-31T17:44:00.867932'
+    created_at: '2026-08-25T05:04:37.750978',
+    updated_at: '2026-08-25T05:04:37.750979'
   },
   {
     id: '',
@@ -28046,8 +18415,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867934',
-    updated_at: '2026-08-31T17:44:00.867935'
+    created_at: '2026-08-25T05:04:37.750981',
+    updated_at: '2026-08-25T05:04:37.750982'
   },
   {
     id: '',
@@ -28062,8 +18431,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867939',
-    updated_at: '2026-08-31T17:44:00.867940'
+    created_at: '2026-08-25T05:04:37.750989',
+    updated_at: '2026-08-25T05:04:37.750989'
   },
   {
     id: '',
@@ -28078,8 +18447,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867942',
-    updated_at: '2026-08-31T17:44:00.867943'
+    created_at: '2026-08-25T05:04:37.750991',
+    updated_at: '2026-08-25T05:04:37.750992'
   },
   {
     id: '',
@@ -28094,8 +18463,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867945',
-    updated_at: '2026-08-31T17:44:00.867946'
+    created_at: '2026-08-25T05:04:37.750994',
+    updated_at: '2026-08-25T05:04:37.750995'
   },
   {
     id: '',
@@ -28110,8 +18479,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867948',
-    updated_at: '2026-08-31T17:44:00.867948'
+    created_at: '2026-08-25T05:04:37.750996',
+    updated_at: '2026-08-25T05:04:37.750997'
   },
   {
     id: '',
@@ -28126,8 +18495,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867951',
-    updated_at: '2026-08-31T17:44:00.867951'
+    created_at: '2026-08-25T05:04:37.750999',
+    updated_at: '2026-08-25T05:04:37.751000'
   },
   {
     id: '',
@@ -28142,8 +18511,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867954',
-    updated_at: '2026-08-31T17:44:00.867954'
+    created_at: '2026-08-25T05:04:37.751001',
+    updated_at: '2026-08-25T05:04:37.751002'
   },
   {
     id: '',
@@ -28158,8 +18527,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867958',
-    updated_at: '2026-08-31T17:44:00.867959'
+    created_at: '2026-08-25T05:04:37.751007',
+    updated_at: '2026-08-25T05:04:37.751008'
   },
   {
     id: '',
@@ -28174,8 +18543,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867961',
-    updated_at: '2026-08-31T17:44:00.867962'
+    created_at: '2026-08-25T05:04:37.751009',
+    updated_at: '2026-08-25T05:04:37.751010'
   },
   {
     id: '',
@@ -28190,8 +18559,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867964',
-    updated_at: '2026-08-31T17:44:00.867965'
+    created_at: '2026-08-25T05:04:37.751012',
+    updated_at: '2026-08-25T05:04:37.751012'
   },
   {
     id: '',
@@ -28206,8 +18575,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867967',
-    updated_at: '2026-08-31T17:44:00.867968'
+    created_at: '2026-08-25T05:04:37.751014',
+    updated_at: '2026-08-25T05:04:37.751015'
   },
   {
     id: '',
@@ -28222,12 +18591,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867970',
-    updated_at: '2026-08-31T17:44:00.867971'
+    created_at: '2026-08-25T05:04:37.751017',
+    updated_at: '2026-08-25T05:04:37.751017'
   },
   {
     id: '',
-    name: 'Walker June Calhoun CPA's, PC',
+    name: `Walker June Calhoun CPA's, PC`,
     company: '',
     email: '',
     phone: '(810) 743-5000',
@@ -28238,8 +18607,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867975',
-    updated_at: '2026-08-31T17:44:00.867975'
+    created_at: '2026-08-25T05:04:37.751019',
+    updated_at: '2026-08-25T05:04:37.751022'
   },
   {
     id: '',
@@ -28254,8 +18623,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867978',
-    updated_at: '2026-08-31T17:44:00.867979'
+    created_at: '2026-08-25T05:04:37.751024',
+    updated_at: '2026-08-25T05:04:37.751025'
   },
   {
     id: '',
@@ -28270,8 +18639,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867981',
-    updated_at: '2026-08-31T17:44:00.867982'
+    created_at: '2026-08-25T05:04:37.751027',
+    updated_at: '2026-08-25T05:04:37.751028'
   },
   {
     id: '',
@@ -28286,8 +18655,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867984',
-    updated_at: '2026-08-31T17:44:00.867985'
+    created_at: '2026-08-25T05:04:37.751029',
+    updated_at: '2026-08-25T05:04:37.751030'
   },
   {
     id: '',
@@ -28302,8 +18671,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867987',
-    updated_at: '2026-08-31T17:44:00.867988'
+    created_at: '2026-08-25T05:04:37.751032',
+    updated_at: '2026-08-25T05:04:37.751032'
   },
   {
     id: '',
@@ -28318,8 +18687,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867990',
-    updated_at: '2026-08-31T17:44:00.867991'
+    created_at: '2026-08-25T05:04:37.751034',
+    updated_at: '2026-08-25T05:04:37.751035'
   },
   {
     id: '',
@@ -28334,8 +18703,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867994',
-    updated_at: '2026-08-31T17:44:00.867995'
+    created_at: '2026-08-25T05:04:37.751039',
+    updated_at: '2026-08-25T05:04:37.751040'
   },
   {
     id: '',
@@ -28350,8 +18719,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.867997',
-    updated_at: '2026-08-31T17:44:00.867998'
+    created_at: '2026-08-25T05:04:37.751042',
+    updated_at: '2026-08-25T05:04:37.751043'
   },
   {
     id: '',
@@ -28366,8 +18735,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868001',
-    updated_at: '2026-08-31T17:44:00.868001'
+    created_at: '2026-08-25T05:04:37.751044',
+    updated_at: '2026-08-25T05:04:37.751045'
   },
   {
     id: '',
@@ -28382,8 +18751,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868004',
-    updated_at: '2026-08-31T17:44:00.868004'
+    created_at: '2026-08-25T05:04:37.751047',
+    updated_at: '2026-08-25T05:04:37.751047'
   },
   {
     id: '',
@@ -28398,8 +18767,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868007',
-    updated_at: '2026-08-31T17:44:00.868007'
+    created_at: '2026-08-25T05:04:37.751049',
+    updated_at: '2026-08-25T05:04:37.751050'
   },
   {
     id: '',
@@ -28414,8 +18783,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868011',
-    updated_at: '2026-08-31T17:44:00.868012'
+    created_at: '2026-08-25T05:04:37.751054',
+    updated_at: '2026-08-25T05:04:37.751055'
   },
   {
     id: '',
@@ -28430,8 +18799,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868014',
-    updated_at: '2026-08-31T17:44:00.868015'
+    created_at: '2026-08-25T05:04:37.751057',
+    updated_at: '2026-08-25T05:04:37.751057'
   },
   {
     id: '',
@@ -28446,8 +18815,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868017',
-    updated_at: '2026-08-31T17:44:00.868018'
+    created_at: '2026-08-25T05:04:37.751059',
+    updated_at: '2026-08-25T05:04:37.751060'
   },
   {
     id: '',
@@ -28462,8 +18831,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868020',
-    updated_at: '2026-08-31T17:44:00.868021'
+    created_at: '2026-08-25T05:04:37.751062',
+    updated_at: '2026-08-25T05:04:37.751062'
   },
   {
     id: '',
@@ -28478,8 +18847,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868023',
-    updated_at: '2026-08-31T17:44:00.868024'
+    created_at: '2026-08-25T05:04:37.751064',
+    updated_at: '2026-08-25T05:04:37.751065'
   },
   {
     id: '',
@@ -28494,8 +18863,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868026',
-    updated_at: '2026-08-31T17:44:00.868027'
+    created_at: '2026-08-25T05:04:37.751067',
+    updated_at: '2026-08-25T05:04:37.751067'
   },
   {
     id: '',
@@ -28510,8 +18879,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868031',
-    updated_at: '2026-08-31T17:44:00.868032'
+    created_at: '2026-08-25T05:04:37.751072',
+    updated_at: '2026-08-25T05:04:37.751072'
   },
   {
     id: '',
@@ -28526,8 +18895,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868034',
-    updated_at: '2026-08-31T17:44:00.868035'
+    created_at: '2026-08-25T05:04:37.751074',
+    updated_at: '2026-08-25T05:04:37.751075'
   },
   {
     id: '',
@@ -28542,8 +18911,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868037',
-    updated_at: '2026-08-31T17:44:00.868038'
+    created_at: '2026-08-25T05:04:37.751082',
+    updated_at: '2026-08-25T05:04:37.751083'
   },
   {
     id: '',
@@ -28558,8 +18927,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868040',
-    updated_at: '2026-08-31T17:44:00.868041'
+    created_at: '2026-08-25T05:04:37.751086',
+    updated_at: '2026-08-25T05:04:37.751086'
   },
   {
     id: '',
@@ -28574,8 +18943,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868043',
-    updated_at: '2026-08-31T17:44:00.868044'
+    created_at: '2026-08-25T05:04:37.751088',
+    updated_at: '2026-08-25T05:04:37.751089'
   },
   {
     id: '',
@@ -28590,8 +18959,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868048',
-    updated_at: '2026-08-31T17:44:00.868049'
+    created_at: '2026-08-25T05:04:37.751094',
+    updated_at: '2026-08-25T05:04:37.751095'
   },
   {
     id: '',
@@ -28606,8 +18975,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868051',
-    updated_at: '2026-08-31T17:44:00.868052'
+    created_at: '2026-08-25T05:04:37.751097',
+    updated_at: '2026-08-25T05:04:37.751097'
   },
   {
     id: '',
@@ -28622,8 +18991,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868054',
-    updated_at: '2026-08-31T17:44:00.868055'
+    created_at: '2026-08-25T05:04:37.751099',
+    updated_at: '2026-08-25T05:04:37.751100'
   },
   {
     id: '',
@@ -28638,8 +19007,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868057',
-    updated_at: '2026-08-31T17:44:00.868058'
+    created_at: '2026-08-25T05:04:37.751102',
+    updated_at: '2026-08-25T05:04:37.751102'
   },
   {
     id: '',
@@ -28654,8 +19023,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868060',
-    updated_at: '2026-08-31T17:44:00.868061'
+    created_at: '2026-08-25T05:04:37.751104',
+    updated_at: '2026-08-25T05:04:37.751105'
   },
   {
     id: '',
@@ -28670,8 +19039,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868064',
-    updated_at: '2026-08-31T17:44:00.868065'
+    created_at: '2026-08-25T05:04:37.751110',
+    updated_at: '2026-08-25T05:04:37.751111'
   },
   {
     id: '',
@@ -28686,8 +19055,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868067',
-    updated_at: '2026-08-31T17:44:00.868068'
+    created_at: '2026-08-25T05:04:37.751112',
+    updated_at: '2026-08-25T05:04:37.751113'
   },
   {
     id: '',
@@ -28702,8 +19071,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868070',
-    updated_at: '2026-08-31T17:44:00.868071'
+    created_at: '2026-08-25T05:04:37.751115',
+    updated_at: '2026-08-25T05:04:37.751116'
   },
   {
     id: '',
@@ -28718,8 +19087,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868073',
-    updated_at: '2026-08-31T17:44:00.868074'
+    created_at: '2026-08-25T05:04:37.751117',
+    updated_at: '2026-08-25T05:04:37.751118'
   },
   {
     id: '',
@@ -28734,8 +19103,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868076',
-    updated_at: '2026-08-31T17:44:00.868077'
+    created_at: '2026-08-25T05:04:37.751120',
+    updated_at: '2026-08-25T05:04:37.751121'
   },
   {
     id: '',
@@ -28750,8 +19119,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868079',
-    updated_at: '2026-08-31T17:44:00.868080'
+    created_at: '2026-08-25T05:04:37.751122',
+    updated_at: '2026-08-25T05:04:37.751123'
   },
   {
     id: '',
@@ -28766,8 +19135,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868084',
-    updated_at: '2026-08-31T17:44:00.868085'
+    created_at: '2026-08-25T05:04:37.751127',
+    updated_at: '2026-08-25T05:04:37.751128'
   },
   {
     id: '',
@@ -28782,8 +19151,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868087',
-    updated_at: '2026-08-31T17:44:00.868088'
+    created_at: '2026-08-25T05:04:37.751130',
+    updated_at: '2026-08-25T05:04:37.751131'
   },
   {
     id: '',
@@ -28798,8 +19167,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868090',
-    updated_at: '2026-08-31T17:44:00.868091'
+    created_at: '2026-08-25T05:04:37.751132',
+    updated_at: '2026-08-25T05:04:37.751133'
   },
   {
     id: '',
@@ -28814,8 +19183,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868093',
-    updated_at: '2026-08-31T17:44:00.868094'
+    created_at: '2026-08-25T05:04:37.751135',
+    updated_at: '2026-08-25T05:04:37.751135'
   },
   {
     id: '',
@@ -28830,8 +19199,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868096',
-    updated_at: '2026-08-31T17:44:00.868097'
+    created_at: '2026-08-25T05:04:37.751137',
+    updated_at: '2026-08-25T05:04:37.751138'
   },
   {
     id: '',
@@ -28846,8 +19215,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868101',
-    updated_at: '2026-08-31T17:44:00.868102'
+    created_at: '2026-08-25T05:04:37.751142',
+    updated_at: '2026-08-25T05:04:37.751143'
   },
   {
     id: '',
@@ -28862,8 +19231,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868104',
-    updated_at: '2026-08-31T17:44:00.868105'
+    created_at: '2026-08-25T05:04:37.751145',
+    updated_at: '2026-08-25T05:04:37.751146'
   },
   {
     id: '',
@@ -28878,8 +19247,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868107',
-    updated_at: '2026-08-31T17:44:00.868108'
+    created_at: '2026-08-25T05:04:37.751148',
+    updated_at: '2026-08-25T05:04:37.751148'
   },
   {
     id: '',
@@ -28894,8 +19263,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868110',
-    updated_at: '2026-08-31T17:44:00.868110'
+    created_at: '2026-08-25T05:04:37.751150',
+    updated_at: '2026-08-25T05:04:37.751151'
   },
   {
     id: '',
@@ -28910,8 +19279,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868113',
-    updated_at: '2026-08-31T17:44:00.868113'
+    created_at: '2026-08-25T05:04:37.751153',
+    updated_at: '2026-08-25T05:04:37.751153'
   },
   {
     id: '',
@@ -28926,8 +19295,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868117',
-    updated_at: '2026-08-31T17:44:00.868118'
+    created_at: '2026-08-25T05:04:37.751155',
+    updated_at: '2026-08-25T05:04:37.751158'
   },
   {
     id: '',
@@ -28942,8 +19311,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868120',
-    updated_at: '2026-08-31T17:44:00.868121'
+    created_at: '2026-08-25T05:04:37.751161',
+    updated_at: '2026-08-25T05:04:37.751161'
   },
   {
     id: '',
@@ -28958,8 +19327,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868123',
-    updated_at: '2026-08-31T17:44:00.868132'
+    created_at: '2026-08-25T05:04:37.751163',
+    updated_at: '2026-08-25T05:04:37.751164'
   },
   {
     id: '',
@@ -28974,8 +19343,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868135',
-    updated_at: '2026-08-31T17:44:00.868136'
+    created_at: '2026-08-25T05:04:37.751165',
+    updated_at: '2026-08-25T05:04:37.751166'
   },
   {
     id: '',
@@ -28990,8 +19359,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868138',
-    updated_at: '2026-08-31T17:44:00.868139'
+    created_at: '2026-08-25T05:04:37.751168',
+    updated_at: '2026-08-25T05:04:37.751169'
   },
   {
     id: '',
@@ -29006,8 +19375,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868141',
-    updated_at: '2026-08-31T17:44:00.868142'
+    created_at: '2026-08-25T05:04:37.751170',
+    updated_at: '2026-08-25T05:04:37.751171'
   },
   {
     id: '',
@@ -29022,8 +19391,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868147',
-    updated_at: '2026-08-31T17:44:00.868147'
+    created_at: '2026-08-25T05:04:37.751175',
+    updated_at: '2026-08-25T05:04:37.751176'
   },
   {
     id: '',
@@ -29038,8 +19407,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868150',
-    updated_at: '2026-08-31T17:44:00.868151'
+    created_at: '2026-08-25T05:04:37.751178',
+    updated_at: '2026-08-25T05:04:37.751179'
   },
   {
     id: '',
@@ -29054,12 +19423,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868153',
-    updated_at: '2026-08-31T17:44:00.868154'
+    created_at: '2026-08-25T05:04:37.751181',
+    updated_at: '2026-08-25T05:04:37.751181'
   },
   {
     id: '',
-    name: 'Zari's Loving Touch',
+    name: `Zari's Loving Touch`,
     company: '',
     email: '',
     phone: '',
@@ -29070,8 +19439,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868156',
-    updated_at: '2026-08-31T17:44:00.868157'
+    created_at: '2026-08-25T05:04:37.751183',
+    updated_at: '2026-08-25T05:04:37.751184'
   },
   {
     id: '',
@@ -29086,8 +19455,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868159',
-    updated_at: '2026-08-31T17:44:00.868160'
+    created_at: '2026-08-25T05:04:37.751186',
+    updated_at: '2026-08-25T05:04:37.751186'
   },
   {
     id: '',
@@ -29102,8 +19471,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868164',
-    updated_at: '2026-08-31T17:44:00.868165'
+    created_at: '2026-08-25T05:04:37.751191',
+    updated_at: '2026-08-25T05:04:37.751192'
   },
   {
     id: '',
@@ -29118,8 +19487,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868167',
-    updated_at: '2026-08-31T17:44:00.868168'
+    created_at: '2026-08-25T05:04:37.751194',
+    updated_at: '2026-08-25T05:04:37.751194'
   },
   {
     id: '',
@@ -29134,8 +19503,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868170',
-    updated_at: '2026-08-31T17:44:00.868171'
+    created_at: '2026-08-25T05:04:37.751196',
+    updated_at: '2026-08-25T05:04:37.751197'
   },
   {
     id: '',
@@ -29150,8 +19519,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868173',
-    updated_at: '2026-08-31T17:44:00.868174'
+    created_at: '2026-08-25T05:04:37.751199',
+    updated_at: '2026-08-25T05:04:37.751200'
   },
   {
     id: '',
@@ -29166,8 +19535,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868176',
-    updated_at: '2026-08-31T17:44:00.868177'
+    created_at: '2026-08-25T05:04:37.751201',
+    updated_at: '2026-08-25T05:04:37.751202'
   },
   {
     id: '',
@@ -29182,8 +19551,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868181',
-    updated_at: '2026-08-31T17:44:00.868182'
+    created_at: '2026-08-25T05:04:37.751206',
+    updated_at: '2026-08-25T05:04:37.751207'
   },
   {
     id: '',
@@ -29198,8 +19567,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868184',
-    updated_at: '2026-08-31T17:44:00.868185'
+    created_at: '2026-08-25T05:04:37.751209',
+    updated_at: '2026-08-25T05:04:37.751210'
   },
   {
     id: '',
@@ -29214,8 +19583,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868187',
-    updated_at: '2026-08-31T17:44:00.868188'
+    created_at: '2026-08-25T05:04:37.751212',
+    updated_at: '2026-08-25T05:04:37.751212'
   },
   {
     id: '',
@@ -29230,8 +19599,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868190',
-    updated_at: '2026-08-31T17:44:00.868191'
+    created_at: '2026-08-25T05:04:37.751214',
+    updated_at: '2026-08-25T05:04:37.751215'
   },
   {
     id: '',
@@ -29246,8 +19615,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868193',
-    updated_at: '2026-08-31T17:44:00.868194'
+    created_at: '2026-08-25T05:04:37.751216',
+    updated_at: '2026-08-25T05:04:37.751217'
   },
   {
     id: '',
@@ -29262,8 +19631,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868198',
-    updated_at: '2026-08-31T17:44:00.868199'
+    created_at: '2026-08-25T05:04:37.751222',
+    updated_at: '2026-08-25T05:04:37.751223'
   },
   {
     id: '',
@@ -29278,8 +19647,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868201',
-    updated_at: '2026-08-31T17:44:00.868202'
+    created_at: '2026-08-25T05:04:37.751224',
+    updated_at: '2026-08-25T05:04:37.751225'
   },
   {
     id: '',
@@ -29294,8 +19663,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868204',
-    updated_at: '2026-08-31T17:44:00.868205'
+    created_at: '2026-08-25T05:04:37.751227',
+    updated_at: '2026-08-25T05:04:37.751228'
   },
   {
     id: '',
@@ -29310,8 +19679,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868207',
-    updated_at: '2026-08-31T17:44:00.868208'
+    created_at: '2026-08-25T05:04:37.751229',
+    updated_at: '2026-08-25T05:04:37.751230'
   },
   {
     id: '',
@@ -29326,8 +19695,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868210',
-    updated_at: '2026-08-31T17:44:00.868211'
+    created_at: '2026-08-25T05:04:37.751232',
+    updated_at: '2026-08-25T05:04:37.751232'
   },
   {
     id: '',
@@ -29342,8 +19711,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868213',
-    updated_at: '2026-08-31T17:44:00.868216'
+    created_at: '2026-08-25T05:04:37.751234',
+    updated_at: '2026-08-25T05:04:37.751235'
   },
   {
     id: '',
@@ -29358,8 +19727,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868218',
-    updated_at: '2026-08-31T17:44:00.868219'
+    created_at: '2026-08-25T05:04:37.751240',
+    updated_at: '2026-08-25T05:04:37.751241'
   },
   {
     id: '',
@@ -29374,8 +19743,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868221',
-    updated_at: '2026-08-31T17:44:00.868222'
+    created_at: '2026-08-25T05:04:37.751242',
+    updated_at: '2026-08-25T05:04:37.751243'
   },
   {
     id: '',
@@ -29390,8 +19759,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868224',
-    updated_at: '2026-08-31T17:44:00.868225'
+    created_at: '2026-08-25T05:04:37.751245',
+    updated_at: '2026-08-25T05:04:37.751246'
   },
   {
     id: '',
@@ -29406,8 +19775,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868227',
-    updated_at: '2026-08-31T17:44:00.868228'
+    created_at: '2026-08-25T05:04:37.751247',
+    updated_at: '2026-08-25T05:04:37.751248'
   },
   {
     id: '',
@@ -29422,8 +19791,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868230',
-    updated_at: '2026-08-31T17:44:00.868231'
+    created_at: '2026-08-25T05:04:37.751250',
+    updated_at: '2026-08-25T05:04:37.751250'
   },
   {
     id: '',
@@ -29438,8 +19807,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868235',
-    updated_at: '2026-08-31T17:44:00.868236'
+    created_at: '2026-08-25T05:04:37.751255',
+    updated_at: '2026-08-25T05:04:37.751256'
   },
   {
     id: '',
@@ -29454,8 +19823,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868238',
-    updated_at: '2026-08-31T17:44:00.868239'
+    created_at: '2026-08-25T05:04:37.751258',
+    updated_at: '2026-08-25T05:04:37.751258'
   },
   {
     id: '',
@@ -29470,8 +19839,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868241',
-    updated_at: '2026-08-31T17:44:00.868242'
+    created_at: '2026-08-25T05:04:37.751260',
+    updated_at: '2026-08-25T05:04:37.751261'
   },
   {
     id: '',
@@ -29486,8 +19855,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868244',
-    updated_at: '2026-08-31T17:44:00.868245'
+    created_at: '2026-08-25T05:04:37.751263',
+    updated_at: '2026-08-25T05:04:37.751263'
   },
   {
     id: '',
@@ -29502,8 +19871,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868247',
-    updated_at: '2026-08-31T17:44:00.868248'
+    created_at: '2026-08-25T05:04:37.751265',
+    updated_at: '2026-08-25T05:04:37.751266'
   },
   {
     id: '',
@@ -29518,8 +19887,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868252',
-    updated_at: '2026-08-31T17:44:00.868253'
+    created_at: '2026-08-25T05:04:37.751270',
+    updated_at: '2026-08-25T05:04:37.751271'
   },
   {
     id: '',
@@ -29534,8 +19903,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868255',
-    updated_at: '2026-08-31T17:44:00.868256'
+    created_at: '2026-08-25T05:04:37.751273',
+    updated_at: '2026-08-25T05:04:37.751274'
   },
   {
     id: '',
@@ -29550,8 +19919,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868258',
-    updated_at: '2026-08-31T17:44:00.868259'
+    created_at: '2026-08-25T05:04:37.751275',
+    updated_at: '2026-08-25T05:04:37.751276'
   },
   {
     id: '',
@@ -29566,12 +19935,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868261',
-    updated_at: '2026-08-31T17:44:00.868262'
+    created_at: '2026-08-25T05:04:37.751278',
+    updated_at: '2026-08-25T05:04:37.751278'
   },
   {
     id: '',
-    name: 'Morgan's Auto Repair',
+    name: `Morgan's Auto Repair`,
     company: '',
     email: '',
     phone: '(989) 892-0567',
@@ -29582,8 +19951,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868264',
-    updated_at: '2026-08-31T17:44:00.868265'
+    created_at: '2026-08-25T05:04:37.751280',
+    updated_at: '2026-08-25T05:04:37.751281'
   },
   {
     id: '',
@@ -29598,12 +19967,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868267',
-    updated_at: '2026-08-31T17:44:00.868268'
+    created_at: '2026-08-25T05:04:37.751283',
+    updated_at: '2026-08-25T05:04:37.751283'
   },
   {
     id: '',
-    name: 'Ty's Auto Service LLC',
+    name: `Ty's Auto Service LLC`,
     company: '',
     email: '',
     phone: '(989) 397-6550',
@@ -29614,8 +19983,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868272',
-    updated_at: '2026-08-31T17:44:00.868273'
+    created_at: '2026-08-25T05:04:37.751288',
+    updated_at: '2026-08-25T05:04:37.751289'
   },
   {
     id: '',
@@ -29630,8 +19999,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868275',
-    updated_at: '2026-08-31T17:44:00.868276'
+    created_at: '2026-08-25T05:04:37.751291',
+    updated_at: '2026-08-25T05:04:37.751292'
   },
   {
     id: '',
@@ -29646,8 +20015,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868278',
-    updated_at: '2026-08-31T17:44:00.868279'
+    created_at: '2026-08-25T05:04:37.751293',
+    updated_at: '2026-08-25T05:04:37.751294'
   },
   {
     id: '',
@@ -29662,8 +20031,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868281',
-    updated_at: '2026-08-31T17:44:00.868282'
+    created_at: '2026-08-25T05:04:37.751296',
+    updated_at: '2026-08-25T05:04:37.751297'
   },
   {
     id: '',
@@ -29678,8 +20047,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868284',
-    updated_at: '2026-08-31T17:44:00.868285'
+    created_at: '2026-08-25T05:04:37.751298',
+    updated_at: '2026-08-25T05:04:37.751299'
   },
   {
     id: '',
@@ -29694,8 +20063,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868289',
-    updated_at: '2026-08-31T17:44:00.868290'
+    created_at: '2026-08-25T05:04:37.751303',
+    updated_at: '2026-08-25T05:04:37.751304'
   },
   {
     id: '',
@@ -29710,8 +20079,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868292',
-    updated_at: '2026-08-31T17:44:00.868293'
+    created_at: '2026-08-25T05:04:37.751306',
+    updated_at: '2026-08-25T05:04:37.751307'
   },
   {
     id: '',
@@ -29726,8 +20095,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868295',
-    updated_at: '2026-08-31T17:44:00.868296'
+    created_at: '2026-08-25T05:04:37.751309',
+    updated_at: '2026-08-25T05:04:37.751309'
   },
   {
     id: '',
@@ -29742,8 +20111,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868298',
-    updated_at: '2026-08-31T17:44:00.868299'
+    created_at: '2026-08-25T05:04:37.751311',
+    updated_at: '2026-08-25T05:04:37.751312'
   },
   {
     id: '',
@@ -29758,8 +20127,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868301',
-    updated_at: '2026-08-31T17:44:00.868302'
+    created_at: '2026-08-25T05:04:37.751314',
+    updated_at: '2026-08-25T05:04:37.751314'
   },
   {
     id: '',
@@ -29774,8 +20143,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868304',
-    updated_at: '2026-08-31T17:44:00.868305'
+    created_at: '2026-08-25T05:04:37.751316',
+    updated_at: '2026-08-25T05:04:37.751317'
   },
   {
     id: '',
@@ -29790,8 +20159,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868309',
-    updated_at: '2026-08-31T17:44:00.868310'
+    created_at: '2026-08-25T05:04:37.751321',
+    updated_at: '2026-08-25T05:04:37.751322'
   },
   {
     id: '',
@@ -29806,8 +20175,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868312',
-    updated_at: '2026-08-31T17:44:00.868313'
+    created_at: '2026-08-25T05:04:37.751324',
+    updated_at: '2026-08-25T05:04:37.751325'
   },
   {
     id: '',
@@ -29822,8 +20191,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868315',
-    updated_at: '2026-08-31T17:44:00.868316'
+    created_at: '2026-08-25T05:04:37.751326',
+    updated_at: '2026-08-25T05:04:37.751327'
   },
   {
     id: '',
@@ -29838,12 +20207,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868318',
-    updated_at: '2026-08-31T17:44:00.868319'
+    created_at: '2026-08-25T05:04:37.751329',
+    updated_at: '2026-08-25T05:04:37.751329'
   },
   {
     id: '',
-    name: 'Suzie Q's Breakfast Nook',
+    name: `Suzie Q's Breakfast Nook`,
     company: '',
     email: '',
     phone: '(989) 402-1792',
@@ -29854,8 +20223,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868321',
-    updated_at: '2026-08-31T17:44:00.868322'
+    created_at: '2026-08-25T05:04:37.751331',
+    updated_at: '2026-08-25T05:04:37.751332'
   },
   {
     id: '',
@@ -29870,8 +20239,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868326',
-    updated_at: '2026-08-31T17:44:00.868326'
+    created_at: '2026-08-25T05:04:37.751337',
+    updated_at: '2026-08-25T05:04:37.751337'
   },
   {
     id: '',
@@ -29886,12 +20255,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868328',
-    updated_at: '2026-08-31T17:44:00.868329'
+    created_at: '2026-08-25T05:04:37.751339',
+    updated_at: '2026-08-25T05:04:37.751340'
   },
   {
     id: '',
-    name: 'Paul's Flowers',
+    name: `Paul's Flowers`,
     company: '',
     email: '',
     phone: '(989) 894-1199',
@@ -29902,8 +20271,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868331',
-    updated_at: '2026-08-31T17:44:00.868332'
+    created_at: '2026-08-25T05:04:37.751342',
+    updated_at: '2026-08-25T05:04:37.751342'
   },
   {
     id: '',
@@ -29918,8 +20287,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868334',
-    updated_at: '2026-08-31T17:44:00.868335'
+    created_at: '2026-08-25T05:04:37.751344',
+    updated_at: '2026-08-25T05:04:37.751345'
   },
   {
     id: '',
@@ -29934,8 +20303,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868337',
-    updated_at: '2026-08-31T17:44:00.868338'
+    created_at: '2026-08-25T05:04:37.751347',
+    updated_at: '2026-08-25T05:04:37.751347'
   },
   {
     id: '',
@@ -29950,8 +20319,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868342',
-    updated_at: '2026-08-31T17:44:00.868343'
+    created_at: '2026-08-25T05:04:37.751350',
+    updated_at: '2026-08-25T05:04:37.751353'
   },
   {
     id: '',
@@ -29966,8 +20335,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868345',
-    updated_at: '2026-08-31T17:44:00.868346'
+    created_at: '2026-08-25T05:04:37.751355',
+    updated_at: '2026-08-25T05:04:37.751355'
   },
   {
     id: '',
@@ -29982,8 +20351,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868348',
-    updated_at: '2026-08-31T17:44:00.868349'
+    created_at: '2026-08-25T05:04:37.751357',
+    updated_at: '2026-08-25T05:04:37.751358'
   },
   {
     id: '',
@@ -29998,12 +20367,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868351',
-    updated_at: '2026-08-31T17:44:00.868352'
+    created_at: '2026-08-25T05:04:37.751359',
+    updated_at: '2026-08-25T05:04:37.751360'
   },
   {
     id: '',
-    name: 'Hank's Flowerland',
+    name: `Hank's Flowerland`,
     company: '',
     email: '',
     phone: '(989) 754-7481',
@@ -30014,8 +20383,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868354',
-    updated_at: '2026-08-31T17:44:00.868354'
+    created_at: '2026-08-25T05:04:37.751362',
+    updated_at: '2026-08-25T05:04:37.751362'
   },
   {
     id: '',
@@ -30030,8 +20399,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868356',
-    updated_at: '2026-08-31T17:44:00.868357'
+    created_at: '2026-08-25T05:04:37.751364',
+    updated_at: '2026-08-25T05:04:37.751365'
   },
   {
     id: '',
@@ -30046,12 +20415,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868361',
-    updated_at: '2026-08-31T17:44:00.868362'
+    created_at: '2026-08-25T05:04:37.751369',
+    updated_at: '2026-08-25T05:04:37.751370'
   },
   {
     id: '',
-    name: 'Erika's Flowers',
+    name: `Erika's Flowers`,
     company: '',
     email: '',
     phone: '(989) 755-9330',
@@ -30062,12 +20431,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868364',
-    updated_at: '2026-08-31T17:44:00.868365'
+    created_at: '2026-08-25T05:04:37.751372',
+    updated_at: '2026-08-25T05:04:37.751373'
   },
   {
     id: '',
-    name: 'Auburn's Flowers From the Heart',
+    name: `Auburn's Flowers From the Heart`,
     company: '',
     email: '',
     phone: '(989) 662-7818',
@@ -30078,8 +20447,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868367',
-    updated_at: '2026-08-31T17:44:00.868368'
+    created_at: '2026-08-25T05:04:37.751374',
+    updated_at: '2026-08-25T05:04:37.751375'
   },
   {
     id: '',
@@ -30094,8 +20463,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868370',
-    updated_at: '2026-08-31T17:44:00.868371'
+    created_at: '2026-08-25T05:04:37.751377',
+    updated_at: '2026-08-25T05:04:37.751378'
   },
   {
     id: '',
@@ -30110,8 +20479,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868373',
-    updated_at: '2026-08-31T17:44:00.868374'
+    created_at: '2026-08-25T05:04:37.751379',
+    updated_at: '2026-08-25T05:04:37.751380'
   },
   {
     id: '',
@@ -30126,8 +20495,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.868376',
-    updated_at: '2026-08-31T17:44:00.868377'
+    created_at: '2026-08-25T05:04:37.751382',
+    updated_at: '2026-08-25T05:04:37.751382'
   },
   {
     id: '',
@@ -30142,8 +20511,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869219',
-    updated_at: '2026-08-31T17:44:00.869221'
+    created_at: '2026-08-25T05:04:37.751387',
+    updated_at: '2026-08-25T05:04:37.751388'
   },
   {
     id: '',
@@ -30158,8 +20527,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869224',
-    updated_at: '2026-08-31T17:44:00.869224'
+    created_at: '2026-08-25T05:04:37.751390',
+    updated_at: '2026-08-25T05:04:37.751390'
   },
   {
     id: '',
@@ -30174,8 +20543,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869244',
-    updated_at: '2026-08-31T17:44:00.869248'
+    created_at: '2026-08-25T05:04:37.751392',
+    updated_at: '2026-08-25T05:04:37.751393'
   },
   {
     id: '',
@@ -30190,8 +20559,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869250',
-    updated_at: '2026-08-31T17:44:00.869251'
+    created_at: '2026-08-25T05:04:37.751395',
+    updated_at: '2026-08-25T05:04:37.751396'
   },
   {
     id: '',
@@ -30206,8 +20575,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869254',
-    updated_at: '2026-08-31T17:44:00.869254'
+    created_at: '2026-08-25T05:04:37.751397',
+    updated_at: '2026-08-25T05:04:37.751398'
   },
   {
     id: '',
@@ -30222,8 +20591,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869257',
-    updated_at: '2026-08-31T17:44:00.869258'
+    created_at: '2026-08-25T05:04:37.751403',
+    updated_at: '2026-08-25T05:04:37.751403'
   },
   {
     id: '',
@@ -30238,8 +20607,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869260',
-    updated_at: '2026-08-31T17:44:00.869261'
+    created_at: '2026-08-25T05:04:37.751405',
+    updated_at: '2026-08-25T05:04:37.751406'
   },
   {
     id: '',
@@ -30254,8 +20623,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869263',
-    updated_at: '2026-08-31T17:44:00.869274'
+    created_at: '2026-08-25T05:04:37.751407',
+    updated_at: '2026-08-25T05:04:37.751408'
   },
   {
     id: '',
@@ -30270,8 +20639,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869277',
-    updated_at: '2026-08-31T17:44:00.869278'
+    created_at: '2026-08-25T05:04:37.751410',
+    updated_at: '2026-08-25T05:04:37.751411'
   },
   {
     id: '',
@@ -30286,8 +20655,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869280',
-    updated_at: '2026-08-31T17:44:00.869281'
+    created_at: '2026-08-25T05:04:37.751413',
+    updated_at: '2026-08-25T05:04:37.751413'
   },
   {
     id: '',
@@ -30302,8 +20671,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869284',
-    updated_at: '2026-08-31T17:44:00.869285'
+    created_at: '2026-08-25T05:04:37.751415',
+    updated_at: '2026-08-25T05:04:37.751419'
   },
   {
     id: '',
@@ -30318,8 +20687,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869287',
-    updated_at: '2026-08-31T17:44:00.869288'
+    created_at: '2026-08-25T05:04:37.751421',
+    updated_at: '2026-08-25T05:04:37.751421'
   },
   {
     id: '',
@@ -30334,8 +20703,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869290',
-    updated_at: '2026-08-31T17:44:00.869291'
+    created_at: '2026-08-25T05:04:37.751423',
+    updated_at: '2026-08-25T05:04:37.751424'
   },
   {
     id: '',
@@ -30350,12 +20719,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869303',
-    updated_at: '2026-08-31T17:44:00.869304'
+    created_at: '2026-08-25T05:04:37.751426',
+    updated_at: '2026-08-25T05:04:37.751426'
   },
   {
     id: '',
-    name: 'Quast Janke & Co CPA's',
+    name: `Quast Janke & Co CPA's`,
     company: '',
     email: '',
     phone: '(989) 892-4549',
@@ -30366,8 +20735,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869306',
-    updated_at: '2026-08-31T17:44:00.869307'
+    created_at: '2026-08-25T05:04:37.751428',
+    updated_at: '2026-08-25T05:04:37.751429'
   },
   {
     id: '',
@@ -30382,8 +20751,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869309',
-    updated_at: '2026-08-31T17:44:00.869310'
+    created_at: '2026-08-25T05:04:37.751431',
+    updated_at: '2026-08-25T05:04:37.751431'
   },
   {
     id: '',
@@ -30398,8 +20767,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869313',
-    updated_at: '2026-08-31T17:44:00.869313'
+    created_at: '2026-08-25T05:04:37.751436',
+    updated_at: '2026-08-25T05:04:37.751437'
   },
   {
     id: '',
@@ -30414,8 +20783,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869316',
-    updated_at: '2026-08-31T17:44:00.869316'
+    created_at: '2026-08-25T05:04:37.751438',
+    updated_at: '2026-08-25T05:04:37.751439'
   },
   {
     id: '',
@@ -30430,8 +20799,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869333',
-    updated_at: '2026-08-31T17:44:00.869334'
+    created_at: '2026-08-25T05:04:37.751441',
+    updated_at: '2026-08-25T05:04:37.751442'
   },
   {
     id: '',
@@ -30446,8 +20815,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869336',
-    updated_at: '2026-08-31T17:44:00.869337'
+    created_at: '2026-08-25T05:04:37.751443',
+    updated_at: '2026-08-25T05:04:37.751444'
   },
   {
     id: '',
@@ -30462,8 +20831,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869340',
-    updated_at: '2026-08-31T17:44:00.869341'
+    created_at: '2026-08-25T05:04:37.751446',
+    updated_at: '2026-08-25T05:04:37.751447'
   },
   {
     id: '',
@@ -30478,8 +20847,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869343',
-    updated_at: '2026-08-31T17:44:00.869344'
+    created_at: '2026-08-25T05:04:37.751448',
+    updated_at: '2026-08-25T05:04:37.751449'
   },
   {
     id: '',
@@ -30494,8 +20863,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869346',
-    updated_at: '2026-08-31T17:44:00.869347'
+    created_at: '2026-08-25T05:04:37.751454',
+    updated_at: '2026-08-25T05:04:37.751455'
   },
   {
     id: '',
@@ -30510,8 +20879,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869349',
-    updated_at: '2026-08-31T17:44:00.869350'
+    created_at: '2026-08-25T05:04:37.751456',
+    updated_at: '2026-08-25T05:04:37.751457'
   },
   {
     id: '',
@@ -30526,8 +20895,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869361',
-    updated_at: '2026-08-31T17:44:00.869363'
+    created_at: '2026-08-25T05:04:37.751459',
+    updated_at: '2026-08-25T05:04:37.751459'
   },
   {
     id: '',
@@ -30542,8 +20911,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869365',
-    updated_at: '2026-08-31T17:44:00.869366'
+    created_at: '2026-08-25T05:04:37.751461',
+    updated_at: '2026-08-25T05:04:37.751462'
   },
   {
     id: '',
@@ -30558,8 +20927,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869369',
-    updated_at: '2026-08-31T17:44:00.869370'
+    created_at: '2026-08-25T05:04:37.751464',
+    updated_at: '2026-08-25T05:04:37.751464'
   },
   {
     id: '',
@@ -30574,8 +20943,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869372',
-    updated_at: '2026-08-31T17:44:00.869373'
+    created_at: '2026-08-25T05:04:37.751469',
+    updated_at: '2026-08-25T05:04:37.751470'
   },
   {
     id: '',
@@ -30590,8 +20959,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869375',
-    updated_at: '2026-08-31T17:44:00.869376'
+    created_at: '2026-08-25T05:04:37.751472',
+    updated_at: '2026-08-25T05:04:37.751473'
   },
   {
     id: '',
@@ -30606,8 +20975,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869387',
-    updated_at: '2026-08-31T17:44:00.869388'
+    created_at: '2026-08-25T05:04:37.751474',
+    updated_at: '2026-08-25T05:04:37.751475'
   },
   {
     id: '',
@@ -30622,8 +20991,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869390',
-    updated_at: '2026-08-31T17:44:00.869391'
+    created_at: '2026-08-25T05:04:37.751477',
+    updated_at: '2026-08-25T05:04:37.751478'
   },
   {
     id: '',
@@ -30638,8 +21007,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869393',
-    updated_at: '2026-08-31T17:44:00.869394'
+    created_at: '2026-08-25T05:04:37.751479',
+    updated_at: '2026-08-25T05:04:37.751480'
   },
   {
     id: '',
@@ -30654,8 +21023,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869396',
-    updated_at: '2026-08-31T17:44:00.869397'
+    created_at: '2026-08-25T05:04:37.751485',
+    updated_at: '2026-08-25T05:04:37.751485'
   },
   {
     id: '',
@@ -30670,8 +21039,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869406',
-    updated_at: '2026-08-31T17:44:00.869407'
+    created_at: '2026-08-25T05:04:37.751487',
+    updated_at: '2026-08-25T05:04:37.751488'
   },
   {
     id: '',
@@ -30686,8 +21055,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869410',
-    updated_at: '2026-08-31T17:44:00.869420'
+    created_at: '2026-08-25T05:04:37.751490',
+    updated_at: '2026-08-25T05:04:37.751490'
   },
   {
     id: '',
@@ -30702,8 +21071,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869423',
-    updated_at: '2026-08-31T17:44:00.869424'
+    created_at: '2026-08-25T05:04:37.751492',
+    updated_at: '2026-08-25T05:04:37.751493'
   },
   {
     id: '',
@@ -30718,8 +21087,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869426',
-    updated_at: '2026-08-31T17:44:00.869427'
+    created_at: '2026-08-25T05:04:37.751495',
+    updated_at: '2026-08-25T05:04:37.751495'
   },
   {
     id: '',
@@ -30734,8 +21103,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869429',
-    updated_at: '2026-08-31T17:44:00.869430'
+    created_at: '2026-08-25T05:04:37.751497',
+    updated_at: '2026-08-25T05:04:37.751498'
   },
   {
     id: '',
@@ -30750,8 +21119,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869432',
-    updated_at: '2026-08-31T17:44:00.869433'
+    created_at: '2026-08-25T05:04:37.751504',
+    updated_at: '2026-08-25T05:04:37.751505'
   },
   {
     id: '',
@@ -30766,8 +21135,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869435',
-    updated_at: '2026-08-31T17:44:00.869436'
+    created_at: '2026-08-25T05:04:37.751507',
+    updated_at: '2026-08-25T05:04:37.751508'
   },
   {
     id: '',
@@ -30782,8 +21151,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869448',
-    updated_at: '2026-08-31T17:44:00.869449'
+    created_at: '2026-08-25T05:04:37.751509',
+    updated_at: '2026-08-25T05:04:37.751510'
   },
   {
     id: '',
@@ -30798,8 +21167,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869451',
-    updated_at: '2026-08-31T17:44:00.869452'
+    created_at: '2026-08-25T05:04:37.751512',
+    updated_at: '2026-08-25T05:04:37.751512'
   },
   {
     id: '',
@@ -30814,8 +21183,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869455',
-    updated_at: '2026-08-31T17:44:00.869456'
+    created_at: '2026-08-25T05:04:37.751514',
+    updated_at: '2026-08-25T05:04:37.751515'
   },
   {
     id: '',
@@ -30830,8 +21199,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869458',
-    updated_at: '2026-08-31T17:44:00.869459'
+    created_at: '2026-08-25T05:04:37.751517',
+    updated_at: '2026-08-25T05:04:37.751520'
   },
   {
     id: '',
@@ -30846,8 +21215,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869461',
-    updated_at: '2026-08-31T17:44:00.869462'
+    created_at: '2026-08-25T05:04:37.751522',
+    updated_at: '2026-08-25T05:04:37.751523'
   },
   {
     id: '',
@@ -30862,8 +21231,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869464',
-    updated_at: '2026-08-31T17:44:00.869465'
+    created_at: '2026-08-25T05:04:37.751525',
+    updated_at: '2026-08-25T05:04:37.751525'
   },
   {
     id: '',
@@ -30878,8 +21247,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869476',
-    updated_at: '2026-08-31T17:44:00.869477'
+    created_at: '2026-08-25T05:04:37.751527',
+    updated_at: '2026-08-25T05:04:37.751528'
   },
   {
     id: '',
@@ -30894,8 +21263,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869479',
-    updated_at: '2026-08-31T17:44:00.869480'
+    created_at: '2026-08-25T05:04:37.751529',
+    updated_at: '2026-08-25T05:04:37.751530'
   },
   {
     id: '',
@@ -30910,8 +21279,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869482',
-    updated_at: '2026-08-31T17:44:00.869483'
+    created_at: '2026-08-25T05:04:37.751532',
+    updated_at: '2026-08-25T05:04:37.751533'
   },
   {
     id: '',
@@ -30926,8 +21295,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869485',
-    updated_at: '2026-08-31T17:44:00.869486'
+    created_at: '2026-08-25T05:04:37.751537',
+    updated_at: '2026-08-25T05:04:37.751538'
   },
   {
     id: '',
@@ -30942,8 +21311,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869488',
-    updated_at: '2026-08-31T17:44:00.869489'
+    created_at: '2026-08-25T05:04:37.751540',
+    updated_at: '2026-08-25T05:04:37.751540'
   },
   {
     id: '',
@@ -30958,8 +21327,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869501',
-    updated_at: '2026-08-31T17:44:00.869502'
+    created_at: '2026-08-25T05:04:37.751542',
+    updated_at: '2026-08-25T05:04:37.751543'
   },
   {
     id: '',
@@ -30974,8 +21343,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869504',
-    updated_at: '2026-08-31T17:44:00.869505'
+    created_at: '2026-08-25T05:04:37.751545',
+    updated_at: '2026-08-25T05:04:37.751546'
   },
   {
     id: '',
@@ -30990,12 +21359,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869507',
-    updated_at: '2026-08-31T17:44:00.869508'
+    created_at: '2026-08-25T05:04:37.751547',
+    updated_at: '2026-08-25T05:04:37.751548'
   },
   {
     id: '',
-    name: 'Kj's Home Improvement Specialist',
+    name: `Kj's Home Improvement Specialist`,
     company: '',
     email: '',
     phone: '(989) 657-6981',
@@ -31006,8 +21375,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869510',
-    updated_at: '2026-08-31T17:44:00.869511'
+    created_at: '2026-08-25T05:04:37.751552',
+    updated_at: '2026-08-25T05:04:37.751553'
   },
   {
     id: '',
@@ -31022,8 +21391,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869513',
-    updated_at: '2026-08-31T17:44:00.869514'
+    created_at: '2026-08-25T05:04:37.751555',
+    updated_at: '2026-08-25T05:04:37.751556'
   },
   {
     id: '',
@@ -31038,8 +21407,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869516',
-    updated_at: '2026-08-31T17:44:00.869526'
+    created_at: '2026-08-25T05:04:37.751557',
+    updated_at: '2026-08-25T05:04:37.751558'
   },
   {
     id: '',
@@ -31054,8 +21423,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869529',
-    updated_at: '2026-08-31T17:44:00.869530'
+    created_at: '2026-08-25T05:04:37.751560',
+    updated_at: '2026-08-25T05:04:37.751561'
   },
   {
     id: '',
@@ -31070,8 +21439,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869532',
-    updated_at: '2026-08-31T17:44:00.869533'
+    created_at: '2026-08-25T05:04:37.751562',
+    updated_at: '2026-08-25T05:04:37.751563'
   },
   {
     id: '',
@@ -31086,8 +21455,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869535',
-    updated_at: '2026-08-31T17:44:00.869536'
+    created_at: '2026-08-25T05:04:37.751565',
+    updated_at: '2026-08-25T05:04:37.751575'
   },
   {
     id: '',
@@ -31102,8 +21471,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869538',
-    updated_at: '2026-08-31T17:44:00.869539'
+    created_at: '2026-08-25T05:04:37.751578',
+    updated_at: '2026-08-25T05:04:37.751578'
   },
   {
     id: '',
@@ -31118,8 +21487,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869541',
-    updated_at: '2026-08-31T17:44:00.869542'
+    created_at: '2026-08-25T05:04:37.751580',
+    updated_at: '2026-08-25T05:04:37.751581'
   },
   {
     id: '',
@@ -31134,8 +21503,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869553',
-    updated_at: '2026-08-31T17:44:00.869554'
+    created_at: '2026-08-25T05:04:37.751583',
+    updated_at: '2026-08-25T05:04:37.751583'
   },
   {
     id: '',
@@ -31150,12 +21519,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869557',
-    updated_at: '2026-08-31T17:44:00.869558'
+    created_at: '2026-08-25T05:04:37.751585',
+    updated_at: '2026-08-25T05:04:37.751586'
   },
   {
     id: '',
-    name: 'Auburn Chapel-Cunningham-Taylor F.H.'s Inc.',
+    name: `Auburn Chapel-Cunningham-Taylor F.H.'s Inc.`,
     company: '',
     email: '',
     phone: '(989) 662-4711',
@@ -31166,8 +21535,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869560',
-    updated_at: '2026-08-31T17:44:00.869561'
+    created_at: '2026-08-25T05:04:37.751588',
+    updated_at: '2026-08-25T05:04:37.751589'
   },
   {
     id: '',
@@ -31182,8 +21551,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869563',
-    updated_at: '2026-08-31T17:44:00.869564'
+    created_at: '2026-08-25T05:04:37.751593',
+    updated_at: '2026-08-25T05:04:37.751594'
   },
   {
     id: '',
@@ -31198,8 +21567,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869566',
-    updated_at: '2026-08-31T17:44:00.869567'
+    created_at: '2026-08-25T05:04:37.751596',
+    updated_at: '2026-08-25T05:04:37.751596'
   },
   {
     id: '',
@@ -31214,8 +21583,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869579',
-    updated_at: '2026-08-31T17:44:00.869580'
+    created_at: '2026-08-25T05:04:37.751598',
+    updated_at: '2026-08-25T05:04:37.751599'
   },
   {
     id: '',
@@ -31230,8 +21599,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869582',
-    updated_at: '2026-08-31T17:44:00.869583'
+    created_at: '2026-08-25T05:04:37.751601',
+    updated_at: '2026-08-25T05:04:37.751602'
   },
   {
     id: '',
@@ -31246,8 +21615,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869585',
-    updated_at: '2026-08-31T17:44:00.869586'
+    created_at: '2026-08-25T05:04:37.751603',
+    updated_at: '2026-08-25T05:04:37.751604'
   },
   {
     id: '',
@@ -31262,8 +21631,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869588',
-    updated_at: '2026-08-31T17:44:00.869589'
+    created_at: '2026-08-25T05:04:37.751609',
+    updated_at: '2026-08-25T05:04:37.751609'
   },
   {
     id: '',
@@ -31278,8 +21647,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869591',
-    updated_at: '2026-08-31T17:44:00.869592'
+    created_at: '2026-08-25T05:04:37.751611',
+    updated_at: '2026-08-25T05:04:37.751612'
   },
   {
     id: '',
@@ -31294,8 +21663,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869604',
-    updated_at: '2026-08-31T17:44:00.869605'
+    created_at: '2026-08-25T05:04:37.751613',
+    updated_at: '2026-08-25T05:04:37.751614'
   },
   {
     id: '',
@@ -31310,8 +21679,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869608',
-    updated_at: '2026-08-31T17:44:00.869608'
+    created_at: '2026-08-25T05:04:37.751616',
+    updated_at: '2026-08-25T05:04:37.751617'
   },
   {
     id: '',
@@ -31326,8 +21695,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869611',
-    updated_at: '2026-08-31T17:44:00.869612'
+    created_at: '2026-08-25T05:04:37.751619',
+    updated_at: '2026-08-25T05:04:37.751619'
   },
   {
     id: '',
@@ -31342,8 +21711,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869614',
-    updated_at: '2026-08-31T17:44:00.869615'
+    created_at: '2026-08-25T05:04:37.751624',
+    updated_at: '2026-08-25T05:04:37.751625'
   },
   {
     id: '',
@@ -31358,8 +21727,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869617',
-    updated_at: '2026-08-31T17:44:00.869618'
+    created_at: '2026-08-25T05:04:37.751626',
+    updated_at: '2026-08-25T05:04:37.751627'
   },
   {
     id: '',
@@ -31374,8 +21743,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869620',
-    updated_at: '2026-08-31T17:44:00.869628'
+    created_at: '2026-08-25T05:04:37.751629',
+    updated_at: '2026-08-25T05:04:37.751630'
   },
   {
     id: '',
@@ -31390,8 +21759,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869633',
-    updated_at: '2026-08-31T17:44:00.869634'
+    created_at: '2026-08-25T05:04:37.751631',
+    updated_at: '2026-08-25T05:04:37.751632'
   },
   {
     id: '',
@@ -31406,8 +21775,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869636',
-    updated_at: '2026-08-31T17:44:00.869637'
+    created_at: '2026-08-25T05:04:37.751634',
+    updated_at: '2026-08-25T05:04:37.751635'
   },
   {
     id: '',
@@ -31422,8 +21791,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869639',
-    updated_at: '2026-08-31T17:44:00.869640'
+    created_at: '2026-08-25T05:04:37.751636',
+    updated_at: '2026-08-25T05:04:37.751640'
   },
   {
     id: '',
@@ -31438,8 +21807,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869642',
-    updated_at: '2026-08-31T17:44:00.869643'
+    created_at: '2026-08-25T05:04:37.751642',
+    updated_at: '2026-08-25T05:04:37.751642'
   },
   {
     id: '',
@@ -31454,8 +21823,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869646',
-    updated_at: '2026-08-31T17:44:00.869647'
+    created_at: '2026-08-25T05:04:37.751644',
+    updated_at: '2026-08-25T05:04:37.751645'
   },
   {
     id: '',
@@ -31470,8 +21839,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869658',
-    updated_at: '2026-08-31T17:44:00.869659'
+    created_at: '2026-08-25T05:04:37.751647',
+    updated_at: '2026-08-25T05:04:37.751647'
   },
   {
     id: '',
@@ -31486,8 +21855,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869662',
-    updated_at: '2026-08-31T17:44:00.869663'
+    created_at: '2026-08-25T05:04:37.751649',
+    updated_at: '2026-08-25T05:04:37.751650'
   },
   {
     id: '',
@@ -31502,12 +21871,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869665',
-    updated_at: '2026-08-31T17:44:00.869666'
+    created_at: '2026-08-25T05:04:37.751651',
+    updated_at: '2026-08-25T05:04:37.751652'
   },
   {
     id: '',
-    name: 'All A's Automotive & Transmission Repair',
+    name: `All A's Automotive & Transmission Repair`,
     company: '',
     email: '',
     phone: '(989) 631-4672',
@@ -31518,8 +21887,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869668',
-    updated_at: '2026-08-31T17:44:00.869669'
+    created_at: '2026-08-25T05:04:37.751656',
+    updated_at: '2026-08-25T05:04:37.751657'
   },
   {
     id: '',
@@ -31534,8 +21903,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869671',
-    updated_at: '2026-08-31T17:44:00.869672'
+    created_at: '2026-08-25T05:04:37.751659',
+    updated_at: '2026-08-25T05:04:37.751660'
   },
   {
     id: '',
@@ -31550,12 +21919,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869683',
-    updated_at: '2026-08-31T17:44:00.869684'
+    created_at: '2026-08-25T05:04:37.751661',
+    updated_at: '2026-08-25T05:04:37.751662'
   },
   {
     id: '',
-    name: 'Terry's Auto Sevice Center',
+    name: `Terry's Auto Sevice Center`,
     company: '',
     email: '',
     phone: '(989) 486-3800',
@@ -31566,8 +21935,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869686',
-    updated_at: '2026-08-31T17:44:00.869687'
+    created_at: '2026-08-25T05:04:37.751664',
+    updated_at: '2026-08-25T05:04:37.751664'
   },
   {
     id: '',
@@ -31582,8 +21951,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869690',
-    updated_at: '2026-08-31T17:44:00.869691'
+    created_at: '2026-08-25T05:04:37.751666',
+    updated_at: '2026-08-25T05:04:37.751667'
   },
   {
     id: '',
@@ -31598,8 +21967,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869693',
-    updated_at: '2026-08-31T17:44:00.869694'
+    created_at: '2026-08-25T05:04:37.751671',
+    updated_at: '2026-08-25T05:04:37.751672'
   },
   {
     id: '',
@@ -31614,8 +21983,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869696',
-    updated_at: '2026-08-31T17:44:00.869697'
+    created_at: '2026-08-25T05:04:37.751674',
+    updated_at: '2026-08-25T05:04:37.751674'
   },
   {
     id: '',
@@ -31630,8 +21999,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869699',
-    updated_at: '2026-08-31T17:44:00.869707'
+    created_at: '2026-08-25T05:04:37.751676',
+    updated_at: '2026-08-25T05:04:37.751677'
   },
   {
     id: '',
@@ -31646,8 +22015,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869712',
-    updated_at: '2026-08-31T17:44:00.869712'
+    created_at: '2026-08-25T05:04:37.751679',
+    updated_at: '2026-08-25T05:04:37.751679'
   },
   {
     id: '',
@@ -31662,8 +22031,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869715',
-    updated_at: '2026-08-31T17:44:00.869716'
+    created_at: '2026-08-25T05:04:37.751681',
+    updated_at: '2026-08-25T05:04:37.751682'
   },
   {
     id: '',
@@ -31678,8 +22047,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869718',
-    updated_at: '2026-08-31T17:44:00.869719'
+    created_at: '2026-08-25T05:04:37.751684',
+    updated_at: '2026-08-25T05:04:37.751684'
   },
   {
     id: '',
@@ -31694,12 +22063,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869721',
-    updated_at: '2026-08-31T17:44:00.869722'
+    created_at: '2026-08-25T05:04:37.751689',
+    updated_at: '2026-08-25T05:04:37.751690'
   },
   {
     id: '',
-    name: 'Suderman's Car Care',
+    name: `Suderman's Car Care`,
     company: '',
     email: '',
     phone: '(989) 631-6910',
@@ -31710,8 +22079,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869724',
-    updated_at: '2026-08-31T17:44:00.869725'
+    created_at: '2026-08-25T05:04:37.751691',
+    updated_at: '2026-08-25T05:04:37.751692'
   },
   {
     id: '',
@@ -31726,8 +22095,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869736',
-    updated_at: '2026-08-31T17:44:00.869737'
+    created_at: '2026-08-25T05:04:37.751694',
+    updated_at: '2026-08-25T05:04:37.751694'
   },
   {
     id: '',
@@ -31742,8 +22111,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869740',
-    updated_at: '2026-08-31T17:44:00.869740'
+    created_at: '2026-08-25T05:04:37.751696',
+    updated_at: '2026-08-25T05:04:37.751697'
   },
   {
     id: '',
@@ -31758,8 +22127,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869743',
-    updated_at: '2026-08-31T17:44:00.869743'
+    created_at: '2026-08-25T05:04:37.751699',
+    updated_at: '2026-08-25T05:04:37.751699'
   },
   {
     id: '',
@@ -31774,8 +22143,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869746',
-    updated_at: '2026-08-31T17:44:00.869747'
+    created_at: '2026-08-25T05:04:37.751704',
+    updated_at: '2026-08-25T05:04:37.751704'
   },
   {
     id: '',
@@ -31790,12 +22159,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869749',
-    updated_at: '2026-08-31T17:44:00.869750'
+    created_at: '2026-08-25T05:04:37.751706',
+    updated_at: '2026-08-25T05:04:37.751707'
   },
   {
     id: '',
-    name: 'Chef Sergey's Bakery',
+    name: `Chef Sergey's Bakery`,
     company: '',
     email: '',
     phone: '(989) 313-9743',
@@ -31806,8 +22175,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869752',
-    updated_at: '2026-08-31T17:44:00.869753'
+    created_at: '2026-08-25T05:04:37.751709',
+    updated_at: '2026-08-25T05:04:37.751709'
   },
   {
     id: '',
@@ -31822,8 +22191,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869765',
-    updated_at: '2026-08-31T17:44:00.869766'
+    created_at: '2026-08-25T05:04:37.751711',
+    updated_at: '2026-08-25T05:04:37.751712'
   },
   {
     id: '',
@@ -31838,8 +22207,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869768',
-    updated_at: '2026-08-31T17:44:00.869769'
+    created_at: '2026-08-25T05:04:37.751714',
+    updated_at: '2026-08-25T05:04:37.751714'
   },
   {
     id: '',
@@ -31854,8 +22223,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869771',
-    updated_at: '2026-08-31T17:44:00.869772'
+    created_at: '2026-08-25T05:04:37.751716',
+    updated_at: '2026-08-25T05:04:37.751717'
   },
   {
     id: '',
@@ -31870,8 +22239,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869774',
-    updated_at: '2026-08-31T17:44:00.869775'
+    created_at: '2026-08-25T05:04:37.751722',
+    updated_at: '2026-08-25T05:04:37.751722'
   },
   {
     id: '',
@@ -31886,8 +22255,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869777',
-    updated_at: '2026-08-31T17:44:00.869778'
+    created_at: '2026-08-25T05:04:37.751724',
+    updated_at: '2026-08-25T05:04:37.751725'
   },
   {
     id: '',
@@ -31902,8 +22271,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869789',
-    updated_at: '2026-08-31T17:44:00.869790'
+    created_at: '2026-08-25T05:04:37.751727',
+    updated_at: '2026-08-25T05:04:37.751728'
   },
   {
     id: '',
@@ -31918,8 +22287,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869793',
-    updated_at: '2026-08-31T17:44:00.869793'
+    created_at: '2026-08-25T05:04:37.751730',
+    updated_at: '2026-08-25T05:04:37.751730'
   },
   {
     id: '',
@@ -31934,12 +22303,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869796',
-    updated_at: '2026-08-31T17:44:00.869797'
+    created_at: '2026-08-25T05:04:37.751732',
+    updated_at: '2026-08-25T05:04:37.751733'
   },
   {
     id: '',
-    name: 'Smith's Flowers and Gifts',
+    name: `Smith's Flowers and Gifts`,
     company: '',
     email: '',
     phone: '(989) 631-0470',
@@ -31950,12 +22319,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869799',
-    updated_at: '2026-08-31T17:44:00.869800'
+    created_at: '2026-08-25T05:04:37.751735',
+    updated_at: '2026-08-25T05:04:37.751738'
   },
   {
     id: '',
-    name: 'Hannah's Flowers & Floral Preservation',
+    name: `Hannah's Flowers & Floral Preservation`,
     company: '',
     email: '',
     phone: '(989) 750-7200',
@@ -31966,12 +22335,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869802',
-    updated_at: '2026-08-31T17:44:00.869803'
+    created_at: '2026-08-25T05:04:37.751740',
+    updated_at: '2026-08-25T05:04:37.751741'
   },
   {
     id: '',
-    name: 'Randi's Green Thumb',
+    name: `Randi's Green Thumb`,
     company: '',
     email: '',
     phone: '(989) 835-3963',
@@ -31982,8 +22351,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869805',
-    updated_at: '2026-08-31T17:44:00.869806'
+    created_at: '2026-08-25T05:04:37.751743',
+    updated_at: '2026-08-25T05:04:37.751743'
   },
   {
     id: '',
@@ -31998,12 +22367,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869818',
-    updated_at: '2026-08-31T17:44:00.869819'
+    created_at: '2026-08-25T05:04:37.751745',
+    updated_at: '2026-08-25T05:04:37.751746'
   },
   {
     id: '',
-    name: 'Lapelle's Flowers & Gifts',
+    name: `Lapelle's Flowers & Gifts`,
     company: '',
     email: '',
     phone: '(989) 631-0450',
@@ -32014,8 +22383,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869822',
-    updated_at: '2026-08-31T17:44:00.869822'
+    created_at: '2026-08-25T05:04:37.751748',
+    updated_at: '2026-08-25T05:04:37.751748'
   },
   {
     id: '',
@@ -32030,12 +22399,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869825',
-    updated_at: '2026-08-31T17:44:00.869826'
+    created_at: '2026-08-25T05:04:37.751750',
+    updated_at: '2026-08-25T05:04:37.751751'
   },
   {
     id: '',
-    name: 'Austin's Flowers & Gifts',
+    name: `Austin's Flowers & Gifts`,
     company: '',
     email: '',
     phone: '(989) 695-9100',
@@ -32046,12 +22415,12 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869828',
-    updated_at: '2026-08-31T17:44:00.869829'
+    created_at: '2026-08-25T05:04:37.751755',
+    updated_at: '2026-08-25T05:04:37.751756'
   },
   {
     id: '',
-    name: 'Auburn's Flowers From the Heart',
+    name: `Auburn's Flowers From the Heart`,
     company: '',
     email: '',
     phone: '(989) 662-7818',
@@ -32062,8 +22431,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869831',
-    updated_at: '2026-08-31T17:44:00.869832'
+    created_at: '2026-08-25T05:04:37.751758',
+    updated_at: '2026-08-25T05:04:37.751758'
   },
   {
     id: '',
@@ -32078,8 +22447,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869855',
-    updated_at: '2026-08-31T17:44:00.869857'
+    created_at: '2026-08-25T05:04:37.751760',
+    updated_at: '2026-08-25T05:04:37.751761'
   },
   {
     id: '',
@@ -32094,8 +22463,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869859',
-    updated_at: '2026-08-31T17:44:00.869860'
+    created_at: '2026-08-25T05:04:37.751762',
+    updated_at: '2026-08-25T05:04:37.751763'
   },
   {
     id: '',
@@ -32110,8 +22479,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869862',
-    updated_at: '2026-08-31T17:44:00.869863'
+    created_at: '2026-08-25T05:04:37.751765',
+    updated_at: '2026-08-25T05:04:37.751766'
   },
   {
     id: '',
@@ -32126,8 +22495,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869866',
-    updated_at: '2026-08-31T17:44:00.869866'
+    created_at: '2026-08-25T05:04:37.751768',
+    updated_at: '2026-08-25T05:04:37.751768'
   },
   {
     id: '',
@@ -32142,8 +22511,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869869',
-    updated_at: '2026-08-31T17:44:00.869869'
+    created_at: '2026-08-25T05:04:37.751773',
+    updated_at: '2026-08-25T05:04:37.751774'
   },
   {
     id: '',
@@ -32158,8 +22527,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869872',
-    updated_at: '2026-08-31T17:44:00.869873'
+    created_at: '2026-08-25T05:04:37.751775',
+    updated_at: '2026-08-25T05:04:37.751776'
   },
   {
     id: '',
@@ -32174,8 +22543,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869885',
-    updated_at: '2026-08-31T17:44:00.869886'
+    created_at: '2026-08-25T05:04:37.751778',
+    updated_at: '2026-08-25T05:04:37.751779'
   },
   {
     id: '',
@@ -32190,8 +22559,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869889',
-    updated_at: '2026-08-31T17:44:00.869890'
+    created_at: '2026-08-25T05:04:37.751781',
+    updated_at: '2026-08-25T05:04:37.751782'
   },
   {
     id: '',
@@ -32206,8 +22575,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869892',
-    updated_at: '2026-08-31T17:44:00.869893'
+    created_at: '2026-08-25T05:04:37.751784',
+    updated_at: '2026-08-25T05:04:37.751785'
   },
   {
     id: '',
@@ -32222,8 +22591,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869895',
-    updated_at: '2026-08-31T17:44:00.869896'
+    created_at: '2026-08-25T05:04:37.751789',
+    updated_at: '2026-08-25T05:04:37.751790'
   },
   {
     id: '',
@@ -32238,8 +22607,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869898',
-    updated_at: '2026-08-31T17:44:00.869899'
+    created_at: '2026-08-25T05:04:37.751792',
+    updated_at: '2026-08-25T05:04:37.751793'
   },
   {
     id: '',
@@ -32254,8 +22623,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869911',
-    updated_at: '2026-08-31T17:44:00.869912'
+    created_at: '2026-08-25T05:04:37.751794',
+    updated_at: '2026-08-25T05:04:37.751795'
   },
   {
     id: '',
@@ -32270,8 +22639,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869914',
-    updated_at: '2026-08-31T17:44:00.869915'
+    created_at: '2026-08-25T05:04:37.751797',
+    updated_at: '2026-08-25T05:04:37.751797'
   },
   {
     id: '',
@@ -32286,8 +22655,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869917',
-    updated_at: '2026-08-31T17:44:00.869918'
+    created_at: '2026-08-25T05:04:37.751799',
+    updated_at: '2026-08-25T05:04:37.751800'
   },
   {
     id: '',
@@ -32302,8 +22671,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869920',
-    updated_at: '2026-08-31T17:44:00.869921'
+    created_at: '2026-08-25T05:04:37.751804',
+    updated_at: '2026-08-25T05:04:37.751805'
   },
   {
     id: '',
@@ -32318,8 +22687,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869923',
-    updated_at: '2026-08-31T17:44:00.869924'
+    created_at: '2026-08-25T05:04:37.751807',
+    updated_at: '2026-08-25T05:04:37.751808'
   },
   {
     id: '',
@@ -32334,8 +22703,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869935',
-    updated_at: '2026-08-31T17:44:00.869937'
+    created_at: '2026-08-25T05:04:37.751809',
+    updated_at: '2026-08-25T05:04:37.751810'
   },
   {
     id: '',
@@ -32350,8 +22719,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869939',
-    updated_at: '2026-08-31T17:44:00.869940'
+    created_at: '2026-08-25T05:04:37.751812',
+    updated_at: '2026-08-25T05:04:37.751813'
   },
   {
     id: '',
@@ -32366,8 +22735,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869942',
-    updated_at: '2026-08-31T17:44:00.869943'
+    created_at: '2026-08-25T05:04:37.751814',
+    updated_at: '2026-08-25T05:04:37.751815'
   },
   {
     id: '',
@@ -32382,8 +22751,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869945',
-    updated_at: '2026-08-31T17:44:00.869946'
+    created_at: '2026-08-25T05:04:37.751819',
+    updated_at: '2026-08-25T05:04:37.751820'
   },
   {
     id: '',
@@ -32398,8 +22767,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869948',
-    updated_at: '2026-08-31T17:44:00.869949'
+    created_at: '2026-08-25T05:04:37.751822',
+    updated_at: '2026-08-25T05:04:37.751823'
   },
   {
     id: '',
@@ -32414,8 +22783,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869951',
-    updated_at: '2026-08-31T17:44:00.869952'
+    created_at: '2026-08-25T05:04:37.751825',
+    updated_at: '2026-08-25T05:04:37.751825'
   },
   {
     id: '',
@@ -32430,8 +22799,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869967',
-    updated_at: '2026-08-31T17:44:00.869968'
+    created_at: '2026-08-25T05:04:37.751827',
+    updated_at: '2026-08-25T05:04:37.751828'
   },
   {
     id: '',
@@ -32446,8 +22815,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869970',
-    updated_at: '2026-08-31T17:44:00.869971'
+    created_at: '2026-08-25T05:04:37.751829',
+    updated_at: '2026-08-25T05:04:37.751830'
   },
   {
     id: '',
@@ -32462,8 +22831,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869973',
-    updated_at: '2026-08-31T17:44:00.869974'
+    created_at: '2026-08-25T05:04:37.751832',
+    updated_at: '2026-08-25T05:04:37.751833'
   },
   {
     id: '',
@@ -32478,8 +22847,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869977',
-    updated_at: '2026-08-31T17:44:00.869977'
+    created_at: '2026-08-25T05:04:37.751837',
+    updated_at: '2026-08-25T05:04:37.751838'
   },
   {
     id: '',
@@ -32494,8 +22863,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869980',
-    updated_at: '2026-08-31T17:44:00.869981'
+    created_at: '2026-08-25T05:04:37.751840',
+    updated_at: '2026-08-25T05:04:37.751841'
   },
   {
     id: '',
@@ -32510,8 +22879,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869993',
-    updated_at: '2026-08-31T17:44:00.869994'
+    created_at: '2026-08-25T05:04:37.751843',
+    updated_at: '2026-08-25T05:04:37.751843'
   },
   {
     id: '',
@@ -32526,8 +22895,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869996',
-    updated_at: '2026-08-31T17:44:00.869997'
+    created_at: '2026-08-25T05:04:37.751845',
+    updated_at: '2026-08-25T05:04:37.751846'
   },
   {
     id: '',
@@ -32542,8 +22911,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.869999',
-    updated_at: '2026-08-31T17:44:00.870000'
+    created_at: '2026-08-25T05:04:37.751847',
+    updated_at: '2026-08-25T05:04:37.751848'
   },
   {
     id: '',
@@ -32558,8 +22927,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870003',
-    updated_at: '2026-08-31T17:44:00.870003'
+    created_at: '2026-08-25T05:04:37.751853',
+    updated_at: '2026-08-25T05:04:37.751853'
   },
   {
     id: '',
@@ -32574,8 +22943,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870006',
-    updated_at: '2026-08-31T17:44:00.870006'
+    created_at: '2026-08-25T05:04:37.751855',
+    updated_at: '2026-08-25T05:04:37.751856'
   },
   {
     id: '',
@@ -32590,8 +22959,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870008',
-    updated_at: '2026-08-31T17:44:00.870017'
+    created_at: '2026-08-25T05:04:37.751857',
+    updated_at: '2026-08-25T05:04:37.751858'
   },
   {
     id: '',
@@ -32606,8 +22975,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870022',
-    updated_at: '2026-08-31T17:44:00.870023'
+    created_at: '2026-08-25T05:04:37.751860',
+    updated_at: '2026-08-25T05:04:37.751860'
   },
   {
     id: '',
@@ -32622,8 +22991,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870025',
-    updated_at: '2026-08-31T17:44:00.870026'
+    created_at: '2026-08-25T05:04:37.751862',
+    updated_at: '2026-08-25T05:04:37.751863'
   },
   {
     id: '',
@@ -32638,8 +23007,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870028',
-    updated_at: '2026-08-31T17:44:00.870029'
+    created_at: '2026-08-25T05:04:37.751865',
+    updated_at: '2026-08-25T05:04:37.751865'
   },
   {
     id: '',
@@ -32654,8 +23023,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870031',
-    updated_at: '2026-08-31T17:44:00.870032'
+    created_at: '2026-08-25T05:04:37.751870',
+    updated_at: '2026-08-25T05:04:37.751871'
   },
   {
     id: '',
@@ -32670,8 +23039,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870034',
-    updated_at: '2026-08-31T17:44:00.870035'
+    created_at: '2026-08-25T05:04:37.751873',
+    updated_at: '2026-08-25T05:04:37.751873'
   },
   {
     id: '',
@@ -32686,8 +23055,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870047',
-    updated_at: '2026-08-31T17:44:00.870048'
+    created_at: '2026-08-25T05:04:37.751875',
+    updated_at: '2026-08-25T05:04:37.751876'
   },
   {
     id: '',
@@ -32702,8 +23071,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870050',
-    updated_at: '2026-08-31T17:44:00.870051'
+    created_at: '2026-08-25T05:04:37.751877',
+    updated_at: '2026-08-25T05:04:37.751878'
   },
   {
     id: '',
@@ -32718,8 +23087,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870053',
-    updated_at: '2026-08-31T17:44:00.870054'
+    created_at: '2026-08-25T05:04:37.751880',
+    updated_at: '2026-08-25T05:04:37.751881'
   },
   {
     id: '',
@@ -32734,8 +23103,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870056',
-    updated_at: '2026-08-31T17:44:00.870057'
+    created_at: '2026-08-25T05:04:37.751882',
+    updated_at: '2026-08-25T05:04:37.751884'
   },
   {
     id: '',
@@ -32750,8 +23119,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870059',
-    updated_at: '2026-08-31T17:44:00.870060'
+    created_at: '2026-08-25T05:04:37.751888',
+    updated_at: '2026-08-25T05:04:37.751888'
   },
   {
     id: '',
@@ -32766,8 +23135,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870062',
-    updated_at: '2026-08-31T17:44:00.870063'
+    created_at: '2026-08-25T05:04:37.751890',
+    updated_at: '2026-08-25T05:04:37.751891'
   },
   {
     id: '',
@@ -32782,8 +23151,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870075',
-    updated_at: '2026-08-31T17:44:00.870076'
+    created_at: '2026-08-25T05:04:37.751893',
+    updated_at: '2026-08-25T05:04:37.751893'
   },
   {
     id: '',
@@ -32798,8 +23167,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870078',
-    updated_at: '2026-08-31T17:44:00.870079'
+    created_at: '2026-08-25T05:04:37.751895',
+    updated_at: '2026-08-25T05:04:37.751896'
   },
   {
     id: '',
@@ -32814,8 +23183,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870081',
-    updated_at: '2026-08-31T17:44:00.870082'
+    created_at: '2026-08-25T05:04:37.751898',
+    updated_at: '2026-08-25T05:04:37.751898'
   },
   {
     id: '',
@@ -32830,8 +23199,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870084',
-    updated_at: '2026-08-31T17:44:00.870085'
+    created_at: '2026-08-25T05:04:37.751903',
+    updated_at: '2026-08-25T05:04:37.751903'
   },
   {
     id: '',
@@ -32846,8 +23215,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870087',
-    updated_at: '2026-08-31T17:44:00.870088'
+    created_at: '2026-08-25T05:04:37.751905',
+    updated_at: '2026-08-25T05:04:37.751906'
   },
   {
     id: '',
@@ -32862,8 +23231,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870099',
-    updated_at: '2026-08-31T17:44:00.870100'
+    created_at: '2026-08-25T05:04:37.751908',
+    updated_at: '2026-08-25T05:04:37.751908'
   },
   {
     id: '',
@@ -32878,8 +23247,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870103',
-    updated_at: '2026-08-31T17:44:00.870104'
+    created_at: '2026-08-25T05:04:37.751910',
+    updated_at: '2026-08-25T05:04:37.751911'
   },
   {
     id: '',
@@ -32894,8 +23263,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870106',
-    updated_at: '2026-08-31T17:44:00.870107'
+    created_at: '2026-08-25T05:04:37.751912',
+    updated_at: '2026-08-25T05:04:37.751913'
   },
   {
     id: '',
@@ -32910,8 +23279,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870109',
-    updated_at: '2026-08-31T17:44:00.870110'
+    created_at: '2026-08-25T05:04:37.751915',
+    updated_at: '2026-08-25T05:04:37.751915'
   },
   {
     id: '',
@@ -32926,8 +23295,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870112',
-    updated_at: '2026-08-31T17:44:00.870113'
+    created_at: '2026-08-25T05:04:37.751920',
+    updated_at: '2026-08-25T05:04:37.751921'
   },
   {
     id: '',
@@ -32942,8 +23311,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870115',
-    updated_at: '2026-08-31T17:44:00.870116'
+    created_at: '2026-08-25T05:04:37.751923',
+    updated_at: '2026-08-25T05:04:37.751923'
   },
   {
     id: '',
@@ -32958,8 +23327,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870128',
-    updated_at: '2026-08-31T17:44:00.870129'
+    created_at: '2026-08-25T05:04:37.751925',
+    updated_at: '2026-08-25T05:04:37.751926'
   },
   {
     id: '',
@@ -32974,8 +23343,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870131',
-    updated_at: '2026-08-31T17:44:00.870132'
+    created_at: '2026-08-25T05:04:37.751927',
+    updated_at: '2026-08-25T05:04:37.751928'
   },
   {
     id: '',
@@ -32990,8 +23359,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870135',
-    updated_at: '2026-08-31T17:44:00.870135'
+    created_at: '2026-08-25T05:04:37.751930',
+    updated_at: '2026-08-25T05:04:37.751931'
   },
   {
     id: '',
@@ -33006,8 +23375,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870138',
-    updated_at: '2026-08-31T17:44:00.870139'
+    created_at: '2026-08-25T05:04:37.751935',
+    updated_at: '2026-08-25T05:04:37.751936'
   },
   {
     id: '',
@@ -33022,8 +23391,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870141',
-    updated_at: '2026-08-31T17:44:00.870142'
+    created_at: '2026-08-25T05:04:37.751938',
+    updated_at: '2026-08-25T05:04:37.751938'
   },
   {
     id: '',
@@ -33038,8 +23407,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870154',
-    updated_at: '2026-08-31T17:44:00.870155'
+    created_at: '2026-08-25T05:04:37.751940',
+    updated_at: '2026-08-25T05:04:37.751941'
   },
   {
     id: '',
@@ -33054,8 +23423,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870157',
-    updated_at: '2026-08-31T17:44:00.870158'
+    created_at: '2026-08-25T05:04:37.751943',
+    updated_at: '2026-08-25T05:04:37.751943'
   },
   {
     id: '',
@@ -33070,8 +23439,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870160',
-    updated_at: '2026-08-31T17:44:00.870161'
+    created_at: '2026-08-25T05:04:37.751945',
+    updated_at: '2026-08-25T05:04:37.751946'
   },
   {
     id: '',
@@ -33086,8 +23455,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870163',
-    updated_at: '2026-08-31T17:44:00.870164'
+    created_at: '2026-08-25T05:04:37.751947',
+    updated_at: '2026-08-25T05:04:37.751949'
   },
   {
     id: '',
@@ -33102,8 +23471,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870166',
-    updated_at: '2026-08-31T17:44:00.870167'
+    created_at: '2026-08-25T05:04:37.751953',
+    updated_at: '2026-08-25T05:04:37.751954'
   },
   {
     id: '',
@@ -33118,8 +23487,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870170',
-    updated_at: '2026-08-31T17:44:00.870179'
+    created_at: '2026-08-25T05:04:37.751955',
+    updated_at: '2026-08-25T05:04:37.751956'
   },
   {
     id: '',
@@ -33134,8 +23503,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870182',
-    updated_at: '2026-08-31T17:44:00.870183'
+    created_at: '2026-08-25T05:04:37.751958',
+    updated_at: '2026-08-25T05:04:37.751958'
   },
   {
     id: '',
@@ -33150,8 +23519,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870185',
-    updated_at: '2026-08-31T17:44:00.870186'
+    created_at: '2026-08-25T05:04:37.751960',
+    updated_at: '2026-08-25T05:04:37.751961'
   },
   {
     id: '',
@@ -33166,8 +23535,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870188',
-    updated_at: '2026-08-31T17:44:00.870189'
+    created_at: '2026-08-25T05:04:37.751963',
+    updated_at: '2026-08-25T05:04:37.751963'
   },
   {
     id: '',
@@ -33182,8 +23551,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870192',
-    updated_at: '2026-08-31T17:44:00.870193'
+    created_at: '2026-08-25T05:04:37.751968',
+    updated_at: '2026-08-25T05:04:37.751969'
   },
   {
     id: '',
@@ -33198,13 +23567,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870196',
-    updated_at: '2026-08-31T17:44:00.870197'
+    created_at: '2026-08-25T05:04:37.751971',
+    updated_at: '2026-08-25T05:04:37.751972'
   },
   {
     id: '',
     name: '',
-    company: 'The Artisan's Nook',
+    company: `The Artisan's Nook`,
     email: 'theartisansnook@gmail.com',
     phone: '989-284-9444',
     website: 'https://theartisansnook.com/',
@@ -33214,8 +23583,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870209',
-    updated_at: '2026-08-31T17:44:00.870210'
+    created_at: '2026-08-25T05:04:37.751974',
+    updated_at: '2026-08-25T05:04:37.751975'
   },
   {
     id: '',
@@ -33230,8 +23599,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870212',
-    updated_at: '2026-08-31T17:44:00.870213'
+    created_at: '2026-08-25T05:04:37.751977',
+    updated_at: '2026-08-25T05:04:37.751977'
   },
   {
     id: '',
@@ -33246,8 +23615,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870216',
-    updated_at: '2026-08-31T17:44:00.870217'
+    created_at: '2026-08-25T05:04:37.751979',
+    updated_at: '2026-08-25T05:04:37.751980'
   },
   {
     id: '',
@@ -33262,8 +23631,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870219',
-    updated_at: '2026-08-31T17:44:00.870220'
+    created_at: '2026-08-25T05:04:37.751985',
+    updated_at: '2026-08-25T05:04:37.751985'
   },
   {
     id: '',
@@ -33278,8 +23647,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870222',
-    updated_at: '2026-08-31T17:44:00.870223'
+    created_at: '2026-08-25T05:04:37.751988',
+    updated_at: '2026-08-25T05:04:37.751989'
   },
   {
     id: '',
@@ -33294,8 +23663,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870236',
-    updated_at: '2026-08-31T17:44:00.870237'
+    created_at: '2026-08-25T05:04:37.751991',
+    updated_at: '2026-08-25T05:04:37.751991'
   },
   {
     id: '',
@@ -33310,8 +23679,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870239',
-    updated_at: '2026-08-31T17:44:00.870240'
+    created_at: '2026-08-25T05:04:37.751993',
+    updated_at: '2026-08-25T05:04:37.751994'
   },
   {
     id: '',
@@ -33326,13 +23695,13 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870242',
-    updated_at: '2026-08-31T17:44:00.870243'
+    created_at: '2026-08-25T05:04:37.751995',
+    updated_at: '2026-08-25T05:04:37.751996'
   },
   {
     id: '',
     name: '',
-    company: 'Java Joe's Cafe',
+    company: `Java Joe's Cafe`,
     email: 'javajoescafe@gmail.com',
     phone: '906-643-9211',
     website: 'https://www.javajoescafemi.com/',
@@ -33342,8 +23711,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870245',
-    updated_at: '2026-08-31T17:44:00.870246'
+    created_at: '2026-08-25T05:04:37.751998',
+    updated_at: '2026-08-25T05:04:37.751999'
   },
   {
     id: '',
@@ -33358,8 +23727,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870248',
-    updated_at: '2026-08-31T17:44:00.870249'
+    created_at: '2026-08-25T05:04:37.752003',
+    updated_at: '2026-08-25T05:04:37.752004'
   },
   {
     id: '',
@@ -33374,8 +23743,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870251',
-    updated_at: '2026-08-31T17:44:00.870252'
+    created_at: '2026-08-25T05:04:37.752006',
+    updated_at: '2026-08-25T05:04:37.752007'
   },
   {
     id: '',
@@ -33390,8 +23759,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870264',
-    updated_at: '2026-08-31T17:44:00.870266'
+    created_at: '2026-08-25T05:04:37.752008',
+    updated_at: '2026-08-25T05:04:37.752009'
   },
   {
     id: '',
@@ -33406,8 +23775,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870268',
-    updated_at: '2026-08-31T17:44:00.870269'
+    created_at: '2026-08-25T05:04:37.752011',
+    updated_at: '2026-08-25T05:04:37.752011'
   },
   {
     id: '',
@@ -33422,8 +23791,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870271',
-    updated_at: '2026-08-31T17:44:00.870272'
+    created_at: '2026-08-25T05:04:37.752013',
+    updated_at: '2026-08-25T05:04:37.752014'
   },
   {
     id: '',
@@ -33438,8 +23807,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870274',
-    updated_at: '2026-08-31T17:44:00.870275'
+    created_at: '2026-08-25T05:04:37.752021',
+    updated_at: '2026-08-25T05:04:37.752022'
   },
   {
     id: '',
@@ -33454,8 +23823,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870277',
-    updated_at: '2026-08-31T17:44:00.870278'
+    created_at: '2026-08-25T05:04:37.752023',
+    updated_at: '2026-08-25T05:04:37.752024'
   },
   {
     id: '',
@@ -33470,8 +23839,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870290',
-    updated_at: '2026-08-31T17:44:00.870291'
+    created_at: '2026-08-25T05:04:37.752026',
+    updated_at: '2026-08-25T05:04:37.752027'
   },
   {
     id: '',
@@ -33486,8 +23855,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870293',
-    updated_at: '2026-08-31T17:44:00.870294'
+    created_at: '2026-08-25T05:04:37.752029',
+    updated_at: '2026-08-25T05:04:37.752029'
   },
   {
     id: '',
@@ -33502,8 +23871,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870297',
-    updated_at: '2026-08-31T17:44:00.870297'
+    created_at: '2026-08-25T05:04:37.752031',
+    updated_at: '2026-08-25T05:04:37.752032'
   },
   {
     id: '',
@@ -33518,8 +23887,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870300',
-    updated_at: '2026-08-31T17:44:00.870301'
+    created_at: '2026-08-25T05:04:37.752034',
+    updated_at: '2026-08-25T05:04:37.752035'
   },
   {
     id: '',
@@ -33534,8 +23903,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870303',
-    updated_at: '2026-08-31T17:44:00.870303'
+    created_at: '2026-08-25T05:04:37.752039',
+    updated_at: '2026-08-25T05:04:37.752040'
   },
   {
     id: '',
@@ -33550,8 +23919,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870306',
-    updated_at: '2026-08-31T17:44:00.870306'
+    created_at: '2026-08-25T05:04:37.752042',
+    updated_at: '2026-08-25T05:04:37.752043'
   },
   {
     id: '',
@@ -33566,8 +23935,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870318',
-    updated_at: '2026-08-31T17:44:00.870319'
+    created_at: '2026-08-25T05:04:37.752044',
+    updated_at: '2026-08-25T05:04:37.752045'
   },
   {
     id: '',
@@ -33582,8 +23951,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870321',
-    updated_at: '2026-08-31T17:44:00.870322'
+    created_at: '2026-08-25T05:04:37.752047',
+    updated_at: '2026-08-25T05:04:37.752047'
   },
   {
     id: '',
@@ -33598,8 +23967,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870324',
-    updated_at: '2026-08-31T17:44:00.870325'
+    created_at: '2026-08-25T05:04:37.752049',
+    updated_at: '2026-08-25T05:04:37.752050'
   },
   {
     id: '',
@@ -33614,8 +23983,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870327',
-    updated_at: '2026-08-31T17:44:00.870328'
+    created_at: '2026-08-25T05:04:37.752054',
+    updated_at: '2026-08-25T05:04:37.752055'
   },
   {
     id: '',
@@ -33630,8 +23999,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870331',
-    updated_at: '2026-08-31T17:44:00.870331'
+    created_at: '2026-08-25T05:04:37.752057',
+    updated_at: '2026-08-25T05:04:37.752057'
   },
   {
     id: '',
@@ -33646,8 +24015,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870334',
-    updated_at: '2026-08-31T17:44:00.870344'
+    created_at: '2026-08-25T05:04:37.752059',
+    updated_at: '2026-08-25T05:04:37.752060'
   },
   {
     id: '',
@@ -33662,8 +24031,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870346',
-    updated_at: '2026-08-31T17:44:00.870347'
+    created_at: '2026-08-25T05:04:37.752061',
+    updated_at: '2026-08-25T05:04:37.752062'
   },
   {
     id: '',
@@ -33678,8 +24047,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870350',
-    updated_at: '2026-08-31T17:44:00.870351'
+    created_at: '2026-08-25T05:04:37.752064',
+    updated_at: '2026-08-25T05:04:37.752064'
   },
   {
     id: '',
@@ -33694,8 +24063,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870353',
-    updated_at: '2026-08-31T17:44:00.870354'
+    created_at: '2026-08-25T05:04:37.752066',
+    updated_at: '2026-08-25T05:04:37.752067'
   },
   {
     id: '',
@@ -33710,8 +24079,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870356',
-    updated_at: '2026-08-31T17:44:00.870357'
+    created_at: '2026-08-25T05:04:37.752071',
+    updated_at: '2026-08-25T05:04:37.752072'
   },
   {
     id: '',
@@ -33726,8 +24095,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870359',
-    updated_at: '2026-08-31T17:44:00.870360'
+    created_at: '2026-08-25T05:04:37.752074',
+    updated_at: '2026-08-25T05:04:37.752075'
   },
   {
     id: '',
@@ -33742,8 +24111,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870371',
-    updated_at: '2026-08-31T17:44:00.870372'
+    created_at: '2026-08-25T05:04:37.752077',
+    updated_at: '2026-08-25T05:04:37.752077'
   },
   {
     id: '',
@@ -33758,8 +24127,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870374',
-    updated_at: '2026-08-31T17:44:00.870375'
+    created_at: '2026-08-25T05:04:37.752079',
+    updated_at: '2026-08-25T05:04:37.752080'
   },
   {
     id: '',
@@ -33774,8 +24143,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870377',
-    updated_at: '2026-08-31T17:44:00.870378'
+    created_at: '2026-08-25T05:04:37.752081',
+    updated_at: '2026-08-25T05:04:37.752082'
   },
   {
     id: '',
@@ -33790,8 +24159,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870380',
-    updated_at: '2026-08-31T17:44:00.870381'
+    created_at: '2026-08-25T05:04:37.752087',
+    updated_at: '2026-08-25T05:04:37.752087'
   },
   {
     id: '',
@@ -33806,8 +24175,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870383',
-    updated_at: '2026-08-31T17:44:00.870384'
+    created_at: '2026-08-25T05:04:37.752089',
+    updated_at: '2026-08-25T05:04:37.752090'
   },
   {
     id: '',
@@ -33822,8 +24191,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870386',
-    updated_at: '2026-08-31T17:44:00.870387'
+    created_at: '2026-08-25T05:04:37.752091',
+    updated_at: '2026-08-25T05:04:37.752092'
   },
   {
     id: '',
@@ -33838,8 +24207,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870399',
-    updated_at: '2026-08-31T17:44:00.870400'
+    created_at: '2026-08-25T05:04:37.752094',
+    updated_at: '2026-08-25T05:04:37.752095'
   },
   {
     id: '',
@@ -33854,8 +24223,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870402',
-    updated_at: '2026-08-31T17:44:00.870403'
+    created_at: '2026-08-25T05:04:37.752096',
+    updated_at: '2026-08-25T05:04:37.752097'
   },
   {
     id: '',
@@ -33870,8 +24239,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870405',
-    updated_at: '2026-08-31T17:44:00.870406'
+    created_at: '2026-08-25T05:04:37.752099',
+    updated_at: '2026-08-25T05:04:37.752100'
   },
   {
     id: '',
@@ -33886,8 +24255,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870408',
-    updated_at: '2026-08-31T17:44:00.870409'
+    created_at: '2026-08-25T05:04:37.752104',
+    updated_at: '2026-08-25T05:04:37.752105'
   },
   {
     id: '',
@@ -33902,8 +24271,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870411',
-    updated_at: '2026-08-31T17:44:00.870412'
+    created_at: '2026-08-25T05:04:37.752107',
+    updated_at: '2026-08-25T05:04:37.752108'
   },
   {
     id: '',
@@ -33918,8 +24287,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870424',
-    updated_at: '2026-08-31T17:44:00.870425'
+    created_at: '2026-08-25T05:04:37.752109',
+    updated_at: '2026-08-25T05:04:37.752110'
   },
   {
     id: '',
@@ -33934,8 +24303,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870427',
-    updated_at: '2026-08-31T17:44:00.870428'
+    created_at: '2026-08-25T05:04:37.752113',
+    updated_at: '2026-08-25T05:04:37.752113'
   },
   {
     id: '',
@@ -33950,8 +24319,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870431',
-    updated_at: '2026-08-31T17:44:00.870431'
+    created_at: '2026-08-25T05:04:37.752115',
+    updated_at: '2026-08-25T05:04:37.752116'
   },
   {
     id: '',
@@ -33966,8 +24335,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870433',
-    updated_at: '2026-08-31T17:44:00.870434'
+    created_at: '2026-08-25T05:04:37.752118',
+    updated_at: '2026-08-25T05:04:37.752118'
   },
   {
     id: '',
@@ -33982,8 +24351,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870437',
-    updated_at: '2026-08-31T17:44:00.870437'
+    created_at: '2026-08-25T05:04:37.752123',
+    updated_at: '2026-08-25T05:04:37.752123'
   },
   {
     id: '',
@@ -33998,8 +24367,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870440',
-    updated_at: '2026-08-31T17:44:00.870440'
+    created_at: '2026-08-25T05:04:37.752125',
+    updated_at: '2026-08-25T05:04:37.752126'
   },
   {
     id: '',
@@ -34014,8 +24383,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870452',
-    updated_at: '2026-08-31T17:44:00.870453'
+    created_at: '2026-08-25T05:04:37.752128',
+    updated_at: '2026-08-25T05:04:37.752128'
   },
   {
     id: '',
@@ -34030,8 +24399,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870456',
-    updated_at: '2026-08-31T17:44:00.870456'
+    created_at: '2026-08-25T05:04:37.752130',
+    updated_at: '2026-08-25T05:04:37.752131'
   },
   {
     id: '',
@@ -34046,8 +24415,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870459',
-    updated_at: '2026-08-31T17:44:00.870460'
+    created_at: '2026-08-25T05:04:37.752132',
+    updated_at: '2026-08-25T05:04:37.752133'
   },
   {
     id: '',
@@ -34062,8 +24431,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870462',
-    updated_at: '2026-08-31T17:44:00.870463'
+    created_at: '2026-08-25T05:04:37.752138',
+    updated_at: '2026-08-25T05:04:37.752138'
   },
   {
     id: '',
@@ -34078,8 +24447,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870465',
-    updated_at: '2026-08-31T17:44:00.870466'
+    created_at: '2026-08-25T05:04:37.752140',
+    updated_at: '2026-08-25T05:04:37.752141'
   },
   {
     id: '',
@@ -34094,8 +24463,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870477',
-    updated_at: '2026-08-31T17:44:00.870478'
+    created_at: '2026-08-25T05:04:37.752143',
+    updated_at: '2026-08-25T05:04:37.752143'
   },
   {
     id: '',
@@ -34110,8 +24479,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870481',
-    updated_at: '2026-08-31T17:44:00.870482'
+    created_at: '2026-08-25T05:04:37.752145',
+    updated_at: '2026-08-25T05:04:37.752146'
   },
   {
     id: '',
@@ -34126,8 +24495,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870484',
-    updated_at: '2026-08-31T17:44:00.870485'
+    created_at: '2026-08-25T05:04:37.752148',
+    updated_at: '2026-08-25T05:04:37.752149'
   },
   {
     id: '',
@@ -34142,8 +24511,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870487',
-    updated_at: '2026-08-31T17:44:00.870488'
+    created_at: '2026-08-25T05:04:37.752150',
+    updated_at: '2026-08-25T05:04:37.752151'
   },
   {
     id: '',
@@ -34158,8 +24527,8 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870490',
-    updated_at: '2026-08-31T17:44:00.870491'
+    created_at: '2026-08-25T05:04:37.752156',
+    updated_at: '2026-08-25T05:04:37.752156'
   },
   {
     id: '',
@@ -34174,21 +24543,10 @@ const DEMO_LEADS: Lead[] = [
     source: '',
     status: 'new',
     score: 0,
-    created_at: '2026-08-31T17:44:00.870493',
-    updated_at: '2026-08-31T17:44:00.870494'
+    created_at: '2026-08-25T05:04:37.752158',
+    updated_at: '2026-08-25T05:04:37.752159'
   },
 ];
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -34212,17 +24570,6 @@ const DEMO_LEADS: Lead[] = [
 
 const DEMO_EMAILS: OutreachEmail[] = [
 ];
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -35001,4 +25348,74 @@ export function updateLeadStatus(leadId: string, newStatus: LeadStatus): Lead | 
 
 export function getStatusOptions(): readonly string[] {
   return STATUS_OPTIONS;
+}
+
+// ===== CALENDAR EVENT CRUD =====
+export async function getCalendarEvents(): Promise<CalendarEvent[]> {
+  const mode = await detectMode();
+  if (mode === 'api') {
+    try {
+      return await apiGet<CalendarEvent[]>('/api/calendar');
+    } catch {
+      return [];
+    }
+  }
+  return loadFromStorage<CalendarEvent>('calendar_events');
+}
+
+export async function addCalendarEvent(event: Omit<CalendarEvent, 'id' | 'created_at' | 'updated_at'>): Promise<CalendarEvent> {
+  const mode = await detectMode();
+  if (mode === 'api') {
+    return apiPost<CalendarEvent>('/api/calendar', event);
+  }
+
+  const now = new Date().toISOString();
+  const newEvent: CalendarEvent = {
+    ...event,
+    id: generateId(),
+    created_at: now,
+    updated_at: now,
+  };
+  const events = loadFromStorage<CalendarEvent>('calendar_events');
+  events.push(newEvent);
+  saveToStorage('calendar_events', events);
+  return newEvent;
+}
+
+export async function updateCalendarEvent(id: string, updates: Partial<CalendarEvent>): Promise<CalendarEvent | null> {
+  const mode = await detectMode();
+  if (mode === 'api') {
+    const res = await fetch(`/api/calendar`, {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ id, ...updates }),
+    });
+    if (!res.ok) return null;
+    return res.json();
+  }
+
+  const events = loadFromStorage<CalendarEvent>('calendar_events');
+  const idx = events.findIndex(e => e.id === id);
+  if (idx === -1) return null;
+  events[idx] = { ...events[idx], ...updates, updated_at: new Date().toISOString() };
+  saveToStorage('calendar_events', events);
+  return events[idx];
+}
+
+export async function deleteCalendarEvent(id: string): Promise<boolean> {
+  const mode = await detectMode();
+  if (mode === 'api') {
+    try {
+      await apiDelete(`/api/calendar?id=${id}`);
+      return true;
+    } catch {
+      return false;
+    }
+  }
+
+  const events = loadFromStorage<CalendarEvent>('calendar_events');
+  const filtered = events.filter(e => e.id !== id);
+  if (filtered.length === events.length) return false;
+  saveToStorage('calendar_events', filtered);
+  return true;
 }
