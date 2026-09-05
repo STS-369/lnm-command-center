@@ -111,7 +111,7 @@ export default function OutreachPage() {
             </div>
 
             {/* Preview */}
-            <div className="lg:col-span-2">
+            <div className="lg:col-span-2 hidden lg:block">
               {previewEmail ? (
                 <div className="email-preview-card bg-[#111118] border border-[#2a2a3a] rounded-xl overflow-hidden">
                   <div className="email-preview-toolbar flex items-center justify-between px-4 py-2 bg-[#1a1a24] border-b border-[#2a2a3a]">
@@ -172,6 +172,62 @@ export default function OutreachPage() {
             </div>
           </div>
         )
+      )}
+
+
+      {/* Mobile full-screen preview modal */}
+      {tab === 'drafts' && previewEmail && (
+        <div className="lg:hidden fixed inset-0 z-50 bg-black/90 flex flex-col">
+          <div className="flex items-center justify-between px-4 py-3 bg-[#1a1a24] border-b border-[#2a2a3a]">
+            <div className="flex-1 min-w-0 pr-2">
+              <div className="text-sm font-semibold text-white truncate">{previewEmail.lead_name}</div>
+              <div className="text-xs text-gray-400 truncate">{previewEmail.subject}</div>
+            </div>
+            <button
+              onClick={() => setPreviewEmailId(null)}
+              className="shrink-0 w-9 h-9 rounded-full bg-[#252540] text-white text-lg flex items-center justify-center"
+              aria-label="Close preview"
+            >✕</button>
+          </div>
+          <div className="flex gap-2 px-4 py-2 bg-[#141420] border-b border-[#2a2a3a]">
+            <button
+              onClick={() => setCodeView(false)}
+              className={`px-3 py-1.5 text-xs rounded ${!codeView ? 'bg-[#00d4ff] text-black' : 'bg-[#252540] text-gray-300'}`}
+            >Visual</button>
+            <button
+              onClick={() => setCodeView(true)}
+              className={`px-3 py-1.5 text-xs rounded ${codeView ? 'bg-[#00d4ff] text-black' : 'bg-[#252540] text-gray-300'}`}
+            >Code</button>
+            <button
+              onClick={() => {
+                const html = previewEmail.html_body || `<html><body><pre style="font-family:inherit">${previewEmail.body}</pre></body></html>`;
+                navigator.clipboard.writeText(html).then(() => {
+                  const btn = document.getElementById('copy-feedback-mobile');
+                  if (btn) { btn.textContent = '✓ Copied!'; setTimeout(() => { btn.textContent = 'Copy HTML'; }, 1500); }
+                });
+              }}
+              className="px-3 py-1.5 text-xs rounded bg-[#252540] text-gray-300"
+              id="copy-feedback-mobile"
+            >Copy HTML</button>
+          </div>
+          <div className="flex-1 overflow-y-auto">
+            {codeView ? (
+              <pre className="text-xs text-gray-300 bg-[#0a0a12] p-4 whitespace-pre-wrap break-all">
+                {previewEmail.html_body || previewEmail.body}
+              </pre>
+            ) : previewEmail.html_body ? (
+              <iframe
+                srcDoc={previewEmail.html_body}
+                title={`Preview: ${previewEmail.subject}`}
+                className="w-full border-0 bg-white"
+                style={{ height: '100%', minHeight: '80vh' }}
+                sandbox="allow-same-origin"
+              />
+            ) : (
+              <pre className="text-sm text-gray-200 whitespace-pre-wrap p-4">{previewEmail.body}</pre>
+            )}
+          </div>
+        </div>
       )}
 
       {tab === 'inbox' && <GmailInbox />}
