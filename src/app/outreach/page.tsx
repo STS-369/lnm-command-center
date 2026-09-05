@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect, useRef } from 'react';
-import { getEmails, OutreachEmail } from '@/lib/client-db';
+import { getEmails, loadRealDataFromJSON, OutreachEmail } from '@/lib/client-db';
 import GmailInbox from '@/components/gmail/GmailInbox';
 import ComposeEmail from '@/components/gmail/ComposeEmail';
 
@@ -18,6 +18,8 @@ export default function OutreachPage() {
   useEffect(() => {
     (async () => {
       try {
+        // GitHub Pages (static): pull fresh /data/*.json into localStorage first
+        try { await loadRealDataFromJSON(); } catch (e) { console.warn('real-data load skipped', e); }
         const list = await getEmails();
         // newest first
         list.sort((a, b) => (b.created_at || '').localeCompare(a.created_at || ''));
