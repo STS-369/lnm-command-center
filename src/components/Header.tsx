@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useCallback, useEffect } from 'react';
+import { IS_DEMO_MODE } from '@/lib/client-db';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -98,6 +99,17 @@ export default function Header() {
 
       {/* Right side */}
       <div className="flex items-center gap-3">
+        {/* Demo mode badge (public portfolio demo only) */}
+        {IS_DEMO_MODE && (
+          <span
+            data-testid="demo-badge"
+            className="px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-widest animate-pulse"
+            style={{ background: 'rgba(255, 180, 0, 0.15)', color: '#ffb400', border: '1px solid rgba(255, 180, 0, 0.4)' }}
+            title="Demo build — all businesses, contacts, and data are fictional"
+          >
+            Demo Mode
+          </span>
+        )}
         {/* Notifications */}
         <button className="relative btn-ghost p-2" aria-label="Notifications">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">

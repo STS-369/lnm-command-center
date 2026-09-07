@@ -3,8 +3,16 @@
  * Tries API routes first (server mode), falls back to localStorage (GitHub Pages).
  */
 
-import { IMPORT_STATS } from './import-data';
-import type { ImportLead, ImportEmail } from './import-data';
+// Demo-mode data source: synthetic dataset only (fictional businesses).
+// The real-data module (import-data.ts) exists exclusively in the private
+// STS-369/lnm-internal repo — it must never be imported in the public repo.
+import {
+  DEMO_LEADS_DATA as DEMO_LEADS,
+  DEMO_EMAILS_DATA as DEMO_EMAILS,
+  IMPORT_STATS,
+} from './demo-data';
+
+export type { ImportLead, ImportEmail } from './demo-data';
 
 const statusLabels: Record<string, string> = {
   new: 'New',
@@ -193,11 +201,9 @@ function generateId(): string {
 }
 
 // ===== SEED DATA FOR LOCAL MODE =====
-const DEMO_LEADS: Lead[] = [];
-
-
-const DEMO_EMAILS: OutreachEmail[] = [
-];
+// DEMO_LEADS / DEMO_EMAILS now come from the synthetic module ./demo-data
+// (fictional 555-01xx / example.com dataset). The historical embedded array
+// was removed during the history purge; see BRANCH_STRATEGY_REPORT.md.
 
 
 
@@ -672,6 +678,26 @@ export function getImportStats() {
   return IMPORT_STATS;
 }
 
+// ===== DEMO MODE =====
+// When NEXT_PUBLIC_DEMO_MODE is truthy at build time, the static build loads
+// ONLY the synthetic /data/demo/*.json seed (fictional businesses) instead of
+// the real /data/*.json feeds that exist in the internal build.
+export const IS_DEMO_MODE: boolean =
+  (process.env.NEXT_PUBLIC_DEMO_MODE || '').toLowerCase() === 'true';
+
+// NOTE: direct env check (not the IS_DEMO_MODE const) so the bundler inlines
+// it per-build and strips the unused branch from each bundle.
+function demoDataPaths(): { leads: string; emails: string; dossiers: string } {
+  if (process.env.NEXT_PUBLIC_DEMO_MODE === 'true') {
+    return {
+      leads: '/data/demo/leads-demo.json',
+      emails: '/data/demo/emails-demo.json',
+      dossiers: '/data/demo/dossiers-demo.json',
+    };
+  }
+  return { leads: '/data/leads.json', emails: '/data/emails.json', dossiers: '/data/dossiers.json' };
+}
+
 // ===== SEED =====
 export function seedDemoData(): void {
   seedLocalStorage();
@@ -680,17 +706,18 @@ export function seedDemoData(): void {
 // ===== REAL DATA LOADER =====
 export async function loadRealDataFromJSON(): Promise<boolean> {
   try {
+    const dataPaths = demoDataPaths();
     const [leadsRes, emailsRes, dossiersRes] = await Promise.all([
-      fetch('/data/leads.json'),
-      fetch('/data/emails.json'),
-      fetch('/data/dossiers.json'),
+      fetch(dataPaths.leads),
+      fetch(dataPaths.emails),
+      fetch(dataPaths.dossiers),
     ]);
 
     if (leadsRes.ok) {
       const leads = await leadsRes.json();
       if (leads.length > 0) {
         saveToStorage('leads', leads);
-        console.log(`[LNM] Loaded ${leads.length} real leads`);
+        console.log(`[LNM] Loaded ${leads.length} leads${IS_DEMO_MODE ? ' (DEMO MODE — synthetic data)' : ''}`);
       }
     }
 
@@ -769,7 +796,6 @@ export async function setupDriveFolders(clientName?: string): Promise<{ rootFold
 
 // Re-export types
 export { IMPORT_STATS };
-export type { ImportLead, ImportEmail };
 
 // ===== SYNC =====
 export interface SyncResult {
@@ -862,11 +888,12 @@ function mergeById<T extends { id: string; updated_at?: string }>(
 export async function syncData(): Promise<SyncResult> {
   const startTime = Date.now();
 
-  // Fetch remote data files
+  // Fetch remote data files (demo build fetches /data/demo/* synthetic seed)
+  const syncPaths = demoDataPaths();
   const [leadsRes, emailsRes, dossiersRes] = await Promise.all([
-    fetch('/data/leads.json', { cache: 'no-cache' }),
-    fetch('/data/emails.json', { cache: 'no-cache' }),
-    fetch('/data/dossiers.json', { cache: 'no-cache' }),
+    fetch(syncPaths.leads, { cache: 'no-cache' }),
+    fetch(syncPaths.emails, { cache: 'no-cache' }),
+    fetch(syncPaths.dossiers, { cache: 'no-cache' }),
   ]);
 
   if (!leadsRes.ok) throw new Error(`Failed to fetch leads: ${leadsRes.status}`);

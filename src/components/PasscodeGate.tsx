@@ -4,7 +4,20 @@ import { useState, useEffect, useRef } from 'react';
 
 const PASSCODE = 'somoteitbe';
 
+// Internal builds ship a soft client-side passcode gate. The public demo
+// build (NEXT_PUBLIC_DEMO_MODE=true) removes the gate entirely — a passcode
+// that ships in the client bundle protects nothing and falsely signals
+// secrecy. Real protection is: real data lives only in the private repo.
+// NOTE: the env check is inlined by the compiler at build time, so the gate
+// code (and the passcode string) are tree-shaken OUT of demo bundles.
 export default function PasscodeGate({ children }: { children: React.ReactNode }) {
+  if (process.env.NEXT_PUBLIC_DEMO_MODE === 'true') {
+    return <>{children}</>;
+  }
+  return <InternalGate>{children}</InternalGate>;
+}
+
+function InternalGate({ children }: { children: React.ReactNode }) {
   const [mounted, setMounted] = useState(false);
   const [authenticated, setAuthenticated] = useState<boolean | null>(null);
   const [input, setInput] = useState('');
