@@ -1,0 +1,330 @@
+[
+ {
+  "id": "4e15be68-52a7-5148-bedb-57836e0783a9",
+  "lead_id": "df1a9472-24c3-59a0-9de4-a394824a44b6",
+  "business_name": "Aurora Bike Collective",
+  "industry": "Bike Shops",
+  "location": "100 Alder St, Portland, OR",
+  "website": "https://aurorabikecollective.example.com",
+  "phone": "(503) 555-0100",
+  "owner_name": "Maya Chen (Owner & Head Mechanic)",
+  "owner_title": "Owner & Head Mechanic",
+  "contact_email": "hello@aurorabikecollective.example.com",
+  "technology_stack": [
+   "Website: static brochure site (demo fictional data)",
+   "Booking: phone-only scheduling observed",
+   "Marketing: Instagram + word of mouth"
+  ],
+  "pain_points": [
+   "No online booking \u2014 after-hours demand goes unanswered",
+   "Manual scheduling eats several staff hours per week",
+   "Website not optimized for mobile search"
+  ],
+  "opportunities": [
+   "24/7 online booking could capture missed orders",
+   "Automated reminders could reduce no-shows",
+   "A refreshed mobile-first site would convert search traffic"
+  ],
+  "confidence_score": 60,
+  "research_sources": [
+   {
+    "label": "Google Maps (demo)",
+    "url": "https://maps.example.com/aurorabikecollective"
+   },
+   {
+    "label": "Business site (demo)",
+    "url": "https://aurorabikecollective.example.com"
+   }
+  ],
+  "notes": "FICTIONAL demo dossier \u2014 all details invented for the public portfolio demo.",
+  "created_at": "2026-08-20T09:00:00.000Z",
+  "updated_at": "2026-09-01T14:00:00.000Z"
+ },
+ {
+  "id": "169a0d92-0408-5616-a6bc-365cfcab69b8",
+  "lead_id": "0f68df2d-749c-55fc-a6ef-28d08c7691e7",
+  "business_name": "Nebula Coffee Roasters",
+  "industry": "Coffee Roasters",
+  "location": "107 Larkspur Ln, Denver, CO",
+  "website": "https://nebulacoffeeroasters.example.com",
+  "phone": "(303) 555-0101",
+  "owner_name": "Dele Okafor (Founder / Head Roaster)",
+  "owner_title": "Founder / Head Roaster",
+  "contact_email": "hello@nebulacoffeeroasters.example.com",
+  "technology_stack": [
+   "Website: static brochure site (demo fictional data)",
+   "Booking: phone-only scheduling observed",
+   "Marketing: Instagram + word of mouth"
+  ],
+  "pain_points": [
+   "No online booking \u2014 after-hours demand goes unanswered",
+   "Manual scheduling eats several staff hours per week",
+   "Website not optimized for mobile search"
+  ],
+  "opportunities": [
+   "24/7 online booking could capture missed orders",
+   "Automated reminders could reduce no-shows",
+   "A refreshed mobile-first site would convert search traffic"
+  ],
+  "confidence_score": 65,
+  "research_sources": [
+   {
+    "label": "Google Maps (demo)",
+    "url": "https://maps.example.com/nebulacoffeeroasters"
+   },
+   {
+    "label": "Business site (demo)",
+    "url": "https://nebulacoffeeroasters.example.com"
+   }
+  ],
+  "notes": "FICTIONAL demo dossier \u2014 all details invented for the public portfolio demo.",
+  "created_at": "2026-08-20T09:00:00.000Z",
+  "updated_at": "2026-09-01T14:00:00.000Z"
+ },
+ {
+  "id": "f45fc0f1-27e4-5a97-8212-170358b459ae",
+  "lead_id": "d7f32db9-20c5-58c5-8382-ac156f59f140",
+  "business_name": "Prism Bookstore",
+  "industry": "Bookstores",
+  "location": "114 Basalt Ave, Asheville, NC",
+  "website": "https://prismbookstore.example.com",
+  "phone": "(828) 555-0102",
+  "owner_name": "June Castellano (Owner)",
+  "owner_title": "Owner",
+  "contact_email": "hello@prismbookstore.example.com",
+  "technology_stack": [
+   "Website: static brochure site (demo fictional data)",
+   "Booking: phone-only scheduling observed",
+   "Marketing: Instagram + word of mouth"
+  ],
+  "pain_points": [
+   "No online booking \u2014 after-hours demand goes unanswered",
+   "Manual scheduling eats several staff hours per week",
+   "Website not optimized for mobile search"
+  ],
+  "opportunities": [
+   "24/7 online booking could capture missed orders",
+   "Automated reminders could reduce no-shows",
+   "A refreshed mobile-first site would convert search traffic"
+  ],
+  "confidence_score": 70,
+  "research_sources": [
+   {
+    "label": "Google Maps (demo)",
+    "url": "https://maps.example.com/prismbookstore"
+   },
+   {
+    "label": "Business site (demo)",
+    "url": "https://prismbookstore.example.com"
+   }
+  ],
+  "notes": "FICTIONAL demo dossier \u2014 all details invented for the public portfolio demo.",
+  "created_at": "2026-08-20T09:00:00.000Z",
+  "updated_at": "2026-09-01T14:00:00.000Z"
+ },
+ {
+  "id": "e0a7c92f-bd78-5621-8719-a3e6a5acd136",
+  "lead_id": "a5fbb761-029b-5508-98c4-02147c6ae962",
+  "business_name": "Solstice Yoga Studio",
+  "industry": "Yoga Studios",
+  "location": "128 Foxglove Way, Tucson, AZ",
+  "website": "https://solsticeyogastudio.example.com",
+  "phone": "(520) 555-0104",
+  "owner_name": "Priya Raman (Owner & Lead Instructor)",
+  "owner_title": "Owner & Lead Instructor",
+  "contact_email": "hello@solsticeyogastudio.example.com",
+  "technology_stack": [
+   "Website: static brochure site (demo fictional data)",
+   "Booking: phone-only scheduling observed",
+   "Marketing: Instagram + word of mouth"
+  ],
+  "pain_points": [
+   "No online booking \u2014 after-hours demand goes unanswered",
+   "Manual scheduling eats several staff hours per week",
+   "Website not optimized for mobile search"
+  ],
+  "opportunities": [
+   "24/7 online booking could capture missed orders",
+   "Automated reminders could reduce no-shows",
+   "A refreshed mobile-first site would convert search traffic"
+  ],
+  "confidence_score": 75,
+  "research_sources": [
+   {
+    "label": "Google Maps (demo)",
+    "url": "https://maps.example.com/solsticeyogastudio"
+   },
+   {
+    "label": "Business site (demo)",
+    "url": "https://solsticeyogastudio.example.com"
+   }
+  ],
+  "notes": "FICTIONAL demo dossier \u2014 all details invented for the public portfolio demo.",
+  "created_at": "2026-08-20T09:00:00.000Z",
+  "updated_at": "2026-09-01T14:00:00.000Z"
+ },
+ {
+  "id": "73ce5031-7780-584d-96cc-9678814e0a79",
+  "lead_id": "0d4bfd19-bea6-5769-8c67-75fb40d09df1",
+  "business_name": "Basalt Pottery Studio",
+  "industry": "Pottery Studios",
+  "location": "156 Kestrel Ct, Bend, OR",
+  "website": "https://basaltpotterystudio.example.com",
+  "phone": "(541) 555-0108",
+  "owner_name": "Tom\u00e1s Ibarra (Founder / Studio Lead)",
+  "owner_title": "Founder / Studio Lead",
+  "contact_email": "hello@basaltpotterystudio.example.com",
+  "technology_stack": [
+   "Website: static brochure site (demo fictional data)",
+   "Booking: phone-only scheduling observed",
+   "Marketing: Instagram + word of mouth"
+  ],
+  "pain_points": [
+   "No online booking \u2014 after-hours demand goes unanswered",
+   "Manual scheduling eats several staff hours per week",
+   "Website not optimized for mobile search"
+  ],
+  "opportunities": [
+   "24/7 online booking could capture missed orders",
+   "Automated reminders could reduce no-shows",
+   "A refreshed mobile-first site would convert search traffic"
+  ],
+  "confidence_score": 80,
+  "research_sources": [
+   {
+    "label": "Google Maps (demo)",
+    "url": "https://maps.example.com/basaltpotterystudio"
+   },
+   {
+    "label": "Business site (demo)",
+    "url": "https://basaltpotterystudio.example.com"
+   }
+  ],
+  "notes": "FICTIONAL demo dossier \u2014 all details invented for the public portfolio demo.",
+  "created_at": "2026-08-20T09:00:00.000Z",
+  "updated_at": "2026-09-01T14:00:00.000Z"
+ },
+ {
+  "id": "2d249f45-b6e4-5e63-be1a-aae38694f854",
+  "lead_id": "0eaed9aa-710d-5fb0-92d7-e929bb3a657b",
+  "business_name": "Copper Kettle Bakery",
+  "industry": "Bakeries",
+  "location": "177 Larkspur Ln, Chattanooga, TN",
+  "website": "https://copperkettlebakery.example.com",
+  "phone": "(423) 555-0111",
+  "owner_name": "Greta Lindqvist (Owner / Head Baker)",
+  "owner_title": "Owner / Head Baker",
+  "contact_email": "hello@copperkettlebakery.example.com",
+  "technology_stack": [
+   "Website: static brochure site (demo fictional data)",
+   "Booking: phone-only scheduling observed",
+   "Marketing: Instagram + word of mouth"
+  ],
+  "pain_points": [
+   "No online booking \u2014 after-hours demand goes unanswered",
+   "Manual scheduling eats several staff hours per week",
+   "Website not optimized for mobile search"
+  ],
+  "opportunities": [
+   "24/7 online booking could capture missed orders",
+   "Automated reminders could reduce no-shows",
+   "A refreshed mobile-first site would convert search traffic"
+  ],
+  "confidence_score": 85,
+  "research_sources": [
+   {
+    "label": "Google Maps (demo)",
+    "url": "https://maps.example.com/copperkettlebakery"
+   },
+   {
+    "label": "Business site (demo)",
+    "url": "https://copperkettlebakery.example.com"
+   }
+  ],
+  "notes": "FICTIONAL demo dossier \u2014 all details invented for the public portfolio demo.",
+  "created_at": "2026-08-20T09:00:00.000Z",
+  "updated_at": "2026-09-01T14:00:00.000Z"
+ },
+ {
+  "id": "b7746eaf-2c23-50ff-92a8-051ba253bc13",
+  "lead_id": "1aa030c2-ed61-5155-9ccd-fa41b84c4109",
+  "business_name": "North Star Mountaineering",
+  "industry": "Outdoor Gear",
+  "location": "212 Heron Dr, Spokane, WA",
+  "website": "https://northstarmountaineering.example.com",
+  "phone": "(509) 555-0116",
+  "owner_name": "Marcus Whitfield (Owner / Guide)",
+  "owner_title": "Owner / Guide",
+  "contact_email": "hello@northstarmountaineering.example.com",
+  "technology_stack": [
+   "Website: static brochure site (demo fictional data)",
+   "Booking: phone-only scheduling observed",
+   "Marketing: Instagram + word of mouth"
+  ],
+  "pain_points": [
+   "No online booking \u2014 after-hours demand goes unanswered",
+   "Manual scheduling eats several staff hours per week",
+   "Website not optimized for mobile search"
+  ],
+  "opportunities": [
+   "24/7 online booking could capture missed orders",
+   "Automated reminders could reduce no-shows",
+   "A refreshed mobile-first site would convert search traffic"
+  ],
+  "confidence_score": 90,
+  "research_sources": [
+   {
+    "label": "Google Maps (demo)",
+    "url": "https://maps.example.com/northstarmountaineering"
+   },
+   {
+    "label": "Business site (demo)",
+    "url": "https://northstarmountaineering.example.com"
+   }
+  ],
+  "notes": "FICTIONAL demo dossier \u2014 all details invented for the public portfolio demo.",
+  "created_at": "2026-08-20T09:00:00.000Z",
+  "updated_at": "2026-09-01T14:00:00.000Z"
+ },
+ {
+  "id": "2aa048be-a0f1-5a5f-ae5d-a3d653fc69f4",
+  "lead_id": "c41afbf6-eb86-5698-8569-8c084918c55e",
+  "business_name": "Riverbend Urban Farm",
+  "industry": "Urban Farms",
+  "location": "240 Alder St, Savannah, GA",
+  "website": "https://riverbendurbanfarm.example.com",
+  "phone": "(912) 555-0120",
+  "owner_name": "Ana Sofia Duarte (Founder / Farm Manager)",
+  "owner_title": "Founder / Farm Manager",
+  "contact_email": "hello@riverbendurbanfarm.example.com",
+  "technology_stack": [
+   "Website: static brochure site (demo fictional data)",
+   "Booking: phone-only scheduling observed",
+   "Marketing: Instagram + word of mouth"
+  ],
+  "pain_points": [
+   "No online booking \u2014 after-hours demand goes unanswered",
+   "Manual scheduling eats several staff hours per week",
+   "Website not optimized for mobile search"
+  ],
+  "opportunities": [
+   "24/7 online booking could capture missed orders",
+   "Automated reminders could reduce no-shows",
+   "A refreshed mobile-first site would convert search traffic"
+  ],
+  "confidence_score": 95,
+  "research_sources": [
+   {
+    "label": "Google Maps (demo)",
+    "url": "https://maps.example.com/riverbendurbanfarm"
+   },
+   {
+    "label": "Business site (demo)",
+    "url": "https://riverbendurbanfarm.example.com"
+   }
+  ],
+  "notes": "FICTIONAL demo dossier \u2014 all details invented for the public portfolio demo.",
+  "created_at": "2026-08-20T09:00:00.000Z",
+  "updated_at": "2026-09-01T14:00:00.000Z"
+ }
+]
