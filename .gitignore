@@ -33,6 +33,9 @@ yarn-error.log*
 # env files (can opt-in for committing if needed)
 .env*
 
+# demo-mode env is committed on the public-demo branch only
+!.env.production
+
 # vercel
 .vercel
 
